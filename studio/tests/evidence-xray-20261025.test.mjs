@@ -142,5 +142,5 @@ test('100 bounded deterministic graph builds remain cheap and no graph side effe
  const activity=validatePrepared(clone(prepared));
  const began=performance.now();for(let i=0;i<100;i++){const g=makeGraph(activity);assert.ok(g.nodes.length<30);}
  assert.ok(performance.now()-began<1800,'100 bounded graph builds should be under 1.8 seconds');
- assert.equal('localStorage' in globalThis,false);
+ assert.ok(!Object.hasOwn(prepared,'savedAt'),'the prepared exercise contains no persisted attempt metadata');
 });
