@@ -1,0 +1,189 @@
+name: KAIRO autonomous coding worker (guarded)
+
+on:
+  schedule:
+    - cron: '43 * * * *'
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Optional allowlisted issue number, e.g. 49 or 50'
+        required: false
+        type: number
+  issues:
+    types: [labeled]
+  pull_request:
+    paths:
+      - '.github/workflows/autonomous-codex-worker.yml'
+      - 'tools/agent-runner-live/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kairo-guarded-agent
+  cancel-in-progress: false
+
+jobs:
+  policy-tests:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Run autonomous-worker safety regression tests
+        run: node --test tools/agent-runner-live/*.test.mjs
+
+  select:
+    if: github.event_name != 'pull_request' && (github.event_name != 'issues' || github.event.label.name == 'agent-ready')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      issues: read
+      pull-requests: read
+      actions: read
+    outputs:
+      selected: ${{ steps.pick.outputs.selected }}
+      issue: ${{ steps.pick.outputs.issue }}
+      role: ${{ steps.pick.outputs.role }}
+      base_sha: ${{ steps.pick.outputs.base_sha }}
+      branch: ${{ steps.pick.outputs.branch }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - id: pick
+        name: Choose one approved, non-duplicated ready task (max 2 jobs/day)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          KAIRO_REQUEST_ISSUE: ${{ inputs.issue_number || '0' }}
+        run: node tools/agent-runner-live/control.mjs choose
+
+  generate:
+    needs: select
+    if: needs.select.outputs.selected == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    outputs:
+      has_patch: ${{ steps.patch.outputs.has_patch }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.select.outputs.base_sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify model API key is provisioned
+        id: key
+        env:
+          CODEX_SECRET: ${{ secrets.KAIRO_CODEX_API_KEY }}
+        shell: bash
+        run: |
+          if [[ -n "$CODEX_SECRET" ]]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "BLOCKED: KAIRO_CODEX_API_KEY repository secret is missing; no model was invoked." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Assemble role-specific constrained task prompt
+        if: steps.key.outputs.present == 'true'
+        env:
+          KAIRO_ISSUE: ${{ needs.select.outputs.issue }}
+          KAIRO_BASE_SHA: ${{ needs.select.outputs.base_sha }}
+        run: node tools/agent-runner-live/control.mjs prompt
+      - name: Run real Codex coding session in isolated read-token checkout
+        if: steps.key.outputs.present == 'true'
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.KAIRO_CODEX_API_KEY }}
+          prompt-file: .kairo-agent/task.md
+          permission-profile: ':workspace'
+          safety-strategy: drop-sudo
+          codex-args: '["--ephemeral"]'
+      - name: Stage only approved changes and produce reviewed-scope patch
+        id: patch
+        if: steps.key.outputs.present == 'true'
+        env:
+          KAIRO_ISSUE: ${{ needs.select.outputs.issue }}
+          KAIRO_PATCH: ${{ runner.temp }}/kairo-agent.patch
+        run: node tools/agent-runner-live/patch.mjs create
+      - name: Transfer patch to separate GitHub write job
+        if: steps.patch.outputs.has_patch == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: kairo-codex-patch-${{ github.run_id }}
+          path: ${{ runner.temp }}/kairo-agent.patch
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: [select, generate]
+    if: needs.generate.outputs.has_patch == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.select.outputs.base_sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: kairo-codex-patch-${{ github.run_id }}
+          path: ${{ runner.temp }}/kairo-patch
+      - name: Apply only allowed patch on exact unchanged main
+        env:
+          KAIRO_ISSUE: ${{ needs.select.outputs.issue }}
+          KAIRO_PATCH: ${{ runner.temp }}/kairo-patch/kairo-agent.patch
+          KAIRO_BASE_SHA: ${{ needs.select.outputs.base_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin main
+          test "$(git rev-parse origin/main)" = "$KAIRO_BASE_SHA" || {
+            echo "main moved; stale patch rejected. Requeue in a fresh run."; exit 1;
+          }
+          git apply --check --index "$KAIRO_PATCH"
+          git apply --index "$KAIRO_PATCH"
+          node tools/agent-runner-live/patch.mjs verify
+      - name: Publish isolated feature branch and draft pull request (no merge)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KAIRO_ISSUE: ${{ needs.select.outputs.issue }}
+          KAIRO_ROLE: ${{ needs.select.outputs.role }}
+          KAIRO_BRANCH: ${{ needs.select.outputs.branch }}
+          KAIRO_BASE_SHA: ${{ needs.select.outputs.base_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git switch -c "$KAIRO_BRANCH"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "agent: propose bounded $KAIRO_ROLE improvement for issue #$KAIRO_ISSUE"
+          git push origin "HEAD:refs/heads/$KAIRO_BRANCH"
+          body="Automated, **unreviewed** proposal for #$KAIRO_ISSUE. Lane: $KAIRO_ROLE. Base: $KAIRO_BASE_SHA. Evidence: [runner workflow](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID). The patch passed allowlisted-file verification, NOT independent QA, full CI or human device testing. Review, test and apply PR #34's merge policy; no production deploy."
+          if url=$(gh pr create --repo "$GITHUB_REPOSITORY" --head "$KAIRO_BRANCH" --base main --draft --title "agent($KAIRO_ROLE): bounded implementation for #$KAIRO_ISSUE" --body "$body"); then
+            gh issue comment "$KAIRO_ISSUE" --repo "$GITHUB_REPOSITORY" --body "Autonomous coding job produced a DRAFT PR: $url (run $GITHUB_RUN_ID). Awaiting independent tests/review; not merged or deployed."
+            echo "Draft PR: $url" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Patch pushed to branch $KAIRO_BRANCH, but this repo disallows GitHub Actions creating PRs. Enable Settings > Actions > General > Allow GitHub Actions to create and approve pull requests; do not manually merge unreviewed code." >> "$GITHUB_STEP_SUMMARY"
+            gh issue comment "$KAIRO_ISSUE" --repo "$GITHUB_REPOSITORY" --body "Coding patch pushed to branch $KAIRO_BRANCH but PR creation was blocked by GitHub permissions; independent review still required."
+            exit 1
+          fi
