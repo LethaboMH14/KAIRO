@@ -3,6 +3,7 @@ import {
   CHALLENGE_SCHEMA, CONCEPT_SOURCE, PROVENANCE, SCENARIOS, initialState,
   restore, serialize, transition, type Direction, type State,
 } from './challenge.ts';
+import { MODEL_VERSION } from '../../pump-lab/physics.ts';
 import './pump-what-if.css';
 
 const fixed = (n: number) => n.toFixed(2);
@@ -118,7 +119,7 @@ export default function PumpWhatIf() {
       <h1 id={id + '-title'}>What happens when the valve changes?</h1>
       <p><strong>Illustrative teaching model — not a real pump or operating instruction.</strong> Predict a change, reveal a deterministic consequence, inspect why it happened, then try a new case independently.</p>
       <p className="pw-source">Concept reference: <a href={CONCEPT_SOURCE.url} target="_blank" rel="noopener noreferrer">{CONCEPT_SOURCE.organisation}: {CONCEPT_SOURCE.title}</a> (checked {CONCEPT_SOURCE.checked}). {CONCEPT_SOURCE.claim}</p>
-      <p>Numbers: existing KAIRO pump model <code>kairo-pump-lab-model/1</code>, documented in <code>docs/pump-lab/MODEL.md</code>. Its coefficients are educational choices, not externally calibrated. Evidence status: <strong>{PROVENANCE}</strong>; no uploaded source/revision or private lesson is attached.</p>
+      <p>Numbers: existing KAIRO pump model <code>{MODEL_VERSION}</code>, documented in <code>docs/pump-lab/MODEL.md</code>. Its coefficients are educational choices, not externally calibrated. Evidence status: <strong>{PROVENANCE}</strong>; no uploaded source/revision or private lesson is attached.</p>
     </header>
 
     <section className="pw-task" id={id + '-task'} aria-labelledby={id + '-round'}>
