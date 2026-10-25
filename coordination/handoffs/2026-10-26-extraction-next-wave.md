@@ -26,4 +26,4 @@ From `studio/` on the isolated branch:
 
 Root should review the exact branch, rerun wider tests/build in its available dependency environment, and decide whether to mount the wrapper fix. Parser/OCR behavior is tested using deterministic injected outputs; actual OCR recognition, scanned-content completeness, formula/diagram understanding and learner usability remain unvalidated. The fix does not imply OCR correctness or full-document understanding.
 
-Publication is a draft PR for root review only; no merge or deployment was performed. The exact pushed head and CI status are to be shared with root after publication.
+Publication: draft PR [#119](https://github.com/LethaboMH14/KAIRO/pull/119), based on current `main` commit `1310eba7ef18be3ff4cf2591613474a61deb5389`. The implementation and test commit is `8314c06d65fd7b9a8b200617b532590f80000f25`; GitHub reported that PR head mergeable and returned no CI checks when queried. This handoff text is a documentation-only follow-up. The exact current PR head is recorded in the bus handoff note. No merge or deployment was performed; the production build gap above remains open.
