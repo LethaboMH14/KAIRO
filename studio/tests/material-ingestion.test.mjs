@@ -1,5 +1,6 @@
 import {test} from 'node:test'; import assert from 'node:assert/strict'; import fs from 'node:fs'; import os from 'node:os'; import path from 'node:path'; import {spawnSync} from 'node:child_process';
-const root=path.resolve('..'); const py=path.join(root,'tools/course_sources/.venv-ocr/Scripts/python.exe'); const script=path.join(root,'tools/material_ingestion/extract.py');
+import {testPython} from './helpers/python-interpreter.mjs';
+const root=path.resolve('..'); const py=testPython; const script=path.join(root,'tools/material_ingestion/extract.py');
 test('malformed negative XLSX string index cannot borrow unrelated source text',()=>{
  const d=fs.mkdtempSync(path.join(os.tmpdir(),'ingest-invalid-string-'));
  try{
