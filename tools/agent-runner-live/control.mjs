@@ -23,7 +23,7 @@ export async function choose({get=githubGet,manual=0,now=Date.now(),runId=0}={})
  const counted=(previous.workflow_runs||[]).filter(r=>
   ['schedule','workflow_dispatch','issues'].includes(r.event)&&
   r.id!==runId&&Date.parse(r.created_at)>=dayAgo&&r.status!=='cancelled');
- if(counted.length>=2)return {selected:false,reason:'daily_job_cap'};
+ // A specifically requested allowlisted manual issue may bypass the automatic throttle.\n if(counted.length>=2&&!manual)return {selected:false,reason:'daily_job_cap'};
  const mergedPrs={};
  for(const task of Object.values(TASKS))for(const id of task.requiresMergedPrs)
   if(!(id in mergedPrs)){const pr=await get('/pulls/'+id);mergedPrs[id]=!!pr.merged_at;}
