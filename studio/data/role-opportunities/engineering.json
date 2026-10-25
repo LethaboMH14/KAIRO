@@ -56,14 +56,14 @@
       "requirements": [
         {
           "id": "siemens-master-engineering",
-          "label": "The programme page describes a master’s degree (or equivalent) in engineering or related disciplines, with above-average grades.",
+          "label": "The programme page describes a masterâ€™s degree (or equivalent) in engineering or related disciplines, with above-average grades.",
           "kind": "qualification",
           "sourceLocator": "Educational background (official Siemens Graduate Programme page; English-language indexed page text)",
-          "sourceExcerpt": "master’s studies (or equivalent)"
+          "sourceExcerpt": "masterâ€™s studies (or equivalent)"
         },
         {
           "id": "siemens-study-work-experience",
-          "label": "The page says applicants have gained work experience during their studies or between bachelor’s and master’s degrees.",
+          "label": "The page says applicants have gained work experience during their studies or between bachelorâ€™s and masterâ€™s degrees.",
           "kind": "experience",
           "sourceLocator": "Work experience & ambition (official Siemens Graduate Programme page; English-language indexed page text)",
           "sourceExcerpt": "work experience during your studies"
@@ -85,7 +85,7 @@
             "siemens-study-work-experience",
             "siemens-international-experience"
           ],
-          "boundary": "KAIRO-authored practice suggestion, not a Siemens requirement or endorsement. It cannot establish a master’s degree, academic grades, qualifying work experience, four months abroad, work authorization or eligibility."
+          "boundary": "KAIRO-authored practice suggestion, not a Siemens requirement or endorsement. It cannot establish a masterâ€™s degree, academic grades, qualifying work experience, four months abroad, work authorization or eligibility."
         }
       ],
       "requirementsReviewed": false
