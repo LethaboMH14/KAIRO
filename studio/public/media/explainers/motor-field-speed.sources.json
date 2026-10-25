@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "kind": "prepared-captioned-motor-concept",
+  "sourcePackSha256": "d096a6c07a1bd7ac0cd475239c04ad5882e0d4e182bd62c925b5a89827f7e8b7",
+  "sources": [
+    {
+      "id": "nptel-three-phase-field",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108105053/pdf/L-01%28TB%29%28ET%29%20%28%28EE%29NPTEL%29.pdf",
+      "locator": "Module 8.1, Concept of rotating magnetic field; Module 8.2, construction and principle of three-phase induction motor; NPTEL syllabus PDF navigation page 9 (printed page number not visible in the extracted lines).",
+      "licenseStatus": "NPTEL source; no reuse licence confirmed for this file. Citation and factual paraphrase only; no source wording or diagram copied.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "nptel-induction-slip",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108106026/chapter4.pdf",
+      "locator": "Chapter 4, PDF navigation page 24 (printed p. 4.25), §4.3.4 equation (4.76): slip as the synchronous-to-rotor speed difference divided by synchronous speed.",
+      "licenseStatus": "NPTEL source; no reuse licence confirmed for this file. Citation and factual paraphrase only; no source wording or diagram copied.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "nptel-speed-pole-pairs",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108106072/pdf/1_8.pdf",
+      "locator": "Electrical Machines II, §8.4, pole changing schemes: synchronous speed in revolutions per second equals supply frequency divided by pole-pair count; multiply by 60 and use pole pairs = total poles/2 for the calculator form.",
+      "licenseStatus": "NPTEL source; no reuse licence confirmed for this file. Citation and factual paraphrase only; no source wording or diagram copied.",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "durationSeconds": 8,
+  "width": 720,
+  "height": 404,
+  "fps": 12,
+  "audioTracks": 0,
+  "captioned": true,
+  "renderSecondsMeasured": 14.178,
+  "videoSha256": "f657f0e72df61aaec332fc1227653fac5d309e9204c828ab2f2a2c2b4518cf47",
+  "boundary": "Calculated synchronous field speed, not measured shaft speed or validated equipment simulation. No KAIRO voice or avatar in this prepared clip."
+}
