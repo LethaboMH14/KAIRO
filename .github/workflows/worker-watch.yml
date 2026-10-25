@@ -1,0 +1,42 @@
+name: KAIRO worker watch
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/worker-watch.yml'
+      - 'tools/worker-watch/**'
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  worker-watch:
+    name: All-team hourly status and accountable follow-up
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Test issue and role status policy
+        run: node --test tools/worker-watch/status.test.mjs
+      - name: Inspect actual GitHub work
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KAIRO_WATCH_POST: 'true'
+        run: node tools/worker-watch/status.mjs
+      - name: Upload transparent status evidence
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: kairo-worker-status
+          path: worker-status.json
+          retention-days: 7
