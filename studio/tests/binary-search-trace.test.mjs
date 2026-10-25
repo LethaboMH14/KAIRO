@@ -85,7 +85,7 @@ test('invalid predictions, timestamp, ID, control characters and forged provenan
   assert.throws(() => newSession('bad id'));
   const s = newSession('test-session-43');
   const v = scenario('repeats', 2);
-  for (const p of [{ ...predict(1), index: -1 }, { ...predict(1), index: 1.2 },
+  for (const p of [{ ...predict(1), index: -1 }, { ...predict(1), index: 1.2 }, { ...predict(1), index: 16 },
     { ...predict(1), reasoning: 'short' }, { ...predict(1), reasoning: 'x'.repeat(401) },
     { ...predict(1), reasoning: 'a sufficient explanation\u0001' },
     { ...predict(1), privateAnswer: 1 }]) assert.throws(() => commitAttempt(s, v, p, at));
