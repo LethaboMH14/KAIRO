@@ -29,12 +29,13 @@ test('quotes and code/emphasis cannot create Markdown structures', () => {
 });
 
 test('horizontal rules, setext headings and list markers do not become document structure', () => {
-  const safe = escapePortfolioMarkdown('---\n+ Verified\n- Certified\n1. Approved\n12. Passed\nClaim\n===\nrev-abc123');
+  const safe = escapePortfolioMarkdown('---\n+ Verified\n- Certified\n1. Approved\n12. Passed\n3) Also passed\nClaim\n===\nrev-abc123');
   assert.match(safe, /^\\---/);
   assert.match(safe, /^\\\+ Verified/m);
   assert.match(safe, /^\\- Certified/m);
   assert.match(safe, /^1\\\. Approved/m);
   assert.match(safe, /^12\\\. Passed/m);
+  assert.match(safe, /^3\\\) Also passed/m);
   assert.match(safe, /^\\===/m);
   assert.match(safe, /^rev-abc123/m);
 });
