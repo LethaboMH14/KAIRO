@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {buildReport,tracked,renderSummary} from './status.mjs';
+const now='2026-10-25T12:00:00Z';
+const issue=(number,date,comments=1)=>({number,state:'open',title:'Issue '+number,updated_at:date,comments,html_url:'https://github.com/LethaboMH14/KAIRO/issues/'+number});
+test('all team lanes include studios and Kaggle',()=>{const r=buildReport({now});assert.ok(r.roles.studios&&r.roles.kaggle&&r.roles.engineering&&r.roles.research&&r.roles.qa);assert.ok(tracked.studios.includes(49));assert.ok(tracked.kaggle.includes(50));});
+test('stale task cannot be called an executing coding agent',()=>{const r=buildReport({now,issues:[issue(49,'2026-10-24T00:00:00Z')]});assert.equal(r.workerExecutionVerified,false);assert.equal(r.autonomousCodeExecution,false);assert.equal(r.roles.studios.stale,1);assert.equal(r.attention[0].state,'NO_RECENT_GITHUB_ACTIVITY');});
+test('fresh issue with no worker claim comments is flagged separately',()=>{const r=buildReport({now,issues:[issue(50,'2026-10-25T11:00:00Z',0)]});assert.equal(r.summary.uncommentedTrackedIssues,1);assert.equal(r.roles.kaggle.unclaimed,1);assert.equal(r.attention[0].state,'NO_ISSUE_COMMENTS');});
+test('PR issue object excluded from open task counts',()=>{const r=buildReport({now,issues:[{...issue(49,now),pull_request:{url:'x'}}],prs:[{number:61,state:'open',head:{sha:'a'},base:{ref:'main'},draft:true}]});assert.equal(r.summary.issueCount,0);assert.equal(r.summary.openPrCount,1);});
+test('fingerprint unaffected by time-only changes and ordinary drafts',()=>{const a=buildReport({now,issues:[issue(49,now)]});const b=buildReport({now:'2026-10-25T13:00:00Z',issues:[issue(49,now)],prs:[{number:23,state:'open'}]});assert.equal(a.fingerprint,b.fingerprint);});
+test('failed workflow, not watcher self-failure, reported',()=>{const r=buildReport({now,runs:[{name:'KAIRO worker watch',id:1,status:'completed',conclusion:'failure'},{name:'App',id:2,status:'completed',conclusion:'failure',html_url:'x'}]});assert.equal(r.summary.failingRuns,1);assert.equal(r.failedRecentWorkflows[0].id,2);});
+test('report presents status boundary and true issue links',()=>{const s=renderSummary(buildReport({now,issues:[issue(49,now)]}));assert.match(s,/Not a coding-agent execution service/);assert.match(s,/issues\/50/);});
