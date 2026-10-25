@@ -77,3 +77,13 @@ test('heuristic rejects obvious credentials and personal email',()=>{
   'password="longsecret123"','Authorization: Bearer abc','student@example.com'])
   assert.throws(()=>inspectSensitivePatch('diff --git a/x b/x\n+'+value),/credential|identifier/);
 });
+
+test('capped workflow API cannot pretend full recent page is complete',async()=>{
+ const fetcher=async path=>{
+  const u=url(path),event=u.searchParams.get('event'),page=Number(u.searchParams.get('page'));
+  if(event==='schedule')return {total_count:0,workflow_runs:[]};
+  if(page===1)return {total_count:100,workflow_runs:Array.from({length:100},(_,i)=>run(i+1,event))};
+  return {total_count:100,workflow_runs:[]};
+ };
+ await assert.rejects(collectRecentAttempts(fetcher,now),/missing history page before cutoff/);
+});
