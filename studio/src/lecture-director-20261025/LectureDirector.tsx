@@ -36,7 +36,7 @@ export default function LectureDirector(){
  const checkedValue=second?correctFor(state,'second',lesson):correctFor(state,'first',lesson);
  const model=fieldSpeed(state.frequencyHz,state.poles);
  const evidence=lesson.sourceRefs.filter(ref=>cue.sourceRefIds.includes(ref.id));
- const canNext=!state.stopped&&!state.paused&&!['PAUSE_FOR_PREDICTION','SECOND_ATTEMPT','COMPLETE'].includes(state.cue);
+ const canNext=!state.stopped&&!state.paused&&(state.cue==='PAUSE_FOR_PREDICTION'?state.first!==null:state.cue==='SECOND_ATTEMPT'?state.second!==null:state.cue!=='COMPLETE');
  function act(a:Action){
   // Never start speech on a timed or reducer transition. A cue can be narrated only via explicit action.
   if(a.type!=='DEMO'&&a.type!=='SUBMIT')teacher.stop();
@@ -87,7 +87,7 @@ export default function LectureDirector(){
         <circle cx="205" cy="153" r="138" fill="url(#kld-glow)"/>
         <circle cx="205" cy="153" r="104" fill="none" stroke="#8ca7a4" strokeWidth="19" strokeDasharray="8 4"/>
         <circle cx="205" cy="153" r="91" fill="none" stroke="#c1d4cd" strokeWidth="1.5" strokeDasharray="3 7"/>
-        <g className="kld-field-rotation"><ellipse cx="205" cy="153" rx="63" ry="20" fill="#69c9a6" opacity=".15"/><path d="M205 80L224 142L205 132L186 142Z" fill="#e6b37a"/><path d="M205 226L186 163L205 173L224 163Z" fill="#76c6b0"/><text x="205" y="71" textAnchor="middle" fill="#e6b37a" fontSize="13">N</text><text x="205" y="242" textAnchor="middle" fill="#a5e0ce" fontSize="13">S</text></g>
+        <g key={state.epoch} className="kld-field-rotation"><ellipse cx="205" cy="153" rx="63" ry="20" fill="#69c9a6" opacity=".15"/><path d="M205 80L224 142L205 132L186 142Z" fill="#e6b37a"/><path d="M205 226L186 163L205 173L224 163Z" fill="#76c6b0"/><text x="205" y="71" textAnchor="middle" fill="#e6b37a" fontSize="13">N</text><text x="205" y="242" textAnchor="middle" fill="#a5e0ce" fontSize="13">S</text></g>
         <circle cx="205" cy="153" r="29" fill="#123b40" stroke="#8cc8b6" strokeWidth="3"/>
         <circle cx="205" cy="153" r="8" fill="#d7e8d9"/>
         <path d="M100 79H35V50M305 224H376V255" stroke="#c3d6c8" fill="none" strokeWidth="1.5"/>
@@ -110,7 +110,7 @@ export default function LectureDirector(){
     <div className="kld-director-title"><span>DIRECTOR / INTERACTIVE SEQUENCE</span><h2>Learn by seeing.<br/>Then predict.</h2></div>
     <ol className="kld-cues">{lesson.cues.map((c,i)=><li key={c.id}><button type="button" aria-current={state.cue===c.id?'step':undefined} disabled={i>CUES.indexOf(state.cue)||(state.paused&&!state.stopped)} onClick={()=>act({type:'JUMP_BACK',cue:c.id})}><span>{String(i+1).padStart(2,'0')}</span><span>{STAGE_LABELS[c.id].split(' / ')[1]}</span><i aria-hidden="true">{state.cue===c.id?'●':'·'}</i></button></li>)}</ol>
     <div className="kld-controls"><button type="button" onClick={()=>act({type:'BACK'})} disabled={state.paused||state.stopped||state.cue==='INTRO'}>← Previous</button><button type="button" onClick={()=>act({type:'NEXT'})} disabled={!canNext}>Next cue →</button></div>
-    <div className="kld-controls"><button type="button" onClick={()=>act(state.stopped||state.paused?{type:'RESUME'}:{type:'PAUSE'})}>{state.stopped||state.paused?'▶ Resume':'Ⅱ Pause'}</button><button type="button" onClick={()=>act({type:'REPLAY'})} disabled={state.stopped}>Replay cue</button><button type="button" onClick={()=>act({type:'STOP'})} disabled={state.stopped}>Stop</button></div>
+    <div className="kld-controls"><button type="button" onClick={()=>act({type:'SKIP'})} disabled={state.stopped||state.paused||!['INTRO','EXPLAIN','DEMONSTRATE'].includes(state.cue)}>Skip to prediction</button><button type="button" onClick={()=>act(state.stopped||state.paused?{type:'RESUME'}:{type:'PAUSE'})}>{state.stopped||state.paused?'▶ Resume':'Ⅱ Pause'}</button><button type="button" onClick={()=>{act({type:'REPLAY'});if(audioEnabled)teacher.say(cue.narration,'en-ZA');}} disabled={state.stopped}>Replay cue</button><button type="button" onClick={()=>act({type:'STOP'})} disabled={state.stopped}>Stop</button></div>
     <div className="kld-options"><label><input type="checkbox" checked={reading} onChange={e=>setReading(e.target.checked)}/> Reading-first layout</label><label><input type="checkbox" checked={reduced} onChange={e=>setReduced(e.target.checked)}/> Reduce motion</label><label><input type="checkbox" checked={audioEnabled} onChange={e=>{if(!e.target.checked)teacher.stop();setAudioEnabled(e.target.checked);}}/> Optional KAIRO narration</label>{audioEnabled&&<button type="button" onClick={readCue} disabled={state.stopped}>Read this cue with KAIRO</button>}</div>
     <div className="kld-limit">Text/transcript is always available. Narration uses the existing KAIRO teacher on explicit request, with cue-level—not word/viseme—synchronization.</div>
    </aside>
