@@ -22,4 +22,5 @@ export function checkCurrentSources(activity:Pick<XRayActivity,'sourceRefs'>,cat
 export function readPreviewData(payload:unknown,sourceRefs:SourceRef[]):XRayActivity;
 export function getAuthenticatedPreview(options:{sourceRefs:SourceRef[];goal?:string;fetcher?:typeof fetch;signal?:AbortSignal}):Promise<XRayActivity>;
 export function refreshAuthenticatedCatalog(options?:{fetcher?:typeof fetch;signal?:AbortSignal}):Promise<unknown>;
+export function loadOwnerEvidence(options:{sourceRefs:SourceRef[];goal?:string;fetcher?:typeof fetch;signal?:AbortSignal}):Promise<{activity:XRayActivity;currentCatalog:unknown}>;
 export function unsupportedClaim():string;
