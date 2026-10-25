@@ -38,7 +38,7 @@ class FakeFirestore{
       if(this.beforeCommit){const fn=this.beforeCommit;this.beforeCommit=null;fn(this);}
       if([...reads].some(([path,version])=>(this.versions.get(path)||0)!==version))continue;
       for(const {ref} of writes)if(this.rows.has(ref.path))
-        throw Object.assign(new Error('Already exists'),{status:409});
+        throw Object.assign(new Error('ALREADY_EXISTS: target document exists'),{code:6});
       for(const {ref,value} of writes){
         this.rows.set(ref.path,value);
         this.versions.set(ref.path,(this.versions.get(ref.path)||0)+1);
@@ -126,4 +126,23 @@ test('pre-aborted request cannot enter Firestore transaction',async()=>{
 test('source title drift fails transactional check with unchanged source revision',async()=>{
   const f=fixture();f.db.seed(UID,'sources',SID,{...source(),title:'Updated title'});
   await assert.rejects(()=>f.write.save(UID,lesson()),{status:409});
+});
+
+test('archived source title drift is rejected even when review pages SHA matches',async()=>{
+  const f=fixture(),path='owners/'+owner(UID)+'/revisions/'+SID+'_'+REV;
+  f.db.rows.get(path).value.title='Different archived title';
+  await assert.rejects(()=>f.write.save(UID,lesson()),{status:409});
+  assert.equal(f.saved(),undefined);
+});
+test('realistic Firestore ALREADY_EXISTS code 6 maps to a conflict, not 503',async()=>{
+  const f=fixture();
+  await f.write.save(UID,lesson());
+  await assert.rejects(()=>f.write.save(UID,lesson()),{status:409});
+  assert.equal(f.saved().value.id,LID);
+});
+test('unrelated Firestore failure is propagated rather than disguised as conflict',async()=>{
+  const db=new FakeFirestore();
+  db.runTransaction=async()=>{throw Object.assign(new Error('permission denied'),{code:7});};
+  const writer=createFencedLocalLessonWriter({firestore:db});
+  await assert.rejects(()=>writer.save(UID,lesson()),{code:7});
 });
