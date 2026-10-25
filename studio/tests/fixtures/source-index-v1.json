@@ -1,0 +1,34 @@
+{
+  "fixtureVersion": 1,
+  "description": "Entirely synthetic, limited-language lexical smoke fixture. The wording is illustrative, not linguist-reviewed or a curriculum source.",
+  "sources": [
+    {
+      "ownerId": "learner-a", "id": "motor-en", "title": "Synthetic motor guide", "language": "en",
+      "reviewedPages": [{"locator": "Page 1", "edited": false, "text": "A stator winding creates a rotating magnetic field in a training induction motor. The rotor follows the field as torque develops. Check the winding diagram against the manufacturer instructions. This is a made-up learning passage and is not equipment operating guidance."}]
+    },
+    {
+      "ownerId": "learner-a", "id": "pump-zu", "title": "Synthetic pump vocabulary", "language": "zu",
+      "reviewedPages": [{"locator": "Isigaba 1", "edited": true, "text": "Amanzi ahamba ngephampu phakathi kwamathangi. Ivalvu ivula noma ivale ukugeleza kwamanzi. Le mibhalo iyisibonelo sokufunda kuphela. Isifundo sixoxa ngamanzi, iphampu kanye nevalvu, hhayi indlela yokusebenzisa imishini yangempela."}]
+    },
+    {
+      "ownerId": "learner-a", "id": "budget-af", "title": "Synthetic budget vocabulary", "language": "af",
+      "reviewedPages": [{"locator": "Bladsy 1", "edited": false, "text": "Die begroting vir 'n klein onderneming vergelyk kontantvloei met verwagte uitgawes. Wanneer koste styg, moet die onderneming sy plan weer nagaan. Hierdie paragraaf is net sintetiese leermateriaal, nie finansiële advies nie."}]
+    },
+    {
+      "ownerId": "learner-a", "id": "water-st", "title": "Synthetic water vocabulary", "language": "st",
+      "reviewedPages": [{"locator": "Leqephe 1", "edited": false, "text": "Metsi a tsamaya ka pompo ho ya tankeng. Ha valve e kwetswe, phallo ya metsi ya fokotseha. Ena ke polelo ya teko feela. Mantswe a metsi le pompo a sebediswa ho lekola patlo ya mongolo ntle le boitsebiso ba batho ba nnete."}]
+    },
+    {
+      "ownerId": "learner-b", "id": "secret-motor", "title": "Another synthetic owner's material", "language": "en",
+      "reviewedPages": [{"locator": "Page 1", "edited": false, "text": "This owner's unrelated rotor stator magnetic field document must never appear in another account's search results. It is synthetic fixture data with no private learner details, used to assert enforced tenant partitioning."}]
+    }
+  ],
+  "queries": [
+    {"language": "en", "ownerId": "learner-a", "query": "rotor stator winding", "expectedSourceId": "motor-en"},
+    {"language": "zu", "ownerId": "learner-a", "query": "amanzi ivalvu", "expectedSourceId": "pump-zu"},
+    {"language": "af", "ownerId": "learner-a", "query": "begroting kontantvloei", "expectedSourceId": "budget-af"},
+    {"language": "st", "ownerId": "learner-a", "query": "metsi pompo", "expectedSourceId": "water-st"},
+    {"language": "mixed", "ownerId": "learner-a", "query": "iphampu amanzi", "expectedSourceId": "pump-zu"},
+    {"language": "synonym-gap", "ownerId": "learner-a", "query": "electricity appliance synonym", "expectedSourceId": "motor-en"}
+  ]
+}
