@@ -126,7 +126,7 @@ test('invalid trusted owner, lesson, session or server clock fails closed',async
  const f=fixture();
  for(const changes of [
   {ownerId:'bad\nowner'},{lessonId:'bad'},{expectedSessionId:'../invalid'},
-  {preflight:safe},{clock:()=>new Date('invalid')}
+  {preflight:safe()},{clock:()=>new Date('invalid')}
  ]){
   await assert.rejects(stageLocalPumpDraft({...f.input,...changes}),e=>e instanceof StudioDraftStagingError);
  }
