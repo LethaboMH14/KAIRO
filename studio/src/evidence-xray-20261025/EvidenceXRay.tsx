@@ -21,7 +21,7 @@ export default function EvidenceXRay({activity,currentCatalog,onReturn}:Props){
  const sourceTitleRef=useRef<HTMLHeadingElement>(null),inspectorTitleRef=useRef<HTMLHeadingElement>(null);
  const nodeRefs=useRef(new Map<string,HTMLButtonElement>());
  const firstOptionRef=useRef<HTMLButtonElement>(null);
- const current=currentCatalog===undefined||activity.mode==='prepared'?{ok:true,reason:null}:checkCurrentSources(activity,currentCatalog);
+ const current=activity.mode==='prepared'?{ok:true,reason:null}:checkCurrentSources(activity,currentCatalog);
  useEffect(()=>{setAttempt(startAttempts(activity));setActiveNode(null);setSelectedCitation(activity.evidence[0]?.id??null);setPanel(null);},[activity]);
  useEffect(()=>{
   if(!current.ok)return;
