@@ -104,7 +104,7 @@ jobs:
         run: node tools/agent-runner-live/control.mjs prompt
       - name: Run real Codex coding session in isolated read-token checkout
         if: steps.key.outputs.present == 'true'
-        uses: openai/codex-action@v1
+        uses: openai/codex-action@bdf19a4a223ec2549a3e2274a0cf61556bc07675 # v1 signed tag resolved 2026-10-25
         with:
           openai-api-key: ${{ secrets.KAIRO_CODEX_API_KEY }}
           prompt-file: .kairo-agent/task.md
