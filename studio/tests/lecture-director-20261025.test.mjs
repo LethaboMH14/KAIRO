@@ -38,6 +38,15 @@ test('intro -> reveal -> model -> explicit prediction and no timed auto-completi
  const s=toPrediction();assert.equal(s.cue,'PAUSE_FOR_PREDICTION');assert.equal(step(s,'NEXT').cue,'PAUSE_FOR_PREDICTION');
  assert.equal(initialState(lesson).cue,'INTRO');
 });
+test('skip jumps to prediction only from teaching cues and never skips required answers',()=>{
+ let s=initialState(lesson);
+ s=step(s,'SKIP');assert.equal(s.cue,'PAUSE_FOR_PREDICTION');
+ assert.equal(step(s,'SKIP'),s);
+ assert.equal(step(s,'NEXT'),s);
+ const first=step(s,'SUBMIT',{answer:'1500',expectedEpoch:s.epoch});
+ const back=step(first,'BACK');
+ assert.equal(step(back,'NEXT').cue,'REVEAL_FEEDBACK');
+});
 test('actual existing model validates bounded frequency/poles and updates deterministic board state',()=>{
  let s=step(step(initialState(lesson),'NEXT'),'NEXT');assert.equal(s.cue,'DEMONSTRATE');
  s=step(s,'DEMO',{frequencyHz:60,poles:4});assert.equal(s.frequencyHz,60);assert.equal(fieldSpeed(s.frequencyHz,s.poles).rpm,1800);
@@ -62,6 +71,7 @@ test('second prepared application is genuinely separate, completes only after su
  assert.equal(step(s,'NEXT'),s);s=step(s,'SUBMIT',{answer:'1800',expectedEpoch:s.epoch});
  assert.equal(s.cue,'COMPLETE');assert.equal(s.second,'1800');assert.equal(correctFor(s,'second',lesson),true);
  assert.equal(step(s,'NEXT'),s);
+ assert.equal(step(s,'SUBMIT',{answer:'1500',expectedEpoch:s.epoch}),s);
 });
 test('pausing prevents transitions, changing demonstration and submissions; resume is explicit',()=>{
  let s=toPrediction();const paused=step(s,'PAUSE');assert.equal(paused.paused,true);
@@ -108,7 +118,7 @@ test('unknown, malformed, stale or oversized snapshots do not contaminate this c
 });
 test('focus contract targets question and feedback headings in both attempts',()=>{
  const start=toPrediction(),feedback=step(start,'SUBMIT',{answer:'1500',expectedEpoch:start.epoch});
- assert.equal(focusAfter(step(initialState(lesson),'NEXT'),'none'), 'none');
+ assert.equal(focusAfter(initialState(lesson),initialState(lesson)),'none');
  assert.equal(focusAfter(step(step(initialState(lesson),'NEXT'),'NEXT'),start),'question');
  assert.equal(focusAfter(start,feedback),'feedback');
  const second=step(feedback,'NEXT');assert.equal(focusAfter(feedback,second),'question');
