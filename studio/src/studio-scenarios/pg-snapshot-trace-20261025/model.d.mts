@@ -1,0 +1,17 @@
+export type Isolation = 'read-committed' | 'repeatable-read';
+export type Timing = 'before-first' | 'between-reads' | 'uncommitted';
+export type Scenario = { isolation: Isolation; timing: Timing; base: number; delta: number };
+export type Action = Scenario & { prediction: number; explanation: string; sourceRevision: string; modelRevision: string };
+export type Session = Readonly<{ schemaVersion: 1; actions: readonly Readonly<Action>[] }>;
+export type TraceStep = Readonly<{ step: number; actor: string; action: string; visible: number | null; explanation: string }>;
+export type Attempt = Readonly<Action & { id: string; key: string; first: number; observed: number; correct: boolean; verification: 'local-unverified' }>;
+export const SOURCE: Readonly<{ title: string; url: string; sourceRevision: string; modelRevision: string }>;
+export const ISOLATIONS: readonly Readonly<{ id: Isolation; label: string; help: string }>[];
+export const TIMINGS: readonly Readonly<{ id: Timing; label: string }>[];
+export const BASES: readonly number[];
+export const DELTAS: readonly number[];
+export function evaluateScenario(input: Scenario): Readonly<{ first: number; second: number; trace: readonly TraceStep[]; sourceRevision: string; modelRevision: string }>;
+export function independentOracle(input: Scenario): number;
+export function newSession(): Session;
+export function replaySession(session: Session): Readonly<{ attempts: readonly Attempt[]; latestTrace: readonly TraceStep[] }>;
+export function recordAttempt(session: Session, input: Scenario & { prediction: number; explanation: string }): Readonly<{ session: Session; attempt: Attempt; trace: readonly TraceStep[] }>;
