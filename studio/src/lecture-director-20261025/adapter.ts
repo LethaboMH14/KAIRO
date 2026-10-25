@@ -19,7 +19,7 @@ export function adaptPreparedMotor(p:PreparedMotorInput):DirectorLesson{
  const [part,formula,compare]=p.steps;
  const cues:Cue[]=[
   {id:'INTRO',version:1,sourceRefIds,boardAction:'Reveal stationary stator and moving field',transcript:part.explanation,narration:part.explanation,requiresLearnerAction:false},
-  {id:'EXPLAIN',version:1,sourceRefIds,boardAction:'Reveal nₛ = 120f/p and its units',transcript:formula.explanation,narration:formula.explanation,requiresLearnerAction:false},
+  {id:'EXPLAIN',version:1,sourceRefIds,boardAction:'Reveal nₛ = 120f/p and its units',transcript:formula.explanation.split(' For four poles')[0],narration:formula.explanation.split(' For four poles')[0],requiresLearnerAction:false},
   {id:'DEMONSTRATE',version:1,sourceRefIds,boardAction:'Update stator field speed from frequency and pole count',transcript:compare.explanation,narration:compare.explanation,requiresLearnerAction:true},
   {id:'PAUSE_FOR_PREDICTION',version:1,sourceRefIds,boardAction:'Hide result and ask for 50 Hz, 4 poles',transcript:'Predict synchronous field speed for 50 Hz and four total poles. Give an answer before viewing the calculation.',narration:'Predict the field speed at 50 hertz and four poles.',requiresLearnerAction:true},
   {id:'REVEAL_FEEDBACK',version:1,sourceRefIds,boardAction:'Show the substitution and explain field speed versus rotor speed',transcript:formula.explanation,narration:formula.explanation,requiresLearnerAction:false},
