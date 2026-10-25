@@ -161,7 +161,7 @@ test('revoking consent aborts the in-flight UI request and ignores its late resp
   } finally { h.close(); }
 });
 
-test('replacing a selected recording preserves the old send consent checkbox', async () => {
+test('replacing a selected recording clears consent and requires a fresh choice', async () => {
   const h = makeHarness();
   try {
     let tree = await enable(h);
@@ -171,12 +171,15 @@ test('replacing a selected recording preserves the old send consent checkbox', a
     tree = h.render();
     chooseFile(tree, new Blob([new Uint8Array([2])], { type: 'audio/wav' }));
     tree = h.render();
-    assert.equal(input(tree, 'checkbox').props.checked, true);
+    assert.equal(input(tree, 'checkbox').props.checked, false);
+    assert.equal(button(tree, 'Transcribe').props.disabled, true);
+    consent(tree, true);
+    tree = h.render();
     assert.equal(button(tree, 'Transcribe').props.disabled, false);
   } finally { h.close(); }
 });
 
-test('reproduction: empty file remains transcribable in the actual UI', async () => {
+test('empty file is blocked locally with a clear message and no route request', async () => {
   const h = makeHarness();
   try {
     let tree = await enable(h);
@@ -184,9 +187,12 @@ test('reproduction: empty file remains transcribable in the actual UI', async ()
     tree = h.render();
     consent(tree, true);
     tree = h.render();
-    assert.equal(button(tree, 'Transcribe').props.disabled, false);
+    assert.equal(button(tree, 'Transcribe').props.disabled, true);
+    assert.match(renderToStaticMarkup(tree), /recording is empty/i);
+    // Call the handler directly as an adversarial check of the start guard,
+    // even though a browser would suppress clicks on a disabled button.
     button(tree, 'Transcribe').props.onClick();
-    assert.equal(h.requests.some(item => item.url === '/api/workspace/listening'), true);
+    assert.equal(h.requests.some(item => item.url === '/api/workspace/listening'), false);
   } finally { h.close(); }
 });
 
