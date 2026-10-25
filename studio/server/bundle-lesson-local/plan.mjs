@@ -82,15 +82,20 @@ export function buildLocalBundleLesson(bundle) {
     title: `Read the cited passages ${index + 1}`,
     explanation: group.map((item, itemIndex) => {
       const excerpt = item.quote.slice(0, 260);
-      return `Exact excerpt ${itemIndex + 1} from ${item.title} (${item.locator}): “${excerpt}”`;
+      return `Exact excerpt ${itemIndex + 1}: “${excerpt}”`;
     }).join('\n\n'),
     example: 'Compare the exact wording in these passages. Locate the words that support what you say; do not treat the exercise as proof that the source is correct.',
     citationIds: group.map(item => item.id),
   }));
   const anchor = evidence[0];
   const supportQuote = exactSnippet(anchor.quote, 240);
-  const options = [supportQuote, 'This choice is not copied from the selected passage.',
-    'This choice is another unquoted alternative.', 'This choice does not appear in the cited excerpt.'];
+  const options = [supportQuote];
+  for (const distractor of ['This choice is not copied from the selected passage.',
+    'This choice is another unquoted alternative.', 'This choice does not appear in the cited excerpt.']) {
+    let option = distractor, suffix = 0;
+    while (options.includes(option)) option = `${distractor} (alternative ${++suffix})`;
+    options.push(option);
+  }
   return {
     title: 'Study the selected source passages',
     objective: 'Read exact excerpts from every selected source that has retrieved evidence, and practise locating source support.',
