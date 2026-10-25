@@ -34,7 +34,7 @@ const local=async path=>{
   assert.ok(response?.ok(),`GET ${path} failed: ${response?.status()}`);
 };
 const noHorizontalOverflow=()=>page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+8);
-const accessible=async locator=>assert.ok(await locator.isVisible());
+const accessible=async locator=>{await locator.waitFor({state:'visible',timeout:15000});assert.ok(await locator.isVisible());};
 const click=async(locator)=>{await accessible(locator);await locator.click();};
 
 try{
@@ -96,6 +96,8 @@ try{
     assert.ok(stream,'Download stream missing');
     let body='';for await(const chunk of stream){body+=chunk.toString();assert.ok(body.length<512000,'Unbounded download');}
     assert.ok(body.includes(note),'Synthetic note absent from download');
+    assert.match(body,/Source revision:/,'Revision absent from export');
+    assert.match(body,/## Source passages/,'Quoted source passages absent from export');
     await page.reload({waitUntil:'domcontentloaded'});
     await click(page.getByRole('navigation',{name:'Lesson journey'}).getByRole('button',{name:/Keep my work/}));
     assert.equal(await page.getByLabel('My explanation or notes').inputValue(),note,'Recovery lost saved note');
@@ -121,7 +123,7 @@ try{
     await click(opener);
     await accessible(page.getByRole('dialog',{name:'Voice, language and camera'}));
     await page.keyboard.press('Escape');
-    assert.equal(await page.getByRole('dialog',{name:'Voice, language and camera'}).count(),0,'Escape failed to close dialog');
+    await page.getByRole('dialog',{name:'Voice, language and camera'}).waitFor({state:'hidden'});
     assert.equal(await opener.evaluate(element=>element===document.activeElement),true,'Focus not returned to opener');
   });
   await check('A04',async()=>{
@@ -142,6 +144,7 @@ try{
     await page.evaluate(()=>{document.documentElement.style.fontSize='';});
   });
 } catch(error){
+  if(!failures.length)failures.push({id:'RUNNER-SETUP',message:String(error?.message||error).slice(0,350)});
   console.error('Acceptance stopped at failing dependent stage; remaining browser/device checks are NOT RUN.');
 } finally{
   await context?.close();await browser?.close();
