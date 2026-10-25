@@ -21,3 +21,6 @@ From `studio/`, `node --test --test-reporter=spec tests/bundle-lesson-view.test.
 ## Import and remaining work
 
 Root can import `{ BundleLessonView, parseBundleLessonView }` from `studio/src/bundle-lesson-view/index.ts` and pass only records already verified by the owner-authenticated server. Record identity is `id + bundleRevision`; server verification must still run on every read. Keyboard/screen-reader/visual review, route integration, server ownership/revision checks, and end-to-end multi-source use remain outside this package and unvalidated.
+
+TypeScript project check: 
+px tsc -b --pretty false from studio/ exited 0 on the final source.
