@@ -1,0 +1,41 @@
+/* Isolated studio challenge styles; no shared app CSS edits. */
+.pw { box-sizing: border-box; max-width: 980px; padding: clamp(1rem, 3vw, 2.5rem); margin: 0 auto; color: #18332f; background: #f6faf7; font: 1rem/1.55 system-ui, sans-serif; }
+.pw *, .pw *::before, .pw *::after { box-sizing: border-box; }
+.pw h1, .pw h2, .pw h3 { color: #123c34; line-height: 1.2; }
+.pw h1 { font-size: clamp(1.65rem, 3.5vw, 2.6rem); margin-block: .4rem 1rem; }
+.pw h2 { font-size: clamp(1.25rem, 2.5vw, 1.8rem); }
+.pw a { color: #075a6b; text-decoration: underline; overflow-wrap: anywhere; }
+.pw a:focus-visible, .pw button:focus-visible, .pw input:focus-visible, .pw textarea:focus-visible, .pw summary:focus-visible { outline: 3px solid #a05410; outline-offset: 3px; }
+.pw-skip { display: inline-block; padding: .3rem; }
+.pw-heading, .pw-task, .pw-save { background: white; border: 1px solid #b1c9c1; border-radius: 1rem; margin-block: 1rem; padding: clamp(.9rem, 2.5vw, 1.8rem); }
+.pw-eyebrow { color: #355e55; font-weight: 700; font-size: .9rem; letter-spacing: .03em; }
+.pw-source { background: #eef5f5; padding: .8rem; border-left: 4px solid #176f67; }
+.pw-muted { color: #445f5b; font-size: .94rem; }
+.pw fieldset { border: 1px solid #9aafa9; border-radius: .6rem; padding: .8rem; display: flex; flex-wrap: wrap; gap: .65rem; }
+.pw legend, .pw-estimate { font-weight: 700; }
+.pw-option { display: flex; align-items: center; gap: .55rem; border: 1px solid #9cb4ad; border-radius: .55rem; padding: .6rem .9rem; cursor: pointer; }
+.pw input[type="radio"] { width: 1.2rem; height: 1.2rem; }
+.pw input[type="number"], .pw textarea, .pw input[type="file"] { display: block; width: 100%; max-width: 100%; min-height: 2.75rem; padding: .6rem; margin-block: .5rem 1rem; border: 1px solid #5f8178; border-radius: .35rem; color: inherit; background: white; font: inherit; }
+.pw button { min-height: 2.7rem; font: inherit; color: #113d35; background: #e6f1eb; border: 1px solid #447968; border-radius: .6rem; padding: .55rem .85rem; cursor: pointer; }
+.pw button:hover { background: #d3ebe1; }
+.pw button:disabled { cursor: not-allowed; opacity: .65; }
+.pw .pw-primary { background: #145b50; color: white; font-weight: 700; margin-block: .75rem; }
+.pw .pw-primary:hover { background: #10463e; }
+.pw-outcome { margin-top: 1rem; background: #f2f8f6; border: 1px solid #aaccc2; border-radius: .8rem; padding: 1rem; }
+.pw-view-switch, .pw-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-block: .75rem; align-items: center; }
+.pw-view-switch [aria-pressed="true"] { background: #145b50; color: white; }
+.pw-bars { display: grid; gap: 1rem; }
+.pw-bars > div { display: flex; flex-direction: column; gap: .2rem; }
+.pw meter { width: 100%; height: 1.5rem; }
+.pw-reading { display: grid; grid-template-columns: minmax(8rem, 1fr) 1fr; gap: .2rem 1rem; }
+.pw-reading dt { font-weight: 700; }
+.pw-reading dd { margin: 0; }
+.pw details { margin-block: 1rem; padding: .75rem; border: 1px solid #a3b9b0; border-radius: .5rem; background: #fff; }
+.pw summary { cursor: pointer; font-weight: 700; }
+.pw blockquote { border-left: 3px solid #66877d; padding-left: .75rem; margin: .4rem 0 1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.pw-status { background: #ebf4ef; padding: .8rem; border-left: 4px solid #387361; }
+.pw-error { background: #fff1e8; border-left: 4px solid #a33b1e; padding: .75rem; }
+.pw code { overflow-wrap: anywhere; }
+@media (max-width: 540px) { .pw-reading { grid-template-columns: 1fr; } .pw-reading dd { margin-bottom: .75rem; } .pw-option { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .pw *, .pw *::before, .pw *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
+@media print { .pw button, .pw input[type="file"], .pw-skip { display: none; } .pw { color: black; background: white; } }
