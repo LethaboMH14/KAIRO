@@ -20,6 +20,7 @@ export default function EvidenceXRay({activity,currentCatalog,onReturn}:Props){
  const [focusNewRound,setFocusNewRound]=useState(false);
  const sourceTitleRef=useRef<HTMLHeadingElement>(null),inspectorTitleRef=useRef<HTMLHeadingElement>(null);
  const nodeRefs=useRef(new Map<string,HTMLButtonElement>());
+ const returnFocusRef=useRef<HTMLElement|null>(null);
  const firstOptionRef=useRef<HTMLButtonElement>(null);
  const current=activity.mode==='prepared'?{ok:true,reason:null}:checkCurrentSources(activity,currentCatalog);
  useEffect(()=>{setAttempt(startAttempts(activity));setActiveNode(null);setSelectedCitation(activity.evidence[0]?.id??null);setPanel(null);},[activity]);
@@ -39,10 +40,16 @@ export default function EvidenceXRay({activity,currentCatalog,onReturn}:Props){
  const activeConcept=activity.concepts.find(c=>'concept:'+c.id===activeNode);
  const challenge=activity.mode==='prepared'?activity.challenges[attempt.round]:null;
  const isPrepared=activity.mode==='prepared';
+ function rememberTrigger(){
+  const focused=document.activeElement;
+  if(focused instanceof HTMLElement)returnFocusRef.current=focused;
+ }
  const selectSource=(id:string,shouldFocus=true)=>{
+  rememberTrigger();
   setSelectedCitation(id);setActiveNode('evidence:'+id);if(shouldFocus)setPanel('source');
  };
  function activate(node:XRayGraphNode){
+  rememberTrigger();
   setActiveNode(node.id);
   if(node.type==='source'){setSelectedCitation(node.evidenceIds[0]);setPanel('source');}
   else if(node.type==='concept'){
@@ -60,7 +67,8 @@ export default function EvidenceXRay({activity,currentCatalog,onReturn}:Props){
  }
  function closePanel(){
   setPanel(null);
-  if(activeNode)nodeRefs.current.get(activeNode)?.focus();
+  if(returnFocusRef.current?.isConnected)returnFocusRef.current.focus();
+  else if(activeNode)nodeRefs.current.get(activeNode)?.focus();
  }
  function nextRound(){
   const final=attempt.round===activity.challenges.length-1;
