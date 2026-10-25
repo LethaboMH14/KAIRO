@@ -29,7 +29,7 @@ const Engineering = lazy(() => import('./engineering/EngineeringStudio'));
 const WorkplaceCases = lazy(() => import('./practice-pack-workspace/PracticePackWorkspace'));
 const CvWorkspace = lazy(() => import('./cv-workspace/CvWorkspace'));
 function Routes() {
-  useEffect(()=>{const titles:Record<string,string>={'/pump-lab':'Pump Studio','/engineering':'Engineering Studio','/direction':'My direction','/pathways':'Role pathways','/cv':'My CV draft','/opportunities':'Funding and roles','/sources':'My material','/classroom':'My lesson','/evidence':'My work'};const title=titles[location.pathname];if(title)document.title='KAIRO � '+title;},[]);
+  useEffect(()=>{const titles:Record<string,string>={'/pump-lab':'Pump Studio','/engineering':'Engineering Studio','/direction':'My direction','/pathways':'Role pathways','/cv':'My CV draft','/opportunities':'Funding and roles','/sources':'My material','/classroom':'My lesson','/evidence':'My work'};const title=titles[location.pathname];if(title)document.title='KAIRO · '+title;},[]);
   const student=useStudentSpace();
   const studioPaths=['/engineering','/pump-lab','/computer-science','/classroom','/lecture','/cases','/practice'];
   if(studioPaths.includes(window.location.pathname)){if(student.loading)return <main className="ka-page" role="status">Opening your learning space…</main>;if(student.error)return <main className="ka-page" role="alert">{student.error}</main>;if(student.space&&!student.space.studios.includes(window.location.pathname))return <main className="ka-page"><h1>This activity is outside your demo programme.</h1><p>Your own modules and work are ready on Home.</p><a href="/">Back to my modules</a></main>;}
