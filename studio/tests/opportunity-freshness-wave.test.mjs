@@ -94,6 +94,20 @@ test('malformed record fields and requirement entries fail closed', () => {
   assert.equal(inspectOpportunity([], options()).status, 'invalid');
 });
 
+test('raw string bounds apply before trimming', () => {
+  const oversizedTitle = ` ${' '.repeat(300)}Valid title`;
+  const oversizedRequirement = `Valid${' '.repeat(500)}`;
+  assert.equal(inspectOpportunity(syntheticRecord({ title: oversizedTitle }), options()).status, 'invalid');
+  assert.equal(inspectOpportunity(syntheticRecord({ requirements: [oversizedRequirement] }), options()).status, 'invalid');
+});
+
+test('requirements are bounded before individual entries are inspected', () => {
+  const requirements = Array.from({ length: 101 }, (_, index) => `Synthetic requirement ${index + 1}`);
+  const result = inspectOpportunity(syntheticRecord({ requirements }), options());
+  assert.equal(result.status, 'invalid');
+  assert.deepEqual(result.reasons, ['invalid-requirements']);
+});
+
 test('unsafe source URLs fail and are never returned for navigation', () => {
   for (const url of [
     'javascript:alert(1)',

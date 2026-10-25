@@ -1,5 +1,6 @@
 const DEFAULT_MAX_AGE_DAYS = 7;
 const MAX_MAX_AGE_DAYS = 365;
+const MAX_REQUIREMENTS = 100;
 const DAY_MS = 24 * 60 * 60 * 1000;
 const UTC_TIMESTAMP = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
@@ -27,7 +28,7 @@ function isPlainRecord(value) {
 }
 
 function nonEmptyString(value, maxLength) {
-  return typeof value === 'string' && value.trim().length > 0 && value.trim().length <= maxLength;
+  return typeof value === 'string' && value.length <= maxLength && value.trim().length > 0;
 }
 
 /**
@@ -78,6 +79,8 @@ export function inspectOpportunity(record, options = {}) {
   if (record.requirements === null || record.requirements === undefined) {
     missing.push('missing-requirements');
   } else if (!Array.isArray(record.requirements)) {
+    invalid('invalid-requirements');
+  } else if (record.requirements.length > MAX_REQUIREMENTS) {
     invalid('invalid-requirements');
   } else if (record.requirements.length === 0) {
     missing.push('missing-requirements');

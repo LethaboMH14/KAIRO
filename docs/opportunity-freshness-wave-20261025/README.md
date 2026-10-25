@@ -16,7 +16,7 @@ inspectOpportunity(record, { now, maxAgeDays })
 // { status: 'current' | 'expired' | 'needs-check' | 'invalid', reasons: string[], originalUrl: string | null }
 ```
 
-- `record` is a plain data object with `id`, `title`, `url`, `sourceName`, `checkedAt`, `closesAt` (nullable), and `requirements` (string array). IDs/titles/source names and strings are bounded and non-empty where required.
+- `record` is a plain data object with `id`, `title`, `url`, `sourceName`, `checkedAt`, `closesAt` (nullable), and `requirements` (string array of at most 100 entries). IDs/titles/source names and strings are bounded by raw input length as well as non-empty after trimming.
 - Date inputs (`now`, `checkedAt`, non-null `closesAt`) must be canonical `YYYY-MM-DDTHH:mm:ss.sssZ` UTC timestamps that round-trip to the same instant. This rejects date-only values, numeric timezone offsets, impossible dates and timestamps checked in the future.
 - `maxAgeDays` defaults to 7 and must be a positive integer through 365. A record exactly at the age boundary is fresh; it becomes stale after that instant. A closing time equal to `now` is expired.
 - Missing close time, source name or requirements is `needs-check`. Other malformed fields are `invalid`. `current` requires valid metadata, source attribution, at least one nonempty requirement, a known future closing time and a check no older than the requested maximum.
@@ -27,7 +27,7 @@ inspectOpportunity(record, { now, maxAgeDays })
 
 ## Evidence
 
-Tests use only explicitly synthetic records (`example.org`, synthetic titles). They exercise actual exported utility behavior: successful current classification and exact URL, immutable inputs, inclusive age boundary, closing boundary, future checks, strict UTC dates, missing details, malformed fields, HTTPS/credential rejection, option bounds and age bounds. **12/12 focused tests pass.** No vacancy facts are embedded.
+Tests use only explicitly synthetic records (`example.org`, synthetic titles). They exercise actual exported utility behavior: successful current classification and exact URL, immutable inputs, inclusive age boundary, closing boundary, future checks, strict UTC dates, missing details, malformed fields, HTTPS/credential rejection, option bounds, age bounds, raw string bounds and the requirements-count limit. **14/14 focused tests pass.** No vacancy facts are embedded.
 
 Run from `studio/`:
 

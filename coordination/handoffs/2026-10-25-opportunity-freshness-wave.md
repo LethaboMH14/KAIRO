@@ -32,9 +32,9 @@ Run from `studio/` (Node `v24.18.0`):
 node --test tests/opportunity-freshness-wave.test.mjs
 ```
 
-Results: `node --check server/opportunity-freshness/index.mjs` exited 0; focused Node suite **12/12 passed, 0 failed**. The first test invocation used paths prefixed with `studio/` while already in `studio/` and could not locate the files; the corrected command above passed. No other suite or build was run.
+Results: `node --check server/opportunity-freshness/index.mjs` exited 0; focused Node suite **14/14 passed, 0 failed**. The first test invocation used paths prefixed with `studio/` while already in `studio/` and could not locate the files; the corrected command above passed. A bounded-input follow-up caps the requirements array at 100 and checks raw (not trimmed-only) string length. No other suite or build was run.
 
-`git diff --cached --check` passed before the first commit. Only the four claimed paths were staged and committed as `f362449793cc0c2322774d0574fbc5970d96816a`; the isolated branch was pushed. Draft PR [#74](https://github.com/LethaboMH14/KAIRO/pull/74) targets `main@a2dfc4f10499bcd32ac45548fc6767094b26c8d2` and is attached to this task. Its initial published head was `f362449793cc0c2322774d0574fbc5970d96816a`; this handoff-only accuracy update is part of the same PR branch.
+`git diff --cached --check` passed before the existing commits. The isolated branch currently has the freshness implementation commit, a handoff-evidence commit, and a bounded-input correction commit; draft PR [#74](https://github.com/LethaboMH14/KAIRO/pull/74) targets `main@a2dfc4f10499bcd32ac45548fc6767094b26c8d2` and is attached to this task. Only the four claimed paths are included. Verify the final exact head from PR #74 before integration.
 
 ## Limits / next steps
 
