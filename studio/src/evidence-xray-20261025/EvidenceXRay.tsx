@@ -1,6 +1,6 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import type {KeyboardEvent} from 'react';
-import {advanceAttempt,checkCurrentSources,chooseAttempt,makeGraph,startAttempts,submitAttempt,unsupportedClaim} from './core.mjs';
+import {advanceAttempt,checkCurrentSources,chooseAttempt,graphFocusTarget,makeGraph,startAttempts,submitAttempt,unsupportedClaim} from './core.mjs';
 import type {Citation,XRayActivity,XRayGraphNode} from './core.mjs';
 import './EvidenceXRay.css';
 
@@ -61,9 +61,8 @@ export default function EvidenceXRay({activity,currentCatalog,onReturn}:Props){
   if(!['ArrowRight','ArrowDown','ArrowLeft','ArrowUp','Home','End','Escape'].includes(event.key))return;
   event.preventDefault();
   if(event.key==='Escape'){setPanel(null);return;}
-  const next=event.key==='Home'?0:event.key==='End'?nodes.length-1:
-   (index+(event.key==='ArrowRight'||event.key==='ArrowDown'?1:-1)+nodes.length)%nodes.length;
-  nodeRefs.current.get(nodes[next].id)?.focus();
+  const target=graphFocusTarget(nodes,index,event.key);
+  if(target)nodeRefs.current.get(target)?.focus();
  }
  function closePanel(){
   setPanel(null);
