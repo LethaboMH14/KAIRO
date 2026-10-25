@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "registry_version": "2026-10-25.1",
+  "policy": "Proposed only until individually audited, signed off in issue/PR, with verified local content digests.",
+  "entries": [
+    {
+      "id": "threejs-guides",
+      "category": "React/Three.js",
+      "status": "proposed",
+      "source": {
+        "repository": "CloudAI-X/threejs-skills",
+        "ref": "0e181866f095b5f06d005133876e926515390d95",
+        "path": "skills/threejs-fundamentals"
+      },
+      "license": {
+        "spdx": "MIT",
+        "evidence": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "Three.js with Node 24; check studio lockfile",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "Read-only skill instructions; six related guides require individual review",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "react-three-fiber",
+      "category": "React/Three.js",
+      "status": "proposed",
+      "source": {
+        "repository": "pmndrs/react-three-fiber",
+        "ref": "d74622ea8ed717f7212d7e19d65ff3e325508389",
+        "path": "README.md"
+      },
+      "license": {
+        "spdx": "MIT",
+        "evidence": "https://github.com/pmndrs/react-three-fiber/blob/d74622ea8ed717f7212d7e19d65ff3e325508389/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "React/Three.js versions from studio lockfile",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "Reference, not installable skill bundle",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "frontend-design",
+      "category": "UI/UX",
+      "status": "proposed",
+      "source": {
+        "repository": "anthropics/skills",
+        "ref": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+        "path": "skills/frontend-design"
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "evidence": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/frontend-design/LICENSE.txt"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "Claude SKILL.md; compatibility with other loaders unproven",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "Existing PowerShell installer references same SHA; do not run it",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "python-ocr",
+      "category": "Python/OCR",
+      "status": "proposed",
+      "source": {
+        "repository": "tesseract-ocr/tesseract",
+        "ref": "f139e578a37c5c18717195c7d603ddb357717e23",
+        "path": "README.md"
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "evidence": "https://github.com/tesseract-ocr/tesseract/blob/f139e578a37c5c18717195c7d603ddb357717e23/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "Python 3.11+; native OCR requires separate binaries",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "No OS-wide binaries or unsigned downloads",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "firebase-gcp",
+      "category": "Firebase/GCP",
+      "status": "proposed",
+      "source": {
+        "repository": "GoogleCloudPlatform/generative-ai",
+        "ref": "9bffb4d802d9e6c6af353d15f162c90504d27c17",
+        "path": "README.md"
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "evidence": "https://github.com/GoogleCloudPlatform/generative-ai/blob/9bffb4d802d9e6c6af353d15f162c90504d27c17/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "KAIRO Node 24 private Google Cloud gateway",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "No IAM changes, paid service or cloud deployment",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "azure-sdk",
+      "category": "Azure",
+      "status": "proposed",
+      "source": {
+        "repository": "Azure/azure-sdk-for-python",
+        "ref": "762d184ec36fe4c1082a2c2939382e70dd942b59",
+        "path": "README.md"
+      },
+      "license": {
+        "spdx": "MIT",
+        "evidence": "https://github.com/Azure/azure-sdk-for-python/blob/762d184ec36fe4c1082a2c2939382e70dd942b59/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "Python 3.11+",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "No tenant permissions, paid resources or SDK installation",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "huggingface-hub",
+      "category": "Hugging Face",
+      "status": "proposed",
+      "source": {
+        "repository": "huggingface/huggingface_hub",
+        "ref": "feea5a63f9c725e98f98a0bb899875ec5efa673b",
+        "path": "README.md"
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "evidence": "https://github.com/huggingface/huggingface_hub/blob/feea5a63f9c725e98f98a0bb899875ec5efa673b/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "Python 3.11+; model weights separately licensed",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "No tokens, external downloads or model deployment",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "playwright",
+      "category": "Playwright",
+      "status": "proposed",
+      "source": {
+        "repository": "microsoft/playwright",
+        "ref": "91a765d1681cb3eeb0d0fb89fefec3cf0d21bd9b",
+        "path": "README.md"
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "evidence": "https://github.com/microsoft/playwright/blob/91a765d1681cb3eeb0d0fb89fefec3cf0d21bd9b/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "Node 24; explicit browser-denial policy",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "Browser/microphone observation, installation and execution denied",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "rag",
+      "category": "RAG",
+      "status": "proposed",
+      "source": {
+        "repository": "run-llama/llama_index",
+        "ref": "619d74664e8404612038bc15a1a40c686037277c",
+        "path": "README.md"
+      },
+      "license": {
+        "spdx": "MIT",
+        "evidence": "https://github.com/run-llama/llama_index/blob/619d74664e8404612038bc15a1a40c686037277c/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "Python 3.11+; source-revision evidence integrity",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "No private learner corpus or external index",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "security",
+      "category": "Security",
+      "status": "proposed",
+      "source": {
+        "repository": "aquasecurity/trivy",
+        "ref": "3a0164d6cd627645220730d48d51dc71e10e7156",
+        "path": "README.md"
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "evidence": "https://github.com/aquasecurity/trivy/blob/3a0164d6cd627645220730d48d51dc71e10e7156/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "OS-specific binary/toolchain requires review",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "No elevated/global scans or automatic DB updates",
+      "approval": null,
+      "artifact": null
+    },
+    {
+      "id": "accessibility",
+      "category": "Accessibility",
+      "status": "proposed",
+      "source": {
+        "repository": "dequelabs/axe-core",
+        "ref": "6b52b841461bd23345970b91ec75fdaff6bad31a",
+        "path": "README.md"
+      },
+      "license": {
+        "spdx": "MPL-2.0",
+        "evidence": "https://github.com/dequelabs/axe-core/blob/6b52b841461bd23345970b91ec75fdaff6bad31a/LICENSE"
+      },
+      "permissions": [
+        "read-local-files"
+      ],
+      "network": false,
+      "budget_usd": 0,
+      "compatibility": "Browser checks deferred under denied-browser policy",
+      "tests": [
+        "review bounded synthetic offline content",
+        "verify exact SHA-256 for complete local bundle before staging"
+      ],
+      "rollback": "Remove only a verified stage in the isolated workspace; manual review if tampered",
+      "review_notes": "Only static accessible-design review; no browser capture",
+      "approval": null,
+      "artifact": null
+    }
+  ]
+}
