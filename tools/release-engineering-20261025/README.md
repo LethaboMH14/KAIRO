@@ -39,7 +39,7 @@ Exit codes: `0` = all *recorded* checks satisfied, **still not release approval*
 | [#23](https://github.com/LethaboMH14/KAIRO/pull/23) | draft → main | No PR-head Actions run observed | Consented upload controller and synthetic tests; not live mic or validated multilingual listening; issue #7. |
 | [#24](https://github.com/LethaboMH14/KAIRO/pull/24) | draft → main | No PR-head Actions run observed | Isolated SQLite index prototype and synthetic benchmark, not Cloud Run persistent index; issue #4. |
 
-| [#26](https://github.com/LethaboMH14/KAIRO/pull/26) | draft → #15 branch | Run [40159804666](https://github.com/LethaboMH14/KAIRO/actions/runs/40159804666) was in progress at last check | Feature-gated selection state model, not a mounted live picker; issue #16. |
+| [#26](https://github.com/LethaboMH14/KAIRO/pull/26) | draft → #15 branch | [40159804666](https://github.com/LethaboMH14/KAIRO/actions/runs/40159804666) **passed**: 758/758 Node24 tests, build and bus job | Feature-gated selection state model, not a mounted live picker; issue #16. |
 | [#27](https://github.com/LethaboMH14/KAIRO/pull/27) | draft → main | No exact-head Actions observed | Source-anchor/performance diagnostic, NOT observed device performance; issue #9. |
 | [#28](https://github.com/LethaboMH14/KAIRO/pull/28) | draft → main | No exact-head Actions observed | Offline signed webhook/dispatch simulation, NOT a live agent runner; issue #13. |
 | [#30](https://github.com/LethaboMH14/KAIRO/pull/30) | draft → main | No exact-head Actions observed | Source-dated career evidence gap model only, NOT hiring integration; issue #6. |
