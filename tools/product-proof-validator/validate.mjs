@@ -30,6 +30,8 @@ export function validateRegistry(registry, { headSha } = {}) {
     else for (const [i, s] of c.sources.entries()) {
       if (!present(s?.issuer) || !HTTPS.test(s?.url || '') || !validDate(s?.publishedDate) || !validDate(s?.checkedDate)) fail(id, `sources[${i}]`, 'issuer, HTTPS URL, publishedDate and checkedDate required');
     }
+    if (c.publication === 'public' && ['proposed', 'blocked', 'withdrawn'].includes(c.status)) fail(id, 'status', 'unverified/withdrawn state cannot be promoted to a public factual claim');
+    if (c.publication === 'public' && /\b\d+(?:\.\d+)?\s*(?:%|percent|users?|learners?|hours?|minutes?|rand|rands|USD|ZAR)\b/i.test(c.statement || '') && c.quantitative === undefined) fail(id, 'quantitative', 'numerical public claim requires explicit denominator, period and method');
     if (c.quantitative !== undefined) {
       const q = c.quantitative;
       if (!q || !Number.isFinite(q.value) || !present(q.unit) || !Number.isFinite(q.denominator) || q.denominator <= 0 || !present(q.period) || !present(q.method)) fail(id, 'quantitative', 'finite value, unit, positive denominator, period and method required');
