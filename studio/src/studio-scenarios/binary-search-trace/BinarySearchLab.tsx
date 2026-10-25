@@ -93,7 +93,7 @@ export default function BinarySearchLab({ onLocalAttempt }: BinarySearchLabProps
         <p><strong>List values:</strong> {array.values.length ? array.values.join(', ') : '(empty list)'}</p>
         <label htmlFor={`${prefix}-target`}>Value to find or insert
           <select id={`${prefix}-target`} value={scenario.target}
-            onChange={event => { setScenario(s => ({ ...s, target: Number(event.target.value) })); setError(''); }}
+            onChange={event => { setScenario(s => ({ ...s, target: Number(event.target.value) })); setIndexDraft(''); setReasoning(''); setError(''); }}
             style={{ display: 'block', width: '100%' }}>
             {array.targets.map(value => <option key={value} value={value}>{value}</option>)}
           </select>
