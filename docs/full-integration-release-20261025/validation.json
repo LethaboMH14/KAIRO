@@ -1,0 +1,31 @@
+{
+  "sourceCommit": "2dd3f8312de05af962f62f4d153a924152922a8e",
+  "mergeCommit": "63171a76780ab0d4486c2c6e35f74bd3787c92b7",
+  "pullRequest": 117,
+  "ciRun": "https://github.com/LethaboMH14/KAIRO/actions/runs/40240125580",
+  "linuxAppTests": 925,
+  "linuxAppFailures": 0,
+  "localCheckpointTests": 915,
+  "revision": "kairo-app-full26b",
+  "trafficPercent": 100,
+  "imageDigest": "sha256:2e74388c7fcd295501649d999b77fdaf83899bfea33e6f5a33f25ea505e41ffc",
+  "candidateChecks": 30,
+  "productionBundleChecks": 29,
+  "legacyProductionChecks": 18,
+  "liveFailures": 0,
+  "modelCalls": 1,
+  "groqGeneration": {
+    "status": 201,
+    "created": true,
+    "provider": "groq"
+  },
+  "iamBindingsUnchanged": true,
+  "publicInvokerEnabled": false,
+  "rollbackRevision": "kairo-app-full26a",
+  "cloudBuild": "b439eab4-3798-4e81-b9a6-19e4462fd29e",
+  "productionUiPages": 4,
+  "productionUiPageErrors": 0,
+  "productionUiModelCalls": 0,
+  "priorApiCheckpointRevision": "kairo-app-full25g",
+  "apiCheckScope": "30 candidate, 29 production bundle and 18 legacy checks were observed on full25g; final full26b changes are font/UTF8 and visible heading fixes, with a separate four-page production browser check."
+}

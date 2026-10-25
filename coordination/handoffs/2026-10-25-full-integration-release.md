@@ -1,3 +1,5 @@
 # Full integration release handoff
 
 Owner codex-full-integration-20261025-f; settings unknown. See docs/full-integration-release-20261025/README.md and publication-files.txt for exact owned paths, interfaces, tests, screenshots, judging mapping and limitations. Main foundation merges are48,109,107(repaired),111(repaired),88,98,99,100,103,79,110,102. Root release integration is on isolated codex/full-integration-release-20261025; canonical dirty checkout preserved. User authorizes app browser observation/screenshots; no secret/cloud-console screenshots. Runtime IAM remains private and deleted schedule stays off. Source/CI/cloud promotion proof must be checked before calling this deployed. Full learner/employer/accessibility vision remains staged as documented.
+
+Final superseding evidence: PR113,115,117 merged; full26b serves100% private traffic. Clean Linux925/925 plus build/bus pass; actual hosted four-page UI pass0errors. See release validation.json, browser-cloud.json, service-final.json and iam-final.json. Prior30/29/18 API checks belong to full25g. Judge entry, full ambition and human validation remain open. Schedule stays off.
