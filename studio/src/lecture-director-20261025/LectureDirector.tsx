@@ -69,7 +69,7 @@ export default function LectureDirector(){
   window.setTimeout(()=>URL.revokeObjectURL(url),1000);
  }
  function readCue(){
-  if(!audioEnabled||state.stopped)return;
+  if(!audioEnabled||state.stopped||state.paused)return;
   // KAIRO's existing single narrator, cue-level synchronization only: no invented word visemes.
   teacher.say(cue.narration,'en-ZA');
  }
@@ -113,7 +113,7 @@ export default function LectureDirector(){
     <ol className="kld-cues">{lesson.cues.map((c,i)=><li key={c.id}><button type="button" aria-current={state.cue===c.id?'step':undefined} disabled={i>CUES.indexOf(state.cue)||(state.paused&&!state.stopped)} onClick={()=>act({type:'JUMP_BACK',cue:c.id})}><span>{String(i+1).padStart(2,'0')}</span><span>{STAGE_LABELS[c.id].split(' / ')[1]}</span><i aria-hidden="true">{state.cue===c.id?'●':'·'}</i></button></li>)}</ol>
     <div className="kld-controls"><button type="button" onClick={()=>act({type:'BACK'})} disabled={state.paused||state.stopped||state.cue==='INTRO'}>← Previous</button><button type="button" onClick={()=>act({type:'NEXT'})} disabled={!canNext}>Next cue →</button></div>
     <div className="kld-controls"><button type="button" onClick={()=>act({type:'SKIP'})} disabled={state.stopped||state.paused||!['INTRO','EXPLAIN','DEMONSTRATE'].includes(state.cue)}>Skip to prediction</button><button type="button" onClick={()=>act(state.stopped||state.paused?{type:'RESUME'}:{type:'PAUSE'})}>{state.stopped||state.paused?'▶ Resume':'Ⅱ Pause'}</button><button type="button" onClick={()=>{act({type:'REPLAY'});if(audioEnabled)teacher.say(cue.narration,'en-ZA');}} disabled={state.stopped}>Replay cue</button><button type="button" onClick={()=>act({type:'STOP'})} disabled={state.stopped}>Stop</button></div>
-    <div className="kld-options"><label><input type="checkbox" checked={reading} onChange={e=>setReading(e.target.checked)}/> Reading-first layout</label><label><input type="checkbox" checked={reduced} onChange={e=>setReduced(e.target.checked)}/> Reduce motion</label><label><input type="checkbox" checked={audioEnabled} onChange={e=>{if(!e.target.checked)teacher.stop();setAudioEnabled(e.target.checked);}}/> Optional KAIRO narration</label>{audioEnabled&&<button type="button" onClick={readCue} disabled={state.stopped}>Read this cue with KAIRO</button>}</div>
+    <div className="kld-options"><label><input type="checkbox" checked={reading} onChange={e=>setReading(e.target.checked)}/> Reading-first layout</label><label><input type="checkbox" checked={reduced} onChange={e=>setReduced(e.target.checked)}/> Reduce motion</label><label><input type="checkbox" checked={audioEnabled} onChange={e=>{if(!e.target.checked)teacher.stop();setAudioEnabled(e.target.checked);}}/> Optional KAIRO narration</label>{audioEnabled&&<button type="button" onClick={readCue} disabled={state.stopped||state.paused}>Read this cue with KAIRO</button>}</div>
     <div className="kld-limit">Text/transcript is always available. Narration uses the existing KAIRO teacher on explicit request, with cue-level—not word/viseme—synchronization.</div>
    </aside>
   </div>
