@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "stagedAt": "2026-10-25T23:32:50.1945842+02:00",
+  "stagedAt": "2026-10-25T23:40:25.0280059+02:00",
   "nodeBase": "node:24-bookworm-slim",
   "fileCount": 162,
-  "totalBytes": 71592183.0,
+  "totalBytes": 71592545.0,
   "allowlistChecked": true,
   "excluded": [
     ".env and local credentials",
@@ -650,8 +650,8 @@
     },
     {
       "path": "studio/server/bundle-lessons/local-repository.mjs",
-      "bytes": 3429,
-      "sha256": "58d5e45ccd6b753510f5dbbfed1cf828bcd43b821f0eb52e97e3950260a358b5"
+      "bytes": 3791,
+      "sha256": "633ffd8ba7bb33f77759b66ae9f63080da756e843b776e81f8dd2cafa60243d9"
     },
     {
       "path": "studio/server/bundle-lessons/service.mjs",
