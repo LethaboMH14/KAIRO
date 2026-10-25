@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {performance} from 'node:perf_hooks';
 import {preparedPages,preparedPumpExercise as prepared} from '../src/evidence-xray-20261025/prepared-pump.mjs';
-import {advanceAttempt,checkCurrentSources,chooseAttempt,getAuthenticatedPreview,loadOwnerEvidence,makeGraph,
+import {advanceAttempt,checkCurrentSources,chooseAttempt,getAuthenticatedPreview,graphFocusTarget,loadOwnerEvidence,makeGraph,
  readPreviewData,refreshAuthenticatedCatalog,startAttempts,submitAttempt,unsupportedClaim,validatePrepared} from '../src/evidence-xray-20261025/core.mjs';
 
 const clone=value=>structuredClone(value);
@@ -169,4 +169,43 @@ test('owner preview provides only authorized sources and the latest fresh catalo
  assert.equal(checkCurrentSources(activity,currentCatalog).ok,true);
  assert.equal(activity.challenges.length,0);
  assert.equal(calls.length,3);
+});
+
+test('roving arrow/Home/End keyboard targets wrap deterministically in both directions',()=>{
+ const nodes=makeGraph(prepared).nodes;
+ const first=nodes[0].id,last=nodes.at(-1).id;
+ assert.equal(graphFocusTarget(nodes,0,'ArrowLeft'),last);
+ assert.equal(graphFocusTarget(nodes,nodes.length-1,'ArrowRight'),first);
+ assert.equal(graphFocusTarget(nodes,2,'Home'),first);
+ assert.equal(graphFocusTarget(nodes,2,'End'),last);
+ assert.equal(graphFocusTarget(nodes,1,'ArrowDown'),nodes[2].id);
+ assert.equal(graphFocusTarget(nodes,1,'ArrowUp'),first);
+ assert.equal(graphFocusTarget(nodes,1,'Enter'),null,'activation remains native button behavior');
+ assert.equal(graphFocusTarget([],0,'Home'),null);
+ assert.equal(graphFocusTarget(nodes,-1,'ArrowRight'),null);
+});
+test('actual React scene SSR renders the unsaved source/graph/challenge; unauthorized catalogs suppress quotes',async()=>{
+ const {default:React}=await import('react');
+ const {renderToStaticMarkup}=await import('react-dom/server');
+ const {createServer}=await import('vite');
+ const {default:reactPlugin}=await import('@vitejs/plugin-react');
+ const {fileURLToPath}=await import('node:url');
+ const server=await createServer({root:fileURLToPath(new URL('..',import.meta.url)),configFile:false,
+  plugins:[reactPlugin()],server:{middlewareMode:true,ws:false},appType:'custom'});
+ try{
+  const {default:Panel}=await server.ssrLoadModule('/src/evidence-xray-20261025/EvidenceXRay.tsx');
+  const html=renderToStaticMarkup(React.createElement(Panel,{activity:prepared}));
+  assert.match(html,/SOURCE LENS/);
+  assert.match(html,/EVIDENCE CONSTELLATION/);
+  assert.match(html,/LEARNING INSPECTOR/);
+  assert.match(html,/Check my evidence/);
+  assert.match(html,/The impeller transfers rotational energy to water/);
+  assert.match(html,/UNSAVED \/ LOCAL-UNVERIFIED/);
+  assert.doesNotMatch(html,/Your selection matches the prepared key|REVISIT THE EVIDENCE/,'no answer before attempt');
+  assert.match(html,/aria-label="Interactive evidence constellation/);
+  const live=readPreviewData(goodPreview(),prepared.sourceRefs);
+  const blocked=renderToStaticMarkup(React.createElement(Panel,{activity:live}));
+  assert.match(blocked,/Source access has changed/);
+  assert.doesNotMatch(blocked,/The impeller transfers rotational energy to water/);
+ }finally{await server.close();}
 });
