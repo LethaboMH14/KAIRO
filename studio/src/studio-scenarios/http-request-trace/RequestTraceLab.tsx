@@ -37,6 +37,11 @@ export default function RequestTraceLab({ onLocalAttempt }: RequestTraceLabProps
   }
   function reveal() {
     if (!canPredict || locked) return;
+    if (session.attempts.some(a => a.scenario.cache === scenario.cache &&
+      a.scenario.connection === scenario.connection && a.scenario.origin === scenario.origin)) {
+      setError('Change at least one scenario setting before your independent second attempt.');
+      return;
+    }
     try {
       setTrace(traceRequest(scenario));
       setStepCount(1);
@@ -148,6 +153,10 @@ export default function RequestTraceLab({ onLocalAttempt }: RequestTraceLabProps
 
       <p role="status" aria-live="polite">{notice}</p>
       {error && <p role="alert">{error}</p>}
+      {trace && <button type="button" onClick={() => {
+        setTrace(null); setStepCount(0); setError('');
+        setNotice('Trace closed. You can adjust your prediction and scenario before trying again.');
+      }}>Edit scenario or prediction</button>}
       <section aria-labelledby={`${instanceId}-attempts`}>
         <h3 id={`${instanceId}-attempts`}>Your local attempts ({session.attempts.length} of 2)</h3>
         <ol>{session.attempts.map(a => <li key={a.id}>
