@@ -32,7 +32,14 @@ Exit codes: `0` = all *recorded* checks satisfied, **still not release approval*
 | [#15](https://github.com/LethaboMH14/KAIRO/pull/15) | draft → #1 branch | [40159022660](https://github.com/LethaboMH14/KAIRO/actions/runs/40159022660) **passed**: 746/746, build, 6 bus tests | Ubuntu Python/OCR CI repair; independently review, verify parent integration and local scope. |
 | [#17](https://github.com/LethaboMH14/KAIRO/pull/17) | draft → #15 branch | [40159188644](https://github.com/LethaboMH14/KAIRO/actions/runs/40159188644) **passed**: 750/750, build, bus job | Added Python/OCR regression tests. Logs include Vite dependency scanner warnings despite green suite. |
 
-This is a historical snapshot, **not live CI status**. PR-LEDGER.json is explicit about what remains pending/failed. Gate categories map to Product/Usability/Intelligence (learner journey and source integrity), Sustainability (CI/performance/cost) and Impact/Presentation (actual judge proof vs. synthetic demonstration). Creativity does not remove safety gates.
+| [#19](https://github.com/LethaboMH14/KAIRO/pull/19) | draft → main | No PR-head Actions run observed | New synthetic tenant/consent tests, actual file/full Node 24 test pending; issue #10. |
+| [#20](https://github.com/LethaboMH14/KAIRO/pull/20) | draft → main | No PR-head Actions run observed | Journey marker tests and denied-browser preflight only, not device/browser acceptance; issue #5. |
+| [#21](https://github.com/LethaboMH14/KAIRO/pull/21) | draft → main | No PR-head Actions run observed | Offline read-only GCP preflight; live IAM and cost unverified; issue #8. |
+| [#22](https://github.com/LethaboMH14/KAIRO/pull/22) | draft → #1 branch | No PR-head Actions run observed | Unmounted owner-scoped lesson-bundle contract; v2 persistence and route integration pending; issue #3. |
+| [#23](https://github.com/LethaboMH14/KAIRO/pull/23) | draft → main | No PR-head Actions run observed | Consented upload controller and synthetic tests; not live mic or validated multilingual listening; issue #7. |
+| [#24](https://github.com/LethaboMH14/KAIRO/pull/24) | draft → main | No PR-head Actions run observed | Isolated SQLite index prototype and synthetic benchmark, not Cloud Run persistent index; issue #4. |
+
+This is a historical snapshot of **ten external open PRs**, **not live CI status**. This draft PR #25 cannot truthfully include its own changing head SHA in a self-referential static JSON ledger; review #25 independently. PR-LEDGER.json is explicit about what remains pending/failed. Gate categories map to Product/Usability/Intelligence (learner journey and source integrity), Sustainability (CI/performance/cost) and Impact/Presentation (actual judge proof vs. synthetic demonstration). Creativity does not remove safety gates.
 
 ## Judge access without changing IAM
 
