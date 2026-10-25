@@ -11,7 +11,7 @@ export type DirectorState={version:1;lessonId:string;sourceFingerprint:string;cu
 export type Action={type:'NEXT'|'BACK'|'PAUSE'|'RESUME'|'STOP'|'REPLAY'|'RESET'|'SKIP'}|{type:'JUMP_BACK';cue:CueId}|{type:'DEMO';frequencyHz:number;poles:number}|{type:'SUBMIT';answer:Answer;expectedEpoch:number};
 export const fieldSpeed=synchronousSpeed;
 export const allowedPoles=SUPPORTED_POLES;
-export function initialState(lesson:DirectorLesson):DirectorState{return {version:1,lessonId:lesson.id,sourceFingerprint:lesson.sourceFingerprint,cue:'INTRO',frequencyHz:50,poles:4,first:null,second:null,paused:false,stopped:false,epoch:0};}
+export function initialState(lesson:DirectorLesson):DirectorState{return {version:1,lessonId:lesson.id,sourceFingerprint:lesson.sourceFingerprint,cue:'INTRO',frequencyHz:30,poles:4,first:null,second:null,paused:false,stopped:false,epoch:0};}
 export function assertLesson(l:DirectorLesson){
  if(!l||!l.id||!l.sourceFingerprint||l.answerKey?.version!==1||l.cues?.length!==CUES.length)throw Error('Unsupported lecture version.');
  const ids=new Set(l.sourceRefs.map(s=>s.id));
