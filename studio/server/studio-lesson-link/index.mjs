@@ -15,7 +15,7 @@ export class StudioLessonLinkError extends Error {
 }
 const deny=(status,code)=>{throw new StudioLessonLinkError(status,code);};
 const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
-const hasPages=value=>Array.isArray(value)&&value.length>0&&value.length<=100&&value.every(page=>object(page)&&typeof page.text==='string'&&page.text.length>0&&page.text.length<=16000);
+const hasPages=value=>Array.isArray(value)&&value.length>0&&value.length<=100&&value.every(page=>object(page)&&typeof page.text==='string'&&page.text.length<=16000)&&value.some(page=>page.text.length>=80)&&value.reduce((n,page)=>n+page.text.length,0)<=48000;
 const sourceMatches=(value,id,revision)=>object(value)&&value.id===id&&value.revision===revision&&value.reviewed===true&&hasPages(value.reviewedPages)&&hash(value.reviewedPages)===revision;
 
 /**
