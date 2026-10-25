@@ -22,3 +22,5 @@ From `studio/`: `node --test --test-reporter=spec tests/engineering-role-sources
 ## Remaining gaps
 
 This is a two-record research fixture, not a vacancy feed or an exhaustive pathway catalogue. Pages can change; recheck them before learner action. No eligibility determination, learner usability study, company confirmation, application, hiring, partnership, or competence assessment occurred. Before runtime integration, root should map actual evidence conservatively to `missing`, `needs-review`, or `explicitly linked`; no inference about ability should be made from absent records. Independent review and mounting are outside this task.
+
+Evidence retrieval note: Siemens' official English-language page content was surfaced in search/indexed text; a direct open timed out on recheck. Revalidate its requirement details from the live page before integration or learner action.

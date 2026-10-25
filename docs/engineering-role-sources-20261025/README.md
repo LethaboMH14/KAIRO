@@ -21,3 +21,5 @@ This small research fixture supports **Impact** (help engineering learners find 
 ## Remaining gaps
 
 Recheck official career portals before a learner acts. The data does not verify individual eligibility, qualification accreditation, work authorization, application acceptance, or current vacancy state beyond the dated observation. Learner usability and whether the suggested projects help are untested. A runtime integration must map concrete learner artifacts to `missing`, `needs-review` or `explicitly linked`; absence of evidence is not proof of missing competence.
+
+The Siemens page’s English-language indexed text was available during research; direct page retrieval timed out on recheck. The URL remains the official Siemens page, but its requirement details should be revalidated from the live page before integration or learner action.
