@@ -82,6 +82,10 @@ test('close date and explicit closed status override any learner evidence', () =
   assert.equal(run({now:'2026-11-05T10:00:00.000Z',evidence:[evidence()]}).listingState,'closed');
   assert.equal(run({role:role({source:{status:'closed'}})}).listingState,'closed');
   assert.equal(run({role:role({source:{closesAt:null}})}).listingState,'unknown');
+  assert.equal(run({now:'2026-11-01T14:00:00.000Z'}).listingState,'unknown',
+    'date-only deadline has no proven clock time on closing day');
+  assert.equal(run({now:'2026-11-02T00:00:00.000Z'}).listingState,'closed',
+    'after the entire closing date has passed, the listing is closed');
 });
 
 test('invalid source dates, missing primary quotes and guessed priority fail closed', () => {
