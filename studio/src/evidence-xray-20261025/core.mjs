@@ -101,6 +101,15 @@ export function makeGraph(activity){
  unique(nodes,n=>n.id,'graph node');unique(edges,e=>e.id,'graph edge');
  return {nodes,edges};
 }
+/** Pure roving-focus target shared by real node key handlers and unit tests. */
+export function graphFocusTarget(nodes,index,key){
+ if(!Array.isArray(nodes)||!nodes.length||!Number.isInteger(index)||index<0||index>=nodes.length)return null;
+ const count=nodes.length;
+ const next=key==='Home'?0:key==='End'?count-1:
+  key==='ArrowRight'||key==='ArrowDown'?(index+1)%count:
+  key==='ArrowLeft'||key==='ArrowUp'?(index-1+count)%count:-1;
+ return next<0?null:nodes[next].id;
+}
 export function startAttempts(activity){return {round:0,selectedEvidenceId:null,feedback:null,completed:false};}
 export function chooseAttempt(activity,state,evidenceId){
  if(activity.mode!=='prepared'||state.completed||state.feedback||state.round>=activity.challenges.length) return state;
