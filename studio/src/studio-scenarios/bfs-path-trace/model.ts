@@ -67,10 +67,12 @@ export function assertGraph(graph: unknown, start: unknown, target: unknown): as
   let edges = 0;
   for (const node of nodes) {
     const adjacent = g[node];
-    if (!Array.isArray(adjacent) || adjacent.length > 10 ||
-      adjacent.some(n => typeof n !== 'string' || !own(g, n)) ||
-      new Set(adjacent).size !== adjacent.length) fail('Each node needs a valid, duplicate-free neighbor list.');
-    edges += adjacent.length;
+    if (!Array.isArray(adjacent)) fail('Each node needs a neighbor list.');
+    const neighbors: unknown[] = adjacent;
+    if (neighbors.length > 10 ||
+      neighbors.some(n => typeof n !== 'string' || !own(g, n)) ||
+      new Set(neighbors).size !== neighbors.length) fail('Each node needs a valid, duplicate-free neighbor list.');
+    edges += neighbors.length;
   }
   if (edges > 30) fail('Graph exceeds the educational edge limit.');
 }
