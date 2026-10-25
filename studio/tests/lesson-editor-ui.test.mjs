@@ -12,7 +12,9 @@ const draft = { schemaVersion: 1, lessonId: 'c'.repeat(24), sourceId: 'd'.repeat
 let server, Editor;
 
 test('load actual editor through installed Vite SSR', async () => {
-  server = await createServer({ root: fileURLToPath(new URL('..', import.meta.url)), configFile: false, plugins: [reactPlugin()], server: { middlewareMode: true, ws: false }, appType: 'custom' });
+  server = await createServer({ root: fileURLToPath(new URL('..', import.meta.url)), configFile: false, plugins: [reactPlugin()], optimizeDeps: { entries: ['src/lesson-editor-ui/LessonBlockEditor.tsx'] }, server: { middlewareMode: true, ws: false }, appType: 'custom' });
+  assert.deepEqual(server.config.optimizeDeps.entries, ['src/lesson-editor-ui/LessonBlockEditor.tsx']);
+  assert.notEqual(server.config.optimizeDeps.noDiscovery, true, 'dependency discovery must remain enabled');
   try { ({ default: Editor } = await server.ssrLoadModule('/src/lesson-editor-ui/LessonBlockEditor.tsx')); } catch (error) { await server.close(); throw error; }
 });
 
