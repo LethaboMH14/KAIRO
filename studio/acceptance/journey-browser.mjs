@@ -99,6 +99,9 @@ try{
     await page.reload({waitUntil:'domcontentloaded'});
     await click(page.getByRole('navigation',{name:'Lesson journey'}).getByRole('button',{name:/Keep my work/}));
     assert.equal(await page.getByLabel('My explanation or notes').inputValue(),note,'Recovery lost saved note');
+    await click(page.getByRole('link',{name:/Open my practice portfolio/}));
+    assert.equal(new URL(page.url()).pathname,'/evidence');
+    await accessible(page.getByRole('heading',{name:'The work behind understanding.'}));
   });
   await check('J05',async()=>{
     await local('/studios');
@@ -114,6 +117,12 @@ try{
     await local('/home');
     await page.keyboard.press('Tab');
     assert.match(await page.evaluate(()=>document.activeElement?.textContent||''),/Skip to content/);
+    const opener=page.getByRole('button',{name:'Voice, language & camera'});
+    await click(opener);
+    await accessible(page.getByRole('dialog',{name:'Voice, language and camera'}));
+    await page.keyboard.press('Escape');
+    assert.equal(await page.getByRole('dialog',{name:'Voice, language and camera'}).count(),0,'Escape failed to close dialog');
+    assert.equal(await opener.evaluate(element=>element===document.activeElement),true,'Focus not returned to opener');
   });
   await check('A04',async()=>{
     assert.equal(await page.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)').matches),true);
