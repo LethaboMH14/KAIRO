@@ -159,4 +159,19 @@ export async function refreshAuthenticatedCatalog({fetcher=fetch,signal}={}){
  if(!isObj(data)||data.reviewedSourcesVersion!==1||!Array.isArray(data.reviewedSources))fail('Reviewed catalog unavailable');
  return data;
 }
+/** Repeat owner-scoped catalog checks around the server-verified preview.
+ * The server remains the sole authority; this detects stale browser selections
+ * and revocations that happen while a preview request is in flight.
+ */
+export async function loadOwnerEvidence({sourceRefs,goal='',fetcher=fetch,signal}){
+ const refs=refsOf(sourceRefs);
+ const before=await refreshAuthenticatedCatalog({fetcher,signal});
+ const beforeState=checkCurrentSources({sourceRefs:refs},before);
+ if(!beforeState.ok)throw new Error(beforeState.reason);
+ const activity=await getAuthenticatedPreview({sourceRefs:refs,goal,fetcher,signal});
+ const after=await refreshAuthenticatedCatalog({fetcher,signal});
+ const afterState=checkCurrentSources(activity,after);
+ if(!afterState.ok)throw new Error(afterState.reason);
+ return {activity,currentCatalog:after};
+}
 export const unsupportedClaim=()=> 'Not established by the selected sources.';
