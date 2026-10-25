@@ -488,11 +488,14 @@
       "dependsOn": [
         15
       ],
-      "notes": "Feature-gated state model, not mounted UI; PR-head Node24 CI was in progress at snapshot.",
+      "notes": "Selection state helper is not wired to live multi-source lesson route; exact-head Actions Node24 758/758/build/bus green but human/device/security integration remains unaccepted.",
       "gates": {
         "ci": {
-          "status": "pending",
-          "detail": "Release acceptance at PR #26 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+          "status": "pass",
+          "commit": "967055977985dea1be234c908096a32c0abcaac8",
+          "kind": "github-actions",
+          "url": "https://github.com/LethaboMH14/KAIRO/actions/runs/40159804666",
+          "detail": "Node24 Actions at exact head: 758/758 serial tests pass, 0 fail/skip; production Vite build pass; coordination bus job pass. Repeated nonfatal dependency scanner warnings observed."
         },
         "tenantIsolation": {
           "status": "pending",
