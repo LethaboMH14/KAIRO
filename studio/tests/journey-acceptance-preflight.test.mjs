@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {journeyStages,viewports,accessChecks} from '../acceptance/journey-matrix.mjs';
 
 const src = path => readFileSync(new URL('../src/'+path,import.meta.url),'utf8');
@@ -49,7 +50,7 @@ test('mobile/tablet/desktop and accessibility obligations are represented, witho
 
 test('browser observation stays blocked unless separately authorized on isolated loopback',()=>{
   const script=new URL('../acceptance/journey-browser.mjs',import.meta.url);
-  const run=spawnSync(process.execPath,[script.pathname],{encoding:'utf8',timeout:10000,env:{...process.env,KAIRO_BROWSER_ACCEPTANCE_AUTHORIZED:'',KAIRO_ACCEPTANCE_ISOLATED_SERVER:'',KAIRO_ACCEPTANCE_BASE_URL:''}});
+  const run=spawnSync(process.execPath,[fileURLToPath(script)],{encoding:'utf8',timeout:10000,env:{...process.env,KAIRO_BROWSER_ACCEPTANCE_AUTHORIZED:'',KAIRO_ACCEPTANCE_ISOLATED_SERVER:'',KAIRO_ACCEPTANCE_BASE_URL:''}});
   assert.equal(run.status,78,run.stderr||run.error?.message);
   assert.match(run.stderr,/BLOCKED.*browser observation denied/);
   const content=readFileSync(script,'utf8');
