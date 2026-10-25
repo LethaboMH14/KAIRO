@@ -1,3 +1,4 @@
+import { escapePortfolioMarkdown } from '../portfolio-export/markdown-safety.ts';
 import type { Lesson } from '../workspace/types';
 import { portfolioMarkdown, type Profile } from '../profile/model.ts';
 import { caseRecord, type CaseState } from './model.ts';
@@ -28,7 +29,7 @@ export function preparePracticePortfolioExport(
     else cases.push(current);
     const portfolio = portfolioMarkdown({ ...profile, cases });
     const linkedSource = lesson
-      ? `\n\n## Linked lesson principles\n\n${lesson.title}\nSource revision: ${lesson.revision}\n\n${lesson.evidence.map(e => `### ${e.id} — ${e.title}, ${e.locator}\n\n${e.quote}`).join('\n\n')}`
+      ? `\n\n## Linked lesson principles\n\n${escapePortfolioMarkdown(lesson.title)}\nSource revision: ${escapePortfolioMarkdown(lesson.revision)}\n\n${lesson.evidence.map(e => `### ${escapePortfolioMarkdown(e.id)} — ${escapePortfolioMarkdown(e.title)}, ${escapePortfolioMarkdown(e.locator)}\n\n${escapePortfolioMarkdown(e.quote)}`).join('\n\n')}`
       : '\n\nStandalone authored training case; no uploaded source linked.';
     return { status: 'ready', markdown: portfolio + linkedSource };
   } catch {

@@ -7,6 +7,7 @@ import {join,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
+import {testPython} from './helpers/python-interpreter.mjs';
 import {workspaceRoutes} from '../server/workspace/routes.mjs';
 import {nativeReview} from '../server/workspace/native-extraction.mjs';
 import {sourceSnapshot} from '../server/cloud-library/store.mjs';
@@ -54,7 +55,7 @@ test('actual default native upload produces seven sections, reviewed revision an
  for(const e of lesson.value.evidence){const page=reviewed.value.reviewedPages.find(p=>p.locator===e.locator);assert.equal(page.text.slice(e.start,e.end),e.quote);}
 }));
 test('actual seven-page PDF upload retains page-seven native text',async()=>withWorkspace({},async({folder,upload})=>{
- const path=join(folder,'motor.pdf'),python=join(studio,'../tools/course_sources/.venv-ocr/Scripts/python.exe');
+ const path=join(folder,'motor.pdf'),python=testPython;
  execFileSync(python,['-c',"from reportlab.pdfgen import canvas; import sys; c=canvas.Canvas(sys.argv[1]); [(c.drawString(40,700,'Motor page '+str(i)+' - magnetic field speed is distinct from rotor speed. '*3), c.showPage()) for i in range(1,8)]; c.save()",path],{windowsHide:true,timeout:15000});
  const job=await upload(await readFile(path),'motor.pdf');assert.equal(job.status,'ready');assert.equal(job.source.pages.length,7);assert.match(job.source.pages[6].text,/Motor page 7/);assert.equal(job.source.pages[6].locator,'Page 7');
 }));

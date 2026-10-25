@@ -7,9 +7,10 @@ import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {admit,extractUpload} from '../server/learner-workspace/extraction.mjs';
 import {nativeReview} from '../server/workspace/native-extraction.mjs';
+import {testPython} from './helpers/python-interpreter.mjs';
 
 const projectRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const python=path.join(projectRoot,'tools/course_sources/.venv-ocr/Scripts/python.exe');
+const python=testPython;
 const extractor=path.join(projectRoot,'tools/material_ingestion/extract.py');
 const MAX_FIXTURE_BYTES=1024*1024;
 const pythonScript=String.raw;
