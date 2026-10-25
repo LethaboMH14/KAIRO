@@ -44,7 +44,7 @@ export default function PgSnapshotLab({ onLocalAttempt }: PgSnapshotLabProps) {
   return (
     <section aria-labelledby={prefix + '-title'} style={{ maxWidth: 800, margin: '0 auto', padding: '1rem', fontFamily: 'system-ui, sans-serif', lineHeight: 1.55, color: '#162b3b' }}>
       <h1 id={prefix + '-title'}>KAIRO Computer Science Studio — Database snapshot challenge</h1>
-      <p>Two readers can see different values even when neither changes a row. Choose an isolation level and the moment a second transaction writes, then <strong>predict the second SELECT</strong> before seeing the trace.</p>
+      <p>One transaction can see different values on successive reads even when it never changes a row. Choose an isolation level and the moment a second transaction writes, then <strong>predict the second SELECT</strong> before seeing the trace.</p>
       <p><strong>Reviewed concept:</strong> <a href={SOURCE.url} target="_blank" rel="noopener noreferrer">{SOURCE.title}</a>.
         {' '}Source revision: {SOURCE.sourceRevision}; model revision: {SOURCE.modelRevision}.</p>
       <p><strong>Limits:</strong> This is a KAIRO-authored, illustrative <em>read-only snapshot</em> trace, not a running PostgreSQL database, SQL executor, concurrency benchmark or account-linked assessment. It does not model locks, write conflicts, serialization failures or other engines.</p>
