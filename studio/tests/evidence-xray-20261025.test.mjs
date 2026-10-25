@@ -62,14 +62,15 @@ test('no invented answer key in real owner preview or arbitrary claim',()=>{
  assert.equal(unsupportedClaim(),'Not established by the selected sources.');
 });
 test('disconnected concepts and directed cycle accepted, graph stable across calls',()=>{
- const v=clone(prepared);v.relations.push({from:'fluid-flow',to:'pump-head',kind:'supported',
+ const v=clone(prepared);v.relations=v.relations.filter(r=>r.from!=='efficiency'&&r.to!=='efficiency');v.relations.push({from:'fluid-flow',to:'pump-head',kind:'supported',
   evidenceIds:[v.evidence[2].id]});
  const accepted=validatePrepared(v);
  const a=makeGraph(accepted),b=makeGraph(accepted);
  assert.deepEqual(a,b);
  assert.ok(a.nodes.find(n=>n.id==='concept:efficiency'));
  assert.equal(accepted.concepts.find(c=>c.id==='efficiency').evidenceIds.length,0);
- assert.ok(a.edges.some(e=>e.kind==='unverified'&&e.evidenceIds.length===0));
+ assert.equal(a.edges.some(e=>e.from==='concept:efficiency'||e.to==='concept:efficiency'),false,'disconnected node remains navigable');
+ assert.ok(makeGraph(prepared).edges.some(e=>e.kind==='unverified'&&e.evidenceIds.length===0));
 });
 test('malformed, duplicate, cross-reference and unsupported relationships fail closed',()=>{
  const cases=[];
