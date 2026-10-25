@@ -159,4 +159,10 @@ test('scored question wording is read-only and guarded against direct edit event
   assert.deepEqual(actions, [{ kind: 'edit', id: questionBlock.id, patch: { title: 'Friendly heading' } }]);
 });
 
-test('close SSR server', async () => { await server.close(); server = undefined; });
+test('close SSR server after Vite static import requests become idle', async () => {
+  // Let Vite's normal dependency discovery finish before closing its resolver.
+  // Do not silence the scanner or disable dependency optimization for this test.
+  await server.waitForRequestsIdle();
+  await server.close();
+  server = undefined;
+});
