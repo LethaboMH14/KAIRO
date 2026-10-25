@@ -31,7 +31,7 @@ export function verifySignature({ secret, headers, rawBody, maxBytes = 262144 })
 }
 
 export function normalizeScope(path) {
-  if (typeof path !== 'string' || !path.trim() || path.length > 256 || path.includes('\\') || path.startsWith('/') || path.includes('\0') || path.split('/').some(p => !p || p === '.' || p === '..')) {
+  if (typeof path !== 'string' || !path.trim() || path.length > 256 || path.includes('\\') || path.startsWith('/') || path.includes(':') || path.includes('\0') || path.split('/').some(p => !p || p === '.' || p === '..')) {
     fail('invalid_scope', 'Scopes must be relative, canonical POSIX file/subtree paths');
   }
   return path.toLowerCase().replace(/\/$/, '');
@@ -45,6 +45,7 @@ export class OfflineRunner {
   constructor({ directory, secret, allowedRepo, maxConcurrent = 2, maxAttempts = 3, maxDispatches = 20, maxUnits = 20, backoffMs = 1000, maxDeliveries = 10000, clock = () => Date.now() }) {
     if (!directory || !secret || !/^[\w.-]+\/[\w.-]+$/.test(allowedRepo || '')) fail('configuration', 'Directory, secret and exact allowedRepo are required');
     for (const n of [maxConcurrent, maxAttempts, maxDispatches, maxUnits, backoffMs, maxDeliveries]) if (!integer(n)) fail('configuration', 'Limits must be positive safe integers');
+    if (maxAttempts > 12 || maxConcurrent > 32 || maxDispatches > 100000 || maxUnits > 100000 || maxDeliveries > 100000) fail('configuration', 'Unsafe quota ceiling');
     this.directory = directory; this.file = join(directory, 'ledger.json'); this.lock = join(directory, '.ledger.lock');
     this.secret = secret; this.allowedRepo = allowedRepo; this.maxConcurrent = maxConcurrent; this.maxAttempts = maxAttempts;
     this.maxDispatches = maxDispatches; this.maxUnits = maxUnits; this.backoffMs = backoffMs; this.maxDeliveries = maxDeliveries; this.clock = clock;
@@ -99,6 +100,7 @@ export class OfflineRunner {
       if (Object.keys(state.deliveries).length >= this.maxDeliveries) fail('ledger_full', 'Maximum durable deliveries reached; manual archival policy needed');
       let outcome = { status: 'ignored', reason: 'unsupported_or_feedback_event' };
       if (body.sender?.type === 'Bot') outcome = { status: 'ignored', reason: 'bot_feedback_loop' };
+      else if (body.sender?.type !== 'User') outcome = { status: 'ignored', reason: 'unknown_actor' };
       else if (event === 'issues' && actionIssues.has(body.action) && integer(body.issue?.number) && !body.issue.pull_request) {
         const id = `${this.allowedRepo}#${body.issue.number}`;
         const ready = Array.isArray(body.issue.labels) && body.issue.labels.some(l => l.name === 'agent-ready');
