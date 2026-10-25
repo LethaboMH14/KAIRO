@@ -113,7 +113,7 @@ export default function BinarySearchLab({ onLocalAttempt }: BinarySearchLabProps
         </label>
         <p>Explain in 12–400 characters. Your reasoning is saved locally for reflection but is not automatically graded.</p>
         <button type="button" disabled={!predicted} onClick={reveal}>Commit prediction and reveal comparisons</button>
-      </fieldset>
+      </fieldset>}
       {trace && <section aria-labelledby={`${prefix}-steps`}>
         <h3 id={`${prefix}-steps`}>3. Read the comparison trace ({visibleSteps} of {trace.steps.length})</h3>
         {trace.steps.length === 0 && <p>The list is empty. No comparisons are needed.</p>}
