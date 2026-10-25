@@ -7,29 +7,29 @@
       "provider": "BMW Group South Africa",
       "url": "https://www.bmwgroup.jobs/za/en/opportunities/graduate.html?country=ZA&jobType=GRADUATE_JOB",
       "checkedAt": "2026-10-25",
-      "availability": "closed",
-      "availabilityNote": "The official South Africa graduate page was readable on the check date and its vacancy panel reported no vacancies with the current filters. The programme description remains published; this does not establish when applications reopen.",
+      "availability": "unknown",
+      "availabilityNote": "The official South Africa graduate page is published. Its filtered job panel showed no matching results on the check date; this does not prove the programme is closed or confirm an open vacancy.",
       "requirements": [
         {
           "id": "bmw-eng-degree",
           "label": "A degree in Engineering is listed as eligible for the graduate development programme.",
           "kind": "qualification",
           "sourceLocator": "Our Graduate Development Programme / Who can apply?",
-          "sourceExcerpt": "open to graduates with a degree in Engineering"
+          "sourceExcerpt": "a degree in Engineering"
         },
         {
           "id": "bmw-team-learning",
           "label": "The programme description emphasizes team spirit, initiative and continuous learning.",
           "kind": "skill",
           "sourceLocator": "Our Graduate Development Programme",
-          "sourceExcerpt": "bring team spirit and initiative combined with the will to continuously learn"
+          "sourceExcerpt": "team spirit and initiative"
         },
         {
           "id": "bmw-academic-performance",
           "label": "Shortlisting considers academic performance and potential fit with company culture.",
           "kind": "other",
           "sourceLocator": "How to apply?",
-          "sourceExcerpt": "based on their academic performance and potential fit to our company culture"
+          "sourceExcerpt": "academic performance"
         }
       ],
       "suggestedProjects": [
@@ -42,7 +42,8 @@
           ],
           "boundary": "KAIRO-authored practice suggestion, not a BMW requirement or endorsement. A project cannot prove a formal degree, academic standing, work authorization, selection or employment."
         }
-      ]
+      ],
+      "requirementsReviewed": true
     },
     {
       "id": "siemens-global-graduate-program-engineering",
@@ -55,17 +56,17 @@
       "requirements": [
         {
           "id": "siemens-master-engineering",
-          "label": "The programme page describes a masterâ€™s degree (or equivalent) in engineering or related disciplines, with above-average grades.",
+          "label": "The programme page describes a master’s degree (or equivalent) in engineering or related disciplines, with above-average grades.",
           "kind": "qualification",
           "sourceLocator": "Educational background (official Siemens Graduate Programme page; English-language indexed page text)",
-          "sourceExcerpt": "masterâ€™s studies (or equivalent) with above-average grades in engineering"
+          "sourceExcerpt": "master’s studies (or equivalent)"
         },
         {
           "id": "siemens-study-work-experience",
-          "label": "The page says applicants have gained work experience during their studies or between bachelorâ€™s and masterâ€™s degrees.",
+          "label": "The page says applicants have gained work experience during their studies or between bachelor’s and master’s degrees.",
           "kind": "experience",
           "sourceLocator": "Work experience & ambition (official Siemens Graduate Programme page; English-language indexed page text)",
-          "sourceExcerpt": "work experience during your studies or between your bachelorâ€™s and masterâ€™s degrees"
+          "sourceExcerpt": "work experience during your studies"
         },
         {
           "id": "siemens-international-experience",
@@ -84,9 +85,10 @@
             "siemens-study-work-experience",
             "siemens-international-experience"
           ],
-          "boundary": "KAIRO-authored practice suggestion, not a Siemens requirement or endorsement. It cannot establish a masterâ€™s degree, academic grades, qualifying work experience, four months abroad, work authorization or eligibility."
+          "boundary": "KAIRO-authored practice suggestion, not a Siemens requirement or endorsement. It cannot establish a master’s degree, academic grades, qualifying work experience, four months abroad, work authorization or eligibility."
         }
-      ]
+      ],
+      "requirementsReviewed": false
     }
   ]
 }

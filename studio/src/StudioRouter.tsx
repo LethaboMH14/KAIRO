@@ -1,4 +1,5 @@
-import { lazy, Suspense } from 'react';
+const BundleClassroom = lazy(() => import('./bundle-classroom/BundleClassroom'));
+import { lazy, Suspense, useEffect } from 'react';
 import App from './App';
 import {StudentSpaceProvider,useStudentSpace} from './student-space/StudentSpace';
 import TeacherProvider from './teacher/TeacherProvider';
@@ -28,8 +29,9 @@ const Engineering = lazy(() => import('./engineering/EngineeringStudio'));
 const WorkplaceCases = lazy(() => import('./practice-pack-workspace/PracticePackWorkspace'));
 const CvWorkspace = lazy(() => import('./cv-workspace/CvWorkspace'));
 function Routes() {
+  useEffect(()=>{const titles:Record<string,string>={'/pump-lab':'Pump Studio','/engineering':'Engineering Studio','/direction':'My direction','/pathways':'Role pathways','/cv':'My CV draft','/opportunities':'Funding and roles','/sources':'My material','/classroom':'My lesson','/evidence':'My work'};const title=titles[location.pathname];if(title)document.title='KAIRO � '+title;},[]);
   const student=useStudentSpace();
-  const studioPaths=['/engineering','/pump-lab','/computer-science','/classroom','/lecture','/cases','/practice','/pathways','/cv'];
+  const studioPaths=['/engineering','/pump-lab','/computer-science','/classroom','/lecture','/cases','/practice'];
   if(studioPaths.includes(window.location.pathname)){if(student.loading)return <main className="ka-page" role="status">Opening your learning space…</main>;if(student.error)return <main className="ka-page" role="alert">{student.error}</main>;if(student.space&&!student.space.studios.includes(window.location.pathname))return <main className="ka-page"><h1>This activity is outside your demo programme.</h1><p>Your own modules and work are ready on Home.</p><a href="/">Back to my modules</a></main>;}
 
   if (window.location.pathname === '/direction') return <Suspense fallback={<p className="ka-page">Opening your direction…</p>}>{student.space||student.loading||student.error?<Direction/>:<Pathways/>}</Suspense>;
@@ -41,12 +43,12 @@ function Routes() {
   if (window.location.pathname === '/settings') return <Services/>;
   if (window.location.pathname === '/for-institutions') return <Institutions/>;
   if (window.location.pathname === '/computer-science') return <App/>;
-  if (window.location.pathname === '/classroom') return <Suspense fallback={<div className="scene-loading">Opening your classroom…</div>}>{new URLSearchParams(window.location.search).has('lesson')?<SourceClassroom/>:<Classroom />}</Suspense>;
+  if (window.location.pathname === '/classroom') return <Suspense fallback={<div className="scene-loading">Opening your classroom…</div>}>{new URLSearchParams(window.location.search).has('bundle')?<BundleClassroom/>:new URLSearchParams(window.location.search).has('lesson')?<SourceClassroom/>:<Classroom />}</Suspense>;
   if (window.location.pathname === '/cv') return <Suspense fallback={<div className="scene-loading">Opening your CV draft…</div>}><CvWorkspace /></Suspense>;
   if (window.location.pathname === '/saved') return <LearningHome />;
   if (window.location.pathname === '/cases') return <Suspense fallback={<div className="scene-loading">Opening workplace practice…</div>}><WorkplaceCases onExit={() => {window.location.href='/home';}} /></Suspense>;
   if (window.location.pathname === '/evidence') return <Work/>;
-  if (window.location.pathname === '/engineering') return <Suspense fallback={<div className="scene-loading">Preparing the engineering studio…</div>}><Engineering onExit={() => { window.location.href = '/'; }} /></Suspense>;
+  if (window.location.pathname === '/engineering') return <Suspense fallback={<div className="scene-loading">Preparing the engineering studio…</div>}><Engineering onExit={() => { const bundle=new URLSearchParams(location.search).get('bundle');window.location.href = bundle&&/^[a-f0-9]{24}$/.test(bundle)?'/classroom?bundle='+bundle:'/'; }} /></Suspense>;
   if (window.location.pathname === '/pathways') return <Suspense fallback={<div className="scene-loading">Opening your role preparation…</div>}><Pathways /></Suspense>;
   if (window.location.pathname === '/teacher') return <Suspense fallback={<div className="scene-loading">Opening your teacher preferences…</div>}><TeacherSettings /></Suspense>;
   if (window.location.pathname === '/practice') return <Suspense fallback={<div className="scene-loading">Preparing your workplace case…</div>}><Practice /></Suspense>;

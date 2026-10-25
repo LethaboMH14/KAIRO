@@ -65,7 +65,7 @@ test('actual SSR renders all 36 language, availability, review and busy combinat
         assert.match(html, /does not establish model accuracy/i);
       }
 
-      const originalButton = html.match(/<button type="button"([^>]*)>\s*Read the original text/);
+      const originalButton = html.match(/<button type="button"([^>]*)>\s*(?:Read the original text|Use a typed question|Use text instead)/);
       assert.ok(originalButton, 'original reading action is always present');
       assert.equal(originalButton[1].includes('disabled=""'), state.busy);
       if (state.kind === 'listening') {

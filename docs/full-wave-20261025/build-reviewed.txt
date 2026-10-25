@@ -1,0 +1,8 @@
+
+> kairo-studio@0.1.0 build
+> tsc -b && vite build
+
+src/role-gap-host/EngineeringRoleBridge.tsx(17,76): error TS2322: Type '((work: () => Promise<string>) => Promise<Promise<string>>) | null' is not assignable to type '((work: () => Promise<string>) => Promise<string>) | null'.
+  Type '(work: () => Promise<string>) => Promise<Promise<string>>' is not assignable to type '(work: () => Promise<string>) => Promise<string>'.
+    Type 'Promise<Promise<string>>' is not assignable to type 'Promise<string>'.
+      Type 'Promise<string>' is not assignable to type 'string'.

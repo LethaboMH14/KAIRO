@@ -23,7 +23,7 @@ export default function CitedExplainer({lessonId,revision,title,passages,onRead,
    <p className="cited-explainer__quote">{current!.quote}</p>
    <footer><strong>{current!.sourceTitle}</strong><span>{current!.locator}</span></footer>
   </div>
-  <p className="cited-explainer__estimate">Reading estimate: about {passageSeconds(current!.quote)} seconds at 150 words per minute.</p>
+  <p className="cited-explainer__estimate">Motion preview: {passageSeconds(current!.quote)} seconds, limited to 4–15 seconds per card. Pause or use text-only reading if you need longer.</p>
   <div className="cited-explainer__controls" aria-label="Reading controls">
    <button type="button" onClick={()=>stopAnd({type:'previous',count})}><span aria-hidden="true">←</span> Previous</button>
    {state.playing?<button type="button" onClick={()=>stopAnd({type:'pause'})}><span aria-hidden="true">Ⅱ</span> Pause</button>:<button type="button" onClick={()=>dispatch({type:'play'})}><span aria-hidden="true">▶</span> Play</button>}

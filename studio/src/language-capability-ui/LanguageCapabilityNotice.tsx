@@ -93,7 +93,7 @@ export default function LanguageCapabilityNotice({
       {busy && <p className="language-capability__busy" role="status">Please wait. Language actions are paused while this request is in progress.</p>}
       <div className="language-capability__actions">
         <button type="button" onClick={action.useOriginal} disabled={busy}>
-          Read the original text
+          {kind === 'listening' ? 'Use a typed question' : kind === 'sasl' ? 'Use text instead' : 'Read the original text'}
         </button>
         {kind === 'listening' && (
           <button type="button" className="language-capability__secondary" onClick={action.editTranscript} disabled={busy}>
@@ -102,7 +102,7 @@ export default function LanguageCapabilityNotice({
         )}
       </div>
       <p className="language-capability__footnote">
-        Language selection does not prove accuracy. You can continue with the original text at any time.
+        Language selection does not prove accuracy. {kind === 'listening' ? 'Review and correct the transcript before confirming your question. Typing remains available.' : 'You can continue with text at any time.'}
       </p>
     </section>
   );
