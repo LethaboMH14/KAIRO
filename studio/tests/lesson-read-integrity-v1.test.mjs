@@ -116,6 +116,19 @@ test('archived revision deletion during source recheck is detected', async () =>
   assert.equal(sourceReads, 2);
 });
 
+test('lesson replacement during source validation is detected before returning stale content', async () => {
+  const f = fixture();
+  let changed = false;
+  f.onGet((_uid, kind) => {
+    if (!changed && kind === 'revisions') {
+      changed = true;
+      f.save(OWNER, 'lessons', LESSON_ID, { ...f.lesson, title: 'New saved lesson version' });
+    }
+  });
+  await rejected(f);
+  assert.equal(changed, true);
+});
+
 test('forged evidence offsets, source, locator, title, revision and duplicate anchors fail closed', async () => {
   const changes = [
     e => ({ ...e, quote: 'A quote not in the source' }),
