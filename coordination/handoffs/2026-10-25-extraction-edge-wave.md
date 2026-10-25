@@ -27,3 +27,7 @@ Tests use bounded injected parser/OCR adapters and synthetic buffers, not indepe
 
 Local source at baseline `a2dfc4f10499bcd32ac45548fc6767094b26c8d2`. This handoff records implementation evidence; isolated publication remains pending root review. Files to publish are only the three claimed paths above. No merge, deployment, or public access claim.
 
+
+## Publication update
+
+Draft PR: https://github.com/LethaboMH14/KAIRO/pull/73. Branch: `codex/extraction-edge-wave-20261025`. Published implementation commit: `d6ecc82c31b363aa25cbb1131f9bcd5278cc0270` (three files, 113 insertions). Root-created independent test evidence is **14/14** for material ingestion plus this package when run from the canonical `studio` directory. On the isolated publication worktree, the new focused tests pass 5/5; attempting the existing material-ingestion tests there returned 9 failures because the configured Python invocation returned a null process status. This worktree-specific setup difference does not override the successful canonical run and is not presented as parser acceptance from this checkout. The native API route tests remain not passed because loopback access returned EACCES.
