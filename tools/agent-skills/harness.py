@@ -82,8 +82,10 @@ def registry(path):
         license_info = entry.get("license")
         check(isinstance(license_info, dict) and license_info.get("spdx") in LICENCES and
               isinstance(license_info.get("evidence"), str) and
-              license_info["evidence"].startswith("https://github.com/") and
-              source["ref"] in license_info["evidence"], "unverified licence provenance")
+              license_info["evidence"].startswith(
+                  f"https://github.com/{source['repository']}/blob/{source['ref']}/"),
+              "unverified licence provenance")
+        safe_path(license_info["evidence"].split(f"/blob/{source['ref']}/", 1)[1])
         check(entry.get("status") in ("proposed", "approved"), "invalid status")
         check(isinstance(entry.get("category"), str) and entry["category"] and
               isinstance(entry.get("compatibility"), str) and entry["compatibility"] and
