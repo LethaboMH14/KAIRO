@@ -55,7 +55,8 @@ export function assertScenario(value: unknown): asserts value is Scenario {
   if (Object.keys(v).length !== 2 || !own(v, 'arrayId') || !own(v, 'target') ||
     typeof v.arrayId !== 'string' || !own(ARRAYS, v.arrayId)) fail('Unknown prepared array.');
   const arr = ARRAYS[v.arrayId as ArrayId];
-  if (typeof v.target !== 'number' || !arr.targets.includes(v.target)) fail('Choose one of the prepared target values.');
+  const targets: readonly number[] = arr.targets;
+  if (typeof v.target !== 'number' || !targets.includes(v.target)) fail('Choose one of the prepared target values.');
 }
 export function assertPrediction(value: unknown): asserts value is Prediction {
   if (!value || typeof value !== 'object' || Array.isArray(value)) fail('Predict an insertion index and explain why.');
