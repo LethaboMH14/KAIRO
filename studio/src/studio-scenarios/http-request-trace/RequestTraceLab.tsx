@@ -15,10 +15,16 @@ export type RequestTraceLabProps = {
 };
 type DraftPrediction = { outcome: Outcome | ''; sendsHttpRequest: '' | 'yes' | 'no'; explanation: string };
 const blankPrediction = (): DraftPrediction => ({ outcome: '', sendsHttpRequest: '', explanation: '' });
+function makeLocalSession(): TraceSession {
+  // Practice identifiers are not authentication tokens, but should not collide after restart.
+  const unique = globalThis.crypto?.randomUUID?.() ??
+    `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 12)}`;
+  return newSession(`local-${unique}`);
+}
 
 export default function RequestTraceLab({ onLocalAttempt }: RequestTraceLabProps) {
   const instanceId = useId().replace(/[^A-Za-z0-9_-]/g, '');
-  const [session, setSession] = useState<TraceSession>(() => newSession(`local-${instanceId || 'trace'}`));
+  const [session, setSession] = useState<TraceSession>(makeLocalSession);
   const [scenario, setScenario] = useState<Scenario>({ ...DEFAULT_SCENARIO });
   const [draft, setDraft] = useState<DraftPrediction>(blankPrediction);
   const [trace, setTrace] = useState<RequestTrace | null>(null);
@@ -72,7 +78,7 @@ export default function RequestTraceLab({ onLocalAttempt }: RequestTraceLabProps
     }
   }
   function restart() {
-    setSession(newSession(session.id));
+    setSession(makeLocalSession());
     setScenario({ ...DEFAULT_SCENARIO });
     setDraft(blankPrediction());
     setTrace(null);
