@@ -9,6 +9,9 @@ Session `gpt6-kairo-release-20261025-0542-a`; client ChatGPT; actual model GPT-6
 - Verified GitHub Actions run #40159022660 at PR #15 head `8f58d3c`: **746/746**, zero skips, production build passed, bus **6/6**. PR #17 run #40159188644 at `0e6e7147`: **750/750**, zero skips, production build, bus job success. Parent PR #1 initial #40157365360 failed **728/746**, 18 failures, build skipped, bus passed. This does not establish current integration correctness.
 - PR #12 docs-only with no workflow run observed at its head. Green Actions for #15/#17 are not browser, private IAM, release or real learner acceptance. Green tests log repeated Vite dependency prebundling scan failures; investigate if they mask any user-facing failure.
 
+## Concurrent PR refresh
+At the next GitHub snapshot, six more independent draft PRs opened: #19 security tests (issue #10), #20 fixture-only journey (issue #5), #21 read-only cloud preflight (issue #8), #22 owner lesson-bundle contract (issue #3; depends on PR #1), #23 listening consent state (issue #7), and #24 local SQLite index prototype (issue #4). All are listed separately in the updated PR ledger with their real head SHAs; **no PR-head GitHub Actions run was observed** for these at review time. Their stated focused Node 22/local results are not fresh full Node 24 checks or deployment acceptance. Release candidate remains blocked. This release-gates draft (#25) is excluded from its own changing-head ledger to avoid a misleading recursive SHA.
+
 ## Gates and decisions
 - Product/Intelligence: compiled tests are **automated evidence**; multi-source retrieval is not yet routed to actual lesson UI. Owner/revision claims need adversarial acceptance (#10).
 - Usability/Presentation: no user-authorized device/browser journey, no measured speech/SASL acceptance, no external judge access verified (#5).
