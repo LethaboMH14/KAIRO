@@ -87,3 +87,10 @@ test('read handler invokes only explicit chapters from the parsed record', () =>
   assert.equal(calls.length, 1);
 });
 
+
+test('repeated component instances have unique IDs for every labelled section and anchor',()=>{
+ const html=renderToStaticMarkup(React.createElement(React.Fragment,null,...[1,2].map(key=>React.createElement(BundleLessonView,{key,record:record(),onRead(){},onStop(){}}))));
+ const ids=[...html.matchAll(/ id="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(new Set(ids).size,ids.length);
+ for(const m of html.matchAll(/aria-labelledby="([^"]+)"/g))assert.ok(ids.includes(m[1]));
+});
