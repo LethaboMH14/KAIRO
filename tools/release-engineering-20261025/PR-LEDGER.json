@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "repository": "LethaboMH14/KAIRO",
+  "observedDate": "2026-10-25",
+  "snapshotOnly": true,
+  "main": {
+    "branch": "main",
+    "sha": "20183faf31fe30bc68e2fc70cb339e7fd24fce79",
+    "historicalBaseline": {
+      "tests": 741,
+      "source": "coordination/handoffs/2026-10-25-ai-integration.md",
+      "currentPullRequestCI": false
+    },
+    "deployedRevisionDocumented": "kairo-app-00007-snn",
+    "accessDocumented": "IAM-private; not reverified against live IAM"
+  },
+  "pullRequests": [
+    {
+      "number": 1,
+      "title": "Start KAIRO build: CI foundation and owner-scoped multi-source retrieval",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/1",
+      "state": "open",
+      "draft": true,
+      "headSha": "144c920e726102306ca79f708a8f474ab73bbe59",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "#1 is a standalone lexical primitive, NOT integrated learner multi-source generation.",
+      "gates": {
+        "ci": {
+          "status": "fail",
+          "detail": "Run 40157365360: 728 pass/746 tests, 18 fail; build skipped; bus job passed. Parent branch not rechecked green after stacked changes."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #1; proof must be anchored to this exact head."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #1; proof must be anchored to this exact head."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #1; proof must be anchored to this exact head."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #1; proof must be anchored to this exact head."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #1; proof must be anchored to this exact head."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #1; proof must be anchored to this exact head."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #1; proof must be anchored to this exact head."
+        }
+      }
+    },
+    {
+      "number": 12,
+      "title": "Launch KAIRO multi-chat engineering team",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/12",
+      "state": "open",
+      "draft": false,
+      "headSha": "3570d8ace16620f549d262a2c5e9e71e5e5f372a",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "Docs-only coordination kit; issues and prompts are not running workers.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #12; proof must be anchored to this exact head."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #12; proof must be anchored to this exact head."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #12; proof must be anchored to this exact head."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #12; proof must be anchored to this exact head."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #12; proof must be anchored to this exact head."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #12; proof must be anchored to this exact head."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #12; proof must be anchored to this exact head."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #12; proof must be anchored to this exact head."
+        }
+      }
+    },
+    {
+      "number": 15,
+      "title": "Fix PR #1 Ubuntu extraction CI",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/15",
+      "state": "open",
+      "draft": true,
+      "headSha": "8f58d3c834f72abaacdc711ff182ed3c3d207c28",
+      "base": "feature/ci-owner-scoped-retrieval-20261025",
+      "dependsOn": [
+        1
+      ],
+      "notes": "CI green at exact head: 746/746 tests, production build and 6 bus tests. Repeated Vite scan diagnostics observed in logs.",
+      "gates": {
+        "ci": {
+          "status": "pass",
+          "commit": "8f58d3c834f72abaacdc711ff182ed3c3d207c28",
+          "kind": "github-actions",
+          "url": "https://github.com/LethaboMH14/KAIRO/actions/runs/40159022660",
+          "detail": "Node 24: 746/746 tests, 0 fail, 0 skipped, production build green; Python bus 6/6."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #15; proof must be anchored to this exact head."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #15; proof must be anchored to this exact head."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #15; proof must be anchored to this exact head."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #15; proof must be anchored to this exact head."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #15; proof must be anchored to this exact head."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #15; proof must be anchored to this exact head."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #15; proof must be anchored to this exact head."
+        }
+      }
+    },
+    {
+      "number": 17,
+      "title": "Test Python interpreter and OCR setup regressions",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/17",
+      "state": "open",
+      "draft": true,
+      "headSha": "0e6e7147ce28e8c8005d0bc85c72a0bb324464d5",
+      "base": "fix/ci-portable-extraction-20261025",
+      "dependsOn": [
+        15
+      ],
+      "notes": "CI green at exact head: 750/750 tests, production build and coordination bus job green; scanner diagnostics warrant review.",
+      "gates": {
+        "ci": {
+          "status": "pass",
+          "commit": "0e6e7147ce28e8c8005d0bc85c72a0bb324464d5",
+          "kind": "github-actions",
+          "url": "https://github.com/LethaboMH14/KAIRO/actions/runs/40159188644",
+          "detail": "Node 24: 750/750 tests, 0 fail, 0 skipped, production build green; bus job green. CI log includes failed Vite pre-bundling scan diagnostics despite exit 0."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #17; proof must be anchored to this exact head."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #17; proof must be anchored to this exact head."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #17; proof must be anchored to this exact head."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #17; proof must be anchored to this exact head."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #17; proof must be anchored to this exact head."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #17; proof must be anchored to this exact head."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "Not independently accepted for PR #17; proof must be anchored to this exact head."
+        }
+      }
+    }
+  ],
+  "releaseCandidate": {
+    "name": "rc-20261025-integration-proposed-NOT-STAGED",
+    "mainSha": "20183faf31fe30bc68e2fc70cb339e7fd24fce79",
+    "proposedPrNumbers": [
+      1,
+      15,
+      17
+    ],
+    "staged": false,
+    "deployed": false,
+    "gates": {
+      "mainProtection": {
+        "status": "pending",
+        "detail": "No current GitHub branch protection settings verification or explicit owner approval."
+      },
+      "privateIam": {
+        "status": "pending",
+        "detail": "README documents IAM-private Cloud Run; current IAM policy not independently retrieved. No permission changes allowed."
+      },
+      "fullJourney": {
+        "status": "pending",
+        "detail": "No approved real-device full source→review→lesson→KAIRO→practice→evidence→resume acceptance."
+      },
+      "securityReview": {
+        "status": "pending",
+        "detail": "Independent issue #10 tenant deletion/recovery and provider-boundary evidence outstanding."
+      },
+      "judgeProof": {
+        "status": "pending",
+        "detail": "Synthetic judge API checks are not external judge access, learner gains or live device validation."
+      },
+      "releaseApproval": {
+        "status": "pending",
+        "detail": "Owner has not explicitly approved staging, merge or deployment."
+      }
+    }
+  },
+  "evidenceCautions": [
+    "Pass gate records are manually entered from GitHub and must be refreshed from the actual head/run before acceptance. Checker does not query GitHub.",
+    "Current green stacked CI is engineering validation only; source/tenant integration, authorization, browser/device and performance acceptance are separate.",
+    "Never infer public access or authorize a deployment from this file."
+  ]
+}
