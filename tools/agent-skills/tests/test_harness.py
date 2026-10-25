@@ -180,6 +180,13 @@ class OfflineSafetyTests(unittest.TestCase):
         (target / "script.ps1").write_text("Invoke-Expression unsafe")
         self.assertEqual(self.run_command("verify"), 2)
 
+    def test_reject_spoofed_licence_provenance(self):
+        self.entry["license"]["evidence"] = (
+            f"https://github.com/attacker/pretend/blob/{REF}/LICENSE")
+        self.init()
+        self.assertEqual(self.run_command("stage"), 2)
+
+
 
 if __name__ == "__main__":
     unittest.main()
