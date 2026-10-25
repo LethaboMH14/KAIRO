@@ -87,8 +87,8 @@ export function transition(previous: State, action: Action): State {
     invalid('model-mismatch', 'This challenge uses a different model/version.');
   }
   validateAction(action);
-  if (previous.actions.length >= SCENARIOS.length * 2) invalid('too-many-actions', 'This challenge has two attempts.');
   if (previous.phase === 'done') invalid('already-done', 'Restart to try again.');
+  if (previous.actions.length >= SCENARIOS.length * 2) invalid('too-many-actions', 'This challenge has two attempts.');
   if (previous.phase === 'predict') {
     if (action.type !== 'predict') invalid('predict-first', 'Commit a prediction before inspecting the result.');
     const index = previous.attempts.length, scenario = SCENARIOS[index];
