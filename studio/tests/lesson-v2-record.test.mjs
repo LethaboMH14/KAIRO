@@ -136,3 +136,57 @@ test('aborted verification never writes a new record',async()=>{
    content:lessonContent(bundle),id:'f'.repeat(24),signal:ctrl.signal}),/abort/i);
  assert.equal(f.writes.length,0);
 });
+
+test('cloud metadata accepts only supported providers and bounded nonblank model names',async()=>{
+ const f=fixture(),local=await bundleFor(f);
+ for(const provider of ['google','groq','openrouter','aiml']){
+   const bundle={...local,request:{...local.request,mode:'cloud',provider,consent:true,providerConsent:[provider],requestId:'synthetic-request'}};
+   for(const model of [undefined,'synthetic-model']){
+     const record=createLessonV2Record({bundle,content:lessonContent(bundle),id:'f'.repeat(24),model});
+     assert.equal(record.provider,provider);
+     assert.equal(await verifyLessonV2Record({repository:f.repo,ownerId:'ownerA',record}),true);
+   }
+   for(const model of ['', '   ', 42, {}, 'x'.repeat(161)])assert.throws(()=>
+     createLessonV2Record({bundle,content:lessonContent(bundle),id:'f'.repeat(24),model}),/invalid/i);
+ }
+});
+
+test('persisted cloud metadata cannot omit or forge provider and model fields',async()=>{
+ const f=fixture(),local=await bundleFor(f);
+ const bundle={...local,request:{...local.request,mode:'cloud',provider:'groq',consent:true,providerConsent:['groq'],requestId:'synthetic-request'}};
+ const base=createLessonV2Record({bundle,content:lessonContent(bundle),id:'f'.repeat(24),model:'synthetic-model'});
+ const missing={...base};delete missing.provider;
+ const variants=[missing,...[null,42,'unsupported','',{}].map(provider=>({...base,provider})),
+   ...[null,42,'','   ',{},'x'.repeat(161)].map(model=>({...base,model}))];
+ for(const record of variants)await assert.rejects(()=>
+   verifyLessonV2Record({repository:f.repo,ownerId:'ownerA',record}),/invalid/i);
+});
+
+test('local records reject provider metadata rather than implying a cloud call',async()=>{
+ const f=fixture(),bundle=await bundleFor(f);
+ const base=createLessonV2Record({bundle,content:lessonContent(bundle),id:'f'.repeat(24)});
+ for(const extra of [{provider:'google'},{provider:undefined},{model:'synthetic-model'},{model:undefined}])
+   await assert.rejects(()=>verifyLessonV2Record({repository:f.repo,ownerId:'ownerA',record:{...base,...extra}}),/invalid/i);
+ assert.throws(()=>createLessonV2Record({bundle,content:lessonContent(bundle),id:'f'.repeat(24),model:'synthetic-model'}),/invalid/i);
+});
+
+test('invalid constructor provider or missing consent fails before storage',async()=>{
+ const f=fixture(),local=await bundleFor(f);
+ for(const request of [{provider:'forged',consent:true},{provider:'groq',consent:false},{provider:'groq',consent:'true'},{provider:'groq',consent:1},{consent:true}]){
+   const bundle={...local,request:{...local.request,mode:'cloud',providerConsent:['groq'],requestId:'synthetic-request',...request}};
+   await assert.rejects(()=>saveLessonV2Record({repository:f.repo,ownerId:'ownerA',bundle,content:lessonContent(bundle),id:'f'.repeat(24)}),/invalid/i);
+ }
+ assert.equal(f.writes.length,0);
+});
+
+test('constructor revalidates every cloud provider consent and selected revision',async()=>{
+ const f=fixture(),local=await bundleFor(f);
+ const request={...local.request,mode:'cloud',provider:'groq',consent:true,providerConsent:['groq'],requestId:'synthetic-request'};
+ for(const change of [{providerConsent:undefined},{providerConsent:[]},{providerConsent:['google']},
+   {fallback:'openrouter'},{requestId:'bad'},{sourceRefs:local.sourceRefs.slice(0,1)}]){
+   const bundle={...local,request:{...request,...change}};
+   assert.throws(()=>createLessonV2Record({bundle,content:lessonContent(bundle),id:'f'.repeat(24)}),/invalid/i);
+ }
+ const bundle={...local,request:{...request,fallback:'openrouter',providerConsent:['groq','openrouter']}};
+ assert.equal(createLessonV2Record({bundle,content:lessonContent(bundle),id:'f'.repeat(24)}).provider,'groq');
+});

@@ -8,6 +8,7 @@ import {validateLesson} from '../workspace/model.mjs';
 
 const ID=/^[a-f0-9]{24}$/;
 const SHA=/^[a-f0-9]{64}$/;
+const PROVIDERS=new Set(['google','groq','openrouter','aiml']);
 const conflict=()=>Object.assign(new Error('A reviewed source changed. Reopen the selected material.'),{status:409});
 const malformed=()=>new TypeError('This multi-source lesson record is invalid.');
 
@@ -19,6 +20,10 @@ function envelope(record){
      !Number.isFinite(Date.parse(record.createdAt))||
      !Array.isArray(record.evidence)||record.evidence.length<1||record.evidence.length>12||
      !SHA.test(record.bundleRevision||''))throw malformed();
+  if(record.mode==='cloud-v2'){
+    if(typeof record.provider!=='string'||!PROVIDERS.has(record.provider)||
+       (Object.hasOwn(record,'model')&&(typeof record.model!=='string'||!record.model.trim()||record.model.length>160)))throw malformed();
+  }else if(Object.hasOwn(record,'provider')||Object.hasOwn(record,'model'))throw malformed();
   const parsed=parseLessonSelection({sourceRefs:record.sourceRefs,mode:'local'});
   if(parsed.bundleRevision!==record.bundleRevision)throw malformed();
   const evidenceIds=new Set(),refs=new Map(parsed.sourceRefs.map(x=>[x.sourceId,x.revision]));
@@ -56,9 +61,14 @@ export function createLessonV2Record({bundle,content,id,createdAt=new Date().toI
     reviewWarning:'Selected excerpts are source-linked, not a verification of educational correctness.',
   };
   if(raw.mode==='cloud-v2'){
-    if(typeof bundle.request.provider!=='string'||!bundle.request.consent)throw malformed();
+    let request;
+    try{request=parseLessonSelection(bundle.request);}catch{throw malformed();}
+    if(request.schemaVersion!==2||request.bundleRevision!==bundle.bundleRevision)throw malformed();
+    if(typeof bundle.request.provider!=='string'||!PROVIDERS.has(bundle.request.provider)||bundle.request.consent!==true)throw malformed();
     raw.provider=bundle.request.provider;
-    if(typeof model==='string'&&model.trim()&&model.length<=160)raw.model=model;
+    if(model!==null&&model!==undefined){if(typeof model!=='string'||!model.trim()||model.length>160)throw malformed();raw.model=model;}
+  }else if(model!==null&&model!==undefined){
+    throw malformed();
   }
   const {normalized}=envelope(raw);
   return {...raw,...normalized};
