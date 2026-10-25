@@ -10,6 +10,10 @@
 
 **Branch:** `codex/bundle-lesson-view-polish-20261026-a`
 
+**Draft PR:** [#120](https://github.com/LethaboMH14/KAIRO/pull/120)
+
+**Implementation commit at first push:** `d15fc8e4b61975749d2c17f11666d45dadabbbaa`
+
 ## Need and judging criteria
 
 This improves Product, Usability and Presentation for a learner reading a multi-source lesson: the primary explanation and exact citation evidence should remain easy to scan, with technical record IDs available on demand. A host that already owns practice should be able to avoid a redundant preview without changing the standalone component default.
@@ -36,6 +40,7 @@ Root owns passing `showPracticePreview={false}` from `BundleClassroom`; this pac
 - `npm run build`: exit 0; TypeScript passed and Vite built in 49.30 seconds. Vite emitted a non-failing advisory that some chunks exceed 500 kB.
 - Test/build evidence is recorded in `docs/lesson-view-polish-20261026/verification.txt`.
 - Worktree base was `origin/main` at `63927423958830e63397a944e639202c392b9708`.
+- Initial PR checks were still running when inspected: App tests and production build; shared bus isolation tests. The PR is draft/open and not merged.
 
 ## Evidence boundaries and next step
 
