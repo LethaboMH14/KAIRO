@@ -1,0 +1,6 @@
+# Issue #13 GitHub-native runner reboot — 25 Oct 2026
+Session gpt6-kairo-runner-reboot-20261025-z; GPT-6, effort unknown. Main source 1997ba9f. Canonical local SQLite bus inaccessible; GitHub-only cooperative issue plan 6401756411.
+New scope: .github/workflows/kairo-agent-reboot-20261025.yml, tools/agent-runner-reboot-20261025/**, this handoff. Separate pilot output tools/kairo-agent-proof-20261025/** is generated only after reviewed deployment and explicit owner activation.
+Fixed design vs closed PR #54: manual no longer bypasses daily cap; cancelled attempts count; reruns rejected; exclusive proof output; owner label and two feature switches; all first-party and Codex action refs pinned from official repos; separate no-write model job and draft-only publisher.
+Exact-head app CI, independent security review, workflow release and true model-generated PR remain required. This code neither sets secrets nor authorizes account spending or deployment.
+Next: independent review, exact-head CI, conditional merge; verify safe no-key/manual check and later owner-provisioned one real Codex job, draft PR, and CI. Do not claim actual unattended execution before that proof.
