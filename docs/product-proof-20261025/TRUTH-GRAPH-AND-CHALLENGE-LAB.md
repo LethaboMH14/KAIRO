@@ -92,7 +92,7 @@ Suggested source-controlled folders, created only after a separate scoped claim:
 
 A read-only checker should fail when a *published external claim* lacks source date/denominator (if statistical), when source URL resolves only to a dubious secondary paraphrase and no primary source, when exact-code/CI evidence points at a changed SHA, or when the only purported browser evidence is an AI-generated still. It should NOT silently reclassify unknown as passed, and should not force unrelated backend tests to await unstarted human fieldwork.
 
-Owner's new bounded issue: [#42](https://github.com/LethaboMH14/KAIRO/issues/42) if created; otherwise coordinator should create it on reconciliation with existing release gate #11 and issue #39. Check for duplicate implementations before claiming paths.
+Dedicated bounded issue: [#43](https://github.com/LethaboMH14/KAIRO/issues/43), coordinated with existing release gate #11 and product instrumentation issue #39. Check for duplicate implementations before claiming paths.
 
 ## 5. Failure and learning loop
 
