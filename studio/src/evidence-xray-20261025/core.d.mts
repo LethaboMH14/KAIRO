@@ -14,6 +14,7 @@ export type Feedback={correct:boolean;answerEvidenceId:string;chosenEvidenceId:s
 export type Attempt={round:number;selectedEvidenceId:string|null;feedback:Feedback|null;completed:boolean};
 export function validatePrepared(input:unknown):XRayActivity;
 export function makeGraph(activity:XRayActivity):XRayGraph;
+export function graphFocusTarget(nodes:XRayGraphNode[],index:number,key:string):string|null;
 export function startAttempts(activity:XRayActivity):Attempt;
 export function chooseAttempt(activity:XRayActivity,state:Attempt,evidenceId:string):Attempt;
 export function submitAttempt(activity:XRayActivity,state:Attempt):Attempt;
