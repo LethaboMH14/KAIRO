@@ -44,13 +44,40 @@ test('actual SSR presents distinct sources, exact citation locators and quotes, 
   assert.match(html, /Multi-source lesson · read-only view/);
   assert.match(html, /Synthetic multi-source lesson/);
   assert.match(html, new RegExp(sourceA)); assert.match(html, new RegExp(sourceB));
-  assert.match(html, /Revision <code>111111/); assert.match(html, /Revision <code>222222/);
+  assert.match(html, /<details><summary>Source details<\/summary><p>Source ID <code>aaaaaaaaaaaaaaaaaaaaaaaa<\/code><\/p><p>Revision <code>111111/);
+  assert.match(html, /<details><summary>Source details<\/summary><p>Source ID <code>bbbbbbbbbbbbbbbbbbbbbbbb<\/code><\/p><p>Revision <code>222222/);
   assert.match(html, /Page 1 · 12–47/); assert.match(html, /Exact quote from reviewed source A\./);
   assert.match(html, /Some selected material is not covered in the lesson/);
-  assert.match(html, /No cited evidence was selected from source/);
-  assert.match(html, /Evidence ev-b is not cited by a chapter/);
+  assert.match(html, /No cited excerpt is included from Selected source 2\./);
+  assert.match(html, /The excerpt at Page 2 in Synthetic motor notes is not cited by a chapter\./);
+  assert.doesNotMatch(html, new RegExp(`source ${sourceB}|Evidence ev-b`));
   assert.match(html, /does not submit answers or record a score/);
   assert.doesNotMatch(html, /<form\b|type="submit"/i);
+});
+
+test('actual SSR includes practice preview by default and omits only that preview when disabled', () => {
+  const props = { record: record(), onRead() {}, onStop() {} };
+  const withPreview = render(props);
+  const withoutPreview = render({ ...props, showPracticePreview: false });
+  const practiceSection = /<section aria-label="Read-only practice prompts">[\s\S]*?<\/section>/;
+  assert.match(withPreview, practiceSection);
+  assert.doesNotMatch(withoutPreview, practiceSection);
+  assert.equal(withPreview.replace(practiceSection, ''), withoutPreview);
+  assert.match(withoutPreview, /Exact quote from reviewed source A\./);
+  assert.match(withoutPreview, /Page 1 · 12–47/);
+  assert.match(withoutPreview, /href="#blv-evidence-[^"]+ev-a"/);
+  assert.match(withoutPreview, /<summary>Source details<\/summary>/);
+});
+
+test('actual SSR source identifiers and revisions are available under accessible disclosures', () => {
+  const html = render({ record: record(), onRead() {}, onStop() {} });
+  assert.equal((html.match(/<summary>Source details<\/summary>/g) || []).length, 4);
+  assert.match(html, /Source ID <code>aaaaaaaaaaaaaaaaaaaaaaaa<\/code>/);
+  assert.match(html, /Source ID <code>bbbbbbbbbbbbbbbbbbbbbbbb<\/code>/);
+  assert.match(html, /Revision <code>1111111111111111111111111111111111111111111111111111111111111111<\/code>/);
+  assert.match(html, /Revision <code>2222222222222222222222222222222222222222222222222222222222222222<\/code>/);
+  assert.match(html, /Page 1 · 12–47/);
+  assert.match(html, /<blockquote>Exact quote from reviewed source A\.<\/blockquote>/);
 });
 
 test('actual repeated SSR instances receive unique linked heading IDs and escape source text', () => {
