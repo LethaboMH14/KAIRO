@@ -1,0 +1,33 @@
+✔ plans 1 source(s) through actual bundle preparation, validation, and v2 record creation (43.0903ms)
+✔ plans 2 source(s) through actual bundle preparation, validation, and v2 record creation (12.3483ms)
+✔ plans 8 source(s) through actual bundle preparation, validation, and v2 record creation (5.0563ms)
+✔ fails with actionable error instead of omitting a selected source without retrieved evidence (4.962ms)
+✔ rejects malformed bundle shapes, non-local selection, and duplicate citation IDs (3.9344ms)
+✔ preserves exact retrieved support quotes and never interprets source text as instructions (10.8127ms)
+✔ rejects evidence beyond the character limit (2.1668ms)
+✔ creates a v2-only record with ordered revisions and exact cross-document anchors (31.356ms)
+✔ foreign owner cannot verify or save the same v2 source bundle (69.4253ms)
+✔ tampered revision, mismatched source title, quote or edited flag fails closed (27.1668ms)
+✔ a verified local record persists once and remains checked on subsequent reads (6.7537ms)
+✔ a review race during persistence rejects and best-effort removes the new record (6.9615ms)
+✔ failed rollback never converts changed revisions into a successful save (10.3957ms)
+✔ stale or deleted reviewed source fails on read even if lesson document still exists (4.8671ms)
+✔ aborted verification never writes a new record (9.764ms)
+✔ cloud metadata accepts only supported providers and bounded nonblank model names (18.753ms)
+✔ persisted cloud metadata cannot omit or forge provider and model fields (6.7125ms)
+✔ local records reject provider metadata rather than implying a cloud call (7.9824ms)
+✔ invalid constructor provider or missing consent fails before storage (10.0628ms)
+✔ constructor revalidates every cloud provider consent and selected revision (3.1903ms)
+✔ multi-source citations have correct owner, exact offsets, and distinct IDs (50.1174ms)
+✔ does not read another owner or a missing revision (2.9562ms)
+✔ rejects edited snapshots, unreviewed text, and mid-read revision changes (2.1433ms)
+✔ requires valid bounded explicit selection and does not query unselected sources (3.7784ms)
+✔ bounds results, returns truthful limitation, and supports abort (10.2984ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6343.0665
