@@ -476,6 +476,188 @@
           "detail": "No accepted exact-head evidence for PR #24; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
         }
       }
+    },
+    {
+      "number": 26,
+      "title": "feat: fail-closed reviewed multi-source selection foundation",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/26",
+      "state": "open",
+      "draft": true,
+      "headSha": "967055977985dea1be234c908096a32c0abcaac8",
+      "base": "fix/ci-portable-extraction-20261025",
+      "dependsOn": [
+        15
+      ],
+      "notes": "Feature-gated state model, not mounted UI; PR-head Node24 CI was in progress at snapshot.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #26 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #26 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #26 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #26 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #26 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #26 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #26 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #26 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        }
+      }
+    },
+    {
+      "number": 27,
+      "title": "test(studio): offline performance evidence gate and source-anchor audit",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/27",
+      "state": "open",
+      "draft": true,
+      "headSha": "91900adee0296e5a013e731203e46c2f97076da0",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "Fixture/self-report perf trace and source anchors only; real device unmeasured and final ninth test pending.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #27 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #27 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #27 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #27 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #27 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #27 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #27 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #27 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        }
+      }
+    },
+    {
+      "number": 28,
+      "title": "feat(agent-runner): offline verified webhook ledger and bounded dispatch simulation",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/28",
+      "state": "open",
+      "draft": true,
+      "headSha": "0154b34682dc15041c3d68ee51aa2353959d4c9e",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "Offline simulation only, not running worker process or deployed webhook; no Node24 full branch CI.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #28 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #28 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #28 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #28 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #28 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #28 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #28 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #28 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        }
+      }
+    },
+    {
+      "number": 30,
+      "title": "WIP #6 Dated provider career requirements to learner evidence gap pathways",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/30",
+      "state": "open",
+      "draft": true,
+      "headSha": "4c7ab1d26bdfb7bc30575fe4c4f8e7534d283d86",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "Unintegrated role gap UI/model; dates and hiring outcomes not independently verified; Node24 full branch pending.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #30 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #30 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #30 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #30 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #30 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #30 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #30 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "Release acceptance at PR #30 exact head not verified. Reported standalone checks are not integrated app CI, source integrity, privacy, browser or release evidence."
+        }
+      }
     }
   ],
   "releaseCandidate": {
