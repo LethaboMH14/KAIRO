@@ -17,6 +17,7 @@ export default function EvidenceXRay({activity,currentCatalog,onReturn}:Props){
  const [expanded,setExpanded]=useState(false);
  const [panel,setPanel]=useState<'source'|'inspector'|null>(null);
  const [draftClaim,setDraftClaim]=useState('');
+ const [focusNewRound,setFocusNewRound]=useState(false);
  const sourceTitleRef=useRef<HTMLHeadingElement>(null),inspectorTitleRef=useRef<HTMLHeadingElement>(null);
  const nodeRefs=useRef(new Map<string,HTMLButtonElement>());
  const firstOptionRef=useRef<HTMLButtonElement>(null);
@@ -27,6 +28,13 @@ export default function EvidenceXRay({activity,currentCatalog,onReturn}:Props){
   if(panel==='source')sourceTitleRef.current?.focus();
   if(panel==='inspector')inspectorTitleRef.current?.focus();
  },[panel,activeNode,selectedCitation,current.ok]);
+ useEffect(()=>{
+  if(focusNewRound){
+   if(attempt.completed)inspectorTitleRef.current?.focus();
+   else if(!attempt.feedback)firstOptionRef.current?.focus();
+   setFocusNewRound(false);
+  }
+ },[attempt.round,attempt.completed,attempt.feedback,focusNewRound]);
  const evidence=activity.evidence.find(e=>e.id===selectedCitation)||activity.evidence[0];
  const activeConcept=activity.concepts.find(c=>'concept:'+c.id===activeNode);
  const challenge=activity.mode==='prepared'?activity.challenges[attempt.round]:null;
@@ -58,8 +66,7 @@ export default function EvidenceXRay({activity,currentCatalog,onReturn}:Props){
   const final=attempt.round===activity.challenges.length-1;
   setAttempt(s=>advanceAttempt(activity,s));
   setPanel('inspector');
-  if(final)inspectorTitleRef.current?.focus();
-  else firstOptionRef.current?.focus();
+  setFocusNewRound(true);
  }
  const edgeVisible=(edge:{id:string;kind:string})=>edge.kind!=='question'||
   Boolean(attempt.feedback&&edge.id==='question:'+activity.challenges[attempt.round]?.id);
@@ -169,7 +176,7 @@ export default function EvidenceXRay({activity,currentCatalog,onReturn}:Props){
       <button type="button" className="xray-primary" onClick={nextRound}>{attempt.round===0?'Try the second claim':'Finish local practice'} <span aria-hidden="true">↗</span></button>
      </div>:<div className="xray-complete" role="status"><span className="xray-complete-star" aria-hidden="true">✳</span><h3>Two attempts complete.</h3>
       <p>This was a local, unsaved, unverified exercise. No score or mastery credential was created.</p>
-      <button type="button" className="xray-primary" onClick={()=>{setAttempt(startAttempts(activity));setPanel('inspector');}}>Try again</button>
+      <button type="button" className="xray-primary" onClick={()=>{setAttempt(startAttempts(activity));setPanel('inspector');setFocusNewRound(true);}}>Try again</button>
      </div>}
     </div>:<div className="xray-challenge"><p className="xray-round">PRIVATE EXCERPT INSPECTION</p>
      <h3>Evidence is not an automatic answer key.</h3><p>Private source previews expose exact authorized passages. No prepared claim-to-evidence exercise has been certified for these sources.</p>
