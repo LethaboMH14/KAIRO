@@ -1,0 +1,49 @@
+name: KAIRO checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kairo-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  app:
+    name: App tests and production build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: studio
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: studio/package-lock.json
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      # Serial startup avoids the previously documented parallel SSR startup stall.
+      - name: Run complete serial regression suite
+        run: node --test --test-concurrency=1 tests/*.test.mjs
+      - name: Check production build
+        run: npm run build
+
+  coordination:
+    name: Shared bus isolation tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exercise coordination bus in temporary databases
+        run: python -m unittest discover -s coordination -p 'test_bus.py' -v
