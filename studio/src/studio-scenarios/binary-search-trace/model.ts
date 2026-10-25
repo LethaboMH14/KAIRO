@@ -112,6 +112,7 @@ export function commitAttempt(session: Session, scenario: Scenario, prediction: 
   if (session.attempts.length >= 2) fail('Two attempts completed. Start a new practice session.');
   assertScenario(scenario);
   assertPrediction(prediction);
+  if (prediction.index > ARRAYS[scenario.arrayId].values.length) fail('Prediction index outside this prepared list.');
   if (typeof at !== 'string' || !Number.isFinite(Date.parse(at)) || new Date(at).toISOString() !== at) {
     fail('A valid exact ISO timestamp is required.');
   }
