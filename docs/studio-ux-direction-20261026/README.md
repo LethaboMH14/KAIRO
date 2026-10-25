@@ -107,3 +107,6 @@ Product: task completes and work resumes; Usability: first action/discovery/keyb
 ## Deliverables and limits
 
 Generated concept01 shows recommended motor/KAIRO composition; concept02 maps eight key journey screens. Sample file names, source pages, dates, companies and explanatory diagrams are illustrative, not verified curriculum/opportunity/physics evidence. Full screens, states and routes are specified above and in the Luna research packages. The design is not deployed by generating an image. An isolated interaction prototype is being built separately; acceptance must be recorded before calling it usable.
+
+
+User-approved extension: concept03 shows a modern whiteboard room, actual KAIRO holding/tapping a tablet, and her separate action/scope/location menu. Tablet prop, hand contact and animation clips are new asset work. The selected overall direction remains concept02. See CONFIRMED-DIRECTION.md and the concrete build plan/worker prompts in coordination/briefs/studio-interaction-build-20261026.
