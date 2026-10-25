@@ -8,7 +8,7 @@ export type DirectorLesson={id:string;title:string;objective:string;sourceFinger
 export type Answer='1500'|'1800'|'3000'|'unknown';
 export const ANSWERS:Answer[]=['1500','1800','3000','unknown'];
 export type DirectorState={version:1;lessonId:string;sourceFingerprint:string;cue:CueId;frequencyHz:number;poles:number;first:Answer|null;second:Answer|null;paused:boolean;stopped:boolean;epoch:number};
-export type Action={type:'NEXT'|'BACK'|'PAUSE'|'RESUME'|'STOP'|'REPLAY'|'RESET'}|{type:'JUMP_BACK';cue:CueId}|{type:'DEMO';frequencyHz:number;poles:number}|{type:'SUBMIT';answer:Answer;expectedEpoch:number};
+export type Action={type:'NEXT'|'BACK'|'PAUSE'|'RESUME'|'STOP'|'REPLAY'|'RESET'|'SKIP'}|{type:'JUMP_BACK';cue:CueId}|{type:'DEMO';frequencyHz:number;poles:number}|{type:'SUBMIT';answer:Answer;expectedEpoch:number};
 export const fieldSpeed=synchronousSpeed;
 export const allowedPoles=SUPPORTED_POLES;
 export function initialState(lesson:DirectorLesson):DirectorState{return {version:1,lessonId:lesson.id,sourceFingerprint:lesson.sourceFingerprint,cue:'INTRO',frequencyHz:50,poles:4,first:null,second:null,paused:false,stopped:false,epoch:0};}
@@ -44,8 +44,11 @@ export function reduceDirector(s:DirectorState,a:Action,l:DirectorLesson):Direct
   if(index<0||index>CUES.indexOf(s.cue))return s;
   return {...s,cue:CUES[index],epoch:s.epoch+1};
  }
+ if(a.type==='SKIP')return ['INTRO','EXPLAIN','DEMONSTRATE'].includes(s.cue)?{...s,cue:'PAUSE_FOR_PREDICTION',epoch:s.epoch+1}:s;
  if(a.type==='NEXT'){
-  if(['PAUSE_FOR_PREDICTION','SECOND_ATTEMPT','COMPLETE'].includes(s.cue))return s;
+  if(s.cue==='PAUSE_FOR_PREDICTION')return s.first===null?s:{...s,cue:'REVEAL_FEEDBACK',epoch:s.epoch+1};
+  if(s.cue==='SECOND_ATTEMPT')return s.second===null?s:{...s,cue:'COMPLETE',epoch:s.epoch+1};
+  if(s.cue==='COMPLETE')return s;
   const n=CUES[CUES.indexOf(s.cue)+1];
   if(!n)return s;
   return {...s,cue:n==='PAUSE_FOR_PREDICTION'&&s.first!==null?'REVEAL_FEEDBACK':n,epoch:s.epoch+1};
