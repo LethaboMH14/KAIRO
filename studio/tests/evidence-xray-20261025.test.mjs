@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {performance} from 'node:perf_hooks';
 import {preparedPages,preparedPumpExercise as prepared} from '../src/evidence-xray-20261025/prepared-pump.mjs';
-import {advanceAttempt,checkCurrentSources,chooseAttempt,getAuthenticatedPreview,makeGraph,
+import {advanceAttempt,checkCurrentSources,chooseAttempt,getAuthenticatedPreview,loadOwnerEvidence,makeGraph,
  readPreviewData,refreshAuthenticatedCatalog,startAttempts,submitAttempt,unsupportedClaim,validatePrepared} from '../src/evidence-xray-20261025/core.mjs';
 
 const clone=value=>structuredClone(value);
@@ -143,4 +143,29 @@ test('100 bounded deterministic graph builds remain cheap and no graph side effe
  const began=performance.now();for(let i=0;i<100;i++){const g=makeGraph(activity);assert.ok(g.nodes.length<30);}
  assert.ok(performance.now()-began<1800,'100 bounded graph builds should be under 1.8 seconds');
  assert.ok(!Object.hasOwn(prepared,'savedAt'),'the prepared exercise contains no persisted attempt metadata');
+});
+
+test('owner preview double-checks live catalog and rejects revoked revisions during the request',async()=>{
+ const calls=[];
+ const fetcher=async(path,options)=>{
+  calls.push({path,options});
+  const revocation=path==='/api/workspace/catalog'&&calls.length===3;
+  const body=path==='/api/workspace/catalog'?catalog(revocation?{revoked:true}:{}):goodPreview();
+  return {ok:true,status:200,text:async()=>JSON.stringify(body)};
+ };
+ await assert.rejects(()=>loadOwnerEvidence({sourceRefs:prepared.sourceRefs,goal:'pump',fetcher}),/unavailable, revoked or has changed/);
+ assert.deepEqual(calls.map(x=>x.path),['/api/workspace/catalog','/api/workspace/bundle-preview','/api/workspace/catalog']);
+ assert.equal(calls[1].options.credentials,'same-origin');
+});
+test('owner preview provides only authorized sources and the latest fresh catalog to the view',async()=>{
+ const calls=[];
+ const fetcher=async(path,options)=>{
+  calls.push({path,options});
+  return {ok:true,status:200,text:async()=>JSON.stringify(path==='/api/workspace/catalog'?catalog():goodPreview())};
+ };
+ const {activity,currentCatalog}=await loadOwnerEvidence({sourceRefs:prepared.sourceRefs,fetcher});
+ assert.equal(activity.mode,'preview-only');
+ assert.equal(checkCurrentSources(activity,currentCatalog).ok,true);
+ assert.equal(activity.challenges.length,0);
+ assert.equal(calls.length,3);
 });
