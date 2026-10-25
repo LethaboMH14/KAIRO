@@ -1,0 +1,218 @@
+.kairo-evidence-gap {
+  --keg-paper: #fffcf5;
+  --keg-ground: #f5f0e5;
+  --keg-ink: #263d32;
+  --keg-muted: #566455;
+  --keg-moss: #526044;
+  --keg-sage: #e9eee3;
+  --keg-line: #d9d3c3;
+  --keg-ochre: #7b5823;
+  box-sizing: border-box;
+  color: var(--keg-ink);
+  background: var(--keg-paper);
+  border: 1px solid var(--keg-line);
+  border-radius: 8px 26px 8px 8px;
+  padding: clamp(18px, 3vw, 30px);
+  font: 15px/1.6 'Segoe UI', Arial, sans-serif;
+  max-width: 980px;
+  width: 100%;
+}
+
+.kairo-evidence-gap *,
+.kairo-evidence-gap *::before,
+.kairo-evidence-gap *::after {
+  box-sizing: border-box;
+}
+
+.kairo-evidence-gap h2,
+.kairo-evidence-gap h3,
+.kairo-evidence-gap p {
+  margin: 0;
+}
+
+.kairo-evidence-gap a {
+  color: #315b48;
+  font-weight: 650;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.kairo-evidence-gap :focus-visible {
+  outline: 3px solid var(--keg-ochre);
+  outline-offset: 4px;
+}
+
+.keg-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--keg-line);
+}
+
+.keg-mark {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #a9b49e;
+  border-radius: 14px 14px 14px 3px;
+  color: var(--keg-moss);
+  background: var(--keg-sage);
+  font: 27px/1 Georgia, serif;
+}
+
+.keg-brand {
+  color: var(--keg-moss);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px !important;
+}
+
+.kairo-evidence-gap h2 {
+  font: clamp(23px, 3.2vw, 31px)/1.18 Georgia, serif;
+  letter-spacing: -0.35px;
+  overflow-wrap: anywhere;
+}
+
+.keg-intro {
+  color: var(--keg-muted);
+  max-width: 66ch;
+  padding: 18px 0 10px;
+}
+
+.keg-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--keg-line);
+}
+
+.keg-requirement {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(175px, 0.75fr);
+  gap: 15px 24px;
+  padding: 21px 0;
+  border-bottom: 1px solid var(--keg-line);
+}
+
+.kairo-evidence-gap h3 {
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.keg-state {
+  margin-top: 11px;
+  padding: 9px 12px;
+  border-left: 3px solid var(--keg-moss);
+  background: var(--keg-sage);
+  font-size: 13px;
+}
+
+.keg-state p {
+  color: var(--keg-muted);
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
+
+.keg-state-review {
+  border-left-color: var(--keg-ochre);
+  background: #f5eedf;
+}
+
+.keg-state-missing {
+  border-left-color: #7a8172;
+  background: #f1f0e8;
+}
+
+.keg-source-heading {
+  color: var(--keg-muted);
+  font-size: 12px;
+}
+
+.keg-source-title {
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.keg-source-date,
+.keg-source-unavailable {
+  color: var(--keg-muted);
+  font-size: 12px;
+  margin: 2px 0 6px !important;
+}
+
+.keg-source-unavailable {
+  color: #7b3b2d;
+}
+
+.keg-action {
+  grid-column: 1 / -1;
+}
+
+.keg-action button {
+  min-height: 44px;
+  border: 1px solid var(--keg-moss);
+  border-radius: 4px 14px 4px 4px;
+  background: var(--keg-moss);
+  color: white;
+  padding: 9px 16px;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  text-align: left;
+}
+
+.keg-action button:hover {
+  background: #3e4c36;
+}
+
+.keg-action button:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+.keg-action-reason {
+  color: #703e2e;
+  font-size: 13px;
+}
+
+.keg-empty {
+  margin: 10px 0 0 !important;
+  padding: 16px;
+  border: 1px dashed #a9b49e;
+  background: var(--keg-ground);
+  color: var(--keg-muted);
+}
+
+.keg-limit {
+  margin-top: 17px !important;
+  padding-top: 14px;
+  border-top: 1px solid var(--keg-line);
+  color: var(--keg-muted);
+  font-size: 12px;
+}
+
+@media (max-width: 620px) {
+  .kairo-evidence-gap {
+    border-radius: 6px 18px 6px 6px;
+  }
+
+  .keg-requirement {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 17px 0;
+  }
+
+  .keg-action {
+    grid-column: auto;
+  }
+
+  .keg-action button {
+    width: 100%;
+  }
+}
