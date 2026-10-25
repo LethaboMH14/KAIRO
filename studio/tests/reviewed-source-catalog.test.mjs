@@ -78,6 +78,7 @@ test('authenticated catalog preserves legacy property and isolates two synthetic
   const repo={
     async list(uid,kind){return kind==='sources' ? structuredClone(rows.get(uid)||[]) : [];},
     async get(){return null;},
+    async put(){throw new Error('A read-only catalog must never write learner records.');},
   };
   const workspace=createLearnerWorkspace({repository:repo,clock:()=>Date.parse('2026-10-25T04:00:00Z')});
   const app=express();
