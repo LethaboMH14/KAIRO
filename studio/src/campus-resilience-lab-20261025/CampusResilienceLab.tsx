@@ -36,9 +36,9 @@ function CampusScene({ step, reduced }: { step?: Hour; reduced: boolean }) {
   const id = useId().replaceAll(':', '');
   const flows = step ? step.loads : [];
   const isLive = (n: number) => n > 1e-8;
-  const overall = step ? \`Hour \${step.hour}: \${one(step.servedKwh)} of \${one(step.demandKwh)} kWh supplied; \${one(step.unmetKwh)} kWh unmet. Battery \${one(step.endingKwh)} kWh.\` : 'Prepared fictional campus before simulation; no results have been generated.';
+  const overall = step ? `Hour ${step.hour}: ${one(step.servedKwh)} of ${one(step.demandKwh)} kWh supplied; ${one(step.unmetKwh)} kWh unmet. Battery ${one(step.endingKwh)} kWh.` : 'Prepared fictional campus before simulation; no results have been generated.';
   return (
-    <div className={\`crl-scene \${reduced ? 'crl-still' : ''}\`}>
+    <div className={`crl-scene ${reduced ? 'crl-still' : ''}`}>
       <svg viewBox="0 0 840 458" xmlns="http://www.w3.org/2000/svg" role="img" aria-label={overall} className="crl-world">
         <defs>
           <linearGradient id={id + '-ground'} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#173e50"/><stop offset="1" stopColor="#10253c"/></linearGradient>
@@ -46,8 +46,8 @@ function CampusScene({ step, reduced }: { step?: Hour; reduced: boolean }) {
           <linearGradient id={id + '-front'} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#496a82"/><stop offset="1" stopColor="#263d59"/></linearGradient>
           <filter id={id + '-shadow'} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
         </defs>
-        <ellipse cx="420" cy="246" rx="340" ry="177" fill="#001423" opacity=".55" filter={\`url(#\${id}-shadow)\`}/>
-        <path d="M420 52 810 243 420 434 30 243Z" fill={\`url(#\${id}-ground)\`} stroke="#547c90" strokeWidth="2"/>
+        <ellipse cx="420" cy="246" rx="340" ry="177" fill="#001423" opacity=".55" filter={`url(#${id}-shadow)`}/>
+        <path d="M420 52 810 243 420 434 30 243Z" fill={`url(#${id}-ground)`} stroke="#547c90" strokeWidth="2"/>
         <path d="M420 70 785 243 420 416 55 243Z" fill="none" stroke="#9ed7d2" strokeOpacity=".12" strokeWidth="2" strokeDasharray="5 8"/>
         <g fill="none" stroke="#23465f" strokeWidth="13" opacity=".8">
           <path d="M420 93 420 385"/><path d="M110 242 730 242"/>
@@ -57,9 +57,9 @@ function CampusScene({ step, reduced }: { step?: Hour; reduced: boolean }) {
           const color = tint(record?.status);
           const served = record?.servedKwh ?? 0;
           return <g key={point.id}>
-            <path d={\`M420 225 Q\${(420 + point.x) / 2} \${(225 + point.y) / 2 + 38} \${point.x} \${point.y + 42}\`}
+            <path d={`M420 225 Q${(420 + point.x) / 2} ${(225 + point.y) / 2 + 38} ${point.x} ${point.y + 42}`}
               fill="none" stroke="#45647b" strokeWidth="9" strokeLinecap="round"/>
-            <path d={\`M420 225 Q\${(420 + point.x) / 2} \${(225 + point.y) / 2 + 38} \${point.x} \${point.y + 42}\`}
+            <path d={`M420 225 Q${(420 + point.x) / 2} ${(225 + point.y) / 2 + 38} ${point.x} ${point.y + 42}`}
               fill="none" stroke={color} strokeWidth={step && isLive(served) ? Math.min(7, 2 + served / 3) : 1.5}
               opacity={step && isLive(served) ? 0.98 : 0.27}
               className={step && isLive(served) ? 'crl-flow-line' : ''} strokeDasharray={step && isLive(served) ? '10 8' : undefined}/>
@@ -86,16 +86,16 @@ function CampusScene({ step, reduced }: { step?: Hour; reduced: boolean }) {
           const {x,y} = point;
           return <g key={point.id}>
             <ellipse cx={x} cy={y + 50} rx="83" ry="32" fill="#030e19" opacity=".45"/>
-            <path d={\`M\${x-74} \${y} \${x} \${y+38} \${x} \${y+91} \${x-74} \${y+51}Z\`} fill={\`url(#\${id}-front)\`} stroke="#8aa9bc"/>
-            <path d={\`M\${x} \${y+38} \${x+74} \${y} \${x+74} \${y+51} \${x} \${y+91}Z\`} fill="#203a55" stroke="#7396ac"/>
-            <path d={\`M\${x-74} \${y} \${x} \${y-41} \${x+74} \${y} \${x} \${y+38}Z\`} fill={\`url(#\${id}-roof)\`} stroke={color} strokeWidth="3"/>
+            <path d={`M${x-74} ${y} ${x} ${y+38} ${x} ${y+91} ${x-74} ${y+51}Z`} fill={`url(#${id}-front)`} stroke="#8aa9bc"/>
+            <path d={`M${x} ${y+38} ${x+74} ${y} ${x+74} ${y+51} ${x} ${y+91}Z`} fill="#203a55" stroke="#7396ac"/>
+            <path d={`M${x-74} ${y} ${x} ${y-41} ${x+74} ${y} ${x} ${y+38}Z`} fill={`url(#${id}-roof)`} stroke={color} strokeWidth="3"/>
             {point.roof && <g stroke="#437a95" strokeWidth="2" fill="#295f88" opacity=".95">
-              <path d={\`M\${x-38} \${y-1} \${x} \${y-22} \${x+36} \${y-1} \${x-1} \${y+19}Z\`}/>
-              <path d={\`M\${x-20} \${y-10} \${x+18} \${y+10} M\${x} \${y-20} \${x+37} \${y} \`}/>
+              <path d={`M${x-38} ${y-1} ${x} ${y-22} ${x+36} ${y-1} ${x-1} ${y+19}Z`}/>
+              <path d={`M${x-20} ${y-10} ${x+18} ${y+10} M${x} ${y-20} ${x+37} ${y} `}/>
             </g>}
             <g fill={color} opacity={load?.status === 'unmet' ? .23 : .94}>
-              <path d={\`M\${x-61} \${y+25} l20 10 v17 l-20 -10Z\`}/>
-              <path d={\`M\${x+39} \${y+35} l20 -11 v18 l-20 11Z\`}/>
+              <path d={`M${x-61} ${y+25} l20 10 v17 l-20 -10Z`}/>
+              <path d={`M${x+39} ${y+35} l20 -11 v18 l-20 11Z`}/>
             </g>
             <rect x={x-75} y={y+87} width="150" height="29" rx="9" fill="#09263d" stroke={color} strokeWidth="1.5"/>
             <text x={x} y={y+106} textAnchor="middle" className="crl-svg-small">{point.short}</text>
@@ -125,7 +125,7 @@ function EnergyFlow({ step }: { step: Hour }) {
     { label: 'Battery to loads', value: step.batteryToLoadKwh, kind: 'battery' }
   ];
   return <div className="crl-flow">
-    {cells.map(item => <div key={item.kind} className={\`crl-flow-cell crl-\${item.kind}\`}>
+    {cells.map(item => <div key={item.kind} className={`crl-flow-cell crl-${item.kind}`}>
       <span>{item.label}</span><strong>{one(item.value)} kWh</strong><div className="crl-flow-track"><i style={{width: (step.servedKwh ? item.value / step.servedKwh * 100 : 0) + '%'}}/></div>
     </div>)}
     <div className="crl-flow-cell crl-load"><span>Total supplied</span><strong>{one(step.servedKwh)} kWh</strong><small>Unmet {one(step.unmetKwh)} kWh</small></div>
@@ -216,7 +216,7 @@ export default function CampusResilienceLab({ lessonAssociation = null }: Campus
     </section>
     <div className="crl-main-grid">
       <section className="crl-visual" aria-label="Campus simulation visual">
-        <div className="crl-section-top"><div><span className="crl-overline">LIVE MODEL VIEW</span><h2>{scenario.name}</h2></div><span className="crl-model-tag">{phase === 'prepare' ? 'PRE-RUN FORECAST' : \`HOUR \${chosen + 1} / 6\`}</span></div>
+        <div className="crl-section-top"><div><span className="crl-overline">LIVE MODEL VIEW</span><h2>{scenario.name}</h2></div><span className="crl-model-tag">{phase === 'prepare' ? 'PRE-RUN FORECAST' : `HOUR ${chosen + 1} / 6`}</span></div>
         <CampusScene step={step} reduced={reduced}/>
         <div className="crl-timeline" aria-label="Six-hour timeline">
           {Array.from({length: 6}, (_, index) => <button key={index} type="button" disabled={phase === 'prepare'}
@@ -225,7 +225,7 @@ export default function CampusResilienceLab({ lessonAssociation = null }: Campus
           </button>)}
         </div>
         <div className="crl-visual-footer">{step ? <ChargeGauge value={step.endingKwh} max={scenario.battery.capacityKwh}/> : <ChargeGauge value={scenario.battery.initialKwh} max={scenario.battery.capacityKwh}/>}
-          <p>{step ? \`Hour \${step.hour}: \${one(step.servedKwh)} kWh delivered, \${one(step.unmetKwh)} kWh unmet. Solar \${one(step.solarKwh)} kWh; battery losses \${one(step.batteryLossKwh)} kWh.\` : 'The map is a prepared illustration. Energy pathways display measured model output only after you run a simulation.'}</p>
+          <p>{step ? `Hour ${step.hour}: ${one(step.servedKwh)} kWh delivered, ${one(step.unmetKwh)} kWh unmet. Solar ${one(step.solarKwh)} kWh; battery losses ${one(step.batteryLossKwh)} kWh.` : 'The map is a prepared illustration. Energy pathways display measured model output only after you run a simulation.'}</p>
         </div>
       </section>
       <section className="crl-console" aria-label="Learner controls and simulation results">
@@ -238,8 +238,8 @@ export default function CampusResilienceLab({ lessonAssociation = null }: Campus
             {priority.map((id, index) => {
               const load = LOADS.find(x => x.id === id)!;
               return <div className="crl-priority" key={id}><b className="crl-rank">{index + 1}</b><div><strong>{load.label}</strong><small>{one(load.kw)} kW · {load.description}</small></div>
-                <div className="crl-priority-buttons"><button type="button" disabled={index === 0} onClick={() => move(id, -1)} aria-label={\`Move \${load.label} earlier in priority\`}>↑</button>
-                  <button type="button" disabled={index === priority.length - 1} onClick={() => move(id, 1)} aria-label={\`Move \${load.label} later in priority\`}>↓</button></div></div>;
+                <div className="crl-priority-buttons"><button type="button" disabled={index === 0} onClick={() => move(id, -1)} aria-label={`Move ${load.label} earlier in priority`}>↑</button>
+                  <button type="button" disabled={index === priority.length - 1} onClick={() => move(id, 1)} aria-label={`Move ${load.label} later in priority`}>↓</button></div></div>;
             })}
           </fieldset>
           <label className="crl-prediction"><strong>Predict before you simulate</strong><span>Which service group, if any, stays fully supplied in every outage hour?</span>
