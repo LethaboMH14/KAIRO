@@ -8,6 +8,7 @@ import {draftFromLesson,validateDraft,draftToLesson} from '../../src/lesson-draf
 import {resolvePassage,validatePassageHelp} from '../workspace/passages.mjs';
 import {generateSourceLesson,generatePassageHelp,cloudConfigured,googleConfiguration} from '../google.mjs';
 import {admit,extractUpload} from './extraction.mjs';
+import {summarizeReviewedSources} from '../source-catalog/reviewed-summary.mjs';
 const id=()=>randomBytes(12).toString('hex'),idPattern=/^[a-f0-9]{24}$/;
 const fail=(status,message)=>{const e=new Error(message);e.status=status;throw e;};
 export function createLearnerWorkspace({repository:repo,enqueue,extract=extractUpload,clock=()=>Date.now(),generate=generateSourceLesson,generateHelp=generatePassageHelp,reserveGlobal=async()=>{}}={}){
@@ -27,7 +28,7 @@ export function createLearnerWorkspace({repository:repo,enqueue,extract=extractU
   res.status(202).json({jobId});
  }));
  r.use(json({limit:'220kb',strict:true}));
- r.get('/catalog',route(async(req,res)=>{const uid=current(req);const [sources,lessons,jobs]=await Promise.all([repo.list(uid,'sources'),repo.list(uid,'lessons'),repo.list(uid,'jobs',{limit:30})]);res.json({catalog:sources.map(({value:s})=>({id:s.id,title:s.title,codes:typeof s.moduleCode==='string'?[s.moduleCode]:[],kind:'saved-source',sections:s.pages.length})),lessons:lessons.map(x=>x.value).sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).slice(0,30).map(({id,title,createdAt,mode})=>({id,title,createdAt,mode})),jobs:jobs.map(({value:j})=>({id:j.id,name:j.name,status:j.status})),cloudConfigured:ai.status().providers.some(p=>p.configured),storageScope:'account',storageLabel:'Saved privately in your KAIRO account. Device notes remain separate.'});}));
+ r.get('/catalog',route(async(req,res)=>{const uid=current(req);const [sources,lessons,jobs]=await Promise.all([repo.list(uid,'sources'),repo.list(uid,'lessons'),repo.list(uid,'jobs',{limit:30})]);res.json({...summarizeReviewedSources(sources),catalog:sources.map(({value:s})=>({id:s.id,title:s.title,codes:typeof s.moduleCode==='string'?[s.moduleCode]:[],kind:'saved-source',sections:s.pages.length})),lessons:lessons.map(x=>x.value).sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).slice(0,30).map(({id,title,createdAt,mode})=>({id,title,createdAt,mode})),jobs:jobs.map(({value:j})=>({id:j.id,name:j.name,status:j.status})),cloudConfigured:ai.status().providers.some(p=>p.configured),storageScope:'account',storageLabel:'Saved privately in your KAIRO account. Device notes remain separate.'});}));
  r.post('/text',route(async(req,res)=>{const source=prepared(req.body?.title,req.body?.text);if(source.pages[0].text.length<80)throw new TypeError('Add at least 80 characters.');res.json(await saveSource(current(req),source));}));
  r.post('/import',route(async()=>{throw new TypeError('Choose a public guided example or upload your own material. Local course files are not automatically shared.');}));
  r.get('/source/:id',route(async(req,res)=>res.json((await get(current(req),'sources',req.params.id)).value)));
