@@ -43,6 +43,7 @@ function validateRole(role) {
   const url = role.source.officialUrl;
   if (!isSafeRoleLink(url) || !url.startsWith('https://')) throw new TypeError('Invalid original provider URL');
   const checkedAt = instant(role.source.checkedAt,'provider check date');
+  const closingDateOnly = typeof role.source.closesAt === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(role.source.closesAt);
   const closesAt = role.source.closesAt == null ? null : instant(role.source.closesAt,'closing date');
   if (!['official','discovery-only'].includes(role.source.verification) ||
       !['open','closed','unknown'].includes(role.source.status)) throw new TypeError('Invalid source state');
@@ -76,7 +77,7 @@ function validateRole(role) {
     }
     return {id,text,providerExcerpt,sourceLocator,priority:req.priority,rubric,practice};
   });
-  return {id,title,provider,source:{officialUrl:url,checkedAt,closesAt,
+  return {id,title,provider,source:{officialUrl:url,checkedAt,closesAt,closingDateOnly,
     verification:role.source.verification,status:role.source.status},requirements};
 }
 function validateEvidence(items, requirements) {
@@ -115,9 +116,12 @@ export function evaluateRoleEvidence({role,evidence=[],now=new Date()} = {}) {
   const stale = ms - checked > 7 * DAY;
   const sourceState = r.source.verification === 'discovery-only' ? 'discovery-only' :
     stale ? 'stale' : 'dated-provider-summary';
+  // A date without a time cannot establish whether that closing DAY is still open.
+  const closingStart = r.source.closesAt === null ? NaN : Date.parse(r.source.closesAt);
+  const dayUnknown = r.source.closingDateOnly && ms >= closingStart && ms < closingStart + DAY;
   const closed = r.source.status === 'closed' ||
-    (r.source.closesAt !== null && Date.parse(r.source.closesAt) <= ms);
-  const listingState = closed ? 'closed' : sourceState !== 'dated-provider-summary' ||
+    (r.source.closesAt !== null && ms >= closingStart + (r.source.closingDateOnly ? DAY : 0));
+  const listingState = closed ? 'closed' : dayUnknown || sourceState !== 'dated-provider-summary' ||
     r.source.status !== 'open' || r.source.closesAt === null ?
     'unknown' : 'deadline-ahead-unconfirmed';
   const rows = r.requirements.map(req => {
