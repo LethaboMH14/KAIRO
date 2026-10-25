@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KAIRO | Dependency-order reasoning practice</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; background: #f6f8fb; color: #14263a; }
+    body { margin: 0 auto; max-width: 52rem; padding: clamp(1rem, 4vw, 2.5rem); line-height: 1.6; }
+    main { background: white; padding: clamp(1rem, 3vw, 2rem); border-radius: 1rem; border: 1px solid #ccd7e2; }
+    h1, h2 { line-height: 1.25; }
+    .notice { border-inline-start: 0.3rem solid #3573aa; padding: 0.7rem 1rem; background: #eaf4fc; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.8rem; }
+    label { display: block; font-weight: 650; margin-top: 1rem; }
+    select, textarea, button { font: inherit; box-sizing: border-box; width: 100%; padding: 0.7rem; border: 1px solid #657c91; border-radius: 0.4rem; }
+    textarea { min-height: 6rem; resize: vertical; }
+    button { width: auto; min-height: 2.75rem; cursor: pointer; background: #173d62; color: white; margin-top: 1rem; }
+    button:disabled { background: #777; cursor: not-allowed; }
+    :focus-visible { outline: 3px solid #cc7600; outline-offset: 3px; }
+    #result-region { border: 2px solid #376c84; border-radius: 0.5rem; padding: 1rem; margin-top: 1rem; }
+    .muted { color: #364a60; }
+    [hidden] { display: none !important; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>KAIRO Computer Science Studio: what can run next?</h1>
+  <p class="notice">Prepared, fictional dependency graphs for learning. This preview uses no real deployment instructions, no AI prediction, no network request and no authenticated learner record. Results are <strong>local and unverified</strong>.</p>
+  <p>Change one prerequisite, predict whether all tasks can finish, and predict the <strong>second task</strong> the teaching algorithm will choose. Then explain your reasoning before revealing the step-by-step trace. When several tasks are ready, this exercise chooses the alphabetically first one.</p>
+  <p class="muted">Concept reference: <a id="reference" rel="noopener noreferrer" target="_blank"></a>. This is a prepared reference, not a reviewed learner-uploaded source or verified Python execution.</p>
+  <p id="progress" aria-live="polite"></p>
+  <section id="exercise" aria-label="Dependency-order practice">
+    <h2 id="round-heading" tabindex="-1"></h2>
+    <p>Starting prerequisites (a task on the left must finish first):</p>
+    <ol id="edges"></ol>
+    <form id="prediction-form">
+      <label for="change">Choose a dependency change</label>
+      <select id="change" required></select>
+      <div class="grid">
+        <div>
+          <label for="completion">Can all four tasks finish?</label>
+          <select id="completion" required>
+            <option value="">Make a prediction</option>
+            <option value="complete">Yes, all can finish</option>
+            <option value="blocked">No, a cycle blocks completion</option>
+          </select>
+        </div>
+        <div>
+          <label for="next-task">Which task will run second?</label>
+          <select id="next-task" required></select>
+        </div>
+      </div>
+      <label for="explanation">Why? Explain before seeing the result (12–400 characters)</label>
+      <textarea id="explanation" minlength="12" maxlength="400" required></textarea>
+      <button type="submit">Record prediction and reveal trace</button>
+    </form>
+    <section id="result-region" aria-label="Model trace and feedback" tabindex="-1" hidden>
+      <h3>Compare with the deterministic model</h3>
+      <p id="result"></p>
+      <ol id="trace"></ol>
+      <p class="muted">This is local practice feedback, not certified competence. A saved JSON file can be edited; replay only validates its shape and recomputes model results.</p>
+      <button type="button" id="next-round">Next round</button>
+    </section>
+  </section>
+  <p id="finished" tabindex="-1" hidden></p>
+  <hr />
+  <h2>Keep or resume your local work</h2>
+  <button id="export" type="button" disabled>Export local practice JSON</button>
+  <label for="import-file">Restore a previously exported local practice file (16 KB maximum)</label>
+  <input id="import-file" type="file" accept="application/json,.json" />
+  <p id="status" role="status" aria-live="polite"></p>
+</main>
+<script type="module" src="./app.mjs"></script>
+</body>
+</html>
