@@ -23,6 +23,8 @@ test('pins actual prepared motor pack, citations, seven unique versioned cues an
  assert.ok(lesson.cues.every(c=>c.version===1&&c.transcript&&c.boardAction&&c.sourceRefIds.length));
  assert.ok(lesson.sourceRefs.every(x=>x.url.startsWith('https://')&&x.locator));
  assert.equal(fieldSpeed(50,4).rpm,1500);assert.equal(fieldSpeed(60,4).rpm,1800);
+ assert.doesNotMatch(lesson.cues.find(x=>x.id==='EXPLAIN').transcript,/1,500|1500/);
+ assert.equal(initialState(lesson).frequencyHz,30);
  assertLesson(lesson);
 });
 test('a modified source, locator, teaching explanation, missing citation or practice is fail-closed',()=>{
