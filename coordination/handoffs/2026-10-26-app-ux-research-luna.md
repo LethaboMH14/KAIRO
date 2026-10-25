@@ -7,6 +7,8 @@
 | Task | `APP-UX-RESEARCH-20261026-A` (docs-only) |
 | Branch/base | `codex/app-ux-research-20261026-a` from `origin/main` `c4b9ab22900bb37d573eaa6c29cb6d3e91a76813` |
 
+**Draft PR:** [#124](https://github.com/LethaboMH14/KAIRO/pull/124). Initial docs commit: `61abbced369f4991e14f579cabdf385d703a1f84`.
+
 ## Criterion, need, acceptance, evidence
 
 - **Criteria:** primarily Usability (clear next action, information density, alternatives and recovery); Product (source → lesson → practice → evidence → resume); Creativity (source-grounded KAIRO contextual help); Presentation (clean story sequence). Sustainability is supported by reusable state patterns. No Impact or Intelligence outcome is claimed.
