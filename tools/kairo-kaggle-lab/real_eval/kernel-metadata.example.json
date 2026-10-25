@@ -1,0 +1,15 @@
+{
+  "id": "REPLACE_WITH_VERIFIED_KAGGLE_HANDLE/kairo-relevance-eval",
+  "title": "KAIRO private relevance evaluation: externally reviewed SQuAD input",
+  "code_file": "run_kaggle.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "REPLACE_WITH_AUTHORISED_PRIVATE_DATASET_SLUG"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}
