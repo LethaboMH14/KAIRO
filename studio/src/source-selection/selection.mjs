@@ -4,6 +4,8 @@
 const ID=/^[a-f0-9]{24}$/;
 const REV=/^[a-f0-9]{64}$/;
 const MAX=8;
+const REQUEST=/^[a-zA-Z0-9_-]{8,100}$/;
+const PROVIDERS=new Set(['google','groq','openrouter','aiml']);
 
 function shape(value){
   return value && typeof value==='object' && !Array.isArray(value);
@@ -63,7 +65,7 @@ export function checkSelectedSources(selected,currentSources){
 
 // A verified server capability flag is required; this code must not call the
 // existing v1 /generate endpoint with multi-source arguments.
-export function prepareSelectionRequest({selected,currentSources,multiSourceApi=false,mode='local',consent=false,goal='',provider='google',providerConsent=[]}={}){
+export function prepareSelectionRequest({selected,currentSources,multiSourceApi=false,mode='local',consent=false,goal='',provider='google',providerConsent=[],requestId,fallback}={}){
   if(multiSourceApi!==true)throw new TypeError('Multi-source lessons are not yet available in this workspace.');
   const ready=checkSelectedSources(selected,currentSources);
   if(!ready.ok)throw new TypeError(ready.problem);
@@ -71,10 +73,14 @@ export function prepareSelectionRequest({selected,currentSources,multiSourceApi=
   if(typeof goal!=='string'||goal.length>1000)throw new TypeError('The study goal is too long.');
   if(mode==='cloud'){
     if(consent!==true)throw new TypeError('Choose cloud processing consent first.');
-    if(typeof provider!=='string'||!provider||!Array.isArray(providerConsent)||
-       !providerConsent.includes(provider)||providerConsent.some(x=>typeof x!=='string'))
-      throw new TypeError('Explicit consent to the selected provider is required.');
+    if(typeof provider!=='string'||!PROVIDERS.has(provider)||!Array.isArray(providerConsent)||
+       providerConsent.length<1||providerConsent.length>2||new Set(providerConsent).size!==providerConsent.length||
+       providerConsent.some(x=>!PROVIDERS.has(x))||!providerConsent.includes(provider)||
+       (fallback!==undefined&&(!PROVIDERS.has(fallback)||!providerConsent.includes(fallback))))
+      throw new TypeError('Explicit consent to every selected provider is required.');
+    if(!REQUEST.test(requestId||''))throw new TypeError('A valid cloud request ID is required.');
   }
   return {schemaVersion:2,sourceRefs:ready.sourceRefs,mode,goal,
-    ...(mode==='cloud'?{consent:true,provider,providerConsent:[...new Set(providerConsent)]}:{})};
+    ...(mode==='cloud'?{consent:true,provider,providerConsent:[...providerConsent],requestId,
+      ...(fallback!==undefined?{fallback}:{})}:{})};
 }
