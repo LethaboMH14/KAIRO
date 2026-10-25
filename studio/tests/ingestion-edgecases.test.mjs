@@ -5,9 +5,10 @@ import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
+import {testPython} from './helpers/python-interpreter.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const py=path.join(root,'tools/course_sources/.venv-ocr/Scripts/python.exe');
+const py=testPython;
 const script=path.join(root,'tools/material_ingestion/extract.py');
 
 test('DOCX top-level body preserves paragraph and table order with cell locators',()=>{
