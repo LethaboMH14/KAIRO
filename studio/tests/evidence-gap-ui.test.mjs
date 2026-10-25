@@ -1,4 +1,4 @@
-import test from 'node:test';
+import test, { after, before } from 'node:test';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 
@@ -33,6 +33,7 @@ function setupSsr() {
       root,
       configFile: false,
       plugins: [Plugin.default()],
+      optimizeDeps: { noDiscovery: true, include: [], entries: [] },
       server: { middlewareMode: true },
       appType: 'custom',
     });
@@ -42,15 +43,21 @@ function setupSsr() {
         React: ReactModule.default,
         renderToStaticMarkup: ReactDomServer.renderToStaticMarkup,
         ...module,
+        close: () => server.close(),
       };
-    } finally {
+    } catch (error) {
       await server.close();
+      throw error;
     }
   });
 }
 
+let ssr;
+before(async () => { ssr = await setupSsr(); });
+after(async () => { await ssr?.close(); });
+
 test('the real React SSR output keeps source, date, evidence state and KAIRO identity visible', async () => {
-  const { React, renderToStaticMarkup, default: Panel } = await setupSsr();
+  const { React, renderToStaticMarkup, default: Panel } = ssr;
   const html = renderToStaticMarkup(React.createElement(Panel, props()));
   assert.match(html, /KAIRO/);
   assert.match(html, /Fictional analyst role/);
@@ -66,7 +73,7 @@ test('the real React SSR output keeps source, date, evidence state and KAIRO ide
 });
 
 test('linked and needs-review states keep their evidence meaning separate', async () => {
-  const { React, renderToStaticMarkup, default: Panel } = await setupSsr();
+  const { React, renderToStaticMarkup, default: Panel } = ssr;
   const html = renderToStaticMarkup(React.createElement(Panel, props({
     requirements: [
       requirement({ id: 'linked', evidenceStatus: 'linked', evidenceLabel: 'My pump lab notes' }),
@@ -77,11 +84,11 @@ test('linked and needs-review states keep their evidence meaning separate', asyn
   assert.match(html, /My pump lab notes/);
   assert.match(html, /Evidence needs review/);
   assert.match(html, /Portfolio note · recheck source/);
-  assert.match(html, /not independently assessed/);
+  assert.match(html, /has not been independently assessed/);
 });
 
 test('the component action gate calls only for unique rows with safe dated sources', async () => {
-  const { createRequirementActionHandler } = await setupSsr();
+  const { createRequirementActionHandler } = ssr;
   const rows = [
     requirement({ id: 'ok' }),
     requirement({ id: 'bad-link', sourceUrl: 'javascript:alert(1)' }),
@@ -102,7 +109,7 @@ test('the component action gate calls only for unique rows with safe dated sourc
 });
 
 test('invalid sources and duplicate IDs render a reason and no actionable button', async () => {
-  const { React, renderToStaticMarkup, default: Panel } = await setupSsr();
+  const { React, renderToStaticMarkup, default: Panel } = ssr;
   const html = renderToStaticMarkup(React.createElement(Panel, props({
     requirements: [
       requirement({ id: 'unsafe', sourceUrl: 'http://careers.example.org/role' }),
@@ -119,7 +126,7 @@ test('invalid sources and duplicate IDs render a reason and no actionable button
 });
 
 test('source URL and checked-date guards reject unsafe and malformed inputs', async () => {
-  const { isSafeEvidenceSourceUrl, isValidEvidenceDate } = await setupSsr();
+  const { isSafeEvidenceSourceUrl, isValidEvidenceDate } = ssr;
   for (const value of [
     'http://careers.example.org/role',
     '//careers.example.org/role',
@@ -140,7 +147,7 @@ test('source URL and checked-date guards reject unsafe and malformed inputs', as
 });
 
 test('empty and oversized lists explain why there is no row to choose', async () => {
-  const { React, renderToStaticMarkup, default: Panel } = await setupSsr();
+  const { React, renderToStaticMarkup, default: Panel } = ssr;
   const empty = renderToStaticMarkup(React.createElement(Panel, props({ roleTitle: '', requirements: [] })));
   assert.match(empty, /Role learning pathway/);
   assert.match(empty, /No sourced requirements are available yet/);
@@ -156,7 +163,7 @@ test('empty and oversized lists explain why there is no row to choose', async ()
 });
 
 test('React escapes supplied role, requirement and evidence text and headings stay distinct', async () => {
-  const { React, renderToStaticMarkup, default: Panel } = await setupSsr();
+  const { React, renderToStaticMarkup, default: Panel } = ssr;
   const shared = props({
     roleTitle: '<script>alert("role")</script>',
     requirements: [requirement({

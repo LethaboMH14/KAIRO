@@ -117,6 +117,8 @@ function EvidenceState({ requirement }: { requirement: EvidenceRequirement }) {
         <p>{validText(requirement.evidenceLabel, 300)
           ? requirement.evidenceLabel
           : 'A learner record is linked. It has not been independently assessed.'}</p>
+        {validText(requirement.evidenceLabel, 300) &&
+          <p>Linked record only; it has not been independently assessed.</p>}
       </div>
     );
   }

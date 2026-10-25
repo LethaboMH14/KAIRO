@@ -21,15 +21,17 @@ The component exports `EvidenceGapPanel(props)` with the exact wave brief interf
 
 ## Checks and limitations
 
-- `node --version` → `v24.18.0`; `node --check tests/evidence-gap-ui.test.mjs` → passed.
-- `node --test --test-concurrency=1 tests/evidence-gap-ui.test.mjs` → **0/7 passed; all seven could not start** because this isolated worktree has no installed React dependency (`ERR_MODULE_NOT_FOUND: Cannot find package 'react'`). No dependencies were installed. The regressions are authored against the real React/Vite SSR output and the action handler used by the component; their execution remains pending repository CI.
-- `.github/workflows/ci.yml` pins Node 24, installs the lockfile and runs `node --test --test-concurrency=1 tests/*.test.mjs`, then `npm run build`. A draft PR CI run is required before claiming SSR or build pass.
-- `git diff --cached --check` → passed for all five owned files before the implementation commit.
+- Environment: Node `v24.18.0`, npm `11.6.0`. `npm ci --no-audit --no-fund` completed in the isolated worktree after an initial unprivileged Windows EPERM; npm's policy left three dependency lifecycle scripts unapproved. No scripts were run manually.
+- `node --check tests/evidence-gap-ui.test.mjs` → passed.
+- `node --test --test-concurrency=1 tests/evidence-gap-ui.test.mjs` → **7 passed, 0 failed, 0 skipped**. Actual Vite/React server-side rendering confirms source/title/date/state, disabled unsafe or ambiguous rows, XSS escaping and distinct instance IDs. The same exported handler used by the component is exercised for safe, invalid, future-dated, duplicate and unknown IDs.
+- `npm run build` → passed: `tsc -b` and Vite `7.3.7` transformed 2,334 modules and completed the production build. Vite emitted the existing large-chunk warning (>500 kB); no build error.
+- `.github/workflows/ci.yml` pins Node 24, installs the lockfile and runs `node --test --test-concurrency=1 tests/*.test.mjs`, then `npm run build`. The full repository serial suite remains for PR CI; no result is claimed yet.
+- `git diff --cached --check` passed for the five initial owned files before the implementation commit; repeat for follow-up changes before committing.
 - No browser/headless observation, microphone/camera, cloud/model calls, paid resources, deployment, schedule or application submission were part of this package.
 
 ## Publication gate
 
-The implementation commit exists locally on `codex/evidence-gap-ui-20261025` at `ec640deb8443ab09e88ccbbbd11c6752bdb5678b`. The attempt to push was rejected by the automatic approval reviewer with this reason: branch push would export private project source and documentation, and trusted user instructions did not explicitly authorize that payload to the remote repository. No alternate push method or GitHub write API was attempted. The branch is not published, no draft PR exists, and remote CI has not run. Resume publication only after direct user authorization for this exact branch/payload and draft PR destination.
+The original implementation commit is `ec640deb8443ab09e88ccbbbd11c6752bdb5678b`. A later direct user authorization explicitly approved exporting the owned branch to `https://github.com/LethaboMH14/KAIRO` and opening a draft PR against `main`; publication now proceeds under that authorization. The earlier review rejection is recorded in the prior task turn; no alternate push method was used to bypass it.
 
 No FNB partnership, hiring probability, employability/mastery percentage, guaranteed job, live verified vacancy, human learner benefit, browser/device acceptance, or production readiness is claimed. The new component is unmounted and requires root review and adapter contract mapping before integration.
 
