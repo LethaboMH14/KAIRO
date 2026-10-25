@@ -60,3 +60,7 @@ Product + Usability + Intelligence + Impact: a learner deliberately combines rev
 ## NEXT unblocked work
 
 Issue #3 coordinator/assigned route owner: approve v2 lesson persistence and compatibility policy (or interim read-only v2 lessons) in Issue #3; check shared claims, then allocate isolated integration scope for `/generate` and `ai-runtime/service.mjs`. After that, Issue #16 can safely implement a learner-facing chooser. Do not start shared-file integration merely because this contract PR exists.
+
+## Integration restack checkpoint — 25 October 2026
+
+Issue #2's green CI repair (#17 into #15 into #1) has been merged to `main` at `5dfa4f51946acbdf3ad6f7ff66e11622f1950791` (source tree matches the passing 750/750 CI head). PR #22's base has been changed to main without altering the v2 contract or tests. This dated handoff-only commit triggers fresh pull-request CI to verify the combined Node24 app suite/build/Python bus. The module is **not mounted**, does not create/persist v2 lessons, and must not imply completed multi-document generation. The `/generate` v1 route is unchanged. Future mounted route/persistence/draft/studio integration requires a separately claimed and tested implementation; no Cloud Run deployment or local SQLite bus claim was made by the integration session.
