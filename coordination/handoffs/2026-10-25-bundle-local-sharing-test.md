@@ -1,0 +1,9 @@
+# Local bundle storage sharing regression
+
+- **Owner/settings:** `codex-luna-bundle-local-adapter-test-20261025-a`; Codex; model and effort unavailable in this client, registered as `unknown`.
+- **Scope:** Added `studio/tests/bundle-local-repository.test.mjs` only. The local adapter and application wiring remain owned by the integration maintainer and were not edited here.
+- **Need and judging criteria:** Preserve a learner's saved local preferences and AI allowance/idempotency across existing AI routes and bundle lessons. This supports **Product** continuity and **Usability** when a learner moves between the local preview's AI help and source-linked lesson flow.
+- **Acceptance evidence:** A real temporary `ai-runtime.sqlite` and `bundle-lessons.sqlite` pair is exercised using `createLocalAiStore`, `createLocalBundleRepository`, and `createModelGateway`. The test checks preference writes in both directions, gateway completion/idempotency/daily-reservation visibility in both directions, independent bundle progress storage, compare-and-swap conflict rejection, and rejection of a non-local owner.
+- **Check:** From `studio`, `node --test tests/bundle-local-repository.test.mjs` passed (1 test, 1 pass, 0 failures) on Node v24.18.0. One earlier run exposed a test helper hashing raw request IDs instead of the gateway's JSON-serialized hash input; the helper was corrected and the final run passed. No provider/network access was used.
+- **Remaining gaps:** This is adapter-level storage evidence. It does not verify the full local UI journey, hosted repositories, migration of any pre-existing duplicate records, or learner/device acceptance. Full serial suite was not run as this is a focused test package and the parent integration owner is running the broader checks.
+- **Handoff:** Root may copy/import this single test file into the PR113 integration checkout for release review. No branch publication or source implementation change is included.
