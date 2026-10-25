@@ -26,7 +26,7 @@ export function parseArgs(args) {
     cfg[name] = args[++i];
   }
   for (const [k, regex] of [['project', ID], ['region', REGION], ['service', RESOURCE], ['queue', RESOURCE], ['tasksLocation', REGION], ['bucket', BUCKET]]) {
-    if (cfg[k] !== null && !regex.test(cfg[k])) throw new Error(\`Invalid \${k} identifier\`);
+    if (cfg[k] !== null && !regex.test(cfg[k])) throw new Error(`Invalid ${k} identifier`);
   }
   if (cfg.bucket && (cfg.bucket.includes('..') || cfg.bucket.includes('.-') || cfg.bucket.includes('-.'))) throw new Error('Invalid bucket identifier');
   if (cfg.live && (!cfg.project || !cfg.region || !cfg.service)) throw new Error('--live requires --project, --region and --service');
@@ -37,15 +37,15 @@ export function parseArgs(args) {
 // Strict allowlist, with arguments assembled independently of any shell.
 export function readOnlyCommands(c) {
   if (!c.live) return [];
-  const common = [\`--project=\${c.project}\`, '--format=json'];
+  const common = [`--project=${c.project}`, '--format=json'];
   const cmds = [
     ['auth', 'list', '--filter=status:ACTIVE', '--format=json'],
-    ['run', 'services', 'describe', c.service, \`--region=\${c.region}\`, ...common],
-    ['run', 'services', 'get-iam-policy', c.service, \`--region=\${c.region}\`, ...common],
+    ['run', 'services', 'describe', c.service, `--region=${c.region}`, ...common],
+    ['run', 'services', 'get-iam-policy', c.service, `--region=${c.region}`, ...common],
     ['firestore', 'databases', 'describe', '--database=(default)', ...common],
   ];
-  if (c.bucket) cmds.push(['storage', 'buckets', 'describe', \`gs://\${c.bucket}\`, ...common], ['storage', 'buckets', 'get-iam-policy', \`gs://\${c.bucket}\`, ...common]);
-  if (c.queue) cmds.push(['tasks', 'queues', 'describe', c.queue, \`--location=\${c.tasksLocation}\`, ...common]);
+  if (c.bucket) cmds.push(['storage', 'buckets', 'describe', `gs://${c.bucket}`, ...common], ['storage', 'buckets', 'get-iam-policy', `gs://${c.bucket}`, ...common]);
+  if (c.queue) cmds.push(['tasks', 'queues', 'describe', c.queue, `--location=${c.tasksLocation}`, ...common]);
   return cmds;
 }
 
@@ -119,7 +119,7 @@ export function main(args = process.argv.slice(2)) {
     return 0;
   } catch (e) {
     // Do not echo untrusted argv, cloud stderr, identifiers or credentials.
-    process.stderr.write(\`Preflight argument/policy failure: \${e.message}\n\`);
+    process.stderr.write(`Preflight argument/policy failure: ${e.message}\n`);
     return 2;
   }
 }
