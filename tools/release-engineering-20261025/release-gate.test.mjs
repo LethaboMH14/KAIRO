@@ -17,7 +17,7 @@ test('fully evidenced fixture is technically ready, without automatically author
 test('original real ledger remains blocked, and gate outputs named blockers',async()=>{
  const url=new URL('./PR-LEDGER.json',import.meta.url);
  const actual=JSON.parse(await readFile(url,'utf8'));const result=evaluateCandidate(actual);
- assert.equal(result.ready,false);assert.equal(result.reports.length,4);
+ assert.equal(result.ready,false);assert.equal(result.reports.length,10);
  assert.match(formatReport(result),/PR #1/);assert.ok(result.blockers.some(s=>s.includes('fullJourney')));
 });
 test('unknown, pending or failed checks never count as green',()=>{
