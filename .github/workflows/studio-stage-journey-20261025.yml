@@ -1,0 +1,80 @@
+name: KAIRO pump private draft journey (read-only)
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/studio-stage-journey-20261025.yml'
+      - 'tools/studio-stage-journey-20261025/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: kairo-stage-journey-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  pinned-policy:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == 'LethaboMH14/KAIRO'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - run: node --test tools/studio-stage-journey-20261025/stack.test.mjs
+
+  staged-journey:
+    needs: pinned-policy
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: studio/package-lock.json
+      - name: Verify exact pinned #72 and #78 heads and changed-file scopes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/studio-stage-journey-20261025/stack.mjs verify
+      - name: Ephemeral composition of #72, its four pinned candidates, and #78
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/studio-stage-journey-20261025/stack.mjs compose
+      - name: Install locked application dependencies
+        working-directory: studio
+        run: npm ci --no-audit --no-fund
+      - name: Exercise real composed preflight to owner-scoped staging
+        run: |
+          node --test --test-concurrency=1 \
+            tools/studio-composition-20261025/manifest.test.mjs \
+            tools/studio-composition-20261025/review.test.mjs \
+            studio/tests/pump-what-if.test.mjs \
+            studio/tests/studio-attempt-contract.test.mjs \
+            studio/tests/studio-evidence-replay.test.mjs \
+            studio/tests/studio-lesson-link.test.mjs \
+            studio/tests/studio-draft-staging.test.mjs \
+            tools/studio-stage-journey-20261025/stage-journey.test.mjs
+      - name: Verify composed application build
+        working-directory: studio
+        run: npm run build
+      - name: Record honest evidence boundary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "### Studio stage journey evidence boundary"
+            echo "Ephemeral exact-head composition and synthetic tests only: no GitHub merge or deployment."
+            echo "Passing CI does not verify real learner authentication, session identity, user consent UX, device accessibility, subject mastery, Firebase or cross-record transaction safety."
+            echo "Independent review, local bus reconciliation and PR #34 gates remain mandatory."
+          } >> "$GITHUB_STEP_SUMMARY"
