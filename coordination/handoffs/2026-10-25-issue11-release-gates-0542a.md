@@ -23,3 +23,5 @@ At the next GitHub snapshot, six more independent draft PRs opened: #19 security
 1. Independently inspect #15/#17 source changes for Python/OCR parity and confirm CI at final rebased SHA; owner reconciles source scopes, branch protection, main HEAD and authorizes integration.
 2. Re-run authoritative full Node 24 `npm ci`, serial suite and build and Python coordination tests after stacked integration, plus tenant/revision probes.
 3. Next unblocked independently allocatable item: Issue #5 synthetic accessibility/readability acceptance harness **only**, no browser capture or permissions until approved.
+
+**Second snapshot refresh:** additional draft PRs #26 (issue #16 selection state), #27 (#9 studio performance), #28 (#13 offline agent-runner), #30 (#6 evidence-to-role paths) reviewed in GitHub COMMENT reviews; added to release ledger for fourteen external open PRs. #26 Actions run 40159804666 was in progress at lookup; new exact-head CI and owner acceptance still pending. The ledger excludes this draft PR #25 itself because a self-referential head SHA would go stale at every update. Full Node24 app verification for this draft remains NOT RUN.
