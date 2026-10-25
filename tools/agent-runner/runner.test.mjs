@@ -60,6 +60,8 @@ test('untrusted event types, bot echoes, no ready label, foreign repo never enqu
   const bot = issueEvent(3); bot.sender.type = 'Bot';
   assert.equal((await runner.ingest(signed('issues', bot))).reason, 'bot_feedback_loop');
   assert.equal((await runner.ingest(signed('issues', issueEvent(4, 'opened', false)))).status, 'ignored');
+  const unknown = issueEvent(6); delete unknown.sender;
+  assert.equal((await runner.ingest(signed('issues', unknown))).reason, 'unknown_actor');
   const foreign = issueEvent(5); foreign.repository.full_name = 'other/repo';
   await assert.rejects(runner.ingest(signed('issues', foreign)), fails('foreign_repo'));
   assert.equal(Object.keys((await runner.snapshot()).tasks).length, 0);
@@ -141,6 +143,7 @@ test('closed issue blocks claimed task; path traversal and invalid actor are rej
   const id = await queue(runner, 60);
   await assert.rejects(runner.claim({ taskId: id, owner: 'bad owner', branch: 'good', scopes: ['src'] }), fails('invalid_claim'));
   await assert.rejects(runner.claim({ taskId: id, owner: 'ok', branch: 'good', scopes: ['src/../secret'] }), fails('invalid_scope'));
+  await assert.rejects(runner.claim({ taskId: id, owner: 'ok', branch: 'good', scopes: ['C:/escape'] }), fails('invalid_scope'));
   await runner.claim({ taskId: id, owner: 'ok', branch: 'feat/60', scopes: ['src/legit'] });
   const closed = issueEvent(60, 'closed'); closed.issue.state = 'closed';
   assert.equal((await runner.ingest(signed('issues', closed))).status, 'blocked');
