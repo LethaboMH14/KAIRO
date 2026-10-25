@@ -1,0 +1,25 @@
+export type SourceRef={sourceId:string;revision:string};
+export type Citation={id:string;sourceId:string;sourceRevision:string;title:string;locator:string;quote:string;start:number;end:number;edited:boolean};
+export type Concept={id:string;label:string;summary:string;evidenceIds:string[]};
+export type Relation={from:string;to:string;kind:'supported'|'unverified';evidenceIds:string[]};
+export type Challenge={id:string;claim:string;answerEvidenceId:string;why:string};
+export type XRayActivity={
+ schemaVersion:1;mode:'prepared'|'preview-only';exerciseId:string;exerciseRevision:string;bundleRevision:string;
+ sourceRefs:SourceRef[];evidence:Citation[];concepts:Concept[];relations:Relation[];challenges:Challenge[];disclosure:string;
+};
+export type XRayGraphNode={id:string;type:'concept'|'source'|'question';label:string;x:number;y:number;evidenceIds:string[]};
+export type XRayGraphEdge={id:string;from:string;to:string;kind:'citation'|'question'|'supported'|'unverified';evidenceIds:string[]};
+export type XRayGraph={nodes:XRayGraphNode[];edges:XRayGraphEdge[]};
+export type Feedback={correct:boolean;answerEvidenceId:string;chosenEvidenceId:string;claim:string;why:string;unsaved:true};
+export type Attempt={round:number;selectedEvidenceId:string|null;feedback:Feedback|null;completed:boolean};
+export function validatePrepared(input:unknown):XRayActivity;
+export function makeGraph(activity:XRayActivity):XRayGraph;
+export function startAttempts(activity:XRayActivity):Attempt;
+export function chooseAttempt(activity:XRayActivity,state:Attempt,evidenceId:string):Attempt;
+export function submitAttempt(activity:XRayActivity,state:Attempt):Attempt;
+export function advanceAttempt(activity:XRayActivity,state:Attempt):Attempt;
+export function checkCurrentSources(activity:Pick<XRayActivity,'sourceRefs'>,catalog:unknown):{ok:boolean;reason:string|null};
+export function readPreviewData(payload:unknown,sourceRefs:SourceRef[]):XRayActivity;
+export function getAuthenticatedPreview(options:{sourceRefs:SourceRef[];goal?:string;fetcher?:typeof fetch;signal?:AbortSignal}):Promise<XRayActivity>;
+export function refreshAuthenticatedCatalog(options?:{fetcher?:typeof fetch;signal?:AbortSignal}):Promise<unknown>;
+export function unsupportedClaim():string;
