@@ -11,13 +11,7 @@ type ScenarioId = 'baseline' | 'cloud';
 type PredictionId = LoadId | 'none';
 type EnergyLoad = { id: LoadId; demandKwh: number; servedKwh: number; unmetKwh: number; solarKwh: number; gridKwh: number; batteryKwh: number; status: 'supplied' | 'partial' | 'unmet' };
 type Hour = { hour: number; gridOnline: boolean; beginningKwh: number; endingKwh: number; demandKwh: number; servedKwh: number; unmetKwh: number; solarKwh: number; solarToLoadKwh: number; solarToBatteryKwh: number; curtailedKwh: number; gridToLoadKwh: number; batteryToLoadKwh: number; batteryWithdrawnKwh: number; batteryStoredKwh: number; batteryLossKwh: number; loads: EnergyLoad[] };
-type Attempt = {
-  status: 'local-unverified'; verified: false; scenarioId: ScenarioId;
-  action: { version: number; scenarioId: ScenarioId; priority: LoadId[]; prediction: PredictionId };
-  steps: Hour[]; totals: { servedKwh: number; unmetKwh: number; solarKwh: number; gridToLoadKwh: number; batteryToLoadKwh: number; batteryLossKwh: number };
-  services: { id: LoadId; coveragePct: number; continuouslySupplied: boolean }[];
-  sustained: LoadId[]; endingKwh: number; predictionCorrect: boolean
-};
+type Attempt = import('./model.mjs').Attempt;
 export type CampusResilienceLabProps = {
   /** Metadata-only optional parent association; never authenticates a lesson. */
   lessonAssociation?: { contractVersion: 1; lessonId: string; sourceId: string; revision: string; reviewed: true } | null
@@ -174,7 +168,7 @@ export default function CampusResilienceLab({ lessonAssociation = null }: Campus
     try {
       const action = newAction(scenarioId, priority, prediction);
       // All computation is completed synchronously by the validated pure model.
-      const result = runAttempt(action) as Attempt;
+      const result = runAttempt(action);
       if (round === 1) setFirst(result); else setSecond(result);
       setChosen(0);
       setPhase('inspect');
