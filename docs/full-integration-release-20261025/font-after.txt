@@ -1,5 +1,5 @@
-✔ application source and public data decode as strict UTF-8 (3354.4583ms)
-✔ production styles do not import off-origin stylesheets forbidden by strict CSP (246.754ms)
+✔ application source and public data decode as strict UTF-8 (118.5882ms)
+✔ production styles do not import off-origin stylesheets forbidden by strict CSP (25.7849ms)
 ℹ tests 2
 ℹ suites 0
 ℹ pass 2
@@ -7,4 +7,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 3864.5779
+ℹ duration_ms 222.534
