@@ -94,7 +94,8 @@ test('forged source or model version and claimed verified evidence are rejected'
   const field=base.sourceRevision?'sourceRevision':'referenceRevision';
   assert.throws(()=>review(activity,[{...base,[field]:'invented'}]),/model\/source/i);
  }
- assert.throws(()=>review('pump-what-if',[pumpAttempt()],{session:pumpSession()}),/contract fields/);
+ assert.throws(()=>createLocalReview({activity:'pump-what-if',localSessionId:SID,
+  session:{...pumpSession(),unexpectedPrivateSource:'injected'}}),/contract fields/);
  assert.throws(()=>createLocalReview({activity:'pump-what-if',localSessionId:SID,
   session:{...pumpSession(),provenance:'uploaded-source'}}),/provenance/);
 });
