@@ -134,7 +134,7 @@ export function commitAttempt(session: TraceSession, scenario: Scenario, predict
   if (typeof at !== 'string' || !Number.isFinite(Date.parse(at)) || new Date(at).toISOString() !== at) {
     fail('An exact ISO timestamp is required for the local attempt.');
   }
-  if (session.attempts.some(a => JSON.stringify(a.scenario) === JSON.stringify(scenario))) {
+  if (session.attempts.some(a => a.scenario.cache === scenario.cache && a.scenario.connection === scenario.connection && a.scenario.origin === scenario.origin)) {
     fail('Change at least one scenario setting for an independent second attempt.');
   }
   const result = traceRequest(scenario);
