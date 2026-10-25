@@ -2,7 +2,7 @@
 
 ## Identity and source
 - Worker session: gpt6-lecture-director-20261025-2033-jhb / ChatGPT / GPT-6 / effort unknown.
-- GitHub issue #90; branch feat/lecture-director-motor-20261025-gpt6; base main 1997ba9f046b7b067f966987ffcdf7270fdbe84c (see branch for exact full SHA).
+- GitHub issue #90; branch feat/lecture-director-motor-20261025-gpt6; base main 1997ba9f046f6d4122169cb26a72e89cc60befd1.
 - Canonical local SQLite coordination bus was NOT accessible. No local lock/registration or ownership release is asserted.
 - Existing prepared pack: studio/src/studio-teaching-host/packs/motor.json. Existing NPTEL source locators, checked 2026-10-24; KAIRO-authored teaching explanation is reused. No NPTEL prose, diagrams, or figures are reproduced.
 - Existing validated mathematical model: studio/src/engineering/fieldMath.ts synchronousSpeed, not copied. Only synchronous rotating stator-field speed, NOT measured rotor/shaft speed.
