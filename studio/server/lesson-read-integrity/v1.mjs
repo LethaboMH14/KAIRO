@@ -93,8 +93,10 @@ export async function loadCurrentV1Lesson({ repository, ownerId, lessonId } = {}
     repository.get(ownerId, 'sources', lesson.sourceId),
     repository.get(ownerId, 'revisions', revisionKey),
   ]);
-  if (!record(sourceAgain) || !record(archiveAgain) ||
+  const lessonAgain = await repository.get(ownerId, 'lessons', lessonId);
+  if (!record(sourceAgain) || !record(archiveAgain) || !record(lessonAgain) ||
       sourceAgain.version !== sourceRow.version || archiveAgain.version !== archiveRow.version ||
+      lessonAgain.version !== saved.version ||
       !validSource(sourceAgain.value, lesson.sourceId, lesson.revision) ||
       !validSource(archiveAgain.value, lesson.sourceId, lesson.revision)) throw stale();
 
