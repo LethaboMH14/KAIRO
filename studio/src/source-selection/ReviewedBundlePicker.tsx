@@ -59,7 +59,7 @@ function validPreview(value:unknown,refs:SourceRef[]):value is BundlePreview{
   for(const row of value.evidence){
     if(!obj(row)||typeof row.id!=='string'||ids.has(row.id)||
        typeof row.sourceId!=='string'||!allowed.has(row.sourceId)||
-       row.sourceRevision!==allowed.get(row.sourceId)||
+       typeof row.sourceRevision!=='string'||row.sourceRevision!==allowed.get(row.sourceId)||
        !row.id.startsWith(row.sourceId+'-'+row.sourceRevision.slice(0,12)+'-S')||
        typeof row.title!=='string'||row.title.length>120||
        typeof row.locator!=='string'||!row.locator.trim()||row.locator.length>500||
