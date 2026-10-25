@@ -7,6 +7,8 @@
 | Task | `KAIRO-ACTION-MOTION-20261026-A` (documentation/research only) |
 | Branch/base | `codex/kairo-action-motion-20261026-a` from `origin/main` `c4b9ab22900bb37d573eaa6c29cb6d3e91a76813` |
 
+**Draft PR:** [#125](https://github.com/LethaboMH14/KAIRO/pull/125). Initial docs commit: `e221529397a3ae84c50b86de2c5f1aa514a39a23`.
+
 ## Need, criteria, and observable acceptance
 
 - **Learner need:** invoke KAIRO with the exact material/lesson/studio task in view, with short clear choices, stable source anchors, one narrator, and non-blocking reading/practice alternatives.
