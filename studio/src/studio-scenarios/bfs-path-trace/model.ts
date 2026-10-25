@@ -68,7 +68,7 @@ export function assertGraph(graph: unknown, start: unknown, target: unknown): as
   for (const node of nodes) {
     const adjacent = g[node];
     if (!Array.isArray(adjacent)) fail('Each node needs a neighbor list.');
-    const neighbors: unknown[] = adjacent;
+    const neighbors = adjacent as unknown[];
     if (neighbors.length > 10 ||
       neighbors.some(n => typeof n !== 'string' || !own(g, n)) ||
       new Set(neighbors).size !== neighbors.length) fail('Each node needs a valid, duplicate-free neighbor list.');
