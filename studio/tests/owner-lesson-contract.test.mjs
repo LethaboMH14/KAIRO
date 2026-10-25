@@ -60,7 +60,7 @@ function validLesson(evidence){const refs=evidence.map(e=>e.id),quote=evidence[0
  test('retriever provenance tampering and wrong-document citations are rejected',async()=>{
   const a=A(),b=B(),r=repoFor([a,b]);
   const good=await prepareOwnedLessonBundle({repository:r,ownerId:'alice',request:request([a,b])});
-  for(const mutation of [e=>({...e,sourceId:b.id}),e=>({...e,sourceRevision:'f'.repeat(64)}),e=>({...e,start:e.start+1}),e=>({...e,locator:'Page 99'}),e=>({...e,id:'forged'})]){
+  for(const mutation of [e=>({...e,sourceId:b.id}),e=>({...e,sourceRevision:'f'.repeat(64)}),e=>({...e,start:e.start+1}),e=>({...e,locator:'Page 99'}),e=>({...e,title:'Wrong material'}),e=>({...e,edited:!e.edited}),e=>({...e,id:e.id.replace('S1-','S2-')}),e=>({...e,id:'forged'})]){
    const bad={evidence:[mutation(good.evidence[0])],selection:{selectedSources:good.sourceRefs,selectedCharacters:good.evidence[0].quote.length}};
    await assert.rejects(prepareOwnedLessonBundle({repository:r,ownerId:'alice',request:request([a,b]),retrieve:async()=>bad}),/provenance/);
   }
