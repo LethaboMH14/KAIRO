@@ -1,9 +1,14 @@
-import {createHash} from 'node:crypto';
 import {validatePrepared} from './core.mjs';
 
-// Offline, original KAIRO-authored TEACHING example, not an uploaded learner source
-// or an independently peer-reviewed engineering standard.
-const sha=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+// Original offline teaching example. Revisions were generated with Node SHA256
+// during authoring; the browser never needs Node crypto or any provider.
+// SHA256(JSON.stringify(reviewedPages)), as also verified by focused tests.
+const REVIEWED_SHA='6e74777fd6e80207407d510f189c86bffa3e895c0944a25b40c5a66e9ed3a4d3';
+// SHA256(JSON.stringify({schemaVersion:2,sourceRefs:[{sourceId,revision}]}))
+const BUNDLE_SHA='52a9b2652e20f4aebcadb9f9bfed583e6fc875fed7b1d01a4e3f8b7c6538c7d7';
+// SHA256(JSON.stringify({version:1,content:'KAIRO-authored pump evidence 2026-10-25',
+// revision:REVIEWED_SHA,answers:['head-transfer','curve-intersection']}))
+const EXERCISE_SHA='e0f67f5bd6657dbaddc787625f83bdd119d74e8d9d2c0d9279780e7b55b6bc5d';
 const sourceId='1'.repeat(24);
 const title='Pump reasoning · KAIRO-authored prepared notes';
 const statements=[
@@ -12,7 +17,7 @@ const statements=[
  {locator:'Teaching note · section 3',text:'The operating point is where the pump head curve meets the system head curve. At that intersection, the pump supplies the head the system needs at the same flow.'},
 ];
 const reviewedPages=statements.map(s=>({locator:s.locator,text:s.text,method:'authored-teaching-text',edited:false}));
-const revision=sha(reviewedPages);
+const revision=REVIEWED_SHA;
 const evidence=statements.map((s,i)=>({id:sourceId+'-'+revision.slice(0,12)+'-S'+(i+1)+'-0',
  sourceId,sourceRevision:revision,title,locator:s.locator,quote:s.text,start:0,end:s.text.length,edited:false}));
 const [e1,e2,e3]=evidence.map(e=>e.id);
@@ -41,5 +46,5 @@ const challenges=[
 ];
 export const preparedPages=Object.freeze(reviewedPages);
 export const preparedPumpExercise=validatePrepared({schemaVersion:1,mode:'prepared',exerciseId:'pump-evidence-101',
- exerciseRevision:sha({reviewedPages,concepts,relations,challenges}),bundleRevision:sha({schemaVersion:2,sourceRefs:[{sourceId,revision}]}),
+ exerciseRevision:EXERCISE_SHA,bundleRevision:BUNDLE_SHA,
  sourceRefs:[{sourceId,revision}],evidence,concepts,relations,challenges});
