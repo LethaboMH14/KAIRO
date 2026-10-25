@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "KAIRO-COMPARATOR-MOTOR-001",
+  "type": "synthetic_kairo_authored_learning_task",
+  "license": "CC0-1.0 (KAIRO-authored synthetic test fixture; independently verify subject correctness)",
+  "status": "untested_with_external_users_or_competitors",
+  "domain": "introductory three-phase induction motors",
+  "persona": "consenting adult engineering student; illustrative, not real personal data",
+  "userProblem": "I can read about rotating magnetic fields but cannot predict what frequency changes mean or distinguish synchronous speed from rotor speed.",
+  "source": {
+    "title": "Synthetic motor teaching passage",
+    "locator": "Teaching paragraph 1",
+    "text": "In a three-phase induction motor the stator field rotates at synchronous speed. For frequency f in hertz and P stator poles, synchronous speed in revolutions per minute is n_s = 120 f / P. The rotor normally runs below synchronous speed when it produces torque; the difference is called slip. The formula predicts the rotating field's synchronous speed, not a measured shaft speed or a guarantee of a specific rotor speed under load."
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "context": {
+        "frequencyHz": 50,
+        "poles": 4
+      },
+      "prompt": "Before you look at an answer, predict the synchronous speed of the field for 50 Hz and 4 poles.",
+      "expected": {
+        "value": 1500,
+        "unit": "rpm"
+      },
+      "rubric": "Use n_s = 120 f / P, substituting 50 Hz and 4 poles; record attempted reasoning before showing worked answer."
+    },
+    {
+      "id": "q2",
+      "context": {
+        "frequencyHz": 60,
+        "poles": 4
+      },
+      "prompt": "With the same four poles, what happens when frequency changes to 60 Hz?",
+      "expected": {
+        "value": 1800,
+        "unit": "rpm"
+      },
+      "rubric": "Correct synchronous speed 1800 rpm, an increase of 300 rpm; do not promise actual shaft speed equals 1800."
+    },
+    {
+      "id": "q3",
+      "context": {
+        "frequencyHz": 50,
+        "poles": 6
+      },
+      "prompt": "Keep 50 Hz but choose six poles. Predict the synchronous speed.",
+      "expected": {
+        "value": 1000,
+        "unit": "rpm"
+      },
+      "rubric": "Correct synchronous speed 1000 rpm; it decreases with higher pole count."
+    }
+  ],
+  "criticalMisconceptions": [
+    "Synchronous speed is not measured rotor speed.",
+    "Slip and load matter for actual rotor operating speed.",
+    "This example is an educational simplification, not installation or electrical-safety guidance.",
+    "AI-generated explanation must quote the actual reviewed source, not claim textbook or engineering accreditation."
+  ],
+  "accessibility": [
+    "keyboard interaction",
+    "readable formula with text alternative",
+    "no-3D equivalent",
+    "reduced motion",
+    "mobile first-step discoverability",
+    "caption/transcript for any spoken explanation"
+  ],
+  "comparators": [
+    "KAIRO source→lesson→interactive task→practice→evidence",
+    "Google Gemini Notebook source explanation",
+    "PhET closest genuinely comparable allowed motor/electromagnetism activity",
+    "Khanmigo guided tutor subject to account/region access",
+    "learner's notes + calculator",
+    "general AI chatbot"
+  ],
+  "observables": [
+    "time to first usable attempted prediction",
+    "source quote/locator correct",
+    "independent first attempt vs assistance",
+    "calculation correctness",
+    "saved evidence and resume",
+    "retry/error recovery",
+    "time/steps including signup",
+    "bytes downloaded",
+    "allowed device/accessibility results",
+    "per-completed-task direct and support cost",
+    "user preference after disclosure"
+  ],
+  "evidence": [],
+  "humanRuns": 0,
+  "competitorRuns": 0,
+  "recommendation": "NOT_EVALUATED",
+  "note": "Fair comparisons must identify which competitor does not claim to offer the same full workflow. No benchmark winner inferred from this synthetic task."
+}
