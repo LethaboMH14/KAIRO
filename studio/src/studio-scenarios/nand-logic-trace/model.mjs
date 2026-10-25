@@ -38,7 +38,7 @@ export function validateCircuit(circuit) {
   const known = new Set(['a', 'b', 'sel']);
   for (const gate of circuit.nodes) {
     if (!gate || typeof gate.id !== 'string' || !/^g[1-9][0-9]*$/.test(gate.id) ||
-        known.has(gate.id) || !known.has(gate.a) || !known.has(gate.b))
+        known.has(gate.id) || !known.has(gate.a) || !known.has(gate.b) ||\n        Object.keys(gate).length !== 3 || !['id', 'a', 'b'].every(k => Object.hasOwn(gate, k)))
       throw new TypeError('Gate IDs must be unique; gate inputs must refer to earlier signals');
     known.add(gate.id);
   }
