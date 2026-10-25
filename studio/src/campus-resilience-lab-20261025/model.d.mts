@@ -2,7 +2,7 @@
 export type LoadId = 'study' | 'connect' | 'teach' | 'leisure';
 export type ScenarioId = 'baseline' | 'cloud';
 export type PredictionId = LoadId | 'none';
-export type Action = { version: number; scenarioId: string; priority: string[]; prediction: string };
+export type Action = { version: number; scenarioId: ScenarioId; priority: string[]; prediction: string };
 export type Service = { id: LoadId; demandKwh: number; servedKwh: number; coveragePct: number; continuouslySupplied: boolean };
 export type LoadReading = { id: LoadId; demandKwh: number; servedKwh: number; unmetKwh: number; solarKwh: number; gridKwh: number; batteryKwh: number; status: 'supplied' | 'partial' | 'unmet' };
 export type Step = { hour: number; gridOnline: boolean; beginningKwh: number; endingKwh: number; demandKwh: number; servedKwh: number; unmetKwh: number; solarKwh: number; solarToLoadKwh: number; solarToBatteryKwh: number; curtailedKwh: number; gridToLoadKwh: number; batteryToLoadKwh: number; batteryWithdrawnKwh: number; batteryStoredKwh: number; batteryLossKwh: number; loads: LoadReading[] };
@@ -18,7 +18,7 @@ export const REFERENCES:ReadonlyArray<{title:string;url:string}>;
 export const SCENARIOS:Record<ScenarioId,Scenario>;
 export function validateScenario(value:Scenario):Scenario;
 export function validateAction(action:Action,expectedId:string):Action;
-export function newAction(scenarioId:string,priority?:readonly string[],prediction?:string):Action;
+export function newAction(scenarioId:ScenarioId,priority?:readonly string[],prediction?:string):Action;
 export function simulateScenario(scenario:Scenario,action:Action):Attempt;
 export function runAttempt(action:Action):Attempt;
 export function replayAttempt(attempt:Attempt):Attempt;
