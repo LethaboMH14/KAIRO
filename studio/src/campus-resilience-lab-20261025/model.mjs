@@ -29,15 +29,22 @@ const shared = {
 export const SCENARIOS = Object.freeze({
   baseline: Object.freeze({
     ...shared, id: 'baseline', name: 'Round 1 · Clearer skies',
-    solarKw: [0, 7, 13, 10, 3, 0],
+    solarKw: [0, 7, 13, 10, 5, 0],
     teachingNote: 'A planned four-hour grid interruption is expected from hour 2 to hour 5.'
   }),
   cloud: Object.freeze({
     ...shared, id: 'cloud', name: 'Round 2 · Passing cloud cover',
-    solarKw: [0, 3, 8, 5, 1, 0],
+    solarKw: [0, 3, 8, 5, 3, 0],
     teachingNote: 'The same loads face lower solar supply. Change your strategy before running again.'
   })
 });
+// Freeze every versioned prepared input: a UI consumer must not mutate a replay.
+for (const scenario of Object.values(SCENARIOS)) {
+  Object.freeze(scenario.grid);
+  Object.freeze(scenario.solarKw);
+  Object.freeze(scenario.demandFactor);
+  Object.freeze(scenario.battery);
+}
 const EPS = 1e-8;
 const finite = (value, name, min, max) => {
   if (typeof value !== 'number' || !Number.isFinite(value) || value < min || value > max) throw new TypeError(name + ' must be a finite number between ' + min + ' and ' + max);
