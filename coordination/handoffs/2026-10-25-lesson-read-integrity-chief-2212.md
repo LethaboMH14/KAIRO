@@ -10,7 +10,7 @@ Session: `gpt6-kairo-chief-read-integrity-20261025-2212`, ChatGPT GPT-6, effort 
 
 Only three NEW files in this branch:
 
-- `studio/server/lesson-read-integrity/v1.mjs`: `loadCurrentV1Lesson({repository, ownerId, lessonId})`, a read-only owner-partitioned guard. It validates a stored v1 lesson ID, source ID and SHA256 revision; requires both current and archived reviewed source; checks archived source hash, exact evidence quote/UTF-16 offset/page locator/source identity, chapter/quiz citation IDs; re-reads source/archive and checks record versions to detect mid-read revocation. Returns `{lesson,source,sourceRevision}` only when valid. Missing lesson is 404; stale/revoked/forged evidence is 409; unavailable storage propagates failure. Rejects schema v2 rather than silently coercing it.
+- `studio/server/lesson-read-integrity/v1.mjs`: `loadCurrentV1Lesson({repository, ownerId, lessonId})`, a read-only owner-partitioned guard. It validates a stored v1 lesson ID, source ID and SHA256 revision; requires both current and archived reviewed source; checks archived source hash, exact evidence quote/UTF-16 offset/page locator/source identity, chapter/quiz citation IDs; re-reads source/archive/lesson and checks record versions to detect mid-read revocation or saved-lesson replacement. Returns `{lesson,source,sourceRevision}` only when valid. Missing lesson is 404; stale/revoked/forged evidence is 409; unavailable storage propagates failure. Rejects schema v2 rather than silently coercing it.
 - `studio/tests/lesson-read-integrity-v1.test.mjs`: synthetic deterministic owner, revocation, re-review, archived deletion, forged citation, version-mixing, edited-copy and mid-read race coverage.
 - This handoff.
 
