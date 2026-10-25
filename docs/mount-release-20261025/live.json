@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-25T16:12:07.378Z",
+  "syntheticOnly": true,
+  "modelCalls": 0,
+  "checks": {
+    "privateIngressDenied": true,
+    "health": true,
+    "workspaceRequiresAccount": true,
+    "engineeringLogin": true,
+    "engineeringPrivateSpace": true,
+    "engineeringSavedLesson": true,
+    "engineeringReviewedSource": true,
+    "engineeringOpportunityFreshness": true,
+    "informaticsLogin": true,
+    "informaticsPrivateSpace": true,
+    "informaticsSavedLesson": true,
+    "informaticsReviewedSource": true,
+    "informaticsOpportunityFreshness": true,
+    "accountSpecificSpaces": true,
+    "foreignLessonDenied": true,
+    "classroomHtml": true,
+    "builtEntryReference": true,
+    "builtEntryAvailable": true
+  },
+  "failures": [],
+  "engineeringOpportunityCount": 3,
+  "informaticsOpportunityCount": 3,
+  "staticAssetServed": true
+}

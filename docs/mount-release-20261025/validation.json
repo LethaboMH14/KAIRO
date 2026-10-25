@@ -1,0 +1,19 @@
+{
+  "runtimeCommit": "630e85f3b71620691e527866a951a0262dcf793c",
+  "ciRun": "https://github.com/LethaboMH14/KAIRO/actions/runs/40210095187",
+  "cleanCi": {"tests":842,"passed":842,"failed":0,"skipped":0,"productionBuild":"passed","busTestsPassed":6},
+  "windowsLocal": {"tests":837,"passed":836,"failed":1,"skipped":0,"failure":"Missing local Tesseract executable; Windows environment is not fixed by Linux CI"},
+  "staging": {"files":146,"bytes":71311541,"closureValidation":"passed"},
+  "cloudBuild": "67826672-121b-4372-9b7b-48de6eb96f44",
+  "imageDigest": "sha256:9128193fc207f27602c83491d9a4851bc2230d720a9bbfc17b3cf3dad4d2c7c4",
+  "revision":"kairo-app-mount25d",
+  "trafficPercent":100,
+  "publicAccess":false,
+  "iamBindingsUnchanged":true,
+  "liveSyntheticChecks":18,
+  "liveFailures":0,
+  "liveModelCalls":0,
+  "browserObserved":false,
+  "scheduleActivated":false,
+  "kaggleTrainingRun":false
+}
