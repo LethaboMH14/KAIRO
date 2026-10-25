@@ -1,0 +1,39 @@
+
+const C={chalk:{r:.961,g:.941,b:.902},moss:{r:.243,g:.318,b:.267},sage:{r:.655,g:.686,b:.569},ink:{r:.145,g:.169,b:.157},copper:{r:.682,g:.459,b:.333},muted:{r:.39,g:.43,b:.39},line:{r:.79,g:.80,b:.74}};
+await Promise.all(['Regular','Medium','Bold','ExtraBold'].map(style=>figma.loadFontAsync({family:'Manrope',style})));
+const created=[],mutated=[],slides=[],assets=[];
+function T(p,txt,x,y,w,size=38,color=C.ink,style='Regular'){const n=figma.createText();p.appendChild(n);created.push(n.id);n.fontName={family:'Manrope',style};n.fontSize=size;n.characters=txt;n.fills=[{type:'SOLID',color}];n.textAutoResize='HEIGHT';n.resize(w,10);n.x=x;n.y=y;n.name=txt.slice(0,65);return n;}
+function R(p,x,y,w,h,color){const n=figma.createRectangle();p.appendChild(n);created.push(n.id);n.resize(w,h);n.x=x;n.y=y;n.fills=[{type:'SOLID',color}];return n;}
+function F(p,x,y,w,h,color){const n=figma.createFrame();p.appendChild(n);created.push(n.id);n.resize(w,h);n.x=x;n.y=y;n.fills=color?[{type:'SOLID',color}]:[];return n;}
+function B(p,head,body,x,y,w,dark=false){const n=figma.createAutoLayout();p.appendChild(n);created.push(n.id);n.name=head;n.layoutMode='VERTICAL';n.primaryAxisSizingMode='AUTO';n.counterAxisSizingMode='FIXED';n.resize(w,100);n.itemSpacing=18;n.fills=[];n.x=x;n.y=y;const h=T(n,head,0,0,w,40,dark?C.chalk:C.moss,'Bold');const b=T(n,body,0,0,w,32,dark?C.chalk:C.ink);return n;}
+function S(num,title,dark=false,section='KAIRO ACCESS'){const s=figma.createSlide();s.name=String(num).padStart(2,'0')+' / '+title;s.fills=[{type:'SOLID',color:dark?C.ink:C.chalk}];created.push(s.id);slides.push(s.id);T(s,section,100,64,1300,24,dark?C.sage:C.moss,'Bold');T(s,title,100,144,1720,76,dark?C.chalk:C.ink,'Bold');T(s,'KAIRO',100,1008,130,22,dark?C.sage:C.moss,'ExtraBold');T(s,String(num).padStart(2,'0'),1740,1008,80,22,dark?C.sage:C.moss);return s;}
+function foot(s,txt,dark=false){T(s,txt,280,1005,1400,20,dark?C.sage:C.muted);}
+function img(p,key,x,y,w,h){const n=R(p,x,y,w,h,C.sage);n.name='ASSET / '+key;assets.push({key,nodeId:n.id});return n;}
+function bar(p,label,val,max,x,y,w,color=C.moss,suffix='%'){T(p,label,x,y,620,32);R(p,x,y+56,w,32,C.line);R(p,x,y+56,w*val/max,32,color);T(p,String(val)+suffix,x+w+24,y+36,170,40,C.moss,'Bold');}
+function line(p,x,y,w,color=C.line){return R(p,x,y,w,2,color);}
+function note(s,txt){s.speakerNotes=txt;}
+function box(p,head,body,x,y,w,h,dark=false){const f=F(p,x,y,w,h,dark?C.moss:{r:.91,g:.92,b:.87});B(f,head,body,28,24,w-56,dark);return f;}
+function link(s,txt,url,x,y,w){const t=T(s,txt,x,y,w,22,C.moss);t.setRangeHyperlink(0,t.characters.length,{type:'URL',value:url});return t;}
+
+const s25=S(25,'Appendix / the narrower Core scenario');
+T(s25,'Monthly R’000',100,285,1100,25,C.muted);
+const xs=[100,340,580,820,1060],rev=[.20665,14.75,32.5115,52.2246,76.7118],op=[-47.4417,-45.7764,-30.2826,-13.6315,5.9048],months=['Nov 2026','Apr 2027','Oct 2027','Apr 2028','Oct 2028'];
+const top=330,base=660,scale=3.1;
+[-50,0,50,100].forEach(v=>{line(s25,100,base-v*scale,1040,v===0?C.ink:C.line);T(s25,String(v),1160,base-v*scale-16,100,26,C.muted);});
+function plot(vals,col,name){const n=figma.createVector();s25.appendChild(n);created.push(n.id);n.name=name;const pts=vals.map((v,i)=>[i*240,310-v*scale]);n.vectorPaths=[{windingRule:'NONZERO',data:pts.map((p,i)=>(i?'L':'M')+' '+p[0]+' '+p[1]).join(' ')}];n.strokes=[{type:'SOLID',color:col}];n.strokeWeight=8;n.fills=[];n.x=100;n.y=350;return n;}
+plot(rev,C.moss,'Core / monthly revenue / five selected months');plot(op,C.copper,'Core / operating result before tax / five selected months');
+months.forEach((m,i)=>T(s25,m,xs[i],850,220,24,C.muted));
+T(s25,'Revenue',1300,350,480,32,C.moss,'Bold');T(s25,'R76,712 / month at month 24',1300,410,510,34);
+T(s25,'Operating result',1300,525,480,32,C.copper,'Bold');T(s25,'R5,905 / month at month 24',1300,585,510,34);
+T(s25,'Peak cash gap: R391,812\nWith 20% buffer: R470,174',1300,730,510,34,C.ink,'Bold');
+foot(s25,'Hypothetical Nov 2026–Oct 2028 Core model. Not the full-platform funding need. Five selected months shown.');
+note(s25,'Data docs/business-canvas-20261024/base-forecast.csv months1,6,12,18,24. Revenue 206.6521739;14750;32511.5027537;52224.5845232;76711.7922590. Operating -47441.7318136;-45776.3893557;-30282.5830490;-13631.5066771;5904.8442314. Exactmonthlyseries inCSV. Fiveobservations linkedlinearly, notallmonthlycashmovements. CoreR35institution/R49consumer narrowed service, sharedfixed45000/month+acquisition,7contracts×250seatsbyM24,100%renewalsassumption,~229consumerpayers. M22firstpositiveop,peakcashdeficit391812+20%=470174. Noobserved sales. Fullplatformhas198000monthlycapacityanddifferentoffers/costs; do notcarryCorefundingtofullvision. Puredriverbasedscenarios,notMLdemandforecast.');
+const s26=S(26,'Appendix / evidence and assumptions');
+const refs=[['DHET / PSET enrolments, 2024','https://www.dhet.gov.za/Information%20Systems%20Management%20Documents/Statistical%20Reports%20and%20Data/Reports/Statistics%20on%20Post-School%20Education%20and%20Training%20in%20South%20Africa%2C%202024.pdf'],['Stats SA / household internet, 2024','https://www.statssa.gov.za/publications/P0318/P03182024.pdf'],['Freeman et al. / active learning, 2014','https://doi.org/10.1073/pnas.1319030111'],['Karpicke & Roediger / retrieval, 2008','https://doi.org/10.1126/science.1152408'],['PhET / simulation design research','https://phet.colorado.edu/en/research'],['Google Cloud / service pricing','https://cloud.google.com/text-to-speech/pricing'],['Payfast / transaction fees','https://payfast.io/fees/'],['Figma / pitch and device references','https://www.figma.com/resource-library/pitch-deck-examples/']];
+T(s26,'Sources / click to open',100,310,900,36,C.moss,'Bold');refs.forEach((v,i)=>link(s26,v[0],v[1],100,390+i*66,900));
+B(s26,'Economics','R20/USD budget. Vendor-tax reserve 15%.\nVolume, retention and activity are assumptions.\nCredits excluded from durable unit costs.',1120,310,680);
+B(s26,'Production and access','IAM-private deployment. Account-specific material.\nJudge access and phone acceptance still open.\nIndependent security review remains required.',1120,550,680);
+B(s26,'Visuals and outcomes','Device/world images are concepts.\nAvatar and motor renders use actual app models.\nNo measured learning gains or hiring outcomes.',1120,790,680);
+foot(s26,'Sources checked 24 Oct 2026. Detailed citations, assumptions, limitations and asset credits are in slide notes.');
+note(s26,'Competitors: https://support.google.com/gemininotebook/answer/16215270?hl=en ; https://phet.colorado.edu/en/research ; https://www.labster.com/simulations ; https://khanmigo.ai/ ; https://www.coursera.org/campus . Modelcost https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing ; DocumentAI https://cloud.google.com/products/document-ai/pricing ; STT https://cloud.google.com/speech-to-text/pricing ; translation https://cloud.google.com/products/translate/pricing . Mainfinancialevidence docs/business-canvas-20261024/FULL-PLATFORM-COSTS.md, full-platform-results.json and base-forecast.csv. Current release evidence docs/security-submission-20261024/RELEASE-STATUS.json. Language: draftselectedlanguageexplanations,notvalidatedteaching;handtrackingnotSASL. Fullsecuritygaps includeparserisolation,distributedabuse,IAMreduction,retention/restore,containerauditandhumanacceptance. KAIRO teacher basedonRainRig©BlenderFoundation/studio.blender.org CC-BY4.0 https://studio.blender.org/characters/rain/v3/ and https://creativecommons.org/licenses/by/4.0/ ; modifiedface/figure/textures/hair/clothes/animations. PolyHavenHDRICC0. Generatedstudentisfictional; generatedbranddevices/worldsarenotproductcaptures. See assets/kairo-brand-hero-20261024/KAIRO-CREDITS.txt. Presentation templates considered from Figmaofficialreference; no externalcommunitytemplateassets copied.');
+return {createdNodeIds:created,mutatedNodeIds:mutated,slideIds:slides,assets};

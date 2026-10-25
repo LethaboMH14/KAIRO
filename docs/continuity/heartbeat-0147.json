@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "session": "codex-heartbeat-20261022-0147",
+  "triggerUtc": "2026-10-22T01:47:11.394Z",
+  "aggregate": {
+    "testCommand": "npm test (studio/)",
+    "testsPassed": 168,
+    "testsFailed": 0,
+    "testExitCode": 0,
+    "buildCommand": "npm run build (studio/)",
+    "buildExitCode": 0,
+    "warnings": [
+      "Large lazy OrbitControls chunk >500kB minified",
+      "Concurrent Vite SSR tests emitted local HMR websocket warning; Node assertions all passed"
+    ],
+    "indexSha256": "d0abfc0288e339582273a283257b5d40e336f6ac95062916f35f5f727e994257"
+  },
+  "offlineStaticInspection": {
+    "distDirectory": "C:\\Users\\USER\\Desktop\\fnb app of year hackathon\\studio\\dist",
+    "currentBuildConfirmed": false,
+    "indexBytes": 540,
+    "assets": {
+      "count": 2,
+      "bytes": 311446,
+      "totalBytes": 311986,
+      "paths": [
+        "/assets/index-DBqvFNPM.css",
+        "/assets/index-Dear1qEV.js"
+      ]
+    },
+    "missing": [],
+    "unsafe": [],
+    "queryOrHashImports": [],
+    "unsupportedSyntax": [],
+    "externalResources": [],
+    "apiPathsInCacheSet": [],
+    "runtimeRegexMismatch": {
+      "discoveredButRegexMissed": [],
+      "regexButNotDiscovered": []
+    },
+    "note": "Inspection is static only; dynamic imports are intentionally excluded. Set currentBuildConfirmed only after an external build identity check."
+  },
+  "newLearnerSurface": {
+    "route": "/cv",
+    "lazyChunk": "CvWorkspace",
+    "details": "Tab-only applicant-confirmed CV draft; edit revokes confirmation, preview invalidates on change, plain-text download request only",
+    "sourceReview": "Independent Luna review found stale feedback; root cleared both states per attempt",
+    "browserAcceptance": "pending",
+    "persistence": false,
+    "privateUpload": false,
+    "atsGuarantee": false
+  },
+  "reviewed": {
+    "profileIntegrity": "Primitive format and dense collection regression fixes inspected; included aggregate",
+    "practiceExport": "Refuses unreadable profile, preserves20 saved+new run in export; no storage write",
+    "evidenceWorkspace": "Distinct loading/ready/unreadable/unavailable states with read-only retry; simulation remains usable",
+    "privatePreviews": "Four actual PNG signatures/hashes/dimensions/bounds verified;562432bytes, no content/OCR review",
+    "cvFoundation": "Sparse/custom-serialization/encoding-allocation defects returned and repaired;10 focused tests included aggregate",
+    "staticArtifactContract": "Pure text/table validator only;7 tests included aggregate; no renderer or sandbox runtime",
+    "employerResearch": "Original-host indexed evidence for two senior RMB roles and FNB talent-pool record; live status unknown, no applicant fit score"
+  },
+  "knownPending": [
+    "Previously reported Engineering Node test ./fieldMath extensionless import remains owner-scoped; unchanged failure not rerun",
+    "Character/Engineering and reference owner claims intact",
+    "No browser, keyboard, download-receipt or offline-restart acceptance",
+    "Raw profile recovery and static React artifact view successor sources not included in this checkpoint"
+  ],
+  "gitCheck": "Unavailable: workspace is not a Git repository; no git diff acceptance claimed",
+  "publicDeployment": false
+}

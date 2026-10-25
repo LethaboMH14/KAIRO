@@ -1,0 +1,15 @@
+import test from 'node:test';import assert from 'node:assert/strict';import express from 'express';import {mkdtemp,rm} from 'node:fs/promises';import {tmpdir} from 'node:os';import {join,resolve} from 'node:path';import {fileURLToPath} from 'node:url';import {workspaceRoutes} from '../server/workspace/routes.mjs';import {createCloudLibrary} from '../server/cloud-library/store.mjs';
+test('actual source cloud-copy routes require separate consent/current review and preserve local data',async()=>{
+ const prefix=join(tmpdir(),'kairo-cloud-route-'),folder=await mkdtemp(prefix),objects=new Map();let writes=0;
+ const cloudLibrary=createCloudLibrary({enabled:true,bucket:'test-private-bucket',getToken:async()=> 'synthetic-token',fetchFn:async(url,init={})=>{const u=new URL(url),key=u.searchParams.get('name')||decodeURIComponent(u.pathname.split('/o/')[1]);if(init.method==='POST'){writes++;objects.set(key,JSON.parse(init.body));return new Response('{}');}if(init.method==='DELETE'){objects.delete(key);return new Response(null,{status:204});}return objects.has(key)?new Response(JSON.stringify(objects.get(key)),{headers:{'x-goog-generation':'123'}}):new Response('',{status:404});}});
+ const router=await workspaceRoutes(fileURLToPath(new URL('..',import.meta.url)),{home:join(folder,'home'),imported:join(folder,'catalog'),cloudLibrary}),app=express();app.use('/api/workspace',router);const server=app.listen(0,'127.0.0.1');await new Promise(r=>server.once('listening',r));
+ async function call(path,body,method='POST'){const response=await fetch(`http://127.0.0.1:${server.address().port}/api/workspace${path}`,body===undefined?{}:{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});return {status:response.status,body:await response.json()};}
+ try{const source=(await call('/text',{title:'Synthetic motor',text:'Synthetic motor source. A rotating magnetic field has its own field speed. A four-pole motor at 50 Hz has a synchronous field speed of 1500 rpm.'})).body;const reviewed=(await call(`/source/${source.id}/review`,{acknowledged:true,pages:source.pages.map(p=>({text:p.text})),expectedRevision:null})).body;
+ assert.equal((await call(`/source/${source.id}/cloud-copy`,{expectedRevision:reviewed.revision})).status,400);assert.equal(writes,0);
+ assert.equal((await call(`/source/${source.id}/cloud-copy`,{consent:true,expectedRevision:'f'.repeat(64)})).status,409);assert.equal(writes,0);
+ assert.equal((await call(`/source/${source.id}/cloud-copy`,{consent:true,expectedRevision:reviewed.revision})).body.saved,true);
+ assert.equal((await call(`/source/${source.id}/cloud-copy?revision=${reviewed.revision}`)).body.exists,true);
+ assert.equal((await call(`/source/${source.id}/cloud-copy`,{consent:true,expectedRevision:reviewed.revision},'DELETE')).body.removed,true);
+ assert.equal((await call(`/source/${source.id}`)).body.revision,reviewed.revision);assert.equal(objects.size,0);
+ }finally{await new Promise(r=>server.close(r));router.closeStore();if(!resolve(folder).startsWith(resolve(prefix)))throw new Error('Unexpected cleanup target');await rm(folder,{recursive:true,force:true});}
+});

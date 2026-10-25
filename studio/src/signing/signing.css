@@ -1,0 +1,21 @@
+.ks{--moss:#3E5144;--chalk:#F5F0E6;--sage:#A7AF91;--copper:#AE7555;--ink:#252B28;--line:#D9DDCF;max-width:760px;margin:0 auto;padding:24px 16px 48px;color:var(--ink);background:var(--chalk);font-family:KairoManrope,Manrope,Arial,sans-serif;line-height:1.6}
+.ks *{box-sizing:border-box}
+.ks h2{font-size:22px;letter-spacing:-.02em;margin:0 0 12px}
+.ks p{font-size:14px;margin:0 0 10px;max-width:70ch}
+.ks-label{border-left:4px solid var(--copper);background:#EEE5D9;padding:10px 14px;border-radius:0 8px 8px 0}
+.ks-note{color:#4B544D}
+.ks-stage{position:relative;aspect-ratio:4/3;background:var(--moss);border-radius:14px;overflow:hidden;margin:16px 0}
+.ks-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+.ks-overlay{position:absolute;inset:0;width:100%;height:100%}
+.ks-off{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--chalk);font-size:14px;background:var(--moss)}
+.ks-controls{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ks button{min-height:44px;padding:10px 16px;border-radius:8px;border:1px solid #BBC4B5;background:#FFFDF8;color:var(--moss);font:inherit;font-size:14px;font-weight:650;display:inline-flex;align-items:center;gap:8px;cursor:pointer;touch-action:manipulation}
+.ks button.ks-primary{background:var(--moss);color:var(--chalk);border-color:var(--moss)}
+.ks button:focus-visible{outline:3px solid #906044;outline-offset:3px}
+.ks-status{min-height:3em;font-weight:600}
+.ks-hints{margin:0 0 12px;padding-left:20px;font-size:14px}
+.ks-diag{margin-top:16px;font-size:13px}
+.ks-diag summary{cursor:pointer;min-height:32px}
+.ks-diag dl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:4px 12px;margin:8px 0 0}
+.ks-diag dt{color:#4B544D}.ks-diag dd{margin:0}
+@media(prefers-reduced-motion:reduce){.ks *{animation:none!important;transition:none!important}}

@@ -1,0 +1,667 @@
+{
+  "checked": "2026-10-22",
+  "capacity": {
+    "totalSlots": 4,
+    "rootReviewers": 1,
+    "maxConcurrentWorkers": 3,
+    "requestedWorkers": 5
+  },
+  "packages": [
+    {
+      "id": "W1",
+      "worker": "evidence",
+      "task": "LUNA-EVIDENCE-001",
+      "status": "reviewed_done",
+      "areas": [
+        7,
+        9,
+        10
+      ],
+      "deliverable": "Replay-derived unverified practice-artifact foundation",
+      "evidence": [
+        "studio/src/evidence/model.ts",
+        "studio/tests/evidence.test.mjs",
+        "coordination/roadmap/reviews/W1-evidence.md"
+      ],
+      "review": "Accepted bounded adapter after long-reflection/time repairs; root reran 6 evidence tests; UI and broad area remain pending"
+    },
+    {
+      "id": "W2",
+      "worker": "tools_policy",
+      "task": "LUNA-TOOLS-001",
+      "status": "reviewed_done",
+      "areas": [
+        12,
+        14
+      ],
+      "deliverable": "Mock consent/revocation/idempotency policy foundation; no real execution",
+      "evidence": [
+        "coordination/roadmap/reviews/W2-tools-accepted.md"
+      ],
+      "review": "Accepted bounded foundation after independent source/test/probe review; parent outcomes remain unfinished"
+    },
+    {
+      "id": "W3",
+      "worker": "adaptive",
+      "task": "LUNA-ADAPTIVE-001",
+      "status": "reviewed_done",
+      "areas": [
+        3,
+        4,
+        15
+      ],
+      "deliverable": "Versioned transparent adaptive-practice policy",
+      "evidence": [
+        "coordination/roadmap/reviews/W3-adaptive.md"
+      ],
+      "review": "Accepted bounded foundation after independent source/test/probe review; parent outcomes remain unfinished"
+    },
+    {
+      "id": "W4",
+      "worker": "worksim",
+      "task": "LUNA-WORKSIM-001",
+      "status": "reviewed_done",
+      "areas": [
+        8,
+        13
+      ],
+      "deliverable": "Synthetic service/data work scenario and deterministic assessment",
+      "evidence": [
+        "coordination/roadmap/reviews/W4-worksim.md"
+      ],
+      "review": "Accepted bounded foundation after independent source/test/probe review; parent outcomes remain unfinished"
+    },
+    {
+      "id": "W5",
+      "worker": "integration",
+      "task": "LUNA-EVIDENCE-UI-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        7,
+        8,
+        9
+      ],
+      "deliverable": "Learner-facing work/evidence workspace using reviewed modules",
+      "evidence": [
+        "studio/src/evidence-workspace/EvidenceWorkspace.tsx",
+        "studio/src/evidence-workspace/worksim-presentation.ts",
+        "studio/tests/evidence-workspace.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-integration.md",
+        "coordination/roadmap/reviews/W5-integration-code-review.md"
+      ],
+      "review": "Root inspected repaired UI and tests. Uniform choices, fresh revision/new-run drafts, preserved tabs and honest assistance exports accepted in code. Full visual, keyboard and browser download acceptance remains pending due prior browser policy denial; keep package unchecked."
+    },
+    {
+      "id": "W6",
+      "worker": "evidence",
+      "task": "LUNA-PORTFOLIO-EXPORT-001",
+      "status": "reviewed_done",
+      "areas": [
+        7,
+        10
+      ],
+      "deliverable": "Portable replay-derived JSON and readable HTML portfolio foundation",
+      "evidence": [
+        "studio/src/portfolio-export/model.ts",
+        "studio/tests/portfolio-export.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-portfolio-export.md"
+      ],
+      "review": "Root inspected frozen builder/serializer, escaping, provenance and semantic document; focused tests rerun; original CV/PDF outcomes stay open."
+    },
+    {
+      "id": "W7",
+      "worker": "adaptive",
+      "task": "LUNA-ADAPTIVE-BRIDGE-001",
+      "status": "reviewed_done",
+      "areas": [
+        4
+      ],
+      "deliverable": "Conservative adapter from reviewed task descriptors and actual recorded choices",
+      "evidence": [
+        "studio/src/adaptive-bridge/adapter.ts",
+        "studio/tests/adaptive-bridge.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-adaptive-bridge.md"
+      ],
+      "review": "Root returned duplicate imported-event and task-ID binding defects; repaired 11 tests rerun. Not integrated into teaching yet."
+    },
+    {
+      "id": "W8",
+      "worker": "tools_policy",
+      "task": "LUNA-REFERENCE-001",
+      "status": "code_reviewed_owner_pending",
+      "areas": [
+        12
+      ],
+      "deliverable": "Bounded outward source and privacy-enhanced video URL contract",
+      "evidence": [
+        "studio/server/reference-core/references.mjs",
+        "studio/tests/reference-core.test.mjs",
+        "coordination/roadmap/reviews/rolling-probes.mjs"
+      ],
+      "review": "Full-card validation repair present and independent hostile-link probes pass. Original owner claim remains active; do not take over. No fetch, iframe UI or endpoint integration."
+    },
+    {
+      "id": "W9",
+      "worker": "opportunity_research",
+      "task": "LUNA-OPPORTUNITY-001",
+      "status": "reviewed_done",
+      "areas": [
+        9,
+        11
+      ],
+      "deliverable": "Primary-source role-family and experience-provider research snapshot",
+      "evidence": [
+        "docs/workstreams/opportunity-evidence/evidence.json",
+        "docs/workstreams/opportunity-evidence/README.md",
+        "coordination/handoffs/2026-10-22-luna-opportunity-evidence.md"
+      ],
+      "review": "Root independently opened Discovery BA/support, mLab and SAnews sources; expired/unknown/status conflicts preserved. Not live opportunity integration."
+    },
+    {
+      "id": "W10",
+      "worker": "evidence",
+      "task": "LUNA-OFFLINE-QA-001",
+      "status": "reviewed_done",
+      "areas": [
+        14
+      ],
+      "deliverable": "Independent offline worker and device-memory behavioral QA",
+      "evidence": [
+        "studio/tests/offline-acceptance.test.mjs",
+        "docs/workstreams/offline-qa.md",
+        "coordination/handoffs/2026-10-22-luna-offline-qa.md"
+      ],
+      "review": "Regression caught storing unprojected extras; root fixed owned feature. Combined continuity/QA tests 13 passed. No browser acceptance."
+    },
+    {
+      "id": "W11",
+      "worker": "adaptive",
+      "task": "LUNA-PATHWAY-LINKS-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        7,
+        9
+      ],
+      "deliverable": "Explicit practice links to role criteria without score promotion",
+      "evidence": [
+        "studio/src/pathways/model.ts",
+        "studio/src/pathways/RolePathways.tsx",
+        "studio/tests/pathways.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-pathway-links.md"
+      ],
+      "review": "Root inspected fresh raw replay, stale links, strict projection/date/bounds repairs; 8 tests passed. Browser acceptance pending."
+    },
+    {
+      "id": "W12",
+      "worker": "opportunity_research",
+      "task": "LUNA-PRACTICE-PACKS-001",
+      "status": "reviewed_done",
+      "areas": [
+        7,
+        8
+      ],
+      "deliverable": "Two formative requirements/UAT and digital-support authored scenario foundations",
+      "evidence": [
+        "studio/src/practice-packs/model.ts",
+        "studio/tests/practice-packs.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-practice-packs.md"
+      ],
+      "review": "Root inspected multiple defensible paths, immutable authored content, hint history/replay and unassessed reflection. App suite includes 9 passing focused tests. No learner UI or employer skill verification."
+    },
+    {
+      "id": "W13",
+      "worker": "evidence",
+      "task": "LUNA-EVIDENCE-UX-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        7,
+        10,
+        14
+      ],
+      "deliverable": "Learner-oriented evidence UI and honest HTML/JSON download feedback",
+      "evidence": [
+        "studio/src/evidence-workspace/EvidenceWorkspace.tsx",
+        "studio/tests/evidence-workspace.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-evidence-ux.md"
+      ],
+      "review": "Root inspected plain copy, palette, status/error split and raw portfolio integration. Browser visual/keyboard/download acceptance pending."
+    },
+    {
+      "id": "W14",
+      "worker": "evidence",
+      "task": "LUNA-OFFLINE-INSPECTION-001",
+      "status": "reviewed_done",
+      "areas": [
+        14
+      ],
+      "deliverable": "Static published-build dependency inspection utility",
+      "evidence": [
+        "tools/offline-inspection/inspect.mjs",
+        "tools/offline-inspection/inspect.test.mjs",
+        "docs/continuity/offline-build-inspection.json",
+        "coordination/handoffs/2026-10-22-luna-offline-build-inspection.md"
+      ],
+      "review": "Root returned unchecked symlink reread, inspected checkedText repair and reran 8 fixture tests; actual published closure has 2 assets/309890 bytes, no missing/unsafe/API/external resources or matcher differences. Static only; browser acceptance pending."
+    },
+    {
+      "id": "W15",
+      "worker": "root",
+      "task": "CONTINUITY-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        3,
+        4,
+        14
+      ],
+      "deliverable": "Warm learner home, chosen device memory and opt-in offline reading copies",
+      "evidence": [
+        "studio/src/continuity",
+        "studio/public/kairo-offline-sw.js",
+        "docs/continuity/EXPERIENCE-AND-SECURITY.md"
+      ],
+      "review": "124 app tests and published /home + /cases build passed. Unreadable saved study is preserved rather than overwritten; own source hashes recorded. Engineering broader check has one active-owner import failure. Browser install/restart/offline/keyboard/device acceptance remains pending."
+    },
+    {
+      "id": "W16",
+      "worker": "adaptive",
+      "task": "LUNA-OCR-PLAN-001",
+      "status": "reviewed_done",
+      "areas": [
+        3
+      ],
+      "deliverable": "Private coursework evaluation protocol; actual quality not measured",
+      "evidence": [
+        "docs/workstreams/ocr-evaluation-plan.md",
+        "coordination/handoffs/2026-10-22-luna-ocr-plan.md"
+      ],
+      "review": "Root reviewed provenance/critical tokens/role separation and corrected invented human-permission gate; existing local study authorization retained."
+    },
+    {
+      "id": "W17",
+      "worker": "adaptive",
+      "task": "LUNA-OCR-HARNESS-001",
+      "status": "reviewed_done",
+      "areas": [
+        3,
+        14
+      ],
+      "deliverable": "Bounded in-memory synthetic OCR metrics and provenance harness",
+      "evidence": [
+        "tools/course_sources/ocr_eval/__init__.py",
+        "tools/course_sources/ocr_eval/test_ocr_eval.py",
+        "coordination/handoffs/2026-10-22-luna-ocr-harness.md"
+      ],
+      "review": "Root returned score/provenance mismatch and aggregate compute-budget defects; corrected page/excerpt binding and batch budget reviewed, documented 9 tests rerun. No private OCR run or accuracy result."
+    },
+    {
+      "id": "W18",
+      "worker": "evidence",
+      "task": "LUNA-LEARNER-LANGUAGE-AUDIT-001",
+      "status": "reviewed_done",
+      "areas": [
+        14,
+        15
+      ],
+      "deliverable": "Source-backed learner-language and recovery audit",
+      "evidence": [
+        "docs/workstreams/learner-language-audit.md",
+        "coordination/handoffs/2026-10-22-luna-language-audit.md"
+      ],
+      "review": "Root inspected concrete findings; implemented the unreadable LessonWorkspace preservation fix. ProgressPage recovery is a separate next task; audit is not browser testing."
+    },
+    {
+      "id": "W19",
+      "worker": "opportunity_research",
+      "task": "LUNA-PRACTICE-PACK-WORKSPACE-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        7,
+        8
+      ],
+      "deliverable": "Interactive /cases learner workspace with actual choice/hint/revision/export flow",
+      "evidence": [
+        "studio/src/practice-pack-workspace/PracticePackWorkspace.tsx",
+        "studio/tests/practice-pack-workspace.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-practice-pack-workspace-uxfix.md",
+        "docs/continuity/verification.json"
+      ],
+      "review": "Root reviewed code, returned premature progress/draft/discard copy defects and integrated repaired component into owned router/home. Published build and 124 app tests passed; browser interaction/dialog/download acceptance pending."
+    },
+    {
+      "id": "W20",
+      "worker": "evidence",
+      "task": "LUNA-PROGRESS-RECOVERY-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        4,
+        14
+      ],
+      "deliverable": "Recovery for unreadable saved progress without empty portfolio fallback",
+      "evidence": [
+        "studio/tests/progress-recovery.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-progress-recovery.md"
+      ],
+      "review": "Root inspected paths and reran 3 focused tests; aggregate133/build pass. Partial-profile parsing and adjacent practice exports separately assigned; browser acceptance pending."
+    },
+    {
+      "id": "W21",
+      "worker": "adaptive",
+      "task": "LUNA-OCR-SAMPLES-001",
+      "status": "reviewed_done",
+      "areas": [
+        3
+      ],
+      "deliverable": "Private OCR candidate metadata: four mapped and one unavailable",
+      "evidence": [
+        "docs/workstreams/ocr-sample-manifest.md",
+        "coordination/handoffs/2026-10-22-luna-ocr-samples.md"
+      ],
+      "review": "Root independently checked conservative flags, null hashes and four inventory mappings. No OCR quality or category validation."
+    },
+    {
+      "id": "W22",
+      "worker": "opportunity_research",
+      "task": "LUNA-MEDIA-PANEL-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        12
+      ],
+      "deliverable": "Consent-gated isolated source video panel",
+      "evidence": [
+        "studio/tests/media-panel.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-media-panel.md"
+      ],
+      "review": "Root returned duplicate accessible IDs; useId repair inspected. Six focused tests included133-test aggregate/build. Unrouted; live player/sandbox/keyboard acceptance pending."
+    },
+    {
+      "id": "W23",
+      "worker": "adaptive",
+      "task": "LUNA-OCR-SOURCE-CHECKS-001",
+      "status": "reviewed_done",
+      "areas": [
+        3
+      ],
+      "deliverable": "Bounded local source identity and page metadata check",
+      "evidence": [
+        "docs/workstreams/ocr-source-checks.md",
+        "coordination/handoffs/2026-10-22-luna-ocr-source-checks.md"
+      ],
+      "review": "Four mapped originals only. Root checked report/current metadata consistency and public redaction; worker executed local hashes/parser checks. No render/OCR/content-quality measurement."
+    },
+    {
+      "id": "W24",
+      "worker": "evidence",
+      "task": "LUNA-PROFILE-INTEGRITY-001",
+      "status": "reviewed_done",
+      "areas": [
+        4,
+        14
+      ],
+      "deliverable": "Strict profile reads and projected writes with primitive/dense validation",
+      "evidence": [
+        "studio/tests/profile-integrity.test.mjs",
+        "coordination/handoffs/2026-10-22-luna-profile-integrity.md",
+        "coordination/handoffs/2026-10-22-luna-profile-integrity-repair.md"
+      ],
+      "review": "Root returned coercion and sparse-array defects; repaired source inspected,9 focused tests and168-test aggregate/build pass. Persistence caps remain documented."
+    },
+    {
+      "id": "W25",
+      "worker": "adaptive",
+      "task": "LUNA-OCR-PAGE-PREP-001",
+      "status": "reviewed_done",
+      "areas": [
+        3
+      ],
+      "deliverable": "Bounded private first-page previews; no OCR/gold/answer claims",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-luna-ocr-pages.md",
+        "docs/continuity/heartbeat-0147.json"
+      ],
+      "review": "Root independently verified4PNG hashes/signatures/dimensions/bytes/sourcebindings. Worker rendering evidence only; no pagecontent or OCR accuracy review."
+    },
+    {
+      "id": "W26",
+      "worker": "opportunity_research",
+      "task": "LUNA-CV-DRAFT-001",
+      "status": "reviewed_done",
+      "areas": [
+        10
+      ],
+      "deliverable": "Truthful applicant-confirmed CV text model",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-luna-cv-draft-hardening.md",
+        "docs/continuity/heartbeat-0147.json"
+      ],
+      "review": "Root returned sparse arrays, pre-validation serialization and encoding-allocation defects. Repaired source inspected;10 tests included168-test aggregate/build. Official career guidance checked; no ATS guarantee."
+    },
+    {
+      "id": "W27",
+      "worker": "evidence",
+      "task": "LUNA-PRACTICE-EXPORT-RECOVERY-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        4,
+        10
+      ],
+      "deliverable": "Practice export recovery and lossless in-memory history merge",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-luna-practice-export-history.md",
+        "docs/continuity/heartbeat-0147.json"
+      ],
+      "review": "Root returned20-case export truncation.4 focused tests preserve20saved+new and matching ID replacement, no writes. Aggregate168/build pass; browser download acceptance pending."
+    },
+    {
+      "id": "W28",
+      "worker": "evidence",
+      "task": "LUNA-EVIDENCE-READ-RECOVERY-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        4,
+        14
+      ],
+      "deliverable": "Unreadable saved practice is distinct from empty evidence",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-luna-evidence-profile-recovery.md",
+        "docs/continuity/heartbeat-0147.json"
+      ],
+      "review": "Consumed loading/ready/unreadable/unavailable states inspected;3 tests included168-test aggregate/build. Retry reads only; simulation preserved. Browser pending."
+    },
+    {
+      "id": "W29",
+      "worker": "adaptive",
+      "task": "ARTIFACT-PANEL-001",
+      "status": "reviewed_done",
+      "areas": [
+        12
+      ],
+      "deliverable": "Pure bounded static text/table artifact contract",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-luna-artifact-panel-implementation.md",
+        "docs/continuity/heartbeat-0147.json"
+      ],
+      "review": "Root inspected limits and returned absent optional provenance; repaired.7 tests included168-test aggregate/build. No renderer or sandbox isolation claim."
+    },
+    {
+      "id": "W30",
+      "worker": "root",
+      "task": "CV-WORKSPACE-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        10,
+        14
+      ],
+      "deliverable": "Learner-controlled /cv workbench with confirmed-text download",
+      "evidence": [
+        "docs/continuity/cv-workspace.md",
+        "docs/continuity/heartbeat-0147.json"
+      ],
+      "review": "Root integrated lazy route/home. Independent source review returned stale download feedback; repaired. Confirmation revocation and initial SSR tested;168tests/build pass. Browser keyboard/download/mobile acceptance pending."
+    },
+    {
+      "id": "W31",
+      "worker": "opportunity_research",
+      "task": "LUNA-FNB-ROLES-20261022",
+      "status": "reviewed_done",
+      "areas": [
+        9,
+        11
+      ],
+      "deliverable": "Dated original-host FNB/FirstRand role evidence snapshot",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-luna-fnb-current-roles.md",
+        "docs/continuity/heartbeat-0147.json"
+      ],
+      "review": "Root independently found indexed R54418/R54282 and FNB official entry. Live availability unknown; seniority/preferences retained, talent pool not promoted to active vacancy. No fit score/application."
+    },
+    {
+      "id": "W32",
+      "worker": "evidence",
+      "task": "LUNA-PROFILE-RAW-RECOVERY-001",
+      "status": "reviewed_done",
+      "areas": [
+        4,
+        14
+      ],
+      "deliverable": "Bounded exact raw-progress recovery envelope",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-luna-profile-raw-recovery.md",
+        "studio/tests/profile-raw-recovery.test.mjs"
+      ],
+      "review": "Root inspected one-key/read-only helper and4tests incl malformed/Unicode/lone-surrogate roundtrip; included177-testaggregate. No repair/migration/deletion."
+    },
+    {
+      "id": "W33",
+      "worker": "adaptive",
+      "task": "STATIC-ARTIFACT-VIEW-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        12
+      ],
+      "deliverable": "Escaped static text/table artifact view foundation",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-luna-static-artifact-view.md",
+        "studio/tests/static-artifact-view.test.mjs"
+      ],
+      "review": "Root inspected safeReacttext/semantic table/fixedfailure/useId;4SSRtests included177-testaggregate/build. Unrouted, no iframe/security isolation or browseracceptance claim."
+    },
+    {
+      "id": "W34",
+      "worker": "root",
+      "task": "HB-REVIEW-20261022-0809",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        4,
+        14
+      ],
+      "deliverable": "Explicit local recovery-copy action for unreadable progress",
+      "evidence": [
+        "studio/src/profile-recovery/RecoveryCopy.tsx",
+        "studio/tests/recovery-copy.test.mjs",
+        "docs/continuity/heartbeat-0809.json"
+      ],
+      "review": "Root integrated insideprogressmain, personaldata acknowledgement, click-timefreshread and requested-only feedback. InitialSSR provesno read beforeaction;177tests/buildpass. Actualbrowserdownload pending."
+    },
+    {
+      "id": "W35",
+      "worker": "device_controls_audit",
+      "task": "DEVICE-DATA-CONTROLS-AUDIT-001",
+      "status": "reviewed_done",
+      "areas": [
+        14
+      ],
+      "deliverable": "Source map of device save/export/clear boundaries",
+      "evidence": [
+        "docs/workstreams/device-data-controls-audit.md",
+        "coordination/handoffs/2026-10-22-codex-device-data-controls-audit.md"
+      ],
+      "review": "Root verified narrowhomeclearlabel and too-broadfooter. Sourceonly, no actualstorage/privatevaluesread. Copyfix assignedaftercheckpoint; broaderdata controls stillneeded."
+    },
+    {
+      "id": "W36",
+      "worker": "cv_session_plan",
+      "task": "CV-SESSION-TRANSFER-PLAN-001",
+      "status": "reviewed_done",
+      "areas": [
+        10,
+        14
+      ],
+      "deliverable": "Explicit portable CVsession contract proposal",
+      "evidence": [
+        "docs/workstreams/cv-session-transfer-plan.md",
+        "coordination/handoffs/2026-10-22-luna-cv-session-transfer-plan.md"
+      ],
+      "review": "Root reviewed/published exactv1interface128KiB inclwrapper, atomicrefusal and futurereviewgate. Designonly; codecimplementation assignedaftercheckpoint, no fullCVsync/importfeature claim."
+    },
+    {
+      "id": "W37",
+      "worker": "cv_session_plan",
+      "task": "CV-SESSION-TRANSFER-IMPL-001",
+      "status": "reviewed_done",
+      "areas": [
+        10,
+        14
+      ],
+      "deliverable": "Bounded portable CVsession JSON codec",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-luna-cv-session-transfer-impl.md",
+        "studio/tests/cv-session-transfer.test.mjs"
+      ],
+      "review": "Root inspected exact128KiBv1envelope/validation/projection;10 focused tests independentlypassed and included190-testaggregate. Puremodule only, noUI/browser claim."
+    },
+    {
+      "id": "W38",
+      "worker": "root",
+      "task": "HB-CV-20261022-0840",
+      "status": "code_reviewed_build_blocked",
+      "areas": [
+        10,
+        14
+      ],
+      "deliverable": "Explicit learner CV session saving and staged import UI",
+      "evidence": [
+        "studio/src/cv-workspace/session.ts",
+        "studio/tests/cv-session-ui.test.mjs",
+        "docs/continuity/heartbeat-0840.json"
+      ],
+      "review": "Independent source review found no blocker. Size-firstread, atomicrefusal, explicitreplace/cancel, freshconfirmation and staleasync cancellation tested.190tests+scopedCVtypecheckpass; productionbuild blocked by ownerEngineeringprop error. Not inpreview, browserpending."
+    },
+    {
+      "id": "W39",
+      "worker": "device_controls_audit",
+      "task": "CS-LABEL-LAYERING-001",
+      "status": "code_reviewed_browser_pending",
+      "areas": [
+        14,
+        15
+      ],
+      "deliverable": "CS labels constrained below studio picker modal",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-codex-cs-label-layering.md",
+        "docs/workstreams/cs-label-layering.md"
+      ],
+      "review": "Root verified labelzIndex19..0/modal20 and preserved noninteractive labels; worker scopedTS passed.190tests pass; fullbuild blocked separately. Actual browser stacking acceptance pending."
+    },
+    {
+      "id": "W40",
+      "worker": "device_controls_audit",
+      "task": "DEVICE-DATA-CONTROLS-COPY-001",
+      "status": "reviewed_done",
+      "areas": [
+        14
+      ],
+      "deliverable": "Home footer accurately names available export paths",
+      "evidence": [
+        "coordination/handoffs/2026-10-22-codex-device-data-controls-copy.md"
+      ],
+      "review": "Root inspected exact narrowcopy change and retained clear scope. Source repair only; no all-data export capability or newproductionbuild claimed."
+    }
+  ],
+  "recurring": {
+    "id": "kairo-reviewed-build-queue",
+    "status": "ACTIVE",
+    "intervalMinutes": 30,
+    "authorization": "Explicit user confirmation 22 October 2026; created only after confirmation.",
+    "note": "Reuses queue and actual workers, respects claims, no production deployment or policy bypass."
+  }
+}

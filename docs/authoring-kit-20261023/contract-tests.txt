@@ -1,0 +1,20 @@
+✔ six-type lesson round trips with exact source spans and no caller mutation (248.391ms)
+✔ reviewed source hash, identity, revision and page locator must agree (2.6241ms)
+✔ fabricated, moved or truncated citations and fake excerpt content fail (6.6487ms)
+✔ unknown keys, HTML/CSS/action payloads, arbitrary block kinds and duplicate IDs fail (5.769ms)
+✔ numeric units/capabilities are bounded and do not permit arbitrary studio execution (3.5548ms)
+✔ questions reject ambiguous options and invalid answer index, do not certify semantic truth (2.1665ms)
+✔ schema rejects oversized input, unexpected prototypes and unsupported schema version (1.6215ms)
+✔ proposed text, order and layout changes require exact approval and retain source identity (5.4631ms)
+✔ tampered proposal, stale base and changed source cannot be approved into current work (3.6714ms)
+✔ cancellation blocks commit; undo creates a new revision and rejects changed current state (5.2192ms)
+✔ canonical approval digest ignores object key order but retains block order (0.8725ms)
+✔ static report escapes hostile text, exposes provenance and never mounts code or studio (1.6877ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1102.5743

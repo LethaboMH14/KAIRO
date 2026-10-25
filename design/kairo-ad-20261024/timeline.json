@@ -1,0 +1,347 @@
+{
+  "title": "KAIRO — When it clicks",
+  "version": "0.1-first-cut",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 600,
+    "seconds": 20.0,
+    "note": "Production choice, not an organiser specification. Captions and key action stay inside the central 9:16-safe column where the layout allows."
+  },
+  "palette": {
+    "chalk": "#f5f0e6",
+    "moss": "#3e5144",
+    "sage": "#a7af91",
+    "ink": "#252b28",
+    "copper_accent": "#b87340"
+  },
+  "beats": [
+    {
+      "id": "accumulate",
+      "start": 0.0,
+      "end": 3.0,
+      "picture": "Fictional student at a laptop; three hero thoughts, atmospheric fragments settle into the corners."
+    },
+    {
+      "id": "reveal",
+      "start": 3.0,
+      "end": 5.0,
+      "picture": "Sound break. Push into the laptop; KAIRO (actual model) appears; questions reorganise into the learning path."
+    },
+    {
+      "id": "source",
+      "start": 5.0,
+      "end": 8.0,
+      "picture": "My material | My lesson split. Passage highlighted; lesson citation checked against the source."
+    },
+    {
+      "id": "motor",
+      "start": 8.0,
+      "end": 12.0,
+      "picture": "Diagram line lands on the actual motor model; one orbit; select the squirrel cage; Operate."
+    },
+    {
+      "id": "working",
+      "start": 12.0,
+      "end": 16.0,
+      "picture": "Practice note retained; My working card. One restrained progress confirmation."
+    },
+    {
+      "id": "close",
+      "start": 16.0,
+      "end": 20.0,
+      "picture": "Back to the learner, calmer. KAIRO beside a device silhouette; lockup and slogan hold."
+    }
+  ],
+  "voice": {
+    "kairo": [
+      {
+        "id": "k1",
+        "text": "Meet KAIRO.",
+        "tts_text": "Meet Cairo.",
+        "slot": [
+          3.0,
+          5.0
+        ],
+        "start": 3.42
+      },
+      {
+        "id": "k2",
+        "text": "Bring your material. Check the source.",
+        "tts_text": "Bring your material. Check the source.",
+        "slot": [
+          5.0,
+          8.0
+        ],
+        "start": 5.12
+      },
+      {
+        "id": "k3",
+        "text": "Explore the motor. Practise explaining why.",
+        "tts_text": "Explore the motor. Practise explaining why.",
+        "slot": [
+          8.0,
+          12.0
+        ],
+        "start": 8.3
+      },
+      {
+        "id": "k4",
+        "text": "Keep work you can show.",
+        "tts_text": "Keep work you can show.",
+        "slot": [
+          12.0,
+          16.0
+        ],
+        "start": 12.45
+      },
+      {
+        "id": "k5",
+        "text": "KAIRO. Put knowledge to work.",
+        "tts_text": "Cairo. Put knowledge to work.",
+        "slot": [
+          16.0,
+          20.0
+        ],
+        "start": 17.72
+      }
+    ],
+    "chorus": [
+      {
+        "id": "c1",
+        "text": "Will I pass?",
+        "slot": [
+          0.0,
+          3.0
+        ],
+        "start": 0.18
+      },
+      {
+        "id": "c2",
+        "text": "Where do I start?",
+        "slot": [
+          0.0,
+          3.0
+        ],
+        "start": 1.12
+      },
+      {
+        "id": "c3",
+        "text": "Can I prove it?",
+        "slot": [
+          0.0,
+          3.0
+        ],
+        "start": 1.62
+      }
+    ],
+    "rules": "Chorus must end before 3.0 s; KAIRO never overlaps the chorus. No time-stretching beyond 3%."
+  },
+  "thoughts": {
+    "hero": [
+      {
+        "text": "Will I pass?",
+        "at": 0.16,
+        "pos": [
+          1225,
+          214
+        ],
+        "becomes": "My lesson"
+      },
+      {
+        "text": "Where do I start?",
+        "at": 1.1,
+        "pos": [
+          420,
+          150
+        ],
+        "becomes": "My material"
+      },
+      {
+        "text": "Can I prove it?",
+        "at": 1.6,
+        "pos": [
+          1450,
+          392
+        ],
+        "becomes": "My working"
+      }
+    ],
+    "atmosphere": [
+      {
+        "text": "When does NSFAS close?",
+        "at": 1.25,
+        "pos": [
+          236,
+          58
+        ],
+        "group": "funding"
+      },
+      {
+        "text": "Which role fits what I'm studying?",
+        "at": 1.45,
+        "pos": [
+          1660,
+          64
+        ],
+        "group": "work"
+      },
+      {
+        "text": "Is this answer actually in my source?",
+        "at": 1.62,
+        "pos": [
+          300,
+          902
+        ],
+        "group": "study"
+      },
+      {
+        "text": "What does the motor actually do?",
+        "at": 1.85,
+        "pos": [
+          1626,
+          934
+        ],
+        "group": "study",
+        "becomes": "Explore"
+      },
+      {
+        "text": "Which bursaries fit my degree?",
+        "at": 2.05,
+        "pos": [
+          186,
+          268
+        ],
+        "group": "funding"
+      },
+      {
+        "text": "What skill am I missing?",
+        "at": 2.2,
+        "pos": [
+          1774,
+          270
+        ],
+        "group": "work"
+      },
+      {
+        "text": "How do I practise without a lab?",
+        "at": 2.35,
+        "pos": [
+          214,
+          1016
+        ],
+        "group": "study"
+      },
+      {
+        "text": "What can I put in my portfolio?",
+        "at": 2.5,
+        "pos": [
+          1700,
+          1024
+        ],
+        "group": "work"
+      }
+    ],
+    "note": "Fictional learner questions, not funding or career guidance. Only the three hero questions are intended for reading."
+  },
+  "ui_copy": {
+    "rail": [
+      "My material",
+      "My lesson",
+      "Explore",
+      "My working"
+    ],
+    "rail_source": "studio/src/learning-flow/model.ts flowFor() labels",
+    "material_title": "3.2  The squirrel-cage rotor",
+    "material_body": "Aluminium bars run through the rotor slots and are joined at both ends by shorting rings. As the stator’s field sweeps past, it induces voltages in the bars. Current flows around the cage, and the force on those currents in the magnetic field turns the rotor.",
+    "material_body_source": "studio/src/engineering/motorContent.ts rotor-cage detail (KAIRO-authored)",
+    "material_tag": "Reviewed source",
+    "lesson_title": "Why the rotor turns",
+    "lesson_body": "The stator’s field sweeps past the bars and induces current. The force on that current turns the rotor.",
+    "check_button": "Check the source",
+    "checked": "Source checked",
+    "part_badge": 6,
+    "part_name": "Squirrel cage",
+    "part_role": "Bars where current is induced.",
+    "part_source": "studio/src/engineering/motorContent.ts PARTS rotor-cage",
+    "modes": [
+      "Inspect",
+      "Explode",
+      "Operate"
+    ],
+    "operate_note": "Speeds here are slowed and not to scale.",
+    "practice_title": "Try one small experiment",
+    "practice_prompt": "Pause the model and explain which observation supports that explanation.",
+    "practice_source": "studio/src/engineering/teaching.ts operate-mode prompt",
+    "learner_note": "The rotor turns a little slower than the field, so the bars keep cutting it and current is induced.",
+    "learner_note_status": "Fictional learner answer written for the advert.",
+    "saved": "Saved to My working",
+    "working_title": "Induction motor: why the rotor turns",
+    "working_rows": [
+      "Source checked · my notes, p. 3",
+      "My explanation, in my words",
+      "Observed in Operate · normal supply"
+    ],
+    "slogan": "Put knowledge to work.",
+    "cta": "Explore KAIRO",
+    "dramatisation_super": "Dramatisation. Interface reconstructed for illustration."
+  },
+  "music_and_fx": {
+    "music": "Original score synthesised in audio/build_audio.py: controlled rise 0-3 s, hard stop at 3.0 s, sparse warm pulse 5-16 s, lift at Operate, resolve by 19.6 s.",
+    "fx": [
+      {
+        "at": 0.16,
+        "id": "thought-tick"
+      },
+      {
+        "at": 1.1,
+        "id": "thought-tick"
+      },
+      {
+        "at": 1.6,
+        "id": "thought-tick"
+      },
+      {
+        "at": 3.0,
+        "id": "break"
+      },
+      {
+        "at": 3.38,
+        "id": "arrival-chime"
+      },
+      {
+        "at": 6.85,
+        "id": "ui-tap"
+      },
+      {
+        "at": 7.25,
+        "id": "line-draw"
+      },
+      {
+        "at": 9.45,
+        "id": "select-click"
+      },
+      {
+        "at": 10.55,
+        "id": "operate-click"
+      },
+      {
+        "at": 10.6,
+        "id": "rotor-whir"
+      },
+      {
+        "at": 13.85,
+        "id": "saved-tick"
+      },
+      {
+        "at": 14.3,
+        "id": "card-swish"
+      },
+      {
+        "at": 17.6,
+        "id": "logo-bell"
+      }
+    ]
+  }
+}

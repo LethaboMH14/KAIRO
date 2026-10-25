@@ -1,0 +1,20 @@
+✔ ignores a late answer after the stage context changes (10.2354ms)
+✔ ignores a late error after the question context changes (3.5191ms)
+✔ ignores a late answer after the topic context changes (1.6616ms)
+✔ a newer request owns the answer and completion state (2.4593ms)
+✔ ignores settled outcomes after the view unmounts (1.4684ms)
+✔ delivers current-context answers and failures (1.9254ms)
+✔ consumes autoplay through all four stages and stops at the last one (0.9154ms)
+✔ manual pause holds playback and manual stage selection preserves that intent (0.7996ms)
+✔ request gate remains usable after an effect cleanup replay (0.9602ms)
+✔ trace executes real topic filtering and returns finite measured timings (16.4976ms)
+✔ query input cannot alter SQL and invalid input is rejected (2.0529ms)
+✔ cloud questions are bounded before invoking a provider (0.9334ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1023.4916

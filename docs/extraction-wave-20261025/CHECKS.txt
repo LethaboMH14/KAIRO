@@ -1,0 +1,14 @@
+Focused check: `node --test tests/extraction-coverage.test.mjs` from `studio/`
+Result: 7 passed, 0 failed.
+Cases: per-page mixed/native/scanned/limited coverage; >=80-character native text with a scanned page still invokes OCR; duplicate blocks aggregate by source page; 100-section/16,000-per-section/48,000-total caps; image string locator and OCR state; unknown page count remains unknown.
+
+Requested extraction/security regression check: `node --test tests/extraction-coverage.test.mjs tests/native-extraction.test.mjs tests/security-upload-abuse.test.mjs` from `studio/`
+Result: 16 passed, 4 failed. All four failures are the native-extraction suite's local API requests (`fetch failed`, `connect EACCES 127.0.0.1:<ephemeral-port>`); native/security parser and admission cases passed. The sandbox denied the suite's ephemeral localhost listener/client flow, so those four end-to-end checks remain unverified.
+
+Python syntax check: `python -m py_compile server/learner-workspace/ocr.py` from `studio/`
+Result: no syntax diagnostics (exit 0).
+
+TypeScript check: `npx tsc --noEmit -p tsconfig.app.json` from `studio/`
+Result: inconclusive; process produced no diagnostics and remained active through two 10-second waits, then was interrupted. Do not treat as passed.
+
+No browser, headless browser, camera, cloud, package installation or human UI acceptance was performed. One existing security test invoked the production OCR subprocess fixture, but this is not an OCR-accuracy benchmark. Automated checks do not establish UI visual acceptance or OCR accuracy.

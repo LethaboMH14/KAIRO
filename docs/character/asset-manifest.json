@@ -1,0 +1,152 @@
+{
+ "credit": "Teacher based on Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY 4.0. Show this credit wherever the teacher appears.",
+ "shipped": [
+  {
+   "path": "studio/public/models/character/kairo-teacher.glb",
+   "bytes": 3424844,
+   "sha256": "5c3aacb1cb7df2a729ab763306420255ea37404d3b8ccd2b2602ea27b19ee6af",
+   "licence": "Derived from Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY 4.0; modified for KAIRO (see docs/character/README.md); KAIRO-authored hair, clothing, accents and clips",
+   "origin": "design/character/blender/build_all.ps1 (Blender 4.5.14 export, glTF-Transform 4.5.1 WebP + meshopt)"
+  },
+  {
+   "path": "studio/public/models/character/teacher-portrait.png",
+   "bytes": 1263220,
+   "sha256": "dbb8b3ca138f8fd0577e6a0788bf0c0dd733924f1732e1523cf350b0627d18e6",
+   "licence": "Derived from Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY 4.0; modified for KAIRO (see docs/character/README.md)",
+   "origin": "Eevee render of the exported GLB (design/character/blender/glb_review.py)"
+  },
+  {
+   "path": "studio/public/models/character/studio_small_09_1k.hdr",
+   "bytes": 1615248,
+   "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45",
+   "licence": "CC0 (Poly Haven, https://polyhaven.com/a/studio_small_09)",
+   "origin": "assets/reference/claude-kit/studio_small_09_1k.hdr; hash matches coordination/briefs/AVATAR-AND-PATHWAYS/assets.json"
+  },
+  {
+   "path": "studio/public/models/character/CREDITS.txt",
+   "bytes": 875,
+   "sha256": "23ebb09840c4199010f00eb5d4c3eb69a8ef1664527d475ee91e71f05d4a6ba5",
+   "licence": "Attribution notice",
+   "origin": "docs/character (CC-BY credit shipped beside the assets)"
+  },
+  {
+   "path": "studio/public/models/character/audio/en-GB-Chirp3-HD-Aoede.mp3",
+   "bytes": 29952,
+   "sha256": "893fe45a4a981eded3ca086fa629fb34bfc5938fe76ffff6cfee9c8a5a1e3e70",
+   "licence": "Google Cloud Text-to-Speech output generated for KAIRO (synthetic voice)",
+   "origin": "assets/reference/teacher/en-GB-Chirp3-HD-Aoede.mp3 (AVATAR-001, authored sentence)"
+  },
+  {
+   "path": "studio/public/models/character/audio/en-GB-Chirp3-HD-Puck.mp3",
+   "bytes": 32256,
+   "sha256": "1b51ce9b1f994113565245c84940d88a797f7295985d2b75f70d9a08788ea97c",
+   "licence": "Google Cloud Text-to-Speech output generated for KAIRO (synthetic voice)",
+   "origin": "assets/reference/teacher/en-GB-Chirp3-HD-Puck.mp3 (AVATAR-001, authored sentence)"
+  },
+  {
+   "path": "studio/public/models/character/audio/en-US-Chirp3-HD-Kore.mp3",
+   "bytes": 30912,
+   "sha256": "42333619e48615c124fb79005adda10951ca393150d62da472f84aedf5c7ee4a",
+   "licence": "Google Cloud Text-to-Speech output generated for KAIRO (synthetic voice)",
+   "origin": "assets/reference/teacher/en-US-Chirp3-HD-Kore.mp3 (AVATAR-001, authored sentence)"
+  },
+  {
+   "path": "studio/public/models/character/audio/en-GB-Chirp3-HD-Aoede.visemes.json",
+   "bytes": 4239,
+   "sha256": "84d8538a7a793a49f80700ec0e43dd5e033ca3db27eb5656a8f74bf9e15c110f",
+   "licence": "Timing data generated for KAIRO",
+   "origin": "Rhubarb Lip Sync 1.14.0 (MIT) on the decoded WAV with the transcript"
+  },
+  {
+   "path": "studio/public/models/character/audio/en-GB-Chirp3-HD-Puck.visemes.json",
+   "bytes": 4086,
+   "sha256": "15a3d596d191857ef1fc165aae823a440ffe0920ee26057954f13a8bce6d794d",
+   "licence": "Timing data generated for KAIRO",
+   "origin": "Rhubarb Lip Sync 1.14.0 (MIT) on the decoded WAV with the transcript"
+  },
+  {
+   "path": "studio/public/models/character/audio/en-US-Chirp3-HD-Kore.visemes.json",
+   "bytes": 4318,
+   "sha256": "84194baf15a7acef4067c16be0ca71bd442bb3ab3eb85a09ccdb8c39c4dca631",
+   "licence": "Timing data generated for KAIRO",
+   "origin": "Rhubarb Lip Sync 1.14.0 (MIT) on the decoded WAV with the transcript"
+  }
+ ],
+ "sources": [
+  {
+   "path": "design/character/blender/kairo_teacher.blend",
+   "bytes": 11024047,
+   "sha256": "95d7c98345ad19faba6af3d8c4682d7c3d413ab616699dc6867d36b4939d049b",
+   "licence": "Derived from Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY 4.0; modified for KAIRO (see docs/character/README.md); contains Blender Studio CloudRig rig UI text (GPL)",
+   "origin": "build_teacher.py + teacher_hair.py + teacher_wardrobe.py"
+  },
+  {
+   "path": "design/character/textures/skin_head.png",
+   "bytes": 1370079,
+   "sha256": "b30790d5faa4ead2fa43bf847dec0afb5d2c03ff6ac147b10b22bec8edb57b28",
+   "licence": "Derived from Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY 4.0; modified for KAIRO (see docs/character/README.md)",
+   "origin": "make_textures.py from TEX-rain_body_diffuse.1003.png"
+  },
+  {
+   "path": "design/character/textures/skin_body.png",
+   "bytes": 328955,
+   "sha256": "242f50fc1ede86588475b8b081b78a3e8c29e07562a77c001bf1b7d699966fd8",
+   "licence": "Derived from Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY 4.0; modified for KAIRO (see docs/character/README.md)",
+   "origin": "make_textures.py from TEX-rain_body_diffuse.1001.png"
+  },
+  {
+   "path": "design/character/textures/skin_hands.png",
+   "bytes": 231705,
+   "sha256": "dd58a1980788176e9f563f0cecf99e24ad3df6d7102c269a637f5aef5064c9b0",
+   "licence": "Derived from Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY 4.0; modified for KAIRO (see docs/character/README.md)",
+   "origin": "make_textures.py from TEX-rain_body_diffuse.1002.png with a geometry-derived palm mask"
+  },
+  {
+   "path": "design/character/textures/eyes.png",
+   "bytes": 193200,
+   "sha256": "202cdab71141e97dadc53a094573e77a13a6e1dacf43c8f02532f90b88a5e954",
+   "licence": "Derived from Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY 4.0; modified for KAIRO (see docs/character/README.md); iris painted procedurally for KAIRO",
+   "origin": "make_textures.py from TEX-rain_eyes.png"
+  },
+  {
+   "path": "design/character/textures/hair_twist_normal.png",
+   "bytes": 6731,
+   "sha256": "91f3eeb473d93cb6c579ed2ea297ce8cae82a14d2e7bc79108728bb305423781",
+   "licence": "KAIRO-authored",
+   "origin": "make_hair_textures.py (procedural)"
+  },
+  {
+   "path": "design/character/textures/fabric_weave_normal.png",
+   "bytes": 145105,
+   "sha256": "450c247b41cbe9d4ffd09ec928b960cf38be2f7efdef68ad63f6ef652f0fe9c8",
+   "licence": "KAIRO-authored (currently unused by the shipped materials)",
+   "origin": "make_hair_textures.py (procedural)"
+  }
+ ],
+ "inputs": [
+  {
+   "path": "assets/reference/claude-kit/rain-v3.zip",
+   "bytes": 67579177,
+   "sha256": "80217f163f6392dc829233d63c2cfb5e1376775bc34101ad14f39631fea70d24",
+   "licence": "CC-BY 4.0 (Blender Studio)",
+   "origin": "https://studio.blender.org/characters/rain/v3/"
+  },
+  {
+   "path": "tools/character/downloads/Rhubarb-Lip-Sync-1.14.0-Windows.zip",
+   "bytes": 87374842,
+   "sha256": "62fa416a8d5e382a3828ee4bef358ce520d0b4cabdeaea75a7ac266d098d1fe3",
+   "licence": "MIT (third-party components BSD/Boost/MIT, see tools/character/rhubarb/LICENSE.md)",
+   "origin": "https://github.com/DanielSWolf/rhubarb-lip-sync/releases/tag/v1.14.0"
+  }
+ ],
+ "tools": {
+  "blender": "4.5.14 LTS (tools/blender-install.json)",
+  "gltf-transform": "@gltf-transform/cli 4.5.1, MIT (tools/character/node)",
+  "gltf-validator": "gltf-validator 2.0.0-dev.3.10, Apache-2.0 (tools/character/node)",
+  "rhubarb": "Rhubarb Lip Sync 1.14.0, MIT (tools/character/rhubarb)",
+  "python": "system Python 3.11 with Pillow and numpy for texture and sheet scripts"
+ },
+ "totals": {
+  "shippedBytes": 6409950
+ }
+}

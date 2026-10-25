@@ -1,0 +1,71 @@
+{
+  "evaluation": {
+    "accuracyAtHalf": 0.5810147299509002,
+    "brier": 0.2360372074323339,
+    "constantTrainingPrevalenceBrier": 0.2400965857673743,
+    "count": 611,
+    "logLoss": 0.6646110425192736
+  },
+  "excludedFromFeatures": [
+    "eventId",
+    "lessonId",
+    "sourceRevision",
+    "conceptId",
+    "taskId",
+    "taskRevision",
+    "rubricRevision",
+    "occurredAt",
+    "correct",
+    "contextKey",
+    "syntheticLearnerGroup",
+    "syntheticSourceGroup"
+  ],
+  "features": [
+    "history_count_capped",
+    "history_correct_smoothed",
+    "history_independent_smoothed",
+    "help_hint",
+    "help_worked_example",
+    "help_unknown",
+    "assessment_recall",
+    "assessment_transfer"
+  ],
+  "interpretation": "Synthetic partitions share a generated mechanism only. Metrics demonstrate reproducible code execution, not held-out real-learner performance, learning, mastery, fairness, or commercial value.",
+  "label": "synthetic-only CPU baseline; not a learner prediction or efficacy result",
+  "missingness": {
+    "missingHelpExposureFieldIsInvalid": true,
+    "unknownHelpExposureEvents": 242,
+    "unobservedAttemptsAreNotLabeledAsIncorrect": true,
+    "unobservedScheduledAttempts": 161
+  },
+  "model": {
+    "epochs": 500,
+    "featureStandardization": "training partition only",
+    "history": "strictly prior attempts for same synthetic learner and concept within each partition",
+    "kind": "standard-library logistic regression",
+    "l2": 0.04,
+    "learningRate": 0.12
+  },
+  "schemaVersion": 1,
+  "seed": 20261025,
+  "split": {
+    "evaluationCount": 611,
+    "evaluationLearnerGroups": 80,
+    "evaluationSourceRevisions": 12,
+    "excludedCrossGroupRows": 1211,
+    "learnerDisjoint": true,
+    "method": "independent deterministic hash partition by synthetic learner group and source revision; crossing rows excluded",
+    "sourceRevisionDisjoint": true,
+    "trainCount": 577,
+    "trainLearnerGroups": 80,
+    "trainSourceRevisions": 12
+  },
+  "syntheticDataset": {
+    "observedAttempts": 2399,
+    "scheduledAttempts": 2560,
+    "sha256": "5f7061e2f283bec9f6bbf542dd58856036838cd2c066e8c495fefbe4f77e4d6b",
+    "unknownHelpExposure": 242,
+    "unknownHelpExposureRate": 0.10087536473530638,
+    "unobservedAttempts": 161
+  }
+}

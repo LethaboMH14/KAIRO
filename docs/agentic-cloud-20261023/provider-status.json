@@ -1,0 +1,14 @@
+{
+  "groq": {
+    "keyPresent": false,
+    "model": "openai/gpt-oss-20b",
+    "freePlanConfirmed": false
+  },
+  "openrouter": {
+    "keyPresent": false,
+    "model": "openrouter/free",
+    "freeOnly": true
+  },
+  "liveCallsMade": 0,
+  "scope": "isolated synthetic evaluation; not connected to learner routes"
+}

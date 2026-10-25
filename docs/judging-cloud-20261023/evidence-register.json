@@ -1,0 +1,41 @@
+{
+  "source": "User-provided criteria on 2026-10-23; headings corroborated by organizer general FAQ",
+  "scale": "0-10 each per user; hackathon-specific weighting unverified",
+  "items": [
+    {
+      "criterion": "Product",
+      "status": "implemented-parts-open-acceptance",
+      "next": "Fix playback state, integrate resume/recovery, complete judge path; validate need and traction."
+    },
+    {
+      "criterion": "Creativity",
+      "status": "demonstrable-mechanism-needs-user-comparison",
+      "next": "Show a grounded variable/attempt/consequence/evidence interaction; avoid uniqueness guarantees."
+    },
+    {
+      "criterion": "Usability",
+      "status": "automated-evidence-human-device-gap",
+      "next": "Recovery panels, keyboard/reading checks, consented formative usability tasks."
+    },
+    {
+      "criterion": "Sustainability",
+      "status": "commercial-and-operating-hypotheses",
+      "next": "Measured gross cost/session, buyer interviews, credit-expiry and support plan."
+    },
+    {
+      "criterion": "Impact",
+      "status": "unvalidated-learning-outcomes",
+      "next": "Consented task/pre-post/follow-up measures with actual sample and limitations."
+    },
+    {
+      "criterion": "Presentation",
+      "status": "story-and-rehearsal-pending",
+      "next": "One complete honest live task, permitted backup, official pitch format confirmed."
+    },
+    {
+      "criterion": "Intelligence",
+      "status": "bounded-ai-and-rules-no-validated-forecast",
+      "next": "Evaluate grounded output/adaptation; prediction only after holdout baseline and calibration."
+    }
+  ]
+}

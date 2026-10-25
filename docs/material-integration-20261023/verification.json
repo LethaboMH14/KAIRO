@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-23",
+  "owner": "codex-material-20261023-p",
+  "rootModel": "gpt-6",
+  "rootEffort": "unknown",
+  "focused": {
+    "passed": 19,
+    "failed": 0
+  },
+  "full": {
+    "passed": 471,
+    "failed": 0
+  },
+  "build": "passed: TypeScript and Vite; existing >500kB warning",
+  "browserObserved": false,
+  "cloudCalled": false,
+  "deployed": false,
+  "hashes": {
+    "studio/src/workspace/SourceWorkspace.tsx": "41b07c3ae9afb3a751586674cfc7931128d45372a8d95c6d246f9df515d36ef0",
+    "studio/src/workspace/material-flow.css": "031ae1f360aae12bd42622acb2ff85801105eb870bb011e818910d40672a108c",
+    "studio/src/material-lesson-plan/model.ts": "8f9b0b83bd2619425423c9c9a321afe4f48649ec11140950ba99f14abdeb4a2e",
+    "studio/src/material-planner-ui/MaterialPlanner.tsx": "5fb2e915b877f4266a89ecc21eae98016d111d7667ce97b467333932dda79ee2",
+    "studio/tests/material-integration.test.mjs": "e8d8cbefb9219445eb4ff962f69e88496dc8c2c425633cc02182d48e2537a4db"
+  }
+}

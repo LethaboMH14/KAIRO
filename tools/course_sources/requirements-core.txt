@@ -1,0 +1,6 @@
+# Versions observed in the existing local Python runtime. No app npm packages changed.
+mcp==1.23.3
+pypdf
+pypdfium2
+python-docx
+openpyxl

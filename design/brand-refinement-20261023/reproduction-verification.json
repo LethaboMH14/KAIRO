@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-23",
+  "vectors": [
+    {
+      "file": "kairo-horizontal-forest.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": true,
+      "sha256": "67a953be7dbc2c3e4dfcd1fe39a9db956b82acb46ffd1ab5cfa346d09bdce6ae"
+    },
+    {
+      "file": "kairo-horizontal-ivory.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": true,
+      "sha256": "f075e70d08129fa9919ae69178ec1495e897e66bc3e0c11ecdac14511507c4df"
+    },
+    {
+      "file": "kairo-passage-pattern.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": null,
+      "sha256": "389eddc4ed6087b21d6843c57ca3ce12e71106d50334e9e534b3f23477919402"
+    },
+    {
+      "file": "kairo-reproduction-proof.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": null,
+      "sha256": "75971844da0d1daf90d88b337d7a4555ea3fdb70ed59562bfad10fba393131a4"
+    },
+    {
+      "file": "kairo-stacked-forest.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": true,
+      "sha256": "195410be331b2735083de5ffc901001acaf1802f865f3e3b67ef06f278709367"
+    },
+    {
+      "file": "kairo-symbol-forest.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": true,
+      "sha256": "d077dfa65a3fadacfb7c75f87d89383e3f060783aa6d086215fa18fe8b14cbb9"
+    },
+    {
+      "file": "kairo-symbol-ivory.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": true,
+      "sha256": "3bb2b0620cf0ab6659fe40fbc3815289bd9e4c365222b43dc33df50c3417696d"
+    },
+    {
+      "file": "kairo-vector-proof.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": null,
+      "sha256": "f384d2c8a65eb312a228a5a8d56a8059166e035d1497d91e598d7e6eab8e1801"
+    },
+    {
+      "file": "kairo-wordmark-forest.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": true,
+      "sha256": "da9d156869572ac5fb76df6714c9f4b2972cecc608daa54a2e51dc676ed4f4b4"
+    },
+    {
+      "file": "kairo-wordmark-ivory.svg",
+      "xml": true,
+      "noExternalLinks": true,
+      "noScripts": true,
+      "logoOutlinesNoFontDependency": true,
+      "sha256": "166a23ad7f338e165bad01f200ebfcfad6fa5287bbb38abb242d473714d1bc36"
+    }
+  ],
+  "logoMastersChecked": 7,
+  "contrastTokenPairs": [
+    {
+      "foreground": "#1E332A",
+      "background": "#F3ECDD",
+      "ratio": 11.43
+    },
+    {
+      "foreground": "#626B4D",
+      "background": "#F3ECDD",
+      "ratio": 4.79
+    },
+    {
+      "foreground": "#B39356",
+      "background": "#F3ECDD",
+      "ratio": 2.47
+    }
+  ],
+  "limits": [
+    "Contrast ratios refer to flat intended sRGB tokens, not generated pixels or embroidery.",
+    "XML/outline checks are not print/garment reproduction acceptance.",
+    "Small-size proofs are inspectable studies, not automatically passed recognizability tests.",
+    "No trademark clearance or original-typeface claim."
+  ]
+}

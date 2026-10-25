@@ -1,0 +1,17 @@
+✔ load actual integrated components and adapters (1274.7259ms)
+✔ real reviewed-source loader supplies native Lesson identity to mounted readiness (15.8579ms)
+✔ fresh entry cancels old narration before committing reading start (2.8666ms)
+✔ only validated matching cursor offers resume and cancellation precedes it (1.3706ms)
+✔ source mismatch blocks even direct start callbacks, counts and resume (1.1776ms)
+✔ saving label follows actual host save evidence without implying cloud sync (1.2547ms)
+✔ native historical attempts remain assistance-unknown with exact revision and latest result (0.3721ms)
+✔ actual LessonPractice now renders the evidence card without inventing help or levels (3.3763ms)
+✔ close actual SSR server (5.7463ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2010.6264

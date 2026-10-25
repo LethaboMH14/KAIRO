@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-23T22:16:24.679Z",
+  "beforeStatus": 404,
+  "initializeStatus": 200,
+  "emailUpdateStatus": 200,
+  "afterStatus": 200,
+  "configured": true,
+  "emailEnabled": true,
+  "passwordRequired": true,
+  "anonymousEnabled": false,
+  "phoneEnabled": false
+}

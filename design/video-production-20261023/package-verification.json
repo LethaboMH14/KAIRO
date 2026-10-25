@@ -1,0 +1,20 @@
+{
+  "bundle": "kairo-production-assets.zip",
+  "bytes": 27688817,
+  "zip_crc": "passed",
+  "files": [
+    "design\\video-production-20261023\\kairo-aoede-20s-production-preview.mp4",
+    "design\\video-production-20261023\\kairo-native-motion-test.mp4",
+    "design\\video-production-20261023\\kairo-production-stage.blend",
+    "design\\video-production-20261023\\kairo-production-frame.png",
+    "design\\video-production-20261023\\voice\\kairo-narration-17s.mp3",
+    "design\\video-production-20261023\\voice\\voice-cut-20s.mp3",
+    "docs\\video-production-20261023\\README.md",
+    "docs\\video-production-20261023\\LUMA-PASTE-FIRST.txt",
+    "docs\\video-production-20261023\\CLAUDE-CONTINUE.md",
+    "design\\brand-master-20261023\\master\\kairo-lockup-horizontal-chalk.svg",
+    "studio\\public\\models\\character\\CREDITS.txt"
+  ],
+  "sha256": "959c08d312dcf6311685db65858c1d77282453c993ca2c73d7584408fcf39e45",
+  "excluded": "User screenshots and any personal face/voice references are excluded from the shareable bundle."
+}

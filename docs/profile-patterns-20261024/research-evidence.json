@@ -1,0 +1,39 @@
+{
+  "package": "PROFILE-PATTERNS-20261024-001",
+  "status": "source-based proposal; not implemented",
+  "reviewedAt": "2026-10-24",
+  "researcher": {
+    "agent": "codex-luna-edited-lesson-review-20261023-a",
+    "client": "Codex",
+    "model": "gpt-6-luna",
+    "effort": "light"
+  },
+  "officialReferencePages": 16,
+  "productsCovered": ["LinkedIn", "GitHub", "Behance", "Credly", "1EdTech Open Badges", "Handshake"],
+  "localFilesRead": [
+    "studio/src/profile/model.ts",
+    "studio/src/profile/ProgressPage.tsx",
+    "studio/src/evidence/model.ts",
+    "studio/src/portfolio-export/model.ts",
+    "studio/src/pathways/model.ts",
+    "studio/src/pathways/RolePathways.tsx",
+    "docs/account-wave-20261024/NEXT-PACKAGES.md",
+    "coordination/handoffs/2026-10-24-account-wave.md"
+  ],
+  "checks": [
+    {
+      "command": "python -c \"import json,pathlib; d=json.loads(pathlib.Path('docs/profile-patterns-20261024/share-example.json').read_text()); assert d['syntheticExample'] is True and d['bindingContract'] is False; print('share example JSON valid and explicitly synthetic/nonbinding')\"",
+      "result": "passed"
+    },
+    {
+      "command": "Manual source and scope review against the named read-only KAIRO files and official URLs in sources.md",
+      "result": "completed; no runtime or shared-interface changes"
+    }
+  ],
+  "limits": [
+    "Official help pages are product documentation, not independent security audits or evidence of hiring outcomes.",
+    "Current browser-local preview data is stored in a shared app-host/browser workspace and is not verified as isolated to an authenticated learner. Audience-unshared is not encryption or confidentiality on a shared device/host.",
+    "No browser observation, employer/learner data, usability study, legal review, credential verification or runtime implementation.",
+    "The synthetic example is not an approved runtime contract and grants no consent or access."
+  ]
+}

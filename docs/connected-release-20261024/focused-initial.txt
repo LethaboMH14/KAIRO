@@ -1,0 +1,8 @@
+✔ actual account router rejects bad and missing origins on mutations (117.5823ms)
+✔ failed provider authentication returns generic error and exposes no provider details (122.3667ms)
+✔ successful sign-in puts only an HttpOnly Secure SameSite cookie on the response (12.3315ms)
+✔ sign-in rejects an old auth_time before creating a session cookie (7.1454ms)
+✔ status exposes only the owner hash and asks Admin Auth to check revocation (8.1562ms)
+✔ session guard checks revocation and rejects revoked cookies (16.3791ms)
+✔ password reset response is identical when provider says account exists or does not (40.7982ms)
+✖ logout revokes refresh tokens and clears the cookie even when revocation fails (19.2671ms)

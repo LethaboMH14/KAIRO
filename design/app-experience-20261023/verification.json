@@ -1,0 +1,16 @@
+{
+  "schema": "kairo-experience-checks/1",
+  "date": "2026-10-23",
+  "screens": 112,
+  "rendererTypes": 100,
+  "journeys": 7,
+  "groups": 8,
+  "allLinksResolve": true,
+  "localAssetsExist": true,
+  "noRemoteCalls": true,
+  "noPersistentPersonalData": true,
+  "syntaxAndRenderContracts": "passed",
+  "browserVisualAcceptance": "pending - prior observation denial preserved",
+  "mobileAudioAccessibilityAcceptance": "pending - not established by these checks",
+  "productionReadiness": false
+}

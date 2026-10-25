@@ -1,0 +1,98 @@
+{
+  "id": "up-bcom-information-systems-year-2-2026",
+  "field": "informatics",
+  "institution": "University of Pretoria",
+  "programme": "BCom specialising in Information Systems (07130173)",
+  "year": 2,
+  "academicYear": 2026,
+  "modules": [
+    {
+      "code": "INF 214",
+      "title": "Informatics 214",
+      "year": 2,
+      "semester": "Semester 1",
+      "summary": "Design relational databases with SQL and entity-relationship models, apply normalisation, and consider database development across its life cycle.",
+      "sourceUrl": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20214",
+      "sourceLocator": "Module code; Module content; Period of presentation",
+      "activity": "computer-science",
+      "activityNote": "KAIRO-authored enrichment: map database concepts to a request trace that follows data through an application; this is not a UP-prescribed exercise."
+    },
+    {
+      "code": "INF 225",
+      "title": "Informatics 225",
+      "year": 2,
+      "semester": "Semester 2",
+      "summary": "Explore the infrastructure and integration that support information systems.",
+      "sourceUrl": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20225",
+      "sourceLocator": "Module code; Module content; Period of presentation",
+      "activity": "computer-science",
+      "activityNote": "KAIRO-authored enrichment: inspect a request trace across application components and discuss where integration occurs; not a UP-prescribed exercise."
+    },
+    {
+      "code": "INF 261",
+      "title": "Informatics 261",
+      "year": 2,
+      "semester": "Semester 2",
+      "summary": "Study database transactions, concurrent work, recovery and administration, including distributed and client-server databases.",
+      "sourceUrl": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20261",
+      "sourceLocator": "Module code; Module content; Period of presentation",
+      "activity": "computer-science",
+      "activityNote": "KAIRO-authored enrichment: use a request trace to discuss transaction and recovery touchpoints; not a UP-prescribed exercise."
+    },
+    {
+      "code": "INF 271",
+      "title": "Informatics 271",
+      "year": 2,
+      "semester": "Year",
+      "summary": "Analyse information-system needs and plan system design, architecture, interfaces, controls, implementation and project work.",
+      "sourceUrl": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20271",
+      "sourceLocator": "Module code; Module content; Period of presentation",
+      "activity": "computer-science",
+      "activityNote": "KAIRO-authored enrichment: examine how a request trace reflects system boundaries and design decisions; not a UP-prescribed exercise."
+    },
+    {
+      "code": "INF 272",
+      "title": "Informatics 272",
+      "year": 2,
+      "semester": "Year",
+      "summary": "Develop advanced programming skills.",
+      "sourceUrl": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20272",
+      "sourceLocator": "Module code; Module content; Period of presentation",
+      "activity": "computer-science",
+      "activityNote": "KAIRO-authored enrichment: follow a request trace into code paths and discuss how program behaviour relates to the request; not a UP-prescribed exercise."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.up.ac.za/yearbooks/2026/EBIT-faculty/UD-programmes/view/07130173",
+      "title": "BCom specialising in Information Systems (07130173), University of Pretoria Yearbooks 2026",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "url": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20214",
+      "title": "Informatics 214, University of Pretoria Yearbooks 2026",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "url": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20225",
+      "title": "Informatics 225, University of Pretoria Yearbooks 2026",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "url": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20261",
+      "title": "Informatics 261, University of Pretoria Yearbooks 2026",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "url": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20271",
+      "title": "Informatics 271, University of Pretoria Yearbooks 2026",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "url": "https://www.up.ac.za/yearbooks/2026/EMS-faculty/UG-modules/view/INF%20272",
+      "title": "Informatics 272, University of Pretoria Yearbooks 2026",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "limits": "Illustrative public-curriculum selection, not a UP integration, student record, complete transcript, affiliation, endorsement, or claim that a learner is enrolled. The 2026 programme yearbook lists INF 214, INF 225, INF 261, INF 271 and INF 272 as second-year core modules. Module periods are copied from their individual official records. KAIRO activity labels and notes are authored enrichment, not university-prescribed exercises; a Computer Science request trace is used only as an enrichment context. No attainment or learning outcome is claimed."
+}

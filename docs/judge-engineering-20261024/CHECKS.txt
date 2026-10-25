@@ -1,0 +1,9 @@
+Check date: 2026-10-24
+
+PASS: Python JSON parser accepted studio/data/student-spaces/engineering.json.
+PASS: exact contract top-level keys and module object keys.
+PASS: 6 modules, all year 3, 2026 record; activity enum values valid; semester represented as null when unverified.
+PASS: every selected course has an official MECN code and official source locator.
+PASS: mappings labelled KAIRO enrichment, with no claim of prescribed university activities.
+
+Research: official Wits Mechanical Engineering course finder (Curriculum / Third-year) and official 2026 EBE Senate Rules and Syllabuses (Mechanical Engineering Year of Study III; relevant MECN syllabus entries). No browser observation, app/runtime integration, or human validation performed.

@@ -1,0 +1,35 @@
+.kes-summary {
+  --kes-chalk: var(--chalk, #f5f0e6);
+  --kes-paper: var(--paper, #fffdf8);
+  --kes-moss: var(--moss, #3e5144);
+  --kes-sage: var(--sage, #a7af91);
+  --kes-ink: var(--ink, #252b28);
+  box-sizing: border-box;
+  display: grid;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 52rem;
+  padding: clamp(1rem, 3vw, 1.4rem);
+  color: var(--kes-ink);
+  background: var(--kes-chalk);
+  border: 1px solid var(--kes-sage);
+  border-radius: 1rem;
+  font: inherit;
+}
+.kes-summary *, .kes-summary *::before, .kes-summary *::after { box-sizing: border-box; }
+.kes-kicker { margin: 0; color: var(--kes-moss); font-size: .75rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.kes-summary h2 { margin: 0; font-size: clamp(1.15rem, 3vw, 1.45rem); line-height: 1.25; overflow-wrap: anywhere; }
+.kes-intro, .kes-review-note, .kes-coverage-note { max-width: 68ch; margin: 0; line-height: 1.55; }
+.kes-intro { color: #4a4b40; }
+.kes-counts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: .6rem; margin: 0; }
+.kes-counts > div { min-width: 0; padding: .8rem; background: var(--kes-paper); border: 1px solid var(--kes-sage); border-radius: .65rem; }
+.kes-counts dt { color: var(--kes-moss); font-size: .82rem; line-height: 1.35; }
+.kes-counts dd { margin: .3rem 0 0; font-size: 1.3rem; font-weight: 700; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.kes-review-note { color: var(--kes-moss); font-weight: 650; }
+.kes-issues { display: grid; gap: .4rem; padding: .8rem; color: #5c3829; background: #f8e9dc; border: 1px solid #dfbda6; border-radius: .65rem; overflow-wrap: anywhere; }
+.kes-issues p { margin: 0; line-height: 1.45; }
+.kes-issues details { margin-top: .15rem; }
+.kes-issues summary { width: fit-content; cursor: pointer; font-weight: 650; }
+.kes-issues ul { display: grid; gap: .35rem; margin: .6rem 0 0; padding-left: 1.25rem; line-height: 1.45; }
+.kes-coverage-note { color: var(--kes-moss); font-size: .92rem; }
+@media (max-width: 24rem) { .kes-summary { border-radius: .7rem; } .kes-counts { grid-template-columns: 1fr; } }

@@ -1,0 +1,1 @@
+{"checkedAt":"2026-10-24T01:12:12.827Z","syntheticOnly":true,"profiles":[{"studentId":"KAIRO-ENG-0001","cohort":"engineering","modules":6,"preparedMaterials":6},{"studentId":"KAIRO-INF-0001","cohort":"informatics","modules":5,"preparedMaterials":5}]}

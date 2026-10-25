@@ -1,0 +1,17 @@
+✔ malformed negative XLSX string index cannot borrow unrelated source text (1006.406ms)
+✔ whole text coverage and truncation are explicit (778.5091ms)
+✔ native office extraction retains document locators and order (5143.5661ms)
+✔ PDF pages are covered beyond page four and blank scans are skipped (3866.1048ms)
+✔ PPTX speaker notes retain order and expanded package limit rejects safely (3362.0905ms)
+✔ per-block truncation and malformed packages remain explicit (524.3891ms)
+✔ sparse XLSX coordinates do not expand row gaps (1476.2661ms)
+✔ run enforces max units and output cap while summarizing unknown tail (2174.3418ms)
+✔ XLSX worksheet names follow workbook relationships after tab reorder (1468.3811ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19966.4521

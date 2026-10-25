@@ -1,0 +1,18 @@
+Command (from studio/): node --test tests/security-upload-abuse.test.mjs
+Environment: Node v24.18.0; Python 3.11.9 project OCR virtualenv.
+
+✔ actual upload admission rejects executable and active-document extensions (2.2253ms)
+✔ actual upload admission rejects signature and extension mismatches for supported binary types (0.5421ms)
+✔ actual upload admission enforces byte type, nonempty input and eight MiB limit (1.0725ms)
+✔ actual Python extractor reports a malformed ZIP Office package without publishing blocks (463.3323ms)
+✔ actual Python extractor rejects declared ZIP expansion above its metadata bound before parsing (733.6215ms)
+✔ actual extractor output cannot be rebound to another uploaded file hash (558.5934ms)
+✔ actual image extraction rejects truncated payloads that pass the cheap signature prefilter (2160.6899ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4144.5396

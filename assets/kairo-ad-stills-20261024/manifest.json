@@ -1,0 +1,41 @@
+{
+  "generationDate": "2026-10-24",
+  "tool": "built-in image_gen",
+  "identityReference": "01-student-overwhelmed.png",
+  "files": [
+    {
+      "file": "01-student-overwhelmed.png",
+      "role": "Opening, thought overlays added by editor",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1932308,
+      "sha256": "6c79d0aba2fe595095797f4820e81cce27a1e01b8e3fee3f5b84a53092789f31",
+      "generatedFictionalStudent": true,
+      "actualAppCapture": false,
+      "founderLikeness": false
+    },
+    {
+      "file": "02-student-understanding.png",
+      "role": "Matching relief/closing frame",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1837818,
+      "sha256": "506850103aa53ab309654a96ceb7e9d47a0a4c8160e05b14169f8f93eb070271",
+      "generatedFictionalStudent": true,
+      "actualAppCapture": false,
+      "founderLikeness": false
+    },
+    {
+      "file": "03-laptop-composite-plate.png",
+      "role": "Blank screen for perspective compositing",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1803591,
+      "sha256": "fd97db377782a98fee9125b03c8a8ac149caaa23e247afa98363d2d444feab65",
+      "generatedFictionalStudent": true,
+      "actualAppCapture": false,
+      "founderLikeness": false
+    }
+  ],
+  "humanOrApplicationEvidence": false
+}

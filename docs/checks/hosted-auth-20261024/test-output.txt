@@ -1,0 +1,7 @@
+Command: cd studio; node --test tests/hosted-auth.test.mjs
+Node: v24.18.0
+Result: 4 tests passed, 0 failed.
+
+Coverage: valid identity while ignoring client body/query UID; cross-project audience; expired token; missing UID; conflicting subject; malformed bearer; verifier failure with generic response/no detail leakage; missing project config; bad issuer; invalid issue/expiry values; control characters.
+
+Environment note: initial loopback HTTP attempt was denied by sandbox (EACCES). Tests then invoked the actual Express app with synthetic Node request/response streams. JWT verification is injected and synthetic; cryptographic Firebase verification is not established by this evidence.

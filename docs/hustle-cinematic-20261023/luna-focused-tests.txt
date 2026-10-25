@@ -1,0 +1,23 @@
+✔ builds source-linked sequence and labels quiz/example limits without inventing content (13.7475ms)
+✔ changed or unavailable source context blocks all start steps (1.1033ms)
+✔ citation IDs must resolve and supportQuote must exactly anchor cited evidence (2.7463ms)
+✔ vague objective and missing/long content yield actionable warnings (2.7075ms)
+✔ invalid choices are warned and omitted; bad source anchors fail closed (0.6986ms)
+✔ missing anchors stay visible, estimates exclude practice, and frozen input is not mutated (0.7392ms)
+✔ load actual panel through installed Vite SSR (607.8386ms)
+✔ unknown time estimate, capability, session-only notice and clear first action render (6.0593ms)
+✔ save wording describes capability only and gives a conditional next step when unavailable (1.0272ms)
+✔ invalid saved step does not offer resume; valid saved step offers resume and fresh start (0.6997ms)
+✔ changed source blocks begin/resume and offers review; unavailable source gates retry callback (0.9382ms)
+✔ busy state disables controls and guards callbacks even if called directly (0.2843ms)
+✔ malicious learner-facing text is escaped and repeated panels have no fixed IDs (0.9899ms)
+✔ semantic labels and status are native; visible percentage guard excludes styles (1.5778ms)
+✔ close SSR server (1.5873ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2226.1415

@@ -1,0 +1,315 @@
+{
+ "source": "Rhubarb Lip Sync 1.14.0 (MIT), pocketSphinx recogniser with the dialog text",
+ "audio": "en-US-Chirp3-HD-Kore.mp3",
+ "duration": 7.77,
+ "transcript": "Let us take this one step at a time. Twenty notebooks, plus twelve delivered, minus nine sold, leaves twenty three.",
+ "shapes": "Rhubarb A-H and X (rest)",
+ "visemes": [
+  {
+   "at": 0.0,
+   "end": 0.31,
+   "shape": "X",
+   "weight": 1
+  },
+  {
+   "at": 0.31,
+   "end": 0.38,
+   "shape": "H",
+   "weight": 1
+  },
+  {
+   "at": 0.38,
+   "end": 0.45,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 0.45,
+   "end": 0.52,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 0.52,
+   "end": 0.59,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 0.59,
+   "end": 0.73,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 0.73,
+   "end": 1.01,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 1.01,
+   "end": 1.15,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 1.15,
+   "end": 1.29,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 1.29,
+   "end": 1.36,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 1.36,
+   "end": 1.43,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 1.43,
+   "end": 1.54,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 1.54,
+   "end": 1.69,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 1.69,
+   "end": 1.9,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 1.9,
+   "end": 1.97,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 1.97,
+   "end": 2.41,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 2.41,
+   "end": 2.62,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 2.62,
+   "end": 2.69,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 2.69,
+   "end": 2.83,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 2.83,
+   "end": 2.9,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 2.9,
+   "end": 2.97,
+   "shape": "E",
+   "weight": 1
+  },
+  {
+   "at": 2.97,
+   "end": 3.05,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 3.05,
+   "end": 3.27,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 3.27,
+   "end": 3.74,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 3.74,
+   "end": 3.86,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 3.86,
+   "end": 3.98,
+   "shape": "H",
+   "weight": 1
+  },
+  {
+   "at": 3.98,
+   "end": 4.05,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 4.05,
+   "end": 4.19,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 4.19,
+   "end": 4.26,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 4.26,
+   "end": 4.33,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 4.33,
+   "end": 4.4,
+   "shape": "H",
+   "weight": 1
+  },
+  {
+   "at": 4.4,
+   "end": 4.68,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 4.68,
+   "end": 4.75,
+   "shape": "G",
+   "weight": 1
+  },
+  {
+   "at": 4.75,
+   "end": 4.82,
+   "shape": "E",
+   "weight": 1
+  },
+  {
+   "at": 4.82,
+   "end": 5.11,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 5.11,
+   "end": 5.22,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 5.22,
+   "end": 5.27,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 5.27,
+   "end": 5.52,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 5.52,
+   "end": 5.66,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 5.66,
+   "end": 5.94,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 5.94,
+   "end": 6.01,
+   "shape": "E",
+   "weight": 1
+  },
+  {
+   "at": 6.01,
+   "end": 6.15,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 6.15,
+   "end": 6.29,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 6.29,
+   "end": 6.58,
+   "shape": "X",
+   "weight": 1
+  },
+  {
+   "at": 6.58,
+   "end": 6.77,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 6.77,
+   "end": 6.84,
+   "shape": "G",
+   "weight": 1
+  },
+  {
+   "at": 6.84,
+   "end": 6.98,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 6.98,
+   "end": 7.05,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 7.05,
+   "end": 7.12,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 7.12,
+   "end": 7.54,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 7.54,
+   "end": 7.77,
+   "shape": "X",
+   "weight": 1
+  }
+ ]
+}

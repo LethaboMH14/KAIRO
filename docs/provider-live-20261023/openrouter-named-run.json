@@ -1,0 +1,7 @@
+{
+  "provider": "openrouter",
+  "model": "dots-studio/dots-3-note-preview:free",
+  "exitCode": 1,
+  "requestCountCeiling": 1,
+  "reason": "One deliberate named-model follow-up after the free-router response was incomplete; no automatic retry."
+}

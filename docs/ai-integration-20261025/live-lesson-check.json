@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-25T00:38:34.593Z",
+  "syntheticAccountOnly": true,
+  "browserObserved": false,
+  "checks": {
+    "Login": true,
+    "OwnedReviewedSource": true,
+    "StructuredLessonGenerated": true,
+    "CuratorPersisted": true,
+    "RevisionPreserved": true,
+    "ExactEvidenceAnchors": true,
+    "NewLessonDurablyReadable": true,
+    "GeneratedLessonReachesStudio": true
+  },
+  "generationStatus": 200,
+  "model": "gemini-3.5-flash-lite",
+  "provider": "google",
+  "chapters": 3,
+  "quiz": 2,
+  "lessonId": "57668541683e3cff2f0000dc"
+}

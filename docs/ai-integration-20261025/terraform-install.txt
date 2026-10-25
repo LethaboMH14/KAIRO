@@ -1,0 +1,1 @@
+{"installed": true, "version": "1.17.0", "sha256": "2948dd7f77dec0f562ec29000103e0441d915be5e5f1a02c1ce23681951cfb19", "source": "https://releases.hashicorp.com/terraform/1.17.0/terraform_1.17.0_windows_amd64.zip", "infrastructureApplied": false}

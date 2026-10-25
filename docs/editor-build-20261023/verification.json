@@ -1,0 +1,143 @@
+{
+  "date": "2026-10-23T22:48:53.3425692+02:00",
+  "runtime": "Node v24.18.0",
+  "root": "codex-editor-integration-20261023-r",
+  "model": "gpt-6",
+  "effort": "unknown",
+  "fullSuite": {
+    "command": "node --test --test-concurrency=4 tests/*.test.mjs",
+    "evidence": "full-tests.txt",
+    "failed": 0,
+    "passed": 525
+  },
+  "actualHost": {
+    "evidence": "host-tests.txt",
+    "failed": 0,
+    "passed": 9
+  },
+  "backendDomainStore": {
+    "evidence": "backend-tests.txt",
+    "failed": 0,
+    "passed": 19
+  },
+  "copyOut": {
+    "failed": 0,
+    "includedInFullSuite": true,
+    "passed": 3
+  },
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "typecheck": "passed",
+    "warning": "Existing chunks over500KB; browser performance unmeasured",
+    "evidence": "build.txt"
+  },
+  "dependency": {
+    "name": "pdfjs-dist",
+    "license": "Apache-2.0",
+    "version": "6.4.299"
+  },
+  "preview": {
+    "url": "http://127.0.0.1:4188",
+    "restart": "server-restart.json",
+    "health": "server-health.json",
+    "scope": "local only"
+  },
+  "browserObserved": false,
+  "publicDeployment": false,
+  "paidModelCalls": 0,
+  "scheduleChanged": false,
+  "limitations": [
+    "Human keyboard/phone/realPDFcanvas/audio acceptance pending",
+    "No tenant accounts/cloud draft sync",
+    "Authored explanations/examples/reflections unverified",
+    "No new AI rewrite model trained or invoked",
+    "Historical revisions lost before migration cannot be recovered"
+  ],
+  "hashes": [
+    {
+      "path": "studio/server/workspace/routes.mjs",
+      "sha256": "5d2a6f9f9413b31ac80ea36f51dbfacbe73f2d13a7ee496270afcec58be0d4a5"
+    },
+    {
+      "path": "studio/src/workspace/SourceWorkspace.tsx",
+      "sha256": "64cc0707835bb6a316a477e6deed2f260efda1e2df3acc78d58d2d77e44d6815"
+    },
+    {
+      "path": "studio/src/workspace/types.ts",
+      "sha256": "c828c5e036b33676ca184a703260f1437b9a9b8e6efe9472c81248e7bd8f5a0b"
+    },
+    {
+      "path": "studio/src/source-classroom/session.ts",
+      "sha256": "03760e57449c4ff68342e66abd3ea366df7a660e9610f615bd758969a4ab721d"
+    },
+    {
+      "path": "studio/src/source-classroom/SourceClassroom.tsx",
+      "sha256": "37f072739e6b04a6b514abcdc447dcaf2d1a64776dc812a4989bac83872d230b"
+    },
+    {
+      "path": "studio/src/StudioRouter.tsx",
+      "sha256": "7630ad48d1cd0dbfcda7ee94df47aef26f2fe4e612cc244e781295204c9eb4fc"
+    },
+    {
+      "path": "studio/src/lesson-editor-host/LessonEditorHost.tsx",
+      "sha256": "f525785d08f437d1432daea02c130f5afb2489643ffb6b29befabc32538715e1"
+    },
+    {
+      "path": "studio/src/lesson-editor-host/DraftReading.tsx",
+      "sha256": "d79066640482de601c8b3bc68058378694480ae31550e0a97022aef60594d34a"
+    },
+    {
+      "path": "studio/src/lesson-editor-host/lesson-editor.css",
+      "sha256": "dbb103b250eff5929b333cf2ad3949da26e9ad111d944f1b1a862758982edc0b"
+    },
+    {
+      "path": "studio/src/lesson-draft-core/model.ts",
+      "sha256": "1a6b9dd6495f22dd185033ef726c4f429fc10fcaff35bf45e748220dda77af31"
+    },
+    {
+      "path": "studio/src/lesson-editor-ui/LessonBlockEditor.tsx",
+      "sha256": "7fbcb921ed2c4d53c2bc7cc22d3ce9c661bc34e3929551ff7adab75de879d9f5"
+    },
+    {
+      "path": "studio/server/lesson-versions/store.mjs",
+      "sha256": "9cf863ab77f1be4f2f48a280f0f9fc198b87145ecef8539dd78020fe7274af05"
+    },
+    {
+      "path": "studio/src/original-material-ui/OriginalMaterial.tsx",
+      "sha256": "3c8aaf625bc5e9edb0e20092d168877e83420876b4a300b82f5aee02793d117b"
+    },
+    {
+      "path": "studio/src/continuity/model.ts",
+      "sha256": "0278b994bad59b61f73a2a21c9b746af1df3e3a4d3ef09e4cd04dce702e3a67f"
+    },
+    {
+      "path": "studio/src/continuity/LearningHome.tsx",
+      "sha256": "d3a907aac3ba05ccdb8d2fd8da15ba04e0aaef568014260dee7e03954122acb7"
+    },
+    {
+      "path": "studio/src/workspace/learning.ts",
+      "sha256": "beae4dccf5051ab9d55be593537a7849e8cda6141b596c2102f000f33c2531c0"
+    },
+    {
+      "path": "studio/tests/editor-integration.test.mjs",
+      "sha256": "dfac21f89efa07cc3a00327962ec8f1fc306a819e27c5f0b2591e20d03d2ae32"
+    },
+    {
+      "path": "studio/tests/lesson-editor-host.test.mjs",
+      "sha256": "81e46f9538712e2b841c73fde56768755315121c58e8729652b53b2af26c7593"
+    },
+    {
+      "path": "studio/tests/edited-copy-out.test.mjs",
+      "sha256": "f7f1e3a0e54304fdb7a449f42f9d9be4118a9c5070af742ab3defff950a604ec"
+    },
+    {
+      "path": "studio/package.json",
+      "sha256": "338719594360aff573d5506c551054338af4b84918929d428885a88e69fdc25c"
+    },
+    {
+      "path": "studio/package-lock.json",
+      "sha256": "12bc5946c2f44a1bcbd4b18b972ec2706beb76a853c1b195dbd6a1dcc7c80898"
+    }
+  ]
+}

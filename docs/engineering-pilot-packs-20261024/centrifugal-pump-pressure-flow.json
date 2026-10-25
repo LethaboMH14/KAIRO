@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "kairo-engineering-pump-pressure-flow-20261024",
+  "title": "Centrifugal pump: predict, read, compare",
+  "objective": "Use flow and section pressure readings in the pump teaching room to explain how a pump curve and a system curve constrain an operating point, while keeping the model's illustrative limits visible.",
+  "prerequisites": [
+    "Know that flow rate is a volume per time and that pump head is expressed as height of liquid.",
+    "Be ready to compare a predicted flow with a simulated reading and to explain the evidence used."
+  ],
+  "sourceRefs": [
+    {
+      "id": "doe-pump-operating-point",
+      "url": "https://www.energy.gov/sites/default/files/2026-04/DOE-HDBK-1012-92_VOL3.pdf",
+      "locator": "DOE Fundamentals Handbook, Thermodynamics, Heat Transfer, and Fluid Flow, Vol. 3, HT-03, PDF navigation pp. 73-74 (printed pp. 52-53): System Characteristic Curve and System Operating Point sections; intersection defines operating point.",
+      "licenseStatus": "US Department of Energy handbook; no item-specific reuse determination was made. Cite and summarize facts only; no handbook prose or figure is copied.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "hi-affinity-rules",
+      "url": "https://datatool.pumps.org/pump-fundamentals/pump-curves.html",
+      "locator": "Hydraulic Institute Pump Fundamentals, Pump Curves, section Affinity Rules; speed-change relationships and stated assumptions.",
+      "licenseStatus": "Hydraulic Institute site; no item-specific reuse licence confirmed. Cite and summarize facts only; no source text, equations artwork, or figures copied.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "hi-system-operating-point",
+      "url": "https://datatool.pumps.org/pump-fundamentals/combined.html",
+      "locator": "Hydraulic Institute Pump Fundamentals, Pump System Operating Point; intersecting pump and system curves and effects of speed/valve changes.",
+      "licenseStatus": "Hydraulic Institute site; no item-specific reuse licence confirmed. Cite and summarize facts only; no source text or figure is copied.",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "steps": [
+    {
+      "id": "read-scenario",
+      "title": "Read the pump case",
+      "explanation": "A centrifugal pump's delivered flow is tied to the pump's head-flow behaviour and the system's head requirement; the operating point is where the two curves meet. A reading belongs to the stated teaching circuit, not an arbitrary installation.",
+      "sourceRefIds": ["doe-pump-operating-point", "hi-system-operating-point"],
+      "learnerAction": "Read the case report and identify the target and which flow or pressure observations you will need before proposing a cause.",
+      "studioCapability": "Pump Lab case report, target and task sequence in its standalone component.",
+      "capabilityStatus": "implemented"
+    },
+    {
+      "id": "predict-and-set",
+      "title": "Predict before changing settings",
+      "explanation": "Write a flow estimate for the current teaching case, then change the pump-speed or valve setting and predict how the operating point may move. Speed-affinity relationships are approximations whose assumptions matter; the Pump Lab itself solves its own illustrative circuit model, not a manufacturer's curve.",
+      "sourceRefIds": ["hi-affinity-rules", "hi-system-operating-point"],
+      "learnerAction": "Record the starting setting and predicted flow. Apply one setting change at a time and say what you expect to change before reading the result.",
+      "studioCapability": "Pump Lab speed/valve controls, prediction field, and applied-setting status in the standalone component.",
+      "capabilityStatus": "implemented"
+    },
+    {
+      "id": "compare-pressure-sections",
+      "title": "Compare the reading by section",
+      "explanation": "Flow and pressure readings can be compared with the teaching circuit's expected suction-line, pump, and valve sections. A large section difference may help locate where this model's stated fault acts, but instrument uncertainty and low flow can make a comparison inconclusive.",
+      "sourceRefIds": ["doe-pump-operating-point", "hi-system-operating-point"],
+      "learnerAction": "Take a reading. Compare each available section with its displayed expected value, note any 'cannot be judged' result, then explain which observation supports or weakens your idea.",
+      "studioCapability": "Pump Lab simulated gauges/readings, section comparisons, bounded instrument-noise disclosure, and evidence-linked explanation flow in the standalone component.",
+      "capabilityStatus": "implemented"
+    }
+  ],
+  "practice": [
+    {
+      "question": "In the teaching room, flow is below the target. What evidence would help you distinguish a restriction before the pump from a weak pump section, and what can you conclude from those readings?",
+      "expectedReasoning": "Use the measured flow and compare the suction-line/strainer section and pump section against the room's displayed expectations for that same reading. A clear excess suction loss points toward the upstream restriction in this model; a low pump-section result with the other sections near expectation points toward the model's weakened-impeller case. If flow is below the model's informative threshold or comparisons are within instrument uncertainty, report that the evidence is inconclusive. This is model reasoning, not diagnosis of real equipment.",
+      "sourceRefIds": ["doe-pump-operating-point", "hi-system-operating-point"],
+      "scope": "Reason from one simulated case, its section comparisons, and stated uncertainty; no real pump diagnosis or maintenance decision."
+    }
+  ],
+  "evidencePrompt": "Record the case name, starting and changed settings, your prediction, simulated reading values, section comparisons, uncertainty or inconclusive notes, and the reason for your conclusion. Label the result as a KAIRO Pump Lab simulation; it is not an equipment test or professional credential.",
+  "limitations": [
+    "The Pump Lab is not mounted in the app according to its package documentation; no live route or lesson-to-tool bridge is asserted here.",
+    "The model explicitly describes itself as illustrative and not validated against a real pump; its rounded quadratic curves, constants, noise, limits and fault effects are not vendor specifications.",
+    "Speed-affinity relations depend on assumptions, including similar efficiency and operating conditions; this teaching pack does not select or certify equipment.",
+    "This is not a maintenance procedure, safety instruction, industrial diagnosis, credential, or proof of learner mastery.",
+    "Sources are cited for factual claims; source text and figures are not redistributed. Item-specific reuse licences were not confirmed."
+  ]
+}

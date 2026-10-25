@@ -1,0 +1,54 @@
+{
+  "mainVoiceWords": 24,
+  "chorusWords": 11,
+  "allExactLinesPresent": true,
+  "assetsAndSkills": [
+    {
+      "path": "studio/public/models/character/kairo-teacher.glb",
+      "exists": true
+    },
+    {
+      "path": "studio/public/models/character/teacher-portrait.png",
+      "exists": true
+    },
+    {
+      "path": "studio/public/models/character/CREDITS.txt",
+      "exists": true
+    },
+    {
+      "path": "design/video-production-20261023/kairo-render.glb",
+      "exists": true
+    },
+    {
+      "path": "design/video-production-20261023/kairo-production-stage.blend",
+      "exists": true
+    },
+    {
+      "path": "tools/blender/blender-4.5.14-windows-x64/blender.exe",
+      "exists": true
+    },
+    {
+      "path": "C:/Users/USER/.codex/skills/remotion-markup/SKILL.md",
+      "exists": true
+    },
+    {
+      "path": "C:/Users/USER/.codex/skills/remotion-captions/SKILL.md",
+      "exists": true
+    },
+    {
+      "path": "C:/Users/USER/.codex/skills/remotion-multimedia/SKILL.md",
+      "exists": true
+    }
+  ],
+  "slotsSeconds": [
+    3,
+    2,
+    3,
+    4,
+    4,
+    4
+  ],
+  "durationSeconds": 20,
+  "actualVoiceRehearsal": false,
+  "claudeReceiptConfirmed": false
+}

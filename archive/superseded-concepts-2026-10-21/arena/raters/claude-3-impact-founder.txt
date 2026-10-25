@@ -1,0 +1,20 @@
+idea,product,creativity,usability,sustainability,impact,presentation,intelligence
+A GOMA,3,4,5,4,4,5,5
+B MINA KUSASA,3,3,5,3,2,4,3
+C IMBONGOLO,3,4,4,3,3,4,3
+D GHOST ROOM,3,3,3,3,2,4,2
+E SHELF SCORE,3,2,4,3,3,4,3
+F ISIKWELETU,4,3,3,3,3,4,2
+G QUIET EXIT,2,4,3,3,3,3,4
+H LAST-MILE SIREN,3,3,4,3,2,4,2
+I PaperBridge,4,2,3,2,3,3,1
+J ProofShift,3,3,2,3,3,3,2
+K MarginMesh,2,2,2,3,3,3,2
+L Progression Radar,4,3,3,4,3,4,3
+M Scam Circuit Breaker,2,2,2,4,5,4,2
+N Leak Bounty,3,3,3,2,3,4,2
+
+Strongest: A GOMA. Every SA phone already holds a scam SMS, the R2.4bn / 110,074-case evidence is the best in the files, and "scam weather" lands in one sentence.
+Weakest: K MarginMesh. Two-sided spaza network a lone judge cannot play, group buying is established, and no evidence that it lifts margins.
+Fatal flaw of A GOMA: the forecast and per-user susceptibility (the whole "intelligence" case) have no SA scam data behind them on day one (R1: no SA-language scam dataset), so the headline wow is a seeded sim_ demo.
+Calibration: M has the best impact evidence (SABRIC coached-vishing, 88.6% app share) but is scored 2 on usability/product because the key moment needs a staged call plus a remote-access app. L's NSFAS progression counts are not in R1-R5 (R3 lists the exclusion rate as NOT FOUND), so its impact is capped at 3. H's flood evidence is unresearched, so impact 2. B's own evidence (R3) says withdrawals are need-driven and the best field effect is about 0.2pp, so impact 2 despite the strong demo.

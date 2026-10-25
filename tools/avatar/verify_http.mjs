@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+const base='http://127.0.0.1:4176';
+const request={text:'Opening stock plus deliveries minus sales gives expected closing stock.',voice:'en-GB-Chirp3-HD-Aoede',consent:true};
+const post=body=>fetch(`${base}/api/avatar/speech`,{method:'POST',headers:{'Content-Type':'application/json',Origin:base},body:JSON.stringify(body)});
+for(const invalid of [{...request,consent:false},{...request,voice:'unknown'},{...request,text:'a'.repeat(1201)}])assert.equal((await post(invalid)).status,400);
+const forbidden=await fetch(`${base}/api/avatar/voices`,{headers:{Origin:'https://foreign.invalid'}});assert.equal(forbidden.status,403);
+const catalog=await (await fetch(`${base}/api/avatar/voices`)).json();assert.ok(catalog.enabled);assert.equal(catalog.voices.length,3);
+const audio=await post(request);assert.equal(audio.status,200);assert.equal(audio.headers.get('content-type'),'audio/mpeg');const bytes=(await audio.arrayBuffer()).byteLength;assert.ok(bytes>1000);
+const cached=await post(request);assert.equal(cached.status,200);assert.equal(cached.headers.get('x-kairo-cache'),'hit');assert.equal((await cached.arrayBuffer()).byteLength,bytes);
+assert.equal((await fetch(`${base}/models/teacher/teacher.glb`)).status,200);
+const path=new URL('../../data/private/app-workspace/avatar-verification.json',import.meta.url);const report=JSON.parse(await readFile(path,'utf8'));report.http={checks:8,consentRequired:true,unknownVoiceRejected:true,oversizedTextRejected:true,foreignOriginRejected:true,mp3Bytes:bytes,cacheHit:true,modelServed:true};await writeFile(path,JSON.stringify(report,null,2));console.log(JSON.stringify(report.http));

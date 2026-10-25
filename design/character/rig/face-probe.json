@@ -1,0 +1,3958 @@
+[
+ {
+  "control": "MSTR-Mouth",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.02,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   0.0001,
+   0.0005,
+   0.1225
+  ],
+  "thumb": "MSTR-Mouth_locx_neg.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.02,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0001,
+   0.0005,
+   0.1225
+  ],
+  "thumb": "MSTR-Mouth_locx_pos.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 31.25,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 21.63,
+   "GEO-rain-gums_upper": 25.36,
+   "GEO-rain-tongue": 23.15
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0008,
+   0.1244
+  ],
+  "thumb": "MSTR-Mouth_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 28.67,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 21.63,
+   "GEO-rain-gums_upper": 25.36,
+   "GEO-rain-tongue": 23.15
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0006,
+   0.124
+  ],
+  "thumb": "MSTR-Mouth_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.16,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0002,
+   0.1224
+  ],
+  "thumb": "MSTR-Mouth_locy_neg.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 14.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0002,
+   0.1231
+  ],
+  "thumb": "MSTR-Mouth_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 28.79,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 21.59,
+   "GEO-rain-gums_upper": 23.99,
+   "GEO-rain-tongue": 21.1
+  },
+  "head_centroid_head_space": [
+   -0.0001,
+   0.001,
+   0.1235
+  ],
+  "thumb": "MSTR-Mouth_roty_neg.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 28.79,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 21.59,
+   "GEO-rain-gums_upper": 23.99,
+   "GEO-rain-tongue": 21.1
+  },
+  "head_centroid_head_space": [
+   0.0001,
+   0.001,
+   0.1235
+  ],
+  "thumb": "MSTR-Mouth_roty_pos.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.87,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0005,
+   0.1228
+  ],
+  "thumb": "MSTR-Mouth_locz_neg.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.01,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0006,
+   0.1224
+  ],
+  "thumb": "MSTR-Mouth_locz_pos.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 12.42,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 16.01,
+   "GEO-rain-gums_upper": 18.53,
+   "GEO-rain-tongue": 13.54
+  },
+  "head_centroid_head_space": [
+   0.0001,
+   -0.001,
+   0.1207
+  ],
+  "thumb": "MSTR-Mouth_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-Mouth",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 12.43,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 16.01,
+   "GEO-rain-gums_upper": 18.53,
+   "GEO-rain-tongue": 13.54
+  },
+  "head_centroid_head_space": [
+   -0.0001,
+   -0.001,
+   0.1207
+  ],
+  "thumb": "MSTR-Mouth_rotz_pos.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.09,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0001,
+   -0.0072,
+   0.12
+  ],
+  "thumb": "MSTR-LowerLip_locx_neg.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.09,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0001,
+   -0.0072,
+   0.12
+  ],
+  "thumb": "MSTR-LowerLip_locx_pos.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 5.96,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0085,
+   0.1178
+  ],
+  "thumb": "MSTR-LowerLip_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 6.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0085,
+   0.1178
+  ],
+  "thumb": "MSTR-LowerLip_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.01,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0072,
+   0.12
+  ],
+  "thumb": "MSTR-LowerLip_locy_neg.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0072,
+   0.12
+  ],
+  "thumb": "MSTR-LowerLip_locy_pos.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.1,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0003,
+   -0.0056,
+   0.118
+  ],
+  "thumb": "MSTR-LowerLip_roty_neg.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.1,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0003,
+   -0.0056,
+   0.118
+  ],
+  "thumb": "MSTR-LowerLip_roty_pos.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0072,
+   0.12
+  ],
+  "thumb": "MSTR-LowerLip_locz_neg.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.01,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.007,
+   0.1197
+  ],
+  "thumb": "MSTR-LowerLip_locz_pos.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.42,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   -0.0067,
+   0.1187
+  ],
+  "thumb": "MSTR-LowerLip_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-LowerLip",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.43,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0067,
+   0.1187
+  ],
+  "thumb": "MSTR-LowerLip_rotz_pos.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0006,
+   0.0098,
+   0.1259
+  ],
+  "thumb": "MSTR-UpperLip_locx_neg.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0006,
+   0.0098,
+   0.1259
+  ],
+  "thumb": "MSTR-UpperLip_locx_pos.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 5.96,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0078,
+   0.1204
+  ],
+  "thumb": "MSTR-UpperLip_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 5.89,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0084,
+   0.12
+  ],
+  "thumb": "MSTR-UpperLip_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.18,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0097,
+   0.1258
+  ],
+  "thumb": "MSTR-UpperLip_locy_neg.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 14.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0089,
+   0.1268
+  ],
+  "thumb": "MSTR-UpperLip_locy_pos.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.34,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0005,
+   0.0091,
+   0.1233
+  ],
+  "thumb": "MSTR-UpperLip_roty_neg.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.34,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0005,
+   0.0091,
+   0.1233
+  ],
+  "thumb": "MSTR-UpperLip_roty_pos.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.87,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0095,
+   0.1263
+  ],
+  "thumb": "MSTR-UpperLip_locz_neg.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.01,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.01,
+   0.1259
+  ],
+  "thumb": "MSTR-UpperLip_locz_pos.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.06,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0002,
+   0.0085,
+   0.1227
+  ],
+  "thumb": "MSTR-UpperLip_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-UpperLip",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.06,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0002,
+   0.0085,
+   0.1227
+  ],
+  "thumb": "MSTR-UpperLip_rotz_pos.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.12,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0118,
+   0.092
+  ],
+  "thumb": "MSTR-Jaw_locx_neg.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.12,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0002,
+   -0.0118,
+   0.092
+  ],
+  "thumb": "MSTR-Jaw_locx_pos.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 44.6,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.29,
+   "GEO-rain-gums_lower": 39.09,
+   "GEO-rain-gums_upper": 35.44,
+   "GEO-rain-tongue": 34.95
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.013,
+   0.1191
+  ],
+  "thumb": "MSTR-Jaw_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 44.6,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 39.09,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 34.95
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0139,
+   0.1049
+  ],
+  "thumb": "MSTR-Jaw_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.12,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0117,
+   0.0917
+  ],
+  "thumb": "MSTR-Jaw_locy_neg.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.11,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0115,
+   0.0917
+  ],
+  "thumb": "MSTR-Jaw_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 25.68,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 15.49,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 15.65
+  },
+  "head_centroid_head_space": [
+   0.0001,
+   -0.0094,
+   0.091
+  ],
+  "thumb": "MSTR-Jaw_roty_neg.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 25.68,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 15.49,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 15.65
+  },
+  "head_centroid_head_space": [
+   -0.0001,
+   -0.0094,
+   0.091
+  ],
+  "thumb": "MSTR-Jaw_roty_pos.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.19,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.04,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 4.91,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0082,
+   0.1109
+  ],
+  "thumb": "MSTR-Jaw_locz_neg.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.16,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   0.0001,
+   -0.0117,
+   0.0917
+  ],
+  "thumb": "MSTR-Jaw_locz_pos.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 43.55,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 38.43,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 34.03
+  },
+  "head_centroid_head_space": [
+   -0.0002,
+   -0.0121,
+   0.0996
+  ],
+  "thumb": "MSTR-Jaw_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-Jaw",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 43.55,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 38.43,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 34.03
+  },
+  "head_centroid_head_space": [
+   0.0002,
+   -0.0121,
+   0.0996
+  ],
+  "thumb": "MSTR-Jaw_rotz_pos.png"
+ },
+ {
+  "control": "ACT-Lip_Roll_Upper",
+  "kind": "rot",
+  "axis": "x",
+  "value": -1.5708,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 6.55,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0089,
+   0.1347
+  ],
+  "thumb": "ACT-Lip_Roll_Upper_rotx_neg.png"
+ },
+ {
+  "control": "ACT-Lip_Roll_Upper",
+  "kind": "rot",
+  "axis": "x",
+  "value": 1.5708,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 22.8,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0093,
+   0.1333
+  ],
+  "thumb": "ACT-Lip_Roll_Upper_rotx_pos.png"
+ },
+ {
+  "control": "ACT-Lip_Roll_Lower",
+  "kind": "rot",
+  "axis": "x",
+  "value": -1.5708,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 3.5,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.0064,
+   0.1267
+  ],
+  "thumb": "ACT-Lip_Roll_Lower_rotx_neg.png"
+ },
+ {
+  "control": "ACT-Lip_Roll_Lower",
+  "kind": "rot",
+  "axis": "x",
+  "value": 1.5708,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 21.05,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.004,
+   0.1292
+  ],
+  "thumb": "ACT-Lip_Roll_Lower_rotx_pos.png"
+ },
+ {
+  "control": "ACT-Cheek_Outer.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.04,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 19.76,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.1,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.065,
+   0.0353,
+   0.0923
+  ],
+  "thumb": "ACT-Cheek_Outer.L_locy_pos.png"
+ },
+ {
+  "control": "ACT-Sneer.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.02,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.45,
+   "GEO-rain-eyelashes": 0.05,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0261,
+   0.0373,
+   0.1235
+  ],
+  "thumb": "ACT-Sneer.L_locy_pos.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 12.48,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.04,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0382,
+   0.1317
+  ],
+  "thumb": "CTR-Nose_Bottom_locx_neg.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.33,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.03,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0381,
+   0.1312
+  ],
+  "thumb": "CTR-Nose_Bottom_locx_pos.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 5.09,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.02,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0418,
+   0.1301
+  ],
+  "thumb": "CTR-Nose_Bottom_rotx_neg.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 5.09,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.02,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0418,
+   0.1301
+  ],
+  "thumb": "CTR-Nose_Bottom_rotx_pos.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 15.24,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.08,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0383,
+   0.1329
+  ],
+  "thumb": "CTR-Nose_Bottom_locy_neg.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.81,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.07,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0384,
+   0.1316
+  ],
+  "thumb": "CTR-Nose_Bottom_locy_pos.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.44,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0001,
+   0.0385,
+   0.1291
+  ],
+  "thumb": "CTR-Nose_Bottom_roty_neg.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.44,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0001,
+   0.0385,
+   0.1291
+  ],
+  "thumb": "CTR-Nose_Bottom_roty_pos.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.56,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.03,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0001,
+   0.0385,
+   0.1313
+  ],
+  "thumb": "CTR-Nose_Bottom_locz_neg.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.56,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.03,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0001,
+   0.0385,
+   0.1313
+  ],
+  "thumb": "CTR-Nose_Bottom_locz_pos.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 4.64,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.03,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0422,
+   0.1305
+  ],
+  "thumb": "CTR-Nose_Bottom_rotz_neg.png"
+ },
+ {
+  "control": "CTR-Nose_Bottom",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 4.73,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.02,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0422,
+   0.1305
+  ],
+  "thumb": "CTR-Nose_Bottom_rotz_pos.png"
+ },
+ {
+  "control": "SK-Lip_Puff_Upper",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "SK-Lip_Puff_Upper",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "SK-Lip_Puff_Upper",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 4.4,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.0219,
+   0.1362
+  ],
+  "thumb": "SK-Lip_Puff_Upper_locy_pos.png"
+ },
+ {
+  "control": "SK-Lip_Puff_Upper",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "SK-Lip_Puff_Upper",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "SK-Lip_Puff_Upper",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "SK-Lip_Puff_Upper",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "SK-Lip_Puff_Lower",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 5.05,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   -0.014,
+   0.1285
+  ],
+  "thumb": "SK-Lip_Puff_Lower_locy_pos.png"
+ },
+ {
+  "control": "ACT-Cheek_Inner.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.02,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 6.47,
+   "GEO-rain-eyelashes": 0.19,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0285,
+   0.0678,
+   0.1091
+  ],
+  "thumb": "ACT-Cheek_Inner.L_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.83,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 10.22,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0398,
+   0.1241,
+   0.1204
+  ],
+  "thumb": "MSTR-Eyebrow.L_locx_neg.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.92,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 10.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0363,
+   0.1191,
+   0.1021
+  ],
+  "thumb": "MSTR-Eyebrow.L_locx_pos.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.08,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 13.03,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.068,
+   0.1242,
+   0.1033
+  ],
+  "thumb": "MSTR-Eyebrow.L_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.04,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 13.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0314,
+   0.1168,
+   0.0788
+  ],
+  "thumb": "MSTR-Eyebrow.L_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.9,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 10.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.049,
+   0.114,
+   0.1135
+  ],
+  "thumb": "MSTR-Eyebrow.L_locy_neg.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.22,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 10.5,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0506,
+   0.1236,
+   0.1137
+  ],
+  "thumb": "MSTR-Eyebrow.L_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 21.25,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 25.16,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.026,
+   0.1099,
+   0.0701
+  ],
+  "thumb": "MSTR-Eyebrow.L_roty_neg.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 21.46,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 25.16,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0159,
+   0.1083,
+   0.0628
+  ],
+  "thumb": "MSTR-Eyebrow.L_roty_pos.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.89,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 10.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0386,
+   0.1189,
+   0.1034
+  ],
+  "thumb": "MSTR-Eyebrow.L_locz_neg.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.88,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 10.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0453,
+   0.1205,
+   0.1077
+  ],
+  "thumb": "MSTR-Eyebrow.L_locz_pos.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 18.99,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 22.62,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0683,
+   0.1183,
+   0.1036
+  ],
+  "thumb": "MSTR-Eyebrow.L_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-Eyebrow.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 19.06,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 22.64,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0691,
+   0.1203,
+   0.1032
+  ],
+  "thumb": "MSTR-Eyebrow.L_rotz_pos.png"
+ },
+ {
+  "control": "ACT-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Upper.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01559,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 26.98,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 1.73,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0508,
+   0.1017,
+   0.1079
+  ],
+  "thumb": "ACT-Eyering_Upper.L_locy_neg.png"
+ },
+ {
+  "control": "ACT-Eyering_Upper.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01559,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 6.76,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.46,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0566,
+   0.1004,
+   0.1053
+  ],
+  "thumb": "ACT-Eyering_Upper.L_locy_pos.png"
+ },
+ {
+  "control": "ACT-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Lower.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.00779,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Lower.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.00779,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 19.75,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.05,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0566,
+   0.0599,
+   0.104
+  ],
+  "thumb": "ACT-Eyering_Lower.L_locy_pos.png"
+ },
+ {
+  "control": "ACT-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "ACT-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 0.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": null,
+  "thumb": null
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.06,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.62,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0566,
+   0.0996,
+   0.1046
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_locx_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.9,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.63,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0562,
+   0.0995,
+   0.1048
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_locx_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.44,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.68,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0605,
+   0.0971,
+   0.1021
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.84,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.69,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0623,
+   0.097,
+   0.1016
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.0,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.68,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0568,
+   0.0997,
+   0.1048
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_locy_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.87,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.67,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0563,
+   0.0993,
+   0.1048
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.78,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.57,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0622,
+   0.0972,
+   0.1011
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_roty_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 11.48,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.58,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0623,
+   0.0972,
+   0.1009
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_roty_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.85,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.62,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0576,
+   0.0997,
+   0.1043
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_locz_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 9.69,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.61,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0565,
+   0.0995,
+   0.1047
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_locz_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 6.73,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.31,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0669,
+   0.0958,
+   0.0984
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Upper.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 6.35,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.31,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0648,
+   0.096,
+   0.0995
+  ],
+  "thumb": "MSTR-Eyering_Upper.L_rotz_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 8.56,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0518,
+   0.0591,
+   0.1027
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_locx_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 8.63,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0535,
+   0.0601,
+   0.1045
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_locx_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 6.95,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0582,
+   0.0607,
+   0.1031
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 6.91,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0572,
+   0.0608,
+   0.1035
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 8.45,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0528,
+   0.0595,
+   0.1032
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_locy_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 8.57,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0541,
+   0.0604,
+   0.1044
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 7.69,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0551,
+   0.0596,
+   0.0997
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_roty_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 7.77,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0557,
+   0.0599,
+   0.1004
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_roty_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 8.33,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0543,
+   0.0602,
+   0.1042
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_locz_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 8.46,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.052,
+   0.0588,
+   0.1029
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_locz_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 3.79,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0615,
+   0.0592,
+   0.1026
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering_Lower.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 3.69,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0606,
+   0.0589,
+   0.1023
+  ],
+  "thumb": "MSTR-Eyering_Lower.L_rotz_pos.png"
+ },
+ {
+  "control": "ACT-Eyelid_Upper.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.69813,
+  "rot_mode": "ZYX",
+  "max_mm": {
+   "GEO-rain-head": 7.4,
+   "GEO-rain-eyelashes": 8.09,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.052,
+   0.0952,
+   0.103
+  ],
+  "thumb": "ACT-Eyelid_Upper.L_rotx_neg.png"
+ },
+ {
+  "control": "ACT-Eyelid_Upper.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.69813,
+  "rot_mode": "ZYX",
+  "max_mm": {
+   "GEO-rain-head": 10.41,
+   "GEO-rain-eyelashes": 11.65,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0498,
+   0.0953,
+   0.1034
+  ],
+  "thumb": "ACT-Eyelid_Upper.L_rotx_pos.png"
+ },
+ {
+  "control": "ACT-Eyelid_Upper.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.04,
+  "rot_mode": "ZYX",
+  "max_mm": {
+   "GEO-rain-head": 39.46,
+   "GEO-rain-eyelashes": 44.63,
+   "GEO-rain-eyebrows": 0.02,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0499,
+   0.0966,
+   0.1043
+  ],
+  "thumb": "ACT-Eyelid_Upper.L_locy_neg.png"
+ },
+ {
+  "control": "ACT-Eyelid_Upper.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.02,
+  "rot_mode": "ZYX",
+  "max_mm": {
+   "GEO-rain-head": 22.27,
+   "GEO-rain-eyelashes": 26.48,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0513,
+   0.0964,
+   0.1041
+  ],
+  "thumb": "ACT-Eyelid_Upper.L_locy_pos.png"
+ },
+ {
+  "control": "ACT-Eyelid_Lower.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.69813,
+  "rot_mode": "ZYX",
+  "max_mm": {
+   "GEO-rain-head": 7.27,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0559,
+   0.0691,
+   0.1002
+  ],
+  "thumb": "ACT-Eyelid_Lower.L_rotx_neg.png"
+ },
+ {
+  "control": "ACT-Eyelid_Lower.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.69813,
+  "rot_mode": "ZYX",
+  "max_mm": {
+   "GEO-rain-head": 10.88,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0521,
+   0.0685,
+   0.101
+  ],
+  "thumb": "ACT-Eyelid_Lower.L_rotx_pos.png"
+ },
+ {
+  "control": "ACT-Eyelid_Lower.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.02,
+  "rot_mode": "ZYX",
+  "max_mm": {
+   "GEO-rain-head": 7.72,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0543,
+   0.0678,
+   0.1017
+  ],
+  "thumb": "ACT-Eyelid_Lower.L_locy_neg.png"
+ },
+ {
+  "control": "ACT-Eyelid_Lower.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.02,
+  "rot_mode": "ZYX",
+  "max_mm": {
+   "GEO-rain-head": 24.2,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0536,
+   0.0677,
+   0.1016
+  ],
+  "thumb": "ACT-Eyelid_Lower.L_locy_pos.png"
+ },
+ {
+  "control": "ACT-Lips_Corner.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.015,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 15.35,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.029,
+   0.0014,
+   0.1145
+  ],
+  "thumb": "ACT-Lips_Corner.L_locx_neg.png"
+ },
+ {
+  "control": "ACT-Lips_Corner.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.03,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 22.37,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0272,
+   0.0019,
+   0.1174
+  ],
+  "thumb": "ACT-Lips_Corner.L_locx_pos.png"
+ },
+ {
+  "control": "ACT-Lips_Corner.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -1.0472,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 4.41,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0182,
+   0.0029,
+   0.1267
+  ],
+  "thumb": "ACT-Lips_Corner.L_rotx_neg.png"
+ },
+ {
+  "control": "ACT-Lips_Corner.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 1.0472,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 5.74,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0188,
+   0.0013,
+   0.1256
+  ],
+  "thumb": "ACT-Lips_Corner.L_rotx_pos.png"
+ },
+ {
+  "control": "ACT-Lips_Corner.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.02,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 21.65,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.029,
+   0.0025,
+   0.1153
+  ],
+  "thumb": "ACT-Lips_Corner.L_locy_neg.png"
+ },
+ {
+  "control": "ACT-Lips_Corner.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.03,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 33.71,
+   "GEO-rain-eyelashes": 0.01,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0302,
+   0.0059,
+   0.1156
+  ],
+  "thumb": "ACT-Lips_Corner.L_locy_pos.png"
+ },
+ {
+  "control": "ACT-Lips_Corner.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.015,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 15.05,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.025,
+   0.0064,
+   0.1206
+  ],
+  "thumb": "ACT-Lips_Corner.L_locz_neg.png"
+ },
+ {
+  "control": "ACT-Lips_Corner.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.05,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 50.87,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0267,
+   0.002,
+   0.1174
+  ],
+  "thumb": "ACT-Lips_Corner.L_locz_pos.png"
+ },
+ {
+  "control": "SK-Cheek_Puff.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.02,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 16.3,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0665,
+   0.0173,
+   0.0934
+  ],
+  "thumb": "SK-Cheek_Puff.L_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.7,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.03,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.012,
+   0.1107
+  ],
+  "thumb": "MSTR-Head_Lower_locx_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.7,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.03,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.012,
+   0.1107
+  ],
+  "thumb": "MSTR-Head_Lower_locx_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 36.46,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.14,
+   "GEO-rain-gums_lower": 28.74,
+   "GEO-rain-gums_upper": 23.54,
+   "GEO-rain-tongue": 37.94
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0077,
+   0.1126
+  ],
+  "thumb": "MSTR-Head_Lower_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 36.46,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.13,
+   "GEO-rain-gums_lower": 28.74,
+   "GEO-rain-gums_upper": 23.54,
+   "GEO-rain-tongue": 37.94
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0073,
+   0.1125
+  ],
+  "thumb": "MSTR-Head_Lower_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.26,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.07,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0118,
+   0.1106
+  ],
+  "thumb": "MSTR-Head_Lower_locy_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.23,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.07,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0119,
+   0.1106
+  ],
+  "thumb": "MSTR-Head_Lower_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 27.52,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.06,
+   "GEO-rain-gums_lower": 15.93,
+   "GEO-rain-gums_upper": 18.01,
+   "GEO-rain-tongue": 26.13
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.013,
+   0.1118
+  ],
+  "thumb": "MSTR-Head_Lower_roty_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 27.52,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.06,
+   "GEO-rain-gums_lower": 15.93,
+   "GEO-rain-gums_upper": 18.01,
+   "GEO-rain-tongue": 26.13
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.013,
+   0.1118
+  ],
+  "thumb": "MSTR-Head_Lower_roty_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.67,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.04,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.012,
+   0.1104
+  ],
+  "thumb": "MSTR-Head_Lower_locz_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.64,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.04,
+   "GEO-rain-gums_lower": 10.0,
+   "GEO-rain-gums_upper": 10.0,
+   "GEO-rain-tongue": 10.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0118,
+   0.1104
+  ],
+  "thumb": "MSTR-Head_Lower_locz_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 35.51,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.03,
+   "GEO-rain-gums_lower": 27.48,
+   "GEO-rain-gums_upper": 19.51,
+   "GEO-rain-tongue": 28.42
+  },
+  "head_centroid_head_space": [
+   0.0006,
+   -0.004,
+   0.0995
+  ],
+  "thumb": "MSTR-Head_Lower_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Lower",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 35.51,
+   "GEO-rain-eyelashes": 0.0,
+   "GEO-rain-eyebrows": 0.03,
+   "GEO-rain-gums_lower": 27.48,
+   "GEO-rain-gums_upper": 19.51,
+   "GEO-rain-tongue": 28.42
+  },
+  "head_centroid_head_space": [
+   -0.0006,
+   -0.004,
+   0.0995
+  ],
+  "thumb": "MSTR-Head_Lower_rotz_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.2,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 10.02,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0001,
+   0.0952,
+   0.0455
+  ],
+  "thumb": "MSTR-Head_Upper_locx_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.2,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 10.02,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0001,
+   0.0952,
+   0.0455
+  ],
+  "thumb": "MSTR-Head_Upper_locx_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 85.48,
+   "GEO-rain-eyelashes": 19.34,
+   "GEO-rain-eyebrows": 34.03,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.1163,
+   -0.0021
+  ],
+  "thumb": "MSTR-Head_Upper_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 85.48,
+   "GEO-rain-eyelashes": 19.5,
+   "GEO-rain-eyebrows": 34.03,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.1165,
+   -0.0021
+  ],
+  "thumb": "MSTR-Head_Upper_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.03,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 10.07,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0953,
+   0.045
+  ],
+  "thumb": "MSTR-Head_Upper_locy_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.03,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 10.07,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0956,
+   0.0449
+  ],
+  "thumb": "MSTR-Head_Upper_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 79.73,
+   "GEO-rain-eyelashes": 35.58,
+   "GEO-rain-eyebrows": 36.04,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.1013,
+   0.0162
+  ],
+  "thumb": "MSTR-Head_Upper_roty_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 79.73,
+   "GEO-rain-eyelashes": 35.58,
+   "GEO-rain-eyebrows": 36.04,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.1013,
+   0.0162
+  ],
+  "thumb": "MSTR-Head_Upper_roty_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.21,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 10.03,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0966,
+   0.0436
+  ],
+  "thumb": "MSTR-Head_Upper_locz_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.2,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 10.03,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.0966,
+   0.0436
+  ],
+  "thumb": "MSTR-Head_Upper_locz_pos.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 67.21,
+   "GEO-rain-eyelashes": 37.08,
+   "GEO-rain-eyebrows": 42.93,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   -0.0,
+   0.1057,
+   0.0309
+  ],
+  "thumb": "MSTR-Head_Upper_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-Head_Upper",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 67.21,
+   "GEO-rain-eyelashes": 37.08,
+   "GEO-rain-eyebrows": 42.93,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0,
+   0.1057,
+   0.0309
+  ],
+  "thumb": "MSTR-Head_Upper_rotz_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.56,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.68,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.055,
+   0.0812,
+   0.1018
+  ],
+  "thumb": "MSTR-Eyering.L_locx_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.31,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.67,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0547,
+   0.081,
+   0.102
+  ],
+  "thumb": "MSTR-Eyering.L_locx_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 17.62,
+   "GEO-rain-eyelashes": 19.43,
+   "GEO-rain-eyebrows": 1.24,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0545,
+   0.0811,
+   0.1021
+  ],
+  "thumb": "MSTR-Eyering.L_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 17.37,
+   "GEO-rain-eyelashes": 19.44,
+   "GEO-rain-eyebrows": 1.23,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0545,
+   0.0809,
+   0.102
+  ],
+  "thumb": "MSTR-Eyering.L_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.17,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.63,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0547,
+   0.081,
+   0.102
+  ],
+  "thumb": "MSTR-Eyering.L_locy_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.4,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.62,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0546,
+   0.081,
+   0.1019
+  ],
+  "thumb": "MSTR-Eyering.L_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 14.1,
+   "GEO-rain-eyelashes": 17.07,
+   "GEO-rain-eyebrows": 1.05,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0555,
+   0.0805,
+   0.1015
+  ],
+  "thumb": "MSTR-Eyering.L_roty_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 14.05,
+   "GEO-rain-eyelashes": 17.07,
+   "GEO-rain-eyebrows": 1.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0555,
+   0.0806,
+   0.1013
+  ],
+  "thumb": "MSTR-Eyering.L_roty_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.44,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.62,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0549,
+   0.0812,
+   0.1019
+  ],
+  "thumb": "MSTR-Eyering.L_locz_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.24,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.61,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0546,
+   0.0809,
+   0.1019
+  ],
+  "thumb": "MSTR-Eyering.L_locz_pos.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 18.01,
+   "GEO-rain-eyelashes": 17.63,
+   "GEO-rain-eyebrows": 1.31,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0534,
+   0.0807,
+   0.1026
+  ],
+  "thumb": "MSTR-Eyering.L_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-Eyering.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 18.29,
+   "GEO-rain-eyelashes": 17.64,
+   "GEO-rain-eyebrows": 1.38,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0534,
+   0.0803,
+   0.1022
+  ],
+  "thumb": "MSTR-Eyering.L_rotz_pos.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.08,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.054,
+   0.0815,
+   0.1007
+  ],
+  "thumb": "MSTR-Eye.L_locx_neg.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "loc",
+  "axis": "x",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.05,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0542,
+   0.0812,
+   0.1007
+  ],
+  "thumb": "MSTR-Eye.L_locx_pos.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 16.03,
+   "GEO-rain-eyelashes": 19.43,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0543,
+   0.0815,
+   0.1007
+  ],
+  "thumb": "MSTR-Eye.L_rotx_neg.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "rot",
+  "axis": "x",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 16.04,
+   "GEO-rain-eyelashes": 19.44,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0537,
+   0.0816,
+   0.1009
+  ],
+  "thumb": "MSTR-Eye.L_rotx_pos.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.07,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.054,
+   0.0813,
+   0.1008
+  ],
+  "thumb": "MSTR-Eye.L_locy_neg.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "loc",
+  "axis": "y",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.1,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0543,
+   0.0814,
+   0.1006
+  ],
+  "thumb": "MSTR-Eye.L_locy_pos.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 12.83,
+   "GEO-rain-eyelashes": 17.07,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.055,
+   0.081,
+   0.1002
+  ],
+  "thumb": "MSTR-Eye.L_roty_neg.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "rot",
+  "axis": "y",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 12.83,
+   "GEO-rain-eyelashes": 17.07,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0551,
+   0.081,
+   0.1002
+  ],
+  "thumb": "MSTR-Eye.L_roty_pos.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": -0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.08,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0541,
+   0.0812,
+   0.1009
+  ],
+  "thumb": "MSTR-Eye.L_locz_neg.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "loc",
+  "axis": "z",
+  "value": 0.01,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 10.06,
+   "GEO-rain-eyelashes": 10.0,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0537,
+   0.0813,
+   0.1009
+  ],
+  "thumb": "MSTR-Eye.L_locz_pos.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": -0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 15.87,
+   "GEO-rain-eyelashes": 17.63,
+   "GEO-rain-eyebrows": 0.0,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.0531,
+   0.0812,
+   0.1011
+  ],
+  "thumb": "MSTR-Eye.L_rotz_neg.png"
+ },
+ {
+  "control": "MSTR-Eye.L",
+  "kind": "rot",
+  "axis": "z",
+  "value": 0.4,
+  "rot_mode": "XYZ",
+  "max_mm": {
+   "GEO-rain-head": 15.9,
+   "GEO-rain-eyelashes": 17.64,
+   "GEO-rain-eyebrows": 0.01,
+   "GEO-rain-gums_lower": 0.0,
+   "GEO-rain-gums_upper": 0.0,
+   "GEO-rain-tongue": 0.0
+  },
+  "head_centroid_head_space": [
+   0.053,
+   0.0814,
+   0.1012
+  ],
+  "thumb": "MSTR-Eye.L_rotz_pos.png"
+ }
+]

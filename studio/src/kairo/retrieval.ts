@@ -1,0 +1,5 @@
+import type {Evidence} from '../workspace/types';
+const stop=new Set(['the','a','an','is','are','of','to','and','in','it','for','what','why','how','does','do','this','that','with','my','i']);
+const terms=(text:string)=>text.toLocaleLowerCase().normalize('NFKC').match(/[\p{L}\p{N}]+/gu)?.filter(t=>t.length>1&&!stop.has(t))||[];
+/** Local lexical retrieval over the already validated lesson only; never an invented answer. */
+export function findPassages(query:string,evidence:readonly Evidence[],limit=3){const q=[...new Set(terms(query.slice(0,500)))];if(!q.length)return [];const docs=evidence.map(e=>({e,t:terms(e.quote)})),avg=docs.reduce((n,d)=>n+d.t.length,0)/Math.max(1,docs.length);return docs.map(({e,t})=>{let score=0;for(const term of q){const count=t.filter(x=>x===term).length;if(!count)continue;const df=docs.filter(d=>d.t.includes(term)).length;const idf=Math.log(1+(docs.length-df+.5)/(df+.5));score+=idf*(count*2.2)/(count+1.2*(.25+.75*t.length/Math.max(avg,1)));}return {evidence:e,score};}).filter(r=>r.score>0).sort((a,b)=>b.score-a.score||a.evidence.id.localeCompare(b.evidence.id)).slice(0,Math.max(0,Math.min(5,Math.floor(limit))));}

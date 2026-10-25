@@ -1,0 +1,420 @@
+{
+ "asset": "studio/public/models/character/kairo-teacher.glb",
+ "joints": 77,
+ "skins": 18,
+ "conventions": "glTF Y-up; the teacher faces +Z; _l is her left (+X). Joint names follow the Unreal Engine mannequin scheme.",
+ "bones": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "source": "DEF-Pelvis"
+  },
+  {
+   "name": "spine_01",
+   "parent": "pelvis",
+   "source": "DEF-Spine1"
+  },
+  {
+   "name": "spine_02",
+   "parent": "spine_01",
+   "source": "DEF-Spine2"
+  },
+  {
+   "name": "spine_03",
+   "parent": "spine_02",
+   "source": "DEF-Spine3"
+  },
+  {
+   "name": "neck_01",
+   "parent": "spine_03",
+   "source": "DEF-Neck"
+  },
+  {
+   "name": "head",
+   "parent": "neck_01",
+   "source": "DEF-Head"
+  },
+  {
+   "name": "eye_l",
+   "parent": "head",
+   "source": "DEF-Eye.L"
+  },
+  {
+   "name": "eye_r",
+   "parent": "head",
+   "source": "DEF-Eye.R"
+  },
+  {
+   "name": "hair_back_01",
+   "parent": "head",
+   "source": "DEF-KAIRO-HairBack1 (authored)"
+  },
+  {
+   "name": "hair_back_02",
+   "parent": "hair_back_01",
+   "source": "DEF-KAIRO-HairBack2 (authored)"
+  },
+  {
+   "name": "hair_back_03",
+   "parent": "hair_back_02",
+   "source": "DEF-KAIRO-HairBack3 (authored)"
+  },
+  {
+   "name": "hair_side_l_01",
+   "parent": "head",
+   "source": "DEF-KAIRO-HairSide.L1 (authored)"
+  },
+  {
+   "name": "hair_side_l_02",
+   "parent": "hair_side_l_01",
+   "source": "DEF-KAIRO-HairSide.L2 (authored)"
+  },
+  {
+   "name": "hair_side_r_01",
+   "parent": "head",
+   "source": "DEF-KAIRO-HairSide.R1 (authored)"
+  },
+  {
+   "name": "hair_side_r_02",
+   "parent": "hair_side_r_01",
+   "source": "DEF-KAIRO-HairSide.R2 (authored)"
+  },
+  {
+   "name": "clavicle_l",
+   "parent": "spine_03",
+   "source": "DEF-Clavicle.L"
+  },
+  {
+   "name": "upperarm_l",
+   "parent": "clavicle_l",
+   "source": "DEF-Upperarm1.L"
+  },
+  {
+   "name": "upperarm_twist_01_l",
+   "parent": "upperarm_l",
+   "source": "DEF-Upperarm2.L"
+  },
+  {
+   "name": "lowerarm_l",
+   "parent": "upperarm_l",
+   "source": "DEF-Forearm1.L"
+  },
+  {
+   "name": "lowerarm_twist_01_l",
+   "parent": "lowerarm_l",
+   "source": "DEF-Forearm2.L"
+  },
+  {
+   "name": "hand_l",
+   "parent": "lowerarm_l",
+   "source": "DEF-Hand.L"
+  },
+  {
+   "name": "thumb_01_l",
+   "parent": "hand_l",
+   "source": "DEF-Thumb1.L"
+  },
+  {
+   "name": "thumb_02_l",
+   "parent": "thumb_01_l",
+   "source": "DEF-Thumb2.L"
+  },
+  {
+   "name": "thumb_03_l",
+   "parent": "thumb_02_l",
+   "source": "DEF-Thumb3.L"
+  },
+  {
+   "name": "index_metacarpal_l",
+   "parent": "hand_l",
+   "source": "DEF-Index1.L"
+  },
+  {
+   "name": "index_01_l",
+   "parent": "index_metacarpal_l",
+   "source": "DEF-Index2.L"
+  },
+  {
+   "name": "index_02_l",
+   "parent": "index_01_l",
+   "source": "DEF-Index3.L"
+  },
+  {
+   "name": "index_03_l",
+   "parent": "index_02_l",
+   "source": "DEF-Index4.L"
+  },
+  {
+   "name": "middle_metacarpal_l",
+   "parent": "hand_l",
+   "source": "DEF-Middle1.L"
+  },
+  {
+   "name": "middle_01_l",
+   "parent": "middle_metacarpal_l",
+   "source": "DEF-Middle2.L"
+  },
+  {
+   "name": "middle_02_l",
+   "parent": "middle_01_l",
+   "source": "DEF-Middle3.L"
+  },
+  {
+   "name": "middle_03_l",
+   "parent": "middle_02_l",
+   "source": "DEF-Middle4.L"
+  },
+  {
+   "name": "ring_metacarpal_l",
+   "parent": "hand_l",
+   "source": "DEF-Ring1.L"
+  },
+  {
+   "name": "ring_01_l",
+   "parent": "ring_metacarpal_l",
+   "source": "DEF-Ring2.L"
+  },
+  {
+   "name": "ring_02_l",
+   "parent": "ring_01_l",
+   "source": "DEF-Ring3.L"
+  },
+  {
+   "name": "ring_03_l",
+   "parent": "ring_02_l",
+   "source": "DEF-Ring4.L"
+  },
+  {
+   "name": "pinky_metacarpal_l",
+   "parent": "hand_l",
+   "source": "DEF-Pinky1.L"
+  },
+  {
+   "name": "pinky_01_l",
+   "parent": "pinky_metacarpal_l",
+   "source": "DEF-Pinky2.L"
+  },
+  {
+   "name": "pinky_02_l",
+   "parent": "pinky_01_l",
+   "source": "DEF-Pinky3.L"
+  },
+  {
+   "name": "pinky_03_l",
+   "parent": "pinky_02_l",
+   "source": "DEF-Pinky4.L"
+  },
+  {
+   "name": "clavicle_r",
+   "parent": "spine_03",
+   "source": "DEF-Clavicle.R"
+  },
+  {
+   "name": "upperarm_r",
+   "parent": "clavicle_r",
+   "source": "DEF-Upperarm1.R"
+  },
+  {
+   "name": "upperarm_twist_01_r",
+   "parent": "upperarm_r",
+   "source": "DEF-Upperarm2.R"
+  },
+  {
+   "name": "lowerarm_r",
+   "parent": "upperarm_r",
+   "source": "DEF-Forearm1.R"
+  },
+  {
+   "name": "lowerarm_twist_01_r",
+   "parent": "lowerarm_r",
+   "source": "DEF-Forearm2.R"
+  },
+  {
+   "name": "hand_r",
+   "parent": "lowerarm_r",
+   "source": "DEF-Hand.R"
+  },
+  {
+   "name": "thumb_01_r",
+   "parent": "hand_r",
+   "source": "DEF-Thumb1.R"
+  },
+  {
+   "name": "thumb_02_r",
+   "parent": "thumb_01_r",
+   "source": "DEF-Thumb2.R"
+  },
+  {
+   "name": "thumb_03_r",
+   "parent": "thumb_02_r",
+   "source": "DEF-Thumb3.R"
+  },
+  {
+   "name": "index_metacarpal_r",
+   "parent": "hand_r",
+   "source": "DEF-Index1.R"
+  },
+  {
+   "name": "index_01_r",
+   "parent": "index_metacarpal_r",
+   "source": "DEF-Index2.R"
+  },
+  {
+   "name": "index_02_r",
+   "parent": "index_01_r",
+   "source": "DEF-Index3.R"
+  },
+  {
+   "name": "index_03_r",
+   "parent": "index_02_r",
+   "source": "DEF-Index4.R"
+  },
+  {
+   "name": "middle_metacarpal_r",
+   "parent": "hand_r",
+   "source": "DEF-Middle1.R"
+  },
+  {
+   "name": "middle_01_r",
+   "parent": "middle_metacarpal_r",
+   "source": "DEF-Middle2.R"
+  },
+  {
+   "name": "middle_02_r",
+   "parent": "middle_01_r",
+   "source": "DEF-Middle3.R"
+  },
+  {
+   "name": "middle_03_r",
+   "parent": "middle_02_r",
+   "source": "DEF-Middle4.R"
+  },
+  {
+   "name": "ring_metacarpal_r",
+   "parent": "hand_r",
+   "source": "DEF-Ring1.R"
+  },
+  {
+   "name": "ring_01_r",
+   "parent": "ring_metacarpal_r",
+   "source": "DEF-Ring2.R"
+  },
+  {
+   "name": "ring_02_r",
+   "parent": "ring_01_r",
+   "source": "DEF-Ring3.R"
+  },
+  {
+   "name": "ring_03_r",
+   "parent": "ring_02_r",
+   "source": "DEF-Ring4.R"
+  },
+  {
+   "name": "pinky_metacarpal_r",
+   "parent": "hand_r",
+   "source": "DEF-Pinky1.R"
+  },
+  {
+   "name": "pinky_01_r",
+   "parent": "pinky_metacarpal_r",
+   "source": "DEF-Pinky2.R"
+  },
+  {
+   "name": "pinky_02_r",
+   "parent": "pinky_01_r",
+   "source": "DEF-Pinky3.R"
+  },
+  {
+   "name": "pinky_03_r",
+   "parent": "pinky_02_r",
+   "source": "DEF-Pinky4.R"
+  },
+  {
+   "name": "thigh_l",
+   "parent": "pelvis",
+   "source": "DEF-Thigh1.L"
+  },
+  {
+   "name": "thigh_twist_01_l",
+   "parent": "thigh_l",
+   "source": "DEF-Thigh2.L"
+  },
+  {
+   "name": "calf_l",
+   "parent": "thigh_l",
+   "source": "DEF-Shin1.L"
+  },
+  {
+   "name": "calf_twist_01_l",
+   "parent": "calf_l",
+   "source": "DEF-Shin2.L"
+  },
+  {
+   "name": "foot_l",
+   "parent": "calf_l",
+   "source": "DEF-Foot.L"
+  },
+  {
+   "name": "ball_l",
+   "parent": "foot_l",
+   "source": "DEF-Toe.L"
+  },
+  {
+   "name": "thigh_r",
+   "parent": "pelvis",
+   "source": "DEF-Thigh1.R"
+  },
+  {
+   "name": "thigh_twist_01_r",
+   "parent": "thigh_r",
+   "source": "DEF-Thigh2.R"
+  },
+  {
+   "name": "calf_r",
+   "parent": "thigh_r",
+   "source": "DEF-Shin1.R"
+  },
+  {
+   "name": "calf_twist_01_r",
+   "parent": "calf_r",
+   "source": "DEF-Shin2.R"
+  },
+  {
+   "name": "foot_r",
+   "parent": "calf_r",
+   "source": "DEF-Foot.R"
+  },
+  {
+   "name": "ball_r",
+   "parent": "foot_r",
+   "source": "DEF-Toe.R"
+  }
+ ],
+ "clips": [
+  {
+   "name": "Acknowledge",
+   "seconds": 1.7,
+   "channels": 231
+  },
+  {
+   "name": "Explain",
+   "seconds": 4,
+   "channels": 231
+  },
+  {
+   "name": "HandPoint",
+   "seconds": 0.5,
+   "channels": 231
+  },
+  {
+   "name": "Idle",
+   "seconds": 8,
+   "channels": 231
+  },
+  {
+   "name": "Listen",
+   "seconds": 6,
+   "channels": 231
+  }
+ ]
+}

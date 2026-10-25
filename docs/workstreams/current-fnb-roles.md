@@ -1,0 +1,21 @@
+# FNB / FirstRand official role-page review
+
+**Checked:** 22 October 2026. **Use:** dated research snapshot, not a live vacancy feed or personal eligibility assessment.
+
+The official [FNB Careers page](https://www.fnb.co.za/careers/) links its “Apply here” action to [FirstRand Workday](https://firstrand.wd3.myworkdayjobs.com/FRB). Direct opens of the portal and all three advert URLs returned no readable page text in this research session. The details below came from search-indexed text served under the same official Workday host. That establishes what the indexed employer advert showed, but does not confirm current page state or vacancy availability.
+
+## What the indexed adverts showed
+
+| Advert | Location / requisition | Requirements shown in the indexed text | Date/status signal |
+| --- | --- | --- | --- |
+| [IT Business Analyst](https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/IT-Business-Analyst_R54418-1) | Johannesburg · R54418 · RMB | Required section: relevant Bachelor’s/BTech and at least eight years’ business/systems analysis, Market Risk or related risk-domain experience, complex requirements-to-technology change and delivery across business/risk/data/technology. Preferred section explicitly lists Agile, certain risk frameworks/certifications and coaching. | Index says close 23 Oct 2026 and “7 days left”; the latter conflicts with the 22 Oct check date. The employer's Important Closing Date Note says applications will not be accepted on 23 Oct or onwards; timezone/hour are unspecified, so do not imply applications are accepted on 23 Oct. Live availability: **unknown**. |
+| [Trade Support Specialist](https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Trade-Support-Specialist_R54282-1) | Johannesburg · R54282 · RMB | Required section: relevant bachelor’s degree; 3–5 years in technology/production support; enterprise/integrated application support; incident/problem/change/release management; vendors and cross-functional technical teams. Trading systems exposure is described as ideal. The technical-skills list includes SQL, Linux/Unix, networking, FIX, scripting, monitoring and controls, but is not individually labeled mandatory/preferred. | Index says close 23 Oct 2026 and “4 days left”; that conflicts with the 22 Oct check date. The employer's Important Closing Date Note says applications will not be accepted on 23 Oct or onwards; timezone/hour are unspecified, so do not imply applications are accepted on 23 Oct. Live availability: **unknown**. |
+| [Banking Advisor Private Client](https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Banking-Advisor-Private-Client_R50409) | Umhlanga, Durban · R50409 · FNB | Minimum qualification: RE5 plus NQF 7 degree in Finance or Accounting. Experience: 2–3 years in financial-sector sales/service. Also says applicant must not be unrehabilitated insolvent. | Index explicitly says this is **not an active vacancy** and is a talent pool; the result was indexed two months earlier. Its current pool status is **unknown**. The 31 Oct date is a listed pool-advert end date, not evidence of a live job. |
+
+The linked JSON [snapshot](../../data/public/opportunities/fnb-current-review.json) records the canonical URLs, retrieval method, source-to-claim map, short quotations, deadlines, requirements, access limits and unresolved status for each record.
+
+## Compare with the existing role cards
+
+The earlier [opportunity evidence pack](opportunity-evidence/README.md) records FNB Engineering & Technology Graduate Programme R46838 as **expired**, closing 31 August 2026. These are different requisitions, not a reopening of that programme. The two RMB roles are substantially experienced/specialist positions (eight years’ analysis; 3–5 years’ production support). The FNB Banking Advisor record is a non-active talent pool with a degree, RE5 and experience criteria. None establishes that an individual with Business Informatics qualifies. Earlier Discovery BA and Digital Support cards are a separate employer’s postings with unknown availability.
+
+No new role is represented as confirmed open. The next verification step is to revisit the original Workday pages directly when they are readable, inspect the closing/status text and review the employer requirements before making any personal fit assessment. No applications or employer contact were made.

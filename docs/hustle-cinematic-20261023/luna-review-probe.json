@@ -1,0 +1,7 @@
+{
+  "fixture": "synthetic only",
+  "summaryQuestionCount": 1,
+  "runnableCheckCount": 0,
+  "finding": "Root must reconcile declared quiz count with runnable checks before displaying readiness",
+  "warningPresent": true
+}

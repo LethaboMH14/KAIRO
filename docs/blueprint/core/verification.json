@@ -1,0 +1,200 @@
+{
+  "schema": "kairo-blueprint-verification/1",
+  "date": "2026-10-22",
+  "checks": {
+    "json": 2,
+    "svg": 4,
+    "markdown_relative_links": 26,
+    "html_local_links": 17
+  },
+  "issues": [],
+  "passed": true,
+  "characterCheckpoint": {
+    "bytes": 3424844,
+    "sha256": "5c3aacb1cb7df2a729ab763306420255ea37404d3b8ccd2b2602ea27b19ee6af",
+    "matchesOwnerBuild6": true
+  },
+  "costTests": {
+    "command": "python -m unittest discover -s docs/blueprint/core -p test_cost.py -v",
+    "result": "6 passed independently by root; cost arithmetic only"
+  },
+  "architecture": {
+    "source": "../visuals/kairo-target-architecture.architecture.json",
+    "ownerEvidence": "9 showcase checks passed; 0 errors/warnings; root revalidation recorded in handoff"
+  },
+  "limits": [
+    "No current application build or runtime test: runtime unchanged by this package",
+    "No browser, real audio, phone, language quality or learning validation",
+    "Provider/account balances and quotas not refreshed live",
+    "Mermaid source provided; not a claim that every Mermaid diagram was rendered",
+    "No deployment, model download, training or paid API calls in this run"
+  ],
+  "files": [
+    {
+      "path": "docs/blueprint/core/ACCEPTANCE.md",
+      "bytes": 11685,
+      "sha256": "26db6ff74bbc4d3e8d3d5e0bf466915f984d292b39c16a25b66078884034e02d"
+    },
+    {
+      "path": "docs/blueprint/core/ARCHITECTURE.md",
+      "bytes": 16106,
+      "sha256": "b16f5531eaf3641db4b1193c914dcefd6c7470807d6a4abe394da1d86c9106fc"
+    },
+    {
+      "path": "docs/blueprint/core/calculate_cost.py",
+      "bytes": 2353,
+      "sha256": "79ec93690aa9326317fd2fe2d2b63225bf5cd0db01c9349eccbaf04607dbcf94"
+    },
+    {
+      "path": "docs/blueprint/core/CLOUD-RUNBOOK.md",
+      "bytes": 13506,
+      "sha256": "42a285c7e6b90445cbaeee88ba86ace69a38e94054608a92a02896a874a97877"
+    },
+    {
+      "path": "docs/blueprint/core/cost-scenarios.json",
+      "bytes": 1320,
+      "sha256": "1d2f10f7ae4c68403dcaeb30a574f26528927cf38a8de5ece39c9f1e50e55051"
+    },
+    {
+      "path": "docs/blueprint/core/DATA-AND-API.md",
+      "bytes": 9780,
+      "sha256": "495fecc8082b64205098b93614dd272c5d03abf6919ac32851c42b015505f0f4"
+    },
+    {
+      "path": "docs/blueprint/core/DELIVERY.md",
+      "bytes": 11508,
+      "sha256": "62c73489a63131dff22f70742861395fbd71d99f143a1f838073813cb5f3b1b7"
+    },
+    {
+      "path": "docs/blueprint/core/fnb-app-of-year-hackathon-threat-model.md",
+      "bytes": 15577,
+      "sha256": "46cf29ba7ccaf745192f3660cb28db769bb7b9b24bf6d867863fc2ec4c84e7c1"
+    },
+    {
+      "path": "docs/blueprint/core/FRESH-CHAT-PROMPTS.md",
+      "bytes": 10169,
+      "sha256": "3607b4ea5f5949676db31b2a48b90d13f2addac80821d1e1d5eec3056c39c922"
+    },
+    {
+      "path": "docs/blueprint/core/index.html",
+      "bytes": 5288,
+      "sha256": "7a14f391ce94e0b40a77a63c7721efad6ce660199812fcfb7d1237e18707437c"
+    },
+    {
+      "path": "docs/blueprint/core/kairo-identity-preview.png",
+      "bytes": 83846,
+      "sha256": "26b604f3320c4f490ad4afc2421828d901fa2e0af0aa63fef4f58baa75c86249"
+    },
+    {
+      "path": "docs/blueprint/core/MODEL-AND-LEARNING-OPS.md",
+      "bytes": 7186,
+      "sha256": "8e0a963c45a7d1979c9a3e4b2171aa3727367ac054d631c511f6bdcb3463130a"
+    },
+    {
+      "path": "docs/blueprint/core/README.md",
+      "bytes": 6465,
+      "sha256": "a9855a51f0514d26eb3bcab4fc49de8dde8e279502c9d2f027a9212bcee3b8a7"
+    },
+    {
+      "path": "docs/blueprint/core/RESEARCH.md",
+      "bytes": 6042,
+      "sha256": "27ddaebdb50ee33033934e85a21728c940f96341c27b6a0cdf178f4d35ab158b"
+    },
+    {
+      "path": "docs/blueprint/core/TEACHING-CONTRACT.md",
+      "bytes": 12939,
+      "sha256": "15345dc380a0842a063d7f2b654e1c64d6902ba17d0cbcb33b4c7160f3e76767"
+    },
+    {
+      "path": "docs/blueprint/core/test_cost.py",
+      "bytes": 1935,
+      "sha256": "bd90fb58a99ee507718e3dc9c83f0ff290ba0dc68fe1bed467faf95fc00117d8"
+    },
+    {
+      "path": "docs/blueprint/core/verify_pack.py",
+      "bytes": 4052,
+      "sha256": "ebf3593b7f5883919daa1e6a23297b0e12c05e1a3fe7a098d98fd26c3d4b69ae"
+    },
+    {
+      "path": "docs/blueprint/learning-product/LEARNING-PRODUCT-BLUEPRINT.md",
+      "bytes": 32277,
+      "sha256": "e6dd4b26bbb703d7069eb11aa0133cc22334d1f88138bd8f63aedb94d98a121c"
+    },
+    {
+      "path": "docs/blueprint/learning-product/root-review.md",
+      "bytes": 6079,
+      "sha256": "05622e282c2892e55c7da186a896a19ee682c41adf918f200218339c47881729"
+    },
+    {
+      "path": "docs/blueprint/speech-cloud/catalog.md",
+      "bytes": 16925,
+      "sha256": "8289d2fcd0f0415fe434b66d548b411e2f5dee7391216513fe10338a760ac709"
+    },
+    {
+      "path": "docs/blueprint/speech-cloud/evaluation.md",
+      "bytes": 12122,
+      "sha256": "4e9043de74f52f13d811721accec7fe94ffb6c0b19466bde2f055dc3e65cc699"
+    },
+    {
+      "path": "docs/blueprint/speech-cloud/README.md",
+      "bytes": 26520,
+      "sha256": "2abe06c8ec43604847f006c96596d5431b381ce579f2d824331b1105525de193"
+    },
+    {
+      "path": "docs/blueprint/speech-cloud/root-review.md",
+      "bytes": 5187,
+      "sha256": "37bdf5fe4fb8be5b3282f9be408cf4d857b002500af1be9660fc84a67e9bab63"
+    },
+    {
+      "path": "docs/blueprint/visuals/kairo-target-architecture.architecture.json",
+      "bytes": 2571,
+      "sha256": "37aad6072cee1ee2589a607c863cee91060aa1130c409a22cf9f1793d35c239a"
+    },
+    {
+      "path": "docs/blueprint/visuals/kairo-target-architecture.html",
+      "bytes": 705228,
+      "sha256": "b65cc9bb972f50fadcb2bf530324b6d32fccf6cb9560ec6e836c7bb893a6d237"
+    },
+    {
+      "path": "docs/blueprint/visuals/logo/kairo-contact-sheet.svg",
+      "bytes": 3829,
+      "sha256": "8b377a4ceb2dcd9b0a6208c73662ab46eea5c3d3f74a52271d20cc84ef95b71d"
+    },
+    {
+      "path": "docs/blueprint/visuals/logo/kairo-icon-mono.svg",
+      "bytes": 814,
+      "sha256": "5517d9fd289e00bfca7aac1d2c25b51d687424ad5a0117c33c9b37fa7274c4bd"
+    },
+    {
+      "path": "docs/blueprint/visuals/logo/kairo-lockup.svg",
+      "bytes": 1176,
+      "sha256": "7426ee958d77c70468b8b1c231d35139fb438baf59caa0d4267206bae021f101"
+    },
+    {
+      "path": "docs/blueprint/visuals/logo/kairo-shirt-badge.svg",
+      "bytes": 1209,
+      "sha256": "24ec6524719ca19d0afa535a3f5ee47784e5a0e2f66950473d414b6ba21e93d8"
+    },
+    {
+      "path": "docs/blueprint/visuals/logo/README.md",
+      "bytes": 1658,
+      "sha256": "2d2b656ee50a72ab449c82ab423c288810863a0c86f0d89b8c1a96add6ec3311"
+    },
+    {
+      "path": "docs/blueprint/visuals/README.md",
+      "bytes": 9512,
+      "sha256": "d64236ad5dbdd5ada7889c0cd1e75b8c92f884808f997904b0618692ea7b631f"
+    }
+  ],
+  "experienceUpdate": {
+    "date": "2026-10-23",
+    "contract": "kairo-experience/1",
+    "screenStates": 112,
+    "journeys": 7,
+    "visualBoards": 6,
+    "checks": "design/app-experience-20261023/verification.json",
+    "brand": "Selected rounded pathmark and geometric wordmark; earlier proposal superseded. Final vector master pending.",
+    "productionAppChanged": false,
+    "browserAcceptance": "pending; prior observation denial respected"
+  }
+}

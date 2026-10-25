@@ -1,0 +1,75 @@
+Rater means (prod,crea,usab,sust,impa,pres,inte) and max inter-rater spread:
+  A GOMA                   [2.33, 4, 4.33, 3.33, 4, 4.67, 4.33] spread 2
+  B MINA KUSASA            [3.67, 3, 4.33, 3, 2, 4.67, 3] spread 1
+  C IMBONGOLO              [2.67, 4, 3.67, 3, 3, 4.67, 3.33] spread 1
+  D GHOST ROOM             [2.33, 3, 2.33, 2.67, 2.67, 4.67, 2.67] spread 1
+  E SHELF SCORE            [1.67, 2, 2, 3, 2.67, 4, 2.67] spread 3
+  F ISIKWELETU             [3, 3, 3, 3, 3, 4.33, 2.33] spread 2
+  G QUIET EXIT             [2, 3.33, 2.67, 3, 2.67, 3.67, 3.33] spread 1
+  H LAST-MILE SIREN        [2.33, 2.33, 2.67, 2.33, 1.33, 3.67, 2] spread 2
+  I PaperBridge            [4, 2, 3, 2, 2.33, 3.67, 1.67] spread 1
+  J ProofShift             [3.67, 2.33, 2.33, 3, 2.67, 3, 1.33] spread 1
+  K MarginMesh             [2, 2, 2, 3, 3, 3.67, 1.33] spread 1
+  L Progression Radar      [3.67, 3, 3.33, 3, 3, 4.33, 3.33] spread 2
+  M Scam Circuit Breaker   [1.33, 2, 1.33, 3.67, 4.33, 4.67, 1.33] spread 1
+  N Leak Bounty            [2, 2.33, 2.67, 2, 3, 4, 2.33] spread 2
+
+=== BASE
+-- prior=agnostic gate=OFF
+   A GOMA                   E[S]=3.863 P(rank1)=0.900 P(top3)=0.980 rank p5-p95=1-3 FAILS-GATE
+   B MINA KUSASA            E[S]=3.383 P(rank1)=0.069 P(top3)=0.568 rank p5-p95=1-7 
+   L Progression Radar      E[S]=3.382 P(rank1)=0.029 P(top3)=0.545 rank p5-p95=2-4 
+   M Scam Circuit Breaker   E[S]=2.673 P(rank1)=0.002 P(top3)=0.079 rank p5-p95=2-14 FAILS-GATE
+   C IMBONGOLO              E[S]=3.481 P(rank1)=0.001 P(top3)=0.802 rank p5-p95=2-4 FAILS-GATE
+   I PaperBridge            E[S]=2.666 P(rank1)=0.000 P(top3)=0.015 rank p5-p95=5-13 
+-- prior=agnostic gate=ON
+   B MINA KUSASA            E[S]=3.383 P(rank1)=0.502 P(top3)=0.998 rank p5-p95=1-3 
+   L Progression Radar      E[S]=3.382 P(rank1)=0.498 P(top3)=1.000 rank p5-p95=1-2 
+   I PaperBridge            E[S]=2.666 P(rank1)=0.000 P(top3)=0.054 rank p5-p95=3-4 
+   A GOMA                   E[S]=3.863 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=5-5 FAILS-GATE
+   C IMBONGOLO              E[S]=3.481 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=6-7 FAILS-GATE
+   F ISIKWELETU             E[S]=3.098 P(rank1)=0.000 P(top3)=0.948 rank p5-p95=2-4 
+-- prior=evidence gate=OFF
+   A GOMA                   E[S]=3.733 P(rank1)=0.890 P(top3)=0.991 rank p5-p95=1-3 FAILS-GATE
+   B MINA KUSASA            E[S]=3.379 P(rank1)=0.079 P(top3)=0.642 rank p5-p95=1-6 
+   L Progression Radar      E[S]=3.372 P(rank1)=0.031 P(top3)=0.658 rank p5-p95=2-4 
+   C IMBONGOLO              E[S]=3.383 P(rank1)=0.000 P(top3)=0.665 rank p5-p95=2-4 FAILS-GATE
+   M Scam Circuit Breaker   E[S]=2.681 P(rank1)=0.000 P(top3)=0.034 rank p5-p95=4-14 FAILS-GATE
+   F ISIKWELETU             E[S]=3.098 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=5-6 
+-- prior=evidence gate=ON
+   B MINA KUSASA            E[S]=3.379 P(rank1)=0.519 P(top3)=1.000 rank p5-p95=1-3 
+   L Progression Radar      E[S]=3.372 P(rank1)=0.481 P(top3)=1.000 rank p5-p95=1-2 
+   A GOMA                   E[S]=3.733 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=5-5 FAILS-GATE
+   C IMBONGOLO              E[S]=3.383 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=6-6 FAILS-GATE
+   F ISIKWELETU             E[S]=3.098 P(rank1)=0.000 P(top3)=0.955 rank p5-p95=2-3 
+   G QUIET EXIT             E[S]=2.856 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=7-10 FAILS-GATE
+
+=== SENSITIVITY: A creativity -1 (novelty deflation)
+-- prior=agnostic gate=OFF
+   A GOMA                   E[S]=3.720 P(rank1)=0.736 P(top3)=0.940 rank p5-p95=1-4 FAILS-GATE
+   C IMBONGOLO              E[S]=3.481 P(rank1)=0.114 P(top3)=0.821 rank p5-p95=1-4 FAILS-GATE
+   B MINA KUSASA            E[S]=3.383 P(rank1)=0.103 P(top3)=0.573 rank p5-p95=1-7 
+   L Progression Radar      E[S]=3.382 P(rank1)=0.043 P(top3)=0.559 rank p5-p95=2-4 
+   M Scam Circuit Breaker   E[S]=2.673 P(rank1)=0.003 P(top3)=0.079 rank p5-p95=2-14 FAILS-GATE
+   I PaperBridge            E[S]=2.666 P(rank1)=0.000 P(top3)=0.018 rank p5-p95=5-13 
+-- prior=agnostic gate=ON
+   B MINA KUSASA            E[S]=3.383 P(rank1)=0.502 P(top3)=0.998 rank p5-p95=1-3 
+   L Progression Radar      E[S]=3.382 P(rank1)=0.498 P(top3)=1.000 rank p5-p95=1-2 
+   I PaperBridge            E[S]=2.666 P(rank1)=0.000 P(top3)=0.054 rank p5-p95=3-4 
+   A GOMA                   E[S]=3.720 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=5-6 FAILS-GATE
+   C IMBONGOLO              E[S]=3.481 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=5-7 FAILS-GATE
+   F ISIKWELETU             E[S]=3.098 P(rank1)=0.000 P(top3)=0.948 rank p5-p95=2-4 
+-- prior=evidence gate=OFF
+   A GOMA                   E[S]=3.624 P(rank1)=0.770 P(top3)=0.961 rank p5-p95=1-3 FAILS-GATE
+   B MINA KUSASA            E[S]=3.379 P(rank1)=0.133 P(top3)=0.645 rank p5-p95=1-6 
+   L Progression Radar      E[S]=3.372 P(rank1)=0.054 P(top3)=0.664 rank p5-p95=1-4 
+   C IMBONGOLO              E[S]=3.383 P(rank1)=0.042 P(top3)=0.684 rank p5-p95=2-4 FAILS-GATE
+   M Scam Circuit Breaker   E[S]=2.681 P(rank1)=0.000 P(top3)=0.034 rank p5-p95=4-14 FAILS-GATE
+   F ISIKWELETU             E[S]=3.098 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=5-6 
+-- prior=evidence gate=ON
+   B MINA KUSASA            E[S]=3.379 P(rank1)=0.519 P(top3)=1.000 rank p5-p95=1-3 
+   L Progression Radar      E[S]=3.372 P(rank1)=0.481 P(top3)=1.000 rank p5-p95=1-2 
+   A GOMA                   E[S]=3.624 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=5-6 FAILS-GATE
+   C IMBONGOLO              E[S]=3.383 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=5-6 FAILS-GATE
+   F ISIKWELETU             E[S]=3.098 P(rank1)=0.000 P(top3)=0.955 rank p5-p95=2-3 
+   G QUIET EXIT             E[S]=2.856 P(rank1)=0.000 P(top3)=0.000 rank p5-p95=7-10 FAILS-GATE

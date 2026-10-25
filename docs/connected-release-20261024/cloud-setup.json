@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-24T00:14:21.081Z",
+  "project": "kairo-access-20261021",
+  "number": "747226582754",
+  "origin": "https://kairo-app-747226582754.africa-south1.run.app",
+  "runtimeServiceAccount": "kairo-app-runtime@kairo-access-20261021.iam.gserviceaccount.com",
+  "queue": "projects/kairo-access-20261021/locations/europe-west1/queues/kairo-imports",
+  "queueMetadataOnly": true,
+  "privateStorageRegion": "africa-south1",
+  "authKeyRestricted": true
+}

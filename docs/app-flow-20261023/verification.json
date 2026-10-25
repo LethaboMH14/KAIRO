@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-23",
+  "localUrl": "http://127.0.0.1:4188/",
+  "tests": {
+    "total": 279,
+    "passed": 279,
+    "failed": 0
+  },
+  "build": "passed; existing large R3F chunk warning",
+  "googlePublicSample": {
+    "success": true,
+    "lessonId": "2f9c9fbf8aee1c90b554f832",
+    "model": "gemini-3.5-flash-lite",
+    "chapters": 3,
+    "questions": 2,
+    "citations": 1
+  },
+  "browserObservation": false,
+  "realAudioAcceptance": false,
+  "publicDeployment": false,
+  "billingUpgrade": false,
+  "newCloudResources": false,
+  "payments": false,
+  "scheduleCreated": false,
+  "rootDefault": "KAIRO Home",
+  "oldCsRoute": "/computer-science",
+  "sourceFlow": [
+    "review",
+    "learn",
+    "practice",
+    "evidence",
+    "resume"
+  ],
+  "providerSha256": "94627059e61df027ddf3d94ef7a3f42b31835ff292112c1c929009ca1e7fc4a4"
+}

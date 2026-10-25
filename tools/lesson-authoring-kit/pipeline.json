@@ -1,0 +1,93 @@
+{
+  "version": "kairo-authoring-research/1",
+  "status": "proposed-not-mounted",
+  "stages": [
+    {
+      "id": "intake",
+      "method": "local validation + permission",
+      "output": "source manifest"
+    },
+    {
+      "id": "extract",
+      "method": "local parser/OCR first",
+      "output": "located extraction"
+    },
+    {
+      "id": "review",
+      "method": "learner correction + code hash",
+      "output": "immutable reviewed snapshot"
+    },
+    {
+      "id": "brief",
+      "method": "learner choices + bounded fields",
+      "output": "explicit goal"
+    },
+    {
+      "id": "retrieve",
+      "method": "whole source if small; lexical first if larger",
+      "output": "quoted spans"
+    },
+    {
+      "id": "outline",
+      "method": "optional bounded model proposal",
+      "output": "ordered block plan"
+    },
+    {
+      "id": "draft",
+      "method": "optional bounded model output",
+      "output": "lesson JSON"
+    },
+    {
+      "id": "validate",
+      "method": "code + domain functions + human review",
+      "output": "issues and validated draft"
+    },
+    {
+      "id": "propose",
+      "method": "version/digest-bound diff",
+      "output": "pending change"
+    },
+    {
+      "id": "approve",
+      "method": "explicit learner/editor event",
+      "output": "approved exact digest"
+    },
+    {
+      "id": "save",
+      "method": "transactional expected-revision commit, future",
+      "output": "new immutable version"
+    },
+    {
+      "id": "render",
+      "method": "allowlisted React template, future",
+      "output": "reading/split/practice"
+    },
+    {
+      "id": "interact",
+      "method": "reviewed capability dispatcher, future",
+      "output": "calculated or simulated observation"
+    },
+    {
+      "id": "assess",
+      "method": "reviewed key or ungraded reflection",
+      "output": "attempt + assistance"
+    },
+    {
+      "id": "adapt",
+      "method": "explained rules first, future evaluated ML",
+      "output": "suggested next activity"
+    },
+    {
+      "id": "export",
+      "method": "bounded inert JSON + escaped reading projection",
+      "output": "portable artifact"
+    }
+  ],
+  "callPolicy": {
+    "shortSourceMaximumModelCalls": 1,
+    "complexSourceMaximumModelCalls": 2,
+    "repairCallsByDefault": 0,
+    "fallback": "explicit local reading",
+    "providerFallback": "only if independently consented, priced and configured; never on stale source/cancel/invalid output"
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "drivers": [
+    {
+      "key": "reach_start",
+      "base": 250,
+      "downside": 120,
+      "upside": 400,
+      "note": "Qualified people reached in month 1; unvalidated"
+    },
+    {
+      "key": "reach_growth",
+      "base": 0.12,
+      "downside": 0.04,
+      "upside": 0.16,
+      "note": "Monthly reach growth; not observed"
+    },
+    {
+      "key": "activation",
+      "base": 0.25,
+      "downside": 0.15,
+      "upside": 0.35,
+      "note": "Reach to activated user; not observed"
+    },
+    {
+      "key": "conversion",
+      "base": 0.08,
+      "downside": 0.04,
+      "upside": 0.12,
+      "note": "Activated to paid; not observed"
+    },
+    {
+      "key": "churn",
+      "base": 0.07,
+      "downside": 0.12,
+      "upside": 0.045,
+      "note": "Monthly paid account churn; not observed"
+    },
+    {
+      "key": "free_retention",
+      "base": 0.35,
+      "downside": 0.25,
+      "upside": 0.4,
+      "note": "Monthly free account retention; not observed"
+    },
+    {
+      "key": "first_contract",
+      "base": 6,
+      "downside": 9,
+      "upside": 4,
+      "note": "First hypothetical cohort starts; month index"
+    },
+    {
+      "key": "contract_interval",
+      "base": 3,
+      "downside": 6,
+      "upside": 2,
+      "note": "Months between hypothetical new contracts"
+    },
+    {
+      "key": "renewal",
+      "base": 1,
+      "downside": 0.5,
+      "upside": 1,
+      "note": "Expected annual seat renewal fraction"
+    },
+    {
+      "key": "payment_lag",
+      "base": 1,
+      "downside": 3,
+      "upside": 1,
+      "note": "Whole months after institution invoice"
+    },
+    {
+      "key": "seats",
+      "base": 250,
+      "downside": 250,
+      "upside": 250,
+      "note": "Seats per contract; proposed minimum"
+    },
+    {
+      "key": "seat_price",
+      "base": 35,
+      "downside": 35,
+      "upside": 35,
+      "note": "R per licensed seat/month excluding VAT; hypothesis"
+    },
+    {
+      "key": "onboarding_price",
+      "base": 6000,
+      "downside": 6000,
+      "upside": 6000,
+      "note": "R once per new cohort excluding VAT; hypothesis"
+    },
+    {
+      "key": "fx",
+      "base": 20,
+      "downside": 24,
+      "upside": 18,
+      "note": "R/USD budgeting rate; not a spot quote"
+    },
+    {
+      "key": "lessons",
+      "base": 4,
+      "downside": 6,
+      "upside": 4,
+      "note": "Paid completed lesson/help bundles per month; hypothesis"
+    },
+    {
+      "key": "voice_chars",
+      "base": 2500,
+      "downside": 8000,
+      "upside": 2500,
+      "note": "Premium characters per paid active month; cap hypothesis 8000"
+    },
+    {
+      "key": "inst_active",
+      "base": 0.6,
+      "downside": 0.8,
+      "upside": 0.65,
+      "note": "Monthly active fraction of licensed seats; assumption"
+    },
+    {
+      "key": "free_lessons",
+      "base": 0.25,
+      "downside": 0.5,
+      "upside": 0.25,
+      "note": "Cloud lesson bundles per free active month; quota hypothesis"
+    },
+    {
+      "key": "support_minutes",
+      "base": 2,
+      "downside": 5,
+      "upside": 2,
+      "note": "Support minutes per consumer paid month; assumption"
+    },
+    {
+      "key": "support_hour",
+      "base": 120,
+      "downside": 120,
+      "upside": 120,
+      "note": "R/hour fully loaded contractor support budget, not wage data"
+    },
+    {
+      "key": "retry_multiplier",
+      "base": 1.1,
+      "downside": 1.5,
+      "upside": 1.1,
+      "note": "Billable duplicate successful requests; not failed HTTP calls"
+    },
+    {
+      "key": "marketing",
+      "base": 2500,
+      "downside": 2500,
+      "upside": 4000,
+      "note": "R/month separate acquisition budget; assumption"
+    },
+    {
+      "key": "sales_cost",
+      "base": 8000,
+      "downside": 10000,
+      "upside": 8000,
+      "note": "R/new institution cohort; sales/procurement cash budget"
+    },
+    {
+      "key": "onboarding_cost",
+      "base": 4000,
+      "downside": 5000,
+      "upside": 4000,
+      "note": "R/new cohort domain setup/review labour budget"
+    },
+    {
+      "key": "fixed_cash",
+      "base": 15000,
+      "downside": 15000,
+      "upside": 22000,
+      "note": "R/month: QA 8000/12000, ops 4000/6000, security reserve 3000/4000"
+    },
+    {
+      "key": "founder_replacement",
+      "base": 30000,
+      "downside": 30000,
+      "upside": 35000,
+      "note": "R/month economic replacement labour, not observed salary"
+    },
+    {
+      "key": "refund_rate",
+      "base": 0.03,
+      "downside": 0.06,
+      "upside": 0.03,
+      "note": "Consumer receipts refunded; no original fee rebate assumed"
+    },
+    {
+      "key": "initial_setup",
+      "base": 25000,
+      "downside": 25000,
+      "upside": 35000,
+      "note": "R initial device/legal/setup budget; no credit assumed"
+    },
+    {
+      "key": "vat",
+      "base": 0.15,
+      "downside": 0.15,
+      "upside": 0.15,
+      "note": "SARS standard rate; conservative registered-vendor planning, not actual registration"
+    },
+    {
+      "key": "llm_bundle_usd",
+      "base": 0.00932,
+      "downside": 0.00932,
+      "upside": 0.00932,
+      "note": "Standard Global token budget, dated 2026-10-24; see rates register"
+    },
+    {
+      "key": "tts_usd_million",
+      "base": 30,
+      "downside": 30,
+      "upside": 30,
+      "note": "Google Chirp 3 HD after allowance; no free credits assumed"
+    },
+    {
+      "key": "infra_paid_usd",
+      "base": 0.1,
+      "downside": 0.15,
+      "upside": 0.1,
+      "note": "PROVISIONAL all-in variable OCR/auth/storage/egress/DB/log reserve per active month"
+    },
+    {
+      "key": "infra_free_usd",
+      "base": 0.03,
+      "downside": 0.05,
+      "upside": 0.03,
+      "note": "PROVISIONAL free active user infrastructure reserve"
+    },
+    {
+      "key": "pay_pct",
+      "base": 0.032,
+      "downside": 0.032,
+      "upside": 0.032,
+      "note": "Payfast domestic card rate, excluding VAT"
+    },
+    {
+      "key": "pay_fixed",
+      "base": 2,
+      "downside": 2,
+      "upside": 2,
+      "note": "R per successful consumer card charge, excluding VAT"
+    },
+    {
+      "key": "refund_fee",
+      "base": 2,
+      "downside": 2,
+      "upside": 2,
+      "note": "R per refund, excluding VAT"
+    },
+    {
+      "key": "payout_fee",
+      "base": 8.7,
+      "downside": 8.7,
+      "upside": 8.7,
+      "note": "R once/month settlement budget excluding VAT"
+    },
+    {
+      "key": "price",
+      "base": 49,
+      "downside": 49,
+      "upside": 49,
+      "note": "R/month consumer VAT inclusive if registered; hypothesis"
+    },
+    {
+      "key": "cloud_tax_reserve",
+      "base": 0.15,
+      "downside": 0.15,
+      "upside": 0.15,
+      "note": "Provisional vendor/import tax reserve on USD services; no input credit reclaimed"
+    },
+    {
+      "key": "vat_registered",
+      "base": 1,
+      "downside": 1,
+      "upside": 1,
+      "note": "Planning vendor registration flag 1/0; NOT a statement of actual registration"
+    }
+  ]
+}

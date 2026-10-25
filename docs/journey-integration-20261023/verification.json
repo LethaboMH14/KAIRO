@@ -1,0 +1,28 @@
+{
+  "owner": "codex-journey-20261023-o",
+  "model": "gpt-6",
+  "effort": "unknown",
+  "tests": {
+    "focused": 9,
+    "full": 452,
+    "failed": 0
+  },
+  "build": "passed; refreshed local dist",
+  "warnings": [
+    "Existing >500kB chunk warning"
+  ],
+  "compiled_entry_found": true,
+  "source_sha256": {
+    "studio/src/source-classroom/SourceClassroom.tsx": "f31154f2d52d1aaf96ca18c8a00aebe2e8d3f16ee532e5e588bd6b355dc35d3d",
+    "studio/src/kairo/JourneyPanels.tsx": "006f32131ccec06478f0f37a89ec42b25869eab5fde699179167abe1a51da359",
+    "studio/src/journey-integration/model.ts": "73caf714c5f1db3a76253987d862c351ec25b547701aa9e8ac6b8763d5e09b1e",
+    "studio/src/journey-integration/LessonEntry.tsx": "c772afcff73a29acdb0118a4de6a75bdde3b5c786ce2553d16461d0d73977a89",
+    "studio/tests/journey-integration.test.mjs": "20f151a4f5e85283a970310de0bf4c555ee95b5cb2fa2c81f1edb2966743995e"
+  },
+  "boundaries": [
+    "No browser/device/audio observation",
+    "No public deployment or clip capture",
+    "No source schema, router, provider, server or dependencies changed",
+    "Prepared engineering remains distinct from arbitrary uploaded source"
+  ]
+}

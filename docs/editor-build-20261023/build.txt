@@ -1,0 +1,73 @@
+
+> kairo-studio@0.1.0 build
+> tsc -b && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 2272 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                     0.54 kB │ gzip:   0.36 kB
+dist/assets/Manrope-wght-DIRNzeTG.ttf             164.70 kB
+dist/assets/pdf.worker.min-CjEcRF4W.mjs         1,264.34 kB
+dist/assets/SourceClassroom-BnnLt6F-.css            0.79 kB │ gzip:   0.34 kB
+dist/assets/TeacherSettings-BZz0EtTf.css            2.67 kB │ gzip:   1.02 kB
+dist/assets/CvWorkspace-DJrIvsU0.css                3.53 kB │ gzip:   1.30 kB
+dist/assets/profile-DDO7JEgs.css                    4.28 kB │ gzip:   1.32 kB
+dist/assets/lesson-editor-BowkBA5X.css              4.45 kB │ gzip:   1.47 kB
+dist/assets/PracticePackWorkspace-BRmADuRO.css      5.68 kB │ gzip:   1.76 kB
+dist/assets/RolePathways-BVB8mPd_.css               6.21 kB │ gzip:   1.95 kB
+dist/assets/SourceWorkspace-zuBo4lnT.css            6.22 kB │ gzip:   1.79 kB
+dist/assets/PracticeStudio-BXIn23yg.css             6.59 kB │ gzip:   2.00 kB
+dist/assets/experience-DDrS_7xg.css                 6.84 kB │ gzip:   2.14 kB
+dist/assets/LectureStudio-B3K20Qz5.css              7.39 kB │ gzip:   2.02 kB
+dist/assets/LessonEditorHost-CIzaGxqn.css           7.75 kB │ gzip:   2.28 kB
+dist/assets/EvidenceWorkspace-D20tUfAh.css          8.98 kB │ gzip:   2.37 kB
+dist/assets/workspace-DjT5rnb8.css                 16.66 kB │ gzip:   4.26 kB
+dist/assets/EngineeringStudio-XJ4oi3ec.css         27.90 kB │ gzip:   5.41 kB
+dist/assets/index-THYwGe9b.css                     43.91 kB │ gzip:  10.17 kB
+dist/assets/pdf.worker.min-CdXBBzB4.js              0.07 kB │ gzip:   0.09 kB
+dist/assets/message-circle-DAZpU00S.js              0.14 kB │ gzip:   0.15 kB
+dist/assets/extends-CF3RwP-h.js                     0.23 kB │ gzip:   0.19 kB
+dist/assets/package-TuF_mahL.js                     0.38 kB │ gzip:   0.25 kB
+dist/assets/SkeletonUtils-BCVmgslc.js               0.45 kB │ gzip:   0.27 kB
+dist/assets/RainStage-DD2LYehv.js                   1.01 kB │ gzip:   0.64 kB
+dist/assets/SaveReading-E4DfFYRf.js                 3.19 kB │ gzip:   1.56 kB
+dist/assets/lesson-editor-CRAB-jH4.js               3.96 kB │ gzip:   1.62 kB
+dist/assets/model-BwWXSq02.js                       4.12 kB │ gzip:   1.74 kB
+dist/assets/ShopScene-CNd2PmgA.js                   4.20 kB │ gzip:   1.74 kB
+dist/assets/model-Cgogn5xT.js                       4.65 kB │ gzip:   1.99 kB
+dist/assets/LectureScene-omZXbue-.js                4.73 kB │ gzip:   2.34 kB
+dist/assets/TeacherSettings-6R8uL-BL.js             5.64 kB │ gzip:   2.21 kB
+dist/assets/LectureStudio-sG3MEAur.js               8.51 kB │ gzip:   3.31 kB
+dist/assets/SourceReader-CX4U_8Rm.js               10.69 kB │ gzip:   4.42 kB
+dist/assets/ProgressPage-CfmymNES.js               12.48 kB │ gzip:   4.01 kB
+dist/assets/Scene-dvWWybCI.js                      13.08 kB │ gzip:   4.40 kB
+dist/assets/LessonWorkspace-CnPHGDO8.js            14.05 kB │ gzip:   4.99 kB
+dist/assets/PracticeStudio-BP2Uh5gE.js             15.16 kB │ gzip:   5.55 kB
+dist/assets/OrbitControls-BEeE6izp.js              15.63 kB │ gzip:   4.81 kB
+dist/assets/MotorScene-D5yk_P5S.js                 17.24 kB │ gzip:   6.69 kB
+dist/assets/ExperienceClassroom-CQHQyF-o.js        18.70 kB │ gzip:   7.16 kB
+dist/assets/CvWorkspace-DIQyyBYk.js                19.58 kB │ gzip:   6.58 kB
+dist/assets/RolePathways-BJqCTONZ.js               21.12 kB │ gzip:   7.68 kB
+dist/assets/TeacherCharacter-Dxw94hka.js           21.47 kB │ gzip:   8.28 kB
+dist/assets/ClassroomStage-ChKqqBEl.js             23.58 kB │ gzip:   9.91 kB
+dist/assets/LessonEditorHost-CKBBb7pC.js           25.59 kB │ gzip:   8.11 kB
+dist/assets/PracticePackWorkspace-BvNiKwX_.js      26.67 kB │ gzip:   9.04 kB
+dist/assets/RoundedBox-DbxCLyXW.js                 28.67 kB │ gzip:   9.28 kB
+dist/assets/SourceWorkspace-CWPdyk1q.js            32.30 kB │ gzip:  11.13 kB
+dist/assets/EvidenceWorkspace-BeiMXK8L.js          45.75 kB │ gzip:  13.54 kB
+dist/assets/SourceClassroom-DJbDPa_y.js            47.36 kB │ gzip:  15.29 kB
+dist/assets/Environment-BXH0u6YK.js                53.89 kB │ gzip:  19.35 kB
+dist/assets/Gltf-EZktiWPQ.js                       73.16 kB │ gzip:  21.77 kB
+dist/assets/EngineeringStudio-DtIdcQ7R.js         128.76 kB │ gzip:  41.33 kB
+dist/assets/index-Dhb6gqwN.js                     308.37 kB │ gzip:  97.14 kB
+dist/assets/three.core-kKRyKlYM.js                375.75 kB │ gzip: 102.35 kB
+dist/assets/pdf-CfhDiWmk.js                       437.62 kB │ gzip: 131.39 kB
+dist/assets/react-three-fiber.esm-VmfjKKzi.js     516.23 kB │ gzip: 140.14 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 36.45s

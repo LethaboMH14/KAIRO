@@ -1,0 +1,34 @@
+✔ connected curator passes saved owner preferences and source evidence to the real gateway (160.1774ms)
+✔ non-Google consent prevents semantic transfer; Google embeddings reserve before dispatch (278.1142ms)
+✔ mounted preferences are owner-specific; studio help checks consent, owner, source revision and scene (332.4861ms)
+✔ mounted practice derives correctness and revision, requires consent and never claims known assistance (90.0839ms)
+✔ generic progress endpoint cannot overwrite curator preferences or pattern events (72.3029ms)
+✔ mounted audio route requires consent and invokes only the injected transcription adapter (101.727ms)
+✔ unknown-assistance errors can suggest review but success never becomes verified independence (2.3564ms)
+✔ real SQLite ledger persists request deduplication and isolates owners across gateway instances (279.4496ms)
+✔ durable allowance reserves before dispatch and rejects a second over-budget call (145.8074ms)
+✔ fallback requires separate explicit consent and happens only for transient provider failure (123.1615ms)
+✔ invalid citations never trigger fallback; failed request cannot silently replay (76.0062ms)
+✔ cancellation rejects abort-ignoring late model results and changed revisions do not persist (132.5603ms)
+✔ personal curator uses eligible independent history and does not turn assisted success into mastery (0.7321ms)
+✔ hybrid retrieval preserves exact owned revision anchors and rejects mismatched ownership (4.0113ms)
+✔ Vertex embedding adapter sends bounded retrieval task types and validates returned dimensions (2.4308ms)
+✔ unverified paid/provider configuration cannot enable a model (0.7398ms)
+✔ external adapter uses exact approved model and rejects truncated outputs (56.9054ms)
+2:29:45 AM [vite] (client) Re-optimizing dependencies because vite config has changed
+✔ actual selected source opens in review and gates the planner on reviewed text (7086.2708ms)
+✔ editing source invalidates citations and requires fresh acknowledgement (19.2795ms)
+✔ brief reaches consented request and Stop waiting suppresses late generation (60.1576ms)
+✔ passages resolve server-owned text and reject stale versions, unreviewed material and injected actions (3.4199ms)
+✔ teacher output must retain a real exact anchor and label translations as drafts (0.5742ms)
+✔ sentence offsets preserve source text including decimal numbers, paragraphs and repeated passages (1.7817ms)
+✔ annotations toggle exact spans and cannot silently attach to a changed revision (3.0498ms)
+✔ settings are bounded and teacher action registry never accepts arbitrary execution or arbitrary targets (1.1118ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20426.807

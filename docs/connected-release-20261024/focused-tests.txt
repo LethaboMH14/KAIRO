@@ -1,0 +1,166 @@
+✔ actual account router rejects bad and missing origins on mutations (230.5169ms)
+✔ failed provider authentication returns generic error and exposes no provider details (105.14ms)
+✔ successful sign-in puts only an HttpOnly Secure SameSite cookie on the response (45.7294ms)
+✔ sign-in rejects an old auth_time before creating a session cookie (26.5202ms)
+✔ status exposes only the owner hash and asks Admin Auth to check revocation (28.1885ms)
+✔ session guard checks revocation and rejects revoked cookies (28.6428ms)
+✔ password reset response is identical when provider says account exists or does not (62.9798ms)
+✔ logout revokes refresh tokens and clears the cookie even when revocation fails (77.7701ms)
+✔ load and SSR-render the actual EvidenceCuration component through installed Vite (2364.8824ms)
+✔ empty state is explicit and shared-device storage audience is shown (24.6343ms)
+✔ learner selects up to six, sees exact claims in preview, and callback exports only selected ids (219.802ms)
+✔ preview reordering and removal change the ids delivered to export callback (27.4493ms)
+✔ select all is offered only when the complete item set fits the six-item limit (7.9748ms)
+✔ native controls have labels, exact metadata is escaped, and no employer publication action is implied (6.3428ms)
+✔ each selection checkbox is inside its native label and preview controls have action names (8.4289ms)
+✔ export has no implicit side effect: it is called only by the explicit enabled action (3.4527ms)
+✔ versioned records are owner scoped and compare-and-swap protected (22.3052ms)
+✔ validation bounds records and rejects forged stored identity envelopes (4.7411ms)
+✔ original blobs are owner scoped, create only and integrity checked (4.8568ms)
+✔ private workspace HTTP routes isolate learners, preserve review and lesson data across router recreation, and reject stale revisions and drafts (656.5869ms)
+✔ private upload moves queued to ready, and both pre-extraction and in-flight cancellation prevent source publication (223.4423ms)
+✔ load actual coach model and panel through Vite SSR (2725.4745ms)
+✔ motor help separates field and rotor speed and cites existing pack sources (1.6231ms)
+✔ motor hint, predict and check ask for learner reasoning (1.5335ms)
+✔ pump cites vetted DOE and Hydraulic Institute sources, never local unserved docs (3.0935ms)
+✔ pump responses stay bounded, source-linked and independent of hidden fault labels (1.0079ms)
+✔ invalid context is safe and learner labels are bounded (1.5084ms)
+✔ actual panel renders accessible KAIRO controls, status and citations (25.0738ms)
+✔ panel delegates coaching and narration controls to shared callbacks (2.6446ms)
+(!) Failed to run dependency scan. Skipping dependency pre-bundling. Error:   Failed to scan for dependencies from entries:
+  C:/Users/USER/Desktop/fnb app of year hackathon/studio/index.html
+C:/Users/USER/Desktop/fnb app of year hackathon/studio/src/character/preview.html
+C:/Users/USER/Desktop/fnb app of year hackathon/studio/src/engineering/preview.html
+C:/Users/USER/Desktop/fnb app of year hackathon/studio/src/pump-lab/preview.html
+C:/Users/USER/Desktop/fnb app of year hackathon/studio/src/signing/preview.html
+
+  [31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/StudioRouter.tsx:25:41:
+[37m      25 │ ...(() => import([32m'./practice-pack-workspace/PracticePackWorkspace'[37m));
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/StudioRouter.tsx:26:38:
+[37m      26 │ const CvWorkspace = lazy(() => import([32m'./cv-workspace/CvWorkspace'[37m));
+         ╵                                       [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/character/TeacherCharacter.tsx:10:31:
+[37m      10 │ import * as SkeletonUtils from [32m'three/addons/utils/SkeletonUtils.js'[37m;
+         ╵                                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/character/TeacherCharacter.tsx:11:26:
+[37m      11 │ import { CueLedger } from [32m'./cues.ts'[37m;
+         ╵                           [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/character/TeacherCharacter.tsx:12:60:
+[37m      12 │ ... { BlinkClock, amplitudeWeights, visemeWeights } from [32m'./face.ts'[37m;
+         ╵                                                          [32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/character/TeacherCharacter.tsx:13:104:
+[37m      13 │ ...InOut, rotateBoneWorld, solveTwoBone, twistAbout } from [32m'./ik.ts'[37m;
+         ╵                                                            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/character/TeacherCharacter.tsx:14:124:
+[37m      14 │ ...R_ASSET, armBones, fingerCorrectives, type Side } from [32m'./rig.ts'[37m;
+         ╵                                                           [32m~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/character/TeacherCharacter.tsx:15:43:
+[37m      15 │ import { SpringChain, type Collider } from [32m'./springs.ts'[37m;
+         ╵                                            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/character/TeacherCharacter.tsx:16:83:
+[37m      16 │ ...cterProps, type InstrumentSample, type Target } from [32m'./types.ts'[37m;
+         ╵                                                         [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/engineering/MotorDiagram.tsx:3:48:
+[37m      3 │ import { PHASE_COLOURS, SELECTION_COLOUR } from [32m'./materials'[37m;
+        ╵                                                 [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/engineering/MotorScene.tsx:5:33:
+[37m      5 │ ...oCreasedNormals } from [32m'three/addons/utils/BufferGeometryUtils.js'[37m;
+        ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/engineering/MotorScene.tsx:7:90:
+[37m      7 │ ...OutlineMaterial, tintPhases, SELECTION_COLOUR } from [32m'./materials'[37m;
+        ╵                                                         [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/engineering/PhasePlot.tsx:3:30:
+[37m      3 │ import { PHASE_COLOURS } from [32m'./materials'[37m;
+        ╵                               [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/engineering/teaching.ts:1:74:
+[37m      1 │ ...S, SUPPLY_BY_ID, type Mode, type PartId } from [32m'./motorContent.ts'[37m;
+        ╵                                                   [32m~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/engineering/teaching.ts:2:45:
+[37m      2 │ import { readNumber, synchronousSpeed } from [32m'./fieldMath.ts'[37m;
+        ╵                                              [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/studio-coach/model.ts:1:24:
+[37m      1 │ import { SOURCES } from [32m'../engineering/motorContent'[37m;
+        ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+    at failureErrorWithLog (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1752:15)
+    at C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1211:25
+    at runOnEndCallbacks (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1592:45)
+    at buildResponseToResult (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1209:7)
+    at C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1221:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1220:54)
+    at handleRequest (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:911:17)
+    at handleIncomingPacket (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:936:7)
+    at Socket.readFromStdout (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:864:7)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4462.8724

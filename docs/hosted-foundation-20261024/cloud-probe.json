@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-23T22:15:42.191Z",
+  "syntheticOnly": true,
+  "privateLearnerDocuments": 0,
+  "created": true,
+  "readBack": true,
+  "crossOwnerAbsent": true,
+  "staleRejected": true,
+  "updated": true,
+  "removed": true,
+  "absentAfterRemoval": true,
+  "identity": {
+    "status": 403,
+    "configured": false,
+    "emailPasswordEnabled": false,
+    "anonymousEnabled": false,
+    "diagnostic": "Your application is authenticating by using local Application Default Credentials. The identitytoolkit.googleapis.com API requires a quota project, which is not set by default. To learn how to set your quota project, see https://cloud.google.com/docs/authentication/adc-troubleshooting/user-creds .",
+    "reason": "SERVICE_DISABLED"
+  }
+}

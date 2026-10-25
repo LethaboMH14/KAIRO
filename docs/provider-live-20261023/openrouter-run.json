@@ -1,0 +1,5 @@
+{
+  "provider": "openrouter",
+  "exitCode": 1,
+  "requestCountCeiling": 1
+}

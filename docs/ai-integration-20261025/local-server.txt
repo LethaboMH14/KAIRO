@@ -1,0 +1,3 @@
+KAIRO Studio: http://127.0.0.1:4188
+3:08:38 AM [vite] (client) ✨ new dependencies optimized: react-dom/client, lucide-react
+3:08:38 AM [vite] (client) ✨ optimized dependencies changed. reloading

@@ -1,0 +1,15 @@
+import {execFile} from 'node:child_process';
+import {promisify} from 'node:util';
+import {writeFile,readFile} from 'node:fs/promises';
+const exec=promisify(execFile);
+const deployed=JSON.parse(await readFile(new URL('./cloud-run-deploy.json',import.meta.url),'utf8'));
+const url=deployed.status.url;
+if(!/^https:\/\/kairo-core-[a-zA-Z0-9-]+\.a\.run\.app$/.test(url))throw new Error('Unexpected service URL.');
+const {stdout}=await exec('cmd.exe',['/d','/s','/c','gcloud.cmd auth print-identity-token --project=kairo-access-20261021'],{windowsHide:true,timeout:45000,maxBuffer:65536});
+const token=stdout.trim();
+const publicResponse=await fetch(`${url}/api/health`,{signal:AbortSignal.timeout(30000),redirect:'error'});
+const health=await fetch(`${url}/api/health`,{headers:{Authorization:`Bearer ${token}`},signal:AbortSignal.timeout(30000),redirect:'error'});
+const payload=health.ok?await health.json():null;
+const invalidIdentity=await fetch(`${url}/api/hosted/me`,{headers:{'X-Serverless-Authorization':`Bearer ${token}`,Authorization:'Bearer invalid.synthetic.token'},signal:AbortSignal.timeout(30000),redirect:'error'});
+const evidence={checkedAt:new Date().toISOString(),url,anonymousStatus:publicResponse.status,operatorHealthStatus:health.status,operatorHealth:payload,invalidFirebaseTokenStatus:invalidIdentity.status,privateLearnerDocuments:0,scope:'Private foundation API, not hosted learner UI'};
+await writeFile(new URL('./cloud-run-probe.json',import.meta.url),JSON.stringify(evidence,null,2));console.log(JSON.stringify(evidence));

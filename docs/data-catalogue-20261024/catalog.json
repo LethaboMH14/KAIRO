@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-24",
+  "scope": "Public-source and rights discovery only. No dataset files were downloaded, no private learner/coursework content was opened, and no source was added to the application corpus.",
+  "commercialUseEnum": ["allowed-with-conditions", "restricted", "unknown"],
+  "actualLocalRegistries": [
+    {
+      "id": "kairo-curriculum-registry",
+      "path": "studio/src/curriculum-catalog/registry.ts",
+      "schemaPath": "studio/src/curriculum-catalog/model.ts",
+      "shape": "CurriculumRegistry { programmes, modules, discoveryLeads }; modules retain institution, year, course code, title, programme/concept IDs, official source URL, exact locator, checked timestamp, evidence status and review status.",
+      "status": "source registry only; no import/use was found in other studio/src files during this scoped search",
+      "rightsBoundary": "Registry facts/URLs are discovery metadata. The linked Wits Senate Rules PDF has no item-level content reuse grant recorded here."
+    },
+    {
+      "id": "kairo-public-source-link-registry",
+      "path": "tools/course_sources/public_sources.json",
+      "schemaPath": "tools/course_sources/public_sources.json",
+      "shape": "{ checkedOn, policy, sources[] }; source rows carry stable id, institution, URL, domain/format hints, status, reuse caveat and action.",
+      "status": "current public discovery registry; link/reuse leads only"
+    },
+    {
+      "id": "kairo-studio-research-metadata",
+      "path": "docs/blueprint/studio-data/catalog.json",
+      "schemaPath": "docs/blueprint/studio-data/README.md and docs/blueprint/studio-data/build_registry.py",
+      "shape": "kairo-research-resources/1; resources[] with id, domain, kind, title, URL, observed licence, notes, specificAssetReviewed and purpose-specific use decisions; a local SQLite/FTS5 registry indexes public metadata only.",
+      "status": "registry-only; public metadata; no content corpus or retrieval claims"
+    },
+    {
+      "id": "kairo-language-research-source-register",
+      "path": "docs/language-ml-research-wave2/sources.md",
+      "schemaPath": "Markdown source register with dated primary links and explicit model/data capability boundaries",
+      "status": "research/reference only; no model call, dataset acquisition or training"
+    },
+    {
+      "id": "kairo-private-source-record-contract",
+      "path": "studio/src/workspace/types.ts",
+      "schemaPath": "Source { id,title,pages,reviewedPages?,reviewed,revision?,limitNote,original? }; Page { text,locator,method,edited? }",
+      "status": "application contract; local workspace records remain private; no record contents inspected"
+    },
+    {
+      "id": "kairo-exact-source-retrieval",
+      "path": "tools/course_sources/source_index.py",
+      "schemaPath": "bounded lexical source chunks with exact offsets, needs-review and untrusted-instruction metadata; local library, not embeddings",
+      "status": "implemented local library; not an application-wide or hosted production retrieval service"
+    }
+  ],
+  "records": [
+    {
+      "id": "wits-2026-engineering-course-codes",
+      "title": "Wits 2026 Engineering Senate Rules and course-code metadata",
+      "purpose": "Map official programme/year/course-code identities and syllabus anchors to KAIRO prerequisites; the local source registry already contains Wits EFA programmes and 10 exact module records.",
+      "officialURL": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+      "licenseEvidenceURL": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+      "license": "No content reuse licence was identified on the registry record; course-code facts are metadata, but the handbook text/PDF remains rights-uncleared.",
+      "commercialUse": "unknown",
+      "localStatus": "registry-only; source facts and locators are represented in studio/src/curriculum-catalog/registry.ts; not an acquired public content corpus",
+      "limits": ["Codes/titles are year-specific and need current source checks.", "Do not copy the handbook or infer rights from public access.", "The code registry is currently not imported elsewhere under studio/src."],
+      "adoptionDecision": "Continue using exact reviewed metadata and original links; do not ingest/redistribute handbook pages without permission review."
+    },
+    {
+      "id": "saqa-nqf-qualification-register",
+      "title": "SAQA registered qualifications and unit standards search",
+      "purpose": "Discover South African NQF qualification and part-qualification identities and current registration status; not detailed university lesson content.",
+      "officialURL": "https://saqa.org.za/services/registration-of-qualifications/",
+      "licenseEvidenceURL": "https://saqa.org.za/services/registration-of-qualifications/",
+      "license": "SAQA page links a download policy/guideline; no blanket commercial reuse licence for the database or handbook content was established in this review.",
+      "commercialUse": "unknown",
+      "localStatus": "reference-only; linked official catalogue not imported into KAIRO",
+      "limits": ["Registration metadata does not establish a learner's enrolment or a course equivalence.", "Records may be active, expired or replaced; recheck status at use time.", "Follow the current SAQA download policy before bulk access or redistribution."],
+      "adoptionDecision": "Use for linked discovery and carefully attributed identifiers only; request/verify terms before bulk use."
+    },
+    {
+      "id": "mit-ocw-6-002-circuits",
+      "title": "MIT OpenCourseWare 6.002 Circuits and Electronics",
+      "purpose": "Candidate open engineering material for a circuits/electronics reading and practice reference.",
+      "officialURL": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+      "licenseEvidenceURL": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+      "license": "MIT OCW course materials are generally CC BY-NC-SA 4.0, subject to per-item exceptions and third-party rights; verify the exact resource and attribution before reuse.",
+      "commercialUse": "restricted",
+      "localStatus": "candidate; course is linked in existing public discovery registry; no course content copied or mounted",
+      "limits": ["Non-commercial/share-alike conditions block straightforward commercial product reuse.", "The 2007 material needs technical freshness review.", "Video embed/playback and each resource's licence are separate checks."],
+      "adoptionDecision": "Keep link-only for KAIRO's commercial direction unless a specific item is separately cleared."
+    },
+    {
+      "id": "openstax-principles-economics-2e-pdf",
+      "title": "OpenStax Principles of Economics 2e (2018 PDF edition)",
+      "purpose": "Historical economics text edition candidate, useful to illustrate why rights must be tied to an exact edition/file rather than publisher name.",
+      "officialURL": "https://openstax.org/books/principles-economics-2e/pages/index",
+      "licenseEvidenceURL": "https://assets.openstax.org/oscms-prodcms/media/documents/Economics2e-OP_s2jF42u.pdf",
+      "license": "The official 2018 PDF states CC BY 4.0. The current OpenStax page for this same 2e also says the text may not be ingested into generative-AI offerings without prior written permission and says some images/activities use NC-SA terms. Current OpenStax licensing guidance says the library is now CC BY-NC-SA. Resolve the exact artifact, page terms and third-party components before use.",
+      "commercialUse": "unknown",
+      "localStatus": "reference-only; no PDF downloaded or indexed",
+      "limits": ["A CC BY notice in an older PDF is not blanket clearance for all images, activities, or AI offering use.", "The present online page includes stricter AI-ingestion wording; version and grant scope require rights review.", "2026 content currency is not assured."],
+      "adoptionDecision": "Do not ingest into commercial KAIRO or an AI offering based on the old PDF alone; obtain written clarification or choose independently authored material."
+    },
+    {
+      "id": "openstax-principles-economics-3e",
+      "title": "OpenStax Principles of Economics 3e",
+      "purpose": "Currenter economics reading candidate for source-grounded explanations and learning objectives.",
+      "officialURL": "https://openstax.org/books/principles-economics-3e/pages/preface",
+      "licenseEvidenceURL": "https://openstax.org/books/principles-economics-3e/pages/preface",
+      "license": "CC BY-NC-SA 4.0; the current book page also requires prior written permission before LLM training or ingestion into generative-AI offerings. Commercial use requires permission; attribution/share-alike apply to permitted adaptations.",
+      "commercialUse": "restricted",
+      "localStatus": "candidate/reference-only; no pages copied or mounted",
+      "limits": ["Free access is not commercial reuse permission.", "No generative-AI ingestion without prior written permission per current page.", "Individual art may carry separate provenance/rights."],
+      "adoptionDecision": "Link-only until OpenStax grants written commercial and generative-AI rights; prefer licensed public-domain or original lesson material for a commercial pilot."
+    },
+    {
+      "id": "openstax-university-physics-volume-2-magnetic-force",
+      "title": "OpenStax University Physics Volume 2, §11.4 Magnetic Force on a Current-Carrying Conductor",
+      "purpose": "Candidate source for an electromagnetism lesson connecting current, magnetic field and force on a conductor, as a conceptual bridge to motor force.",
+      "officialURL": "https://openstax.org/books/university-physics-volume-2/pages/11-4-magnetic-force-on-a-current-carrying-conductor",
+      "licenseEvidenceURL": "https://openstax.org/books/university-physics-volume-2/pages/11-introduction",
+      "license": "The current online book page states CC BY-NC-SA 4.0 for the text and requires prior written permission before LLM training or ingestion into generative-AI offerings; some third-party components may carry separate terms. This is not commercial clearance.",
+      "commercialUse": "restricted",
+      "localStatus": "candidate/reference-only; exact chapter link only; no pages copied, downloaded or mounted",
+      "limits": ["The chapter derives magnetic force on a current-carrying wire; it is not a motor design or performance dataset.", "No AI ingestion or commercial reuse without the required written permission and component review.", "Potential curriculum alignment to Wits MATH1048A/MATH1049A mathematics concepts and PHYS1032A/PHYS1033A physics, with ELEN2003A Electric and Magnetic Systems as a later-year link; local registry metadata only, not syllabus equivalence, credit equivalence, or an adoption claim."],
+      "adoptionDecision": "Keep as a linked, rights-restricted content lead. Draft an independently authored explanation or obtain explicit rights before reproducing, adapting or ingesting the chapter."
+    },
+    {
+      "id": "openstax-calculus-volume-1-current-online",
+      "title": "OpenStax Calculus Volume 1 (current online edition)",
+      "purpose": "Candidate calculus reference for limits, differentiation, integration and first-year engineering mathematics alignment.",
+      "officialURL": "https://openstax.org/books/calculus-volume-1/pages/preface",
+      "licenseEvidenceURL": "https://openstax.org/books/calculus-volume-1/pages/preface",
+      "license": "The current online edition states CC BY-NC-SA 4.0. Its current index says prior written permission is required before LLM training or ingestion into generative-AI offerings. A distinct 2021 PDF is reported elsewhere as CC BY, but an exact primary file-version licence was not verified in this research pass; do not transfer that claim to the current edition or infer blanket commercial/AI rights.",
+      "commercialUse": "restricted",
+      "localStatus": "candidate/reference-only; current edition link only; no PDF or pages copied, downloaded or mounted",
+      "limits": ["Potential metadata alignment to Wits MATH1048A Engineering Mathematics IA and MATH1049A Engineering Mathematics IB only; no exact topic mapping or formal syllabus/credit equivalence was established.", "Current online NC-SA and AI-ingestion restriction apply to this candidate; confirm permissions for any intended commercial product use.", "The reported 2021 PDF CC BY claim remains unresolved until the exact official artifact, edition, file notice and component exceptions are checked; no version substitution or blanket permission is asserted."],
+      "adoptionDecision": "Keep current edition link-only and rights-restricted. Treat the reported older CC BY PDF as an unverified separate lead; use only after file-specific primary licence evidence and relevant commercial/AI scope are confirmed."
+    },
+    {
+      "id": "b-campus-foundations-of-physics",
+      "title": "Foundations of Physics (Terrance Berg, BCcampus Open Education)",
+      "purpose": "Commercially reusable introductory physics teaching lead covering electrostatic fields/forces, electric current, circuits, mechanical energy and other foundations relevant to engineering pathways.",
+      "officialURL": "https://opentextbc.ca/foundationsofphysics/front-matter/about-bccampus-open-education/",
+      "licenseEvidenceURL": "https://opentextbc.ca/foundationsofphysics/front-matter/about-bccampus-open-education/",
+      "license": "The specific book page states Creative Commons Attribution 4.0 International for Foundations of Physics, except where otherwise noted. CC BY 4.0 permits commercial reuse subject to attribution and other licence conditions; exceptions and third-party assets must be checked per item.",
+      "commercialUse": "allowed-with-conditions",
+      "localStatus": "candidate/reference-only; book/about page and chapter links only; no content copied, downloaded or mounted",
+      "limits": ["Page contents list electrostatic fields and forces, uniform electric fields, current/Ohm's law/power, and electric circuits; not a dedicated motor force or machine-design text.", "Inspect each component for exceptions and preserve attribution, licence link and change notices in any permitted reuse.", "Candidate foundations alignment to Wits MATH1048A/MATH1049A and PHYS1032A/PHYS1033A metadata only; no exact syllabus/credit equivalence or institutional adoption claim."],
+      "adoptionDecision": "Preferred open commercial-use candidate for an independently reviewed introductory physics source pack, subject to item-level exception and attribution review; no KAIRO adoption or endorsement is asserted."
+    },
+    {
+      "id": "garrett-first-year-calculus-notes",
+      "title": "Paul Garrett, Notes on first-year calculus and calculus course pages",
+      "purpose": "Commercially reusable first-year calculus notes lead for limits, differentiation and integration foundations supporting engineering mathematics.",
+      "officialURL": "https://www-users.cse.umn.edu/~garrett/calculus/",
+      "licenseEvidenceURL": "https://www-users.cse.umn.edu/~garrett/calculus/",
+      "license": "The author's page says that, unless explicitly noted otherwise, work by Paul Garrett on the site is licensed under Creative Commons Attribution 3.0 Unported. CC BY 3.0 permits commercial reuse with attribution and licence terms; verify each specific linked file/page for exceptions before reuse.",
+      "commercialUse": "allowed-with-conditions",
+      "localStatus": "candidate/reference-only; official course/index page only; no notes downloaded or copied",
+      "limits": ["The page lists first-year calculus notes and course materials with older update dates; currency, completeness and pedagogical fit need review.", "The author licence applies unless an item explicitly says otherwise; inspect each linked asset and third-party component.", "Potential alignment to Wits MATH1048A/MATH1049A metadata only; no detailed syllabus match, credit equivalence or Wits endorsement is claimed."],
+      "adoptionDecision": "Preferred open commercial-use calculus lead for review and independently authored lesson planning; attribute and verify item-level exceptions before reuse."
+    },
+    {
+      "id": "virginia-tech-electromagnetics-volume-1",
+      "title": "Electromagnetics, Volume 1 (Steven W. Ellingson, 2018; VT Publishing)",
+      "purpose": "Commercially reusable undergraduate engineering electromagnetics text covering electric and magnetic fields, steady current, magnetostatics and time-varying fields.",
+      "officialURL": "https://vtechworks.lib.vt.edu/items/6f75e22e-ea6a-48a3-b441-65ce5ebf5331",
+      "licenseEvidenceURL": "https://vtechworks.lib.vt.edu/items/6f75e22e-ea6a-48a3-b441-65ce5ebf5331",
+      "license": "The official Virginia Tech repository record identifies the 2018 Volume 1 edition and CC BY-SA 4.0. Commercial reuse is permitted subject to attribution and ShareAlike for adaptations; do not imply author or university endorsement. Verify figures and other third-party items individually.",
+      "commercialUse": "allowed-with-conditions",
+      "localStatus": "candidate/reference-only; official repository record and project links only; no book or assets copied, downloaded or mounted",
+      "limits": ["Volume 1 is an undergraduate engineering electromagnetics course text; its depth and sequence require audience-fit review.", "Adaptations must retain compatible CC BY-SA terms; preserve attribution and disclose modifications.", "The open-project page says the work is used in Virginia Tech courses; that is not a Wits alignment, motor product endorsement or KAIRO validation.", "Review figures, problem sets, solutions and slides separately for exceptions before reuse."],
+      "adoptionDecision": "Strong open electromagnetics content lead for commercial-use adaptation with ShareAlike; perform component-level rights and pedagogy review before selecting content."
+    },
+    {
+      "id": "uci-ai4i-2020",
+      "title": "UCI AI4I 2020 Predictive Maintenance Dataset",
+      "purpose": "Deterministic synthetic industrial maintenance data for a clearly labelled toy classification exercise and pipeline smoke tests.",
+      "officialURL": "https://archive.ics.uci.edu/dataset/601/ai4i+2020",
+      "licenseEvidenceURL": "https://archive.ics.uci.edu/dataset/601/ai4i+2020",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0).",
+      "commercialUse": "allowed-with-conditions",
+      "localStatus": "candidate; referenced only; no data downloaded or mounted",
+      "limits": ["This is synthetic machining-process data, not observed motor or pump telemetry.", "It contains no learner behaviour or learning outcomes.", "Synthetic benchmark scores cannot show maintenance reliability in a real installation."],
+      "adoptionDecision": "Possible labelled toy exercise after attribution and schema review; never present it as field motor/pump data or evidence of learner prediction."
+    },
+    {
+      "id": "paderborn-bearing-datacenter",
+      "title": "Paderborn University Bearing DataCenter",
+      "purpose": "Experimental bearing condition-monitoring signals, including vibration and motor-current measurements, for a constrained engineering benchmark.",
+      "officialURL": "https://mb.uni-paderborn.de/en/kat/research/bearing-datacenter",
+      "licenseEvidenceURL": "https://mb.uni-paderborn.de/en/kat/research/bearing-datacenter",
+      "license": "CC BY-NC 4.0; cite author/institution and dataset. The official page says commercial use requires contacting the author.",
+      "commercialUse": "restricted",
+      "localStatus": "candidate/research-only; no data downloaded",
+      "limits": ["Bearing faults on a test rig are not pump-system faults or validated maintenance recommendations.", "No maintenance-event or production-line evidence follows from the signals.", "Large signal files and model evaluation require an explicit compute/data plan."],
+      "adoptionDecision": "Use only in a non-commercial research sandbox or request a commercial licence; teach sensor/fault concepts with a synthetic authored example for the commercial app."
+    },
+    {
+      "id": "ibm-publaynet",
+      "title": "IBM PubLayNet document-layout benchmark",
+      "purpose": "Evaluate page-layout region detection and document segmentation on research-paper page images.",
+      "officialURL": "https://github.com/ibm-aur-nlp/PubLayNet",
+      "licenseEvidenceURL": "https://github.com/ibm-aur-nlp/PubLayNet/blob/master/LICENSE.md",
+      "license": "Annotations: Community Data License Agreement Permissive 1.0. Images: IBM states it does not own their copyright and requires compliance with PubMed Central Open Access Subset terms; per-paper rights vary.",
+      "commercialUse": "allowed-with-conditions",
+      "localStatus": "candidate; no assets acquired; benchmark is not in the KAIRO runtime",
+      "limits": ["CDLA-Permissive applies to annotations, not automatically to the underlying page images.", "PMC OA subsets contain differing article licences; filter each source article for commercial permission.", "The full benchmark is about 102 GB and would exceed the needs of this early app."],
+      "adoptionDecision": "Only evaluate a small exact subset with article-level licence evidence and measured value; do not acquire/ship the benchmark wholesale."
+    },
+    {
+      "id": "docvqa-wacv-2021",
+      "title": "DocVQA document-image question-answering benchmark",
+      "purpose": "Potential reference benchmark for questions grounded in document-page images and OCR/layout understanding.",
+      "officialURL": "https://site.docvqa.org/datasets/docvqa",
+      "licenseEvidenceURL": "https://site.docvqa.org/datasets/docvqa",
+      "license": "The official dataset page says downloads are gated by the challenge portal and instructs users to read its download terms; no clear dataset licence was established from the public page/paper checked. Underlying images originate in the UCSF Industry Documents Library. Do not infer rights from a third-party mirror tag.",
+      "commercialUse": "unknown",
+      "localStatus": "reference-only; not acquired or mounted",
+      "limits": ["Public challenge access is not a dataset/commercial-use grant.", "The question/answer set and source document images may have distinct rights.", "This research benchmark is not a KAIRO learner corpus."],
+      "adoptionDecision": "Do not download or commercialize; request explicit dataset and source-image permissions or build a small synthetic evaluation set."
+    },
+    {
+      "id": "ednet-riiid",
+      "title": "Riiid EdNet learner interaction dataset",
+      "purpose": "Research comparator for event-based knowledge tracing and adaptive-practice evaluation, not a source of KAIRO learner profiles.",
+      "officialURL": "https://github.com/riiid/ednet",
+      "licenseEvidenceURL": "https://github.com/riiid/ednet/blob/master/README.md",
+      "license": "CC BY-NC 4.0 for research purposes according to the dataset repository.",
+      "commercialUse": "restricted",
+      "localStatus": "reference-only; no learner records downloaded or mounted",
+      "limits": ["Non-commercial terms exclude ordinary commercial product use.", "Data comes from a Korean TOEIC self-study service, not South African higher education or KAIRO.", "Dataset terms do not resolve privacy, consent, representativeness, fairness, or validity for this product."],
+      "adoptionDecision": "Use only for academic research within the stated licence; do not train, tune, or claim KAIRO learner forecasts from it."
+    },
+    {
+      "id": "google-fleurs-afrikaans",
+      "title": "Google FLEURS Afrikaans speech benchmark (af_za)",
+      "purpose": "Read-speech evaluation reference for Afrikaans ASR; can inform test design but cannot establish classroom/noisy South African speech quality.",
+      "officialURL": "https://huggingface.co/datasets/google/fleurs",
+      "licenseEvidenceURL": "https://huggingface.co/datasets/google/fleurs",
+      "license": "Dataset card declares CC BY 4.0; verify the exact revision, attribution and any hosted-file terms before acquisition.",
+      "commercialUse": "allowed-with-conditions",
+      "localStatus": "reference-only; current language research names it; no audio downloaded or model evaluated",
+      "limits": ["Read speech differs from spontaneous classroom speech, accents, noise and code-switching.", "A single Afrikaans split does not cover South African language support broadly.", "No KAIRO ASR or speech-recognition quality claim is supported."],
+      "adoptionDecision": "Use only for bounded evaluation after version/hash and licence checks; complement with consented South African speaker-held-out samples."
+    },
+    {
+      "id": "ufs-sasl-hlt",
+      "title": "University of the Free State SASL Human Language Technology repository",
+      "purpose": "South African Sign Language research reference and possible Deaf-led partnership lead; repository includes annotated/synthetic materials, including fingerspelling hands/video frames.",
+      "officialURL": "https://github.com/ufs-za/human_language_technology_for_sasl",
+      "licenseEvidenceURL": "https://github.com/ufs-za/human_language_technology_for_sasl",
+      "license": "CC BY-NC-SA 4.0 repository licence; its README says commercialisation requires a formal data-sharing agreement.",
+      "commercialUse": "restricted",
+      "localStatus": "reference-only; prior language research identifies the repository; no dataset files downloaded or inspected",
+      "limits": ["Do not infer natural continuous-SASL recognition or translation from synthetic fingerspelling assets.", "SASL is not ASL; Deaf-led authorship/review, consent and signer-disjoint evaluation are needed.", "The repository licence blocks ordinary commercial reuse without a separate agreement."],
+      "adoptionDecision": "Partnership/discovery only; no commercial training or signing feature claim without an explicit agreement and Deaf-led validation."
+    }
+  ],
+  "cloudResearch": {
+    "checkedOn": "2026-10-24",
+    "bigquery": {
+      "applicationStatus": "not present in active application code or cloud resource receipts searched; this is an optional future analytics warehouse, not a deployed KAIRO service",
+      "location": "Johannesburg africa-south1 is an available BigQuery location; job/dataset location must be explicit and colocated resources matter",
+      "pricing": "Official pricing reviewed: on-demand analysis is USD $6.25/TiB in Johannesburg-region pricing group after the first 1 TiB/month free per billing account; storage, ingestion, ML and transfer have separate charges. Re-check live pricing before any future use.",
+      "ml": "BigQuery ML built-in training and imported models are listed in the Johannesburg support matrix. DNN/AutoML/hyperparameter training and remote model endpoints have separate support/location rules; a global model endpoint does not guarantee a processing location.",
+      "quotasAndControls": "Current docs list 200 TiB/day default on-demand query usage per project and no default per-user daily limit. Apply tighter project/user custom quotas, dry-run query estimates, and configuration.query.maximumBytesBilled on each on-demand job. The latter fails a query before execution when its estimated billed bytes exceed the cap; it is not a whole-billing-account spend cap.",
+      "fit": "Only reconsider for consented, de-identified, event-level aggregate analysis after a measured need. Do not send source documents, CVs, audio or free-text answers to an analytics warehouse."
+    },
+    "currentStoreRoles": {
+      "firestore": "Operational records: the hosted pilot has a real Firestore Native Standard database in africa-south1 and an owner-scoped repository contract for source/lesson/job/progress record types. The public hosted handoff says source/lesson migration and the complete learner UI are still unfinished; do not claim all learner records already use it.",
+      "cloudStorage": "File/object layer: the mounted, consent-gated adapter copies only reviewed source text with source ID/revision, bounded to 100 reviewed pages, 48,000 characters and 220 KiB; it does not copy the original upload. Private-bucket location/configuration is described in hosted evidence; recheck before any residency claim.",
+      "retrieval": "Source retrieval is exact-offset lexical matching in a local library. It is not BigQuery, not an embedding/vector index, and not a hosted multi-tenant RAG service.",
+      "bigquery": "Optional future analytics over minimized events; not the OLTP/source store, binary store, or retrieval index. It offers SQL scans/aggregations but adds ingestion, query/storage/egress cost, region alignment and a separate deletion/governance path."
+    }
+  },
+  "proposedLearningEvents": {
+    "status": "proposal only; not implemented or consented",
+    "purpose": "Evaluate transparent next-step rules and aggregate learning-task completion, not to build permanent ability profiles or optimize engagement.",
+    "consent": "Separate optional analytics consent, stated purpose, retention window and withdrawal/deletion path; core reading/practice remains available when declined.",
+    "minimumFields": ["random event_id", "session-scoped pseudonym", "coarse event time", "event_type (source_reviewed, practice_attempted, hint_requested, task_completed, resumed, reading_selected)", "pseudonymous source_revision_id and objective_id", "attempt_number", "outcome category (correct/incorrect/partial/unscored)", "help_count/type", "elapsed-time bucket", "chosen modality/locale only when needed", "consent-policy version"],
+    "exclude": ["raw source/document text", "CVs or employment records", "audio/video/camera frames", "free-text learner responses", "email/name", "inferred disability, emotion, ability, motivation or demographic traits"],
+    "retentionAndAccess": "Proposed short 30-day event-level retention for an opt-in pilot, then delete or retain only coarse aggregate counts; keep identity mapping outside the analytics dataset; scope event access to the evaluation owner and provide correction/deletion route.",
+    "evaluation": "Report the event count and missingness; compare a transparent rule baseline against a held-out-by-learner evaluation only when consented, sufficient independent data exists. Until then report behavior/check completion, never forecast, mastery, learning gain or traction."
+  },
+  "judging": {
+    "Product": "Supports source-to-practice evidence only when chosen source rights and revisions are known; current whole journey still needs root integration/acceptance.",
+    "Intelligence": "Enables a measurable, transparent rule baseline; no trained learner model or validated forecast is present.",
+    "Sustainability": "Avoids paying to process a data warehouse before event volume justifies it; compare measured per-session analytics and query costs before adoption.",
+    "Impact": "Keeps privacy and accessibility in the evidence path; no learning gains or learner outcomes are inferred from public datasets."
+  },
+  "remainingGaps": [
+    "No item-level reuse and cross-asset rights clearance has been performed for a KAIRO source pack.",
+    "No dedicated consented learner-event cohort or validated adaptation experiment exists.",
+    "No pump-specific fault dataset with cleared commercial rights was identified in this research pass.",
+    "OpenStax rights depend on the exact edition/file and component; University Physics Volume 2 and current Calculus Volume 1 are link-only/restricted, while Foundations of Physics (CC BY 4.0), Garrett's calculus site (CC BY 3.0 except where noted), and Virginia Tech Electromagnetics Vol. 1 (CC BY-SA 4.0) are commercial-use leads requiring attribution, exception checks and any ShareAlike obligations. The reported 2021 Calculus PDF CC BY claim remains unverified at exact-file level.",
+    "No deployed BigQuery resource, workload, cost estimate, quota configuration or learner-forecast experiment exists."
+  ]
+}

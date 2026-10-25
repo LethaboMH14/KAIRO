@@ -1,0 +1,15 @@
+{
+  "zip_integrity": "PASS",
+  "sheets": [
+    "Summary",
+    "Assumptions",
+    "Forecast",
+    "Unit costs"
+  ],
+  "formula_cells": 983,
+  "error_cells": [],
+  "ten_cached_base_outputs_vs_python": "PASS",
+  "native_two_input_table": "PRESENT",
+  "native_excel_interaction": "NOT OBSERVED",
+  "authoring_process_exit": "1 after successful export/check/render; unexplained warning retained"
+}

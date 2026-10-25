@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "exitCode": 0,
+  "requestCountCeiling": 1,
+  "freePlanConfirmedByUser": true
+}

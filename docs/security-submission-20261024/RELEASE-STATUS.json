@@ -1,0 +1,18 @@
+{
+  "revision": "kairo-app-00006-885",
+  "iamPrivate": true,
+  "tests": {
+    "passed": 692,
+    "failed": 0,
+    "newRootSecurityCases": 13,
+    "newExtractorCases": 7
+  },
+  "liveApiChecks": 18,
+  "npmKnownAdvisories": 0,
+  "sourceMatchesStaged": true,
+  "browserObserved": false,
+  "independentPentestCertification": false,
+  "ssdlcSubmitted": false,
+  "pitchVideoCreated": false,
+  "pitchWordCount": 37
+}

@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KAIRO · 20-second pitch concept</title>
+<style>body{background:#f5f0e6;color:#252b28;font:18px system-ui;margin:40px auto;max-width:1100px;padding:0 20px}video{width:100%;background:#3e5144;border-radius:12px}button{background:#3e5144;color:#f5f0e6;border:0;border-radius:8px;padding:12px;margin:5px;font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #b46d4b;outline-offset:3px}p{line-height:1.6}small{display:block;line-height:1.6}</style>
+<h1>KAIRO · Put knowledge to work.</h1>
+<p>A 20-second concept animatic: your problem montage becomes a clear learning journey.</p>
+<video controls preload="metadata" poster="storyboard.jpg" aria-label="KAIRO illustrated pitch concept with narration and burned-in captions"><source src="kairo-hustle-20s-mock.mp4" type="video/mp4"></video>
+<nav aria-label="Jump to scene"><button data-time="0">0s · Pressure</button><button data-time="4">4s · KAIRO</button><button data-time="7">7s · Material</button><button data-time="11">11s · Practice</button><button data-time="15">15s · Next</button><button data-time="18">18s · Close</button></nav>
+<small>Illustrated scenes, offline scratch voice and a presenter placeholder. Not live product footage or a final submission. Employer visibility and partner rewards are proposed. Playback starts only when you choose.</small>
+<h2>Transcript</h2><p>Notes. Deadlines. No lab. Where do I start?<br>Meet KAIRO, your interactive learning companion.<br>Bring your material. Understand it. Explore it.<br>Practise, and build evidence of your skills.<br>Next: employers and proposed partner rewards.<br>KAIRO. Put knowledge to work.</p>
+<script>document.querySelectorAll('button[data-time]').forEach(b=>b.addEventListener('click',()=>{const v=document.querySelector('video');v.currentTime=Number(b.dataset.time);v.pause()}));</script></html>

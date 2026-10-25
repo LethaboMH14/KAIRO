@@ -1,0 +1,60 @@
+{
+  "voice": "en-GB-Chirp3-HD-Aoede",
+  "locale": "en-GB",
+  "kind": "Synthetic Google HD narration; same default cloud voice configured in KAIRO, not an identified human speaker",
+  "characters": 187,
+  "calls": [
+    {
+      "id": "01-reveal",
+      "start": 3,
+      "end": 5,
+      "text": "Meet Cairo.",
+      "caption": "Meet KAIRO.",
+      "file": "voice/01-reveal.mp3",
+      "bytes": 6144,
+      "sha256": "d1a542c156debec561f2a4f927d96f1c5d62b537e04af7aeae4b50aeae351bd8"
+    },
+    {
+      "id": "02-material",
+      "start": 5,
+      "end": 10,
+      "text": "Bring your material. Learn at your pace. Explore it.",
+      "caption": "Bring your material. Learn at your pace. Explore it.",
+      "file": "voice/02-material.mp3",
+      "bytes": 17376,
+      "sha256": "098d88b4ba73c13c88ffc44f6145af9c3951aa3e623c2f9e5c36d1de2833695f"
+    },
+    {
+      "id": "03-practice",
+      "start": 10,
+      "end": 14,
+      "text": "Practise, and build evidence of your skills.",
+      "caption": "Practise, and build evidence of your skills.",
+      "file": "voice/03-practice.mp3",
+      "bytes": 12192,
+      "sha256": "5296276674a50f3ddaf2c871866318084ffbfbe671b39eadac043ae1ace430b1"
+    },
+    {
+      "id": "04-next",
+      "start": 14,
+      "end": 18,
+      "text": "Next, connect that evidence to roles and proposed rewards.",
+      "caption": "Next: connect that evidence to roles and proposed rewards.",
+      "file": "voice/04-next.mp3",
+      "bytes": 15744,
+      "sha256": "56665af45d73b5dd9d8dee8a03071378605c4abb5db6d31184451cc4c6c47d60"
+    },
+    {
+      "id": "05-close",
+      "start": 18,
+      "end": 20,
+      "text": "Put knowledge to work.",
+      "caption": "KAIRO. Put knowledge to work.",
+      "file": "voice/05-close.mp3",
+      "bytes": 6336,
+      "sha256": "1d42e3cc349e2e19e86effa89b746a0750538a1c22afc15e932a6bec80d7d63f"
+    }
+  ],
+  "phoneticNote": "Cairo is used only as a pronunciation hint in the reveal audio. All visible branding is KAIRO.",
+  "textPrivacy": "Public authored pitch text only; no face, private material or user voice sent."
+}

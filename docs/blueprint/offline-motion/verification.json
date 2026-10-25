@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23",
+  "motionTestsPassed": 5,
+  "moduleViewsRenderedInStub": 3,
+  "localDocumentLinksChecked": 6,
+  "missingLinks": [],
+  "pgliteProbe": "passed; see pg-verification.json",
+  "browserAudioPhoneAcceptance": "pending - prior observation restriction preserved",
+  "embeddingModel": "not installed or evaluated",
+  "liveAppChanged": false,
+  "cloudChanged": false,
+  "externalVideoPlayback": "not verified; indexed descriptions and official documentation reviewed"
+}

@@ -1,0 +1,7 @@
+Updated IAM policy for service [kairo-app].
+bindings:
+- members:
+  - serviceAccount:kairo-app-runtime@kairo-access-20261021.iam.gserviceaccount.com
+  role: roles/run.invoker
+etag: BwZeix3G1M4=
+version: 1

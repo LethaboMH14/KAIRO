@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "KAIRO Access — Proposed Target Architecture",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "viewBox": [1380, 760],
+    "views": [
+      { "id": "access", "label": "Accessible learning", "focus": ["learner", "api"], "note": "3D is optional; captions and a lightweight 2D route remain available." },
+      { "id": "data", "label": "Learner data", "focus": ["api", "records"], "note": "Personal data and learning records are tenant-scoped." },
+      { "id": "providers", "label": "Mediated providers", "focus": ["api", "providers"], "note": "Model and speech access is policy-controlled." }
+    ]
+  },
+  "components": [
+    { "id": "learner", "type": "frontend", "label": "Learner experience", "sublabel": "React · R3F + lightweight 2D", "tag": "Future target", "pos": [90, 330], "size": [220, 84] },
+    { "id": "api", "type": "backend", "label": "API + session orchestrator", "sublabel": "Auth · policy · lesson context", "pos": [430, 330], "size": [220, 84] },
+    { "id": "records", "type": "database", "label": "Tenant data store", "sublabel": "PostgreSQL · scoped records", "pos": [870, 330], "size": [220, 84] },
+    { "id": "providers", "type": "external", "label": "Managed AI adapters", "sublabel": "Google first · Azure speech candidate", "pos": [430, 84], "size": [220, 84] }
+  ],
+  "boundaries": [
+    { "kind": "security-group", "label": "KAIRO application trust boundary", "wraps": ["api", "records"], "pad": 28 }
+  ],
+  "connections": [
+    { "id": "authenticated-session", "from": "learner", "to": "api", "label": "Authenticated HTTPS session", "variant": "emphasis", "labelDy": -76 },
+    { "id": "tenant-scoped-records", "from": "api", "to": "records", "label": "Tenant-scoped read / write", "labelDy": -76 },
+    { "id": "mediated-provider", "from": "api", "to": "providers", "label": "Policy-filtered model / speech calls", "variant": "security", "fromSide": "top", "toSide": "bottom", "labelDx": 165 }
+  ],
+  "cards": [
+    { "dot": "amber", "title": "Status", "items": ["Proposed future target architecture", "The current application remains a local development prototype"] },
+    { "dot": "emerald", "title": "Access", "items": ["Client-rendered 3D with a lightweight 2D route", "Captions, transcript, keyboard and touch controls"] },
+    { "dot": "rose", "title": "Review gates", "items": ["Isolation, retention and provider consent require implementation review", "No deployment, security or learning-outcome acceptance is implied"] }
+  ]
+}

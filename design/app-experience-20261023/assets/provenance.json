@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-23",
+  "assets": [
+    {
+      "file": "assets/teacher.png",
+      "source": "studio/public/models/character/teacher-portrait.png",
+      "sha256": "dbb8b3ca138f8fd0577e6a0788bf0c0dd733924f1732e1523cf350b0627d18e6",
+      "use": "Existing project image, historical capture or portrait; not a new browser observation"
+    },
+    {
+      "file": "assets/teacher-board.png",
+      "source": "docs/character/screenshots/c02-camera-board.png",
+      "sha256": "6e271f083499468ef2b3c5778166193832daa5f75f86628abd9ef7a4baf4080c",
+      "use": "Existing project image, historical capture or portrait; not a new browser observation"
+    },
+    {
+      "file": "assets/teacher-pointing.png",
+      "source": "docs/character/screenshots/c08-lesson-pointing.png",
+      "sha256": "e61c3fa24a49573652acca7f67989d33bb19ee9ee5354c9a1a580f8864e52ad1",
+      "use": "Existing project image, historical capture or portrait; not a new browser observation"
+    },
+    {
+      "file": "assets/teacher-listening.png",
+      "source": "docs/character/screenshots/c04-listen.png",
+      "sha256": "987dcf87a998bfd06c4cf50cdfcf0bda11b4cf740f8b32cdab14d1c5dd59dd5d",
+      "use": "Existing project image, historical capture or portrait; not a new browser observation"
+    },
+    {
+      "file": "assets/engineering.png",
+      "source": "docs/engineering/screenshots/01-desktop-assembled.png",
+      "sha256": "0a645c840788238eba0902c942cfc1e67295cf0c2770ff0a48b7c0612498f102",
+      "use": "Existing project image, historical capture or portrait; not a new browser observation"
+    },
+    {
+      "file": "assets/engineering-exploded.png",
+      "source": "docs/engineering/screenshots/07-exploded.png",
+      "sha256": "20df2ca40b49d4d635f496f77e2e50b1d28802c98d52b0a9e5fd075e6c2249f5",
+      "use": "Existing project image, historical capture or portrait; not a new browser observation"
+    },
+    {
+      "file": "assets/engineering-operating.png",
+      "source": "docs/engineering/screenshots/10-operating.png",
+      "sha256": "7cff466c1d1d9dcac8a101d0255454f14f4c07c8269bdb5e454dff4117b7e8ca",
+      "use": "Existing project image, historical capture or portrait; not a new browser observation"
+    },
+    {
+      "file": "assets/computer-science.png",
+      "source": "docs/engineering/acceptance/screenshots/A1-home.png",
+      "sha256": "340bb9a0c0029a44bd5045425c0e83640b025c489f646e0e3d18e7ff263960b7",
+      "use": "Existing project image, historical capture or portrait; not a new browser observation"
+    },
+    {
+      "file": "assets/brand-reference.png",
+      "source": "design/brand-comparison-corrected-20261023/selected-reference.png",
+      "sha256": "2bfd5fbeac8e43f5701a58b958eed20a04545a4e79f54597fac5c545d1d6390b",
+      "use": "Existing project image, historical capture or portrait; not a new browser observation"
+    }
+  ],
+  "teacherCredit": "Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY4.0; modified for KAIRO. See original credits/manifest.",
+  "boundaries": "Screenshots reused as historical imagery. No current live browser or performance acceptance."
+}

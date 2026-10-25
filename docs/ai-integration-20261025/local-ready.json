@@ -1,0 +1,11 @@
+{
+  "pid": 3088,
+  "port": 4188,
+  "ready": true,
+  "configuredProviders": [
+    "google",
+    "groq",
+    "openrouter"
+  ],
+  "browserObserved": false
+}

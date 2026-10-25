@@ -1,0 +1,11 @@
+# Provider live test and diagnostic follow-up
+
+23 October 2026; codex-provider-live-20261023-t / Codex / GPT-6 / effort unknown. Tasks PROVIDER-LIVE-009 and PROVIDER-DIAGNOSTICS-009. Exact claims: docs/provider-live-20261023/, this handoff, tools/provider-lab/lab.mjs and lab.test.mjs. All other active scopes, including original-material UI review, respected.
+
+User confirmed both key setup and Groq Free-plan account. Ran one Groq and three OpenRouter synthetic-only requests: initial router test, one deliberate named-model diagnostic test, one deliberate larger-output-budget comparison. No automatic retries, paid fallback, private documents or saved lesson changes. Keys never printed; Groq confirmation supplied only as a process-local flag after user confirmation; local key file was not read into conversation or overwritten.
+
+Groq GPT-OSS20B completed1.222s and passed JSON/quote checks, but root review rejects unsupported slip/ideal-motor claims not established by source. Named OpenRouter dots-3-note-preview:free exhausted1200 tokens/null content, then completed at explicit4000 in27.430s with an explanation consistent with this short fixture. Conditions differ and sample size is one completed output per provider; no general benchmark win, broad quality or learning claim.
+
+Improved harness to retain only safe bounded completion metadata on incomplete/schema/refusal failures, redact key echoes from returned model ID, and support explicit256–4000 output allowance with default1200. Tests12/12 pass; existing app not edited or rebuilt. Detailed limitations, original responses, run logs and safe diagnostics are in docs/provider-live-20261023/. No hidden reasoning retained.
+
+Judging: Product/Intelligence improve through measured provider behavior and a demonstrated grounding failure; Usability through recoverable incomplete responses; Sustainability through explicit free-only selection and bounded requests; Creativity/Impact/Presentation still require real source-to-representation learner evidence. Live connection is not source accuracy, tenant security or release acceptance. Next: source-bound edit proposals, actual user consent, durable quotas and claim-level review before production integration. Browser restriction and deleted schedule preserved. No cloud resources changed in this follow-up; Claude receipt not assumed.

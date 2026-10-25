@@ -1,0 +1,47 @@
+{
+  "hashes": {
+    "studio/tests/material-ingestion.test.mjs": "B15DB1E7BBC842FE9A7D97A0767F8FF23E998B2A46DCEFC1CE0AE16B5D06D07B",
+    "studio/server/hosted-core/app.mjs": "6A2087E6BA3D1CAFAF443E61D540CB07EC07722F9854A964589805EDFEAD652C",
+    "studio/server/hosted-core/firebase-verifier.mjs": "537BF8BFBA12353789F61457729D4B9CE64245B2721565404E240E011970D6CB",
+    "studio/server/hosted-auth/guard.mjs": "D6B31261C681D9A82F93914544931B4C3A8DD144B1D5E6795DB8265332F9A9AE",
+    "studio/tests/hosted-core.test.mjs": "2502E9869CA1137B8E7671677A67E0AE3D477847C5800ED04E4244DC3E402660",
+    "studio/server/hosted-core/entry.mjs": "5B40DFF03B24F1CB9904DFE668E8321ED0707F2609CA6644327C173447C73134",
+    "studio/tests/hosted-auth.test.mjs": "B411C130EC88C08BCDAD240C803B8EF71AD18D3C6E0CE7E3CD9CFBD7207829ED",
+    "studio/server/hosted-core/firestore.mjs": "C5DE4DF5B003AC00A919444C6A221E61CCADC96156D4509A993BD051939601A0",
+    "tools/material_ingestion/extract.py": "8034CF0284FE7B56DF141ED9157C6FF0B4F858F755390777FD48D333FE78143F"
+  },
+  "identitySuite": {
+    "passed": 11,
+    "failed": 0
+  },
+  "liveTwoAccountAcceptance": {
+    "checkedAt": "2026-10-23T22:31:42.978Z",
+    "syntheticOnly": true,
+    "privateLearnerDocuments": 0,
+    "accountsCreated": 2,
+    "accountsDeleted": 2,
+    "temporaryKeyDeleted": true,
+    "realFirebaseSignaturesVerified": true,
+    "hostedCreate": true,
+    "hostedRead": true,
+    "otherAccountDenied": true,
+    "staleSaveRejected": true,
+    "hostedRemoved": true,
+    "absentAfterRemoval": true
+  },
+  "browserObserved": false,
+  "learnerUIHosted": false,
+  "serviceMaxInstances": "1",
+  "fullSuite": {
+    "failed": 0,
+    "beforeFinalExtractionEdgeFix": true,
+    "passed": 551
+  },
+  "extractionMounted": false,
+  "deployment": "private-foundation-only",
+  "checkedAt": "2026-10-23T22:35:59.2649370Z",
+  "finalExtraction": {
+    "passed": 9,
+    "failed": 0
+  }
+}

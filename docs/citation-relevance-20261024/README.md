@@ -1,0 +1,7 @@
+# Citation and relevance regression evidence — 2026-10-24
+
+Criterion support: Product, Intelligence and Impact. Learner need: locate the source passage behind a lesson and recover when the goal is not represented in the reviewed material. Observable check: actual selector output retains source locators, edit state and exact UTF-16 offsets under the selection budget; actual draft validation rejects source revision drift and invented practice support quotes.
+
+Automated evidence: `node --test studio/tests/citation-relevance-edgecases.test.mjs` passed 4/4 on 2026-10-24. The tests import `studio/src/evidence-selection-core/model.ts` and `studio/src/lesson-draft-core/model.ts`; fixtures are synthetic and local. Cases cover repeated text at distinct page locators with differing edited flags, Unicode before later passages, two late relevant passages within budget, source-order fallback on no match, stale revision rejection and a fabricated support quote rejected by `validateDraft`.
+
+Interpretation limits: this confirms selection/citation integrity and quote containment rules. A valid citation does not prove that a generated explanation is entailed by its cited passage. The validator's fabricated-quote check applies to the native practice-question contract; semantic entailment, subject accuracy, and learner comprehension remain open for human/domain review. No browser, provider, learner-data or network validation was performed.

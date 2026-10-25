@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "scope": "Development tools and app roadmap are distinct. No automatic cloud transfer or external-host setup.",
+  "capabilities": [
+    {"id":"local-course-inventory","status":"implemented-local-cli","entry":"inventory.py","outputs":"private metadata and course-code/format counts"},
+    {"id":"pdf-text","status":"implemented-local-cli","entry":"extract.py","outputs":"bounded page text, source hash and page/chunk citations"},
+    {"id":"scan-and-screenshot-ocr","status":"implemented-local-cli; 24-image pilot completed; human-review flags retained","engine":"rapidocr-onnxruntime 1.4.4","outputs":"text, polygons, OCR scores, mandatory review flags"},
+    {"id":"office-read","status":"implemented-local-cli","formats":["DOCX paragraphs/tables","PPTX slide text","XLSX bounded cells; formulas not executed"],"limits":"No guarantee of visual equation/chart/image fidelity"},
+    {"id":"cited-retrieval","status":"implemented-local-library","entry":"source_index.py","outputs":"bounded exact excerpts and source offsets; no generated answer"},
+    {"id":"source-mcp","status":"implemented-local-stdio; protocol initialization, tool discovery and calls passed","entry":"mcp_server.py","tools":["source_catalog","search_coursework","read_source_chunk"],"configuredInApp":false,"configuredInExternalClient":false},
+    {"id":"web-search","status":"available-to-development-agent; app-adapter-planned","needs":"chosen provider/account, quotas and backend client","outputs":"URLs, dates and source metadata; retrieved text remains untrusted"},
+    {"id":"web-fetch","status":"app-adapter-planned","candidate":"official MCP Fetch reference server or bounded custom HTTP adapter","limits":"public allowed URLs only; block local/private address targets and non-HTTP schemes"},
+    {"id":"youtube-player","status":"official-api-verified; app-integration-planned","outputs":"click-to-load provider player, timestamps and source links","limits":"embed permission/playback must be checked; no automatic video download"},
+    {"id":"transcript-and-asr","status":"planned","inputs":"author-provided captions, permitted transcripts, or user-provided audio/video","outputs":"time-coded segments and language labels","limits":"Transcript availability and reuse rights vary; ASR is not verified text"},
+    {"id":"study-document-export","status":"planned-in-app; local libraries available","formats":["DOCX","PDF","PPTX","CSV"],"outputs":"study guides, cited summaries, question sets and learner-selected exports"},
+    {"id":"speech","status":"browser narration exists; cloud speech access previously tested separately","limits":"not a synchronized human-teacher/lip-sync implementation"},
+    {"id":"lesson-generation","status":"planned","needs":"reviewed extraction, structured lesson schema, evidence-grounded model output and source citations"},
+    {"id":"scene-actions","status":"planned-shared-contract","examples":["board.set_content","camera.focus_part","model.highlight_part","model.set_explosion","lesson.ask_question"],"limits":"typed allowlist; source documents cannot authorize tool calls or supply executable code"},
+    {"id":"diagram-and-data-tools","status":"planned","examples":["equation evaluation with bounds","SQL sandbox on toy data","charts","concept maps","timeline","flashcards"],"limits":"domain validation and generated-output checks required"},
+    {"id":"cloud-drive-and-publishing","status":"connectors may exist for developer; not inherited by KAIRO app","limits":"separate app credentials and explicit destination/permissions; private source indexing does not authorize uploads or public publishing"}
+  ]
+}

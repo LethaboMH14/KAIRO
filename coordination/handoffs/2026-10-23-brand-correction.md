@@ -1,0 +1,9 @@
+# Corrected selected brand reference
+
+Session `codex-brand-correction-20261023-a`, actual model/effort unknown. Task BRAND-CORRECT-001. User attached their intended C: rounded continuous-path K-like mark, geometric sans wordmark and flowing line graphics. Prior assistant interpretation as serif K monogram was wrong for their selection. Canonical visual saved as design/brand-comparison-corrected-20261023/selected-reference.png. Do not let earlier board letters/file names override the user's attachment.
+
+Corrected bus message40 supersedes message39's selection interpretation. Prepared three new side-by-side generated comparisons using actual selected reference (left) and serif/sharp-plane refinement (right): LinkedIn/email, app/devices, formal letter/presentation. Both complete identities are shown; not merely changing one icon under the same font. No serif K monogram used as selected baseline. Source palette, prompts, gallery and rationale saved in owned new subtree.
+
+Prior design/brand-comparison-20261023/index.html and README.md explicitly scoped/claimed for a correction notice/link, preserving historical work. Previous serif-vector masters remain alternative studies and were not edited. No rounded-path production-vector claim, no app/teacher texture changes, external writes, account changes, live browser observation or schedule. Material/phone/platform/trademark acceptance remains future work.
+
+Root inspected the actual user reference and all three generated results. Main selected mark, geometric name and flowing motif are carried through; tiny generated text/hex labels are illustrative and not the token source. New gallery and prompt/image local checks recorded at completion. Next owner should use attachment as selection authority and trace/redraw this selected system faithfully before implementation.

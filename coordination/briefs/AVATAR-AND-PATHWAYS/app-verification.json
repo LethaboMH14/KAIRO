@@ -1,0 +1,20 @@
+{
+  "checked": "2026-10-21",
+  "route": "http://127.0.0.1:4176/pathways",
+  "build": "TypeScript and Vite passed; existing shared Three chunk warning",
+  "tests": {"total":29,"passed":29,"failed":0,"newPathwayTests":5},
+  "browser": [
+    "Actual role page rendered with FNB primary-source link and historical closure",
+    "Artifact level without note contributed no points and displayed warning",
+    "Synthetic test note produced 20 percent coverage and 60 percent unassessed weight",
+    "Save then reload preserved the test note and score",
+    "Test note removed, level reset to unknown and blank draft saved",
+    "Business analysis route displayed availability unverified",
+    "Preparation Markdown download observed and file contents read",
+    "My progress entrypoint included in built bundle"
+  ],
+  "download": "C:/Users/USER/Downloads/KAIRO-graduate-preparation.md",
+  "screenshot": "coordination/briefs/AVATAR-AND-PATHWAYS/pathways-browser.png",
+  "notVerified": ["Dedicated mobile viewport run","Independent evidence assessment","Current open vacancy feed","External application submission"],
+  "deployment": "local only"
+}

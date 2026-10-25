@@ -1,0 +1,17 @@
+# Paste into Claude Design with the reference images attached
+
+Design an editable KAIRO Access prototype showing one continuous journey: a learner's source document becomes a lesson, a practical task, an evidence portfolio and a relevant work/SME next step. This is a functional education product, not a generic chatbot dashboard. Keep the interaction understandable and the visuals deliberate.
+
+Our character direction is an original adult Black South African woman teacher, warm and professional, natural textured hair, sage/cream clothing, mature softly stylised cinematic proportions, expressive eyes and readable articulated hands. Keep other identities/styles possible later. Voice and appearance are separate choices. Do not imitate a specific franchise character. Show facial studies for listening, encouragement, curiosity and concentration, plus full-body/three-quarter views and natural teaching gestures. These are concept references unless you can export a real rigged model with verified controls.
+
+Create three connected scenes:
+
+1. **Learn:** a calm, daylit lecture atelier. A reviewed source passage is selectable. The learner chooses “I'm lost here”; the teacher turns to the exact board formula, explains one step with captions and can switch to a simple visual. Source/revision chips remain inspectable.
+2. **Prove:** a workplace stock task or engineering workbench. The learner inspects evidence, makes a decision, receives a specific hint, then attempts changed data independently. Show actions, output and rubric separately. Include a clear accessible diagram/reading alternative.
+3. **Act:** a private portfolio and opportunity desk. Show a real requirement with its source, the artifact that supports it and any missing evidence. Prepare a CV/application pack with fields and document versions visible for review. Illustrative cards must say they are examples; do not invent live jobs, closing dates, salary, employer feedback, certificates, partnerships or a hiring probability. A simulation is not work experience.
+
+An SME branch should turn the same skill into a reviewed inventory/cash-visibility/quoting task with an owner-approved brief and practical handover. No guaranteed business outcomes. This connected mechanism matters more than adding unrelated portals or decorative charts.
+
+Interaction studies: sentence selection/toolbar; teacher target pointing; interrupt/resume speech; board rewrite; step/pause/replay animation; misconception hint; independent retry; source check; portfolio evidence; application review. Use restrained motion, coherent scale/light/contact, strong typography and readable controls. Avoid moving the camera while someone reads. Show desktop and narrow-screen layouts, reduced motion, unavailable audio/3D, missing source and stale-opportunity recovery.
+
+The reference tools are Blender/MPFB and Rain for 3D production; Three.js/React Three Fiber for web runtime; Google HD TTS for current speech; and optional Remotion templates for explainer media. Claude Design's output is an editable design/prototype, not proof that Blender assets, speech APIs or live application integrations exist. If you cannot access local files, use the attached files and this complete prompt. Export to an isolated design folder; do not replace the shared app. Claude Code will use the supplied project-local skills and production brief to implement and test the real assets.

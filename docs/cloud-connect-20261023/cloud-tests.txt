@@ -1,0 +1,15 @@
+✔ actual source cloud-copy routes require separate consent/current review and preserve local data (245.5867ms)
+✔ snapshot is exact revision-bound reviewed text and strips private original metadata (1.9935ms)
+✔ actual cloud library saves immutably, reads back and safely removes a snapshot (26.1104ms)
+✔ disabled library never authenticates or dispatches (0.4332ms)
+✔ cloud tampering, wrong identity and unknown snapshot fields fail verification (1.932ms)
+✔ cloud request errors are sanitized and pre-aborted requests cannot publish (0.7863ms)
+✔ cancellation during credential refresh prevents a later cloud upload (0.3075ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 588.854

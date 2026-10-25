@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-22",
+  "command": "python -m json.tool docs/workstreams/opportunity-evidence/evidence.json",
+  "result": "passed",
+  "date_validation": {
+    "parsed_iso_date_fields": 15,
+    "invalid_iso_dates": 0,
+    "all_source_checked_dates_match_snapshot": true,
+    "snapshot_date": "2026-10-22"
+  },
+  "reference_validation": {
+    "source_records": 9,
+    "unique_referenced_source_ids": 9,
+    "unresolved_source_ids": []
+  },
+  "manual_review": {
+    "posting_statuses_explicitly_labeled": true,
+    "proposal_measures_separated_from_employer_requirements": true,
+    "provider_cycle_conflict_recorded": true
+  }
+}

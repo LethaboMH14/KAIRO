@@ -1,0 +1,14 @@
+[
+  {
+    "path": "studio/server/account/routes.mjs",
+    "sha256": "3ecb36391410432cd53f26a468d8b420ec69aa2e1e112993f4442127c3ca2b93"
+  },
+  {
+    "path": "studio/package-lock.json",
+    "sha256": "abd245f786e79f4baa4b6453e3aa90f3857cd5fb36f8cf459c40191ab48d13b5"
+  },
+  {
+    "path": "tools/connected_release/stage/studio/server/account/routes.mjs",
+    "sha256": "3ecb36391410432cd53f26a468d8b420ec69aa2e1e112993f4442127c3ca2b93"
+  }
+]

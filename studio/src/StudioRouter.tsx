@@ -1,0 +1,60 @@
+import { lazy, Suspense } from 'react';
+import App from './App';
+import {StudentSpaceProvider,useStudentSpace} from './student-space/StudentSpace';
+import TeacherProvider from './teacher/TeacherProvider';
+import LearningHome from './continuity/LearningHome';
+import AppShell from './kairo/AppShell';
+import Home from './kairo/Home';
+import Studios from './kairo/Studios';
+import Services from './kairo/Services';
+import Institutions from './kairo/Institutions';
+import Work from './kairo/Work';
+import AccountBoundary from './account/AccountBoundary';
+import AccountPage from './account/AccountPage';
+const OpportunitiesPage = lazy(()=>import('./ai-personalisation/OpportunitiesPage'));
+const Direction = lazy(() => import('./learning-flow/RoleDirection'));
+const PumpHost = lazy(() => import('./studio-teaching-host/PumpHost'));
+const Lecture = lazy(() => import('./lecture/LectureStudio'));
+const Classroom = lazy(() => import('./experience/ExperienceClassroom'));
+const SourceClassroom = lazy(() => import('./source-classroom/SourceClassroom'));
+const LessonEditor = lazy(() => import('./lesson-editor-host/LessonEditorHost'));
+const Sources = lazy(() => import('./workspace/SourceWorkspace'));
+const Lesson = lazy(() => import('./workspace/LessonWorkspace'));
+const Practice = lazy(() => import('./practice/PracticeStudio'));
+const Progress = lazy(() => import('./profile/ProgressPage'));
+const TeacherSettings = lazy(() => import('./teacher/TeacherSettings'));
+const Pathways = lazy(() => import('./pathways/RolePathways'));
+const Engineering = lazy(() => import('./engineering/EngineeringStudio'));
+const WorkplaceCases = lazy(() => import('./practice-pack-workspace/PracticePackWorkspace'));
+const CvWorkspace = lazy(() => import('./cv-workspace/CvWorkspace'));
+function Routes() {
+  const student=useStudentSpace();
+  const studioPaths=['/engineering','/pump-lab','/computer-science','/classroom','/lecture','/cases','/practice','/pathways','/cv'];
+  if(studioPaths.includes(window.location.pathname)){if(student.loading)return <main className="ka-page" role="status">Opening your learning space…</main>;if(student.error)return <main className="ka-page" role="alert">{student.error}</main>;if(student.space&&!student.space.studios.includes(window.location.pathname))return <main className="ka-page"><h1>This activity is outside your demo programme.</h1><p>Your own modules and work are ready on Home.</p><a href="/">Back to my modules</a></main>;}
+
+  if (window.location.pathname === '/direction') return <Suspense fallback={<p className="ka-page">Opening your direction…</p>}>{student.space||student.loading||student.error?<Direction/>:<Pathways/>}</Suspense>;
+  if (window.location.pathname === '/opportunities') return <Suspense fallback={<p className="ka-page">Opening opportunities…</p>}><OpportunitiesPage/></Suspense>;
+  if (window.location.pathname === '/account') return <AccountPage/>;
+  if (window.location.pathname === '/pump-lab') return <Suspense fallback={<div className="scene-loading">Opening your pump investigation…</div>}><PumpHost/></Suspense>;
+  if (window.location.pathname === '/' || window.location.pathname === '/home') return <Home/>;
+  if (window.location.pathname === '/studios') return <Studios/>;
+  if (window.location.pathname === '/settings') return <Services/>;
+  if (window.location.pathname === '/for-institutions') return <Institutions/>;
+  if (window.location.pathname === '/computer-science') return <App/>;
+  if (window.location.pathname === '/classroom') return <Suspense fallback={<div className="scene-loading">Opening your classroom…</div>}>{new URLSearchParams(window.location.search).has('lesson')?<SourceClassroom/>:<Classroom />}</Suspense>;
+  if (window.location.pathname === '/cv') return <Suspense fallback={<div className="scene-loading">Opening your CV draft…</div>}><CvWorkspace /></Suspense>;
+  if (window.location.pathname === '/saved') return <LearningHome />;
+  if (window.location.pathname === '/cases') return <Suspense fallback={<div className="scene-loading">Opening workplace practice…</div>}><WorkplaceCases onExit={() => {window.location.href='/home';}} /></Suspense>;
+  if (window.location.pathname === '/evidence') return <Work/>;
+  if (window.location.pathname === '/engineering') return <Suspense fallback={<div className="scene-loading">Preparing the engineering studio…</div>}><Engineering onExit={() => { window.location.href = '/'; }} /></Suspense>;
+  if (window.location.pathname === '/pathways') return <Suspense fallback={<div className="scene-loading">Opening your role preparation…</div>}><Pathways /></Suspense>;
+  if (window.location.pathname === '/teacher') return <Suspense fallback={<div className="scene-loading">Opening your teacher preferences…</div>}><TeacherSettings /></Suspense>;
+  if (window.location.pathname === '/practice') return <Suspense fallback={<div className="scene-loading">Preparing your workplace case…</div>}><Practice /></Suspense>;
+  if (window.location.pathname === '/progress') return <Suspense fallback={<div className="scene-loading">Opening your progress…</div>}><Progress /></Suspense>;
+  if (window.location.pathname === '/lesson-editor') return <Suspense fallback={<div className="scene-loading">Opening your lesson builder…</div>}><LessonEditor /></Suspense>;
+  if (window.location.pathname === '/sources') return <Suspense fallback={<div className="scene-loading">Opening your material…</div>}><Sources /></Suspense>;
+  if (window.location.pathname === '/learn') return <Suspense fallback={<div className="scene-loading">Opening your lesson…</div>}><Lesson /></Suspense>;
+  if (window.location.pathname === '/lecture') return <Suspense fallback={<div className="scene-loading">Preparing the lecture theatre…</div>}><Lecture /></Suspense>;
+  return <main className="ka-page"><h1>This page could not be found.</h1><p>Your material and saved work have not been changed.</p><a className="ka-primary" href="/">Back to KAIRO home</a></main>;
+}
+export default function StudioRouter(){return <AccountBoundary><StudentSpaceProvider><TeacherProvider><AppShell path={window.location.pathname}><Routes/></AppShell></TeacherProvider></StudentSpaceProvider></AccountBoundary>;}

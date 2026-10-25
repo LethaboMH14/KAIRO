@@ -1,0 +1,18 @@
+{
+  "creation_time": "2026-10-23T21:06:07+0000",
+  "default_storage_class": "STANDARD",
+  "generation": 1792789566757101692,
+  "location": "AFRICA-SOUTH1",
+  "location_type": "region",
+  "metageneration": 1,
+  "name": "kairo-access-20261021-materials",
+  "public_access_prevention": "enforced",
+  "satisfies_pzs": true,
+  "soft_delete_policy": {
+    "effectiveTime": "2026-10-23T21:06:07.578000+00:00",
+    "retentionDurationSeconds": "604800"
+  },
+  "storage_url": "gs://kairo-access-20261021-materials/",
+  "uniform_bucket_level_access": true,
+  "update_time": "2026-10-23T21:06:07+0000"
+}

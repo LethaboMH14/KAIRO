@@ -1,0 +1,107 @@
+{
+ "kind": "TEMP synthetic voice (Kokoro-82M, local). Not KAIRO approved voice; not a human or entrant recording.",
+ "model": {
+  "name": "Kokoro-82M v1.0 (ONNX export by kokoro-onnx)",
+  "licence": "Apache-2.0",
+  "onnx_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+  "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+ },
+ "lines": [
+  {
+   "id": "k1",
+   "group": "kairo",
+   "text": "Meet KAIRO.",
+   "tts_text": "Meet Cairo.",
+   "voice": "bf_emma",
+   "speed": 0.94,
+   "file": "voice/temp/k1.wav",
+   "rate": 24000,
+   "raw_seconds": 1.152,
+   "sha256": "4ced19500138d699ab7d1b4a39d245baf132c3eab5e1b9513218a1dec7e6900a"
+  },
+  {
+   "id": "k2",
+   "group": "kairo",
+   "text": "Bring your material. Check the source.",
+   "tts_text": "Bring your material. Check the source.",
+   "voice": "bf_emma",
+   "speed": 0.94,
+   "file": "voice/temp/k2.wav",
+   "rate": 24000,
+   "raw_seconds": 2.176,
+   "sha256": "78b3769264dd0efd3ae47c603bbf7d6fe70511ecbb9ce509c6d4027dde2a3999"
+  },
+  {
+   "id": "k3",
+   "group": "kairo",
+   "text": "Explore the motor. Practise explaining why.",
+   "tts_text": "Explore the motor. Practise explaining why.",
+   "voice": "bf_emma",
+   "speed": 0.94,
+   "file": "voice/temp/k3.wav",
+   "rate": 24000,
+   "raw_seconds": 2.88,
+   "sha256": "191d9a80259b428e449bf06f7413fea7febc136f3c57bfff9c16459e9d2a3db1"
+  },
+  {
+   "id": "k4",
+   "group": "kairo",
+   "text": "Keep work you can show.",
+   "tts_text": "Keep work you can show.",
+   "voice": "bf_emma",
+   "speed": 0.94,
+   "file": "voice/temp/k4.wav",
+   "rate": 24000,
+   "raw_seconds": 1.579,
+   "sha256": "25c94dacb62f2cf15477c14d7c331c499ead7da98e95c2e2c105f024abe3c9b1"
+  },
+  {
+   "id": "k5",
+   "group": "kairo",
+   "text": "KAIRO. Put knowledge to work.",
+   "tts_text": "Cairo. Put knowledge to work.",
+   "voice": "bf_emma",
+   "speed": 0.94,
+   "file": "voice/temp/k5.wav",
+   "rate": 24000,
+   "raw_seconds": 1.856,
+   "sha256": "30a2c8bd9901aceaa866056c2de08945bd74dbcf754e415d5c17fcda4c978e60"
+  },
+  {
+   "id": "c1",
+   "group": "chorus",
+   "text": "Will I pass?",
+   "tts_text": "Will I pass?",
+   "voice": "bm_george",
+   "speed": 1.06,
+   "file": "voice/temp/c1.wav",
+   "rate": 24000,
+   "raw_seconds": 1.088,
+   "sha256": "39b6ae9f32ccc710bc07274089c3045e9793fe3a48ad936778d75feee0312cf1"
+  },
+  {
+   "id": "c2",
+   "group": "chorus",
+   "text": "Where do I start?",
+   "tts_text": "Where do I start?",
+   "voice": "bm_george",
+   "speed": 1.06,
+   "file": "voice/temp/c2.wav",
+   "rate": 24000,
+   "raw_seconds": 1.301,
+   "sha256": "3970649c66e14c3164fa9293198dbcfb29a809ebdd5470bf39270eea5155bca3"
+  },
+  {
+   "id": "c3",
+   "group": "chorus",
+   "text": "Can I prove it?",
+   "tts_text": "Can I prove it?",
+   "voice": "bm_george",
+   "speed": 1.06,
+   "file": "voice/temp/c3.wav",
+   "rate": 24000,
+   "raw_seconds": 1.28,
+   "sha256": "3c052e92f7cdaed2e74a4083d61551de916f57be9e37d1cb2b3737249f6b4b03"
+  }
+ ]
+}

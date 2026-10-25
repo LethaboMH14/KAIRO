@@ -1,0 +1,12 @@
+{
+  "source": "studio/public/models/character/kairo-teacher.glb",
+  "output": "kairo-render.glb",
+  "change": "Decoded meshopt for offline Blender import, same geometry and animation assets",
+  "animations": [
+    "Acknowledge",
+    "Explain",
+    "HandPoint",
+    "Idle",
+    "Listen"
+  ]
+}

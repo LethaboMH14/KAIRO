@@ -1,0 +1,28 @@
+✔ actual account router rejects bad and missing origins on mutations (274.3441ms)
+✔ failed provider authentication returns generic error and exposes no provider details (122.6985ms)
+✔ successful sign-in puts only an HttpOnly Secure SameSite cookie on the response (44.1396ms)
+✔ sign-in rejects an old auth_time before creating a session cookie (42.5678ms)
+✔ status exposes only the owner hash and asks Admin Auth to check revocation (31.7149ms)
+✔ session guard checks revocation and rejects revoked cookies (51.1505ms)
+✔ password reset response is identical when provider says account exists or does not (92.6067ms)
+✔ logout revokes refresh tokens and clears the cookie even when revocation fails (53.3532ms)
+✔ rotating email and spoofing forwarded headers cannot bypass the client-wide recovery allowance (1280.765ms)
+✔ signin and reset share a per-account budget, normalized across case and whitespace (191.3854ms)
+✔ an expired abuse window permits recovery without a watcher or background task (193.5153ms)
+✔ cross-origin or originless form mutations never reach the identity provider (45.3049ms)
+✔ oversized and revoked session cookies fail closed without revealing provider errors (41.5875ms)
+✔ identity failure bodies remain generic and never reflect injected identity fields (22.3143ms)
+✔ cross-owner reads, revision reads and all lesson draft variants fail before exposing another record (97.921ms)
+✔ cross-owner source review, original deletion, lesson publication and job cancellation cannot write (54.4406ms)
+✔ client progress cannot overwrite enrolment, quota or arbitrary server control records (45.2371ms)
+✔ SQL attack strings remain bound values and do not change subsequent query results (24.6815ms)
+✔ model tool directives and forged ownership fields cannot become executable lesson fields (1.8515ms)
+✔ fabricated citations and unsupported model support quotes are rejected (1.4375ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3878.6962

@@ -1,0 +1,70 @@
+{
+  "kind": "Camera animatic from generated concept stills; not live app or actual animated 3D footage",
+  "metadata": {
+    "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+    "codec": "h264",
+    "pix_fmt": "yuv420p(progressive)",
+    "audio_codec": "aac",
+    "fps": 24.0,
+    "source_size": [
+      1280,
+      720
+    ],
+    "size": [
+      1280,
+      720
+    ],
+    "rotate": 0,
+    "duration": 20.0
+  },
+  "planned_frames": 480,
+  "audio": [
+    {
+      "scene": 1,
+      "slot": 3,
+      "trimmed_speech_seconds": 1.6821458333333332,
+      "tempo": 1
+    },
+    {
+      "scene": 2,
+      "slot": 2,
+      "trimmed_speech_seconds": 0.8357916666666667,
+      "tempo": 1
+    },
+    {
+      "scene": 3,
+      "slot": 5,
+      "trimmed_speech_seconds": 2.8737083333333335,
+      "tempo": 1
+    },
+    {
+      "scene": 4,
+      "slot": 4,
+      "trimmed_speech_seconds": 2.0866666666666664,
+      "tempo": 1
+    },
+    {
+      "scene": 5,
+      "slot": 4,
+      "trimmed_speech_seconds": 2.8096666666666668,
+      "tempo": 1
+    },
+    {
+      "scene": 6,
+      "slot": 2,
+      "trimmed_speech_seconds": 1.6922916666666667,
+      "tempo": 1
+    }
+  ],
+  "full_decode": "passed",
+  "bytes": 3105756,
+  "sha256": "bca989bd5c268b51d436a3adb25283f09fb3af16f30e77b6704b4ec6e3cd0c17",
+  "limits": [
+    "Static concept plates with editorial zoom; no moving 3D or avatar performance",
+    "Scratch TTS, not final voice",
+    "Requires authorised real product/presenter footage",
+    "No browser/device/user or final upload acceptance"
+  ],
+  "decoded_frame_count": 480,
+  "decoded_video_seconds": 20.0
+}

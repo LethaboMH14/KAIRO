@@ -1,0 +1,39 @@
+{
+  "checkedOn": "2026-10-25",
+  "purpose": "Metadata-only source notes for the isolated opportunities prototype. No listing crawler is included.",
+  "sources": [
+    {
+      "name": "Northern Cape Premier's Bursary Programme, official page",
+      "url": "https://www.northerncape.gov.za/bursary/",
+      "role": "primary",
+      "observed": ["2027 programme; closing date 31 October 2026; no late applications; Northern Cape residency; ages 18-30; unemployed; undergraduate/first qualification; STEM fields prioritised"],
+      "notes": "The official page is the authority for the checked record. StudentRoom's 2027 repost showed an earlier 30 September date, so that repost is not linked to this specific record. Recheck the provider page before acting."
+    },
+    {
+      "name": "Funza Lushaka Bursary, Department of Basic Education",
+      "url": "https://www.funzalushaka.doe.gov.za/",
+      "role": "primary",
+      "observed": ["2027 applications open from 1 October 2026; new applicants close 31 January 2027; returning bursars close 30 November 2026; first-time applicant age cap 30"],
+      "notes": "The official site search-index result exposed these statements on 25 October 2026; direct page retrieval timed out during this research pass. Recheck the provider page before acting."
+    },
+    {
+      "name": "StudentRoom Funza Lushaka listing",
+      "url": "https://www.studentroom.co.za/funza-lushaka-bursaries-2027-applications-now-open/",
+      "role": "discovery",
+      "observed": ["2027 Funza Lushaka listing and separate new-applicant and returning-bursar deadlines"],
+      "notes": "Secondary discovery page; confirm requirements and dates on the Department's official site."
+    },
+    {
+      "name": "Graduates24 bursary directory",
+      "url": "https://www.graduates24.com/bursaries",
+      "role": "discovery",
+      "observed": ["Bursary listings directory, including dated current listing cards on the checked page"],
+      "notes": "Directory metadata is not evidence that any vacancy is currently open. Follow and verify each provider's primary source."
+    }
+  ],
+  "limits": [
+    "No personal data, copied full articles, application forms, or inferred eligibility are stored.",
+    "A checked date is a snapshot, not a live freshness guarantee.",
+    "No arbitrary URL fetch, crawler, schedule, or automated application is implemented."
+  ]
+}

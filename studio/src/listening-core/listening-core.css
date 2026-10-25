@@ -1,0 +1,17 @@
+.listen-panel { color: #f4f1e8; background: #171c22; border: 1px solid #465158; border-radius: 1rem; padding: clamp(1rem, 3vw, 1.5rem); }
+.listen-panel .listen-eyebrow { color: #93d5c2; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.listen-panel h2 { margin: .25rem 0 .6rem; font-size: 1.35rem; }
+.listen-panel .listen-copy, .listen-panel .listen-footnote { color: #c4cccc; }
+.listen-source { display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
+.listen-source dt { color: #aeb8b7; font-size: .8rem; }
+.listen-source dd { margin: .15rem 0; font-weight: 650; }
+.listen-panel .listen-label { display: block; margin: 1rem 0 .4rem; font-weight: 700; }
+.listen-panel .listen-textarea { box-sizing: border-box; width: 100%; min-height: 8rem; resize: vertical; border: 1px solid #68767c; border-radius: .65rem; padding: .8rem; background: #20272d; color: #f4f1e8; font: inherit; line-height: 1.5; }
+.listen-panel .listen-textarea:focus-visible, .listen-panel button:focus-visible { outline: 3px solid #f1ca76; outline-offset: 3px; }
+.listen-panel .listen-status { color: #b9f5d7; }
+.listen-panel .listen-error { color: #ffd0c7; }
+.listen-panel .listen-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: .8rem; }
+.listen-panel button { min-height: 2.75rem; border: 0; border-radius: 999px; padding: .6rem 1rem; background: #93d5c2; color: #102820; font: inherit; font-weight: 700; cursor: pointer; }
+.listen-panel button.listen-secondary { background: #3a454b; color: #f4f1e8; }
+.listen-panel button:disabled { opacity: .56; cursor: not-allowed; }
+.listen-panel .listen-footnote { margin: 1rem 0 0; font-size: .88rem; }

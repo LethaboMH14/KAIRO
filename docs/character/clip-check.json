@@ -1,0 +1,587 @@
+{
+ "maxHingeTwistDeg": 10.0,
+ "clips": {
+  "Acknowledge": {
+   "clavicle_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "upperarm_l": {
+    "maxStepDeg": 4.19,
+    "pathDeg": 45.5,
+    "netDeg": 22.8
+   },
+   "upperarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_l": {
+    "maxStepDeg": 5.54,
+    "pathDeg": 60.0,
+    "netDeg": 30.0,
+    "hingeTwistDeg": 2.2
+   },
+   "lowerarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_l": {
+    "maxStepDeg": 1.47,
+    "pathDeg": 16.0,
+    "netDeg": 8.0
+   },
+   "clavicle_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "upperarm_r": {
+    "maxStepDeg": 4.19,
+    "pathDeg": 45.5,
+    "netDeg": 22.8
+   },
+   "upperarm_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_r": {
+    "maxStepDeg": 5.54,
+    "pathDeg": 60.1,
+    "netDeg": 30.0,
+    "hingeTwistDeg": 2.2
+   },
+   "lowerarm_twist_01_r": {
+    "maxStepDeg": 0.03,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_r": {
+    "maxStepDeg": 1.47,
+    "pathDeg": 16.0,
+    "netDeg": 8.0
+   },
+   "thigh_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   }
+  },
+  "Explain": {
+   "clavicle_l": {
+    "maxStepDeg": 0.05,
+    "pathDeg": 0.6,
+    "netDeg": 0.4
+   },
+   "upperarm_l": {
+    "maxStepDeg": 0.96,
+    "pathDeg": 76.5,
+    "netDeg": 9.6
+   },
+   "upperarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_l": {
+    "maxStepDeg": 0.8,
+    "pathDeg": 63.8,
+    "netDeg": 8.0,
+    "hingeTwistDeg": 4.3
+   },
+   "lowerarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_l": {
+    "maxStepDeg": 0.56,
+    "pathDeg": 44.9,
+    "netDeg": 5.7
+   },
+   "clavicle_r": {
+    "maxStepDeg": 0.03,
+    "pathDeg": 0.2,
+    "netDeg": 0.4
+   },
+   "upperarm_r": {
+    "maxStepDeg": 0.96,
+    "pathDeg": 76.5,
+    "netDeg": 9.6
+   },
+   "upperarm_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_r": {
+    "maxStepDeg": 0.8,
+    "pathDeg": 63.8,
+    "netDeg": 8.0,
+    "hingeTwistDeg": 4.3
+   },
+   "lowerarm_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_r": {
+    "maxStepDeg": 0.57,
+    "pathDeg": 45.0,
+    "netDeg": 5.7
+   },
+   "thigh_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   }
+  },
+  "HandPoint": {
+   "clavicle_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "upperarm_l": {
+    "maxStepDeg": 0.03,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "upperarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "lowerarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "clavicle_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "upperarm_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "upperarm_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "lowerarm_twist_01_r": {
+    "maxStepDeg": 0.03,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   }
+  },
+  "Idle": {
+   "clavicle_l": {
+    "maxStepDeg": 0.05,
+    "pathDeg": 1.5,
+    "netDeg": 0.6
+   },
+   "upperarm_l": {
+    "maxStepDeg": 0.02,
+    "pathDeg": 0.1,
+    "netDeg": 0.8
+   },
+   "upperarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.7
+   },
+   "lowerarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "clavicle_r": {
+    "maxStepDeg": 0.04,
+    "pathDeg": 1.2,
+    "netDeg": 0.6
+   },
+   "upperarm_r": {
+    "maxStepDeg": 0.03,
+    "pathDeg": 0.2,
+    "netDeg": 0.8
+   },
+   "upperarm_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.7
+   },
+   "lowerarm_twist_01_r": {
+    "maxStepDeg": 0.03,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   }
+  },
+  "Listen": {
+   "clavicle_l": {
+    "maxStepDeg": 0.05,
+    "pathDeg": 1.0,
+    "netDeg": 0.5
+   },
+   "upperarm_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "upperarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 2.5
+   },
+   "lowerarm_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "clavicle_r": {
+    "maxStepDeg": 0.04,
+    "pathDeg": 0.5,
+    "netDeg": 0.5
+   },
+   "upperarm_r": {
+    "maxStepDeg": 0.01,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "upperarm_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "lowerarm_r": {
+    "maxStepDeg": 0.01,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 2.5
+   },
+   "lowerarm_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "hand_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_l": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "thigh_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "calf_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0,
+    "hingeTwistDeg": 0.0
+   },
+   "calf_twist_01_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   },
+   "foot_r": {
+    "maxStepDeg": 0.0,
+    "pathDeg": 0.0,
+    "netDeg": 0.0
+   }
+  }
+ },
+ "failures": [],
+ "pass": true
+}

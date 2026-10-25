@@ -1,0 +1,29 @@
+{
+  "provider": "openrouter",
+  "requestedModel": "dots-studio/dots-3-note-preview:free",
+  "returnedModel": "dots-studio/dots-3-note-preview:free",
+  "elapsedMs": 27430,
+  "finishReason": "stop",
+  "contentType": "string",
+  "usage": {
+    "promptTokens": 193,
+    "completionTokens": 2714,
+    "reasoningTokens": 2605
+  },
+  "proposal": {
+    "explanation": "The field speed is the speed of the magnetic field, while the rotor speed is the speed of the rotor. They are different quantities.",
+    "representations": [
+      "comparison-table",
+      "concept-map",
+      "worked-example"
+    ],
+    "sourceQuote": "A four-pole motor supplied at 50 Hz has a synchronous field speed of 1500 revolutions per minute.",
+    "title": "Field speed vs rotor speed"
+  },
+  "checks": {
+    "schema": true,
+    "exactQuote": true,
+    "semanticCorrectness": "human review required"
+  },
+  "scope": "synthetic evaluation only; no saved lesson changed"
+}

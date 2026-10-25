@@ -1,0 +1,42 @@
+{
+  "created": "2026-10-21",
+  "purpose": "Claude Design reference and later local implementation",
+  "assets": [
+    {
+      "file": "assets/design-reference/engineering/01-engineering-studio-target.png",
+      "bytes": 2001422,
+      "sha256": "ebf8be9e6bacc728774fdc86dedee7b6425934e4999203b557967f3848431e12",
+      "width": 1672,
+      "height": 941,
+      "kind": "AI-generated visual target; not a GLB, rig or implemented-feature screenshot",
+      "generator": "built-in image generation tool",
+      "generationPrompts": "README.md image generation record; tool-call prompts in conversation"
+    },
+    {
+      "file": "assets/design-reference/engineering/02-engineering-interactions.png",
+      "bytes": 2070765,
+      "sha256": "09a5d0a53506d70ad4c6ce62b2954781fdd7a205352c1327b01f0772fddd42c8",
+      "width": 1672,
+      "height": 941,
+      "kind": "AI-generated visual target; not a GLB, rig or implemented-feature screenshot",
+      "generator": "built-in image generation tool",
+      "generationPrompts": "README.md image generation record; tool-call prompts in conversation"
+    },
+    {
+      "file": "assets/design-reference/engineering/poly_haven_studio_1k.hdr",
+      "bytes": 1682195,
+      "sha256": "dfc8505761018d644997a803f332339328af2b53e82023fb3bec37cefdf43b83",
+      "kind": "runtime lighting candidate",
+      "author": "Greg Zaal",
+      "source": "https://polyhaven.com/a/poly_haven_studio",
+      "license": "CC0",
+      "licenseURL": "https://polyhaven.com/license",
+      "officialDownload": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/poly_haven_studio_1k.hdr",
+      "verifiedAgainstMetadata": {
+        "bytes": 1682195,
+        "md5": "a1065f613cb6e0388d82a99dcee23d3b"
+      }
+    }
+  ],
+  "limits": "No motor mesh or customized humanoid rig is supplied. Images are aspirational, not interactive runtime assets."
+}

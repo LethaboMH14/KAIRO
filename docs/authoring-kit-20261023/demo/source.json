@@ -1,0 +1,13 @@
+{
+  "id": "aaaaaaaaaaaaaaaaaaaaaaaa",
+  "title": "Synthetic fixture only",
+  "reviewed": true,
+  "reviewedPages": [
+    {
+      "text": "Synthetic fixture for contract tests. Synchronous field speed equals 120 times frequency in hertz divided by the total number of poles. This is a rotating field calculation, not a measured shaft speed.",
+      "locator": "Synthetic fixture, section 1",
+      "method": "authored-test"
+    }
+  ],
+  "revision": "ba07d42a15fa1c789088494fc8b3485ff84c0a600dfa5b3fb136cf9ffbac0b2e"
+}

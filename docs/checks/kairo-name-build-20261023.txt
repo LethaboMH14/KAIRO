@@ -1,0 +1,8 @@
+
+> kairo-studio@0.1.0 build
+> tsc -b && vite build
+
+src/signing/browserDeps.ts(36,5): error TS2322: Type 'HTMLVideoElement' is not assignable to type 'VideoLike'.
+  Types of property 'srcObject' are incompatible.
+    Type 'MediaProvider | null' is not assignable to type 'MediaStream | null'.
+      Type 'Blob' is missing the following properties from type 'MediaStream': active, id, onaddtrack, onremovetrack, and 10 more.

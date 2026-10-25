@@ -1,0 +1,18 @@
+✔ private workspace HTTP routes isolate learners, preserve review and lesson data across router recreation, and reject stale revisions and drafts (1393.5108ms)
+✔ private upload moves queued to ready, and both pre-extraction and in-flight cancellation prevent source publication (137.8931ms)
+✔ actual StudentHome renders correct engineering modules, saved lesson/source actions, and no implied marks (2303.8595ms)
+✔ actual StudentHome renders correct informatics modules and related CS/source/lesson actions (3.9723ms)
+✔ actual Studios renders only engineering rooms and common source action (7.8517ms)
+✔ actual Studios renders only informatics room and common source action (3.2489ms)
+✔ actual StudentHome safely escapes untrusted identity and module text (1.8702ms)
+✔ official curriculum selections retain distinct programme codes, source locators and honest activity mappings (8.9995ms)
+✔ enrolment is selected only by authenticated owner and never by a requested cohort (4.2668ms)
+✔ unknown, malformed and mixed enrolments fail closed; unsafe material links are removed (6.0911ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3577.997

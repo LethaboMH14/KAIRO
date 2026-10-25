@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-23T21:58:07.489Z",
+  "syntheticOnly": true,
+  "sourceId": "1234290bda50a615fd1f0c55",
+  "save": {
+    "saved": true,
+    "sourceId": "1234290bda50a615fd1f0c55",
+    "revision": "95db6952f11124ab9b0d770669f1341f82def7d28184a67b8fcb48060f216349",
+    "generation": "1792792688197189",
+    "verifiedAt": "2026-10-23T21:58:06.402Z"
+  },
+  "readVerified": true,
+  "remove": {
+    "removed": true,
+    "retention": "Deleted cloud objects may remain recoverable under the bucket soft-delete policy (currently seven days)."
+  },
+  "absentAfterRemoval": true,
+  "privateLearnerDocuments": 0,
+  "authTimingsMs": [
+    19687,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

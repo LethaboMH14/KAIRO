@@ -1,0 +1,31 @@
+{
+  "method": "Exact spoken column, contractions one word",
+  "lines": [
+    {
+      "slot": "0\u20135s",
+      "words": 12
+    },
+    {
+      "slot": "5\u20137s",
+      "words": 2
+    },
+    {
+      "slot": "7\u201311s",
+      "words": 6
+    },
+    {
+      "slot": "11\u201315s",
+      "words": 6
+    },
+    {
+      "slot": "15\u201318s",
+      "words": 6
+    },
+    {
+      "slot": "18\u201320s",
+      "words": 5
+    }
+  ],
+  "total": 37,
+  "humanRehearsal": false
+}

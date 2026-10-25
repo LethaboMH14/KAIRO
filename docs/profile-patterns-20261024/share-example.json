@@ -1,0 +1,89 @@
+{
+  "proposalFormat": "kairo-selected-evidence-share-proposal-v0",
+  "bindingContract": false,
+  "syntheticExample": true,
+  "share": {
+    "status": "not-shared",
+    "recipientType": "employer",
+    "recipientLabel": "Example employer (synthetic)",
+    "audience": "named-recipient-only",
+    "consentGrantedAt": null,
+    "expiresAt": null,
+    "revokedAt": null
+  },
+  "learnerDisplay": {
+    "includeName": false,
+    "displayName": null,
+    "includeContact": false,
+    "contact": null
+  },
+  "roleContext": {
+    "type": "role-opportunity",
+    "roleId": "synthetic-role-example",
+    "title": "Example data quality role (synthetic)",
+    "sourceUrl": "https://example.invalid/role",
+    "checkedAt": null,
+    "statedClosingAt": null,
+    "availabilityStatus": "unverified"
+  },
+  "moduleContext": {
+    "type": "curriculum-module",
+    "institution": null,
+    "moduleCode": null,
+    "moduleTitle": null,
+    "year": null,
+    "sourceUrl": null,
+    "reviewStatus": "unknown",
+    "enrolmentClaim": "not-claimed"
+  },
+  "selectedEvidence": [
+    {
+      "evidenceId": "synthetic-practice-example-01",
+      "includedInShare": false,
+      "claimLevel": "practice-record",
+      "claimLabel": "Practice record; self-reported and unverified",
+      "learnerDescription": "I practised checking duplicate rows in a synthetic exercise. (Synthetic example, not learner data.)",
+      "artifact": {
+        "type": "synthetic-exercise",
+        "runId": "synthetic-run-id",
+        "scenarioVersion": "synthetic-scenario-version",
+        "recordStatus": "scenario-consistency-only",
+        "occurredAt": null,
+        "updatedAt": null,
+        "sourceRevision": null,
+        "sourceUrl": null
+      },
+      "review": {
+        "status": "not-reported",
+        "reviewerIdentityVerified": false,
+        "reviewOutcomeVerified": false
+      },
+      "credentialVerification": {
+        "status": "not-applicable",
+        "issuerId": null,
+        "method": null,
+        "checkedAt": null,
+        "validUntil": null
+      },
+      "alignments": [
+        {
+          "type": "role-criterion",
+          "id": "synthetic-role-criterion",
+          "label": "Example: investigate data quality",
+          "mappingStatus": "learner-selected"
+        }
+      ]
+    }
+  ],
+  "opportunityFreshness": {
+    "sourceCheckedAt": null,
+    "availabilityStatus": "unverified",
+    "rule": "Show source and dates; never infer that this opportunity is open."
+  },
+  "limits": [
+    "This example is synthetic and defines no approved KAIRO runtime or employer-sharing interface.",
+    "Role criteria and curriculum modules use separate typed contexts and identifiers.",
+    "A practice record does not establish learner identity, unaided work, workplace competence, course credit or hiring readiness.",
+    "No consent is granted and no record is shared by this example."
+  ]
+}

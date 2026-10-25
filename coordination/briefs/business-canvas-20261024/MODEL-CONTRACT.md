@@ -1,0 +1,20 @@
+# KAIRO business model contract for independent review
+
+24 October 2026. Root codex-business-canvas-20261024-l, actual gpt-6 / effort unknown. User requests nine Lean Canvas fields matching screenshot, researched public facts, transparent economics, simulations and independent Luna/chats review. Current private pilot has no verified customer traction, revenue, learner outcomes, institutional contract, willingness-to-pay study or billing forecast. Existing managed services and working examples are capability evidence only.
+
+Root owns `tools/business_model/` and `docs/business-canvas-20261024/`, including model inputs, calculations, workbook, results, nine paste-ready fields and evidence register. Workers/chats own only their separately registered docs and handoffs. No app/cloud/credit/payment/account mutation or portal submission. Browser-observation restriction and deleted schedule stay unchanged.
+
+## Decision structure
+
+- Primary beachhead: adult engineering/informatics learners using existing supported motor/pump/API examples and their own authorised materials. Institutional buyer hypothesis: department, academic-development programme or training provider purchasing a scoped cohort, not a presumed university-wide deal. Future workplace/other studios/jobs/funding/rewards are separate, not current revenue or outcomes.
+- Compare proposed consumer monthly price and institutional seat contract, not assume a price is accepted. Initial sensitivity candidates: consumerR49/month VAT-inclusive if registered; institutionR35/seat/month excluding VAT, annual420/seat, minimum250seats, separateR6000onboarding. These are hypotheses that root may change after cost analysis. Do not count sponsored-seat learners again as paying B2C customers or sum multiple module enrolments as unique learners.
+- Model 24 months with downside/base/upside driver sets; cohort retention/churn, activation, conversion, seasonality, B2B win/timing/payment/renewal and annual deferred revenue. Never infer demand from enrolment counts alone.
+- Separate revenue earned, cash received, output VAT and payment fees. Display VAT-registration assumption; do not present tax treatment as personalised advice or assume educational exemption. Show no-credit long-run costs and separately labelled founder cash draw versus replacement-cost labour.
+- Unit cost from billable model tokens, retries, premium voice characters, OCR CPU, storage/egress, transactional operations, support time, refunds and onboarding. Device voice is not a licence to ignore other costs. Credits/free allowances are excluded from durable economics. Existing daily app caps are pilot protection, not a scaling service commitment.
+- Deterministic scenario stress plus seeded Monte Carlo **conditional** uncertainty; no posterior probability of success and no claim of calibrated predictions without observations. Include zero-demand/no-contract, delayed collection, high churn/free use/voice/retry, FX shock, cap enforcement, and break-even/sensitivity cases.
+- Public FNB/FirstRand/company reporting can inform scenario/risk/return disciplines; do not claim access to or replication of proprietary bank forecasting, credit-scoring, ALM or capital models. Startup unit economics are not a bank capital stress test.
+- Use research-backed feedback/retrieval/progress principles; no learning-style labels, addictive streaks, guaranteed learning/job results or dark-pattern billing. User-facing value and consent remain distinct from conversion optimisation.
+
+## Deliverable acceptance
+
+Every numeric input is a dated source with units or explicitly hypothetical assumption/range. Calculation checks reconcile cash/VAT/revenue, nonnegative/no-overlap cohorts, deferred revenue and zero scenarios. Compare independent model results with an editable workbook and human-readable scenario outputs. Reject unsupported certainty and record failure conditions/funding need. Final nine-field language is concise and useful to a nontechnical judge, with sources and full calculation detail linked outside the portal text.

@@ -1,0 +1,11 @@
+✔ official curriculum selections retain distinct programme codes, source locators and honest activity mappings (14.4951ms)
+✔ enrolment is selected only by authenticated owner and never by a requested cohort (3.1987ms)
+✔ unknown, malformed and mixed enrolments fail closed; unsafe material links are removed (9.0802ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 216.2323

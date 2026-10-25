@@ -1,0 +1,972 @@
+{
+  "version": 1,
+  "created": "2026-10-22",
+  "rule": "An item stays unfinished until its own acceptance is evidenced; narrower work packages do not auto-complete parent outcomes.",
+  "areas": [
+    {
+      "id": 1,
+      "title": "Teacher avatar",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "1.01",
+          "title": "Finish Claude Rain export and optimise the browser asset",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "1.02",
+          "title": "Finalise appearance, clothing, hair, materials, facial expressions and articulated hands",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "1.03",
+          "title": "Connect finished character to voice and lesson systems",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "1.04",
+          "title": "Improve speech alignment beyond approximate audio-driven jaw motion",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "1.05",
+          "title": "Point reliably toward actual board/model targets",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "1.06",
+          "title": "Add interruptible teaching gestures, listening, acknowledgement and gaze",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "1.07",
+          "title": "Add authored walking with foot contact and reviewed touch/IK behaviour",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "1.08",
+          "title": "Support alternate appearances independently of ethnicity/voice/personality",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "1.09",
+          "title": "Validate device performance and lightweight fallback",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Conversation and language",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "2.01",
+          "title": "Add consented microphone input and speech recognition",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "2.02",
+          "title": "Implement interrupt, clarify, pause, resume and return-to-lesson turn taking",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "2.03",
+          "title": "Ground teacher responses in selected passage, object and mistake",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "2.04",
+          "title": "Research and test South African voices, accents and languages",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "2.05",
+          "title": "Review translations and pronunciation with speakers",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "2.06",
+          "title": "Keep captions/transcripts/text controls equivalent to voice",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "2.07",
+          "title": "Build separately reviewed SASL translation and performance pathway",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Documents and interactive reader",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "3.01",
+          "title": "Evaluate extraction/OCR on authorised coursework, scans, screenshots, tables, equations and MCQs",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "3.02",
+          "title": "Improve original-page/extracted-text comparison and uncertainty display",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "3.03",
+          "title": "Handle long documents, multiple sources and conflicts",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "3.04",
+          "title": "Improve editable layout and annotations",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "3.05",
+          "title": "Complete explain/simplify/translate/read/define/visualise/practise/bookmark/notes actions",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "3.06",
+          "title": "Preserve page references, corrections and source revisions end to end",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "3.07",
+          "title": "Add supported cloud import plus retention/deletion controls",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "3.08",
+          "title": "Separate student answers from authoritative answer keys",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Adaptive learning",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "4.01",
+          "title": "Diagnose prerequisite gaps and specific misconceptions from observed evidence",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "4.02",
+          "title": "Generate appropriate objectives and lesson plans from baseline",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "4.03",
+          "title": "Use worked examples, faded assistance and independent practice",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "4.04",
+          "title": "Add delayed recall and changed-context assessments",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "4.05",
+          "title": "Adapt difficulty, pace and explanation from demonstrated outcomes",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "4.06",
+          "title": "Let learners override recommendations and change goals",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "4.07",
+          "title": "Assess open-ended answers with transparent rubrics",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "4.08",
+          "title": "Evaluate lesson/citation accuracy across disciplines",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "4.09",
+          "title": "Do not infer fixed learning styles or ability from clicks/time",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Shared studio system",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "5.01",
+          "title": "Build World Composer selecting supported environments/interactions",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "5.02",
+          "title": "Connect lessons, teacher cues, boards, cameras and model actions with validated interfaces",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "5.03",
+          "title": "Preserve lesson state across environments",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "5.04",
+          "title": "Provide diagram/reading fallback for unsupported topics",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "5.05",
+          "title": "Build supported photo/manual-to-model Reality Mode",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Individual studios",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "6.01",
+          "title": "Complete integrated Engineering browser acceptance",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "6.02",
+          "title": "Add reviewed Engineering faults, experiments and equipment",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "6.03",
+          "title": "Obtain qualified Engineering content review",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "6.04",
+          "title": "Expand CS to executable coding, SQL, debugging, algorithms and systems tasks",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "6.05",
+          "title": "Integrate finished teacher and richer adaptive lessons into lecture theatre",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "6.06",
+          "title": "Build sourced Law cases, courtroom roles, arguments, objections and rubrics",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "6.07",
+          "title": "Obtain licensed Anatomy models, layers/interactions and qualified review",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "6.08",
+          "title": "Build bounded Industrial/mining scenarios and validated calculations",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Credible evidence",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "7.01",
+          "title": "Add substantial role-specific practical tasks",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "7.02",
+          "title": "Execute/inspect real queries, spreadsheets, code, designs, reports and calculations",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "7.03",
+          "title": "Preserve first attempts, assistance, revisions and individual contribution",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "7.04",
+          "title": "Introduce independent assessment and reviewer identity",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "7.05",
+          "title": "Version artifacts and rubrics",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "7.06",
+          "title": "Add consented optional recordings and accessible demonstrations",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "7.07",
+          "title": "Support controlled private evidence sharing",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "7.08",
+          "title": "Separate practice, reviewed competence, provider certificates and recognised qualifications",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Work simulations and AI teams",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "8.01",
+          "title": "Create coherent fictional organisations and licensed public/synthetic datasets",
+          "status": "reviewed_done",
+          "evidence": [
+            "studio/src/worksim/model.ts",
+            "docs/workstreams/worksim.md",
+            "coordination/roadmap/reviews/W4-worksim.md",
+            "coordination/roadmap/reviews/independent-probes.mjs"
+          ],
+          "reviewer": "codex-orchestrator-20261022-a",
+          "acceptanceScope": "First coherent authored fictional organisation and versioned synthetic dataset with provenance; not a general scenario generator or multiple employer datasets"
+        },
+        {
+          "id": "8.02",
+          "title": "Add realistic briefs, incomplete requirements and changing constraints",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "8.03",
+          "title": "Add clearly labelled AI client/teammate/manager/reviewer roles",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "8.04",
+          "title": "Include handovers, incidents, deadlines and communication tasks",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "8.05",
+          "title": "Prevent AI teammates from secretly completing assessed learner steps",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "8.06",
+          "title": "Support supervised SME/volunteer briefs",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "8.07",
+          "title": "Confirm host/institution recognition before calling an activity WIL",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Career discovery and matching",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "9.01",
+          "title": "Fetch current original-employer adverts including FNB",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "9.02",
+          "title": "Check deadlines, qualification, experience, location and documents",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "9.03",
+          "title": "Separate mandatory criteria from preferences",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "9.04",
+          "title": "Match inspectable evidence to individual criteria",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "9.05",
+          "title": "Explain gaps and recommend specific preparation tasks",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "9.06",
+          "title": "Help uncertain learners compare several plausible directions",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "9.07",
+          "title": "Connect resources/projects/simulations/credentials/experience into editable paths",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "9.08",
+          "title": "Evaluate matching usefulness and fairness",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "CV, portfolio and applications",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "10.01",
+          "title": "Generate truthful tailored CVs and motivation letters",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "10.02",
+          "title": "Export readable DOCX and text-extractable PDF",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "10.03",
+          "title": "Check headings, extraction order, dates, missing facts and evidence relevance",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "10.04",
+          "title": "Build project case studies and digital portfolio",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "10.05",
+          "title": "Draft LinkedIn headline/About/skills/Featured content from confirmed facts",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "10.06",
+          "title": "Implement supported autofill and attachment workflows",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "10.07",
+          "title": "Require appropriate destination/data/action permission",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "10.08",
+          "title": "Track submission receipts, uncertain outcomes and feedback",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "10.09",
+          "title": "Prevent duplicate applications",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "10.10",
+          "title": "Keep applicant in control of live assessments and declarations",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Opportunities and experience",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "11.01",
+          "title": "Integrate verified internship/graduate/bursary/learnership/volunteer/WIL sources",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "11.02",
+          "title": "Verify aggregator notices against original providers",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "11.03",
+          "title": "Add hackathon dates/eligibility/team preparation/contribution records",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "11.04",
+          "title": "Support permissioned networking and follow-up drafts",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "11.05",
+          "title": "Track expiry, amendments and duplicates",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "11.06",
+          "title": "Resolve provider/domain identity before accepting personal information",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Permissioned tools and panels",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "12.01",
+          "title": "Implement app-owned tool broker and MCP integrations",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "12.02",
+          "title": "Add bounded web search/fetch with provenance",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "12.03",
+          "title": "Run code/terminal in isolated workers with scoped files/network/runtime/budget",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "12.04",
+          "title": "Implement cancellation/revocation/audit/error recovery",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "12.05",
+          "title": "Build document/browser/video/artifact/tool-output workspace panels",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "12.06",
+          "title": "Embed supported YouTube videos with relevant timestamps",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "12.07",
+          "title": "Provide supported browser handoff for non-embeddable sites",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "12.08",
+          "title": "Sandbox generated HTML/interactive explanations",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "12.09",
+          "title": "Generate motion explainers and optional Remotion exports",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "12.10",
+          "title": "Keep provider identity visible for login/upload/submission",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Commerce and SMEs",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "13.01",
+          "title": "Guided shop/product scans and confirmed inventory mapping",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "13.02",
+          "title": "Separate observed, ledger and verified quantities",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "13.03",
+          "title": "Record/reconcile sales, deliveries, damage and waste",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "13.04",
+          "title": "Build cash-flow/costing/quoting/reporting tools",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "13.05",
+          "title": "Add supplier comparisons and proposed orders",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "13.06",
+          "title": "Provide sourced tender discovery and requirement checklists",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "13.07",
+          "title": "Support owner-approved practical projects with confidentiality boundaries",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Production and reliability",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "14.01",
+          "title": "Implement authentication and per-user permissions",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.02",
+          "title": "Add durable database and private object storage",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.03",
+          "title": "Add cross-device progress, backups, export and deletion",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.04",
+          "title": "Run bounded background extraction/render jobs with recovery",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.05",
+          "title": "Measure provider quotas/cost and enforce usage limits",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.06",
+          "title": "Recheck Google credits/expiry and Azure access before dependence",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.07",
+          "title": "Choose evaluated API versus hosted/local model workers",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.08",
+          "title": "Separate application API credentials from developer subscriptions",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.09",
+          "title": "Deploy authenticated pilot environment",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.10",
+          "title": "Optimise low-end phones, bundle size/loading and weak networks",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "14.11",
+          "title": "Complete keyboard/screen-reader/contrast/reduced-motion/device checks",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Proof and competition",
+      "status": "unfinished",
+      "items": [
+        {
+          "id": "15.01",
+          "title": "Complete pending integrated Engineering interaction checks",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "15.02",
+          "title": "Obtain domain review of educational content",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "15.03",
+          "title": "Run learner usability and independent learning/transfer evaluation",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "15.04",
+          "title": "Measure operating cost and failure rates",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "15.05",
+          "title": "Test institutional/learner purchasing proposition",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "15.06",
+          "title": "Verify current judging rules and map claims to working evidence",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "15.07",
+          "title": "Rehearse dependable end-to-end demonstration",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "15.08",
+          "title": "Prepare pitch, demo backup, technical docs and honest limitations",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        },
+        {
+          "id": "15.09",
+          "title": "Keep bus/handoffs/capability status current",
+          "status": "open",
+          "evidence": [],
+          "reviewer": null
+        }
+      ]
+    }
+  ]
+}

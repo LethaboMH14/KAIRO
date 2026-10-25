@@ -1,0 +1,22 @@
+[
+  {
+    "path": "studio/public/models/RobotExpressive.glb",
+    "url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/models/gltf/RobotExpressive/RobotExpressive.glb",
+    "license": "CC0-1.0",
+    "author": "Tomás Laulhé; glTF modifications by Don McCurdy",
+    "source": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/models/gltf/RobotExpressive/README.md",
+    "sha256": "047f5e5fb3bb6d378bd1df16ca6137f2a596c99b3a1b5690b4020c05aaf6f319",
+    "bytes": 463988,
+    "usage": "animated temporary guide"
+  },
+  {
+    "path": "assets/reference/classroom.zip",
+    "url": "https://download.blender.org/demo/test/classroom.zip",
+    "license": "CC0-1.0",
+    "author": "Christophe Seux",
+    "source": "https://www.blender.org/download/demo-files/",
+    "sha256": "0f0ecc58d45f12b2f4272a53e2d8e69135518e16e956b118f10c20d8dcfdf5e6",
+    "bytes": 70279690,
+    "usage": "downloaded reference; not converted into the running room"
+  }
+]

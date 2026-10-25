@@ -1,0 +1,401 @@
+{
+  "started": "2026-10-22T00:13:23.973Z",
+  "origin": "http://127.0.0.1:4186",
+  "browser": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x00004628) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "snapshot": {
+    "takenAt": "2026-10-22T00:13:24.903Z",
+    "integration": {
+      "src/StudioRouter.tsx": "beda46462b8e1746d22b25d8524b5e118e01d045b5c375ca2e9340241b4687ed",
+      "src/App.tsx": "0e0f7143e79fe76c058453cb434a862ac2e55ee885399ad5332d315342c13e9e",
+      "src/main.tsx": "6dfcfd358d44716935ebf04a0e55428fd26e29cc9205976d84da9678e0de16f5",
+      "src/styles.css": "c8e11bf196739e4978b6f4c7a535a51c5bc46b786bcb1fd40d13ee3e7b7173f8",
+      "index.html": "4b3e27bf6f12abe004d16b6ac485f1cb72c392cd952d9a53aa72e40ec2f94c33",
+      "vite.config.ts": "0ea84b4e2909b04e4c1cb1b92392a9f85bcb46605472763b15935d3498ba8ed3"
+    },
+    "engineering": {
+      "src/engineering/engineering.css": "47ecc20be199da541bf34afebaf233af72826431424bc4a6050caaf831efe417",
+      "src/engineering/EngineeringStudio.tsx": "062515688c2c04d25590de53155e8c45715ae56fcf16a1d60f410e0b35c3076b",
+      "src/engineering/fieldMath.ts": "8761f778c8ffdbe7430582d75194f9e19cbf60a1f68c1b201b671ca76d9f510b",
+      "src/engineering/materials.ts": "718fbb452e4455181b71abe571788dd893aa2692880f863b89dae098e512a169",
+      "src/engineering/motorContent.ts": "29bff6ac4026cf60a15c1548574f8e71aa1a0366de171647646a9fe679048e1f",
+      "src/engineering/MotorDiagram.tsx": "4dc5587505d7ccf2b92d79b9e5381382f274140a1596989848a70530edf3f7ee",
+      "src/engineering/motorGeometry.json": "6fbe144c740a7dff2acb16681c4a0658eec7feb8dd4cad8602a2f43903a81712",
+      "src/engineering/motorModel.ts": "d6723362dfdd14a0158749659483f27787378a8664e0d751b03c812c08da0e25",
+      "src/engineering/MotorScene.tsx": "ecd1f93e3472c39d0a03366de0c155e93a7e63daa243a0452d76469b3105af5d",
+      "src/engineering/PhasePlot.tsx": "7626774151965b223b2da4b798f70785fca04389ec22083b849ea421b21e7551",
+      "src/engineering/preview.html": "7d78c128ce563a3f90139fb6c503bc707c80a7c24d13572a3ec0ee7c080222b5",
+      "src/engineering/preview.tsx": "bccd0a59dfe68683e6d6123c2dbfc03574961c5896307424100b7a9993b541de"
+    }
+  },
+  "typecheck": {
+    "exitCode": 2,
+    "engineeringAndIntegrationErrors": [],
+    "otherErrors": [
+      "src/continuity/offline.ts(3,19): error TS2339: Property 'env' does not exist on type 'ImportMeta'.\r",
+      "src/portfolio-export/model.ts(71,42): error TS2339: Property 'assistanceExposure' does not exist on type 'PracticeArtifact | WorkSimExport'.\r",
+      "src/portfolio-export/model.ts(71,92): error TS2339: Property 'reportedAssistance' does not exist on type 'PracticeArtifact | WorkSimExport'.\r",
+      "src/portfolio-export/model.ts(71,179): error TS2339: Property 'unknownAssistanceAttempts' does not exist on type 'PracticeArtifact | WorkSimExport'.\r"
+    ]
+  },
+  "build": {
+    "files": 37,
+    "engineeringChunks": [
+      {
+        "file": "assets/EngineeringStudio-DSxy-1L5.js",
+        "bytes": 114274
+      },
+      {
+        "file": "assets/MotorScene-CRoC8FGa.js",
+        "bytes": 70612
+      }
+    ],
+    "largest": [
+      {
+        "file": "assets/OrbitControls-EH7lA5rL.js",
+        "bytes": 532155
+      },
+      {
+        "file": "assets/three.core-Brs_ZaRI.js",
+        "bytes": 375757
+      },
+      {
+        "file": "assets/index-3DgCEfNp.js",
+        "bytes": 272119
+      },
+      {
+        "file": "assets/EngineeringStudio-DSxy-1L5.js",
+        "bytes": 114274
+      },
+      {
+        "file": "assets/Gltf-JkYPPGqg.js",
+        "bytes": 73151
+      },
+      {
+        "file": "assets/MotorScene-CRoC8FGa.js",
+        "bytes": 70612
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "Engineering and integration files type-check cleanly (whole-app tsc)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "full app builds with the shared Vite config",
+      "pass": true,
+      "detail": "assets/EngineeringStudio-DSxy-1L5.js, assets/MotorScene-CRoC8FGa.js"
+    },
+    {
+      "name": "home page renders the studio shell",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Explore studios opens the studio picker",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "picker lists Engineering Studio with a link to /engineering",
+      "pass": true,
+      "detail": "Engineering StudioInspect, disassemble and explore a motor"
+    },
+    {
+      "name": "keyboard Enter on the picker link opens /engineering",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "3D motor loads inside the app",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "document title switches to the Engineering Studio",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: no horizontal page scroll in /engineering",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: activity controls are visible without scrolling",
+      "pass": false,
+      "detail": "controls end at 938px of 900px; studio starts 39px down"
+    },
+    {
+      "name": "clicking the model selects the part under the pointer",
+      "pass": true,
+      "detail": "Housing"
+    },
+    {
+      "name": "parts list selection updates the detail card",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Show inside turns on the cutaway",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Explode separates the parts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "rapid reversals then Reassemble give a byte-identical canvas",
+      "pass": true,
+      "detail": "318835 vs 318835 bytes"
+    },
+    {
+      "name": "Pause freezes the operating angle",
+      "pass": true,
+      "detail": "Now28°U+0,89V-0,04W-0,84"
+    },
+    {
+      "name": "exploding while running pauses with a visible reason",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Run stays disabled until reassembly",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tab arrows move focus without activating (no accidental explode)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Enter activates the focused tab",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "drawing view: keyboard selection works inside the app",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "3D view returns after the drawing view",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "calculator rejects \"0\" Hz",
+      "pass": true,
+      "detail": "Use a frequency from 1 to 400 Hz."
+    },
+    {
+      "name": "calculator rejects \"abc\" Hz",
+      "pass": true,
+      "detail": "Enter the supply frequency as a number of hertz."
+    },
+    {
+      "name": "calculator rejects \"401\" Hz",
+      "pass": true,
+      "detail": "Use a frequency from 1 to 400 Hz."
+    },
+    {
+      "name": "calculator accepts \"50\" Hz",
+      "pass": true,
+      "detail": "ns = 120 × 50 ÷ 4 = 1 500 r/min25 revolutions per second"
+    },
+    {
+      "name": "calculator accepts \"60\" Hz",
+      "pass": true,
+      "detail": "ns = 120 × 60 ÷ 4 = 1 800 r/min30 revolutions per second"
+    },
+    {
+      "name": "calculator: 60 Hz with 4 poles gives 1 800 r/min",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "quiz accepts Stator with an explanation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Back to studios returns to the home page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "home title is restored after leaving",
+      "pass": true,
+      "detail": "KAIRO · Computer Science Studio"
+    },
+    {
+      "name": "Engineering styles do not remain on the home page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "browser Back from home returns to /engineering",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "studio loads again after history navigation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "browser Forward returns to the home page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "direct link to /engineering loads the studio",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "direct link loads in 5 of 5 fresh tabs",
+      "pass": true,
+      "detail": "5/5"
+    },
+    {
+      "name": "phone: picker fits without horizontal scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phone: studio loads from the picker",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phone: no horizontal page scroll in /engineering",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phone: Back to studios returns home",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: system preference ticks the control",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: explode and camera snap without travel",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "missing GLB: drawing view and explanation inside the app",
+      "pass": true,
+      "detail": "The 3D model could not load, so the drawing view is shown. Every part and activity still works here."
+    },
+    {
+      "name": "no WebGL: drawing view and explanation inside the app",
+      "pass": true,
+      "detail": "This browser cannot show 3D graphics, so the drawing view is shown. Every part and activity still works here."
+    },
+    {
+      "name": "no WebGL: selection still works",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "console": [
+    {
+      "scenario": "desktop-journey",
+      "type": "log-error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable) http://127.0.0.1:4186/api/health"
+    },
+    {
+      "scenario": "desktop-return",
+      "type": "log-error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable) http://127.0.0.1:4186/api/health"
+    },
+    {
+      "scenario": "desktop-history",
+      "type": "log-error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable) http://127.0.0.1:4186/api/health"
+    },
+    {
+      "scenario": "phone-journey",
+      "type": "log-error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable) http://127.0.0.1:4186/api/health"
+    },
+    {
+      "scenario": "missing-model",
+      "type": "log-error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found) http://127.0.0.1:4186/models/engineering/induction-motor.glb"
+    },
+    {
+      "scenario": "missing-model",
+      "type": "exception",
+      "text": "Error: Could not load /models/engineering/induction-motor.glb: fetch for \"http://127.0.0.1:4186/models/engineering/induction-motor.glb\" responded with 404: Not Found\n    at http://127.0.0.1:4186/assets/OrbitControls-EH7lA5rL.js:3793:83494\n    at Object.a [as onError] (http://127.0.0.1:4186/assets/Gl"
+    }
+  ],
+  "frames": {
+    "operatingFps": {
+      "devicePixelRatio": 1,
+      "viewport": "1440x900",
+      "samples": [
+        54.4,
+        38.5,
+        53.6
+      ],
+      "median": 53.6
+    }
+  },
+  "screenshots": [
+    "docs/engineering/acceptance/screenshots/A1-home.png",
+    "docs/engineering/acceptance/screenshots/A2-picker.png",
+    "docs/engineering/acceptance/screenshots/A3-engineering-loaded.png",
+    "docs/engineering/acceptance/screenshots/A4-cutaway-cage.png",
+    "docs/engineering/acceptance/screenshots/A5-reference-before-explode.png",
+    "docs/engineering/acceptance/screenshots/A6-exploded.png",
+    "docs/engineering/acceptance/screenshots/A7-reference-after-reassembly.png",
+    "docs/engineering/acceptance/screenshots/A8-operating.png",
+    "docs/engineering/acceptance/screenshots/A9-drawing-view.png",
+    "docs/engineering/acceptance/screenshots/A10-practise.png",
+    "docs/engineering/acceptance/screenshots/A11-home-after-exit.png",
+    "docs/engineering/acceptance/screenshots/B1-phone-picker.png",
+    "docs/engineering/acceptance/screenshots/B2-phone-engineering.png",
+    "docs/engineering/acceptance/screenshots/B3-phone-exploded.png",
+    "docs/engineering/acceptance/screenshots/C1-reduced-explode.png",
+    "docs/engineering/acceptance/screenshots/D1-missing-model.png",
+    "docs/engineering/acceptance/screenshots/D2-no-webgl.png"
+  ],
+  "observations": [
+    {
+      "what": "Home-page 3D labels above the studio picker modal",
+      "labelsAboveModal": [
+        "Application API",
+        "SQLite database"
+      ]
+    }
+  ],
+  "layout": {
+    "desktop1440x900": {
+      "controlsBottom": 938,
+      "viewport": 900,
+      "studioTop": 39,
+      "above": [
+        "kh-wayfinding",
+        "A",
+        "SPAN"
+      ]
+    }
+  },
+  "finished": "2026-10-22T00:20:38.762Z",
+  "summary": {
+    "passed": 45,
+    "failed": 1
+  }
+}

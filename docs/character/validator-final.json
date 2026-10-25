@@ -1,0 +1,350 @@
+{
+ "validator": "2.0.0-dev.3.10",
+ "file": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Desktop-fnb-app-of-year-hackathon\\69ac3fb8-4dba-4da6-a5a3-1babdf3e4988\\scratchpad\\build2\\export\\kairo-teacher.glb",
+ "errors": 0,
+ "warnings": 21,
+ "infos": 18,
+ "hints": 0,
+ "messages": [
+  {
+   "code": "UNSUPPORTED_EXTENSION",
+   "severity": 2,
+   "pointer": "/extensionsUsed/0",
+   "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/1/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+   "severity": 1,
+   "pointer": "/meshes/5/primitives/0/material",
+   "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/6/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+   "severity": 1,
+   "pointer": "/meshes/7/primitives/0/material",
+   "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/8/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+   "severity": 1,
+   "pointer": "/meshes/9/primitives/0/material",
+   "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/11/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/12/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/13/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/13/primitives/1/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/13/primitives/2/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/13/primitives/3/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/14/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/14/primitives/1/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/15/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/15/primitives/1/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/16/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "UNUSED_OBJECT",
+   "severity": 2,
+   "pointer": "/meshes/17/primitives/0/attributes/TEXCOORD_0",
+   "message": "This object may be unused."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/77",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/78",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/79",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/80",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/81",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/82",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/83",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/84",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/85",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/86",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/87",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/88",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/89",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/90",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/91",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/92",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/93",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  },
+  {
+   "code": "NODE_SKINNED_MESH_NON_ROOT",
+   "severity": 1,
+   "pointer": "/nodes/94",
+   "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh."
+  }
+ ],
+ "info": {
+  "version": "2.0",
+  "generator": "glTF-Transform v4.5.1",
+  "extensionsUsed": [
+   "EXT_meshopt_compression",
+   "EXT_texture_webp",
+   "KHR_materials_clearcoat",
+   "KHR_materials_sheen",
+   "KHR_materials_specular",
+   "KHR_mesh_quantization"
+  ],
+  "extensionsRequired": [
+   "EXT_meshopt_compression",
+   "EXT_texture_webp",
+   "KHR_mesh_quantization"
+  ],
+  "resources": [
+   {
+    "pointer": "/buffers/0",
+    "mimeType": "application/gltf-buffer",
+    "storage": "glb",
+    "byteLength": 3070460
+   },
+   {
+    "pointer": "/buffers/1",
+    "mimeType": "application/gltf-buffer"
+   },
+   {
+    "pointer": "/images/0",
+    "mimeType": "image/webp",
+    "storage": "buffer-view",
+    "image": {
+     "width": 1024,
+     "height": 1024,
+     "format": "rgb",
+     "primaries": "srgb",
+     "transfer": "srgb",
+     "bits": 8
+    }
+   },
+   {
+    "pointer": "/images/1",
+    "mimeType": "image/webp",
+    "storage": "buffer-view",
+    "image": {
+     "width": 1024,
+     "height": 1024,
+     "format": "rgb",
+     "primaries": "srgb",
+     "transfer": "srgb",
+     "bits": 8
+    }
+   },
+   {
+    "pointer": "/images/2",
+    "mimeType": "image/webp",
+    "storage": "buffer-view",
+    "image": {
+     "width": 1024,
+     "height": 1024,
+     "format": "rgb",
+     "primaries": "srgb",
+     "transfer": "srgb",
+     "bits": 8
+    }
+   },
+   {
+    "pointer": "/images/3",
+    "mimeType": "image/png",
+    "storage": "buffer-view",
+    "image": {
+     "width": 256,
+     "height": 512,
+     "format": "rgb",
+     "primaries": "srgb",
+     "transfer": "srgb",
+     "bits": 8
+    }
+   },
+   {
+    "pointer": "/images/4",
+    "mimeType": "image/webp",
+    "storage": "buffer-view",
+    "image": {
+     "width": 2048,
+     "height": 2048,
+     "format": "rgb",
+     "primaries": "srgb",
+     "transfer": "srgb",
+     "bits": 8
+    }
+   }
+  ],
+  "animationCount": 5,
+  "materialCount": 18,
+  "hasMorphTargets": true,
+  "hasSkins": true,
+  "hasTextures": true,
+  "hasDefaultScene": true,
+  "drawCallCount": 24,
+  "totalVertexCount": 136359,
+  "totalTriangleCount": 229366,
+  "maxUVs": 1,
+  "maxInfluences": 4,
+  "maxAttributes": 6
+ }
+}

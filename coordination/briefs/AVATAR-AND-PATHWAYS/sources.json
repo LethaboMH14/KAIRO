@@ -1,0 +1,419 @@
+{
+  "checkedDate": "2026-10-21",
+  "scope": "Selected primary sources and discovery portals. This is not an exhaustive labour-market study or a list of currently open opportunities.",
+  "sources": [
+    {
+      "id": "EMP-AMAZON",
+      "url": "https://www.amazon.jobs/en/jobs/10447560/software-development-engineer-2026",
+      "publisher": "Amazon Development Centre South Africa",
+      "kind": "employer_job",
+      "status": "page_read",
+      "jobId": "10447560",
+      "openStatus": "must_recheck_before_application",
+      "facts": [
+        "Basic criteria include a relevant degree/enrolment window, programming experience, and data structures, algorithms or object-oriented design.",
+        "Project/internship experience, databases, cloud, version control and troubleshooting appear as preferred criteria; communication is also listed."
+      ],
+      "limit": "One role is not a universal employer requirement. Graduation timing and documents must be checked on the live advert."
+    },
+    {
+      "id": "EMP-SB",
+      "url": "https://careers.standardbank.com/sbg/standard-bank-group/careers/students-and-graduates/graduate-programmes/technology",
+      "publisher": "Standard Bank",
+      "kind": "employer_programme",
+      "status": "page_read",
+      "facts": [
+        "Programme descriptions include Python/SQL/data pipelines, software development, automated testing, cloud/security and stakeholder collaboration."
+      ],
+      "limit": "These are programme focus areas, not all mandatory entry criteria. Dates on the programme page are indicative; recheck each listing."
+    },
+    {
+      "id": "EMP-SB-HIRING",
+      "url": "https://careers.standardbank.com/sbg/standard-bank-group/careers/how-we-hire/how-we-hire-student-and-grad",
+      "publisher": "Standard Bank",
+      "kind": "employer_process",
+      "status": "page_read",
+      "facts": [
+        "Applications use a profile and supporting documents. Selection may include technical exercises, case studies and interviews."
+      ],
+      "limit": "Preparation must not impersonate a candidate during live assessments."
+    },
+    {
+      "id": "EMP-TRANSNET",
+      "url": "https://www.transnet.net/YouthDevelopmentProgrammes",
+      "publisher": "Transnet",
+      "kind": "employer_programme",
+      "status": "page_read",
+      "facts": [
+        "WIL spans engineering and nontechnical fields, including computing, finance and administration.",
+        "The page distinguishes WIL, young professional, technician, engineer and apprenticeship programmes."
+      ],
+      "limit": "Programme existence does not establish an open vacancy. WIL recognition and placement requirements need institution/provider confirmation."
+    },
+    {
+      "id": "PRO-ECSA",
+      "url": "https://www.ecsa.co.za/ecsa-registration/professional-engineer/",
+      "publisher": "ECSA",
+      "kind": "professional_framework",
+      "status": "page_read",
+      "facts": [
+        "Professional registration involves qualifications, practical development, reports and competence assessment."
+      ],
+      "limit": "KAIRO simulation completion cannot confer professional registration."
+    },
+    {
+      "id": "PRO-SAICA",
+      "url": "https://www.saica.org.za/initiatives/competency-framework/ca-of-the-future/",
+      "publisher": "SAICA",
+      "kind": "professional_framework",
+      "status": "page_read",
+      "facts": [
+        "The framework integrates knowledge, skills, values and behaviours; the qualification process includes education, assessment and workplace training.",
+        "The page describes updates approved in February 2026."
+      ],
+      "limit": "Use the current downloadable framework for exact assessment rubrics; KAIRO cannot issue CA(SA) status."
+    },
+    {
+      "id": "PRO-SAICA-SKILLS",
+      "url": "https://www.saica.org.za/initiatives/competency-framework/pathways-to-relevance/competencies-defined/",
+      "publisher": "SAICA",
+      "kind": "professional_framework",
+      "status": "page_read",
+      "facts": [
+        "Digital acumen, data analytics, database management, ethical conduct, analysis and decision making are defined competencies."
+      ],
+      "limit": "Post-qualification guidance is not identical to entry-level job eligibility."
+    },
+    {
+      "id": "LEARN-IES",
+      "url": "https://files.eric.ed.gov/fulltext/ED498555.pdf",
+      "publisher": "Institute of Education Sciences / ERIC",
+      "kind": "learning_research",
+      "status": "indexed_primary_report",
+      "facts": [
+        "The practice guide covers distributed study, worked examples, quizzing and explanatory questions."
+      ],
+      "limit": "Research guidance motivates mechanisms; it does not prove KAIRO outcomes. The live IES landing page was under maintenance."
+    },
+    {
+      "id": "LEARN-AERO",
+      "url": "https://www.edresearch.edu.au/guides-resources/practice-guides/explicit-instruction-practice-guide-full-publication",
+      "publisher": "Australian Education Research Organisation",
+      "kind": "learning_guidance",
+      "status": "page_read",
+      "facts": [
+        "Clear, systematic teaching and worked examples support explicit instruction."
+      ],
+      "limit": "Adapt and evaluate with South African tertiary learners; do not generalise effect sizes to this app."
+    },
+    {
+      "id": "LEARN-EEF",
+      "url": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition",
+      "publisher": "Education Endowment Foundation",
+      "kind": "learning_guidance",
+      "status": "official_report_located",
+      "facts": [
+        "Planning, monitoring and evaluating learning and modelling thinking inform self-regulation."
+      ],
+      "limit": "School-oriented evidence needs careful transfer to adult and tertiary contexts."
+    },
+    {
+      "id": "OPP-STUDENTROOM",
+      "url": "https://www.studentroom.co.za/about-us/",
+      "publisher": "StudentRoom",
+      "kind": "aggregator",
+      "status": "page_read",
+      "facts": [
+        "Publishes student/graduate opportunities including internships, learnerships, apprenticeships and bursaries."
+      ],
+      "limit": "Discovery only until matched to the original provider. Its general contact address is not a CV submission destination."
+    },
+    {
+      "id": "OPP-ZA-BURSARIES",
+      "url": "https://www.zabursaries.co.za/",
+      "publisher": "SA Bursaries",
+      "kind": "aggregator",
+      "status": "page_read",
+      "facts": [
+        "Organises bursary notices by discipline and links to application guidance."
+      ],
+      "limit": "Verify terms, funding, deadlines and submission destination with the funder; do not copy general statements into a specific bursary decision."
+    },
+    {
+      "id": "OPP-NASI",
+      "url": "https://www.gov.za/news/media-statements/premier-panyaza-lesufi-notes-images-and-voice-notes-circulating-social%C2%A0media",
+      "publisher": "South African Government / Gauteng",
+      "kind": "official_programme_notice",
+      "status": "page_read",
+      "contentDate": "2023-06-20",
+      "facts": [
+        "The government notice identifies jobs.gauteng.gov.za and professionaljobscentre.gpg.gov.za for the Nasi iSpani programme."
+      ],
+      "limit": "Historical notice establishes identity, not current openings or deadlines. Revalidate the current official portal."
+    },
+    {
+      "id": "OPP-SA-YOUTH",
+      "url": "https://sayouth.mobi/About/EN",
+      "publisher": "SA Youth / Harambee",
+      "kind": "opportunity_network",
+      "status": "official_about_page_located",
+      "facts": [
+        "SA Youth is part of the Presidential Youth Employment Intervention and describes its supporting organisations."
+      ],
+      "limit": "Registration, consent, matching rules and individual opportunities require live review; no app integration completed."
+    },
+    {
+      "id": "OPP-FORGOOD",
+      "url": "https://www.forgood.co.za/za/en/volunteer",
+      "publisher": "forgood",
+      "kind": "volunteer_platform",
+      "status": "page_read",
+      "facts": [
+        "Offers in-person and remote volunteering discovery with location and category filters."
+      ],
+      "limit": "Host acceptance, supervision, expenses, safeguarding and WIL credit are not implied by a listing."
+    },
+    {
+      "id": "OPP-FORAGE",
+      "url": "https://www.theforage.com/",
+      "publisher": "Forage",
+      "kind": "job_simulation_provider",
+      "status": "page_read",
+      "facts": [
+        "Provides free self-paced employer-designed job simulations with tasks and completion certificates."
+      ],
+      "limit": "Simulation, not employment or an accredited degree. Do not describe completion as a physical internship or reuse proprietary answers."
+    },
+    {
+      "id": "CERT-MS",
+      "url": "https://learn.microsoft.com/en-us/training/student-hub/certifications",
+      "publisher": "Microsoft Learn",
+      "kind": "credential_provider",
+      "status": "page_read",
+      "facts": [
+        "Lists free learning resources, certification preparation, Applied Skills and eligible student discounts."
+      ],
+      "limit": "Free preparation does not make every certification exam free. Read each current credential page and assessment rules."
+    },
+    {
+      "id": "LABOUR-DHET",
+      "url": "https://www.dhet.gov.za/SitePages/HRDPlanningNew.aspx",
+      "publisher": "DHET",
+      "kind": "labour_market_report_index",
+      "status": "official_index_located",
+      "facts": [
+        "Hosts the February 2024 national occupations-in-high-demand report."
+      ],
+      "limit": "Dated sector-level context, not a live vacancy feed or a guarantee of local demand."
+    },
+    {
+      "id": "SME-TENDERS",
+      "url": "https://www.etenders.gov.za/",
+      "publisher": "National Treasury",
+      "kind": "official_procurement_portal",
+      "status": "page_read",
+      "facts": [
+        "Publishes tender opportunities and procurement plans with advertised, awarded, cancelled and closed categories."
+      ],
+      "limit": "Parse tender-specific documents, amendments, delivery capacity and requirements. Do not use a UAT portal or automatically submit binding bids."
+    },
+    {
+      "id": "SME-CSD",
+      "url": "https://ocpo.treasury.gov.za/Suppliers_Area/Central%20Supplier%20Database/",
+      "publisher": "National Treasury / OCPO",
+      "kind": "official_supplier_guidance",
+      "status": "page_read",
+      "facts": [
+        "Describes CSD as a source of supplier information intended to reduce duplicated government supplier information."
+      ],
+      "limit": "CSD registration alone is not tender eligibility or an award. Use current CSD and tender documents."
+    },
+    {
+      "id": "SME-SEDFA",
+      "url": "https://www.etenders.gov.za/home/Download?blobName=d260515f-f567-41c5-91ec-a571768a4a90.pdf&downloadedFileName=RFQ+NO+240_2024+Sedfa+Website+Development+2025.pdf",
+      "publisher": "SEDFA procurement document via Treasury",
+      "kind": "official_organisation_evidence",
+      "status": "official_document_located",
+      "facts": [
+        "Describes the October 2024 combination of Seda, Sefa and CBDA into Sedfa."
+      ],
+      "limit": "The current public Sedfa site timed out; service forms, funding eligibility and portal identity remain to verify. Do not recommend a similarly branded development portal."
+    },
+    {
+      "id": "ASSET-RAIN",
+      "url": "https://studio.blender.org/characters/rain/v3/",
+      "publisher": "Blender Studio",
+      "kind": "licensed_3d_asset",
+      "status": "official_download_downloaded",
+      "facts": [
+        "Free character rig with bundled scripts, credit requirement and Blender source file."
+      ],
+      "limit": "Downloaded is not web-converted or runtime-accepted. Inspect embedded scripts with auto-execution disabled before use."
+    },
+    {
+      "id": "ASSET-MPFB",
+      "url": "https://static.makehumancommunity.org/about/license.html",
+      "publisher": "MakeHuman Community",
+      "kind": "software_and_asset_licensing",
+      "status": "page_read",
+      "facts": [
+        "MPFB code is GPL and core graphical assets are CC0."
+      ],
+      "limit": "Third-party clothes/hair/skins may have separate licences."
+    },
+    {
+      "id": "ASSET-QUATERNIUS",
+      "url": "https://quaternius.com/packs/universalbasecharacters.html",
+      "publisher": "Quaternius",
+      "kind": "licensed_3d_asset",
+      "status": "page_read",
+      "facts": [
+        "Humanoid base characters with CC0 licensing and compatible animation library; pack tiers differ."
+      ],
+      "limit": "A body rig does not establish facial speech controls. Only specific downloaded archive contents may be claimed available."
+    },
+    {
+      "id": "ASSET-MOTION",
+      "url": "https://quaternius.com/packs/universalanimationlibrary.html",
+      "publisher": "Quaternius",
+      "kind": "licensed_animation",
+      "status": "page_read",
+      "facts": [
+        "Publishes humanoid motion clips under CC0, with free and source tiers."
+      ],
+      "limit": "Retarget and inspect individual clips; gesture libraries are not SASL."
+    },
+    {
+      "id": "ASSET-BLENDER",
+      "url": "https://www.blender.org/download/demo-files/",
+      "publisher": "Blender Foundation / Studio",
+      "kind": "asset_catalogue",
+      "status": "page_read",
+      "facts": [
+        "Lists CC0 Human Base Meshes and a CC-BY Ellie pose bundle."
+      ],
+      "limit": "Some URLs return a download landing page; integrity must be checked before calling a file an archive."
+    },
+    {
+      "id": "ASSET-POLYHAVEN",
+      "url": "https://polyhaven.com/license",
+      "publisher": "Poly Haven",
+      "kind": "licensed_environment_assets",
+      "status": "official_api_downloads",
+      "facts": [
+        "Selected HDRI lighting files have provider metadata and local checksums in assets.json."
+      ],
+      "limit": "An HDRI is lighting/background imagery, not a walkable environment."
+    },
+    {
+      "id": "EMP-FNB-GRAD",
+      "url": "https://firstrand.wd3.myworkdayjobs.com/en-GB/FRB/job/Johannesburg/FNB-Graduate-Programme_R46834?q=graduate",
+      "publisher": "FNB / FirstRand",
+      "kind": "historical_employer_job",
+      "status": "checked_2026-10-21",
+      "facts": [
+        "Relevant final-year BSc/Commerce fields, academic results/transcript, analysis and customer/team delivery appear in the advert."
+      ],
+      "limit": "Closed: stated deadline 2026-08-31. Historical preparation only; not an open opportunity."
+    },
+    {
+      "id": "EMP-FNB-DATA",
+      "url": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Data-Analyst-II_R48624",
+      "publisher": "FNB / FirstRand",
+      "kind": "historical_employer_job",
+      "status": "checked_2026-10-21",
+      "facts": [
+        "Describes data flows, data quality, root-cause analysis and stakeholder work."
+      ],
+      "limit": "Indexed closing date 2026-04-28; historical role evidence, not a graduate vacancy."
+    },
+    {
+      "id": "EMP-FNB-BA",
+      "url": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Randburg/Business-Analyst-1_R37730",
+      "publisher": "FNB / FirstRand",
+      "kind": "employer_job_excerpt",
+      "status": "checked_2026-10-21",
+      "facts": [
+        "Describes eliciting and validating business requirements and translating them into solution requirements."
+      ],
+      "limit": "Primary search excerpt verified; full requirements and current availability not established."
+    },
+    {
+      "id": "EMP-FNB-CONTEXT",
+      "url": "https://www.fnb.co.za/careers/graduates.html",
+      "publisher": "FNB",
+      "kind": "employer_programme",
+      "status": "checked_2026-10-21",
+      "facts": [
+        "Graduate programme context includes projects, communication, business writing and stakeholder work."
+      ],
+      "limit": "Programme context/diaries, not a current open vacancy or universal mandatory criteria."
+    },
+    {
+      "id": "TOOLS-YOUTUBE",
+      "url": "https://developers.google.com/youtube/iframe_api_reference",
+      "publisher": "Google",
+      "kind": "technical_documentation",
+      "status": "checked_2026-10-21",
+      "facts": [
+        "Supports embedding and controlling a YouTube player."
+      ],
+      "limit": "Provider playback, identity, attribution and embed restrictions still apply."
+    },
+    {
+      "id": "TOOLS-LINKEDIN",
+      "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+      "publisher": "LinkedIn / Microsoft",
+      "kind": "technical_documentation",
+      "status": "checked_2026-10-21",
+      "facts": [
+        "API access is scoped by product and permission."
+      ],
+      "limit": "Sign-in permissions are not general profile editing, recruitment or job application access."
+    },
+    {
+      "id": "LEARN-SQL",
+      "url": "https://www.postgresql.org/docs/current/tutorial-sql.html",
+      "publisher": "PostgreSQL",
+      "kind": "official_tutorial",
+      "status": "checked_2026-10-21",
+      "facts": [
+        "Tutorial includes tables, queries, joins and aggregation."
+      ],
+      "limit": "Learning resource; content does not independently establish workplace competence."
+    },
+    {
+      "id": "LEARN-GITHUB",
+      "url": "https://skills.github.com/",
+      "publisher": "GitHub",
+      "kind": "official_learning_portal",
+      "status": "checked_2026-10-21",
+      "facts": [
+        "Redirects to GitHub Learn."
+      ],
+      "limit": "Check current courses, account needs and access before assigning."
+    }
+  ],
+  "unresolved": [
+    {
+      "requested": "nasispani.co.za",
+      "status": "not_verified",
+      "resolution": "Use the separately verified Gauteng programme identity; do not assume this spelling is official."
+    },
+    {
+      "requested": "ipsani.co.za",
+      "status": "not_verified",
+      "resolution": "No reliable identity established. Excluded from automatic ingestion and personal-data submission."
+    },
+    {
+      "requested": "forage.com",
+      "status": "intended_service_resolved_to_theforage.com",
+      "resolution": "The job-simulation service checked was theforage.com."
+    },
+    {
+      "requested": "Siemens graduate requirements",
+      "status": "specific_source_not_verified",
+      "resolution": "Do not assert a specific Siemens requirement from generic industry expectations."
+    }
+  ]
+}

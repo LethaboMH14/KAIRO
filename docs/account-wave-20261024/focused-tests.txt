@@ -1,0 +1,21 @@
+✔ load actual AccountPanel through installed Vite SSR (637.298ms)
+✔ signed-out, loading, and signed-in states are clear and scoped without overstating isolation (14.4316ms)
+✔ actual form handlers trim email, preserve sign-in password, and reset sends no password (5.1364ms)
+✔ sign-up rule, mode change clearing, and rejected callback handling are enforced by the component (3.9742ms)
+✔ pending/loading suppress callbacks and duplicate in-flight submit events are ignored (2.0156ms)
+✔ signed-in sign-out clears transient password and callback exceptions never disclose details (3.2471ms)
+✔ close SSR server (6.4024ms)
+✔ finds relevant material after the former first-12k prefix and returns exact offsets (3.5607ms)
+✔ caps selected text and chunk count, with deterministic source-order ties (1.5629ms)
+✔ uses source order when goal has only stopwords or no matches (0.3869ms)
+✔ clips the highest-ranked chunk to small character budgets without splitting surrogate pairs (0.9069ms)
+✔ rejects unknown, malformed, unreviewed, and invalid revision input (1.0954ms)
+✔ actual reviewed lesson route selects late goal evidence, preserves citations and rejects stale revision (311.4567ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1327.8724

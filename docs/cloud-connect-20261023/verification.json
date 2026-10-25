@@ -1,0 +1,24 @@
+{
+  "finalFocused": {
+    "passed": 7,
+    "failed": 0
+  },
+  "checkedAt": "2026-10-23T22:03:49.9824030Z",
+  "browserAcceptance": false,
+  "learnerDocumentsUploaded": 0,
+  "fullSuite": {
+    "failed": 0,
+    "passed": 531,
+    "beforeFinalAuthTimerAdjustment": true
+  },
+  "build": "passed",
+  "publicDeployment": false,
+  "liveSyntheticRoundtrip": "passed",
+  "hashes": {
+    "studio/server/workspace/routes.mjs": "55763C0462352614A3D198AA9B645F9226A3CCB040331E662FD64F2069F8D7C1",
+    "studio/tests/cloud-library.test.mjs": "6AAB87A7C2533635CA16AAA6A61EC5065594C81B74C95597F9991E5CB87FF5BF",
+    "studio/tests/cloud-library-routes.test.mjs": "45CB15EC95AF9D139297ED783185BB987BE913E0B0DFEC8EF0735C3FED94D1FC",
+    "studio/src/workspace/SourceWorkspace.tsx": "49AA372075D3E0F1497AE9DFD4C9E299CB7DEDF1471801A9BB8C790D4470AFD6",
+    "studio/server/cloud-library/store.mjs": "7D3C246DB91B8F4CA13E3DDA8C52DE842981E7C7A970CC81C6681C97067B4A7A"
+  }
+}

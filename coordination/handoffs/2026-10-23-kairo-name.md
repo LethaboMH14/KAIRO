@@ -1,0 +1,11 @@
+# KAIRO teacher naming correction
+
+User correction: the avatar/teacher is named Kairo/KAIRO. Rain is the underlying avatar asset/rig provenance, not the product character's name. Owner: codex-kairo-name-20261023-h; Codex gpt-6, effort unknown.
+
+Scope: visible teacher names, accessible descriptions, current root guidance and engineering journey prose. Preserve Rain's original asset attribution, licence text, rig identifiers, import filenames and existing storage keys. This is a copy correction, not a shared runtime/interface migration. No worker-owned files or manifests changed. Product polish/Usability: learners see one consistent KAIRO identity. Acceptance: current visible names use KAIRO while technical provenance remains truthful.
+
+Delivered: ten app files updated (home, Studios, authored/source classroom, source/lesson workspace links, lecture navigation, teacher settings, source-stage accessible description and engineering limit copy). README, AGENTS.md and the current engineering journey use the corrected identity. Original Blender/Rain attribution retained. New source classroom title says Classroom. Internal RainRoom/RainStage imports, rig details, CSS names and legacy resume keys intentionally preserved.
+
+Verification: bounded naming audit found none of the old visible labels in the ten app files; original credit and legacy resume key confirmed unchanged. Evidence docs/checks/kairo-name-20261023.json. npm run build exited 1 at actively owned `src/signing/browserDeps.ts:36` TS2322: HTMLVideoElement.srcObject includes MediaProvider, but VideoLike expects MediaStream. No naming-file diagnostic reported. Full log docs/checks/kairo-name-build-20261023.txt, separately claimed as KAIRO-NAME-BUILD-001. The build output log began before that separate log scope was registered; no competing owner or overlap existed. Error reported to actual registered Claude signing owner; no receipt/fix assumed. Signing files were not changed and the type gate was not bypassed.
+
+Source correction is delivered; current built preview was not refreshed because the build failed. Owner must fix signing and a successful build must follow before claiming the visible preview is updated. No browser/audio/device acceptance or new tests required for copy-only changes. Deleted schedule remains off.

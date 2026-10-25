@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-23",
+  "researchRecords": 13,
+  "sqliteFTS5Built": true,
+  "registryTests": {
+    "passed": 5,
+    "failed": 0
+  },
+  "privateContentCopied": false,
+  "assetsOrCoursesDownloaded": false,
+  "runtimeChanged": false,
+  "cloudOrVectorPlatformDeployed": false,
+  "browserObservation": false,
+  "inventorySnapshot": {
+    "extractedDocuments": 26,
+    "chunks": 108,
+    "appSources": 6,
+    "appSourcesReviewedFlag": 3,
+    "savedLessons": 3
+  },
+  "catalogSha256": "9683d95d5271d7be32641183ba2d9210e23b18f0441c310f45857f7383d7f706",
+  "localLinksChecked": 8,
+  "missingLinks": []
+}

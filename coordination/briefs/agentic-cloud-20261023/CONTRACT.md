@@ -1,0 +1,9 @@
+# Agentic provider lab and cloud foundation
+
+Root scope: tools/provider-lab/, docs/agentic-cloud-20261023/, this brief subtree and unique handoff. No existing router, provider, shared model gateway, source store or manifests changed. The isolated provider experiment does not replace the current Google consent path.
+
+The lab exposes configuration status without secrets, fixed-endpoint Groq/OpenRouter chat requests with explicit consent, bounded synthetic fixture input/output, schema and exact-quote validation, cancellation, a one-call CLI and deterministic mock tests. OpenRouter accepts only openrouter/free or a named :free variant and never adds paid fallbacks. Groq live calls require explicit confirmation that the key belongs to the free plan; a token price table or possession of a key does not establish account entitlement. No auto-retry, browser, actual learner data or application mutation. AIML remains a separate existing adapter and later budgeted integration.
+
+Model output is a representation proposal, not executable code or a factual-verification result. Future runtime tools use sourceId/revision/evidenceId, owner from verified identity, exact proposed draft version and approval digest. Models never receive service-account credentials, arbitrary shell/filesystem/SQL tools or unrestricted network access.
+
+Cloud setup is limited first to fresh read-only inventory and a non-public foundation: named service identities and an empty private object bucket, after verifying the project and current absence. No public service or database is deployed, no user documents migrate, no service-account key is created, no project-wide secret access or public object binding is granted. Any cost-bearing hosting or fixed database location requires an explicit concrete rollout decision. Passing tests is not public-deployment authorization.

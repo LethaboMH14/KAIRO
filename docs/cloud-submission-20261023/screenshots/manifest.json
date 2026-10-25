@@ -1,0 +1,27 @@
+[
+  {
+    "file": "01-lean-canvas.png",
+    "sha256": "f5f2840eb2be082fa524bdf64bccac57897cd5f6f9271368fa5720f07bfbaa55",
+    "originalPreserved": true
+  },
+  {
+    "file": "02-ssdlc.png",
+    "sha256": "5ead4170b6d64b130d9400d9c7cd442289384297d93339b174883984c1684f5f",
+    "originalPreserved": true
+  },
+  {
+    "file": "03-progress-update.png",
+    "sha256": "1ae6232cd6452a8f46330d8c82081a45bac7544a3f9c12da017c7541305cb707",
+    "originalPreserved": true
+  },
+  {
+    "file": "04-team-profile.png",
+    "sha256": "acd7feee82a009b2c6cfc6460f97d019b889e69b127d84cc7af99f888fb61f7a",
+    "originalPreserved": true
+  },
+  {
+    "file": "05-team-profile-detail.png",
+    "sha256": "85feb4040997f7b334eb474cf9dd73106ae1446467a6631f42adcbfb6d4cfc76",
+    "originalPreserved": true
+  }
+]

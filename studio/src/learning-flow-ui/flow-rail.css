@@ -1,0 +1,84 @@
+.flow-rail {
+  min-width: 0;
+  color: #252b28;
+  font-family: Manrope, sans-serif;
+}
+
+.flow-rail__context {
+  margin: 0 0 0.65rem;
+  color: #3e5144;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.flow-rail__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-rail__item {
+  min-width: 0;
+}
+
+.flow-rail__item > a,
+.flow-rail__item > span {
+  display: grid;
+  gap: 0.1rem;
+  min-height: 2.5rem;
+  align-content: center;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #d8d7cc;
+  border-radius: 0.75rem;
+  background: #f5f0e6;
+  color: inherit;
+  font-size: 0.82rem;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.flow-rail__item > a:hover {
+  border-color: #3e5144;
+  background: #e9eadf;
+}
+
+.flow-rail__item > a:focus-visible {
+  outline: 3px solid #3e5144;
+  outline-offset: 2px;
+}
+
+.flow-rail__item.is-current > a,
+.flow-rail__item.is-current > span {
+  border-color: #3e5144;
+  background: #3e5144;
+  color: #fff;
+}
+
+.flow-rail__item > span {
+  color: #525a53;
+}
+
+.flow-rail__item.is-current > span {
+  color: #fff;
+}
+
+.flow-rail__note {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow-rail__item > a {
+    transition: background-color 120ms ease, border-color 120ms ease;
+  }
+}
+
+@media (max-width: 38rem) {
+  .flow-rail__items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

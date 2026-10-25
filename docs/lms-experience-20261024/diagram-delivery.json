@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "workflow",
+  "input": "C:\\Users\\USER\\Desktop\\fnb app of year hackathon\\docs\\lms-experience-20261024\\learner-workflow.json",
+  "output": "C:\\Users\\USER\\Desktop\\fnb app of year hackathon\\docs\\lms-experience-20261024\\learner-workflow.html",
+  "specification": {
+    "sha256": "f06b008c8e76604703c18f1a1b76a649e3ffa3cef46efd64450efd163b74957f",
+    "bytes": 3507
+  },
+  "artifact": {
+    "sha256": "d221ad86a8c82566bf8235c12727a7fc49b75dc255ce6080546848f578275015",
+    "bytes": 708830
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  }
+}

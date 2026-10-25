@@ -1,0 +1,29 @@
+{
+  "provider": "groq",
+  "requestedModel": "openai/gpt-oss-20b",
+  "returnedModel": "openai/gpt-oss-20b",
+  "elapsedMs": 1222,
+  "finishReason": "stop",
+  "contentType": "string",
+  "usage": {
+    "promptTokens": 394,
+    "completionTokens": 492,
+    "reasoningTokens": 342
+  },
+  "proposal": {
+    "title": "Field Speed vs Rotor Speed",
+    "explanation": "Field speed is the speed at which the magnetic field inside the motor rotates, set by the supply frequency and the number of poles. Rotor speed is how fast the motor’s rotor actually turns. In an ideal motor they would be the same, but in real motors the rotor lags a little because of slip. The passage gives the field speed (1500 rpm) but does not provide the rotor speed, so we only know the field speed.",
+    "sourceQuote": "Synchronous speed is 120 times supply frequency divided by the number of poles.",
+    "representations": [
+      "reading",
+      "concept-map",
+      "worked-example"
+    ]
+  },
+  "checks": {
+    "schema": true,
+    "exactQuote": true,
+    "semanticCorrectness": "human review required"
+  },
+  "scope": "synthetic evaluation only; no saved lesson changed"
+}

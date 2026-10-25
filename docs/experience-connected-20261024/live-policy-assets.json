@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-24T01:59:27.208Z",
+  "browserObserved": false,
+  "cameraOpened": false,
+  "checks": {
+    "operatorCanReachService": true,
+    "cameraSameOriginMicrophoneDisabled": true,
+    "scriptTagsSelfOnly": true,
+    "verifiedWorkerBlobsAllowed": true,
+    "noInlineOrBroadEval": true,
+    "noLearnerSession": true,
+    "trackingOnlyManifest": true,
+    "tracker.worker.jsHttp": true,
+    "tracker.worker.jsPinned": true,
+    "models/hand_landmarker.taskHttp": true,
+    "models/hand_landmarker.taskPinned": true,
+    "LICENSE-Apache-2.0.txtHttp": true,
+    "LICENSE-Apache-2.0.txtPinned": true,
+    "wasm/vision_wasm_internal.jsHttp": true,
+    "wasm/vision_wasm_internal.jsPinned": true,
+    "wasm/vision_wasm_internal.wasmHttp": true,
+    "wasm/vision_wasm_internal.wasmPinned": true,
+    "wasm/vision_wasm_nosimd_internal.jsHttp": true,
+    "wasm/vision_wasm_nosimd_internal.jsPinned": true,
+    "wasm/vision_wasm_nosimd_internal.wasmHttp": true,
+    "wasm/vision_wasm_nosimd_internal.wasmPinned": true,
+    "serviceRemainsIamPrivate": true
+  }
+}

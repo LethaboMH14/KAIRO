@@ -1,0 +1,63 @@
+{
+ "shirt": {
+  "boundaryLoops": [
+   [
+    "collar",
+    88,
+    [
+     -0.0,
+     -0.024,
+     1.289
+    ]
+   ],
+   [
+    "sleeve",
+    46,
+    [
+     0.4,
+     -0.0,
+     1.238
+    ]
+   ],
+   [
+    "hem",
+    106,
+    [
+     0.0,
+     -0.039,
+     0.965
+    ]
+   ],
+   [
+    "sleeve",
+    46,
+    [
+     -0.4,
+     -0.0,
+     1.238
+    ]
+   ]
+  ],
+  "vertices": 11349,
+  "details": [
+   "button",
+   "button",
+   "button",
+   "button",
+   "button",
+   "pocket",
+   "pocket"
+  ]
+ },
+ "trousers": {
+  "vertices": 11779,
+  "flaredVertices": 7782
+ },
+ "maskedBodyVertices": 4887,
+ "shoes": [
+  "shoes",
+  "metal",
+  "socks",
+  "laces"
+ ]
+}

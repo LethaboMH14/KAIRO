@@ -1,0 +1,10 @@
+import {useEffect,useState} from 'react';
+import EvidenceCuration,{type EvidenceCandidate} from '../evidence-curation-ui/EvidenceCuration';
+import {readProfile} from '../profile/model';
+import {learnerStorage} from './storage.ts';
+export default function SelectedWork(){
+ const [items,setItems]=useState<EvidenceCandidate[]>([]),[records,setRecords]=useState<Record<string,unknown>>({}),[error,setError]=useState('');
+ useEffect(()=>{try{const values:Record<string,unknown>={},list:EvidenceCandidate[]=readProfile().lessons.map(l=>{values[l.lessonId]=l;return {id:l.lessonId,title:l.title,description:`${l.attempts.length} recorded attempts.`,sourceLabel:'Source-linked practice',completedAt:l.updatedAt,claimLabel:'Learner practice · not an official assessment'};});const pump=JSON.parse(learnerStorage.getItem('kairo-pump-evidence-v1')||'[]');if(Array.isArray(pump))for(const p of pump.slice(-6)){if(typeof p.id!=='string'||typeof p.title!=='string')continue;values[p.id]=p;list.push({id:p.id,title:p.title,description:'Prediction, simulated readings and explanation.',sourceLabel:'Illustrative pump model',completedAt:p.completedAt||null,claimLabel:'Simulation evidence · not verified competence'});}setItems(list);setRecords(values);}catch{setError('The selected-work list could not be read. Export the original activity before leaving.');}},[]);
+ function download(ids:string[]){const selected=ids.slice(0,6).filter(id=>Object.hasOwn(records,id)).map(id=>({id,record:records[id]})),url=URL.createObjectURL(new Blob([JSON.stringify({schema:'kairo-selected-working/1',scope:'Selected learner-authored practice; not a credential. Nothing sent to an employer.',selected},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='kairo-selected-working.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+ return <>{error&&<p role="alert">{error}</p>}<EvidenceCuration items={items} storageLabel="Current learning space. Account progress is saved only when the cloud-save message confirms it. Nothing is published." onExport={download}/></>;
+}

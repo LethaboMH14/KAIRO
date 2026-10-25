@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-21",
+  "installation": "project-local .claude/skills; next Claude Code turn/session; not browser Design",
+  "installer": "bundled skill-installer/scripts/install-skill-from-github.py",
+  "compatibility": "community examples r186; existing KAIRO Three.js r180; verify APIs and preserve lockfile",
+  "skills": [
+    {
+      "skill": "frontend-design",
+      "repo": "anthropics/skills",
+      "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Apache-2.0 included in LICENSE.txt",
+      "files": [
+        {
+          "path": ".claude/skills/frontend-design/LICENSE.txt",
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": ".claude/skills/frontend-design/SKILL.md",
+          "bytes": 9390,
+          "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+        }
+      ]
+    },
+    {
+      "skill": "threejs-animation",
+      "repo": "CloudAI-X/threejs-skills",
+      "revision": "0e181866f095b5f06d005133876e926515390d95",
+      "license": "Upstream README states MIT; no separate root licence file observed",
+      "files": [
+        {
+          "path": ".claude/skills/threejs-animation/SKILL.md",
+          "bytes": 21367,
+          "sha256": "0ab1b79cb977a1b5b03b247f9ef677acc76c3ee80d42904afb1b66838a19c481"
+        }
+      ]
+    },
+    {
+      "skill": "threejs-fundamentals",
+      "repo": "CloudAI-X/threejs-skills",
+      "revision": "0e181866f095b5f06d005133876e926515390d95",
+      "license": "Upstream README states MIT; no separate root licence file observed",
+      "files": [
+        {
+          "path": ".claude/skills/threejs-fundamentals/SKILL.md",
+          "bytes": 23598,
+          "sha256": "cb6a0db8f05bb7d8196cad0ca6ae245e2baec53da4675e1b94be4fa735ed8a09"
+        }
+      ]
+    },
+    {
+      "skill": "threejs-interaction",
+      "repo": "CloudAI-X/threejs-skills",
+      "revision": "0e181866f095b5f06d005133876e926515390d95",
+      "license": "Upstream README states MIT; no separate root licence file observed",
+      "files": [
+        {
+          "path": ".claude/skills/threejs-interaction/SKILL.md",
+          "bytes": 22313,
+          "sha256": "46f60f3235aa11f2b89320cc2fb5b0adc167f3e8f0c717ba60ad1b006b41621f"
+        }
+      ]
+    },
+    {
+      "skill": "threejs-lighting",
+      "repo": "CloudAI-X/threejs-skills",
+      "revision": "0e181866f095b5f06d005133876e926515390d95",
+      "license": "Upstream README states MIT; no separate root licence file observed",
+      "files": [
+        {
+          "path": ".claude/skills/threejs-lighting/SKILL.md",
+          "bytes": 23467,
+          "sha256": "f12faf79625a7f42952124a5456d338e8399a65e16326c1a6a3239aa8e5ce489"
+        }
+      ]
+    },
+    {
+      "skill": "threejs-loaders",
+      "repo": "CloudAI-X/threejs-skills",
+      "revision": "0e181866f095b5f06d005133876e926515390d95",
+      "license": "Upstream README states MIT; no separate root licence file observed",
+      "files": [
+        {
+          "path": ".claude/skills/threejs-loaders/SKILL.md",
+          "bytes": 22165,
+          "sha256": "ddf6ed2d7dfc809ce722482541fe88af7d349cd8066a4617fabaea865a2a831d"
+        }
+      ]
+    },
+    {
+      "skill": "threejs-materials",
+      "repo": "CloudAI-X/threejs-skills",
+      "revision": "0e181866f095b5f06d005133876e926515390d95",
+      "license": "Upstream README states MIT; no separate root licence file observed",
+      "files": [
+        {
+          "path": ".claude/skills/threejs-materials/SKILL.md",
+          "bytes": 26722,
+          "sha256": "7d17cefac80196f3dd5068e2042e66244073925d24a55b7ca77534d594c5bc81"
+        }
+      ]
+    }
+  ]
+}

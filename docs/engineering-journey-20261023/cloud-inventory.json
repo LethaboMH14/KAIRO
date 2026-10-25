@@ -1,0 +1,9 @@
+{
+  "checkedOn": "2026-10-23",
+  "project": "kairo-access-20261021",
+  "command": "gcloud run services list --project=kairo-access-20261021 --platform=managed --format=json --quiet",
+  "exitCode": 0,
+  "services": [],
+  "limits": ["Read-only Cloud Run inventory only", "Does not enumerate Firebase Hosting, other projects or every cloud product", "No billing balance or current promotional credit was verified", "No resource created, deployed or made public"],
+  "initialCommandCorrection": "An initial table projection failed to parse; the corrected JSON inventory succeeded."
+}

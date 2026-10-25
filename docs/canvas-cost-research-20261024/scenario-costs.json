@@ -1,0 +1,124 @@
+{
+  "pricing_basis": {
+    "model": "Gemini 3.5 Flash-Lite Standard PayGo, Global",
+    "input_usd_per_million_tokens": 0.3,
+    "output_usd_per_million_tokens": 2.5,
+    "chirp3_hd_usd_per_million_characters_after_monthly_included_tier": 30.0,
+    "pricing_review_date": "2026-10-24",
+    "rates_url": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+    "tts_url": "https://cloud.google.com/text-to-speech/pricing"
+  },
+  "scenarios": [
+    {
+      "name": "typical",
+      "components": [
+        {
+          "name": "lesson",
+          "calls": 1,
+          "input_tokens_each_assumed": 3500,
+          "output_tokens_each_assumed": 1500,
+          "input_cost_usd": 0.00105,
+          "output_cost_usd": 0.00375,
+          "total_usd": 0.0048
+        },
+        {
+          "name": "passage_help",
+          "calls": 2,
+          "input_tokens_each_assumed": 1200,
+          "output_tokens_each_assumed": 400,
+          "input_cost_usd": 0.00072,
+          "output_cost_usd": 0.002,
+          "total_usd": 0.00272
+        },
+        {
+          "name": "guide",
+          "calls": 4,
+          "input_tokens_each_assumed": 500,
+          "output_tokens_each_assumed": 120,
+          "input_cost_usd": 0.0006,
+          "output_cost_usd": 0.0012,
+          "total_usd": 0.0018
+        }
+      ],
+      "llm_total_usd": 0.00932,
+      "tts_characters_assumed": 8000,
+      "tts_cost_usd": 0.24,
+      "total_usd": 0.24932,
+      "scope": "Illustrative variable model and hosted speech only; excludes hosting, storage, delivery, support, payment, tax, retries and labor."
+    },
+    {
+      "name": "stress",
+      "components": [
+        {
+          "name": "lesson",
+          "calls": 1,
+          "input_tokens_each_assumed": 5000,
+          "output_tokens_each_assumed": 4500,
+          "input_cost_usd": 0.0015,
+          "output_cost_usd": 0.01125,
+          "total_usd": 0.01275
+        },
+        {
+          "name": "passage_help",
+          "calls": 2,
+          "input_tokens_each_assumed": 3000,
+          "output_tokens_each_assumed": 1100,
+          "input_cost_usd": 0.0018,
+          "output_cost_usd": 0.0055,
+          "total_usd": 0.0073
+        },
+        {
+          "name": "guide",
+          "calls": 4,
+          "input_tokens_each_assumed": 1000,
+          "output_tokens_each_assumed": 256,
+          "input_cost_usd": 0.0012,
+          "output_cost_usd": 0.00256,
+          "total_usd": 0.00376
+        }
+      ],
+      "llm_total_usd": 0.02381,
+      "tts_characters_assumed": 20000,
+      "tts_cost_usd": 0.6,
+      "total_usd": 0.62381,
+      "scope": "Illustrative variable model and hosted speech only; excludes hosting, storage, delivery, support, payment, tax, retries and labor."
+    },
+    {
+      "name": "stress_one_retry_of_each_model_action_and_fresh_tts",
+      "components": [
+        {
+          "name": "lesson",
+          "calls": 2,
+          "input_tokens_each_assumed": 5000,
+          "output_tokens_each_assumed": 4500,
+          "input_cost_usd": 0.003,
+          "output_cost_usd": 0.0225,
+          "total_usd": 0.0255
+        },
+        {
+          "name": "passage_help",
+          "calls": 4,
+          "input_tokens_each_assumed": 3000,
+          "output_tokens_each_assumed": 1100,
+          "input_cost_usd": 0.0036,
+          "output_cost_usd": 0.011,
+          "total_usd": 0.0146
+        },
+        {
+          "name": "guide",
+          "calls": 8,
+          "input_tokens_each_assumed": 1000,
+          "output_tokens_each_assumed": 256,
+          "input_cost_usd": 0.0024,
+          "output_cost_usd": 0.00512,
+          "total_usd": 0.00752
+        }
+      ],
+      "llm_total_usd": 0.04762,
+      "tts_characters_assumed": 40000,
+      "tts_cost_usd": 1.2,
+      "total_usd": 1.24762,
+      "scope": "Illustrative variable model and hosted speech only; excludes hosting, storage, delivery, support, payment, tax, retries and labor."
+    }
+  ]
+}

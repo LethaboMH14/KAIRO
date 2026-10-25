@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "auditObservedUtc": "2026-10-22T09:32:22Z",
+  "scope": {
+    "kind": "static source and public-file metadata audit",
+    "stattedPublicFiles": 8,
+    "binaryContentsRead": false,
+    "privatePathsRead": false,
+    "runtimeFilesChanged": false,
+    "browserOrBuildRun": false
+  },
+  "buildIdentity": {
+    "lastRecordedSuccessfulAggregateUtc": "2026-10-22T08:09:11.034Z",
+    "lastRecordedSuccessfulIndexSha256": "fa4302857d6ce66cbd20fca39ca044c58f282c947b0a101004d0c1377c36cc57",
+    "lastRecordedTestsPassed": 177,
+    "lastRecordedBuildExitCode": 0,
+    "sourceReportCurrentBuildConfirmed": false,
+    "currentRootAggregate": "pending",
+    "identityInterpretation": "Historical reference only. Does not identify the audited current working tree; update after root publishes a new aggregate/index hash."
+  },
+  "routedAssets": [
+    {
+      "route": "/",
+      "studio": "Computer Science",
+      "loadingPath": ["studio/src/studiorouter.tsx imports App statically", "studio/src/App.tsx lazy-loads Scene", "Scene.Teacher calls useGLTF when mounted"],
+      "assets": [{ "path": "studio/public/models/RobotExpressive.glb", "bytes": 463988 }],
+      "canvas": { "dpr": [1, 1.5], "shadows": true, "frameloop": "always except demand for reduced motion", "antialias": true },
+      "fallback": "Suspense loading state; SceneBoundary offers diagram view."
+    },
+    {
+      "route": "/lecture",
+      "studio": "Lecture Theatre",
+      "loadingPath": ["StudioRouter lazy-loads LectureStudio", "LectureStudio lazy-loads LectureScene", "LectureScene.Classroom calls useGLTF"],
+      "assets": [{ "path": "studio/public/models/classroom/classroom.glb", "bytes": 15346684 }],
+      "canvas": { "dpr": [1, 1.5], "shadows": false, "frameloop": "always except demand for reduced motion", "antialias": true },
+      "fallback": "Suspense loading label; RoomBoundary offers reading view."
+    },
+    {
+      "route": "/learn",
+      "studio": "Lesson classroom",
+      "loadingPath": ["StudioRouter lazy-loads LessonWorkspace", "LessonWorkspace lazy-loads LectureScene"],
+      "assets": [{ "path": "studio/public/models/classroom/classroom.glb", "bytes": 15346684, "sharedAssetWith": "/lecture" }],
+      "canvas": { "dpr": [1, 1.5], "shadows": false, "frameloop": "always except demand for reduced motion", "antialias": true },
+      "fallback": "Same LectureScene reading fallback as /lecture."
+    },
+    {
+      "route": "/engineering",
+      "studio": "Engineering Studio",
+      "loadingPath": ["StudioRouter lazy-loads EngineeringStudio", "EngineeringStudio lazy-loads MotorScene when 3D view is selected", "MotorScene loads model and environment"],
+      "assets": [
+        { "path": "studio/public/models/engineering/induction-motor.glb", "bytes": 4213408 },
+        { "path": "studio/public/models/engineering/poly_haven_studio_1k.hdr", "bytes": 1682195 }
+      ],
+      "routeAssetsBytes": 5895603,
+      "canvas": { "dpr": [1, 1.5], "initialDprCap": 1.5, "onPerformanceDeclineDprCap": 1, "shadows": true, "frameloop": "demand" },
+      "fallback": "SceneBoundary offers the 2D drawing; EnvironmentBoundary falls back to generated lightformers; loading status says Unpacking the motor."
+    },
+    {
+      "route": "/teacher",
+      "studio": "Teacher settings and rehearsal",
+      "loadingPath": ["StudioRouter lazy-loads TeacherSettings", "TeacherSettings lazy-loads AvatarStage", "TeacherAvatar calls useGLTF"],
+      "assets": [{ "path": "studio/public/models/teacher/teacher.glb", "bytes": 11262664 }],
+      "canvas": { "dpr": [1, 1.5], "shadows": true, "directionalShadowMap": [1024, 1024], "contactShadowFrames": 1 },
+      "fallback": "Suspense loading label; StageBoundary and Canvas fallback keep board and controls."
+    },
+    {
+      "route": "/practice",
+      "studio": "Workplace practice",
+      "loadingPath": ["StudioRouter lazy-loads PracticeStudio", "PracticeStudio lazy-loads ShopScene when spatial view is selected"],
+      "assets": [],
+      "externalModelBytes": 0,
+      "canvas": { "dpr": [1, 1.5], "shadows": true, "frameloop": "demand", "antialias": true },
+      "fallback": "Suspense status and ShopGuard evidence-button/desk alternative. Scene is authored in code."
+    }
+  ],
+  "unroutedProvisionalAssets": {
+    "paths": ["studio/public/models/character/*"],
+    "routeFound": false,
+    "status": "Active isolated character-workstream preview assets; not counted in routed model budget and not modified."
+  },
+  "sourceMetadata": {
+    "motorGeometrySidecar": "studio/src/engineering/motorGeometry.json",
+    "declaredMeshes": 33,
+    "declaredTriangles": 188573,
+    "validation": "Sidecar values were read as source metadata; no model-to-sidecar hash comparison was performed."
+  },
+  "previousBuildWarning": "The 08:09 successful aggregate recorded a minified lazy OrbitControls chunk over 500 kB. Recheck against the pending current aggregate.",
+  "proposals": [
+    "Keep large route-owned assets behind the existing nested lazy-scene boundaries and preserve the drawing/reading alternatives.",
+    "Consider lazily loading root App at the root-path branch to keep page-specific App UI code out of the common entry; App already lazy-loads Scene, so the scene module and GLB are behind a separate boundary.",
+    "Compare offline GLB compression/LOD candidates for classroom and routed teacher assets, and lower-resolution HDR candidates for engineering; gate replacement on visual, animation, cutaway/explode, attribution and browser-decoder parity.",
+    "Add a source-controlled route-to-asset inventory and build-time public-file byte report after establishing reviewed thresholds; later capture real request/decode and device-tier measurements."
+  ],
+  "performanceClaims": "No FPS, startup, memory, transfer, device-class or perceived-performance result is inferred from file sizes or configured DPR. All byte counts are raw filesystem lengths only."
+}

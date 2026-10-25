@@ -1,0 +1,18 @@
+{
+  "appEngineIntegrationMode": "DISABLED",
+  "concurrencyMode": "PESSIMISTIC",
+  "createTime": "2026-10-23T22:12:56.618584Z",
+  "databaseEdition": "STANDARD",
+  "deleteProtectionState": "DELETE_PROTECTION_DISABLED",
+  "earliestVersionTime": "2026-10-23T22:12:56.618584Z",
+  "etag": "IIXc3fyU0ZcDMPiNivyU0ZcD",
+  "freeTier": true,
+  "locationId": "africa-south1",
+  "name": "projects/kairo-access-20261021/databases/(default)",
+  "pointInTimeRecoveryEnablement": "POINT_IN_TIME_RECOVERY_DISABLED",
+  "realtimeUpdatesMode": "REALTIME_UPDATES_MODE_ENABLED",
+  "type": "FIRESTORE_NATIVE",
+  "uid": "996f1069-3deb-4660-9883-1efcd501cf67",
+  "updateTime": "2026-10-23T22:12:56.618584Z",
+  "versionRetentionPeriod": "3600s"
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "session": "codex-heartbeat-20261022-0840",
+  "triggerUtc": "2026-10-22T08:40:19.795Z",
+  "tests": {
+    "command": "npm test (studio/)",
+    "passed": 190,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "aggregateBuild": {
+    "command": "npm run build (studio/)",
+    "exitCode": 1,
+    "error": "TS2741 EngineeringStudio.tsx:382 missing required choice prop for AnimatedMotor",
+    "owner": "claude-engineering-20261022-a",
+    "queuedBusMessage": 34,
+    "acknowledgement": false,
+    "rootEditedEngineering": false
+  },
+  "scopedCvTypecheck": {
+    "exitCode": 0,
+    "command": "tsc --noEmit --skipLibCheck --target ES2022 --module ESNext --moduleResolution Bundler --jsx react-jsx --lib ES2022,DOM --allowImportingTsExtensions src/cv-workspace/CvWorkspace.tsx"
+  },
+  "cvSession": {
+    "codecReviewed": true,
+    "rootUiIntegratedSource": true,
+    "independentSourceReview": "No blocking issue found; source only",
+    "behavior": [
+      "Sensitive-file disclosure",
+      "Save all added entries and role notes separately from confirmed textCV",
+      "128KiBFile.size before reading and codec bounds before parsing",
+      "Candidate only until explicit replacement",
+      "Rejected files preserve currentform and preview",
+      "Import resets all confirmation flags",
+      "Generation token cancels stale results/errors on edits,cancel,unmount"
+    ],
+    "browserAcceptance": "pending",
+    "inPublishedPreview": false,
+    "privateUpload": false,
+    "profileWrite": false
+  },
+  "csLabelFix": {
+    "sourceVerified": "Html zIndexRange19..0 belowpicker20, pointerEventsnone unchanged",
+    "browserAcceptance": "pending"
+  },
+  "footer": "Available export paths named, no all-data export promise",
+  "lastDistIndexSha256": "fa4302857d6ce66cbd20fca39ca044c58f282c947b0a101004d0c1377c36cc57",
+  "distRebuiltThisTurn": false,
+  "publicDeployment": false,
+  "nextReview": [
+    "Engineeringowner stable-source repair",
+    "Document-source continuity audit",
+    "Connectivity-state audit"
+  ]
+}

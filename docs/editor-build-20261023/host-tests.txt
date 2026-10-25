@@ -1,0 +1,17 @@
+✔ actual host loads reviewed source and controlled draft without starting narration (4812.9825ms)
+✔ edits update live preview and undo/redo preserve exact source references (23.7326ms)
+✔ debounced autosave sends expected version and only successful commit clears dirty state (180.5426ms)
+✔ conflict keeps draft, pauses autosave and refuses stale publication (11.8594ms)
+✔ service failure pauses automatic retry and retains exportable unsaved work (13.3941ms)
+✔ publication first saves reviewed draft and links a distinct learning copy (14.2043ms)
+✔ abort-ignoring late save cannot update unmounted host (11.9382ms)
+✔ real reading renderer preserves cards/citations, escapes text and never reveals answer key (26.2099ms)
+✔ returning an edited native heading to its original wording restores valid provenance (9.2798ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7735.6253

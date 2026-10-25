@@ -1,0 +1,723 @@
+{
+  "task": "REVIEW-C1-C3",
+  "checked": "Every double-quoted span in docs/claude-workstreams/media-panel/youtube-embed-research.md, matched after whitespace and curly-quote normalisation only.",
+  "note": "Section labels are rebuilt from the page's nested ordered lists (list-style-type), because the numbering is not in the page text.",
+  "pages": {
+    "https://developers.google.com/youtube/player_parameters": {
+      "fetchUrl": "https://developers.google.com/youtube/player_parameters",
+      "status": 200,
+      "bytes": 114699,
+      "sha256": "e699903813d3d45475023cd6d9ca111b292b7574b5aaf7dce35e75fd2bff68f2",
+      "fetchedAt": "2026-10-22T09:35:22.876Z"
+    },
+    "https://developers.google.com/youtube/terms/required-minimum-functionality": {
+      "fetchUrl": "https://developers.google.com/youtube/terms/required-minimum-functionality",
+      "status": 200,
+      "bytes": 92599,
+      "sha256": "55171aaaa30f15329984598a7952dcea025e0ae796479e65bfb0cc4a4d14b678",
+      "fetchedAt": "2026-10-22T09:35:23.469Z"
+    },
+    "https://developers.google.com/youtube/iframe_api_reference": {
+      "fetchUrl": "https://developers.google.com/youtube/iframe_api_reference",
+      "status": 200,
+      "bytes": 219652,
+      "sha256": "41a55dc4572538c92abcc0d2da6e21d6c9fae2975c2474412e664760845fc0a1",
+      "fetchedAt": "2026-10-22T09:35:24.391Z"
+    },
+    "https://developers.google.com/youtube/terms/developer-policies": {
+      "fetchUrl": "https://developers.google.com/youtube/terms/developer-policies",
+      "status": 200,
+      "bytes": 151795,
+      "sha256": "9e0f13182b6ba907ecbe682351725f65f7589c285f2aa9beff19e908885e5714",
+      "fetchedAt": "2026-10-22T09:35:25.486Z"
+    },
+    "https://support.google.com/youtube/answer/171780": {
+      "fetchUrl": "https://support.google.com/youtube/answer/171780?hl=en",
+      "status": 200,
+      "bytes": 1605724,
+      "sha256": "181f7044fae56026c549544db205658c6d13fd803acf1d4511f42b3182b14730",
+      "fetchedAt": "2026-10-22T09:35:28.391Z"
+    }
+  },
+  "summary": {
+    "spans": 26,
+    "verbatimOnClaimedSource": 24,
+    "foundOnOtherPageOnly": 0,
+    "notFoundVerbatim": 2,
+    "sectionLabelsChecked": 4,
+    "sectionLabelsMatching": 4,
+    "omittedStatementsOnPage": 5
+  },
+  "results": [
+    {
+      "topic": "Captions on",
+      "quote": "causes closed captions to be shown by default, even if the user has turned captions off.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Supported parameters",
+        "h3": "cc_load_policy",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Caption language",
+      "quote": "when the player loads.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Supported parameters",
+        "h3": "autoplay",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Caption language",
+      "quote": "won't display by default.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters"
+      ],
+      "claimedSection": null,
+      "verdict": "not-found-verbatim",
+      "foundOn": [],
+      "location": null,
+      "misses": {
+        "https://developers.google.com/youtube/player_parameters": {
+          "matchedWords": 3,
+          "of": 4,
+          "pageContinues": "default, but will display in the specified language if the user opts"
+        }
+      }
+    },
+    {
+      "topic": "Interface language",
+      "quote": "Sets the player's interface language.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Supported parameters",
+        "h3": "hl",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Clip start",
+      "quote": "causes the player to begin playing the video at the given number of seconds from the start of the video.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Supported parameters",
+        "h3": "start",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Clip end",
+      "quote": "the time, measured in seconds from the start of the video, when the player should stop playing the video.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Supported parameters",
+        "h3": "end",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Origin",
+      "quote": "you should always specify your domain as the origin parameter value.",
+      "markdownStripped": true,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Supported parameters",
+        "h3": "origin",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "JS API",
+      "quote": "enables the player to be controlled via IFrame Player API calls.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Supported parameters",
+        "h3": "enablejsapi",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Related videos",
+      "quote": "After the change, you will not be able to disable related videos.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Supported parameters",
+        "h3": "rel",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Minimum size",
+      "quote": "Embedded players must have a viewport that is at least 200px by 200px.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters",
+        "https://developers.google.com/youtube/terms/required-minimum-functionality"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        },
+        {
+          "url": "https://developers.google.com/youtube/terms/required-minimum-functionality",
+          "exactCase": true
+        },
+        {
+          "url": "https://developers.google.com/youtube/iframe_api_reference",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Overview",
+        "h3": "",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Autoplay",
+      "quote": "If you enable Autoplay, playback will occur without any user interaction with the player.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters",
+        "https://developers.google.com/youtube/terms/required-minimum-functionality"
+      ],
+      "claimedSection": null,
+      "verdict": "not-found-verbatim",
+      "foundOn": [],
+      "location": null,
+      "misses": {
+        "https://developers.google.com/youtube/player_parameters": {
+          "matchedWords": 13,
+          "of": 14,
+          "pageContinues": "player; playback data collection and sharing will therefore occur upon page load."
+        },
+        "https://developers.google.com/youtube/terms/required-minimum-functionality": {
+          "matchedWords": 2,
+          "of": 14,
+          "pageContinues": "are the owner of a library, framework, plugin, service, or wrapper used"
+        }
+      }
+    },
+    {
+      "topic": "EU consent",
+      "quote": "for end users in the European Union, you must comply with the EU User Consent Policy.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/player_parameters",
+        "https://developers.google.com/youtube/terms/required-minimum-functionality"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/player_parameters",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Revision history",
+        "h3": "December 18, 2015",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Pause",
+      "quote": "Pauses the currently playing video.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/iframe_api_reference"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/iframe_api_reference",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Functions",
+        "h3": "Playback controls and player settings",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Seek",
+      "quote": "If the player is paused when the function is called, it will remain paused.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/iframe_api_reference"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/iframe_api_reference",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Functions",
+        "h3": "Playback controls and player settings",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Position",
+      "quote": "Returns the elapsed time in seconds since the video started playing.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/iframe_api_reference"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/iframe_api_reference",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Functions",
+        "h3": "Playback status",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "State",
+      "quote": "This event fires whenever the player's state changes.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/iframe_api_reference"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/iframe_api_reference",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Events",
+        "h3": "",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Hijack guard",
+      "quote": "as an extra security measure",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/iframe_api_reference"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/iframe_api_reference",
+          "exactCase": false
+        }
+      ],
+      "location": {
+        "h2": "Loading a video player",
+        "h3": "",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Captions module",
+      "quote": "handles closed captioning in the player.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/iframe_api_reference"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/iframe_api_reference",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Events",
+        "h3": "",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "No overlays",
+      "quote": "You must not display overlays, frames, or other visual elements in front of any part of a YouTube embedded player",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/terms/required-minimum-functionality"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/terms/required-minimum-functionality",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "YouTube embedded player and video playback",
+        "h3": "Overlays and frames",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "No modification",
+      "quote": "You must not make changes to the YouTube player that are not explicitly described by the API documentation.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/terms/required-minimum-functionality"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/terms/required-minimum-functionality",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "YouTube embedded player and video playback",
+        "h3": "YouTube Player attributes",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "No copies",
+      "quote": "download, import, backup, cache, or store copies of YouTube audiovisual content",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/terms/developer-policies"
+      ],
+      "claimedSection": "III.E.1.a",
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/terms/developer-policies",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "III. General Developer Policies",
+        "h3": "E. Handling YouTube Data and Content",
+        "listPath": "1.a",
+        "sectionLabel": "III.E.1.a",
+        "sectionMatches": true
+      }
+    },
+    {
+      "topic": "No scraping",
+      "quote": "directly or indirectly, scrape YouTube Applications or Google Applications",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/terms/developer-policies"
+      ],
+      "claimedSection": "III.E.6",
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/terms/developer-policies",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "III. General Developer Policies",
+        "h3": "E. Handling YouTube Data and Content",
+        "listPath": "6",
+        "sectionLabel": "III.E.6",
+        "sectionMatches": true
+      }
+    },
+    {
+      "topic": "No track separation",
+      "quote": "separate, isolate, or modify the audio or video components of any YouTube audiovisual content",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/terms/developer-policies"
+      ],
+      "claimedSection": "III.I.7",
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/terms/developer-policies",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "III. General Developer Policies",
+        "h3": "I. Additional Prohibitions",
+        "listPath": "7",
+        "sectionLabel": "III.I.7",
+        "sectionMatches": true
+      }
+    },
+    {
+      "topic": "Attribution",
+      "quote": "must make clear to the viewer that YouTube is the source of the relevant content",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://developers.google.com/youtube/terms/developer-policies"
+      ],
+      "claimedSection": "III.F.2.a",
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://developers.google.com/youtube/terms/developer-policies",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "III. General Developer Policies",
+        "h3": "F. User Experience",
+        "listPath": "2.a",
+        "sectionLabel": "III.F.2.a",
+        "sectionMatches": true
+      }
+    },
+    {
+      "topic": "Privacy-enhanced mode",
+      "quote": "the use of views of embedded YouTube content from influencing the viewer's browsing experience on YouTube",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://support.google.com/youtube/answer/171780"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://support.google.com/youtube/answer/171780",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Manage video embedding options",
+        "h3": "",
+        "listPath": "",
+        "sectionLabel": ""
+      }
+    },
+    {
+      "topic": "Privacy-enhanced mode",
+      "quote": "available only for embedded players on websites.",
+      "markdownStripped": false,
+      "claimedSources": [
+        "https://support.google.com/youtube/answer/171780"
+      ],
+      "claimedSection": null,
+      "verdict": "verbatim-on-claimed-source",
+      "foundOn": [
+        {
+          "url": "https://support.google.com/youtube/answer/171780",
+          "exactCase": true
+        }
+      ],
+      "location": {
+        "h2": "Manage video embedding options",
+        "h3": "",
+        "listPath": "3",
+        "sectionLabel": "3"
+      }
+    }
+  ],
+  "omissions": [
+    {
+      "url": "https://developers.google.com/youtube/terms/required-minimum-functionality",
+      "span": "must provide identification through the HTTP Referer request header",
+      "noteKeyword": "referer",
+      "onPage": true,
+      "keywordInNote": false
+    },
+    {
+      "url": "https://developers.google.com/youtube/iframe_api_reference",
+      "span": "The request does not include the HTTP Referer header or equivalent API Client identification",
+      "noteKeyword": "153",
+      "onPage": true,
+      "keywordInNote": false
+    },
+    {
+      "url": "https://developers.google.com/youtube/terms/required-minimum-functionality",
+      "span": "it must be large enough to fully display the controls without shrinking the viewport below the minimum size",
+      "noteKeyword": "fully display the controls",
+      "onPage": true,
+      "keywordInNote": false
+    },
+    {
+      "url": "https://developers.google.com/youtube/terms/required-minimum-functionality",
+      "span": "We recommend 16:9 players be at least 480 pixels wide and 270 pixels tall",
+      "noteKeyword": "480",
+      "onPage": true,
+      "keywordInNote": false
+    },
+    {
+      "url": "https://developers.google.com/youtube/player_parameters",
+      "span": "playback data collection and sharing will therefore occur upon page load",
+      "noteKeyword": "data collection",
+      "onPage": true,
+      "keywordInNote": false
+    }
+  ],
+  "keywordCounts": {
+    "https://developers.google.com/youtube/player_parameters": {
+      "480": 1,
+      "Referer": 0,
+      "referrer": 3,
+      "sandbox": 0,
+      "identif": 12,
+      "cookie": 1,
+      "consent": 2
+    },
+    "https://developers.google.com/youtube/terms/required-minimum-functionality": {
+      "480": 1,
+      "Referer": 20,
+      "referrer": 12,
+      "sandbox": 0,
+      "identif": 12,
+      "cookie": 1,
+      "consent": 0
+    },
+    "https://developers.google.com/youtube/iframe_api_reference": {
+      "480": 1,
+      "Referer": 1,
+      "referrer": 0,
+      "sandbox": 0,
+      "identif": 26,
+      "cookie": 1,
+      "consent": 0
+    },
+    "https://developers.google.com/youtube/terms/developer-policies": {
+      "480": 0,
+      "Referer": 0,
+      "referrer": 0,
+      "sandbox": 0,
+      "identif": 14,
+      "cookie": 2,
+      "consent": 20
+    },
+    "https://support.google.com/youtube/answer/171780": {
+      "480": 0,
+      "Referer": 4,
+      "referrer": 0,
+      "sandbox": 0,
+      "identif": 0,
+      "cookie": 3,
+      "consent": 0
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "session": "codex-heartbeat-20261022-0809",
+  "triggerUtc": "2026-10-22T08:09:11.034Z",
+  "aggregate": {
+    "testCommand": "npm test (studio/)",
+    "passed": 177,
+    "failed": 0,
+    "testExitCode": 0,
+    "buildCommand": "npm run build (studio/)",
+    "buildExitCode": 0,
+    "indexSha256": "fa4302857d6ce66cbd20fca39ca044c58f282c947b0a101004d0c1377c36cc57",
+    "warning": "Large lazy OrbitControls chunk exceeds500kBminified"
+  },
+  "offlineStaticInspection": {
+    "distDirectory": "C:\\Users\\USER\\Desktop\\fnb app of year hackathon\\studio\\dist",
+    "currentBuildConfirmed": false,
+    "indexBytes": 540,
+    "assets": {
+      "count": 2,
+      "bytes": 311454,
+      "totalBytes": 311994,
+      "paths": [
+        "/assets/index-DBqvFNPM.css",
+        "/assets/index-JS2I8Ic7.js"
+      ]
+    },
+    "missing": [],
+    "unsafe": [],
+    "queryOrHashImports": [],
+    "unsupportedSyntax": [],
+    "externalResources": [],
+    "apiPathsInCacheSet": [],
+    "runtimeRegexMismatch": {
+      "discoveredButRegexMissed": [],
+      "regexButNotDiscovered": []
+    },
+    "note": "Inspection is static only; dynamic imports are intentionally excluded. Set currentBuildConfirmed only after an external build identity check."
+  },
+  "recoveryCopy": {
+    "route": "/progress, unreadable saved-history state only",
+    "read": "Fixed PROFILE_KEY at explicit click; no render-time read",
+    "preservation": "Versioned JSON wraps exact raw string incl isolated UTF16surrogates; no parse/repair/reset/write",
+    "privacy": "Explicit acknowledgement before enabling local download",
+    "tested": "Helper4tests and initialSSR1test included177aggregate",
+    "pending": "Browser interaction/downloadreceipt/keyboard acceptance"
+  },
+  "staticArtifactView": {
+    "review": "Source+4SSRtests includedaggregate: escaped text, semantic tables, fixed failures, unverified provenance, repeatedIDs",
+    "routed": false,
+    "browserAcceptance": "pending"
+  },
+  "deviceDataAudit": "Source-verified home clear scope truthful; footer export wording too broad, bounded ownercopyfix assigned aftersnapshot",
+  "careerResearch": "Deadline clarification/source linked preparation matrix read; local authored case references only; no currentavailability or applicantfit validation",
+  "nextPackagesExcluded": [
+    "CVsessiontransfer purecodec",
+    "LearningHome footer wording repair"
+  ],
+  "existingClaims": "Claude character/Engineering and unacknowledged referenceowner intact",
+  "browserObservation": false,
+  "privateUpload": false,
+  "publicDeployment": false
+}

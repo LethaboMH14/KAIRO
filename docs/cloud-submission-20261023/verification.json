@@ -1,0 +1,23 @@
+{
+  "date":"2026-10-23",
+  "owner":"codex-cloud-submission-20261023-k",
+  "model":"gpt-6",
+  "effort":"unknown",
+  "previousLunaIndependentTests":{"curriculum":5,"chooser":10,"totalPassed":15},
+  "afterRootCatalogueReview":{"gatewayCatalogueChooserPassed":22,"failed":0},
+  "gatewayPrototypeTests":{"passed":6,"failed":0,"networkCalls":0,"liveSpend":0},
+  "wholeSuiteCheckpoint":{"passed":423,"failed":0,"log":"tests.txt","scope":"before later Luna copy/lesson-quality follow-ups"},
+  "lessonStartAfterCopyCorrection":{"passed":9,"failed":0,"log":"lesson-start-review.txt","runtimeIntegrated":false},
+  "productionBuild":{"exitCode":0,"log":"build.txt","warning":"some chunks exceed500kB"},
+  "architecture":{"delivered":"architecture.html","receipt":"architecture-validation.json","artifactChecks":9,"compositionErrors":0,"compositionWarnings":0,"isTargetTopology":true},
+  "screenshots":{"copied":5,"hashesMatchOriginals":true,"manifest":"screenshots/manifest.json"},
+  "cloudSetup":{"project":"kairo-access-20261021","enabledAndRelisted":["identitytoolkit.googleapis.com","cloudtasks.googleapis.com","secretmanager.googleapis.com"],"providersConfigured":false,"queuesCreated":false,"secretsCreated":false,"newPublicDeployment":false,"newBillingUpgrade":false},
+  "aiml":{"creditUsdUserReported":13,"creditVerified":false,"keyPresentInCurrentProcess":false,"liveInference":false,"automaticTopup":false,"adapterMountedInApp":false},
+  "workers":{"existingChatsMessagedWithUserAuthorisation":2,"additionalAgentsSpawned":0,"lessonStartCopyReviewed":true,"lessonQuality":"active at last snapshot, not accepted or integrated"},
+  "portalFormsSubmitted":false,
+  "pitchMp4Rendered":false,
+  "finalDeckExported":false,
+  "realCameraOrAudioTested":false,
+  "browserObserved":false,
+  "scheduleCreated":false
+}

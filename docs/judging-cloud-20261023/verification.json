@@ -1,0 +1,29 @@
+{
+  "checkedOn": "2026-10-23",
+  "timezone": "Africa/Johannesburg",
+  "kind": "planning-and-research-not-release-acceptance",
+  "markdownFilesChecked": 8,
+  "missingLocalLinks": [],
+  "focusedTests": {
+    "command": "node --test tests/experience-stage.test.mjs tests/classroom-resume.test.mjs tests/narration-cancellation.test.mjs",
+    "total": 35,
+    "passed": 34,
+    "failed": 1,
+    "evidence": "review-checks.txt",
+    "knownFailure": "Rejected cloud resume leaves speaking=true; production unchanged."
+  },
+  "providerSha256": "d341a0ba217aff3bfe1d2b8d9231b8fde29485db9e93fb5f8815fde27b98d44e",
+  "runtimeChanged": false,
+  "browserObservationPerformed": false,
+  "cloudCallsMade": false,
+  "cloudServicesDeployed": false,
+  "workersLaunched": false,
+  "scheduleCreated": false,
+  "currentCloudBalanceVerified": false,
+  "limitations": [
+    "General FAQ is not complete current hackathon terms.",
+    "Static/source/mock tests do not establish human/device/audio acceptance.",
+    "Claude browser QA is owner-reported; prior restriction remains in this chat.",
+    "Future SDKs, scans, cloud resources and proposed costs are not installed/configured/accepted."
+  ]
+}

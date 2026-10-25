@@ -1,0 +1,43 @@
+idea,product,creativity,usability,sustainability,impact,presentation,intelligence,rater
+A GOMA,3,4,5,4,4,5,5,claude3
+A GOMA,2,4,4,3,4,5,3,codex1
+A GOMA,2,4,4,3,4,4,5,codex2
+B MINA KUSASA,3,3,5,3,2,4,3,claude3
+B MINA KUSASA,4,3,4,3,2,5,3,codex1
+B MINA KUSASA,4,3,4,3,2,5,3,codex2
+C IMBONGOLO,3,4,4,3,3,4,3,claude3
+C IMBONGOLO,3,4,3,3,3,5,3,codex1
+C IMBONGOLO,2,4,4,3,3,5,4,codex2
+D GHOST ROOM,3,3,3,3,2,4,2,claude3
+D GHOST ROOM,2,3,2,3,3,5,3,codex1
+D GHOST ROOM,2,3,2,2,3,5,3,codex2
+E SHELF SCORE,3,2,4,3,3,4,3,claude3
+E SHELF SCORE,1,2,1,3,3,4,2,codex1
+E SHELF SCORE,1,2,1,3,2,4,3,codex2
+F ISIKWELETU,4,3,3,3,3,4,2,claude3
+F ISIKWELETU,2,3,3,3,3,5,3,codex1
+F ISIKWELETU,3,3,3,3,3,4,2,codex2
+G QUIET EXIT,2,4,3,3,3,3,4,claude3
+G QUIET EXIT,2,3,3,3,3,4,3,codex1
+G QUIET EXIT,2,3,2,3,2,4,3,codex2
+H LAST-MILE SIREN,3,3,4,3,2,4,2,claude3
+H LAST-MILE SIREN,2,2,2,2,1,3,2,codex1
+H LAST-MILE SIREN,2,2,2,2,1,4,2,codex2
+I PaperBridge,4,2,3,2,3,3,1,claude3
+I PaperBridge,4,2,3,2,2,4,2,codex1
+I PaperBridge,4,2,3,2,2,4,2,codex2
+J ProofShift,3,3,2,3,3,3,2,claude3
+J ProofShift,4,2,2,3,3,3,1,codex1
+J ProofShift,4,2,3,3,2,3,1,codex2
+K MarginMesh,2,2,2,3,3,3,2,claude3
+K MarginMesh,2,2,2,3,3,4,1,codex1
+K MarginMesh,2,2,2,3,3,4,1,codex2
+L Progression Radar,4,3,3,4,3,4,3,claude3
+L Progression Radar,3,3,4,3,3,5,3,codex1
+L Progression Radar,4,3,3,2,3,4,4,codex2
+M Scam Circuit Breaker,2,2,2,4,5,4,2,claude3
+M Scam Circuit Breaker,1,2,1,3,4,5,1,codex1
+M Scam Circuit Breaker,1,2,1,4,4,5,1,codex2
+N Leak Bounty,3,3,3,2,3,4,2,claude3
+N Leak Bounty,2,2,3,2,3,4,3,codex1
+N Leak Bounty,1,2,2,2,3,4,2,codex2

@@ -1,0 +1,468 @@
+=== PAGE 1 ===
+FNB AOTY Hackathon 2026
+EVENT BRIEFING & SCHEDULE OF ACTIVITIES
+EXPORTED BY: Lethabo Hoaeane
+DATE: Fri, 23 Oct 2026 13:35
+Generated through the Sonke Platform
+#FNBHackathon
+=== PAGE 2 ===
+Introduction & Guidelines
+Set to start on Fri, 23 Oct 2026 08:30 and ends on Sun, 25 Oct 2026 17:00. The official
+hashtag is #FNBHackathon.
+NOTE: The numbers above will change as the event proceeds with more teams created or
+participants having joined.
+WHAT TO KNOW SOME DETAILS ACTION FROM WENA
+(YOU)
+Okay, I’m here on
+Sonke – now
+what?
+This is the platform used for the team creation and
+submission
+Click the CREATE TEAM
+button above to profile
+(create) a team - make sure
+your mates haven't,
+otherwise they must add you
+to the team.
+How does this
+link to FNB App of
+the Year Awards?
+At the awards, there is a Best Hackathon
+Solution for apps built from this hackathon.
+Judged same away as all the awards – there are
+no presentations for the hackathon, just
+submit.
+You need to build the app
+submit by 26 Oct 23:59 – no
+code must be uploaded but
+do provide link to your Git
+repo.
+Is it important to
+create a team?
+ABSOLUTELY! Even if working along, you need
+to create a team.
+Use the button above and
+then fill in the information
+Okay... So how to
+I add my team
+members?
+After creating the team, you will see a button
+named “ADD TEAM MEMBERS” on the
+Dashboard or team page —> Search person
+(even by email) —> Click Add To My Team and
+that’s it.
+You must create a team first
+and team members must
+have a Sonke account –
+invite them through INVITE
+MATES link on the left panel.
+What are the
+important things
+this weekend?
+You need join the sessions including opening
+here; Submit requirements on the Programme (full
+schedule to be shared). Connect with organisers
+and mentors here.
+Keep track of the Schedule –
+click Programme above.
+Any limits to
+know?
+You may use any technologies to build. GenAI is
+not limited but you are urged not to outsource all
+your thinking; No team limit set.
+It’s an apps-only hackathon,
+build that winning app, fam.
+What is defined
+as an app for the
+hackathon?
+Strictly no static websites or mock ups; You may
+build a web app (needs to process user data in
+real-time of need); If its a bot on WhatsApp or
+similar – you still need to have database plan.
+If its an APK, please sign it
+and confirm that it can be
+installed
+What about
+existing apps?
+You need work on at least one feature during the
+hackathon.
+Let organisers know through
+the updates in team page.
+=== PAGE 3 ===
+Do we need to
+host or publish?
+Yes – web apps need to be on a live platform (you
+may use open source platforms); No – there is no
+need for the app to be on the app store, just
+upload APK or any usable build file.
+Make sure that the judges
+are able to test your app.
+Create a demo account and
+add to slides.
+How do we get
+mentors help,
+sana?
+Use the NEED HELP button above; Use General
+channel; Join the mentor calls before. Generally,
+join main call here.
+Be descriptive on what you
+need
+VIDEO NEEDED
+BY SATURDAY
+12:00PM
+You are required to submit a 20s Hustle Pitch
+video (SELL THE APP OFFERING) – feedback
+will come through email too.
+Record yourself selling the
+app and submit. A button to
+upload this video will appear
+from Friday 23rd.
+What is needed
+for submission?
+Presentation deck / slides [including: User
+Journey Story; Technical Architecture, Demo
+account details – link and login details]; App build
+file (e.g. APK)Fill in Lean Business Canvas in
+team page; Fill in SSDL(security); Updates
+before midnight each day.
+NB: You cannot submit
+without create a team first –
+create the team or be added
+by your team mates.
+MENTOR CALL:
+AI & Software
+Development
+Want to align your solution to an AI model? Want
+to strengthen intelligence? Got code issues? Join
+here.
+Available 23 - 25 Oct: Join
+the call whenever you need
+assistance or to engage with
+others.
+MENTOR CALL:
+Ideas, Innovation &
+Business
+Want to see if the solution make sense? Want to
+make business sense? Want to make the solution
+more unique? Join here.
+Available 23 - 25 Oct: Join
+the call whenever you need
+assistance or to engage with
+others.
+MENTOR CALL:
+ Architecture,
+Backend and
+Security
+Want to build a solid architecture for the solution?
+Want to build for scale? Don’t know how to
+integrate security? Join here.
+Available 23 - 25 Oct: Join
+the call whenever you need
+assistance or to engage with
+others.
+VERY IMPORTANT: In order to be judged, all teams must be profiled (even if wotking
+solo).
+=== PAGE 4 ===
+Challenges
+Access to higher education
+Problem statement
+How might technology help young South Africans find suitable study pathways, compare
+funding options, complete applications and remain supported from acceptance through
+graduation?
+Possible focus areas
+Applications, bursaries and NSFAS guidance; cost planning; student wellness; academic
+persistence; connectivity and accessible learning.
+Youth employment and work readiness
+Problem statement
+How might we shorten the distance between young people and meaningful income by
+translating skills into credible profiles, practical experience, work opportunities and career
+mobility?
+Possible focus areas
+Skills verification; entry-level matching; micro-internships; mentorship; informal experience;
+transport and data barriers.
+Youth entrepreneurship and small-business growth
+Problem statement
+How might digital tools help young founders and township or rural businesses start, trade,
+get paid, manage cash flow and reach formal markets?
+Possible focus areas
+Business registration; digital payments; bookkeeping; procurement access; market links;
+funding readiness and fraud protection.
+Financial inclusion and money confidence
+Problem statement
+How might we make everyday money management simpler, safer and more useful for
+people with irregular incomes, limited financial knowledge or limited access to formal
+services?
+Possible focus areas
+=== PAGE 5 ===
+Budgeting; saving; responsible credit; low-data tools; multilingual support; scam
+awareness; accessible design.
+Safer communities and gender-based violence response
+Problem statement
+How might technology help people find trusted support, document incidents safely, access
+emergency help and strengthen prevention without placing survivors at greater risk?
+Possible focus areas
+Privacy-first reporting; verified services; discreet access; referral pathways; community
+education; responsible data governance.
+Climate resilience and essential services
+Problem statement
+How might communities use data and digital services to prepare for disruptions, reduce
+household costs and improve access to water, energy, transport and food?
+Possible focus areas
+Local alerts; service reporting; resource sharing; energy and water savings; food access;
+climate-smart small businesses.
+=== PAGE 6 ===
+Judging Criteria
+# Title Description Weight
+1 Product
+Is the app a complete solution or does is it far from completion?
+Is it polished and does it work in a way the user would expect?
+Does it do what it is meant to do, and resolve the needs of the
+challenges it addresses?
+Is there a market need for the application?
+Does it have traction?
+10
+2 Creativity
+Is it a new application or service that has been created?
+How creative is the approach?
+Is it contributing towards the improvement of society or business in
+some new way?
+Is it commercially, socially, politically, or personally appealing, relevant
+and exciting?
+Is it freshly entertaining, a new approach to an old problem or a better
+way to do something more effectively?
+10
+3 Usability
+Is the app easy to use?
+Is there a clarity, simplicity and intuitive feel of how the app works and
+what to do next?
+10
+4 Sustainability
+What is the potential of the application and the team of developers
+behind it?
+Can the app be taken to the next level?
+Is there a potential path to revenue with the app?
+10
+5 Impact
+How much impact does the application have?
+What kind of problem does it solve – a big or small one?
+What is the level of indispensability and importance of the app?
+10
+6 Presentation
+How well did the team communicate their idea/app?
+Were they effective in telling their story and did they convey the
+importance and relevance of the mobile application to society?
+10
+7 Intelligence Can the app “think” for itself, forecast, and predict the user’s likely future
+behaviour by analyzing patterns in data inputs? 10
+=== PAGE 7 ===
+The Programme
+DAY 1: 23 October 2026
+JOIN THE OPENING: https://www.appoftheyear.co.za  from 10:00
+You may also search FNB App of the Year on YouTube directly.
+10:30–10:45 Sponsor opening address FNB
+10:45–11:05 Challenge reveal (ensuring that you understand
+the requirements)
+Mrs Sthembiso Dabula-
+Mabotja
+11:05–11:20 Winner to builder Previous winner / founder
+11:20–11:30 Energy break: Code or Cap? MC + participants (prizes to
+be given)
+11:30–11:55 What the Hack? – understanding the flow Ms Yolisa Dumezweni
+11:55–12:10 Build responsibly Accenture / tech specialist
+12:10–12:25 Mentor speed introductions MC
+12:25–12:40 Live Q&A and first sponsor prize draw MC + sponsor
+representatives
+12:40–12:45 Official start of the hackathon declaration MC
+=== PAGE 8 ===
+At this point, the hackathon will move to a teams at work and you may join the
+hackathon meeting a call.
+DESIGNATED MEETING CALLS
+ 
+MAIN CALL MEETING (23 - 25 OCT 2026):
+https://connect.gklink.co/meeting/1D0Y9ZO0HJI0  
+ 
+Open all weekend from 12:00PM. In this call, the organisers will be there to assist
+you with various things.
+12:45 -
+20:00 Hack-Away Working to build the app with assistance from
+the mentors. Here is how to get assistance.
+20:00 -
+20:30
+Update of Team Profile –
+ensure that your project
+overview is well in order.
+All teams, click EDIT TEAM PROFILE on the
+Dashboard or from your team page.
+20:30 -
+23:00 Hack-Away Continue working with assistance from mentors.
+23:00 -
+00:00 Progress Update
+Teams – though through Sonke in the team
+page. Click NEW UPDATE / UPDATES on states.
+Be clear on where your solution is.
+DAY 2: 24 October 2026
+=== PAGE 9 ===
+Like the first day, there is a live watch on www.appoftheyear.co.za for key briefing and
+knowledge.
+Time Segment Lead Purpose / production notes
+09:00–09:08 Wake-up countdown MC Music, live social wall and
+regional check-ins.
+09:08–09:18 Move before you build Wellness coach Accessible ten-minute stretch
+and reset.
+09:18–09:30 State of the Hackathon MC + Mr Thulani
+Mabuza
+Team count, challenge split,
+overnight highlights and
+Saturday milestones.
+09:30–09:45 What makes a useful
+product? Product leader
+Build for user value, focus and
+adoption rather than feature
+volume.
+09:45–10:05 From idea to viable
+venture
+Founder + FNB
+SME specialist
+Business model, routes to
+market, revenue and partnership
+choices.
+10:05–10:20 Mentor hot seat Dr Ronny
+Mabokela
+Rapid answers to recurring
+design, code and business
+questions.
+10:20–10:30 Sponsor Street Team live
+cross
+Field host +
+sponsor
+representative
+First doorstep delivery,
+participant reaction and a clue
+linked to an FNB, Accenture or
+Cloud on Demand prize.
+10:30–10:45 Saturday challenge
+briefing
+Dr Khanyisile
+Twabu
+Explain prototype bingo, social
+scavenger hunt and afternoon
+check gate.
+10:45–11:00 Closing and co-sponsor
+prize flash
+MC + sponsor
+representatives
+Accenture or Cloud on Demand
+spin-to-win draw and handover
+to Sonke build rooms.
+11:00 -
+12:00 Hack-Away Teams with
+Mentors
+Teams at work with the guidance
+of mentors
+12:00 -
+12:30
+SUBMISSION
+DEADLINE: Teams
+Teams are expected to
+submit/update their SSDLC –
+talking through how they
+have thought through
+security aspects as a team
+=== PAGE 10 ===
+12:30 -
+13:30 Hack-Away Teams Teams continue working
+13:30
+SUBMISSION
+DEADLINE: 20
+seconds Pitch View
+(HustleWindow)
+All teams
+All teams are required to submit
+a 20 seconds pitch video –
+selling the app to the panel, who
+are emulating a driver in a traffic
+light
+14:00 -
+17:00
+HustleWindow – panel
+feedback Special panels
+Feedback will be received
+into email and the team page
+page (click MENTOR
+FEEDBACKS)
+17:00 -
+23:00 Hack-Away Teams Teams at work with help from
+mentors
+23:00 -
+00:00 Progress Update Teams
+Expected update on how far
+teams are in building up their
+solution
+DAY 3: 25 October 2026
+Time Segment Lead Purpose / production notes
+09:00-
+09:08 Final-day countdown MC + DJ Social wall, team energy check and
+submission clock.
+09:08-
+09:18 Reset and focus Wellness coach Short mobility and breathing session.
+09:18-
+09:30 State of the Hackathon Ms Yolisa
+Dumezweni
+Progress recap, technical notices and
+Sunday deadlines.
+09:30-
+09:45 Pitch with proof Pitch coach Show the user, problem, product,
+evidence, impact and ask.
+09:45-
+10:00 Demo without drama Tumi
+Submission formats, cloud readiness,
+backup video, links, permissions and
+final checks.
+10:00-
+10:15 Judging decoded TBC
+Explain scoring and common
+weaknesses. No new criteria
+introduced.
+=== PAGE 11 ===
+10:15-
+10:25
+Street Team weekend
+montage Field producer Delivery reactions and participant
+stories from across the route.
+10:25-
+10:35
+Final co-sponsor prize
+draw
+MC + sponsor
+representatives
+Draw an Accenture or Cloud on
+Demand prize from teams that passed
+both progress gates on Sonke.
+10:35-
+2:00 Hack-Away Teams with
+mentors
+Teams at work with guidance of
+mentors
+12:00-
+12:30
+SUBMISSION
+DEADLINE: Lean
+Business Canvas
+Teams
+Teams expected to submit/update
+their Lean Business Canvas –
+talking through aspects on how
+marketable their solution is
+12:30-
+17:00 Hack-Away Teams with
+Mentors Final sprint with mentors
+17:00-
+17:30
+Final State of the
+Hackathon Update
+Mr Tiyani
+Nghonyama
+Final update on the hackathon and
+next steps
+DAY 4: 26 October 2026
+On your own (no mentors support) - race to submit by 23:59

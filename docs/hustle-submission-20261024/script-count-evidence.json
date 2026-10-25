@@ -1,0 +1,120 @@
+{
+  "source_file": "README.md",
+  "method": "Timed spoken table rows; Unicode word tokens, contractions count as one.",
+  "lines": [
+    {
+      "start_s": 0,
+      "end_s": 4,
+      "slot_seconds": 4,
+      "speaker": "Entrant",
+      "spoken_line": "I can read it. Can I explain it?",
+      "words": [
+        "I",
+        "can",
+        "read",
+        "it",
+        "Can",
+        "I",
+        "explain",
+        "it"
+      ],
+      "word_count": 8,
+      "declared_count": 8,
+      "count_matches": true
+    },
+    {
+      "start_s": 4,
+      "end_s": 7,
+      "slot_seconds": 3,
+      "speaker": "Entrant",
+      "spoken_line": "I build KAIRO for learners.",
+      "words": [
+        "I",
+        "build",
+        "KAIRO",
+        "for",
+        "learners"
+      ],
+      "word_count": 5,
+      "declared_count": 5,
+      "count_matches": true
+    },
+    {
+      "start_s": 7,
+      "end_s": 12,
+      "slot_seconds": 5,
+      "speaker": "KAIRO",
+      "spoken_line": "Start with your source. Explore a motor. See what changes.",
+      "words": [
+        "Start",
+        "with",
+        "your",
+        "source",
+        "Explore",
+        "a",
+        "motor",
+        "See",
+        "what",
+        "changes"
+      ],
+      "word_count": 10,
+      "declared_count": 10,
+      "count_matches": true
+    },
+    {
+      "start_s": 12,
+      "end_s": 16,
+      "slot_seconds": 4,
+      "speaker": "KAIRO",
+      "spoken_line": "Practise explaining why. Keep your evidence.",
+      "words": [
+        "Practise",
+        "explaining",
+        "why",
+        "Keep",
+        "your",
+        "evidence"
+      ],
+      "word_count": 6,
+      "declared_count": 6,
+      "count_matches": true
+    },
+    {
+      "start_s": 16,
+      "end_s": 20,
+      "slot_seconds": 4,
+      "speaker": "Entrant",
+      "spoken_line": "KAIRO helps turn learning into something you can show.",
+      "words": [
+        "KAIRO",
+        "helps",
+        "turn",
+        "learning",
+        "into",
+        "something",
+        "you",
+        "can",
+        "show"
+      ],
+      "word_count": 9,
+      "declared_count": 9,
+      "count_matches": true
+    }
+  ],
+  "speaker_totals": {
+    "Entrant": {
+      "words": 22,
+      "slot_seconds": 11,
+      "rows": 3
+    },
+    "KAIRO": {
+      "words": 16,
+      "slot_seconds": 9,
+      "rows": 2
+    }
+  },
+  "total_words": 38,
+  "total_slot_seconds": 20,
+  "all_declared_counts_match": true,
+  "timing_note": "Allocated slot duration only; not a measured spoken delivery or pause duration."
+}

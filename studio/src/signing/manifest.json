@@ -1,0 +1,68 @@
+{
+  "contract": "kairo-signing/0.1",
+  "mode": "tracking-only",
+  "runtime": {
+    "package": "@mediapipe/tasks-vision",
+    "version": "0.10.17",
+    "npmIntegrity": "sha512-CZWV/q6TTe8ta61cZXjfnnHsfWIdFhms03M9T7Cnd5y2mdpylJM0rF1qRq+wsQVRMLz1OYPVEBU9ph2Bx8cxrg==",
+    "license": "Apache-2.0",
+    "wasm": {
+      "simd": {
+        "loader": {
+          "path": "wasm/vision_wasm_internal.js",
+          "sha256": "33a4125f825b343d2d9773951a73692f40bee368c9b591af8ff652fd501af90b",
+          "bytes": 203819
+        },
+        "binary": {
+          "path": "wasm/vision_wasm_internal.wasm",
+          "sha256": "c88cf472dd5cab0a3954b071e5f442102ded3701dcccc987a7a02ee8f54aae85",
+          "bytes": 9514390
+        }
+      },
+      "nosimd": {
+        "loader": {
+          "path": "wasm/vision_wasm_nosimd_internal.js",
+          "sha256": "4e8d07dcf8cbb55b343cd76b7fc30d4303220f049d5529d6412f6f93296726a8",
+          "bytes": 203672
+        },
+        "binary": {
+          "path": "wasm/vision_wasm_nosimd_internal.wasm",
+          "sha256": "f840f69d7229f89dedaed39c7ac7a52f0964a7cec02d6cb1ac9eff891db86dc2",
+          "bytes": 9379090
+        }
+      }
+    }
+  },
+  "model": {
+    "id": "hand_landmarker",
+    "variant": "float16/1",
+    "asset": {
+      "path": "models/hand_landmarker.task",
+      "sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+      "bytes": 7819105
+    },
+    "source": "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task",
+    "md5": "15318430ea3851670fe9914116a9cfad",
+    "upstreamLastModified": "Wed, 26 Apr 2023 03:33:24 GMT",
+    "retrieved": "2026-10-23",
+    "license": "Apache-2.0 (model card: LICENSED UNDER Apache License, Version 2.0)",
+    "modelCard": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Hand%20Tracking%20(Lite_Full)%20with%20Fairness%20Oct%202021.pdf",
+    "limits": [
+      "Intended for AR, gesture recognition and hand control; \"meant for experimental usage\".",
+      "Out of scope per the card: hands with gloves or occlusions, and any surveillance or identity recognition.",
+      "Not tested in \"in-the-wild\" low-end camera, low light or motion-blur conditions.",
+      "Finds hand landmarks only. It is not a sign language model and says nothing about SASL."
+    ]
+  },
+  "worker": {
+    "path": "tracker.worker.js",
+    "sha256": "83f0da5b387e8d4b0bac532908441f321cff1568450818564591cf646e5741e0",
+    "bytes": 132483,
+    "source": "src/signing/worker.ts"
+  },
+  "licenseFile": {
+    "path": "LICENSE-Apache-2.0.txt",
+    "sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
+    "bytes": 12331
+  }
+}

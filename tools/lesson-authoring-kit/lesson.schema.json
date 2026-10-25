@@ -1,0 +1,433 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kairo:isolated-authoring:1",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{24}$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "sourceId": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{24}$"
+    },
+    "sourceRevision": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "\\S"
+    },
+    "layout": {
+      "enum": [
+        "reading",
+        "split-studio",
+        "practice"
+      ]
+    },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{0,47}$"
+              },
+              "type": {
+                "const": "objective"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "\\S"
+              },
+              "provenance": {
+                "enum": [
+                  "excerpt",
+                  "generated",
+                  "authored"
+                ]
+              },
+              "citations": {
+                "type": "array",
+                "maxItems": 4,
+                "items": {
+                  "$ref": "#/$defs/citation"
+                }
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2400,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "title",
+              "provenance",
+              "citations",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{0,47}$"
+              },
+              "type": {
+                "const": "explanation"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "\\S"
+              },
+              "provenance": {
+                "enum": [
+                  "excerpt",
+                  "generated",
+                  "authored"
+                ]
+              },
+              "citations": {
+                "type": "array",
+                "maxItems": 4,
+                "items": {
+                  "$ref": "#/$defs/citation"
+                },
+                "minItems": 1
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2400,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "title",
+              "provenance",
+              "citations",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{0,47}$"
+              },
+              "type": {
+                "const": "worked-example"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "\\S"
+              },
+              "provenance": {
+                "enum": [
+                  "excerpt",
+                  "generated",
+                  "authored"
+                ]
+              },
+              "citations": {
+                "type": "array",
+                "maxItems": 4,
+                "items": {
+                  "$ref": "#/$defs/citation"
+                },
+                "minItems": 1
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2400,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "title",
+              "provenance",
+              "citations",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{0,47}$"
+              },
+              "type": {
+                "const": "question"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "\\S"
+              },
+              "provenance": {
+                "enum": [
+                  "excerpt",
+                  "generated",
+                  "authored"
+                ]
+              },
+              "citations": {
+                "type": "array",
+                "maxItems": 4,
+                "items": {
+                  "$ref": "#/$defs/citation"
+                },
+                "minItems": 1
+              },
+              "prompt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 450,
+                "pattern": "\\S"
+              },
+              "options": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 4,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 350,
+                  "pattern": "\\S"
+                }
+              },
+              "correct": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "title",
+              "provenance",
+              "citations",
+              "prompt",
+              "options",
+              "correct"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{0,47}$"
+              },
+              "type": {
+                "const": "activity"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "\\S"
+              },
+              "provenance": {
+                "const": "authored"
+              },
+              "citations": {
+                "type": "array",
+                "maxItems": 4,
+                "items": {
+                  "$ref": "#/$defs/citation"
+                }
+              },
+              "prompt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 900,
+                "pattern": "\\S"
+              },
+              "activity": {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "const": "motor-field-speed"
+                  },
+                  "frequencyHz": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 400
+                  },
+                  "poles": {
+                    "enum": [
+                      2,
+                      4,
+                      6,
+                      8,
+                      10,
+                      12
+                    ]
+                  }
+                },
+                "required": [
+                  "kind",
+                  "frequencyHz",
+                  "poles"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "title",
+              "provenance",
+              "citations",
+              "prompt",
+              "activity"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{0,47}$"
+              },
+              "type": {
+                "const": "reflection"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "\\S"
+              },
+              "provenance": {
+                "enum": [
+                  "excerpt",
+                  "generated",
+                  "authored"
+                ]
+              },
+              "citations": {
+                "type": "array",
+                "maxItems": 4,
+                "items": {
+                  "$ref": "#/$defs/citation"
+                }
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2400,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "title",
+              "provenance",
+              "citations",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "version",
+    "sourceId",
+    "sourceRevision",
+    "title",
+    "layout",
+    "blocks"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "citation": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "\\S"
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 16000
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16000
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "page",
+        "locator",
+        "start",
+        "end",
+        "quote"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$comment": "Isolated kit contract; not a provider responseSchema. Runtime contract also checks bytes, native source hash, exact citations, unique block IDs, answer index against actual option count, proposal approval and edit conflicts. Not a claim of semantic correctness."
+}

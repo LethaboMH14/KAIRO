@@ -1,0 +1,56 @@
+{
+  "base": "http://127.0.0.1:4188",
+  "scope": "synthetic public example only; raw API checks, no browser observation",
+  "health": {
+    "ok": true,
+    "runtime": "local-node-sqlite",
+    "cloudConfigured": true
+  },
+  "servicesBefore": {
+    "runtime": "local-node-sqlite",
+    "google": {
+      "enabled": true,
+      "model": "gemini-3.5-flash-lite",
+      "connection": "not-probed",
+      "lastSuccessfulAt": null
+    },
+    "storage": {
+      "mode": "local-files-and-browser"
+    },
+    "security": {
+      "scope": "loopback-only"
+    }
+  },
+  "localFlow": {
+    "sourceId": "f1c5b99cf960ef62890b3b9e",
+    "lessonId": "c39cdf1ec5af8ebabf1da789",
+    "reviewed": true,
+    "chapters": 2,
+    "questions": 1,
+    "citations": 1,
+    "lessonReloadId": "c39cdf1ec5af8ebabf1da789"
+  },
+  "googleFlow": {
+    "success": true,
+    "lessonId": "2f9c9fbf8aee1c90b554f832",
+    "model": "gemini-3.5-flash-lite",
+    "chapters": 3,
+    "questions": 2,
+    "citations": 1
+  },
+  "servicesAfter": {
+    "runtime": "local-node-sqlite",
+    "google": {
+      "enabled": true,
+      "model": "gemini-3.5-flash-lite",
+      "connection": "verified-by-successful-request",
+      "lastSuccessfulAt": "2026-10-23T12:13:03.831Z"
+    },
+    "storage": {
+      "mode": "local-files-and-browser"
+    },
+    "security": {
+      "scope": "loopback-only"
+    }
+  }
+}

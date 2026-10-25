@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "kairo-engineering-motor-field-speed-20261024",
+  "title": "Motor field speed: predict, calculate, compare",
+  "objective": "Work out the speed of a three-phase induction motor's rotating stator field, then explain why that value is not the rotor's measured shaft speed.",
+  "prerequisites": [
+    "Recognise frequency in hertz and rotational speed in revolutions per minute.",
+    "Know that p in the displayed relation counts total magnetic poles."
+  ],
+  "sourceRefs": [
+    {
+      "id": "nptel-three-phase-field",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108105053/pdf/L-01%28TB%29%28ET%29%20%28%28EE%29NPTEL%29.pdf",
+      "locator": "Module 8.1, Concept of rotating magnetic field; Module 8.2, construction and principle of three-phase induction motor; NPTEL syllabus PDF navigation page 9 (printed page number not visible in the extracted lines).",
+      "licenseStatus": "NPTEL source; no reuse licence confirmed for this file. Citation and factual paraphrase only; no source wording or diagram copied.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "nptel-induction-slip",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108106026/chapter4.pdf",
+      "locator": "Chapter 4, PDF navigation page 24 (printed p. 4.25), §4.3.4 equation (4.76): slip as the synchronous-to-rotor speed difference divided by synchronous speed.",
+      "licenseStatus": "NPTEL source; no reuse licence confirmed for this file. Citation and factual paraphrase only; no source wording or diagram copied.",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "nptel-speed-pole-pairs",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108106072/pdf/1_8.pdf",
+      "locator": "Electrical Machines II, §8.4, pole changing schemes: synchronous speed in revolutions per second equals supply frequency divided by pole-pair count; multiply by 60 and use pole pairs = total poles/2 for the calculator form.",
+      "licenseStatus": "NPTEL source; no reuse licence confirmed for this file. Citation and factual paraphrase only; no source wording or diagram copied.",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "steps": [
+    {
+      "id": "inspect-stator",
+      "title": "Find the part that makes the moving field",
+      "explanation": "The stator stays still while its three-phase winding produces a field that rotates. In an induction motor, the rotor turns below synchronous speed; the difference is needed for induction and torque.",
+      "sourceRefIds": ["nptel-three-phase-field", "nptel-induction-slip", "nptel-speed-pole-pairs"],
+      "learnerAction": "Select the stator windings, then the squirrel cage. Say which one stays still and which one turns.",
+      "studioCapability": "Engineering Studio part list and part explanations for stator windings and squirrel cage.",
+      "capabilityStatus": "implemented"
+    },
+    {
+      "id": "predict-field-speed",
+      "title": "Predict the field speed",
+      "explanation": "Use nₛ = 120f/p, where f is supply frequency in hertz and p is total pole count. For four poles at 50 Hz, the field speed is 120 × 50 ÷ 4 = 1,500 r/min. This is synchronous field speed, not measured rotor speed.",
+      "sourceRefIds": ["nptel-three-phase-field", "nptel-induction-slip", "nptel-speed-pole-pairs"],
+      "learnerAction": "Before changing the calculator, write the result for 50 Hz and four poles and show the substitution.",
+      "studioCapability": null,
+      "capabilityStatus": "manual"
+    },
+    {
+      "id": "check-field-speed",
+      "title": "Check the calculation, then explain the difference",
+      "explanation": "Enter a frequency and pole count in the field-speed calculator, compare its result with your prediction, and state why the induction-motor rotor runs a little slower under load. The operating animation exaggerates slip and does not provide a real shaft-speed reading.",
+      "sourceRefIds": ["nptel-three-phase-field", "nptel-induction-slip", "nptel-speed-pole-pairs"],
+      "learnerAction": "Try a second frequency or pole count. Record the input, calculated field speed, and one sentence distinguishing it from rotor speed.",
+      "studioCapability": "Engineering Studio synchronous field-speed calculator and displayed distinction between field speed and illustrative rotor motion.",
+      "capabilityStatus": "implemented"
+    }
+  ],
+  "practice": [
+    {
+      "question": "A four-pole induction motor is supplied at 60 Hz. What synchronous field speed do you calculate, and can this result be reported as measured shaft speed?",
+      "expectedReasoning": "Calculate 120 × 60 ÷ 4 = 1,800 r/min for the rotating field. No: induction-motor rotor speed is below synchronous speed in motoring operation because relative motion induces rotor current; the exact shaft speed depends on the motor and load and is not supplied by this calculator.",
+      "sourceRefIds": ["nptel-three-phase-field", "nptel-induction-slip"],
+      "scope": "A worked ideal synchronous-field calculation and qualitative slip distinction; not a motor-specific operating point or shaft-speed measurement."
+    }
+  ],
+  "evidencePrompt": "Save your frequency, total pole count, written substitution, calculated field speed, and a short explanation of why it is not the rotor's measured shaft speed. This is a practice explanation, not a qualification.",
+  "limitations": [
+    "The calculator reports synchronous stator-field speed only. It does not measure or predict a particular motor's shaft speed.",
+    "The operating animation uses deliberately slowed field motion and exaggerated slip; it is illustrative, not to scale.",
+    "The pack is authored instructional metadata; it is not an official course, assessment, electrical-work instruction, credential, or proof of learner mastery.",
+    "Sources are cited for factual claims; source text and figures are not redistributed. Their item-specific reuse licences were not confirmed."
+  ]
+}

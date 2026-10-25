@@ -1,0 +1,16 @@
+✔ preserves edited flags and distinct locators for repeated passages (12.4613ms)
+✔ uses UTF-16 offsets and retains multiple late relevant sections within budget (5.2603ms)
+✔ goal with no source match falls back to source order (0.5084ms)
+✔ actual draft validator rejects stale revisions and fabricated support quotes (8.3137ms)
+✔ DOCX top-level body preserves paragraph and table order with cell locators (4528.9752ms)
+✔ formula-only sparse XLSX reports formula text and exact cell coordinates (3035.9719ms)
+✔ PPTX text locator includes slide shape and speaker-note shape indexes (5088.1153ms)
+✔ DOCX nested table contents remain outside supported top-level coverage (3011.487ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16158.7826

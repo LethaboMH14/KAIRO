@@ -1,0 +1,11 @@
+# WorkerB handoff: goal-relevant evidence selector
+
+Owner: `codex-evidence-selector-20261024-a` (Codex, GPT-6, effort unknown). Task: `EVIDENCE-SELECTOR-001`.
+
+This package supports **Intelligence** (transparent goal-conditioned retrieval) and **Product/Usability** (finding relevant reviewed material). Learner need: surface relevant evidence wherever it occurs in a reviewed source, with traceable spans and bounded output.
+
+Changed files: `studio/src/evidence-selection-core/model.ts`, `studio/tests/evidence-selection-core.test.mjs`, `docs/evidence-selection-20261024/README.md`. Interface is synchronous `selectEvidence(source, goal, options?)` and exported types from `model.ts`; result shape follows the account-wave contract. Selection is deterministic lexical overlap, stable source-order tie breaking, and source-order fallback when no meaningful goal match exists. Exact JavaScript UTF-16 offsets, substrings, locators, edited markers and `S<section>-<start>` IDs are preserved.
+
+Revision boundary: selector validates reviewed flag, page shape, SHA-256 hex syntax, per-page text/locator bounds, and 100-page/48,000-character input limits. It does not calculate or authenticate SHA-256. Root must verify immutable source identity and `SHA-256(JSON.stringify(reviewedPages))` through the existing version store before invocation. No node crypto, model/provider, network, browser, private material, package, router, or workspace changes.
+
+Acceptance check: the focused behavior suite passed 5/5 after the ranking follow-up. Lexical results retain relevance order so a first-four downstream consumer gets the late matching evidence; equal scores remain source-ordered and source-order fallback stays source-ordered. A strict Studio TypeScript compile also passed after replacing inferred regex-match array inclusion with explicitly typed source-term membership. Automated tests cover relevant text beyond 12k, exact offsets and Unicode, edited flag, tie stability, empty/stopword fallback, invalid inputs and budgets 1/20/1399. Goal length is bounded to 1,000 code units and matching to 64 terms; page/locator sizes are bounded to 16,000/300 code units. Remaining gaps: root review and integration, source-version verification, and human/device/end-to-end usefulness validation. This package does not claim semantic retrieval or learning impact.

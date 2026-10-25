@@ -1,0 +1,25 @@
+SOURCE-REDESIGN-001 verification
+Date: 2026-10-24
+Workspace: studio/
+
+Command:
+  node --test tests/source-workflow-ui.test.mjs tests/material-integration.test.mjs
+Result: exit 0; 14 tests passed; 0 failed.
+
+Passing cases include:
+  actual source selection, review, revision and planner gates
+  account/local storage wording, safe escaping and panel boundary
+  current-goal passage preview, invalidation and local fallback
+  plain-text 401 recovery while retaining pasted material
+  upload cancellation acknowledgement and unconfirmed cancellation wording
+  catalog job restoration and ready source opening while preserving paste
+  queued job resume through the shared polling and cancellation path
+  explicit restored error and cancelled status recovery
+  local catalog response with no optional jobs field
+  source-workflow API response parsing and fail-closed cancellation
+
+Command:
+  node node_modules/typescript/bin/tsc --noEmit --pretty false
+Result: exit 0; no diagnostics.
+
+Scope boundary: tests render the actual SourceWorkspace and child components with installed Vite SSR, invoking component event props under deterministic Node fetch/timer mocks. This is provider/event simulation only. It does not start a browser/headless browser, real account session, hosted queue, cloud storage, device, screen reader or real file extraction. No whole-app production build or deployment is claimed.

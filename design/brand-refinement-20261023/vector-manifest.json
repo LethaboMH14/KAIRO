@@ -1,0 +1,27 @@
+{
+  "typeface": "Cormorant Garamond",
+  "weight": 600,
+  "source": "https://github.com/google/fonts/tree/main/ofl/cormorantgaramond",
+  "licence": "SIL Open Font License 1.1; see fonts/OFL.txt",
+  "fontSha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+  "wordmark": "Font-derived outlined glyphs, optically adjusted pair spacing; not an original custom typeface.",
+  "pairAdjustmentsFontUnits": {
+    "KA": -30,
+    "AI": -12,
+    "IR": 2,
+    "RO": -22
+  },
+  "trackingFontUnits": 14,
+  "symbol": "Original A-derived architectural study. Geometry and originality require further selection/review.",
+  "exports": [
+    "kairo-horizontal-forest.svg",
+    "kairo-horizontal-ivory.svg",
+    "kairo-passage-pattern.svg",
+    "kairo-stacked-forest.svg",
+    "kairo-symbol-forest.svg",
+    "kairo-symbol-ivory.svg",
+    "kairo-vector-proof.svg",
+    "kairo-wordmark-forest.svg",
+    "kairo-wordmark-ivory.svg"
+  ]
+}

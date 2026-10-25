@@ -1,0 +1,26 @@
+{
+ "schema_version":1,"diagram_type":"architecture",
+ "meta":{"title":"KAIRO: trusted learning pipeline","subtitle":"Target cloud topology; current implementation and release gates are documented separately","quality_profile":"showcase","visual_preset":"editorial","animation":"none"},
+ "layout":{"mode":"grid","cols":4,"cellW":190,"cellH":76,"gapX":40,"gapY":130},
+ "components":[
+  {"id":"app","type":"frontend","label":"KAIRO app","sublabel":"Reading, studios, evidence","row":0,"col":0},
+  {"id":"api","type":"backend","label":"Cloud Run API","sublabel":"Ownership and source revisions","row":0,"col":1},
+  {"id":"gateway","type":"security","label":"AI task gateway","sublabel":"Consent, limits, validation","row":0,"col":2},
+  {"id":"models","type":"external","label":"Model providers","sublabel":"Google first; AIML optional","row":0,"col":3},
+  {"id":"identity","type":"security","label":"Managed identity","sublabel":"Guest or sign-in","row":1,"col":0},
+  {"id":"data","type":"database","label":"Private data","sublabel":"PostgreSQL and Cloud Storage","row":1,"col":1},
+  {"id":"queue","type":"messagebus","label":"Cloud Tasks","sublabel":"Bounded idempotent work","row":1,"col":2},
+  {"id":"worker","type":"backend","label":"Extraction worker","sublabel":"Parse, review, index, evaluate","row":1,"col":3}
+ ],
+ "connections":[
+  {"id":"app-api","from":"app","to":"api","label":"HTTPS","variant":"emphasis"},
+  {"id":"api-gateway","from":"api","to":"gateway","label":"scoped task"},
+  {"id":"gateway-models","from":"gateway","to":"models","label":"bounded request"},
+  {"id":"identity-app","from":"identity","to":"app","label":"ID token"},
+  {"id":"api-data","from":"api","to":"data","label":"owner scope","labelDy":24},
+  {"id":"gateway-queue","from":"gateway","to":"queue","label":"long task","labelDy":24},
+  {"id":"queue-worker","from":"queue","to":"worker","label":"OIDC job"},
+  {"id":"worker-models","from":"worker","to":"models","label":"approved call"}
+ ],
+ "cards":[{"dot":"cyan","title":"Same lesson throughout","items":["Source ID and reviewed revision travel with every task","Only supported interactions can affect a studio"]},{"dot":"amber","title":"Release evidence","items":["Hosted identity, durable storage and two-user checks are still required","The gateway prototype is tested locally; this map is not a deployment claim"]}]
+}

@@ -1,0 +1,32 @@
+KAIRO curriculum metadata package — final evidence
+Date: 2026-10-23 (UTC)
+Session: codex-luna-curriculum-20261023-c
+Registered settings: client Codex; model gpt-6; effort unknown (not exposed)
+
+Commands (run from repository root unless noted):
+
+1. `python docs/engineering-journey-20261023/curriculum-evidence/verify_source.py`
+   Exit: 0
+   Verified local original: 373 pages, 2,054,987 bytes, SHA-256
+   7feff6501eddc6a5e5925233c4fce41fad39885a513875e2b459d5caa3039dc3.
+   Confirmed nine exact current Year I course rows on each of five 2026
+   programme spreads, then Electrical EFA03 Year II ELEN2003A and its detailed
+   syllabus section. Printed page labels were also matched.
+
+2. From `studio/`: `node --test tests/curriculum-catalog.test.mjs`
+   Exit: 0; 6 tests, 6 passed, 0 failed.
+   Covers actual `validateRegistry` and imported `curriculumRegistry`, shared
+   identity reuse, institution/year/code identity separation, synthetic same
+   title/different-code data, reviewed prerequisites, invalid source URLs,
+   programme/institution alignment, UTC timestamp validation and input
+   immutability.
+
+3. From `studio/`: `node_modules/.bin/tsc.cmd --noEmit`
+   Exit: 0; no diagnostics. The installed TypeScript project check passes in
+   the final run; no shared signing/browserDeps file was changed.
+
+No browser/headless browser, screenshots, cloud/network API, student data,
+courseware copying, package installation, deployment or runtime integration
+was used. These checks establish source metadata and validator behaviour only;
+they do not establish official enrolment, complete degree coverage, expert
+approval, learner outcomes or browser/device acceptance.

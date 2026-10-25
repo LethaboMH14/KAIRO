@@ -1,0 +1,8 @@
+{
+  "metadata": {
+    "name": "kairo-app-00006-885"
+  },
+  "status": {
+    "imageDigest": "africa-south1-docker.pkg.dev/kairo-access-20261021/cloud-run-source-deploy/kairo-app@sha256:2c06b28ec2315676b5c2454691f4adaca5401ba315247f770148f4ec466abe3b"
+  }
+}

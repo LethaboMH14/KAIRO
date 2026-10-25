@@ -1,0 +1,38 @@
+{
+ "source": "studio/public/models/teacher/teacher.glb",
+ "licence": "CC0-1.0 (TalkingHead MPFB example)",
+ "mode": "rehearsal",
+ "engine": "BLENDER_EEVEE_NEXT",
+ "heightM": 1.7828,
+ "headPoint": [
+  0.0,
+  -0.1,
+  1.6628
+ ],
+ "counts": {
+  "verts": 53116,
+  "tris": 83686,
+  "meshes": 8,
+  "morphTargets": {
+   "Human": 15,
+   "Human.high-poly": 4,
+   "Human.mindfront_eyebrows_02": 11,
+   "Human.mindfront_eyelashes_02": 12,
+   "Human.teeth_base": 1,
+   "Human.tongue01": 1
+  },
+  "armatures": {
+   "Armature": {
+    "bones": 67,
+    "deform": 67
+   }
+  }
+ },
+ "shots": {
+  "front": "rehearsal_front.png",
+  "three_quarter": "rehearsal_three_quarter.png",
+  "face": "rehearsal_face.png"
+ },
+ "restyle": [],
+ "seconds": 26.4
+}

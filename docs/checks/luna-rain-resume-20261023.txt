@@ -1,0 +1,21 @@
+KAIRO source classroom resume helpers — verification
+Date: 2026-10-23 (Africa/Johannesburg)
+Worker registration: codex-rain-resume-20261023-b; client Codex; exposed model gpt-6; effort unknown (not exposed). Requested gpt-6-luna/low was not exposed in this session.
+Scope: studio/src/classroom-resume/model.ts and studio/tests/classroom-resume.test.mjs, plus this evidence and the matching handoff.
+
+Focused tests
+Command (from studio): node --test tests/classroom-resume.test.mjs
+Exit code: 0
+Result: 13 tests, 13 passed, 0 failed/cancelled/skipped.
+Coverage: key validation; empty and matching restore; stale source/revision protection; malformed, wrong identity, unsupported and oversized record rejection; cursor/reading validation; caller context validation; Unicode revision bounds; storage read/write failures; denied permission and protected corrupt record; concurrent cursor conflict; exact privacy-bounded envelope; invalid save state.
+
+TypeScript
+Command (from studio): .\node_modules\.bin\tsc.cmd --noEmit
+Exit code: 0
+Result: passed with no diagnostics (installed Studio TypeScript; no install performed).
+
+Coordination
+Registered, checked status and inbox, then claimed the four exact brief paths before editing. Final inbox check after message 49 returned no new messages. No route/provider/classroom integration, browser observation, cloud call, dependency install, deployment or automation was performed.
+
+Limits
+The re-read before setItem is best-effort only; localStorage provides no atomic compare-and-set. A record can still change between the guard and the write. These checks are Node synthetic-storage tests and a TypeScript compile, not route, browser, multi-tab device, narration or learning-outcome acceptance.

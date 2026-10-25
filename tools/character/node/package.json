@@ -1,0 +1,10 @@
+{
+  "name": "kairo-character-pipeline-tools",
+  "private": true,
+  "description": "CHARACTER-002 offline asset tools (not part of the studio app bundle).",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@gltf-transform/cli": "4.5.1",
+    "gltf-validator": "2.0.0-dev.3.10"
+  }
+}

@@ -1,0 +1,11 @@
+# Authorized security assessment boundary
+
+24 October 2026. Root actual gpt-6 / effort unknown. User authorizes security implementation, research and testing for their KAIRO app. Existing context supplies the service owner, private pilot deployment, synthetic judge accounts, private learner material and no public IAM authorization. No additional material scope question is needed. No browser observation, real camera input, real private uploads, third-party scanning, credential attacks, external messages, destructive actions or load testing.
+
+Root: actual account/workspace route tests with mocked identity and in-memory repository; selected source/AI validators; npm advisory scan and CycloneDX package inventory; read-only current cloud configuration; fixes to explicitly claimed runtime paths; final SSDLC text and evidence. Worker A: framework research, then small synthetic extractor/admission abuse cases in separate claimed tests. Worker B: organizer requirements and short-form pitch research, no product edits.
+
+Confirmed fix contract: replace the account limiter's single email/socket pair with independent account, socket-client and process-wide windows. Limits are proposed pilot controls: 12/account, 60/socket client, 240/process per ten minutes. Both sign-in and recovery consume them; block before any identity-provider call; ignore client-supplied forwarding headers; bounded map; expiry evaluated on requests rather than a watcher. Add Retry-After on throttle. This remains instance-local, so it is defense in depth, not a distributed guarantee. Socket-client aggregation can group learners behind the same managed proxy; document this trade-off and validate before broad rollout.
+
+Headers exceeding Node's HTTP parser limit may be rejected with 431 before Express runs. That is fail-closed behavior, not an authentication bypass or a requirement to weaken the header limit. Test oversized session parsing directly as well as wire behavior.
+
+Prompt-injection tests here exercise deterministic validation and tool/ownership projection. No real hostile prompt was sent to a paid model, no claim of model-wide injection resistance, no independent penetration-test certification. Quantum work is inventory and migration planning, not custom cryptography or quantum computation.

@@ -1,0 +1,18 @@
+✔ explicit canonical chapter link wins; malformed and out-of-range links fall back to saved cursor (11.9948ms)
+✔ start policy preserves stale/corrupt explanations and never offers 3D from untrusted snapshots (2.2097ms)
+✔ source/revision change protects record; valid link can still select a chapter (2.8174ms)
+✔ corrupt, unsupported, out-of-range and unavailable records never overwrite original bytes (2.9048ms)
+✔ other-tab write and stale permission snapshots block overwrite; fresh consecutive saves work (2.091ms)
+✔ policy is pure, keeps source identity outside persistence, and only offers—not mounts—3D (33.6042ms)
+✔ equipment teaching uses the actual selected part and retains existing source references (81.0443ms)
+✔ calculator teaching uses exact synchronous field speed and discloses visual limits (6.6117ms)
+✔ operating lesson uses actual selected supply, offers no real equipment diagnosis (1.2777ms)
+✔ actual teaching panel escapes text and forwards controls without starting media (20717.7273ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33503.9564

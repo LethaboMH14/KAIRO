@@ -1,0 +1,19 @@
+Create a cinematic brand advert for KAIRO, an interactive learning companion for adult engineering students in South Africa. Exactly20seconds, widescreen16:9, intended1080p final delivery. Use a custom20-second version rather than your default30–60second brand-film length.
+
+Emotion: recognise a capable learner feeling overwhelmed, then create relief, curiosity and earned confidence. Premium natural cinematography, considered lighting, grounded human performance and tactile3D. Brand palette: chalk ivory #f5f0e6, moss #3e5144, sage #a7af91, charcoal and copper. Manrope-style typography. No purple neon or generic sci-fi holograms.
+
+The story is “the same windows, a different future.” Questions about NSFAS, bursaries, access, no lab and which job role accumulate at the edges. KAIRO organises the experience. Enter the motor studio, bring/review material, learn in smaller source-linked steps, explore the motor, practise and keep evidence. End with a clearly proposed connection to roles/employer visibility/partner rewards, then KAIRO: Put knowledge to work.
+
+Timeline:
+0–3seconds: actual presenter at laptop, struggling to explain the notes; questions accumulate in corners. Learner voice: “I read it. Can I explain it?” Keep the performance human, not exaggerated despair.
+3–5: reveal the supplied existing KAIRO character beside Engineering, Lecture and Computing portals. Other unbuilt environments must be marked Vision. KAIRO voice: “Meet KAIRO.”
+5–10: dolly into Engineering; material/review/lesson left, cutaway motor right, KAIRO at the seam. Voice: “Bring your material. Learn at your pace. Explore it.” Adaptation is a learner requesting smaller steps, not an invented psychological prediction.
+10–14: practice working left, corresponding motor variable right; central evidence tile and one restrained star milestone. Voice: “Practise, and build evidence of your skills.” Any level-up graphic is a concept milestone, not certification.
+14–18: evidence moves toward an illustrative graduate electrical engineer role; employer visibility and learning rewards remain NEXT / PROPOSED. Voice: “Next, connect that evidence to roles and proposed rewards.” No FNB endorsement, money, job offer, funding award or match percentage.
+18–20: match back to the same person/desk, now engaged. Existing KAIRO plus exact supplied brand lockup. Voice: “Put knowledge to work.”
+
+Only the opening uses the learner's voice. The rest must use the provided KAIRO Aoede narration audio unchanged, not a newly chosen voice. Do not clone a voice or invent my face. Use my portrait/performance only after I provide it. Use the actual supplied KAIRO asset/reference, not a different digital woman. Generated mock people are placeholders.
+
+Make clean cinematic plates; add exact titles, formulas, citations, source cards, subtitles and logos during the controlled final edit. Avoid trying to generate small interface text inside a video model. No fake live app functionality or sign-language gestures. SASL is in development; a signed version requires a qualified interpreter, not hand tracking.
+
+First return a shot plan and disclose the model, credit cost per generation, aspect, duration, watermark/download conditions and usage rights for this account. Do not automatically batch multiple paid generations. I will supply the face/reference and actual assets. No third-party screenshots, private learning material or credentials should be uploaded.

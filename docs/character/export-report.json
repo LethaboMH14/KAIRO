@@ -1,0 +1,849 @@
+{
+ "mode": "full",
+ "source": "C:\\Users\\USER\\Desktop\\fnb app of year hackathon\\design\\character\\blender\\kairo_teacher.blend",
+ "skeleton": [
+  "pelvis",
+  "spine_01",
+  "spine_02",
+  "spine_03",
+  "neck_01",
+  "head",
+  "eye_l",
+  "eye_r",
+  "clavicle_l",
+  "upperarm_l",
+  "upperarm_twist_01_l",
+  "lowerarm_l",
+  "lowerarm_twist_01_l",
+  "hand_l",
+  "thumb_01_l",
+  "thumb_02_l",
+  "thumb_03_l",
+  "index_metacarpal_l",
+  "index_01_l",
+  "index_02_l",
+  "index_03_l",
+  "middle_metacarpal_l",
+  "middle_01_l",
+  "middle_02_l",
+  "middle_03_l",
+  "ring_metacarpal_l",
+  "ring_01_l",
+  "ring_02_l",
+  "ring_03_l",
+  "pinky_metacarpal_l",
+  "pinky_01_l",
+  "pinky_02_l",
+  "pinky_03_l",
+  "thigh_l",
+  "thigh_twist_01_l",
+  "calf_l",
+  "calf_twist_01_l",
+  "foot_l",
+  "ball_l",
+  "clavicle_r",
+  "upperarm_r",
+  "upperarm_twist_01_r",
+  "lowerarm_r",
+  "lowerarm_twist_01_r",
+  "hand_r",
+  "thumb_01_r",
+  "thumb_02_r",
+  "thumb_03_r",
+  "index_metacarpal_r",
+  "index_01_r",
+  "index_02_r",
+  "index_03_r",
+  "middle_metacarpal_r",
+  "middle_01_r",
+  "middle_02_r",
+  "middle_03_r",
+  "ring_metacarpal_r",
+  "ring_01_r",
+  "ring_02_r",
+  "ring_03_r",
+  "pinky_metacarpal_r",
+  "pinky_01_r",
+  "pinky_02_r",
+  "pinky_03_r",
+  "thigh_r",
+  "thigh_twist_01_r",
+  "calf_r",
+  "calf_twist_01_r",
+  "foot_r",
+  "ball_r",
+  "hair_back_01",
+  "hair_back_02",
+  "hair_back_03",
+  "hair_side_l_01",
+  "hair_side_l_02",
+  "hair_side_r_01",
+  "hair_side_r_02"
+ ],
+ "meshes": {
+  "Teacher_Head": {
+   "source": "GEO-rain-head",
+   "subdivision": 1,
+   "vertices": 25428,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 50540,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "clavicle_l",
+    "clavicle_r",
+    "hair_side_l_02",
+    "hair_side_r_02",
+    "head",
+    "neck_01",
+    "spine_03"
+   ]
+  },
+  "Teacher_Body": {
+   "source": "GEO-rain-body",
+   "subdivision": 1,
+   "vertices": 21226,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 41964,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "ball_l",
+    "ball_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "index_metacarpal_l",
+    "index_metacarpal_r",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "middle_metacarpal_l",
+    "middle_metacarpal_r",
+    "neck_01",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "ring_metacarpal_l",
+    "ring_metacarpal_r",
+    "spine_02",
+    "spine_03",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r",
+    "upperarm_l",
+    "upperarm_r"
+   ]
+  },
+  "Teacher_Eyes": {
+   "source": "GEO-rain-eyes",
+   "subdivision": 1,
+   "vertices": 5652,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 11152,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "eye_l",
+    "eye_r"
+   ]
+  },
+  "Teacher_Brows": {
+   "source": "GEO-rain-eyebrows",
+   "subdivision": 1,
+   "vertices": 1110,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 2080,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_Lashes": {
+   "source": "GEO-rain-eyelashes",
+   "subdivision": 1,
+   "vertices": 948,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 1888,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_TeethUpper": {
+   "source": "GEO-rain-gums_upper",
+   "subdivision": 0,
+   "vertices": 3069,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 5760,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_TeethLower": {
+   "source": "GEO-rain-gums_lower",
+   "subdivision": 0,
+   "vertices": 3068,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 5760,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_Tongue": {
+   "source": "GEO-rain-tongue",
+   "subdivision": 0,
+   "vertices": 275,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 528,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_Shoes": {
+   "source": "GEO-rain-shoes",
+   "subdivision": 0,
+   "vertices": 6634,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 12364,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "ball_l",
+    "ball_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "foot_l",
+    "foot_r"
+   ]
+  },
+  "Teacher_EarringL": {
+   "source": "KAIRO_Earring.L",
+   "subdivision": 0,
+   "vertices": 224,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 448,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_EarringR": {
+   "source": "KAIRO_Earring.R",
+   "subdivision": 0,
+   "vertices": 224,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 448,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_HairBack": {
+   "source": "KAIRO_HairBack",
+   "subdivision": 0,
+   "vertices": 11027,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 18618,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "hair_back_01",
+    "hair_back_02",
+    "hair_back_03",
+    "head"
+   ]
+  },
+  "Teacher_HairBunCore": {
+   "source": "KAIRO_HairBunCore",
+   "subdivision": 0,
+   "vertices": 222,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 440,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_HairFrame": {
+   "source": "KAIRO_HairFrame",
+   "subdivision": 0,
+   "vertices": 872,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 1464,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "hair_side_l_01",
+    "hair_side_l_02",
+    "hair_side_r_01",
+    "hair_side_r_02",
+    "head"
+   ]
+  },
+  "Teacher_HairScalp": {
+   "source": "KAIRO_HairScalp",
+   "subdivision": 0,
+   "vertices": 1023,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 1916,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_HairUpdo": {
+   "source": "KAIRO_HairUpdo",
+   "subdivision": 0,
+   "vertices": 17162,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 28410,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "head"
+   ]
+  },
+  "Teacher_Shirt": {
+   "source": "KAIRO_Shirt",
+   "subdivision": 0,
+   "vertices": 11349,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 22230,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "clavicle_l",
+    "clavicle_r",
+    "lowerarm_l",
+    "lowerarm_r",
+    "lowerarm_twist_01_l",
+    "lowerarm_twist_01_r",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "upperarm_l",
+    "upperarm_r",
+    "upperarm_twist_01_l",
+    "upperarm_twist_01_r"
+   ]
+  },
+  "Teacher_Trousers": {
+   "source": "KAIRO_Trousers",
+   "subdivision": 0,
+   "vertices": 11779,
+   "uvMaps": [
+    "UVMap"
+   ],
+   "triangles": 23356,
+   "unweighted_fixed": 0,
+   "bones_used": [
+    "calf_l",
+    "calf_r",
+    "calf_twist_01_l",
+    "calf_twist_01_r",
+    "foot_l",
+    "foot_r",
+    "pelvis",
+    "pinky_metacarpal_l",
+    "pinky_metacarpal_r",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "thigh_twist_01_l",
+    "thigh_twist_01_r"
+   ]
+  }
+ },
+ "face_shapes": {
+  "eyeBlinkLeft": {
+   "Teacher_Head": 39.08,
+   "Teacher_Brows": 0.02,
+   "Teacher_Lashes": 44.24,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "eyeBlinkRight": {
+   "Teacher_Head": 39.09,
+   "Teacher_Brows": 0.02,
+   "Teacher_Lashes": 44.23,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "eyeWideLeft": {
+   "Teacher_Head": 17.66,
+   "Teacher_Brows": 0.01,
+   "Teacher_Lashes": 20.81,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "eyeWideRight": {
+   "Teacher_Head": 17.66,
+   "Teacher_Brows": 0.01,
+   "Teacher_Lashes": 20.81,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "eyeSquintLeft": {
+   "Teacher_Head": 16.34,
+   "Teacher_Brows": 0.03,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "eyeSquintRight": {
+   "Teacher_Head": 15.07,
+   "Teacher_Brows": 0.03,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "browDownLeft": {
+   "Teacher_Head": 8.29,
+   "Teacher_Brows": 8.49,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "browDownRight": {
+   "Teacher_Head": 8.28,
+   "Teacher_Brows": 8.49,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "browOuterUpLeft": {
+   "Teacher_Head": 13.55,
+   "Teacher_Brows": 16.16,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "browOuterUpRight": {
+   "Teacher_Head": 8.17,
+   "Teacher_Brows": 8.72,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "browInnerUpLeft": {
+   "Teacher_Head": 9.96,
+   "Teacher_Brows": 10.64,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "browInnerUpRight": {
+   "Teacher_Head": 15.35,
+   "Teacher_Brows": 18.1,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthSmileLeft": {
+   "Teacher_Head": 32.65,
+   "Teacher_Brows": 0.05,
+   "Teacher_Lashes": 0.01,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthSmileRight": {
+   "Teacher_Head": 32.65,
+   "Teacher_Brows": 0.05,
+   "Teacher_Lashes": 0.01,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthFrownLeft": {
+   "Teacher_Head": 17.37,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthFrownRight": {
+   "Teacher_Head": 17.37,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthStretchLeft": {
+   "Teacher_Head": 40.0,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthStretchRight": {
+   "Teacher_Head": 39.91,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "cheekSquintLeft": {
+   "Teacher_Head": 26.15,
+   "Teacher_Brows": 0.08,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "cheekSquintRight": {
+   "Teacher_Head": 14.92,
+   "Teacher_Brows": 0.05,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "noseSneerLeft": {
+   "Teacher_Head": 12.05,
+   "Teacher_Brows": 0.01,
+   "Teacher_Lashes": 0.14,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "noseSneerRight": {
+   "Teacher_Head": 12.05,
+   "Teacher_Brows": 0.01,
+   "Teacher_Lashes": 0.14,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "jawOpen": {
+   "Teacher_Head": 46.18,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 40.94,
+   "Teacher_Tongue": 36.29
+  },
+  "mouthUpperUp": {
+   "Teacher_Head": 8.63,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthLowerDown": {
+   "Teacher_Head": 8.5,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthPucker": {
+   "Teacher_Head": 12.44,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 6.0,
+   "Teacher_TeethLower": 6.0,
+   "Teacher_Tongue": 6.0
+  },
+  "mouthFunnel": {
+   "Teacher_Head": 15.45,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 10.3,
+   "Teacher_Tongue": 9.13
+  },
+  "mouthRollUpper": {
+   "Teacher_Head": 18.94,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthRollLower": {
+   "Teacher_Head": 18.46,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  },
+  "mouthPress": {
+   "Teacher_Head": 11.24,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 5.15,
+   "Teacher_Tongue": 4.57
+  },
+  "cheekPuff": {
+   "Teacher_Head": 15.46,
+   "Teacher_Brows": 0.0,
+   "Teacher_Lashes": 0.0,
+   "Teacher_TeethUpper": 0.0,
+   "Teacher_TeethLower": 0.0,
+   "Teacher_Tongue": 0.0
+  }
+ },
+ "correctives": {
+  "Teacher_Body": {
+   "Finger_Index1.R": 12.23,
+   "Finger_Index2.R": 4.48,
+   "Finger_Index3.R": 2.55,
+   "Finger_Middle1.R": 11.54,
+   "Finger_Middle2.R": 2.86,
+   "Finger_Middle3.R": 4.02,
+   "Finger_Ring1.R": 10.88,
+   "Finger_Ring2.R": 3.69,
+   "Finger_Ring3.R": 1.55,
+   "Finger_Pinky1.R": 11.2,
+   "Finger_Pinky2.R": 3.67,
+   "Finger_Pinky3.R": 1.56,
+   "Finger_Thumb1.R": 3.49,
+   "Finger_Thumb2.R": 4.03,
+   "Finger_Thumb3.R": 4.06,
+   "Finger_Index1.L": 12.23,
+   "Finger_Index2.L": 4.48,
+   "Finger_Index3.L": 2.55,
+   "Finger_Middle1.L": 11.54,
+   "Finger_Middle2.L": 2.86,
+   "Finger_Middle3.L": 4.02,
+   "Finger_Ring1.L": 10.88,
+   "Finger_Ring2.L": 3.69,
+   "Finger_Ring3.L": 1.55,
+   "Finger_Pinky1.L": 11.2,
+   "Finger_Pinky2.L": 3.67,
+   "Finger_Pinky3.L": 1.56,
+   "Finger_Thumb1.L": 3.49,
+   "Finger_Thumb2.L": 4.03,
+   "Finger_Thumb3.L": 4.06
+  }
+ },
+ "uv_tiles": {
+  "Teacher_Head": [
+   0
+  ],
+  "Teacher_Body": [
+   0
+  ],
+  "Teacher_Eyes": [
+   0
+  ],
+  "Teacher_Brows": [
+   0
+  ],
+  "Teacher_Lashes": [
+   0
+  ],
+  "Teacher_TeethUpper": [
+   0
+  ],
+  "Teacher_TeethLower": [
+   0
+  ],
+  "Teacher_Tongue": [
+   0
+  ],
+  "Teacher_Shoes": [
+   0
+  ],
+  "Teacher_EarringL": [
+   -1,
+   0,
+   1
+  ],
+  "Teacher_EarringR": [
+   -1,
+   0,
+   1
+  ],
+  "Teacher_HairBack": [
+   0,
+   1
+  ],
+  "Teacher_HairBunCore": [
+   0,
+   1
+  ],
+  "Teacher_HairFrame": [
+   0,
+   1
+  ],
+  "Teacher_HairScalp": [
+   0
+  ],
+  "Teacher_HairUpdo": [
+   0,
+   1
+  ],
+  "Teacher_Shirt": [
+   0
+  ],
+  "Teacher_Trousers": [
+   0
+  ]
+ },
+ "weight_map_sample": {
+  "DEF-Teeth_Top_1.L": "head",
+  "DEF-Teeth_Top_2.L": "head",
+  "DEF-Teeth_Top_1.R": "head",
+  "DEF-Teeth_Top_2.R": "head",
+  "DEF-Teeth_Bot_1.L": "head",
+  "DEF-Teeth_Bot_2.L": "head",
+  "DEF-Teeth_Bot_1.R": "head",
+  "DEF-Teeth_Bot_2.R": "head",
+  "DEF-Lip_Top_Across.M": "head",
+  "DEF-Cheek_1_4.L": "head",
+  "DEF-LaughLine_5.L": "head",
+  "DEF-LaughLine_5.R": "head",
+  "DEF-LaughLine_4.L": "head",
+  "DEF-Lip_Bot_Bot_1.L": "head",
+  "DEF-Lip_Bot_Across.M": "head",
+  "DEF-Lip_Bot_Bot_1.R": "head",
+  "DEF-Lip_Bot_Top_1.L": "head",
+  "DEF-Lip_Bot_Top_1.R": "head",
+  "DEF-Toe.L": "ball_l",
+  "DEF-COR-Shin_Top.L": "thigh_twist_01_l",
+  "DEF-JawLine_3.L": "head",
+  "DEF-Nose_4.M": "head",
+  "DEF-FaceRing_4.L": "head",
+  "DEF-NoseCrease_2.L": "head",
+  "DEF-Cheek_Cheek_Across_2.L": "head",
+  "DEF-Cheek_Jawline_Across_3.L": "head",
+  "DEF-Cheek_Cheek_Across_1.L": "head",
+  "DEF-Cheek_2_3.L": "head",
+  "DEF-Cheek_1_1.L": "head",
+  "DEF-NoseRing_4.L": "head",
+  "DEF-Nose_Lip_Across.L": "head",
+  "DEF-NoseRing_2.L": "head",
+  "DEF-NoseFront_2.L": "head",
+  "DEF-NoseMidLine_1.L": "head",
+  "DEF-NoseRing_5.L": "head",
+  "DEF-NoseMidLine_2.L": "head",
+  "DEF-LaughLine_3.L": "head",
+  "DEF-LaughLine_1.L": "head",
+  "DEF-LaughLine_Cheek_Across_1_1.L": "head",
+  "DEF-FaceRing_5.L": "head"
+ },
+ "clips": [
+  {
+   "name": "Idle",
+   "seconds": 8.0,
+   "loop": true,
+   "keys": 9
+  },
+  {
+   "name": "Listen",
+   "seconds": 6.0,
+   "loop": true,
+   "keys": 9
+  },
+  {
+   "name": "Explain",
+   "seconds": 4.0,
+   "loop": true,
+   "keys": 9
+  },
+  {
+   "name": "Acknowledge",
+   "seconds": 1.7,
+   "loop": false,
+   "keys": 6
+  },
+  {
+   "name": "HandPoint",
+   "seconds": 0.5,
+   "loop": false,
+   "keys": 2
+  }
+ ],
+ "glb_bytes": 24956036,
+ "seconds": 127.2
+}

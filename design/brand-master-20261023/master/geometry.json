@@ -1,0 +1,235 @@
+{
+  "units": "reference pixels of design/app-experience-20261023/assets/brand-reference.png",
+  "symbol": {
+    "stroke_width": 30.206,
+    "centreline_A": [
+      [
+        82.107,
+        128.734
+      ],
+      [
+        28.491,
+        158.054
+      ],
+      [
+        28.491,
+        55.088
+      ],
+      [
+        86.78,
+        23.213
+      ],
+      [
+        86.78,
+        98.988
+      ],
+      [
+        210.717,
+        160.276
+      ]
+    ],
+    "fillets_A1_to_A4": [
+      13.859,
+      25.977,
+      4.391,
+      10.372
+    ],
+    "centreline_B": [
+      [
+        122.347,
+        91.866
+      ],
+      [
+        207.848,
+        45.111
+      ]
+    ],
+    "inner_terminal_corner_radius": 8.631,
+    "inner_terminal_cut": "parallel to the lower leg (foot end and the arm's inner end)",
+    "outer_terminals": "semicircular (lower leg end and the arm's outer end)",
+    "shared_angle_deg": 28.6718,
+    "lower_leg_angle_deg": 26.3129,
+    "gap_arm_to_leg": 7.047
+  },
+  "micro": {
+    "stroke_width": 24.165,
+    "use": "rendered symbol height below 32 px (master measured intact at 32 and 48 px, broken at 24 px and below)"
+  },
+  "wordmark": {
+    "cap_height": 46.735,
+    "yt": 232.702,
+    "yb": 279.437,
+    "stem": 13.144,
+    "diag": 11.334,
+    "bar": 10.524
+  },
+  "clear_space": {
+    "X": 30.206,
+    "rule": "keep X (one symbol stroke width) clear on every side; 0.5 cap height for the horizontal lockup"
+  },
+  "horizontal_lockup": {
+    "symbol_height_in_caps": 1.4,
+    "gap_in_caps": 0.55,
+    "vertical_alignment": "symbol centred on the cap height"
+  },
+  "palette": {
+    "chalk": "#F5F0E6",
+    "moss": "#3E5144",
+    "sage": "#A7AF91",
+    "copper": "#AE7555",
+    "graphite": "#252B28"
+  },
+  "rain_shirt_srgb": "#5B6C54",
+  "contrast": {
+    "moss-on-chalk": 7.5,
+    "graphite-on-chalk": 12.71,
+    "chalk-on-moss": 7.5,
+    "sage-on-chalk": 2.01,
+    "copper-on-chalk": 3.38,
+    "chalk-on-shirt": 4.97,
+    "moss-on-shirt": 1.51,
+    "chalk-on-graphite": 12.71,
+    "moss-on-sage": 3.73
+  },
+  "checks": {
+    "kairo-symbol": {
+      "bytes": 792,
+      "has_viewBox": true,
+      "has_text_or_font": false,
+      "roundtrip_area_error_pct": 0.0256
+    },
+    "kairo-symbol-graphite": {
+      "bytes": 807,
+      "has_viewBox": true,
+      "has_text_or_font": false
+    },
+    "kairo-symbol-chalk": {
+      "bytes": 819,
+      "has_viewBox": true,
+      "has_text_or_font": false
+    },
+    "kairo-symbol-micro": {
+      "bytes": 853,
+      "has_viewBox": true,
+      "has_text_or_font": false
+    },
+    "kairo-wordmark": {
+      "bytes": 1348,
+      "has_viewBox": true,
+      "has_text_or_font": false,
+      "roundtrip_area_error_pct": 0.0691
+    },
+    "kairo-lockup-stacked": {
+      "bytes": 2031,
+      "has_viewBox": true,
+      "has_text_or_font": false,
+      "roundtrip_area_error_pct": 0.0395
+    },
+    "kairo-lockup-stacked-chalk": {
+      "bytes": 2041,
+      "has_viewBox": true,
+      "has_text_or_font": false
+    },
+    "kairo-lockup-horizontal": {
+      "bytes": 1936,
+      "has_viewBox": true,
+      "has_text_or_font": false,
+      "roundtrip_area_error_pct": 0.0759
+    },
+    "kairo-lockup-horizontal-chalk": {
+      "bytes": 1946,
+      "has_viewBox": true,
+      "has_text_or_font": false
+    },
+    "kairo-lockup-horizontal-micro": {
+      "bytes": 2011,
+      "has_viewBox": true,
+      "has_text_or_font": false
+    },
+    "app-icon": {
+      "bytes": 774,
+      "has_viewBox": true,
+      "has_text_or_font": false
+    },
+    "favicon": {
+      "bytes": 701,
+      "has_viewBox": true,
+      "has_text_or_font": false
+    },
+    "shirt-badge": {
+      "bytes": 779,
+      "has_viewBox": true,
+      "has_text_or_font": false
+    },
+    "topology_master": [
+      {
+        "height_px": 12,
+        "ink_parts": 1,
+        "background_regions": 2,
+        "intact": false
+      },
+      {
+        "height_px": 16,
+        "ink_parts": 1,
+        "background_regions": 2,
+        "intact": false
+      },
+      {
+        "height_px": 20,
+        "ink_parts": 1,
+        "background_regions": 1,
+        "intact": false
+      },
+      {
+        "height_px": 24,
+        "ink_parts": 1,
+        "background_regions": 1,
+        "intact": false
+      },
+      {
+        "height_px": 32,
+        "ink_parts": 2,
+        "background_regions": 1,
+        "intact": true
+      },
+      {
+        "height_px": 48,
+        "ink_parts": 2,
+        "background_regions": 1,
+        "intact": true
+      }
+    ],
+    "topology_micro": [
+      {
+        "height_px": 12,
+        "ink_parts": 2,
+        "background_regions": 1,
+        "intact": true
+      },
+      {
+        "height_px": 16,
+        "ink_parts": 2,
+        "background_regions": 1,
+        "intact": true
+      },
+      {
+        "height_px": 20,
+        "ink_parts": 2,
+        "background_regions": 1,
+        "intact": true
+      },
+      {
+        "height_px": 24,
+        "ink_parts": 2,
+        "background_regions": 1,
+        "intact": true
+      },
+      {
+        "height_px": 32,
+        "ink_parts": 2,
+        "background_regions": 1,
+        "intact": true
+      }
+    ]
+  }
+}

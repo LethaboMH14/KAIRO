@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-24",
+  "task": "LANGUAGE-ML-RESEARCH-WAVE2-001",
+  "worker": "codex-luna-edited-lesson-review-20261023-a",
+  "reportedSettings": {
+    "client": "Codex",
+    "model": "gpt-6-luna",
+    "effort": "light",
+    "basis": "App-exposed setting shown in the user's screenshot"
+  },
+  "matrix": {
+    "path": "docs/language-ml-research-wave2/language-matrix.csv",
+    "structuralCheck": "python standard library csv.DictReader; 12 rows; 12 unique official_language values; 11 spoken; 1 visual sign language; every human_test_prompt_and_gate populated",
+    "result": "passed",
+    "output": "12 unique official-language rows: 11 spoken, 1 SASL; all phrase gates populated"
+  },
+  "performed": {
+    "providerCalls": false,
+    "modelInference": false,
+    "microphoneOrAudioCapture": false,
+    "datasetDownloads": false,
+    "trainingOrFineTuning": false,
+    "kaggleAccountOrGpuAccess": false,
+    "privateLearnerMaterialAccess": false,
+    "browserUiOrDeviceObservation": false,
+    "learnerOrDeafSignerValidation": false
+  },
+  "scopeNote": "Source documentation and repository metadata were reviewed; research claims are documented separately from measured quality and product acceptance."
+}

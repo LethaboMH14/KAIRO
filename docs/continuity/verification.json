@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-22",
+  "owner": "codex-continuity-20261022-a",
+  "appTests": {
+    "command": "npm test (studio/)",
+    "passed": 124,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "publishedBuild": {
+    "command": "npm run build (studio/)",
+    "exitCode": 0,
+    "indexSha256": "23845cbd45c437a0e4cb743fb0622dc977fdec574c13d085ba9594683e08dbd1",
+    "warning": "Existing 532 KB minified Three/OrbitControls lazy chunk remains; device/performance acceptance pending.",
+    "includes": [
+      "/home learner home",
+      "/cases requirements/UAT and digital support scenarios",
+      "unreadable saved-study preservation"
+    ]
+  },
+  "broaderCheck": {
+    "passed": 31,
+    "failed": 1,
+    "exitCode": 1,
+    "error": "Engineering model.test.mjs cannot resolve extensionless ./fieldMath imported by active-owner motorContent.ts under node --test; sent to claude-engineering-20261022-a in bus message 28. Do not describe entire project as green.",
+    "includes": "Engineering field calculations and 9 independent root probes; failing model test module did not run its cases."
+  },
+  "offlineInspectionFixtureTests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "staticOfflineClosure": {
+    "assetCount": 2,
+    "totalBytes": 310411,
+    "missing": [],
+    "unsafe": [],
+    "externalResources": [],
+    "apiPaths": [],
+    "regexMismatch": {
+      "discoveredButRegexMissed": [],
+      "regexButNotDiscovered": []
+    },
+    "limit": "Static compiled-file inspection only; browser service-worker install/restart/offline/eviction tests pending."
+  },
+  "preview": {
+    "url": "http://127.0.0.1:4176/home",
+    "state": "Production server started and announced address; browser not inspected."
+  },
+  "sourceHashes": {
+    "studio/src/StudioRouter.tsx": "5c4786807477fb1670fae27d62911191a03b6e73fbb6b8c75dd8e382b7f3f3ac",
+    "studio/src/workspace/LessonWorkspace.tsx": "6905999c5c61c166c90306e222a3b7a13a4dfdecc6a66c28ba939b45b9a60d42",
+    "studio/src/styles.css": "4350a41bc2baf2b38b1a32be9b145a9ceed9c7558ad0a568b5544251eb2c96c2",
+    "studio/public/kairo-offline-sw.js": "cfcfaf3eda87a45b20115e44d46a74aec84411a78325a4b5e0d67b87170e00b1",
+    "studio/src/continuity/continuity.css": "209abd76bfae046faa0c9dfc018fb64027cb55cf2654dc8fb5acbb75e077fd89",
+    "studio/src/continuity/LearningHome.tsx": "21a927ae54184ebd8be12688945fcd2abc113a33af9ff39ab7075816c8f621f0",
+    "studio/src/continuity/model.ts": "1efbd1d41143c51a076bfc8c03c154ce0e4de16cbefc9e833374f3e63447094a",
+    "studio/src/continuity/offline.ts": "29d21025c70bc04cce83b5e6d08ac70a38d936c744c5dd250d01235740bb0943",
+    "studio/src/continuity/progress-restore.ts": "228f378940d89f30909970968cadff4f0d1bf9130d9fa69e00a92b9f0a6622ca",
+    "studio/src/continuity/SaveReading.tsx": "fece5e4232a58f446c0da14d3940a859898dd74089a6105d023d2a237ac19428",
+    "studio/src/practice-pack-workspace/practice-pack-workspace.css": "93af5b821386d5ec251866a38e609bfb7315741cac0226cf9f7a2ebf020c97f4",
+    "studio/src/practice-pack-workspace/PracticePackWorkspace.tsx": "1be68351478a5b2fbe4d5216d95e8bf9d8a5276e77e50a42fdde7e74a940e2de",
+    "studio/src/practice-pack-workspace/presenter.ts": "188305e3732f3614d3c51312cd7d6f58f307ed1714f03db82c8c5f7da59db9a3"
+  },
+  "automation": {
+    "id": "kairo-reviewed-build-queue",
+    "status": "ACTIVE",
+    "intervalMinutes": 30,
+    "authorization": "User explicitly confirmed recurring runs after initial auto-review rejection; creation succeeded."
+  },
+  "browserAcceptance": "Pending; prior denied browser observation not bypassed.",
+  "status": "Implemented checkpoint; production release and multi-user security remain unfinished.",
+  "syntheticOCRTests": {
+    "passed": 9,
+    "failed": 0,
+    "command": "python -m unittest discover -s ocr_eval -p test_ocr_eval.py -v (tools/course_sources/)",
+    "limit": "Authored synthetic fixtures only; not measured coursework OCR accuracy."
+  },
+  "checkpoint": "Frozen published build; new ProgressPage recovery and private OCR metadata work is next wave, not included."
+}

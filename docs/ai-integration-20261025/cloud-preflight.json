@@ -1,0 +1,31 @@
+{
+  "project": "kairo-access-20261021",
+  "region": "africa-south1",
+  "service": "kairo-app",
+  "readyRevision": "kairo-app-00006-885",
+  "url": "https://kairo-app-rnfwukdvra-bq.a.run.app",
+  "nonsecretModelSettings": {
+    "KAIRO_GOOGLE_PROJECT": "kairo-access-20261021",
+    "KAIRO_CLOUD_ENABLED": "1"
+  },
+  "configuredEnvironmentNames": [
+    "KAIRO_GOOGLE_PROJECT",
+    "KAIRO_CLOUD_BUCKET",
+    "KAIRO_ALLOWED_ORIGIN",
+    "KAIRO_FIREBASE_API_KEY",
+    "KAIRO_TASK_LOCATION",
+    "KAIRO_TASK_QUEUE",
+    "KAIRO_TASK_SERVICE_ACCOUNT",
+    "KAIRO_CLOUD_ENABLED"
+  ],
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "1Gi"
+    }
+  },
+  "concurrency": 8,
+  "serviceAccount": "kairo-app-runtime@kairo-access-20261021.iam.gserviceaccount.com",
+  "terraformAvailable": false,
+  "kubectlAvailable": false
+}

@@ -1,0 +1,297 @@
+{
+ "source": "Rhubarb Lip Sync 1.14.0 (MIT), pocketSphinx recogniser with the dialog text",
+ "audio": "en-GB-Chirp3-HD-Puck.mp3",
+ "duration": 8.06,
+ "transcript": "Let us take this one step at a time. Twenty notebooks, plus twelve delivered, minus nine sold, leaves twenty three.",
+ "shapes": "Rhubarb A-H and X (rest)",
+ "visemes": [
+  {
+   "at": 0.0,
+   "end": 0.26,
+   "shape": "X",
+   "weight": 1
+  },
+  {
+   "at": 0.26,
+   "end": 0.34,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 0.34,
+   "end": 0.48,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 0.48,
+   "end": 0.55,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 0.55,
+   "end": 0.69,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 0.69,
+   "end": 1.04,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 1.04,
+   "end": 1.11,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 1.11,
+   "end": 1.25,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 1.25,
+   "end": 1.39,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 1.39,
+   "end": 1.46,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 1.46,
+   "end": 1.56,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 1.56,
+   "end": 1.62,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 1.62,
+   "end": 1.68,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 1.68,
+   "end": 1.75,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 1.75,
+   "end": 1.96,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 1.96,
+   "end": 2.03,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 2.03,
+   "end": 2.16,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 2.16,
+   "end": 2.54,
+   "shape": "X",
+   "weight": 1
+  },
+  {
+   "at": 2.54,
+   "end": 2.73,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 2.73,
+   "end": 2.8,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 2.8,
+   "end": 3.01,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 3.01,
+   "end": 3.08,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 3.08,
+   "end": 3.15,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 3.15,
+   "end": 3.23,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 3.23,
+   "end": 3.37,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 3.37,
+   "end": 3.9,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 3.9,
+   "end": 4.05,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 4.05,
+   "end": 4.32,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 4.32,
+   "end": 4.39,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 4.39,
+   "end": 4.46,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 4.46,
+   "end": 4.53,
+   "shape": "H",
+   "weight": 1
+  },
+  {
+   "at": 4.53,
+   "end": 4.88,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 4.88,
+   "end": 4.95,
+   "shape": "E",
+   "weight": 1
+  },
+  {
+   "at": 4.95,
+   "end": 5.44,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 5.44,
+   "end": 5.52,
+   "shape": "A",
+   "weight": 1
+  },
+  {
+   "at": 5.52,
+   "end": 5.57,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 5.57,
+   "end": 5.82,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 5.82,
+   "end": 5.96,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 5.96,
+   "end": 6.24,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 6.24,
+   "end": 6.31,
+   "shape": "E",
+   "weight": 1
+  },
+  {
+   "at": 6.31,
+   "end": 6.45,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 6.45,
+   "end": 6.94,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 6.94,
+   "end": 7.01,
+   "shape": "G",
+   "weight": 1
+  },
+  {
+   "at": 7.01,
+   "end": 7.15,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 7.15,
+   "end": 7.22,
+   "shape": "F",
+   "weight": 1
+  },
+  {
+   "at": 7.22,
+   "end": 7.29,
+   "shape": "C",
+   "weight": 1
+  },
+  {
+   "at": 7.29,
+   "end": 7.85,
+   "shape": "B",
+   "weight": 1
+  },
+  {
+   "at": 7.85,
+   "end": 8.06,
+   "shape": "X",
+   "weight": 1
+  }
+ ]
+}

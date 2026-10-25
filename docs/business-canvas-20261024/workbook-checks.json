@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "case": "Base",
+      "summary_comparison": "PASS",
+      "cash_revenue_deferred_receivable_checks": "PASS"
+    },
+    {
+      "case": "Downside",
+      "summary_comparison": "PASS",
+      "cash_revenue_deferred_receivable_checks": "PASS"
+    },
+    {
+      "case": "Upside",
+      "summary_comparison": "PASS",
+      "cash_revenue_deferred_receivable_checks": "PASS"
+    }
+  ],
+  "sensitivity_base": 28.0175507826087,
+  "native_excel_open_test": "Not performed; artifact calculation/export only"
+}

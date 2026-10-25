@@ -1,0 +1,717 @@
+{
+  "task": "REVIEW-C1-C3",
+  "started": "2026-10-22T09:46:49.704Z",
+  "prototype": {
+    "path": "design/claude-workstreams/media-panel/media-panel.html",
+    "bytes": 14024,
+    "sha256": "38c07936117d8abc30d7aef6fe5882942d9add82e9219583babbed33e94c664e"
+  },
+  "origin": "http://127.0.0.1:4187",
+  "browser": "Edg/155.0.4283.62",
+  "safeguards": "Fetch interception of every request (YouTube hosts held or stubbed locally, other hosts failed); --host-resolver-rules maps every host to NOTFOUND except 127.0.0.1; --no-proxy-server; video ID is the synthetic sim_test_00.",
+  "checks": [
+    {
+      "name": "Page load and offline simulated play request nothing beyond 127.0.0.1",
+      "pass": true,
+      "detail": "2 request(s), all to 127.0.0.1; status \"playing\""
+    },
+    {
+      "name": "Presets and the consent stage request nothing beyond 127.0.0.1",
+      "pass": true,
+      "detail": "No request to YouTube has been made.YouTube video ID (11 cha"
+    },
+    {
+      "name": "Consent stage at 390px shows the ID field and \"Agree and load player\" uncut inside the player box",
+      "pass": true,
+      "detail": "box 355.546875x200, stage content 195px tall, button inside: true, field inside: true"
+    },
+    {
+      "name": "Page content fits the 390px device width",
+      "pass": false,
+      "detail": "content 406px, innerWidth 406, zoom 1, grid 358px in main 390px, panel 389.5px"
+    },
+    {
+      "name": "Consent stage at 1280px shows the ID field and \"Agree and load player\" uncut inside the player box",
+      "pass": true,
+      "detail": "box 492x276.75, stage content 171px tall, button inside: true, field inside: true"
+    },
+    {
+      "name": "YouTube hosts are requested only after \"Agree and load player\"",
+      "pass": true,
+      "detail": "www.youtube.com (Script, held-never-sent); www.youtube-nocookie.com (Document, held-never-sent)"
+    },
+    {
+      "name": "Embed request carries an HTTP Referer (YouTube requires it as API client identity)",
+      "pass": true,
+      "detail": "Referer: http://127.0.0.1:4187/"
+    },
+    {
+      "name": "Player iframe at 1280px viewport is at least 200x200 CSS px (MEDIA_PANEL_RULES.minPlayerPx)",
+      "pass": true,
+      "detail": "466x250.8"
+    },
+    {
+      "name": "Player box stays inside its card at 1280px",
+      "pass": true,
+      "detail": "box 492x276.8, padding 12px, border 1px, overhangs the card content edge by 0px"
+    },
+    {
+      "name": "Player iframe at 800px viewport is at least 200x200 CSS px (MEDIA_PANEL_RULES.minPlayerPx)",
+      "pass": false,
+      "detail": "329.5x174"
+    },
+    {
+      "name": "Player box stays inside its card at 800px",
+      "pass": true,
+      "detail": "box 355.5x200, padding 12px, border 1px, overhangs the card content edge by 0px"
+    },
+    {
+      "name": "Player iframe at 390px viewport is at least 200x200 CSS px (MEDIA_PANEL_RULES.minPlayerPx)",
+      "pass": false,
+      "detail": "329.5x174"
+    },
+    {
+      "name": "Player box stays inside its card at 390px",
+      "pass": true,
+      "detail": "box 355.5x200, padding 12px, border 1px, overhangs the card content edge by 0px"
+    },
+    {
+      "name": "Player iframe survives \"Return to lesson\"",
+      "pass": false,
+      "detail": "stage after return: <div id=\"yt\"></div>"
+    },
+    {
+      "name": "Player iframe survives its own load event",
+      "pass": false,
+      "detail": "status \"ready\", stage after load: <div id=\"yt\"></div>"
+    },
+    {
+      "name": "Every control is reachable with Tab",
+      "pass": true,
+      "detail": "#openBtn > #play > #consent > #ret > #j > #apply > button[passage] > button[video] > button[artifact] > BODY"
+    },
+    {
+      "name": "Tab focus on a button shows the 3px outline",
+      "pass": true,
+      "detail": "solid 3px"
+    },
+    {
+      "name": "Focus stays on Play/Pause after pressing Enter",
+      "pass": false,
+      "detail": "status \"playing\", focus now on BODY"
+    },
+    {
+      "name": "Focus lands in the consent stage after \"Load YouTube player\"",
+      "pass": false,
+      "detail": "focus now on BODY"
+    },
+    {
+      "name": "\"Return to lesson\" moves focus to the lesson",
+      "pass": true,
+      "detail": "focus now on #lesson"
+    },
+    {
+      "name": "\"Show media beside lesson\" moves focus to the panel",
+      "pass": false,
+      "detail": "focus now on #openBtn"
+    },
+    {
+      "name": "Text contrast (light) #stage .sim meets 4.5:1",
+      "pass": false,
+      "detail": "3.29:1, rgb(91, 101, 119) on rgb(11, 14, 20), 12.8px"
+    },
+    {
+      "name": "Text contrast (light) #provider .sim meets 4.5:1",
+      "pass": true,
+      "detail": "5.88:1, rgb(91, 101, 119) on rgb(255, 255, 255), 12.8px"
+    },
+    {
+      "name": "Text contrast (light) header .note meets 4.5:1",
+      "pass": true,
+      "detail": "6.2:1, rgb(138, 75, 0) on rgb(255, 243, 224), 14.4px"
+    },
+    {
+      "name": "Text contrast (light) #body .note meets 4.5:1",
+      "pass": true,
+      "detail": "6.2:1, rgb(138, 75, 0) on rgb(255, 243, 224), 14.4px"
+    },
+    {
+      "name": "Text contrast (light) .badge.yt meets 4.5:1",
+      "pass": true,
+      "detail": "5.89:1, rgb(204, 0, 0) on rgb(255, 255, 255), 12.8px"
+    },
+    {
+      "name": "Text contrast (light) #body dt meets 4.5:1",
+      "pass": true,
+      "detail": "5.88:1, rgb(91, 101, 119) on rgb(255, 255, 255), 14.72px"
+    },
+    {
+      "name": "Text contrast (light) #ret meets 4.5:1",
+      "pass": true,
+      "detail": "6.09:1, rgb(255, 255, 255) on rgb(31, 95, 191), 16px"
+    },
+    {
+      "name": "Text contrast (light) #apply meets 4.5:1",
+      "pass": true,
+      "detail": "6.09:1, rgb(255, 255, 255) on rgb(31, 95, 191), 16px"
+    },
+    {
+      "name": "Text contrast (dark) #stage .sim meets 4.5:1",
+      "pass": true,
+      "detail": "8.54:1, rgb(163, 173, 191) on rgb(11, 14, 20), 12.8px"
+    },
+    {
+      "name": "Text contrast (dark) #provider .sim meets 4.5:1",
+      "pass": true,
+      "detail": "6.8:1, rgb(163, 173, 191) on rgb(31, 37, 48), 12.8px"
+    },
+    {
+      "name": "Text contrast (dark) header .note meets 4.5:1",
+      "pass": true,
+      "detail": "8.72:1, rgb(255, 194, 122) on rgb(58, 42, 18), 14.4px"
+    },
+    {
+      "name": "Text contrast (dark) #body .note meets 4.5:1",
+      "pass": true,
+      "detail": "8.72:1, rgb(255, 194, 122) on rgb(58, 42, 18), 14.4px"
+    },
+    {
+      "name": "Text contrast (dark) .badge.yt meets 4.5:1",
+      "pass": true,
+      "detail": "6.78:1, rgb(255, 138, 138) on rgb(31, 37, 48), 12.8px"
+    },
+    {
+      "name": "Text contrast (dark) #body dt meets 4.5:1",
+      "pass": true,
+      "detail": "6.8:1, rgb(163, 173, 191) on rgb(31, 37, 48), 14.72px"
+    },
+    {
+      "name": "Text contrast (dark) #ret meets 4.5:1",
+      "pass": false,
+      "detail": "2.2:1, rgb(255, 255, 255) on rgb(127, 176, 255), 16px"
+    },
+    {
+      "name": "Text contrast (dark) #apply meets 4.5:1",
+      "pass": false,
+      "detail": "2.2:1, rgb(255, 255, 255) on rgb(127, 176, 255), 16px"
+    },
+    {
+      "name": "Prototype validation: captions \"no\" with basis \"none\" is rejected (contract line 28)",
+      "pass": false,
+      "detail": "accepted"
+    },
+    {
+      "name": "Prototype validation: caption availability outside yes/no/unknown is rejected",
+      "pass": false,
+      "detail": "accepted; the panel prints \"undefined\""
+    },
+    {
+      "name": "Prototype validation: a model-suggested start \"confirmed by\" the model is rejected (contract line 40)",
+      "pass": false,
+      "detail": "accepted"
+    },
+    {
+      "name": "Prototype validation: provider kind outside the contract union is rejected",
+      "pass": false,
+      "detail": "accepted"
+    },
+    {
+      "name": "Prototype validation: embed host other than www.youtube-nocookie.com is rejected",
+      "pass": false,
+      "detail": "accepted"
+    },
+    {
+      "name": "Prototype validation: negative start is rejected",
+      "pass": true,
+      "detail": "Invalid entry: provenance.startSeconds must be a whole number >= 0."
+    },
+    {
+      "name": "Prototype validation: end before start is rejected",
+      "pass": true,
+      "detail": "Invalid entry: endSeconds must be a whole number greater than start."
+    },
+    {
+      "name": "Prototype validation: empty reason is rejected",
+      "pass": true,
+      "detail": "Invalid entry: provenance.reason is required."
+    },
+    {
+      "name": "Prototype validation: empty provider label is rejected",
+      "pass": true,
+      "detail": "Invalid entry: provider.label and provider.attribution are required."
+    },
+    {
+      "name": "Author-supplied text renders as text, not markup",
+      "pass": true,
+      "detail": "{\"img\":false,\"bold\":false,\"ran\":false,\"asText\":true}"
+    },
+    {
+      "name": "No console errors or uncaught exceptions in any scenario",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "measurements": {
+    "consent-390": {
+      "box": {
+        "width": 355.546875,
+        "height": 200
+      },
+      "contentHeight": 195,
+      "goInside": true,
+      "inputInside": true,
+      "goHit": "go",
+      "scrollWidth": 406,
+      "innerWidth": 406,
+      "visualViewportScale": 1,
+      "main": 390,
+      "grid": 358,
+      "panel": 389.5,
+      "lesson": 389.5
+    },
+    "consent-1280": {
+      "box": {
+        "width": 492,
+        "height": 276.75
+      },
+      "contentHeight": 171,
+      "goInside": true,
+      "inputInside": true,
+      "goHit": "go",
+      "scrollWidth": 1265,
+      "innerWidth": 1280,
+      "visualViewportScale": 1,
+      "main": 1100,
+      "grid": 1068,
+      "panel": 526,
+      "lesson": 526
+    },
+    "embedRequest": {
+      "scenario": "live-held",
+      "phase": "after-agree",
+      "url": "https://www.youtube-nocookie.com/embed/sim_test_00?enablejsapi=1&start=75&playsinline=1&rel=0&hl=en&end=140&origin=http%3A%2F%2F127.0.0.1%3A4187",
+      "type": "Document",
+      "referer": "http://127.0.0.1:4187/",
+      "action": "held-never-sent"
+    },
+    "iframe-1280": {
+      "width": 466,
+      "height": 250.8
+    },
+    "fit-1280": {
+      "box": "492x276.8",
+      "padding": "12px",
+      "border": "1px",
+      "overhang": 0,
+      "minHeightTimes16over9": 355.556
+    },
+    "iframe-800": {
+      "width": 329.5,
+      "height": 174
+    },
+    "fit-800": {
+      "box": "355.5x200",
+      "padding": "12px",
+      "border": "1px",
+      "overhang": 0,
+      "minHeightTimes16over9": 355.556
+    },
+    "iframe-390": {
+      "width": 329.5,
+      "height": 174
+    },
+    "fit-390": {
+      "box": "355.5x200",
+      "padding": "12px",
+      "border": "1px",
+      "overhang": 0,
+      "minHeightTimes16over9": 355.556
+    },
+    "tabOrder": [
+      {
+        "id": "#openBtn",
+        "outline": "solid 3px"
+      },
+      {
+        "id": "#play",
+        "outline": "solid 3px"
+      },
+      {
+        "id": "#consent",
+        "outline": "solid 3px"
+      },
+      {
+        "id": "#ret",
+        "outline": "solid 3px"
+      },
+      {
+        "id": "#j",
+        "outline": "solid 3px"
+      },
+      {
+        "id": "#apply",
+        "outline": "solid 3px"
+      },
+      {
+        "id": "button[passage]",
+        "outline": "solid 3px"
+      },
+      {
+        "id": "button[video]",
+        "outline": "solid 3px"
+      },
+      {
+        "id": "button[artifact]",
+        "outline": "solid 3px"
+      },
+      {
+        "id": "BODY",
+        "outline": null
+      }
+    ],
+    "nextTabAfterPlay": "#play",
+    "contrast-light #stage .sim": {
+      "color": "rgb(91, 101, 119)",
+      "background": "rgb(11, 14, 20)",
+      "fontPx": 12.8,
+      "ratio": 3.29,
+      "needs": 4.5
+    },
+    "contrast-light #provider .sim": {
+      "color": "rgb(91, 101, 119)",
+      "background": "rgb(255, 255, 255)",
+      "fontPx": 12.8,
+      "ratio": 5.88,
+      "needs": 4.5
+    },
+    "contrast-light header .note": {
+      "color": "rgb(138, 75, 0)",
+      "background": "rgb(255, 243, 224)",
+      "fontPx": 14.4,
+      "ratio": 6.2,
+      "needs": 4.5
+    },
+    "contrast-light #body .note": {
+      "color": "rgb(138, 75, 0)",
+      "background": "rgb(255, 243, 224)",
+      "fontPx": 14.4,
+      "ratio": 6.2,
+      "needs": 4.5
+    },
+    "contrast-light .badge.yt": {
+      "color": "rgb(204, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "fontPx": 12.8,
+      "ratio": 5.89,
+      "needs": 4.5
+    },
+    "contrast-light #body dt": {
+      "color": "rgb(91, 101, 119)",
+      "background": "rgb(255, 255, 255)",
+      "fontPx": 14.72,
+      "ratio": 5.88,
+      "needs": 4.5
+    },
+    "contrast-light #ret": {
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(31, 95, 191)",
+      "fontPx": 16,
+      "ratio": 6.09,
+      "needs": 4.5
+    },
+    "contrast-light #apply": {
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(31, 95, 191)",
+      "fontPx": 16,
+      "ratio": 6.09,
+      "needs": 4.5
+    },
+    "contrast-dark #stage .sim": {
+      "color": "rgb(163, 173, 191)",
+      "background": "rgb(11, 14, 20)",
+      "fontPx": 12.8,
+      "ratio": 8.54,
+      "needs": 4.5
+    },
+    "contrast-dark #provider .sim": {
+      "color": "rgb(163, 173, 191)",
+      "background": "rgb(31, 37, 48)",
+      "fontPx": 12.8,
+      "ratio": 6.8,
+      "needs": 4.5
+    },
+    "contrast-dark header .note": {
+      "color": "rgb(255, 194, 122)",
+      "background": "rgb(58, 42, 18)",
+      "fontPx": 14.4,
+      "ratio": 8.72,
+      "needs": 4.5
+    },
+    "contrast-dark #body .note": {
+      "color": "rgb(255, 194, 122)",
+      "background": "rgb(58, 42, 18)",
+      "fontPx": 14.4,
+      "ratio": 8.72,
+      "needs": 4.5
+    },
+    "contrast-dark .badge.yt": {
+      "color": "rgb(255, 138, 138)",
+      "background": "rgb(31, 37, 48)",
+      "fontPx": 12.8,
+      "ratio": 6.78,
+      "needs": 4.5
+    },
+    "contrast-dark #body dt": {
+      "color": "rgb(163, 173, 191)",
+      "background": "rgb(31, 37, 48)",
+      "fontPx": 14.72,
+      "ratio": 6.8,
+      "needs": 4.5
+    },
+    "contrast-dark #ret": {
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(127, 176, 255)",
+      "fontPx": 16,
+      "ratio": 2.2,
+      "needs": 4.5
+    },
+    "contrast-dark #apply": {
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(127, 176, 255)",
+      "fontPx": 16,
+      "ratio": 2.2,
+      "needs": 4.5
+    }
+  },
+  "requests": [
+    {
+      "scenario": "network",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/media-panel.html",
+      "type": "Document",
+      "referer": null,
+      "action": "served-locally"
+    },
+    {
+      "scenario": "network",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/favicon.ico",
+      "type": "Other",
+      "referer": "http://127.0.0.1:4187/media-panel.html",
+      "action": "served-locally"
+    },
+    {
+      "scenario": "consent-390",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/media-panel.html",
+      "type": "Document",
+      "referer": null,
+      "action": "served-locally"
+    },
+    {
+      "scenario": "consent-390",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/favicon.ico",
+      "type": "Other",
+      "referer": "http://127.0.0.1:4187/media-panel.html",
+      "action": "served-locally"
+    },
+    {
+      "scenario": "consent-1280",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/media-panel.html",
+      "type": "Document",
+      "referer": null,
+      "action": "served-locally"
+    },
+    {
+      "scenario": "consent-1280",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/favicon.ico",
+      "type": "Other",
+      "referer": "http://127.0.0.1:4187/media-panel.html",
+      "action": "served-locally"
+    },
+    {
+      "scenario": "live-held",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/media-panel.html",
+      "type": "Document",
+      "referer": null,
+      "action": "served-locally"
+    },
+    {
+      "scenario": "live-held",
+      "phase": "before-agree",
+      "url": "http://127.0.0.1:4187/favicon.ico",
+      "type": "Other",
+      "referer": "http://127.0.0.1:4187/media-panel.html",
+      "action": "served-locally"
+    },
+    {
+      "scenario": "live-held",
+      "phase": "after-agree",
+      "url": "https://www.youtube.com/iframe_api",
+      "type": "Script",
+      "referer": "http://127.0.0.1:4187/",
+      "action": "held-never-sent"
+    },
+    {
+      "scenario": "live-held",
+      "phase": "after-agree",
+      "url": "https://www.youtube-nocookie.com/embed/sim_test_00?enablejsapi=1&start=75&playsinline=1&rel=0&hl=en&end=140&origin=http%3A%2F%2F127.0.0.1%3A4187",
+      "type": "Document",
+      "referer": "http://127.0.0.1:4187/",
+      "action": "held-never-sent"
+    },
+    {
+      "scenario": "live-stub",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/media-panel.html",
+      "type": "Document",
+      "referer": null,
+      "action": "served-locally"
+    },
+    {
+      "scenario": "live-stub",
+      "phase": "before-agree",
+      "url": "http://127.0.0.1:4187/favicon.ico",
+      "type": "Other",
+      "referer": "http://127.0.0.1:4187/media-panel.html",
+      "action": "served-locally"
+    },
+    {
+      "scenario": "live-stub",
+      "phase": "after-agree",
+      "url": "https://www.youtube.com/iframe_api",
+      "type": "Script",
+      "referer": "http://127.0.0.1:4187/",
+      "action": "stubbed-never-sent"
+    },
+    {
+      "scenario": "live-stub",
+      "phase": "after-agree",
+      "url": "https://www.youtube-nocookie.com/embed/sim_test_00?enablejsapi=1&start=75&playsinline=1&rel=0&hl=en&end=140&origin=http%3A%2F%2F127.0.0.1%3A4187",
+      "type": "Document",
+      "referer": "http://127.0.0.1:4187/",
+      "action": "stubbed-never-sent"
+    },
+    {
+      "scenario": "keyboard",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/media-panel.html",
+      "type": "Document",
+      "referer": null,
+      "action": "served-locally"
+    },
+    {
+      "scenario": "keyboard",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/favicon.ico",
+      "type": "Other",
+      "referer": "http://127.0.0.1:4187/media-panel.html",
+      "action": "served-locally"
+    },
+    {
+      "scenario": "contrast-light",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/media-panel.html",
+      "type": "Document",
+      "referer": null,
+      "action": "served-locally"
+    },
+    {
+      "scenario": "contrast-light",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/favicon.ico",
+      "type": "Other",
+      "referer": "http://127.0.0.1:4187/media-panel.html",
+      "action": "served-locally"
+    },
+    {
+      "scenario": "contrast-dark",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/media-panel.html",
+      "type": "Document",
+      "referer": null,
+      "action": "served-locally"
+    },
+    {
+      "scenario": "contrast-dark",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/favicon.ico",
+      "type": "Other",
+      "referer": "http://127.0.0.1:4187/media-panel.html",
+      "action": "served-locally"
+    },
+    {
+      "scenario": "validation",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/media-panel.html",
+      "type": "Document",
+      "referer": null,
+      "action": "served-locally"
+    },
+    {
+      "scenario": "validation",
+      "phase": "load",
+      "url": "http://127.0.0.1:4187/favicon.ico",
+      "type": "Other",
+      "referer": "http://127.0.0.1:4187/media-panel.html",
+      "action": "served-locally"
+    }
+  ],
+  "served": [
+    "/media-panel.html",
+    "/favicon.ico",
+    "/media-panel.html",
+    "/favicon.ico",
+    "/media-panel.html",
+    "/favicon.ico",
+    "/media-panel.html",
+    "/favicon.ico",
+    "/media-panel.html",
+    "/favicon.ico",
+    "/media-panel.html",
+    "/favicon.ico",
+    "/media-panel.html",
+    "/favicon.ico",
+    "/media-panel.html",
+    "/favicon.ico",
+    "/media-panel.html",
+    "/favicon.ico"
+  ],
+  "console": [
+    {
+      "scenario": "live-held",
+      "type": "log-warning",
+      "text": "Allow attribute will take precedence over 'allowfullscreen'. http://127.0.0.1:4187/media-panel.html"
+    },
+    {
+      "scenario": "live-stub",
+      "type": "log-warning",
+      "text": "Allow attribute will take precedence over 'allowfullscreen'. http://127.0.0.1:4187/media-panel.html"
+    }
+  ],
+  "screenshots": [
+    "docs/claude-workstreams/reviews/screenshots/review-c3-01-desktop-video.png",
+    "docs/claude-workstreams/reviews/screenshots/review-c3-02-consent-390.png",
+    "docs/claude-workstreams/reviews/screenshots/review-c3-03-consent-1280.png",
+    "docs/claude-workstreams/reviews/screenshots/review-c3-04-live-held-1280.png",
+    "docs/claude-workstreams/reviews/screenshots/review-c3-05-live-held-390.png",
+    "docs/claude-workstreams/reviews/screenshots/review-c3-06-after-return.png",
+    "docs/claude-workstreams/reviews/screenshots/review-c3-07-after-load.png",
+    "docs/claude-workstreams/reviews/screenshots/review-c3-08-dark.png"
+  ],
+  "finished": "2026-10-22T09:47:35.446Z",
+  "summary": {
+    "passed": 32,
+    "failed": 16,
+    "requestsLeavingMachine": 0,
+    "requestActions": {
+      "served-locally": 18,
+      "held-never-sent": 2,
+      "stubbed-never-sent": 2
+    }
+  }
+}

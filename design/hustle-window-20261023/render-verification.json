@@ -1,0 +1,70 @@
+{
+  "output": "kairo-hustle-20s-mock.mp4",
+  "frame_count_rendered": 480,
+  "metadata": {
+    "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+    "codec": "h264",
+    "pix_fmt": "yuv420p(progressive)",
+    "audio_codec": "aac",
+    "fps": 24.0,
+    "source_size": [
+      1280,
+      720
+    ],
+    "size": [
+      1280,
+      720
+    ],
+    "rotate": 0,
+    "duration": 20.0
+  },
+  "audio_timing": [
+    {
+      "scene": "pressure",
+      "original_seconds": 6.333968253968254,
+      "tempo": 1.6324660448371788,
+      "slot_seconds": 4
+    },
+    {
+      "scene": "reveal",
+      "original_seconds": 3.908798185941043,
+      "tempo": 1.3572215923406399,
+      "slot_seconds": 3
+    },
+    {
+      "scene": "material",
+      "original_seconds": 5.363764172335601,
+      "tempo": 1.3824134464782476,
+      "slot_seconds": 4
+    },
+    {
+      "scene": "practice",
+      "original_seconds": 3.493968253968254,
+      "tempo": 0.900507281950581,
+      "slot_seconds": 4
+    },
+    {
+      "scene": "next",
+      "original_seconds": 4.073696145124717,
+      "tempo": 1.4144778281683044,
+      "slot_seconds": 3
+    },
+    {
+      "scene": "close",
+      "original_seconds": 3.324081632653061,
+      "tempo": 1.7681285280069474,
+      "slot_seconds": 2
+    }
+  ],
+  "limitations": [
+    "Illustrated concept; not actual app footage",
+    "Offline Windows scratch voice; not user recording",
+    "Final upload format and AI-media eligibility not confirmed",
+    "Future employer and rewards features visibly labelled proposed"
+  ],
+  "assets": [
+    "Original PIL drawings",
+    "Selected C brand master SVG",
+    "Local Manrope font"
+  ]
+}

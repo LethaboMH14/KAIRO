@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-23",
+  "route": "/classroom",
+  "build": "passed",
+  "applicationTests": {
+    "passed": 217,
+    "failed": 0
+  },
+  "previewScreenStates": 112,
+  "localExperienceLinksChecked": 221,
+  "missingLinks": [],
+  "browserAcceptance": "pending - prior denial respected",
+  "audioDeviceAcceptance": "pending",
+  "SASLRecognition": "not implemented; no validated model",
+  "SASLOutput": "not implemented; no reviewed content",
+  "model": "unknown",
+  "effort": "unknown"
+}

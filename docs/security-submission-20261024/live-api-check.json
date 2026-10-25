@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-24T03:07:08.844Z",
+  "syntheticOnly": true,
+  "browserObserved": false,
+  "liveModelInvoked": false,
+  "checks": {
+    "engineeringLogin": true,
+    "engineeringCookieFlags": true,
+    "engineeringOwnerAssignedCurriculum": true,
+    "engineeringNoStore": true,
+    "informaticsLogin": true,
+    "informaticsCookieFlags": true,
+    "informaticsOwnerAssignedCurriculum": true,
+    "informaticsNoStore": true,
+    "engineeringOwnLesson": true,
+    "engineeringOtherCannotReadLesson": true,
+    "informaticsOwnLesson": true,
+    "informaticsOtherCannotReadLesson": true,
+    "MissingSessionDenied": true,
+    "RevokedOrInvalidSessionDenied": true,
+    "ForeignOriginDenied": true,
+    "CannotRewriteEnrolment": true,
+    "LearnerCannotInvokeImportWorker": true,
+    "IamStillPrivate": true
+  }
+}

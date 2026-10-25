@@ -1,0 +1,14 @@
+{
+  "testsPassed": 672,
+  "policyAndAssetChecks": 22,
+  "trafficPercent": 100,
+  "cameraOpened": false,
+  "iamPrivate": true,
+  "buildPassed": true,
+  "humanDeviceAcceptance": "pending",
+  "browserObserved": false,
+  "researchChats": "Two bounded documentation tasks dispatched; independent review pending",
+  "judgeAccountChecks": 19,
+  "revision": "kairo-app-00005-7tx",
+  "testsFailed": 0
+}

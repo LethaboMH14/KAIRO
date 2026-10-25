@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kairo-private-sources": {
+      "command": "C:/Python311/python.exe",
+      "args": ["C:/Users/USER/Desktop/fnb app of year hackathon/tools/course_sources/mcp_server.py"]
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "KAIRO learning journey - proposed joined flow",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "learner",
+      "label": "Learner choices"
+    },
+    {
+      "id": "kairo",
+      "label": "Bounded KAIRO work"
+    },
+    {
+      "id": "evidence",
+      "label": "Keep and resume"
+    }
+  ],
+  "mainPath": [
+    "material",
+    "extract",
+    "review",
+    "plan",
+    "learn",
+    "practice",
+    "keep",
+    "resume"
+  ],
+  "nodes": [
+    {
+      "id": "material",
+      "lane": "learner",
+      "col": 0,
+      "type": "frontend",
+      "label": "Choose material",
+      "sublabel": "or try an example",
+      "width": 168
+    },
+    {
+      "id": "extract",
+      "lane": "kairo",
+      "col": 0,
+      "type": "backend",
+      "label": "Extract safely",
+      "sublabel": "locators and missing parts",
+      "width": 168
+    },
+    {
+      "id": "review",
+      "lane": "learner",
+      "col": 1,
+      "type": "security",
+      "label": "Check source",
+      "sublabel": "correct and save revision",
+      "width": 168
+    },
+    {
+      "id": "plan",
+      "lane": "kairo",
+      "col": 2,
+      "type": "backend",
+      "label": "Shape lesson",
+      "sublabel": "goal and cited activities",
+      "width": 168
+    },
+    {
+      "id": "learn",
+      "lane": "learner",
+      "col": 3,
+      "type": "frontend",
+      "label": "Read or explore",
+      "sublabel": "supported studio actions",
+      "width": 168
+    },
+    {
+      "id": "practice",
+      "lane": "learner",
+      "col": 4,
+      "type": "frontend",
+      "label": "Predict and explain",
+      "sublabel": "change one thing",
+      "width": 168
+    },
+    {
+      "id": "keep",
+      "lane": "evidence",
+      "col": 4,
+      "type": "database",
+      "label": "Keep my work",
+      "sublabel": "result and source links",
+      "width": 168
+    },
+    {
+      "id": "resume",
+      "lane": "evidence",
+      "col": 5,
+      "type": "frontend",
+      "label": "Continue learning",
+      "sublabel": "known saved place",
+      "width": 168
+    }
+  ],
+  "edges": [
+    {
+      "id": "upload",
+      "from": "material",
+      "to": "extract"
+    },
+    {
+      "id": "check",
+      "from": "extract",
+      "to": "review"
+    },
+    {
+      "id": "reviewed",
+      "from": "review",
+      "to": "plan"
+    },
+    {
+      "id": "ready",
+      "from": "plan",
+      "to": "learn"
+    },
+    {
+      "id": "attempt",
+      "from": "learn",
+      "to": "practice"
+    },
+    {
+      "id": "record",
+      "from": "practice",
+      "to": "keep"
+    },
+    {
+      "id": "return",
+      "from": "keep",
+      "to": "resume"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Preserve the source",
+      "items": [
+        "Exact reviewed revision and locators",
+        "Missing content stays visible"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Current boundary",
+      "items": [
+        "Local source and browser progress today",
+        "Joined private account flow still pending"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Proposed experience",
+      "items": [
+        "Stable navigation; adaptable activity pane",
+        "Private evidence sharing needs explicit consent"
+      ]
+    }
+  ]
+}

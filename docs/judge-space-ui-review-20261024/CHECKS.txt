@@ -1,0 +1,6 @@
+Run date: 2026-10-24
+
+Command: `node --test tests/student-space-ui.test.mjs` (working directory: `studio/`).
+Result: 5 passed, 0 failed, 0 skipped.
+
+Actual modules under test: `StudentHome` from `src/student-space/StudentSpace.tsx`; `Studios` from `src/kairo/Studios.tsx`. Curriculum fixtures loaded from `data/student-spaces/engineering.json` and `data/student-spaces/informatics.json`, normalized via the production `studentSpace()` function in `server/student-space/model.mjs`. Actual `Studios` uses a test-only injected `useStudentSpace` hook value in Vite SSR. No browser observation, router/provider/cloud/auth edits, deployment, or human/device validation.

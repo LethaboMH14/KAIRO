@@ -1,0 +1,33 @@
+{
+  "distDirectory": "C:\\Users\\USER\\Desktop\\fnb app of year hackathon\\studio\\dist",
+  "currentBuildConfirmed": false,
+  "indexBytes": 540,
+  "assets": {
+    "count": 2,
+    "bytes": 309871,
+    "totalBytes": 310411,
+    "paths": [
+      "/assets/index-CbJrvDr2.js",
+      "/assets/index-DBqvFNPM.css"
+    ]
+  },
+  "missing": [],
+  "unsafe": [],
+  "queryOrHashImports": [],
+  "unsupportedSyntax": [],
+  "externalResources": [],
+  "apiPathsInCacheSet": [],
+  "runtimeRegexMismatch": {
+    "discoveredButRegexMissed": [],
+    "regexButNotDiscovered": []
+  },
+  "note": "Inspection is static only; dynamic imports are intentionally excluded. Set currentBuildConfirmed only after an external build identity check.",
+  "checkpointIdentity": {
+    "indexSha256": "23845cbd45c437a0e4cb743fb0622dc977fdec574c13d085ba9594683e08dbd1",
+    "buildConfirmedByRoot": true,
+    "checkedDate": "2026-10-22",
+    "buildCommand": "npm run build (studio/)",
+    "buildExitCode": 0,
+    "scope": "Published /home + /cases checkpoint; subsequent source edits require a new build."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "source": "design\\video-production-20261023\\kairo-render.glb",
+  "source_sha256": "8cb4a7f65dda8013c42851488cc776d00cab2bfa2fba0a6ae66e639b3da84e5f",
+  "blender_version": "4.5.14 LTS",
+  "armature": "KAIRO_Teacher_Rig",
+  "source_actions": [
+    "Acknowledge",
+    "Explain",
+    "HandPoint",
+    "Idle",
+    "Listen"
+  ],
+  "idle_applied": true,
+  "render_size": [
+    960,
+    540
+  ],
+  "engine": "Cycles CPU",
+  "samples": 8,
+  "prepared_timeline_frames": 48,
+  "prepared_fps": 24,
+  "rendered_frames": [
+    8
+  ],
+  "note": "One real authored-asset lighting/compositing proof frame. Two-second camera move prepared, full animation not rendered. No lip-sync/performance acceptance.",
+  "credit": "Teacher based on Rain Rig (CC) Blender Foundation | studio.blender.org, CC-BY 4.0. KAIRO modifications; see source asset credits."
+}

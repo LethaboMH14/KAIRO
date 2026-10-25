@@ -1,0 +1,177 @@
+{
+  "snapshot": {
+    "checked_at": "2026-10-22",
+    "retrieved_at_utc": "2026-10-22T01:55:51Z",
+    "scope": "Read-only review of up to three official FirstRand/FNB Workday advert records related to business informatics role families.",
+    "availability_policy": "A future closing date or indexed Apply label does not prove a currently open vacancy. Status is unknown where the live Workday page could not be read. Talent-pool advertisements explicitly described as not active are not presented as vacancies.",
+    "privacy": "Public employer advert content only. No applicant information, accounts, application actions, API calls or private data used."
+  },
+  "official_entry_points": [
+    {
+      "source_id": "FNB-CAREERS-ENTRY",
+      "title": "FNB Careers",
+      "url": "https://www.fnb.co.za/careers/",
+      "claim": "Official FNB careers page provides an Apply here link to the FirstRand Workday career portal.",
+      "retrieved_at": "2026-10-22",
+      "evidence_method": "Official FNB page opened and link followed; Workday destination was firstrand.wd3.myworkdayjobs.com/FRB."
+    },
+    {
+      "source_id": "FIRSTRAND-WORKDAY-PORTAL",
+      "title": "FirstRand Workday careers portal",
+      "url": "https://firstrand.wd3.myworkdayjobs.com/FRB",
+      "claim": "Official portal linked from FNB Careers. Direct page opens returned zero readable text lines in this research session.",
+      "retrieved_at": "2026-10-22",
+      "limitation": "Advert details below were retrieved from search-indexed content on the same official Workday host. Direct page readability and live application state were not confirmed."
+    }
+  ],
+  "adverts": [
+    {
+      "source_id": "FRB-IT-BA-R54418",
+      "family": "Business and systems analysis / data quality",
+      "employer_brand": "RMB / FirstRand",
+      "title": "IT Business Analyst",
+      "requisition_id": "R54418",
+      "canonical_url": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/IT-Business-Analyst_R54418-1",
+      "location": "Johannesburg, South Africa",
+      "retrieved_at": "2026-10-22",
+      "retrieval": {
+        "method": "Official Workday host search-index excerpt",
+        "indexed_age_reported": "6 days ago",
+        "direct_page_result": "Opened official URL; zero readable text lines returned.",
+        "short_excerpt": "Minimum eight years’ Business Analysis or Business/Systems Analysis experience",
+        "excerpt_words": 9
+      },
+      "status": {
+        "label": "unknown_live_status",
+        "official_index_deadline": "2026-10-23",
+        "important_closing_date_note": "The employer states applications will not be accepted on the indicated date and onwards and asks applicants to submit ahead of the closing date.",
+        "deadline_interpretation": "Do not present 2026-10-23 as an accepted application date. The precise timezone and cutoff hour were not stated; status remains unconfirmed because the original page was unreadable.",
+        "indexed_apply_label": true,
+        "reason": "The official indexed text signals a future close date on the check date, but the live page was unreadable. The same result said ‘7 days left’ despite the listed 23 October date being one day after the 22 October check. Do not treat this as confirmed open."
+      },
+      "criteria": {
+        "mandatory_as_labeled_by_advert": [
+          "Minimum eight years of Business Analysis or Business/Systems Analysis experience.",
+          "Demonstrable experience in Market Risk, traded risk, financial-markets risk technology or a closely related risk domain.",
+          "Experience translating complex methodologies, policies or regulatory needs into implementable technology, data and control requirements.",
+          "Experience supporting complex change from analysis through testing and implementation validation.",
+          "Proven delivery across business, risk, data and technology stakeholders.",
+          "Relevant Bachelor’s degree or BTech in Computer Science, Information Systems, Mathematics, Engineering, Finance, Risk Management or a related discipline.",
+          "The advert has separate Market Risk Knowledge and Required Knowledge and Skills sections covering risk concepts, requirements/process/data analysis, testing and communication."
+        ],
+        "preferred_as_labeled_by_advert": [
+          "Agile delivery experience.",
+          "Practical exposure to FRTB, Basel-related Market Risk change, BCBS239, ICAAP, Pillar 3 or regulatory risk reporting.",
+          "Business Analysis, financial-markets, risk, data or Agile certification.",
+          "Coaching or mentoring experience and demonstrated potential for future people leadership."
+        ],
+        "other_eligibility": "Citizenship, age and a specific BCom Informatics equivalence rule were not visible in retrieved content; unknown."
+      },
+      "claim_ids": ["CLAIM-IT-BA-ROLE", "CLAIM-IT-BA-STATUS", "CLAIM-IT-BA-CRITERIA"]
+    },
+    {
+      "source_id": "FRB-TRADE-SUPPORT-R54282",
+      "family": "Software / technology operations and support",
+      "employer_brand": "RMB / FirstRand",
+      "title": "Trade Support Specialist",
+      "requisition_id": "R54282",
+      "canonical_url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Trade-Support-Specialist_R54282-1",
+      "location": "Johannesburg, South Africa",
+      "retrieved_at": "2026-10-22",
+      "retrieval": {
+        "method": "Official Workday host search-index excerpt",
+        "indexed_age_reported": "3 days ago",
+        "direct_page_result": "Opened official URL; zero readable text lines returned.",
+        "short_excerpt": "Provide specialist technical and operational support for business-critical electronic trading and market-data platforms",
+        "excerpt_words": 13
+      },
+      "status": {
+        "label": "unknown_live_status",
+        "official_index_deadline": "2026-10-23",
+        "important_closing_date_note": "The employer states applications will not be accepted on the indicated date and onwards and asks applicants to submit ahead of the closing date.",
+        "deadline_interpretation": "Do not present 2026-10-23 as an accepted application date. The precise timezone and cutoff hour were not stated; status remains unconfirmed because the original page was unreadable.",
+        "indexed_apply_label": true,
+        "reason": "The official indexed text signals a future close date on the check date, but the live page was unreadable. The same result said ‘4 days left’ despite the listed 23 October date being one day after the 22 October check. Do not treat this as confirmed open."
+      },
+      "criteria": {
+        "mandatory_as_labeled_by_advert": [
+          "Bachelor’s degree in Computer Science, Information Technology, Engineering, Finance or a related field.",
+          "Three to five years’ experience in a technology or production-support environment.",
+          "Experience supporting business-critical enterprise applications and integrated technology environments.",
+          "Experience with incident, problem, change and release management.",
+          "Experience working with technology vendors and cross-functional technical teams."
+        ],
+        "preferred_as_labeled_by_advert": [
+          "Exposure to trading systems or financial-markets technology is described as ideal."
+        ],
+        "listed_skills_without_explicit_mandatory_or_preferred_label": [
+          "Electronic trading systems, order routing, FIX and market-data flows; Linux/Unix, SQL, networking and application troubleshooting; scripting, automation, monitoring, cloud/infrastructure, access controls and operational resilience."
+        ],
+        "other_eligibility": "Citizenship, age and a specific BCom Informatics equivalence rule were not visible in retrieved content; unknown."
+      },
+      "claim_ids": ["CLAIM-TRADE-SUPPORT-ROLE", "CLAIM-TRADE-SUPPORT-STATUS", "CLAIM-TRADE-SUPPORT-CRITERIA"]
+    },
+    {
+      "source_id": "FNB-BANKING-ADVISOR-R50409",
+      "family": "Customer service / banking operations and relationship support",
+      "employer_brand": "FNB / FirstRand",
+      "title": "Banking Advisor Private Client",
+      "requisition_id": "R50409",
+      "canonical_url": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/Banking-Advisor-Private-Client_R50409",
+      "location": "FNB Acacia House, 2 Kikembe Drive, Umhlanga, Durban, 4319, South Africa",
+      "retrieved_at": "2026-10-22",
+      "retrieval": {
+        "method": "Official Workday host search-index excerpt",
+        "indexed_age_reported": "2 months ago",
+        "direct_page_result": "Opened official URL; zero readable text lines returned.",
+        "short_excerpt": "This advertisement is not for an active vacancy",
+        "excerpt_words": 8
+      },
+      "status": {
+        "label": "talent_pool_not_active_vacancy_as_stated_in_indexed_source",
+        "official_index_deadline": "2026-10-31",
+        "reason": "The indexed source explicitly says the advert is not for an active vacancy and describes collecting applications for a future talent pool. Its index age is two months and the live page could not be read, so its present pool status and deadline are not independently confirmed. Do not present as an open job."
+      },
+      "criteria": {
+        "mandatory_as_labeled_by_advert": [
+          "RE5 Certificate and an NQF Level 7 degree in Finance or Accounting.",
+          "Two to three years’ experience in a Sales/Service area of a financial environment.",
+          "A person must not be unrehabilitated insolvent."
+        ],
+        "preferred_as_labeled_by_advert": [],
+        "other_eligibility": "No citizenship or age condition was visible in retrieved content; unknown. This role’s stated degree field is Finance or Accounting; no equivalence is inferred."
+      },
+      "claim_ids": ["CLAIM-FNB-ADVISOR-ROLE", "CLAIM-FNB-ADVISOR-STATUS", "CLAIM-FNB-ADVISOR-CRITERIA"]
+    }
+  ],
+  "claim_map": [
+    {"claim_id": "CLAIM-FNB-ENTRY", "source_ids": ["FNB-CAREERS-ENTRY", "FIRSTRAND-WORKDAY-PORTAL"], "supports": "FNB's official career page links to the FirstRand Workday portal; direct Workday portal text was unreadable in this session."},
+    {"claim_id": "CLAIM-IT-BA-ROLE", "source_ids": ["FRB-IT-BA-R54418"], "supports": "Official indexed advert title, requisition, Johannesburg location, role duties and criteria."},
+    {"claim_id": "CLAIM-IT-BA-STATUS", "source_ids": ["FRB-IT-BA-R54418"], "supports": "Official indexed advert's 23 October 2026 end-date signal and Apply label; live availability remains unknown because of unreadable page and inconsistent time-left text."},
+    {"claim_id": "CLAIM-IT-BA-CRITERIA", "source_ids": ["FRB-IT-BA-R54418"], "supports": "Mandatory and preferred distinctions copied from the advert's labeled requirement sections; wording otherwise paraphrased."},
+    {"claim_id": "CLAIM-TRADE-SUPPORT-ROLE", "source_ids": ["FRB-TRADE-SUPPORT-R54282"], "supports": "Official indexed advert title, requisition, Johannesburg location, role duties and listed qualification/experience/skills."},
+    {"claim_id": "CLAIM-TRADE-SUPPORT-STATUS", "source_ids": ["FRB-TRADE-SUPPORT-R54282"], "supports": "Official indexed advert's 23 October 2026 end-date signal and Apply label; live availability remains unknown because of unreadable page and inconsistent time-left text."},
+    {"claim_id": "CLAIM-TRADE-SUPPORT-CRITERIA", "source_ids": ["FRB-TRADE-SUPPORT-R54282"], "supports": "Mandatory and preferred distinctions follow the advert's Qualifications and Experience wording; technical list is recorded separately because its mandatory/preferred status is not explicit."},
+    {"claim_id": "CLAIM-FNB-ADVISOR-ROLE", "source_ids": ["FNB-BANKING-ADVISOR-R50409"], "supports": "Official indexed advert title, requisition, Durban location, role and requirement statements."},
+    {"claim_id": "CLAIM-FNB-ADVISOR-STATUS", "source_ids": ["FNB-BANKING-ADVISOR-R50409"], "supports": "Official indexed advert explicitly says it is not an active vacancy and describes a talent pool; current live status remains unconfirmed."},
+    {"claim_id": "CLAIM-FNB-ADVISOR-CRITERIA", "source_ids": ["FNB-BANKING-ADVISOR-R50409"], "supports": "Official indexed advert's stated qualification, experience and insolvency requirements."}
+  ],
+  "historical_comparison": {
+    "source_document": "docs/workstreams/opportunity-evidence/evidence.json",
+    "prior_fnb_card": {
+      "source_id": "EMP-FNB-ENGTECH-2026",
+      "requisition_id": "R46838",
+      "title": "FNB Engineering & Technology Graduate Programme",
+      "status_on_prior_check": "expired",
+      "closing_date": "2026-08-31"
+    },
+    "comparison_note": "The historical FNB graduate advert remains expired. The new role records are different FirstRand/RMB and FNB requisitions, not replacements or a renewal of that programme. Prior Discovery BA and digital-support cards had unknown availability; they remain separate-employer references. These snapshots should not be merged into a claim that any specific applicant qualifies."
+  },
+  "limits_and_unresolved": [
+    "No live Workday role page yielded readable text; official employer career index excerpts are retained as evidence, but live status cannot be confirmed.",
+    "The IT Business Analyst and Trade Support Specialist index results show future end dates of 2026-10-23, but their reported time-left values conflict with the 2026-10-22 snapshot date. Availability is unknown pending a readable employer page.",
+    "The FNB Banking Advisor Private Client result is a talent-pool advertisement explicitly not for an active vacancy; the result was indexed two months earlier and its current pool status is unknown.",
+    "No citizenship, age, or personal eligibility conclusion is supplied where criteria were not visible.",
+    "This is a dated public-source review, not an application feed, employer endorsement, personal fit score or recommendation to apply."
+  ]
+}

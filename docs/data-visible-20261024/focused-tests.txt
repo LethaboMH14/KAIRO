@@ -1,0 +1,21 @@
+✔ actual source cloud-copy routes require separate consent/current review and preserve local data (525.3231ms)
+✔ snapshot is exact revision-bound reviewed text and strips private original metadata (11.2426ms)
+✔ actual cloud library saves immutably, reads back and safely removes a snapshot (120.2874ms)
+✔ disabled library never authenticates or dispatches (0.9272ms)
+✔ cloud tampering, wrong identity and unknown snapshot fields fail verification (3.1123ms)
+✔ cloud request errors are sanitized and pre-aborted requests cannot publish (1.2452ms)
+✔ cancellation during credential refresh prevents a later cloud upload (0.6415ms)
+✔ native conversion preserves more than four pages and exposes partial and unknown coverage (159.1099ms)
+✔ Unicode review is byte bounded without splitting a surrogate pair, and cloud snapshots accept seven reviewed sections (3.2266ms)
+✔ actual default native upload produces seven sections, reviewed revision and cited lesson without model calls (1261.8163ms)
+✔ actual seven-page PDF upload retains page-seven native text (2088.825ms)
+✔ upload rejects native result from another file instead of saving misleading material (126.0769ms)
+✔ a PDF with insufficient native text retains the separately labelled OCR fallback (193.5565ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5330.0294

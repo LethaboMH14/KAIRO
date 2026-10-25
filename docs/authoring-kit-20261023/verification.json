@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-23",
+  "rootModel": "gpt-6",
+  "rootEffort": "unknown",
+  "contractTests": {
+    "passed": 12,
+    "failed": 0,
+    "independentlyRerun": true
+  },
+  "demo": "completed: synthetic fixtures, scripted approval, no models",
+  "jsonFilesParsed": true,
+  "localDocumentLinksChecked": 16,
+  "missingLinks": [],
+  "liveAppMigrated": false,
+  "browserObserved": false,
+  "providerCalled": false,
+  "dependenciesInstalled": false,
+  "deployment": false,
+  "hashes": {
+    "tools\\lesson-authoring-kit\\contract.mjs": "ef6c0ebb42ffc757852ab0d8279fdbb925dc067283bc61fea07f9b8456808e51",
+    "tools\\lesson-authoring-kit\\contract.test.mjs": "46509d8f82a126f8e7a52e139051232d845578ac8a4dbe998b22dc9dd0e36787",
+    "tools\\lesson-authoring-kit\\demo.mjs": "8aff8c821b32c4461a67d4a5613a77039cdb1c0addbf3e01e49dfa3f4407fe71",
+    "tools\\lesson-authoring-kit\\fixtures.mjs": "5696d6a4040245aaeaba6a1c96959f443145966b137a379d898f141905c47707",
+    "tools\\lesson-authoring-kit\\lesson.schema.json": "3234174d784bf509ba0a2ac41800529b2b50bc7ab0e00a6c63162f71526e8770",
+    "tools\\lesson-authoring-kit\\pipeline.json": "d72afd800bda8bf1931354281485c2f8457ce11eb12baea22425859104dabe98",
+    "tools\\lesson-authoring-kit\\README.md": "902b6992868aa2678bb93fe47ce75b3633ca332f8fe7cbc5ea3ffbe0aee06e03",
+    "tools\\lesson-authoring-kit\\prompts\\draft-lesson.md": "f6a70019fc18c8936fa4a92ecba9241bce6e004d011c87b4b2e8bdbc7888e740",
+    "tools\\lesson-authoring-kit\\prompts\\revise-block.md": "eb7b074fce87558d5c9b996ace7868f182c1454aca22bba9fab4ad46fb97f009"
+  }
+}

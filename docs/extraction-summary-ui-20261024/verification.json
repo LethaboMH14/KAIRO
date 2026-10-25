@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "owner": "codex-extraction-summary-ui-20261024-a",
+  "model": "gpt-6",
+  "effort": "unknown",
+  "command": "node --test tests/extraction-summary-ui.test.mjs",
+  "workingDirectory": "studio",
+  "result": "passed",
+  "tests": 4,
+  "passed": 4,
+  "failed": 0,
+  "evidenceLevel": "automated actual-component Vite SSR",
+  "covered": [
+    "native extraction and review readiness remain distinct",
+    "unknown discovered total remains unknown",
+    "partial extraction, parser skip reports and failures are visible",
+    "review omission and escaped warning text are visible",
+    "full native extraction with zero review sections is not described as understanding"
+  ],
+  "notValidated": ["workspace mounting", "browser or device rendering", "human accessibility", "learner outcomes"],
+  "uiSkillSelector": "npx ui-skills categories produced no output and remained pending; interrupted after 30 seconds; used available UI skill guidance and product contract"
+}

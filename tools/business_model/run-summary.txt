@@ -1,0 +1,61 @@
+{
+  "Base": {
+    "month24_paid": 228.93038287093748,
+    "month24_seats": 1750.0,
+    "month24_revenue": 76711.79225900493,
+    "month24_operating": 5904.844231408778,
+    "year1_revenue": 128981.19999895267,
+    "year2_revenue": 580628.1045807127,
+    "funding_need": 391812.0128118082,
+    "funding_with_20pct_buffer": 470174.4153741698,
+    "cash24": -283159.3397798062,
+    "receivables24": 216000.0,
+    "deferred24": 437500.0,
+    "first_operating_positive": 22
+  },
+  "Downside": {
+    "month24_paid": 4.546743891935893,
+    "month24_seats": 625.0,
+    "month24_revenue": 22057.106977097883,
+    "month24_operating": -34130.633922265784,
+    "year1_revenue": 42008.22005766288,
+    "year2_revenue": 223375.32712726135,
+    "funding_need": 886937.0019635082,
+    "funding_with_20pct_buffer": 1064324.4023562097,
+    "cash24": -754917.6358857739,
+    "receivables24": 0.0,
+    "deferred24": 122500.0,
+    "first_operating_positive": null
+  },
+  "Upside": {
+    "month24_paid": 2441.562930092845,
+    "month24_seats": 2750.0,
+    "month24_revenue": 203160.85744983732,
+    "month24_operating": 81320.32384790003,
+    "year1_revenue": 297403.53667680494,
+    "year2_revenue": 1416756.6606806454,
+    "funding_need": 214171.3989132901,
+    "funding_with_20pct_buffer": 257005.6786959481,
+    "cash24": 334730.6361117292,
+    "receivables24": 216000.0,
+    "deferred24": 621250.0,
+    "first_operating_positive": 16
+  }
+}
+{
+  "seed": 20261024,
+  "runs": 5000,
+  "interpretation": "Conditional on arbitrary planning priors; not probability of commercial success.",
+  "funding_need": {
+    "p10": 448136.77905519964,
+    "p50": 645250.0881519845,
+    "p90": 890758.9262782909
+  },
+  "month24_operating": {
+    "p10": -38825.712188913894,
+    "p50": -16743.767146829614,
+    "p90": -3792.774542767652
+  },
+  "negative_month24_fraction": 0.9638
+}
+CHECKS PASS

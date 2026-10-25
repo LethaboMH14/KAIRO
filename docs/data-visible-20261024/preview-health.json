@@ -1,0 +1,14 @@
+{
+  "pid": 24816,
+  "cloudLibrary": {
+    "configured": true,
+    "bucket": "kairo-access-20261021-materials",
+    "scope": "private reviewed-source copy; local pilot, not account sync",
+    "retention": "Deleted cloud objects may remain recoverable under the bucket soft-delete policy (currently seven days)."
+  },
+  "health": {
+    "ok": true,
+    "runtime": "local-node-sqlite",
+    "cloudConfigured": true
+  }
+}

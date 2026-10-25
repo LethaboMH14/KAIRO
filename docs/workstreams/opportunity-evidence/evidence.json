@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "title": "KAIRO role-family and work-experience evidence pack",
+    "checked_date": "2026-10-22",
+    "locale": "South Africa",
+    "purpose": "Primary-source evidence for role preparation and portfolio planning",
+    "scope_note": "This is a research snapshot, not a live vacancy feed or a personal eligibility assessment. Employer requirements below are paraphrased from the linked source. Proposed projects and acceptance measures are our suggestions, not employer requirements.",
+    "status_vocabulary": {
+      "expired": "The employer source gives a closing date before the checked date.",
+      "unknown": "The official page was accessible on the checked date but did not establish whether applications remain open. A visible page or Apply action is not treated as proof of an open vacancy."
+    }
+  },
+  "sources": [
+    {
+      "id": "EMP-FNB-ENGTECH-2026",
+      "publisher": "FirstRand / FNB Careers",
+      "title": "FNB Engineering & Technology Graduate Programme",
+      "url": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/FNB-Engineering---Technology-Graduate-Programme_R46838",
+      "source_type": "official employer requisition page; indexed page text",
+      "checked_date": "2026-10-22",
+      "posting_date": null,
+      "closing_date": "2026-08-31",
+      "requisition": "R46838",
+      "location": "Randburg",
+      "access_note": "The official Workday page was search-indexed with the requisition description and closing date; a direct open returned no extractable page text. The indexed text is retained as primary-source evidence, with this retrieval limitation disclosed."
+    },
+    {
+      "id": "EMP-DISCOVERY-JRDS-2026",
+      "publisher": "Discovery Careers",
+      "title": "Talent Pool - Junior Data Scientist",
+      "url": "https://careers.discovery.co.za/job/Sandton-1-Discovery-Place-Talent-Pool-Junior-Data-Scientist-GP-2196/1109525301/",
+      "source_type": "official employer role page",
+      "checked_date": "2026-10-22",
+      "posting_date": "2026-10-14",
+      "closing_date": null,
+      "requisition": null,
+      "location": "Sandton",
+      "access_note": "The page was accessible and showed an Apply action; no closing date or explicit open/closed status was displayed."
+    },
+    {
+      "id": "EMP-DISCOVERY-BA-2026",
+      "publisher": "Discovery Careers",
+      "title": "Business Analyst",
+      "url": "https://careers.discovery.co.za/job/Sandton-1-Discovery-Place-Business-Analyst-GP-2196/1447995633/",
+      "source_type": "official employer role page",
+      "checked_date": "2026-10-22",
+      "posting_date": "2026-10-15",
+      "closing_date": null,
+      "requisition": null,
+      "location": "Sandton",
+      "access_note": "The page was accessible and showed an Apply action; no closing date or explicit open/closed status was displayed."
+    },
+    {
+      "id": "EMP-DISCOVERY-DIGITALSUPPORT-2026",
+      "publisher": "Discovery Careers",
+      "title": "Service Consultant: Digital Support",
+      "url": "https://careers.discovery.co.za/job/Sandton-1-Discovery-Place-Service-Consultant-Digital-Support-GP-2196/1448356033/",
+      "source_type": "official employer role page",
+      "checked_date": "2026-10-22",
+      "posting_date": "2026-10-16",
+      "closing_date": null,
+      "requisition": null,
+      "location": "Sandton",
+      "access_note": "The page was accessible and showed an Apply action; no closing date or explicit open/closed status was displayed."
+    },
+    {
+      "id": "PROVIDER-MLAB-TECHSKILLS",
+      "publisher": "mLab South Africa",
+      "title": "Tech Skills / CodeTribe programme",
+      "url": "https://mlab.co.za/what-we-do/tech-skills/",
+      "source_type": "official skills and work-experience provider page",
+      "checked_date": "2026-10-22",
+      "duration": "6-12 months",
+      "application_status": "unknown; page says to apply when calls are open or register to be notified, but gives no current call dates",
+      "cost": "unknown; the page does not state participant fees"
+    },
+    {
+      "id": "PROVIDER-WORLDSKILLSZA-2027",
+      "publisher": "WorldSkills South Africa / Department of Higher Education and Training; application dates reported by SAnews (Government Communication and Information System)",
+      "title": "WorldSkills South Africa National Competition 2027",
+      "provider_page_url": "https://worldskillsza.dhet.gov.za/application.aspx",
+      "official_dates_url": "https://www.sanews.gov.za/node/83876",
+      "skills_page_url": "https://worldskillsza.dhet.gov.za/site/skills/All/",
+      "source_type": "official provider application page and government announcement",
+      "checked_date": "2026-10-22",
+      "applications_open_date": "2026-09-01",
+      "applications_close_date": "2027-04-30",
+      "eligibility_summary": "Government announcement says students studying a qualification related to the skill at a university, TVET college, private skills provider, CET college or technical high school may apply; it also lists apprentices/learners and candidates with an accredited related qualification.",
+      "application_page_conflict": "The application page includes a 2028 age note for Aircraft Maintenance, Mechatronics and Water Technology while the 2027 competition announcement gives the 2027 round and closing date. Do not use that 2028 note as a confirmed 2027 eligibility rule; check the current skill-specific terms."
+    },
+    {
+      "id": "LEARN-MS-TSQL",
+      "publisher": "Microsoft Learn",
+      "title": "Query and modify data with Transact-SQL",
+      "url": "https://learn.microsoft.com/en-us/training/paths/get-started-querying-with-transact-sql/",
+      "source_type": "official self-paced learning path",
+      "checked_date": "2026-10-22",
+      "duration": "5 hr 45 min",
+      "level": "Beginner",
+      "fee_note": "The self-paced learning path is presented without a course fee; certification exam fees, if pursued, are separate and not included."
+    },
+    {
+      "id": "LEARN-PYTHON-DOCS",
+      "publisher": "Python Software Foundation",
+      "title": "The Python Tutorial",
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "source_type": "official Python documentation",
+      "checked_date": "2026-10-22",
+      "fee_note": "The tutorial and Python interpreter are freely available according to the official documentation."
+    },
+    {
+      "id": "LEARN-MS-CUSTOMER-SERVICE",
+      "publisher": "Microsoft Learn",
+      "title": "Transform service delivery with AI in Dynamics 365",
+      "url": "https://learn.microsoft.com/en-us/training/modules/get-started-with-dynamics-365-for-customer-service/",
+      "source_type": "official self-paced module",
+      "checked_date": "2026-10-22",
+      "duration": "42 min",
+      "level": "Beginner",
+      "fee_note": "The learning module is available as self-paced Microsoft Learn content; product practice environments or certification are separate and may need licensed access."
+    }
+  ],
+  "role_families": [
+    {
+      "id": "ROLE-ANALYSIS",
+      "family": "Business and data analysis / data quality",
+      "employer_examples": [
+        {
+          "source_id": "EMP-DISCOVERY-BA-2026",
+          "observed_status_on_checked_date": "unknown",
+          "source_requirements_paraphrased": [
+            "The advert asks for matric and an Informatics or other relevant degree.",
+            "It describes requirements elicitation, business process modelling, solution design, testing/UAT, stakeholder work, documentation and incident analysis.",
+            "It lists 2-3 years of business analysis experience and 1 year of user interface analyst experience; business experience/product knowledge is an advantage.",
+            "Advanced UML, BPMN and project-management training are listed under certifications."
+          ],
+          "candidate_eligibility": "The advert does not state nationality, age, or a specific BCom Informatics equivalence rule. Assess degree relevance and experience against the employer; no personal eligibility conclusion is made."
+        },
+        {
+          "source_id": "EMP-DISCOVERY-JRDS-2026",
+          "observed_status_on_checked_date": "unknown",
+          "source_requirements_paraphrased": [
+            "The role concerns NLP/LLM data science, prototyping, evaluation, literature review, delivery and communication to technical and business audiences.",
+            "The advert names SQL/database work, Python, problem definition and clear communication; Git, R, NLP, TensorFlow/PyTorch, LLMs and Spark/Dask are advantageous.",
+            "It asks for an Honours or Master's degree in named or similar quantitative fields; a PhD is advantageous, and other qualifications may be considered with relevant experience.",
+            "The advert says candidates at all experience levels will be considered."
+          ],
+          "candidate_eligibility": "No nationality or age condition is stated. A BCom Informatics degree is not explicitly named; the advert's 'similar quantitative field' and experience wording should not be treated as an automatic equivalence."
+        }
+      ],
+      "proposed_portfolio_project": {
+        "name": "KAIRO Opportunity Evidence Board",
+        "proposal_only": true,
+        "description": "A local, manually curated demo that turns a small synthetic role dataset into traceable requirements, data-quality checks and a decision dashboard. Keep real employer postings as cited human-reviewed source records; use synthetic values for the working dataset.",
+        "measurable_working_tasks": [
+          "Write a one-page problem statement, 6 user stories and 10 acceptance criteria for a role-evidence workflow.",
+          "Model one current-to-future workflow and document 8 field definitions with source lineage and allowed unknown states.",
+          "Create 20 synthetic role records and 8 repeatable data-quality rules; seed at least 6 known defects and show each detected defect with a test record.",
+          "Use SQL to produce 5 decision queries and a dashboard with counts by role family, status evidence and missing requirement fields.",
+          "Publish a short findings memo that states which conclusions are supported, unknown or out of scope."
+        ],
+        "success_measure_note": "These numbers are proposed portfolio acceptance criteria, not employer thresholds or evidence of completed work."
+      },
+      "learning_resources": ["LEARN-MS-TSQL", "LEARN-PYTHON-DOCS"]
+    },
+    {
+      "id": "ROLE-SOFTWARE",
+      "family": "Software engineering and automation",
+      "employer_examples": [
+        {
+          "source_id": "EMP-FNB-ENGTECH-2026",
+          "observed_status_on_checked_date": "expired",
+          "source_requirements_paraphrased": [
+            "The 2026 FNB Engineering & Technology graduate advert describes permanent full-time work on end-to-end technology solutions across design, development, testing, implementation and systems management.",
+            "It asks for strong academic results and an academic transcript, final-year study in relevant university programmes particularly technology or engineering, and strong coding aptitude with analytical, conceptual and problem-solving skills.",
+            "The programme description includes monthly training and an action-learning project."
+          ],
+          "candidate_eligibility": "The advert names technology or engineering fields but does not explicitly list BCom Informatics. It does not provide a citizenship or age requirement in the retrieved text. The posting closed 2026-08-31, before the checked date."
+        }
+      ],
+      "proposed_portfolio_project": {
+        "name": "Offline Source-to-Lesson Service",
+        "proposal_only": true,
+        "description": "A small local prototype that imports synthetic learning notes, produces a traceable lesson outline, and handles missing or unsupported content safely without a network connection.",
+        "measurable_working_tasks": [
+          "Define a versioned request/response schema and document 6 error cases.",
+          "Implement a deterministic local flow for 5 synthetic source files and preserve source references for every generated lesson section.",
+          "Add at least 12 automated cases covering valid input, malformed data, unsupported claims, restart and offline behavior.",
+          "Record cold-start time and memory use over 10 local runs, publishing the measurement method and raw results."
+        ],
+        "success_measure_note": "These counts and measurements are proposed portfolio acceptance criteria, not FNB requirements or completed results. Keep any AI-generated output visibly marked as unverified until reviewed."
+      },
+      "learning_resources": ["LEARN-PYTHON-DOCS", "LEARN-MS-TSQL"]
+    },
+    {
+      "id": "ROLE-SERVICE-OPS",
+      "family": "Digital customer support and service operations",
+      "employer_examples": [
+        {
+          "source_id": "EMP-DISCOVERY-DIGITALSUPPORT-2026",
+          "observed_status_on_checked_date": "unknown",
+          "source_requirements_paraphrased": [
+            "The role supports members, advisors, healthcare professionals and employers with digital products and technical issues.",
+            "Duties include troubleshooting across digital platforms, explaining tools, helping users manage and secure accounts, and logging/tracking/resolving incidents.",
+            "The listed skills are communication, empathy, problem-solving, technical skills, resilience and time management.",
+            "The advert asks for matric and at least one year of call-centre/customer-service experience."
+          ],
+          "candidate_eligibility": "No nationality, age or post-matric qualification rule is stated. The one-year experience condition is explicit; a portfolio project does not replace it."
+        }
+      ],
+      "proposed_portfolio_project": {
+        "name": "KAIRO Digital Support Case Simulator",
+        "proposal_only": true,
+        "description": "A private local practice simulator using synthetic account, document-upload and audio-playback support cases, with an incident log, safe troubleshooting checklist and escalation notes.",
+        "measurable_working_tasks": [
+          "Create 12 synthetic cases across 3 issue types and define the expected safe resolution or escalation for each.",
+          "Write a support playbook with identity/privacy checks, 5 diagnostic questions per issue type and a clear escalation boundary.",
+          "Run all 12 cases against the playbook and record first-step accuracy, correct escalation and time per case; show the raw synthetic scenario results.",
+          "Build a local dashboard for case category, outcome, unresolved reason and median simulated handling time."
+        ],
+        "success_measure_note": "The case count and metrics are proposed portfolio acceptance criteria using synthetic scenarios; they do not establish real customer-service performance or satisfy the advert's experience condition."
+      },
+      "learning_resources": ["LEARN-MS-CUSTOMER-SERVICE"]
+    }
+  ],
+  "experience_providers": [
+    {
+      "source_id": "PROVIDER-MLAB-TECHSKILLS",
+      "type": "software skills and work-experience programme",
+      "evidence_summary": "mLab describes coding training and work experience, with a portfolio of Android, iOS and web solutions and additional cloud, Scrum and emerging-technology exposure. It says final-year WIL students are encouraged and names BCom Informatics (Information Systems) among example related qualifications.",
+      "listed_criteria_paraphrased": [
+        "The page describes a 6-12 month programme.",
+        "It lists South African citizenship, unemployed youth/graduate age 18-35, proximity to a CodeTribe Academy facility, no criminal record, and at least 12 months of IT qualification/NQF level 5 with programming background among ideal candidate criteria.",
+        "Final-year students doing WIL are also encouraged to apply."
+      ],
+      "current_status_on_checked_date": "unknown; the page says to apply if calls are open or register for notification, but displays no current call dates",
+      "cost": "unknown; not stated on source page",
+      "fit_note": "Potentially relevant to software and applied business-informatics portfolios; these are provider criteria, not employer requirements or a promise of placement."
+    },
+    {
+      "source_id": "PROVIDER-WORLDSKILLSZA-2027",
+      "type": "national technology and vocational skills competition",
+      "evidence_summary": "The official government announcement says the 2027 national competition application window is 2026-09-01 through 2027-04-30. WorldSkills South Africa's official skills listing includes IT Software Solutions for Business. The application page lists study/apprenticeship-related eligibility routes.",
+      "listed_criteria_paraphrased": [
+        "Applicants must be studying a qualification related to the skill at a listed institution, in a related apprenticeship/learnership, or have an accredited qualification in the skill, as summarized in the dated government announcement.",
+        "The provider application page asks for institution province and institution/provider name."
+      ],
+      "current_status_on_checked_date": "official government announcement says applications opened 2026-09-01 and close 2027-04-30; confirm the desired skill's current terms on the application page",
+      "cost": "unknown; not stated on reviewed official pages",
+      "conflict_note": "The application form contains an age note referring to 2028 for three skills. That note is inconsistent in cycle labeling with the separate 2027 competition dates, so age-specific eligibility is unresolved here."
+    }
+  ],
+  "claim_map": [
+    {"claim_id": "C-FNB-REQ", "source_ids": ["EMP-FNB-ENGTECH-2026"], "supports": "FNB role description, qualification wording, technical/analytical skills, requisition, location and 2026-08-31 close date."},
+    {"claim_id": "C-DISCOVERY-DS-REQ", "source_ids": ["EMP-DISCOVERY-JRDS-2026"], "supports": "Discovery Junior Data Scientist duties, named technical skills, degree wording and page date."},
+    {"claim_id": "C-DISCOVERY-BA-REQ", "source_ids": ["EMP-DISCOVERY-BA-2026"], "supports": "Discovery Business Analyst duties, skills, Informatics degree wording and experience expectations."},
+    {"claim_id": "C-DISCOVERY-SUPPORT-REQ", "source_ids": ["EMP-DISCOVERY-DIGITALSUPPORT-2026"], "supports": "Discovery Digital Support duties, skills, matric requirement and one-year customer-service requirement."},
+    {"claim_id": "C-MLAB-EXPERIENCE", "source_ids": ["PROVIDER-MLAB-TECHSKILLS"], "supports": "mLab programme format, work-experience and portfolio description, eligibility examples and unknown intake/cost."},
+    {"claim_id": "C-WSZA-EXPERIENCE", "source_ids": ["PROVIDER-WORLDSKILLSZA-2027"], "supports": "2027 competition application dates and eligibility summary, official application content, and identified 2028 note conflict."},
+    {"claim_id": "C-FREE-LEARNING", "source_ids": ["LEARN-MS-TSQL", "LEARN-PYTHON-DOCS", "LEARN-MS-CUSTOMER-SERVICE"], "supports": "Official self-paced preparation resources, their stated durations and learning scope; no certification or job outcome claim."}
+  ],
+  "conflicts_and_unknowns": [
+    "The FNB Workday page did not yield readable text through direct opening; the official indexed job text supplied the requisition and 2026-08-31 closing date. The page was marked expired because that stated deadline has passed.",
+    "Discovery's Junior Data Scientist, Business Analyst and Digital Support pages were visible with Apply actions on 2026-10-22, but no closing date or explicit open/closed status was shown. Their application status is therefore unknown.",
+    "No source in this pack establishes that a particular BCom Informatics student meets the Discovery data-science degree wording or the FNB technology programme's relevant-programme wording.",
+    "mLab intake dates and participant fees were not shown on the reviewed page.",
+    "WorldSkills South Africa's application page contains a 2028 age note while the separate official 2027 competition announcement gives the current round dates. Verify skill-specific age rules with the provider before relying on them.",
+    "Employer requisition numbers were displayed only for the FNB advert (R46838); the reviewed Discovery pages did not display a requisition number in extracted content.",
+    "Portfolio tasks and numeric acceptance measures in this pack are suggestions for future work. They are not employer requirements, and no performance or completion result is claimed."
+  ]
+}

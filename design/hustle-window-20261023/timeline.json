@@ -1,0 +1,12 @@
+{
+ "duration":20,"fps":24,"width":1280,"height":720,
+ "kind":"Illustrated concept animatic; not actual app footage or a final submission",
+ "segments":[
+  {"start":0,"end":4,"scene":"pressure","caption":"Notes. Deadlines. No lab. Where do I start?","voice":"Notes. Deadlines. No lab. Where do I start?"},
+  {"start":4,"end":7,"scene":"reveal","caption":"Meet KAIRO, your interactive learning companion.","voice":"Meet Cairo, your interactive learning companion."},
+  {"start":7,"end":11,"scene":"material","caption":"Bring your material. Understand it. Explore it.","voice":"Bring your material. Understand it. Explore it."},
+  {"start":11,"end":15,"scene":"practice","caption":"Practise, and build evidence of your skills.","voice":"Practice, and build evidence of your skills."},
+  {"start":15,"end":18,"scene":"next","caption":"Next: employers and proposed partner rewards.","voice":"Next: employers and proposed partner rewards."},
+  {"start":18,"end":20,"scene":"close","caption":"KAIRO. Put knowledge to work.","voice":"Cairo. Put knowledge to work."}
+ ]
+}

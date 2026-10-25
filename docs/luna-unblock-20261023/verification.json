@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-23",
+  "owner": "codex-luna-unblock-20261023-i",
+  "model": "gpt-6",
+  "effort": "unknown",
+  "curriculumToolOutputInspected": true,
+  "curriculumClaimActuallySucceeded": false,
+  "curriculumBusError": "Register your unique session agent ID first",
+  "officialPdfAvailableLocally": true,
+  "pdfPageCount": 373,
+  "pdfEditionOnFirstPage": "2026",
+  "pdfHashEvidence": "download.json",
+  "chooserCommand": "node --test tests/module-chooser-ui.test.mjs",
+  "chooserExitCode": 1,
+  "chooserPass": 7,
+  "chooserFail": 1,
+  "chooserAssertionCause": "Percentage guard incorrectly scans CSS max-width:100%",
+  "additionalCodeReviewFinding": "Year options and allowed-set use the already filtered current-year list",
+  "workerFilesEdited": false,
+  "userOwnedChatsMessaged": false,
+  "browserObserved": false,
+  "newDeployments": false
+}

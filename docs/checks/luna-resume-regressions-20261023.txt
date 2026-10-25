@@ -1,0 +1,19 @@
+KAIRO isolated resume start policy regression checks
+Date: 2026-10-23 (Africa/Johannesburg)
+Registered settings: gpt-6-luna / low (shown by user's screenshot and this client selection).
+
+From studio:
+  node --test tests/classroom-resume.test.mjs tests/classroom-resume-regression.test.mjs
+  Result: exit 0; 19 passed, 0 failed, 0 skipped.
+  .\node_modules\.bin\tsc.cmd --noEmit
+  Result: exit 0; no diagnostics.
+
+Coverage added: canonical explicit step precedence; absent/malformed/out-of-range links; saved versus stale/corrupt/unavailable cursor policy; source revision mismatch preserving raw bytes; corrupt/unsupported/out-of-range storage records; cross-tab write and stale permission conflict; two successive fresh-snapshot saves; envelope allowlist and unchanged /learn progress key; frozen input and reading-first/3D invitation policy.
+
+Changed files:
+  studio/src/classroom-resume-policy/model.ts
+  studio/tests/classroom-resume-regression.test.mjs
+  docs/checks/luna-resume-regressions-20261023.txt
+  coordination/handoffs/2026-10-23-luna-resume-regressions.md
+
+Limits: deterministic Node helper/policy tests only. Cross-tab behavior is an in-memory interleaving, not browser storage-event or atomic-lock validation. Re-reading before setItem narrows but cannot eliminate a race between that read and write. No browser/device/route/React, voice, cloud, network or deployment acceptance. Resume in the app remains unaccepted pending parent integration and review.

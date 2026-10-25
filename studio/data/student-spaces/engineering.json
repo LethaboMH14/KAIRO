@@ -1,0 +1,89 @@
+{
+  "id": "wits-bsc-eng-mechanical-year-3-2026",
+  "field": "engineering",
+  "institution": "University of the Witwatersrand, Johannesburg",
+  "programme": "BSc (Eng) Mechanical Engineering",
+  "year": 3,
+  "academicYear": 2026,
+  "modules": [
+    {
+      "code": "MECN3071A",
+      "title": "Fluid Mechanics II",
+      "year": 3,
+      "semester": null,
+      "summary": "Builds on fluid mechanics to analyse more advanced flow behaviour relevant to mechanical systems.",
+      "sourceUrl": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+      "sourceLocator": "2026 EBE Senate Rules, Mechanical Engineering, Year of Study III; printed p. 52; syllabus entry MECN3071A",
+      "activity": "pump",
+      "activityNote": "KAIRO-authored enrichment mapping: use the pump model to connect fluid-flow concepts with an illustrative system. This is not represented as a Wits-prescribed activity."
+    },
+    {
+      "code": "MECN3077A",
+      "title": "Thermodynamics II",
+      "year": 3,
+      "semester": null,
+      "summary": "Extends thermodynamics concepts for analysis of mechanical energy systems.",
+      "sourceUrl": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+      "sourceLocator": "2026 EBE Senate Rules, Mechanical Engineering, Year of Study III; printed p. 52; syllabus entry MECN3077A",
+      "activity": "reading",
+      "activityNote": "KAIRO reading enrichment: source-grounded explanatory material; no specific prescribed exercise is claimed."
+    },
+    {
+      "code": "MECN3066A",
+      "title": "Mechatronics II",
+      "year": 3,
+      "semester": null,
+      "summary": "Introduces a systems approach to analysing and designing integrated mechatronic systems, with practical laboratory and project experience described in the syllabus.",
+      "sourceUrl": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+      "sourceLocator": "2026 EBE Syllabuses, MECN3066A; 2026 EBE Senate Rules, Mechanical Engineering, Year of Study III course list",
+      "activity": "motor",
+      "activityNote": "KAIRO-authored enrichment mapping: explore the existing motor model and speed calculation as an illustrative electromechanical system; not a university-assigned lab or project."
+    },
+    {
+      "code": "MECN3069A",
+      "title": "Engineering Tools II",
+      "year": 3,
+      "semester": null,
+      "summary": "Uses digital computation and numerical modelling to study engineering problems, including model validation and interpretation.",
+      "sourceUrl": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+      "sourceLocator": "2026 EBE Syllabuses, MECN3069A; 2026 EBE Senate Rules, Mechanical Engineering, Year of Study III course list",
+      "activity": "reading",
+      "activityNote": "KAIRO-authored reading enrichment about model assumptions and interpretation; no curriculum exercise or numerical solver is implied."
+    },
+    {
+      "code": "MECN3079A",
+      "title": "Mechanical Engineering Investigation",
+      "year": 3,
+      "semester": null,
+      "summary": "Develops the ability to plan and conduct mechanical engineering investigations, evaluate results, and communicate findings.",
+      "sourceUrl": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+      "sourceLocator": "2026 EBE Syllabuses, MECN3079A; 2026 EBE Senate Rules, Mechanical Engineering, Year of Study III course list",
+      "activity": "reading",
+      "activityNote": "KAIRO-authored enrichment: review evidence and distinguish source claims from interpretation; this does not satisfy or reproduce a Wits investigation."
+    },
+    {
+      "code": "MECN3080A",
+      "title": "Mechanical Engineering Design",
+      "year": 3,
+      "semester": null,
+      "summary": "Applies mechanical engineering design methods to develop and assess engineering solutions.",
+      "sourceUrl": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+      "sourceLocator": "2026 EBE Syllabuses, MECN3080A; 2026 EBE Senate Rules, Mechanical Engineering, Year of Study III course list",
+      "activity": "motor",
+      "activityNote": "KAIRO-authored enrichment mapping: inspect the motor assembly as an illustrative design object; it is not a prescribed Wits design task."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.wits.ac.za/course-finder/undergraduate/ebe/mechanical-engineering/",
+      "title": "Mechanical Engineering - Wits University",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "url": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+      "title": "2026 Senate Rules and Syllabuses for the Faculty of Engineering and the Built Environment",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "limits": "Illustrative public-curriculum selection for a coherent third-year Mechanical Engineering space, not an enrolment record, transcript, complete curriculum, Wits integration, endorsement, or claim of learner attainment. The course finder establishes year-level listing; the 2026 EBE rules establish official course codes and year grouping. Semester fields are null because the inspected course-level material did not verify semester placement for every selected course. KAIRO activity labels are authored enrichment mappings; the university sources do not prescribe the linked motor or pump studio interactions. Wits source text is summarized in original wording; no syllabus prose is reproduced. Source documents are publicly accessible, but their reuse/licensing terms were not verified; links and factual metadata only are included."
+}

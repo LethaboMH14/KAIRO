@@ -1,0 +1,111 @@
+{
+ "source": "Rain v3.3 rain_v3.2.blend (Blender Studio)",
+ "licence": "CC-BY-4.0",
+ "scriptsExecuted": false,
+ "mode": "rain+restyle",
+ "engine": "BLENDER_EEVEE_NEXT",
+ "heightM": 1.6488,
+ "headPoint": [
+  0.0,
+  -0.1005,
+  1.4418
+ ],
+ "counts": {
+  "verts": 41363,
+  "tris": 79594,
+  "meshes": 18,
+  "morphTargets": {
+   "GEO-rain-gums_lower": 2,
+   "GEO-rain-tongue": 1,
+   "GEO-rain-eyelashes": 1,
+   "GEO-rain-head": 24,
+   "GEO-rain-body": 71,
+   "GEO-rain-eyes": 6,
+   "GEO-rain-eye_cornea": 2,
+   "GEO-rain-shoes": 8,
+   "GEO-rain-top": 16,
+   "GEO-rain-jeans": 8,
+   "GEO-rain-hair_main": 1
+  },
+  "armatures": {
+   "RIG-rain": {
+    "bones": 2166,
+    "deform": 392
+   }
+  }
+ },
+ "shots": {
+  "front": "rain_restyle_front.png",
+  "three_quarter": "rain_restyle_three_quarter.png",
+  "face": "rain_restyle_face.png"
+ },
+ "restyle": [
+  [
+   "GEO-rain-eyebrows",
+   "MAT-rain.eyebrows",
+   "hair",
+   true
+  ],
+  [
+   "GEO-rain-eyelashes",
+   "MAT-rain.eyelashes",
+   "hair",
+   true
+  ],
+  [
+   "GEO-rain-head",
+   "MAT-rain.body",
+   "skin",
+   1
+  ],
+  [
+   "GEO-rain-body",
+   "MAT-rain.body",
+   "skin",
+   1
+  ],
+  [
+   "GEO-rain-scarf",
+   "",
+   "hidden",
+   true
+  ],
+  [
+   "GEO-rain-top",
+   "MAT-rain.top",
+   "top",
+   true
+  ],
+  [
+   "GEO-rain-jeans",
+   "MAT-rain.jeans",
+   "trousers",
+   3
+  ],
+  [
+   "GEO-rain-hair_main",
+   "MAT-rain.hair",
+   "hair",
+   3
+  ],
+  [
+   "GEO-rain-hair_ponytail",
+   "MAT-rain.hair",
+   "hair",
+   3
+  ],
+  [
+   "GEO-rain-hair_strand",
+   "MAT-rain.hair",
+   "hair",
+   3
+  ],
+  [
+   "GEO-rain-hairband",
+   "MAT-rain.hairband",
+   "hair",
+   true
+  ]
+ ],
+ "seconds": 85.6
+}

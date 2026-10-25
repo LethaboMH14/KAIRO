@@ -1,0 +1,3 @@
+bus.sqlite3
+bus.sqlite3-*
+__pycache__/

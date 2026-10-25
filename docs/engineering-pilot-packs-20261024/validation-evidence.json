@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-23T23:17:48.342Z",
+  "command": "node docs/engineering-pilot-packs-20261024/validate.mjs",
+  "result": "pass",
+  "packCount": 2,
+  "stepCount": 6,
+  "practiceCount": 2,
+  "sourceRefCount": 6,
+  "currentCodeFilesReadOnlyReviewed": [
+    "studio/src/engineering/EngineeringStudio.tsx",
+    "studio/src/engineering/fieldMath.ts",
+    "studio/src/engineering/teaching.ts",
+    "studio/src/engineering/motorContent.ts",
+    "studio/src/pump-lab/PumpLab.tsx",
+    "studio/src/pump-lab/physics.ts",
+    "docs/pump-lab/MODEL.md",
+    "docs/pump-lab/README.md"
+  ],
+  "negativeChecks": [
+    "reject unknown source reference",
+    "reject capability status outside published enum",
+    "reject extra top-level capability/bridge field",
+    "feature table includes implemented/manual/planned statuses and Pump Lab mount limit",
+    "all listed current-code review files exist"
+  ],
+  "limits": [
+    "Structural checks do not independently prove the accuracy of engineering claims; cited references and current-code mapping remain for root/human review.",
+    "No browser, route, device, screen-reader, learner, or engineering specialist acceptance was performed."
+  ]
+}

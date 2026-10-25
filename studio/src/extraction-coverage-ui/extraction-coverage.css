@@ -1,0 +1,8 @@
+.extraction-coverage{border:1px solid #d9d8d0;border-radius:14px;background:#fffefa;padding:1rem;color:#26312b}
+.extraction-coverage h2{font-size:1rem;margin:0 0 .75rem}
+.extraction-coverage ul{list-style:none;padding:0;margin:.5rem 0;display:grid;gap:.5rem}
+.extraction-coverage li{display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem .7rem;font-size:.9rem}
+.extraction-coverage__status{font-weight:650}
+.extraction-coverage__status--text{color:#176443}.extraction-coverage__status--ocr{color:#815500}.extraction-coverage__status--needs-review,.extraction-coverage__status--skipped{color:#923d32}
+.extraction-coverage__reason,.extraction-coverage__unknown,.extraction-coverage__warnings,.extraction-coverage__limit{color:#555e58;font-size:.84rem;line-height:1.45}
+.extraction-coverage__warnings{padding-left:1.1rem;list-style:disc!important}

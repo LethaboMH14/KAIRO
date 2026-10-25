@@ -1,0 +1,37 @@
+✔ canonical navigation keeps the older CS studio while teaching and evidence share source context (2.6126ms)
+✔ actual lesson contracts connect reviewed load, practice record, notes export and protected resume (3.3683ms)
+✔ selected-brand shell and integrated practice/evidence render real source context safely (5602.6634ms)
+3:52:05 AM [vite] (client) Re-optimizing dependencies because vite config has changed
+✔ closed dialog performs no voice request and renders no camera subtree (2154.4649ms)
+✔ the open event stops narration, opens the temporary dialog and loads voice availability (24.7236ms)
+✔ Escape and Close each restore the closed state and remove the camera subtree (4.3607ms)
+✔ voice labels reflect installed language support and distinguish language choice from translation (2.3762ms)
+✔ passage translation retains only a valid lesson ID from the current source lesson (2.6315ms)
+✔ a late voice response after closing cannot update the next dialog status (4.4066ms)
+✔ material to lesson to studio to working keeps exact source and lesson context (2.3024ms)
+✔ cohort activities remain relevant and unmatched uploads do not inherit a false module (2.6822ms)
+✔ invalid IDs and unknown routes cannot become redirects or false saved lesson links (0.4447ms)
+✔ route determines current stage; unrelated evidence query does not mislabel a studio (0.4694ms)
+✔ direction notes are bounded learner-authored data; unreadable previous records are rejected (65.1004ms)
+3:52:08 AM [vite] (client) Re-optimizing dependencies because vite config has changed
+✔ load the real PumpHost and pump snapshot/report modules through Vite SSR (2688.4587ms)
+✔ return link and exit wording preserve the valid lesson ID, and the host supplies its panel to the actual PumpLab slot (36.6798ms)
+✔ invalid lesson context keeps the exit label consistent with its studios destination (3.0475ms)
+✔ onContext stops narration only when case, target, task, reading count, or completion changes (4.6441ms)
+✔ valid saved pump snapshots are passed through and accepted snapshots can be saved (3.5428ms)
+✔ unreadable saved snapshots stay intact and are never overwritten by a new snapshot (2.8571ms)
+✔ evidence retains its lesson origin, is bounded, and carries no private credentials or verified-qualification claim (18.4061ms)
+3:52:13 AM [vite] (client) Re-optimizing dependencies because vite config has changed
+✔ actual StudentHome renders correct engineering modules, saved lesson/source actions, and no implied marks (4334.2943ms)
+✔ actual StudentHome renders correct informatics modules and related CS/source/lesson actions (6.5986ms)
+✔ actual Studios renders only engineering rooms and common source action (11.1071ms)
+✔ actual Studios renders only informatics room and common source action (4.8335ms)
+✔ actual StudentHome safely escapes untrusted identity and module text (2.7913ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12961.1788

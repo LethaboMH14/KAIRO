@@ -1,0 +1,578 @@
+{
+  "file": "Rain v3.3/rain_v3.2.blend",
+  "autoExecute": false,
+  "note": "Structural inspection only. Rig scripts were not executed; deformation/export acceptance remains.",
+  "armatures": [
+    {
+      "name": "RIG-rain",
+      "bones": 2166
+    }
+  ],
+  "meshes": [
+    {
+      "name": "GEO-rain-body",
+      "vertices": 10256,
+      "shapeKeys": [
+        "Basis",
+        "FingerBends1",
+        "FingerBends2",
+        "FingerBends3",
+        "Spine_Fwd",
+        "Spine_Back",
+        "Ribcage_Fwd",
+        "Ribcage_Fwd_Ext",
+        "Chest_Fwd",
+        "Chest_Back",
+        "F_Chest_Side.L",
+        "Elbow1.L",
+        "Elbow2.L",
+        "XZ_Wrist_Down.L",
+        "XZ_Wrist_Up.L",
+        "XZ_Wrist_Fwd.L",
+        "XZ_Wrist_Back.L",
+        "Thigh_Fwd.L",
+        "Thigh_Fwd_Ext.L",
+        "Thigh_Back.L",
+        "Z_Thigh_Side_Out.L",
+        "Ankle_Down.L",
+        "Ankle_Up.L",
+        "Z_Ankle_In.L",
+        "Z_Ankle_Out.L",
+        "Finger_Index1.R",
+        "Finger_Index2.R",
+        "Finger_Index3.R",
+        "Finger_Middle1.R",
+        "Finger_Middle2.R",
+        "Finger_Middle3.R",
+        "Finger_Ring1.R",
+        "Finger_Ring2.R",
+        "Finger_Ring3.R",
+        "Finger_Pinky1.R",
+        "Finger_Pinky2.R",
+        "Finger_Pinky3.R",
+        "Finger_Thumb1.R",
+        "Finger_Thumb2.R",
+        "Finger_Thumb3.R",
+        "F_Chest_Side.R",
+        "Elbow1.R",
+        "Elbow2.R",
+        "XZ_Wrist_Down.R",
+        "XZ_Wrist_Up.R",
+        "XZ_Wrist_Fwd.R",
+        "XZ_Wrist_Back.R",
+        "Thigh_Fwd.R",
+        "Thigh_Fwd_Ext.R",
+        "Thigh_Back.R",
+        "Z_Thigh_Side_Out.R",
+        "Ankle_Down.R",
+        "Ankle_Up.R",
+        "Z_Ankle_In.R",
+        "Z_Ankle_Out.R",
+        "Finger_Index1.L",
+        "Finger_Index2.L",
+        "Finger_Index3.L",
+        "Finger_Middle1.L",
+        "Finger_Middle2.L",
+        "Finger_Middle3.L",
+        "Finger_Ring1.L",
+        "Finger_Ring2.L",
+        "Finger_Ring3.L",
+        "Finger_Pinky1.L",
+        "Finger_Pinky2.L",
+        "Finger_Pinky3.L",
+        "Finger_Thumb1.L",
+        "Finger_Thumb2.L",
+        "Finger_Thumb3.L",
+        "Shoulder_Down.L",
+        "Shoulder_Down.R"
+      ]
+    },
+    {
+      "name": "GEO-rain-body_nomask",
+      "vertices": 10256,
+      "shapeKeys": [
+        "Basis",
+        "FingerBends1",
+        "FingerBends2",
+        "FingerBends3",
+        "Finger_Index1.L",
+        "Finger_Index2.L",
+        "Finger_Index3.L",
+        "Finger_Middle1.L",
+        "Finger_Middle2.L",
+        "Finger_Middle3.L",
+        "Finger_Ring1.L",
+        "Finger_Ring2.L",
+        "Finger_Ring3.L",
+        "Finger_Pinky1.L",
+        "Finger_Pinky2.L",
+        "Finger_Pinky3.L",
+        "Finger_Thumb1.L",
+        "Finger_Thumb2.L",
+        "Finger_Thumb3.L",
+        "Spine_Fwd",
+        "Spine_Back",
+        "Ribcage_Fwd",
+        "Ribcage_Fwd2",
+        "Ribcage_Fwd_Ext",
+        "Ribcage_Fwd_Ext2",
+        "Ribcage_Back",
+        "Chest_Fwd",
+        "Chest_Back",
+        "F_Chest_Side.L",
+        "Elbow1.L",
+        "Elbow2.L",
+        "XZ_Wrist_Down.L",
+        "XZ_Wrist_Up.L",
+        "XZ_Wrist_Fwd.L",
+        "XZ_Wrist_Back.L",
+        "Thigh_Fwd.L",
+        "Thigh_Fwd_Ext.L",
+        "Thigh_Back.L",
+        "Z_Thigh_Side_Out.L",
+        "Ankle_Down.L",
+        "Ankle_Up.L",
+        "Z_Ankle_In.L",
+        "Z_Ankle_Out.L",
+        "Eye_Close_Corrective.L",
+        "Cheek_Suck.L",
+        "Finger_Index1.R",
+        "Finger_Index2.R",
+        "Finger_Index3.R",
+        "Finger_Middle1.R",
+        "Finger_Middle2.R",
+        "Finger_Middle3.R",
+        "Finger_Ring1.R",
+        "Finger_Ring2.R",
+        "Finger_Ring3.R",
+        "Finger_Pinky1.R",
+        "Finger_Pinky2.R",
+        "Finger_Pinky3.R",
+        "Finger_Thumb1.R",
+        "Finger_Thumb2.R",
+        "Finger_Thumb3.R",
+        "F_Chest_Side.R",
+        "Elbow1.R",
+        "Elbow2.R",
+        "XZ_Wrist_Down.R",
+        "XZ_Wrist_Up.R",
+        "XZ_Wrist_Fwd.R",
+        "XZ_Wrist_Back.R",
+        "Thigh_Fwd.R",
+        "Thigh_Fwd_Ext.R",
+        "Thigh_Back.R",
+        "Z_Thigh_Side_Out.R",
+        "Thigh_Twist_In.R",
+        "Thigh_Twist_Out.R",
+        "Ankle_Down.R",
+        "Ankle_Up.R",
+        "Z_Ankle_In.R",
+        "Z_Ankle_Out.R",
+        "Eye_Close_Corrective.R",
+        "Fingers_Adjust"
+      ]
+    },
+    {
+      "name": "GEO-rain-eye_cornea",
+      "vertices": 642,
+      "shapeKeys": [
+        "Basis",
+        "sphere",
+        "buldge"
+      ]
+    },
+    {
+      "name": "GEO-rain-eye_dots",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "GEO-rain-eyebrows",
+      "vertices": 148,
+      "shapeKeys": []
+    },
+    {
+      "name": "GEO-rain-eyelashes",
+      "vertices": 120,
+      "shapeKeys": [
+        "Basis",
+        "fix"
+      ]
+    },
+    {
+      "name": "GEO-rain-eyes",
+      "vertices": 1418,
+      "shapeKeys": [
+        "Basis",
+        "push out",
+        "smooth edge",
+        "Dilate_Out.L",
+        "Dilate_In.L",
+        "Dilate_Out.R",
+        "Dilate_In.R"
+      ]
+    },
+    {
+      "name": "GEO-rain-eyes_viewport",
+      "vertices": 1348,
+      "shapeKeys": [
+        "Basis",
+        "Flat",
+        "Dilate_Out.L",
+        "Dilate_In.L",
+        "Dilate_Out.R",
+        "Dilate_In.R"
+      ]
+    },
+    {
+      "name": "GEO-rain-gums_lower",
+      "vertices": 1542,
+      "shapeKeys": [
+        "Base",
+        "mouth_open",
+        "Basis"
+      ]
+    },
+    {
+      "name": "GEO-rain-gums_upper",
+      "vertices": 1542,
+      "shapeKeys": []
+    },
+    {
+      "name": "GEO-rain-hair_main",
+      "vertices": 2204,
+      "shapeKeys": [
+        "Basis",
+        "Key 1"
+      ]
+    },
+    {
+      "name": "GEO-rain-hair_ponytail",
+      "vertices": 579,
+      "shapeKeys": []
+    },
+    {
+      "name": "GEO-rain-hair_strand",
+      "vertices": 400,
+      "shapeKeys": []
+    },
+    {
+      "name": "GEO-rain-hairband",
+      "vertices": 480,
+      "shapeKeys": []
+    },
+    {
+      "name": "GEO-rain-head",
+      "vertices": 6395,
+      "shapeKeys": [
+        "Basis",
+        "mouth_open",
+        "LipsAdjust",
+        "LipsWide.L",
+        "LipsUp.L",
+        "Smile.L",
+        "CheekPuff.L",
+        "LipsWide.R",
+        "LipsUp.R",
+        "Smile.R",
+        "CheekPuff.R",
+        "LipsPuff_Upper",
+        "LipsPuff_Lower",
+        "EyebrowsTogether.L",
+        "EyebrowsTogether.R",
+        "EyebrowsDown.L",
+        "EyebrowsDown.R",
+        "EyelidsClose.L",
+        "EyelidsClose.R",
+        "LipsPuff_Upper_bkp",
+        "LipsPuff_Lower_bkp",
+        "Lips_Corner_In.L",
+        "Lips_Corner_In.R",
+        "Head_Back",
+        "Head_Forward"
+      ]
+    },
+    {
+      "name": "GEO-rain-jeans",
+      "vertices": 4531,
+      "shapeKeys": [
+        "Basis",
+        "Thigh_Fwd.L",
+        "Thigh_Fwd_Ext.L",
+        "Thigh_Back.L",
+        "Z_Thigh_Side_Out.L",
+        "Thigh_Fwd.R",
+        "Thigh_Fwd_Ext.R",
+        "Thigh_Back.R",
+        "Z_Thigh_Side_Out.R"
+      ]
+    },
+    {
+      "name": "GEO-rain-scarf",
+      "vertices": 1285,
+      "shapeKeys": []
+    },
+    {
+      "name": "GEO-rain-shoes",
+      "vertices": 6634,
+      "shapeKeys": [
+        "Basis",
+        "Ankle_Down.L",
+        "Ankle_Up.L",
+        "Ankle_In.L",
+        "Ankle_Out.L",
+        "Ankle_Down.R",
+        "Ankle_Up.R",
+        "Ankle_In.R",
+        "Ankle_Out.R"
+      ]
+    },
+    {
+      "name": "GEO-rain-tongue",
+      "vertices": 275,
+      "shapeKeys": [
+        "Basis",
+        "mouth_open"
+      ]
+    },
+    {
+      "name": "GEO-rain-top",
+      "vertices": 1632,
+      "shapeKeys": [
+        "Basis",
+        "Thigh_Fwd.L",
+        "Thigh_Fwd_Ext.L",
+        "Thigh_Back.L",
+        "Z_Thigh_Side_Out.L",
+        "Thigh_Fwd.R",
+        "Thigh_Fwd_Ext.R",
+        "Thigh_Back.R",
+        "Z_Thigh_Side_Out.R",
+        "Spine_Fwd",
+        "Spine_Back",
+        "Ribcage_Fwd",
+        "Ribcage_Fwd_Ext",
+        "Chest_Fwd",
+        "Chest_Back",
+        "F_Chest_Side.L",
+        "F_Chest_Side.R"
+      ]
+    },
+    {
+      "name": "WGT-Arrow3D",
+      "vertices": 16,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-ArrowHead",
+      "vertices": 5,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Capsule_Flat",
+      "vertices": 26,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Carpal",
+      "vertices": 34,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Circle",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Clavicle",
+      "vertices": 44,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Cogwheel",
+      "vertices": 36,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Cube",
+      "vertices": 8,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Eye_Target",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Eyebrow.L",
+      "vertices": 22,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Eyebrow.R",
+      "vertices": 22,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Eyelid_Lower",
+      "vertices": 34,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Eyelid_Upper",
+      "vertices": 34,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Eyes_Target",
+      "vertices": 56,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-FK_Limb",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-FK_Limb_Offset",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Foot_Parent.L",
+      "vertices": 46,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Foot_Parent.R",
+      "vertices": 46,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-FootRoll",
+      "vertices": 58,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Hand_IK",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Hemisphere",
+      "vertices": 26,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Hips",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Jaw",
+      "vertices": 20,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Mouth",
+      "vertices": 7,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Mouth_Bottom",
+      "vertices": 8,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Mouth_Top",
+      "vertices": 8,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-MSTR-Head_Lower",
+      "vertices": 15,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-MSTR-Head_Upper",
+      "vertices": 17,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Nose_Master",
+      "vertices": 33,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Oval",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Pole_Line",
+      "vertices": 4,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Roll",
+      "vertices": 40,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Root",
+      "vertices": 24,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Sphere",
+      "vertices": 96,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Square",
+      "vertices": 4,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Torso",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-Torso_Master",
+      "vertices": 32,
+      "shapeKeys": []
+    },
+    {
+      "name": "WGT-XY_Sphere",
+      "vertices": 96,
+      "shapeKeys": []
+    }
+  ],
+  "textBlocks": [
+    "cloudrig.py",
+    "rain_shading.py",
+    "ReadMe.txt"
+  ],
+  "actions": [
+    "Rain_Cheeks_Inner",
+    "Rain_Cheeks_Outer",
+    "Rain_Eyebrows",
+    "Rain_Eyebrows_InOut",
+    "Rain_Eyelid_Lower",
+    "Rain_Eyelid_Twist_Lower",
+    "Rain_Eyelid_Twist_Upper",
+    "Rain_Eyelid_Upper",
+    "Rain_Eyering_Lower",
+    "Rain_Eyering_Upper",
+    "Rain_Head_Lower",
+    "Rain_Lips_Corner_InOut",
+    "Rain_Lips_Corner_Rotate",
+    "Rain_Lips_Corner_Up+Wide",
+    "Rain_Lips_Roll_Lower",
+    "Rain_Lips_Roll_Upper",
+    "Rain_Lips_UpDown",
+    "Rain_Lips_Wide",
+    "Rain_Sneer"
+  ]
+}

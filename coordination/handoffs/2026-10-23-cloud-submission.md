@@ -1,0 +1,31 @@
+# Cloud/submission and lesson refinement handoff
+
+Root codex-cloud-submission-20261023-k; Codex gpt-6, effort unknown. User explicitly authorised next work/messages to two existing Luna chats, detailed novice/lesson refinement, cloud/model/ML architecture, AIML credit consideration, submission/pitch planning and preserving five supplied screenshots. No additional subagents or fresh user chats created.
+
+## Delivered scopes and interfaces
+
+CLOUD-SUBMISSION-001 owns docs/cloud-submission-20261023, coordination/briefs/lesson-polish-20261023 and this handoff. Published LessonPlanInput/LessonReadiness/LessonStartPanel contracts before dispatch. Detailed checklist maps goal/source/extraction/sequence/checks/hints/time/consent/save/cancel/private evidence to owners. A initially received an evidence child inside root docs scope; root corrected that brief to docs/lesson-plan-quality-20261023 and explicitly sent the correction. No overlapping claim was taken or stolen. A then initially only restated the correction; root sent a concrete execute instruction and confirmed its actual new task is active. Latest state is not a completed delivery.
+
+B lesson-start package reported 8/8 and passed in root full-suite checkpoint. Root inspected code and requested storage-copy correction because a capability prop did not establish that a save/protection occurred. B completed that under its own new claim; root independently reran final 9/9. Still isolated, not integrated or browser-accepted. A builds pure sequence/quality package and source-only audit; B builds stateless UI and source-only audit; root retains router/provider/auth/profile/server/deployment.
+
+AI-GATEWAY-001 owns studio/server/ai-gateway and studio/tests/ai-gateway.test.mjs. Implemented server-only fixed AIML chat adapter and task-routing prototype with explicit owner/revision/request identity, conservative per-call cost reservations, at most one transient fallback, separate provider consent, current-revision/cancel checks and injected output validation. Six real deterministic tests pass including owner-separated idempotency. No provider key read/logged; no live request/spend. Module is not mounted into Google-only consent UI. Memory ledger is a local prototype, not multi-instance/durable budget enforcement. Public integration must supply durable transactional usage state, current prices, real permissions and output/source validation.
+
+CURRICULUM-REVIEW-001 owns released registry.ts and its existing test. Previous Luna packages independently passed 15/15. Root compared the original downloaded 2026 PDF: curriculum p48 includes the actual electrical first year and ELEN2003A; detailed code/title found p294. Root corrected registry URL to verified EBE_eBook.pdf and added Electrical membership to those first-year rows, so degree/year filtering can expose them. Added regression. No other degree's equivalence, complete catalogue or motor content mapping claimed. Gateway/catalogue/chooser combined final 22/22 passed.
+
+## Cloud and architecture
+
+Enabled Identity Toolkit, Cloud Tasks and Secret Manager APIs using authenticated gcloud in the existing kairo-access-20261021 project after the user's cloud setup request. Operation finished successfully and a separate enabled-service list confirmed all three. This does not configure auth providers/queues/secrets or deploy an app; no GPU, DB instance, training job, public private-upload API, billing upgrade or new model weight created.
+
+Target architecture and request/cost/consent/fallback/ML-training paths in CLOUD-AND-AI.md. Exact release work in DEPLOYMENT.md. Existing server is loopback-only with unauthenticated shared local files and Windows extraction path; these remain real deployment blockers. Do not remove guards and expose private workspace. No AIML_API_KEY in current process. $13 user-reported credit is not a verified account balance; documented allocation is proposed, not spent. No key requested in chat.
+
+Archify produced architecture.html from frozen architecture.json; deliver command passed nine artifact checks, zero composition errors/warnings. Initial label/readability diagnostics corrected before successful final validation. This is a target map, not a deployed-service claim. No browser inspected. Model cards/licences checked separately: 7B Qwen candidate Apache-2.0 versus 3B qwen-research; not all weights/API services are open source or free hosting. No automatic model training from coursework/CVs.
+
+## Submission/media
+
+Five user-provided screenshots copied unchanged into screenshots/ with matching sha256 manifest. They are portal references with personal context, not public advertising assets. SUBMISSION.md contains exact-field drafts for team profile, Lean Canvas, five SSDLC fields and tonight's progress update, with proposed figures and actual/roadmap distinction. No forms saved/submitted. Subjective suggested progress6/10 is explicitly not official scoring/percentage. Criteria/need/check/gap are reflected across the pack; no fabricated traction, jobs, marks or FNB reward.
+
+Programme p3 says record yourself and Saturday noon for 20s video; p10 conflicts with13:30. Keep noon24OctSAST internal deadline pending organiser clarification. SSDLC Sat12:00–12:30, Lean Sun12:00–12:30, daily progress before midnight, final Mon26Oct23:59. No90s organiser demo limit verified. Pitch/deck file provides a42-word script, precise20s storyboard, longer60–90s advert plan and separate90s working-demo edit target. User appears in safest hustle submission; generated actors/voice are not assumed eligible substitutes. No MP4, final Figma/PPTX/PDF, footage or public URL/credentials fabricated. User's promised deck reference still pending.
+
+## Checks and limits
+
+Earlier15/15; after root review22/22; full checkpoint423/423 before worker follow-ups; final lesson-start9/9; npm run build exit0 (chunk warning remains). Evidence verification.json, tests.txt, lesson-start-review.txt, build.txt and architecture-validation.json. Real devices, accessibility, camera/audio, learning gains, paid demand, complete source-to-equipment mapping and hosted two-user durability remain unaccepted. No browser/headless/CDP/screenshot capture, media generation, portal submission or recurring schedule. Root's source correction/build checks are not deployment acceptance.

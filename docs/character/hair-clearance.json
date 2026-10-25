@@ -1,0 +1,32 @@
+{
+ "nearM": 0.012,
+ "pose": "bind",
+ "results": {
+  "Teacher_HairBack in Teacher_Shirt": {
+   "vertices": 11027,
+   "inside": 0,
+   "heightRangeM": null
+  },
+  "Teacher_HairBack in Teacher_Body": {
+   "vertices": 11027,
+   "inside": 0,
+   "heightRangeM": null
+  },
+  "Teacher_HairFrame in Teacher_Head": {
+   "vertices": 872,
+   "inside": 0,
+   "heightRangeM": null
+  },
+  "Teacher_HairFrame in Teacher_Shirt": {
+   "vertices": 872,
+   "inside": 0,
+   "heightRangeM": null
+  },
+  "Teacher_HairFrame in Teacher_Body": {
+   "vertices": 872,
+   "inside": 0,
+   "heightRangeM": null
+  }
+ },
+ "pass": true
+}

@@ -1,0 +1,13 @@
+# Durable learner repository
+
+This module provides an owner-scoped Firestore record store and Cloud Storage original-blob store for the connected learner release. The caller must provide the authenticated Firebase UID after server-side authentication; the repository does not accept a UID from model output, initialize Firebase, read credentials, or access environment configuration.
+
+Records are stored under `owners/<sha256(uid)>/<kind>/<id>`. The supported kinds are `sources`, `revisions`, `lessons`, `drafts`, `jobs`, and `progress`. The authenticated UID must contain 1–128 characters and no ASCII controls; it is hashed exactly as provided, without trimming or rewriting. Each document repeats its owner key, kind, and ID in an identity envelope, which reads validate. Writes use Firestore transactions and opaque UUID versions for create-only and compare-and-swap updates. Record payloads must be plain JSON objects capped at 220 KiB; IDs use the contract's 1–96 character allowlist. Lists accept a bounded limit up to 500.
+
+Originals use `owners/<sha256(uid)>/originals/<id>`, create-only generation preconditions, an 8 MiB cap, and stored SHA-256/length metadata verified on read. The API returns bytes only; it does not create signed URLs. Cloud errors are not decorated with learner payloads. Multi-record operations across separate calls are not atomic; jobs are ordinary versioned records and the route/worker owner defines their lifecycle.
+
+## Evidence and boundary
+
+`studio/tests/learner-repository.test.mjs` exercises the actual module against bounded in-memory Firestore and Storage adapters with synthetic data. It covers owner isolation, conditional writes/deletes, validation limits (including rejected non-object payloads and invalid UIDs), create-only blob behavior, and integrity rejection. These tests do not exercise a live Firebase project, Cloud Storage, hosted authentication/routes, or browser/device behavior. Root integration must verify the injected Firebase Admin versions and exercise two synthetic authenticated identities before treating the hosted path as accepted.
+
+This delivery supports Sustainability (reproducible ownership and durable-storage foundation) and Product (persist/resume across the source-to-evidence journey). The learner need is to return to their own reviewed sources, lessons, drafts, jobs, and progress without crossing accounts. Observable acceptance here is the focused synthetic adapter suite; live authenticated integration and a complete learner resume remain open. No traction, learning outcome, security certification, deployment, or release acceptance is claimed.

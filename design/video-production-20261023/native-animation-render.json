@@ -1,0 +1,14 @@
+{
+  "frames": 48,
+  "size": [
+    640,
+    360
+  ],
+  "fps": 24,
+  "render_seconds": 245.15599999998813,
+  "engine": "Cycles CPU4samples denoised",
+  "purpose": "Actual authored KAIRO idle/camera animation proof; no lip-sync or final ad claim",
+  "encoded_output": "kairo-native-motion-test.mp4",
+  "decoded_frames": 48,
+  "decoded_seconds": 2.0
+}

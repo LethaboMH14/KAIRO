@@ -1,0 +1,58 @@
+✖ rotating email and spoofing forwarded headers cannot bypass the client-wide recovery allowance (1185.6503ms)
+✔ signin and reset share a per-account budget, normalized across case and whitespace (301.1693ms)
+✔ an expired abuse window permits recovery without a watcher or background task (213.6731ms)
+✔ cross-origin or originless form mutations never reach the identity provider (32.4628ms)
+✖ oversized and revoked session cookies fail closed without revealing provider errors (16.5785ms)
+✔ identity failure bodies remain generic and never reflect injected identity fields (23.0921ms)
+✔ cross-owner reads, revision reads and all lesson draft variants fail before exposing another record (98.2423ms)
+✔ cross-owner source review, original deletion, lesson publication and job cancellation cannot write (46.2433ms)
+✔ client progress cannot overwrite enrolment, quota or arbitrary server control records (23.0964ms)
+✔ SQL attack strings remain bound values and do not change subsequent query results (29.6268ms)
+✔ model tool directives and forged ownership fields cannot become executable lesson fields (3.1975ms)
+✔ fabricated citations and unsupported model support quotes are rejected (2.5698ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 10
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3182.7655
+
+✖ failing tests:
+
+test at tests\security-adversarial.test.mjs:12:1
+✖ rotating email and spoofing forwarded headers cannot bypass the client-wide recovery allowance (1185.6503ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 429
+  
+      at TestContext.<anonymous> (file:///C:/Users/USER/Desktop/fnb%20app%20of%20year%20hackathon/studio/tests/security-adversarial.test.mjs:12:280)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 429,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\security-adversarial.test.mjs:16:1
+✖ oversized and revoked session cookies fail closed without revealing provider errors (16.5785ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  431 !== 401
+  
+      at TestContext.<anonymous> (file:///C:/Users/USER/Desktop/fnb%20app%20of%20year%20hackathon/studio/tests/security-adversarial.test.mjs:16:282)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 431,
+    expected: 401,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

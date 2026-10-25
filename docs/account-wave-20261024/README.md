@@ -1,0 +1,11 @@
+# Next parallel delivery wave
+
+24 October 2026 SAST. Root codex-account-wave-20261024-c, Codex gpt-6 / effort unknown. Interfaces and exact ownership are in coordination/briefs/account-wave-20261024/CONTRACT.md.
+
+Two worker lanes: presentational account forms and deterministic goal-relevant source evidence selection. Two existing chat lanes: source-only first-use/recovery audit and authored cited motor/pump teaching content packs. Root retains shared integration, identity/session/security, router/provider, manifests and deployment ownership. Existing active claims stay respected; no browser observation, private data, paid calls, training or schedule activation.
+
+All four lanes delivered and released their claims. Root inspected the account component, selector, first-use audit and two engineering JSON packs. Goal selection is now integrated into local and consented cloud lesson generation: the full reviewed revision is verified, relevant passages are ranked across reviewed text, and exact source spans are retained. A late motor passage beyond the former 12,000-character prefix now reaches the local lesson. Selection remains lexical, with source-order fallback; it is not semantic understanding of the whole document.
+
+Verification: full Node suite 575/575 before the selector's type-only Set membership fix; final focused suite 13/13 after that fix; TypeScript/Vite production build passed. The engineering pack validator passed two packs, six steps, two practice items, six references and three negative cases. Initial build caught a strict TypeScript inference error, corrected by its owner. Final focused rerun needed loopback execution permission after a sandbox EACCES; the permitted rerun passed. Vite retains its existing >500 kB chunk warning. Logs are in this directory.
+
+AccountPanel is callback UI only, not mounted login. Motor/pump packs are authored metadata, not mounted lesson content; Pump Lab remains unmounted and physically unvalidated. First-use audit identifies account boundaries, recovery and silent engineering save failures. No browser/device/user acceptance, paid provider calls, cloud deployment, account migration, training or schedule activation occurred in this wave. See NEXT-PACKAGES.md for the prioritized queue; queued tasks are not already running.

@@ -1,0 +1,31 @@
+{
+  "fullSuite": {
+    "failed": 0,
+    "passed": 562
+  },
+  "hashes": {
+    "studio/tests/native-extraction.test.mjs": "8DE50DD0430F299F318EA42FB44E67940AAAE3FED6E5FB94E58B3A27DDA80462",
+    "studio/server/workspace/routes.mjs": "50DF0D93907CD93110D768837A1894655A335A118F77B5616472AB5F6A0DBED5",
+    "studio/server/cloud-library/store.mjs": "5DDC0DFC016A7E5078141678904653430ED89F426A6058493D6B36CCAEC08F34",
+    "studio/src/workspace/SourceWorkspace.tsx": "EDEFAE6661843CCCCFBD4F3958050B752F3C03D1FA3C4CCD925E9DA8443CBB26",
+    "studio/src/workspace/types.ts": "E916855A4FDF3022F2F74A399A615D8B6B82C70AA946666D2B6B45BE93A7547A",
+    "studio/src/extraction-summary-ui/ExtractionSummary.tsx": "3A11DF3FB24A05A9EAB735D5BFC1B193061B72B16E9D20E4296FE16465D09CA0",
+    "studio/src/extraction-summary-ui/extraction-summary.css": "E3D697BD56A6525FA09F5B0ECC9B08F4360EE6BAAADF16A80911DD5C950E1DFB",
+    "studio/server/workspace/native-extraction.mjs": "4C822607017BCE74DEAB2B6A747C5EB0D3FBD381AB1557ADD9DD72B1163766EB"
+  },
+  "checkedAt": "2026-10-23T22:58:30.4326714Z",
+  "privateDataUsed": false,
+  "dataCatalogueRecords": 17,
+  "componentSSR": {
+    "failed": 0,
+    "passed": 4
+  },
+  "bigQueryMounted": false,
+  "preview": 24816,
+  "focused": {
+    "failed": 0,
+    "passed": 13
+  },
+  "build": "passed",
+  "browserObserved": false
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-23",
+  "owner": "codex-signing-verify-20261023-j",
+  "model": "gpt-6",
+  "effort": "unknown",
+  "typescript": {
+    "command": "node_modules/.bin/tsc.cmd --noEmit",
+    "exitCode": 0,
+    "diagnostics": 0
+  },
+  "signingTests": {
+    "command": "node --test tests/signing-capture.test.mjs",
+    "exitCode": 0,
+    "pass": 39,
+    "fail": 0
+  },
+  "productionBuild": {
+    "command": "node_modules/.bin/vite.cmd build",
+    "exitCode": 0,
+    "log": "build.txt",
+    "warning": "Some chunks exceed500kB"
+  },
+  "builtNaming": {
+    "meetKairoPresent": true,
+    "oldLearnOrMeetRainPresent": false
+  },
+  "sourceHashesAtRecording": {
+    "studio/src/signing/session.ts": "fb22be3dd048f18cd1eacec6f0de7ebc763ced63f77e6eb8a64222b6016ea78d",
+    "studio/src/signing/browserDeps.ts": "8559c80bad24f468f67c430dc1731032c38febd0e1a87406bf745acd638dcb96"
+  },
+  "signingSourceEditedByRoot": false,
+  "browserObserved": false,
+  "realCameraOpened": false,
+  "cloudDeployed": false
+}

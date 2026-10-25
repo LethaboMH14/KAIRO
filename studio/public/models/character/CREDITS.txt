@@ -1,0 +1,19 @@
+KAIRO teacher: credits and licences
+
+kairo-teacher.glb, teacher-portrait.png
+  Based on Rain Rig (CC) Blender Foundation | studio.blender.org
+  Licence: CC-BY 4.0, https://creativecommons.org/licenses/by/4.0/
+  Source: https://studio.blender.org/characters/rain/v3/
+  Changed for KAIRO: face and figure reshaped, skin and eye textures recoloured, Rain's hair and clothing replaced
+  by KAIRO-authored locs, shirt and trousers, and KAIRO teaching animations added.
+
+studio_small_09_1k.hdr
+  Poly Haven, https://polyhaven.com/a/studio_small_09. Licence: CC0.
+
+audio/*.mp3
+  Synthetic voices generated with Google Cloud Text-to-Speech (Chirp 3 HD) from KAIRO's own sentence.
+
+audio/*.visemes.json
+  Mouth timings computed offline with Rhubarb Lip Sync 1.14.0 (MIT) from those audio files.
+
+Hashes and full provenance: docs/character/asset-manifest.json in the KAIRO repository.

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-23",
+  "owner": "codex-kairo-name-20261023-h",
+  "model": "gpt-6",
+  "effort": "unknown",
+  "changedAppFiles": [
+    "studio/src/kairo/Home.tsx",
+    "studio/src/kairo/Studios.tsx",
+    "studio/src/experience/ExperienceClassroom.tsx",
+    "studio/src/lecture/LectureStudio.tsx",
+    "studio/src/workspace/SourceWorkspace.tsx",
+    "studio/src/workspace/LessonWorkspace.tsx",
+    "studio/src/source-classroom/SourceClassroom.tsx",
+    "studio/src/source-classroom/RainStage.tsx",
+    "studio/src/engineering/EngineeringTeacher.tsx",
+    "studio/src/teacher/TeacherSettings.tsx"
+  ],
+  "visibleOldPhrasesRemaining": [],
+  "originalAttributionPreserved": true,
+  "legacyResumeKeyPreserved": true,
+  "buildExitCode": 1,
+  "buildBlocker": "Active Claude signing/browserDeps.ts:36 TS2322, video.srcObject type mismatch",
+  "buildLog": "docs/checks/kairo-name-build-20261023.txt",
+  "browserObserved": false,
+  "previewRefreshed": false
+}

@@ -1,0 +1,20 @@
+KAIRO ClassroomRecovery isolated package verification
+Date: 2026-10-23, Africa/Johannesburg
+Registered settings: client Codex; model gpt-6-luna; effort low (UI showed GPT-6 Luna / Light, treated as low per user selection).
+Owned task: CLASSROOM-RECOVERY-002; exact four paths in the brief.
+
+Focused SSR/element tests (from studio)
+Command: node --test tests/classroom-recovery-ui.test.mjs
+Exit code: 0; 8 passed, 0 failed/cancelled/skipped.
+Coverage: Vite SSR module loading; six status/failure states and roles; next actions; omitted callbacks do not render dead buttons; safe contextual links; escaping and 500-character detail bound; multiple instances without fixed IDs; element callback invocation.
+Harness: ReactDOMServer static markup via Vite middleware SSR. No listener, browser or browser automation.
+
+TypeScript (from studio)
+Command: .\node_modules\.bin\tsc.cmd --noEmit
+Exit code: 0; no diagnostics.
+
+Coordination and scope
+Registered `codex-luna-classroom-recovery-20261023-c` as Codex / gpt-6-luna / low. Read status and inbox, created and claimed only the brief's four paths, checked inbox at handoff (no messages after 55). No dependency install, browser/headless browser, screenshot, network/cloud, real audio, deployment or automation. SourceClassroom/provider/router/shared CSS/contracts/Claude work were not edited.
+
+Limits
+SSR confirms rendered semantics and escaped markup, not actual screen-reader announcement, keyboard focus order, contrast, responsive layout, touch target size on a device, or WCAG conformance. Callback invocation is element-level, not browser event delivery. Component is not integrated into a live route. No route, learner, learning-outcome or release acceptance is claimed.

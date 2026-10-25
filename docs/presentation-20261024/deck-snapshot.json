@@ -1,0 +1,704 @@
+{
+  "fileKey": "TDJobIZL9Qw9z1OExLwX2r",
+  "slideCount": 27,
+  "slides": [
+    {
+      "number": 1,
+      "id": "1:41",
+      "title": "KAIRO",
+      "notes": "KAIRO Access is the education product. Actual KAIRO GLB rendered offline in Blender. This is a product presentation, not evidence of validated learning or employment outcomes. Preserve underlying Rain/Blender attribution in supporting credits.",
+      "text": [
+        "Put knowledge\nto work.",
+        "Personalised learning. Practical exploration.\nEvidence you can explain.",
+        "FNB APP OF THE YEAR HACKATHON 2026"
+      ],
+      "images": [
+        {
+          "id": "1:59",
+          "name": "Rectangle",
+          "hash": [
+            "02ccb684205149786d833af0adb0e112e8287780"
+          ]
+        },
+        {
+          "id": "4:5",
+          "name": "ASSET / avatar-cover",
+          "hash": [
+            "948a84fd19e7978373fcec2f410572384e74390a"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "4:7",
+      "title": "“I can read it. Can I explain it?”",
+      "notes": "The persona is an illustrative adult engineering student, not a testimonial. Target situations: study between lectures, distance/off-campus learning, difficulty linking a diagram to physical behaviour, and explaining practical reasoning. Do not claim all students experience this or that KAIRO substitutes for a laboratory.",
+      "text": [
+        "KAIRO ACCESS",
+        "“I can read it. Can I explain it?”",
+        "KAIRO",
+        "02",
+        "The lecture has ended.\nThe lab is closed.\nThe motor still makes no sense.",
+        "A student needs practice, feedback\nand a way to show their reasoning.",
+        "Later, a job asks for practical skills.\nWhat can they show?",
+        "Illustrative learner story and generated student. Local need and frequency require learner interviews."
+      ],
+      "images": [
+        {
+          "id": "4:15",
+          "name": "ASSET / student",
+          "hash": [
+            "468d925e945cd1af7c944c4c88dbf6e0aa2492fe"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "4:17",
+      "title": "A large system. Unequal ways to connect.",
+      "notes": "DHET Statistics on Post-School Education and Training 2024, published 2026: total 1,428,766, public 1,115,580 and private 313,186 HEI enrolments. https://www.dhet.gov.za/Information%20Systems%20Management%20Documents/Statistical%20Reports%20and%20Data/Reports/Statistics%20on%20Post-School%20Education%20and%20Training%20in%20South%20Africa%2C%202024.pdf\nStats SA GHS 2024 Table14.1: mobile75.6%, fixed-at-home17.4%, any82.1%. https://www.statssa.gov.za/publications/P0318/P03182024.pdf\nThese are contextual denominators, not KAIRO demand, market share, individual student connectivity or affordable data. Bars are not mutually exclusive.",
+      "text": [
+        "KAIRO ACCESS",
+        "A large system. Unequal ways to connect.",
+        "KAIRO",
+        "03",
+        "1.43m",
+        "Higher-education enrolments\nin South Africa in 2024",
+        "1.116m public HEI enrolments\n313,186 private HEI enrolments",
+        "Households with mobile internet",
+        "75.6%",
+        "Households with fixed internet at home",
+        "17.4%",
+        "Reading first. Optional 3D and voice.\nSave progress and recover after interruption.",
+        "DHET PSET 2024; Stats SA GHS 2024, Table 14.1. Household access types overlap; not student affordability."
+      ],
+      "images": []
+    },
+    {
+      "number": 4,
+      "id": "4:35",
+      "title": "The learner has to join the gaps",
+      "notes": "These four pains describe the product hypothesis. Research supports active engagement and feedback mechanisms but does not quantify local prevalence or validate the commercial offer. Opportunity and employer-side services are staged expansion, not current verified placement.",
+      "text": [
+        "KAIRO ACCESS",
+        "The learner has to join the gaps",
+        "KAIRO",
+        "04",
+        "01 / Study",
+        "Notes, slides and videos\nspread across places.",
+        "02 / Understand",
+        "An explanation can feel clear\nuntil you try it alone.",
+        "03 / Apply",
+        "Practical reasoning needs\nfeedback and another attempt.",
+        "04 / Show it",
+        "A CV needs meaningful\nexamples of your work.",
+        "“What should I do next,\nand how does it help my future?”",
+        "Problem hypothesis: fragmented support across learning and career preparation. Validate with learners and buyers."
+      ],
+      "images": []
+    },
+    {
+      "number": 5,
+      "id": "4:55",
+      "title": "One connected learning journey",
+      "notes": "Current repository: account/modules, private source review, cited editable lesson, shared teacher/reading, prepared motor/pump/API activities, practice/saved working/resume. Role notes and manual preparation exist separately; automated evidence-to-current-role matching is not connected. Source/revision integrity and clear next actions are essential.",
+      "text": [
+        "KAIRO ACCESS",
+        "One connected learning journey",
+        "KAIRO",
+        "05",
+        "01",
+        "Your material",
+        "Upload and review",
+        "02",
+        "Your lesson",
+        "Choose a goal",
+        "03",
+        "Explore",
+        "Read, listen or try",
+        "04",
+        "Practise",
+        "Explain and check",
+        "05",
+        "Your working",
+        "Save your reasoning",
+        "06",
+        "Your direction",
+        "Choose the next step",
+        "The same source, lesson and learner context\nshould stay with you throughout.",
+        "Connected learning foundation exists. Automatic role-gap learning and live opportunities remain in development."
+      ],
+      "images": []
+    },
+    {
+      "number": 6,
+      "id": "5:6",
+      "title": "Meet KAIRO",
+      "notes": "Actual KAIRO GLB rendered offline by Claude. KAIRO is the teacher name; Rain refers only to rig provenance. Current source-grounded generation and shared speech controls are implemented. Do not imply unrestricted world generation, validated pedagogy or full conversation/listening.",
+      "text": [
+        "KAIRO ACCESS",
+        "Meet KAIRO",
+        "KAIRO",
+        "06",
+        "Teaches from your material",
+        "Source-linked explanations you can check and edit.",
+        "Helps you work through a concept",
+        "Explore a prepared model, make a prediction and explain what you observe.",
+        "Keeps the learner in control",
+        "Pause, ask for help, switch to reading and keep your working.",
+        "Actual KAIRO avatar render. Voice and reading foundation implemented; behaviour quality needs learner testing."
+      ],
+      "images": [
+        {
+          "id": "5:11",
+          "name": "ASSET / avatar-teacher",
+          "hash": [
+            "78d659eee96c50a480f1cf2aa91621cd2c42e420"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "5:22",
+      "title": "Your learning space, across devices",
+      "notes": "Image is the existing generated brand comparison, clipped to the selected Continuous Path / C direction only. This is a design reference, not proof of implemented mobile responsiveness, native apps, offline support or tested cross-device transfer. Current app is web based.",
+      "text": [
+        "KAIRO ACCESS",
+        "Your learning space, across devices",
+        "KAIRO",
+        "07",
+        "Phone / a clear next step",
+        "Choose your module. Add material. Review the extraction. Continue a lesson.",
+        "Laptop / room to explore",
+        "Read alongside the motor, change a supported variable and keep your explanation.",
+        "Same learning goal",
+        "The intended experience follows the learner. Real-device usability still needs testing.",
+        "Selected C brand/device concept, not a screenshot. Current browser application requires separate phone acceptance."
+      ],
+      "images": [
+        {
+          "id": "5:37",
+          "name": "ASSET / devices-selected-C",
+          "hash": [
+            "f9c11c34c2b9afec3138d3d7d991ce39633c5ac2"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "16:2",
+      "title": "Engineering on phone and desktop",
+      "notes": "Existing files docs/engineering/screenshots/17-phone-assembled.png and01-desktop-assembled.png, lastmodified22Oct2026. Read as staticlocalfiles; no newbrowserobservation/capture. Native screenshotdimensions390×844 and1440×900, placedwithFIT no alteration ofUIcontent. OldKmonogram retained as screenshotprovenance; deckusescurrentapprovedCidentity. These show historicalEngineeringUI, not latestprivatehostedaccount/materialintegration or a newusabilityresult.",
+      "text": [
+        "KAIRO ACCESS",
+        "Engineering on phone and desktop",
+        "KAIRO",
+        "08",
+        "Saved app views, 22 Oct 2026. Earlier branding. These are historical captures, not a new browser/device acceptance check."
+      ],
+      "images": [
+        {
+          "id": "16:8",
+          "name": "ASSET / phone-historical",
+          "hash": [
+            "e198412197a78dbe33c30e4e51b5ea7369ac8eb6"
+          ]
+        },
+        {
+          "id": "16:10",
+          "name": "ASSET / desktop-historical",
+          "hash": [
+            "c13c3f165ab98eece43a583be7774616770198cd"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "5:39",
+      "title": "A motor lesson you can work through",
+      "notes": "Actual induction motor GLB rendered offline from design/kairo-ad-20261024/build/motor. Prepared studio supports inspect/explode/operate and bounded educational controls. Example lesson sequence is KAIRO authored. Practice must reference the current reviewed source and use domain-reviewed questions. A simulation does not certify equipment operation.",
+      "text": [
+        "KAIRO ACCESS",
+        "A motor lesson you can work through",
+        "KAIRO",
+        "09",
+        "Predict",
+        "What happens to the rotating field speed when the supply frequency changes?",
+        "Explore",
+        "Inspect the stator and rotor. Change a supported control. Observe the model.",
+        "Explain",
+        "Write what changed and why. Check the supporting source and save your working.",
+        "Prepared educational motor model. Uploaded notes do not automatically create a validated equipment simulation."
+      ],
+      "images": [
+        {
+          "id": "5:53",
+          "name": "ASSET / motor",
+          "hash": [
+            "9397a044be4ae3f0497558fc60114c95fbe87308"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "5:55",
+      "title": "Different concepts. Relevant environments.",
+      "notes": "Current routes: /engineering motor, /pump-lab pump, /computer-science request trace. Course-to-activity mappings are KAIRO-authored enrichment, not university-prescribed labs or a complete curriculum. Broader law/health/industrial studios remain vision.",
+      "text": [
+        "KAIRO ACCESS",
+        "Different concepts. Relevant environments.",
+        "KAIRO",
+        "10",
+        "01",
+        "Motor studio",
+        "See the rotor and stator.\nConnect field, motion and explanation.",
+        "02",
+        "Pump lab",
+        "Explore components and flow.\nReason about a supported pump scenario.",
+        "03",
+        "API explorer",
+        "Trace a request through a system.\nExplain what happens at each step.",
+        "A student sees activities relevant to their modules.",
+        "Three prepared activity routes. Synthetic engineering/informatics profiles use selected public curriculum facts."
+      ],
+      "images": []
+    },
+    {
+      "number": 11,
+      "id": "5:74",
+      "title": "The teaching method has a research basis",
+      "notes": "Freeman et al., PNAS 2014, meta-analysis of225 undergraduate STEM studies: https://doi.org/10.1073/pnas.1319030111 . This supports studying active learning, not the claim that KAIRO replicates the reported effect. Karpicke/Roediger2008 retrieval experiment involved vocabulary: https://doi.org/10.1126/science.1152408 . Feedback study https://pubmed.ncbi.nlm.nih.gov/18605878/ . PhET https://phet.colorado.edu/en/research emphasises iterative learner testing and limits of simulations for physical equipment skills. KAIRO has no measured learning gain; plan equivalent pre/post/delayed transfer with a comparator.\nFreeman2014 aggregate exam performance effect was0.47standarddeviations. This is not0.47percentagepoints, not a KAIRO effect and not proof of local transfer. No simulation replaces all physical laboratory skills.",
+      "text": [
+        "KAIRO ACCESS",
+        "The teaching method has a research basis",
+        "KAIRO",
+        "11",
+        "225",
+        "undergraduate STEM studies\ncompared active learning with lectures",
+        "Research supports the design.\nKAIRO must earn its own evidence.",
+        "Attempt before the answer",
+        "Retrieval practice motivates recall and prediction before revealing help.",
+        "Feedback, then another try",
+        "Explain the error and ask the learner to apply the idea again.",
+        "Coordinate words and exploration",
+        "Show the relevant part, remove distraction and let the learner set the pace.",
+        "Freeman et al. (2014); Karpicke & Roediger (2008); Butler et al. (2008); PhET design research.",
+        "+0.47 SD average exam performance\nin the reviewed studies"
+      ],
+      "images": []
+    },
+    {
+      "number": 12,
+      "id": "5:92",
+      "title": "Learning linked to opportunity",
+      "notes": "Full agreed vision includes course/goals, CV-confirmed facts, skill evidence, sourced role requirements, targeted practice, funding and opportunities, and optional employer sharing. Current direction notes/manual role preparation/CV draft are partial and separate. No real-time feed, automated application, employment prediction or verified skill exists. Freshness must include source, checkedAt, closesAt/unknown and withdrawal. NSFAS eligibility remains an official decision. No reward or FNB partnership is secured.",
+      "text": [
+        "KAIRO ACCESS",
+        "Learning linked to opportunity",
+        "KAIRO",
+        "12",
+        "01",
+        "Choose a role",
+        "Understand sourced requirements",
+        "02",
+        "Link your working",
+        "Show what you attempted",
+        "03",
+        "Find the gap",
+        "Choose targeted practice",
+        "04",
+        "Take the next step",
+        "Review an official opportunity",
+        "NSFAS and bursaries. Internships and hackathons.\nA learner-owned profile employers can view with consent.",
+        "Roadmap: fresh official-source feeds, explainable role alignment and consented employer sharing. No partner secured."
+      ],
+      "images": []
+    },
+    {
+      "number": 13,
+      "id": "5:115",
+      "title": "More ways to learn",
+      "notes": "Current source translation drafts include English/Afrikaans/isiZulu/isiXhosa/Sesotho/Setswana; quality validation is open. Current Google Chirp3HD voice is English, not South-African-language synthesis. No listening model is mounted. MediaPipe landmarks are not SASL recognition. Continuous SASL requires Deaf/signer involvement, datasets/rights, nonmanual grammar and held-out evaluation. No camera activation performed.",
+      "text": [
+        "KAIRO ACCESS",
+        "More ways to learn",
+        "KAIRO",
+        "13",
+        "Available foundation",
+        "Reading and keyboard controls\nEditable source-linked lessons\nShared narration and cancellation\nDraft translation for selected languages",
+        "Next validation",
+        "Listening and speech input\nLanguage quality with native speakers\nSigner-reviewed SASL learning support\nPhone, assistive technology and data use",
+        "A learner should have a useful path\nwhen 3D, audio or a camera is unsuitable.",
+        "Hand tracking is not SASL translation. Draft translation is not validated multilingual teaching."
+      ],
+      "images": []
+    },
+    {
+      "number": 14,
+      "id": "5:129",
+      "title": "Strong alternatives. A connected KAIRO focus.",
+      "notes": "Source-based study: https://support.google.com/gemininotebook/answer/16215270?hl=en . PhET: https://phet.colorado.edu/en/research . Labster: https://www.labster.com/simulations . Guided tutoring: https://khanmigo.ai/ . Role and portfolio learning: https://www.coursera.org/campus . Competitors may also offer overlapping capabilities. KAIRO differentiation is the connected workflow and local relevance hypothesis; no first/only claim, comparative efficacy evidence or proven moat.",
+      "text": [
+        "KAIRO ACCESS",
+        "Strong alternatives. A connected KAIRO focus.",
+        "KAIRO",
+        "14",
+        "Product",
+        "What it brings",
+        "Our design response",
+        "NotebookLM / Gemini Notebook",
+        "Source-based answers and study formats",
+        "Keep source review central",
+        "PhET",
+        "Research-informed interactive simulations",
+        "Join exploration to a personal lesson",
+        "Labster",
+        "Virtual labs and curriculum mapping",
+        "Begin with a small prepared catalogue",
+        "Khanmigo",
+        "Guided AI tutoring and teacher support",
+        "Ask for reasoning before showing help",
+        "Coursera Campus",
+        "Career learning and portfolios",
+        "Connect course working to role gaps",
+        "KAIRO",
+        "Own material, KAIRO, studio, saved working",
+        "Course-to-practice-to-opportunity vision",
+        "Official product documentation, checked 24 Oct 2026. Comparison of focus, not exhaustive feature scoring."
+      ],
+      "images": []
+    },
+    {
+      "number": 15,
+      "id": "5:162",
+      "title": "A focused first market",
+      "notes": "Do not multiply all students by R49 as revenue. Serviceable market depends on module support, content rights, device fit and a named buyer. No institutional agreement or roster acquired. Validate 8–12 learner interviews and 3–5 buyer/tutor conversations before larger pilot. BCom Information Systems/computing is adjacent, company training later.",
+      "text": [
+        "KAIRO ACCESS",
+        "A focused first market",
+        "KAIRO",
+        "15",
+        "Context",
+        "1.43m",
+        "SA higher-education enrolments\nNational context, not paying demand",
+        "First user",
+        "Adults in supported engineering modules who need to practise an idea from their own material.",
+        "First buyer",
+        "A department, tutoring/support programme or sponsor that can approve a bounded cohort pilot.",
+        "Reachable test",
+        "20–40 consenting learners, one module and one subject reviewer. Recruitment target only.",
+        "DHET PSET 2024. Exact supported-module market, willingness to pay and procurement timing remain unknown."
+      ],
+      "images": []
+    },
+    {
+      "number": 16,
+      "id": "5:180",
+      "title": "Technical architecture",
+      "notes": "Repository evidence docs/security-submission-20261024/RELEASE-STATUS.json and docs/connected-release-20261024. Private Cloud Run service kairo-app, project kairo-access-20261021. Node backend, Firebase sessions, Firestore owner-scoped repository, GCS originals and Tasks worker. Diagram is logical grouping, not a literal network topology. Current one-instance cap is pilot capacity. Tasks in Europe and Vertex global mean this is not an all-data-SA-resident deployment. No keys in slides. Judge access and human acceptance remain gates.",
+      "text": [
+        "KAIRO ACCESS",
+        "Technical architecture",
+        "KAIRO",
+        "16",
+        "Learner web app",
+        "React + TypeScript\nThree.js / React Three Fiber",
+        "Account + API",
+        "Firebase Authentication\nCloud Run / Node.js",
+        "Durable imports",
+        "Cloud Tasks\nBounded Python extraction",
+        "Private records",
+        "Firestore\nSource, lesson and progress",
+        "Private originals",
+        "Cloud Storage\nOwner-scoped material",
+        "Teaching services",
+        "Vertex AI generation\nGoogle Text-to-Speech",
+        "Cloud Run, Firestore and storage: Johannesburg. Tasks: europe-west1. Vertex: global. IAM-private service."
+      ],
+      "images": []
+    },
+    {
+      "number": 17,
+      "id": "6:12",
+      "title": "Intelligence with a reason you can inspect",
+      "notes": "Current server default gemini-3.5-flash-lite in Vertex global is a source configuration, not fresh deployed-model verification. Source text is untrusted data. Validate schema, anchors, owner/revision and action allowlist; bound retries/time/cost. Adaptive policy exists in isolation, not production-event integration. Groq/OpenRouter experiments and AIML adapter are not production fallback. Future ML needs consented labelled events, learner-level train/evaluation split and held-out comparison/calibration.",
+      "text": [
+        "KAIRO ACCESS",
+        "Intelligence with a reason you can inspect",
+        "KAIRO",
+        "17",
+        "1",
+        "Understand the request",
+        "Goal + current source revision",
+        "2",
+        "Select the evidence",
+        "Relevant reviewed passages",
+        "3",
+        "Generate a lesson",
+        "Bounded model call + structured output",
+        "4",
+        "Check the result",
+        "Citation anchors + safe actions",
+        "Available",
+        "Source-conditioned generation and deterministic educational calculations.",
+        "Next",
+        "Connect versioned practice events to adaptive choices, then evaluate ML against a simple baseline.",
+        "No trained mastery predictor, hiring probability or automatic generation of validated simulations is claimed."
+      ],
+      "images": []
+    },
+    {
+      "number": 18,
+      "id": "6:41",
+      "title": "A working foundation. A clear validation gap.",
+      "notes": "Evidence docs/security-submission-20261024/RELEASE-STATUS.json: 692tests,18live synthetic API checks, IAMprivate,0npm advisories; no independent pentest certification, no browser observation. This is dated repository evidence, not a new release check. Supplied Sonke feedback screenshot: one panel member says Can useYes,Can buyNo,Would payNothing; reason more problem detail. Purchase authority/value/budget unknown; not representative demand research. No paying customers or measured learning gains supplied.",
+      "text": [
+        "KAIRO ACCESS",
+        "A working foundation. A clear validation gap.",
+        "KAIRO",
+        "18",
+        "692",
+        "automated tests passed\nat the recorded release checkpoint",
+        "18 synthetic live API checks\nIAM-private Google Cloud Run deployment",
+        "Panel feedback / one response",
+        "Can use: Yes\nCan buy: No\nWould pay: Nothing",
+        "“You must provide more details\nabout the problem.”",
+        "Next proof: learner task success,\nsource quality and a buyer commitment.",
+        "Recorded 24 Oct 2026: kairo-app-00006-885. Engineering checks are separate from user acceptance and demand."
+      ],
+      "images": []
+    },
+    {
+      "number": 19,
+      "id": "6:55",
+      "title": "Who pays, and what they receive",
+      "notes": "Full-platform costs memo: PersonalR49inclVATifregistered. InstitutionConnected R59/seat/moexVAT annuallyR708 +R15000setup;250seatsfirstyearR192000exVAT. WorkforceR149/employee/moexVAT R1788annual +R15000setup;50seatsfirstyearR104400exVAT. Distinct InstitutionCore R35/seat/moexVAT +R6000setup models a narrower offer. No double charging sponsored learners. No checkout/entitlement ledger/company tenant implemented. Custom illustrative reviewedmodule quoteR71429exVAT fromR40000direct×1.25risk/(1-.30margin). No agreed prices, invoices, rewards or FNB revenue share.",
+      "text": [
+        "KAIRO ACCESS",
+        "Who pays, and what they receive",
+        "KAIRO",
+        "19",
+        "Personal",
+        "R49",
+        "per month, incl VAT if applicable",
+        "Own material, lessons, prepared practice\nand a defined usage allowance.",
+        "Institution Connected",
+        "R59",
+        "per learner/month, ex VAT",
+        "A funded learner pathway with pooled\nservices and agreed support.",
+        "Workforce",
+        "R149",
+        "per employee/month, ex VAT",
+        "Private company learning from approved\nmaterials and role-based practice.",
+        "Sponsored access: learner pays R0 within funded scope.\nCustom training: separately scoped, reviewed and priced.",
+        "Price hypotheses. Connected/workforce offers and payment entitlements are not delivered. Setup fees and limits apply."
+      ],
+      "images": []
+    },
+    {
+      "number": 20,
+      "id": "6:75",
+      "title": "The R49 plan needs clear usage limits",
+      "notes": "Full-platform-results.json consumer\\_full\\_usage gross49/net41.3304347826/service21.790684/fees4.1722/contribution15.3675507826. Net revenue=(49/1.15)\\*.97 under model. Expandedmonth4lesson/helpbundles,20complexpages,10listeningminutes,5000translationchars1target,2500voicechars,smallinfra/retrieval/visionreserves,2supportmin. Hypotheses, not metered costs. Heavy200page scenario contribution-26.03. Current app caps do not implement these commercial entitlements. No free credits included. Google price pages and Payfast fees verified24Oct2026.",
+      "text": [
+        "KAIRO ACCESS",
+        "The R49 plan needs clear usage limits",
+        "KAIRO",
+        "20",
+        "Net revenue",
+        "R41.33",
+        "Service + support",
+        "R21.79",
+        "Payment + refunds",
+        "R4.17",
+        "Contribution",
+        "R15.37",
+        "Contribution pays shared costs. It is not profit.",
+        "Expanded usage scenario. Net after VAT/refund assumptions. R20/USD +15% vendor-tax reserve. Credits excluded."
+      ],
+      "images": []
+    },
+    {
+      "number": 21,
+      "id": "6:94",
+      "title": "Scale has to cover the full delivery cost",
+      "notes": "Exact sources full-platform-results.json mixed\\_run\\_rates. Smaller revenue82166.0869565/expense220090.45664/op-137924.36968. Larger390165.2173913/291720.8412/98444.37619. Shared198000/mo includes168000loadedcapacity+30000overhead; marginalusage/supportseparate. Institution60%active,workforce80%active. EFTinstitution/company,consumerfeesmodelled. Not current users, demanded volumes, contracted revenue or sustainable profit proof. Excludes acquisition/onboarding shocks, paymentdelays, staffstepchanges, income tax/debt. Paid learner types overlap in audience but billing must never doublecount same sponsored entitlement.",
+      "text": [
+        "KAIRO ACCESS",
+        "Scale has to cover the full delivery cost",
+        "KAIRO",
+        "21",
+        "Small paid footprint",
+        "200 personal + 1,000 institution\n+ 100 workforce; 1,000 free",
+        "Revenue",
+        "R82k",
+        "Costs",
+        "R220k",
+        "−R137,924 / month",
+        "Illustrative larger footprint",
+        "500 personal + 5,000 institution\n+ 500 workforce; 2,000 free",
+        "Revenue",
+        "R390k",
+        "Costs",
+        "R292k",
+        "+R98,444 / month",
+        "Monthly run-rate scenarios, not sales forecasts. Includes R198k shared capacity/overheads. Before tax and growth shocks."
+      ],
+      "images": []
+    },
+    {
+      "number": 22,
+      "id": "8:2",
+      "title": "Value for the learner, buyer and a partner",
+      "notes": "Potential FNB roles: a sponsor funding a bounded learner cohort or a company training buyer. Candidate benefits are relevant access/support, reviewed training/evidence and legitimate opt-in services only. No customer-account data is available, no commercial conversion forecast, no inferred finance eligibility and no eBucks/rewards permission. Measure partner value separately from learning. Commercial terms and consent must precede integration.",
+      "text": [
+        "KAIRO ACCESS",
+        "Value for the learner, buyer and a partner",
+        "KAIRO",
+        "22",
+        "Learner",
+        "Useful practice from their own material, clearer next steps and working they can explain.",
+        "Institution or company",
+        "A scoped learning service with reviewed tasks, agreed usage and measurable completion.",
+        "Potential FNB partnership",
+        "Sponsor access or training, connect an approved pathway and evaluate consented outcomes.",
+        "Test the value before promising the return.",
+        "Measure repeat use, learning tasks, buyer renewal and full delivery cost.",
+        "Partnership hypothesis. No FNB agreement, reward, referral revenue or employment result is secured."
+      ],
+      "images": []
+    },
+    {
+      "number": 23,
+      "id": "8:20",
+      "title": "The ask: one module, one serious pilot",
+      "notes": "Ask for access to a willing department/support programme, one educator,20–40 consentingadultlearners and a namedbudgetowner. Discovery8–12learners/3–5buyers, formativeusability5–8adults, learningpilot20–40 is a stagedproposal. Exampleformativegate80%taskcompletion andzerounresolvedcriticalprivacy/sourcefailures, notstatisticalefficacyproof. Comparator/prior knowledge/delayedtransfer/attrition needed for causal claims. Budget quoted afterscope; no currentpilotfunding. RoughremainingbuildenvelopeR315000 is840personhours×R300×1.25, notthispilotprice, excludescontinuousSASL/broadcatalogue. Do notdoublecountmonthlypayroll.",
+      "text": [
+        "KAIRO ACCESS",
+        "The ask: one module, one serious pilot",
+        "KAIRO",
+        "23",
+        "20–40",
+        "adult learners\none subject reviewer\none accountable buyer",
+        "Usability",
+        "Can learners finish the source-to-saved-working task on their own devices?",
+        "Learning",
+        "Can they explain and apply the concept immediately and later?",
+        "Commercial",
+        "Will a buyer fund a defined service at an acceptable measured cost?",
+        "Proposed pilot, not an agreement. Scope, consent, content rights, budget and comparison plan precede recruitment."
+      ],
+      "images": []
+    },
+    {
+      "number": 24,
+      "id": "8:37",
+      "title": "Growth follows reviewed modules and evidence",
+      "notes": "Sixstudio vision retained: adaptivelecture,engineering,law/anatomy-health/industrial-mining/computerscience. Commerce laterplatformdirection. Need reusable reviewedmodule descriptors, role/evidence contracts, contentrights, SMEapproval, datasetsandlanguage/communityvalidation, institutiontenancy/paymententitlements,observability/capsandoperationalstaffing. No broadcataloguealreadyimplemented or allmodels trained. Train/evaluate specialistMLonlyafterdefiningtask/data/legalrights; hostedmodels are no substitute for domain validation.",
+      "text": [
+        "KAIRO ACCESS",
+        "Growth follows reviewed modules and evidence",
+        "KAIRO",
+        "24",
+        "First / engineering",
+        "Motor and pump. One supported module, clear tasks, measured learner/device acceptance.",
+        "Next / computing and workforce",
+        "Reuse the source, lesson and evidence contracts. Add approved role and company content.",
+        "Later / wider studios",
+        "Law, health sciences, industrial/mining and further technical disciplines, with domain review.",
+        "Personalisation, language and SASL support grow\nwith validated content, rights and community review.",
+        "Expansion stages depend on learning, security, buyer and unit-cost gates. No delivery date is promised."
+      ],
+      "images": []
+    },
+    {
+      "number": 25,
+      "id": "8:53",
+      "title": "Make learning count",
+      "notes": "Generated KAIRO brandedworlds image is conceptual, not screenshot or actualteacher-mesh render. The other teacher slides use actualGLBrenders. Ask for pilotpartner and educator access. Use actual user-approved demo recording later; current browserrestriction intact. No publicQR/link implies availability. KAIRO teacher rig attribution: basedonRainRig©BlenderFoundation/studio.blender.org,CCBY4.0, modifiedface/figure/textures/hair/clothes/animations. Fullassetcredits in assets/kairo-brand-hero-20261024/KAIRO-CREDITS.txt.",
+      "text": [
+        "KAIRO ACCESS",
+        "Make learning count",
+        "KAIRO",
+        "25",
+        "KAIRO",
+        "Read it.\nSee it.\nTry it.",
+        "Help us test one real learner journey.",
+        "Illustrative learning worlds. Pilot discussion requested; outcomes and partner commitments remain to be tested."
+      ],
+      "images": [
+        {
+          "id": "8:58",
+          "name": "ASSET / worlds-closing",
+          "hash": [
+            "890a9a1e2c83f6d0a2bcb232d382e8982cac7127"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "id": "9:6",
+      "title": "Appendix / the narrower Core scenario",
+      "notes": "Data docs/business-canvas-20261024/base-forecast.csv months1,6,12,18,24. Revenue 206.6521739;14750;32511.5027537;52224.5845232;76711.7922590. Operating -47441.7318136;-45776.3893557;-30282.5830490;-13631.5066771;5904.8442314. Exactmonthlyseries inCSV. Fiveobservations linkedlinearly, notallmonthlycashmovements. CoreR35institution/R49consumer narrowed service, sharedfixed45000/month+acquisition,7contracts×250seatsbyM24,100%renewalsassumption,\\~229consumerpayers. M22firstpositiveop,peakcashdeficit391812+20%=470174. Noobserved sales. Fullplatformhas198000monthlycapacityanddifferentoffers/costs; do notcarryCorefundingtofullvision. Puredriverbasedscenarios,notMLdemandforecast.",
+      "text": [
+        "KAIRO ACCESS",
+        "Appendix / the narrower Core scenario",
+        "KAIRO",
+        "26",
+        "Monthly R’000",
+        "-50",
+        "0",
+        "50",
+        "100",
+        "Nov 2026",
+        "Apr 2027",
+        "Oct 2027",
+        "Apr 2028",
+        "Oct 2028",
+        "Revenue",
+        "R76,712 / month at month 24",
+        "Operating result",
+        "R5,905 / month at month 24",
+        "Peak cash gap: R391,812\nWith 20% buffer: R470,174",
+        "Hypothetical Nov 2026–Oct 2028 Core model. Not the full-platform funding need. Five selected months shown."
+      ],
+      "images": []
+    },
+    {
+      "number": 27,
+      "id": "9:33",
+      "title": "Appendix / evidence and assumptions",
+      "notes": "Competitors: https://support.google.com/gemininotebook/answer/16215270?hl=en ; https://phet.colorado.edu/en/research ; https://www.labster.com/simulations ; https://khanmigo.ai/ ; https://www.coursera.org/campus . Modelcost https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing ; DocumentAI https://cloud.google.com/products/document-ai/pricing ; STT https://cloud.google.com/speech-to-text/pricing ; translation https://cloud.google.com/products/translate/pricing . Mainfinancialevidence docs/business-canvas-20261024/FULL-PLATFORM-COSTS.md, full-platform-results.json and base-forecast.csv. Current release evidence docs/security-submission-20261024/RELEASE-STATUS.json. Language: draftselectedlanguageexplanations,notvalidatedteaching;handtrackingnotSASL. Fullsecuritygaps includeparserisolation,distributedabuse,IAMreduction,retention/restore,containerauditandhumanacceptance. KAIRO teacher basedonRainRig©BlenderFoundation/studio.blender.org CC-BY4.0 https://studio.blender.org/characters/rain/v3/ and https://creativecommons.org/licenses/by/4.0/ ; modifiedface/figure/textures/hair/clothes/animations. PolyHavenHDRICC0. Generatedstudentisfictional; generatedbranddevices/worldsarenotproductcaptures. See assets/kairo-brand-hero-20261024/KAIRO-CREDITS.txt. Presentation templates considered from Figmaofficialreference; no externalcommunitytemplateassets copied.",
+      "text": [
+        "KAIRO ACCESS",
+        "Appendix / evidence and assumptions",
+        "KAIRO",
+        "27",
+        "Sources / click to open",
+        "DHET / PSET enrolments, 2024",
+        "Stats SA / household internet, 2024",
+        "Freeman et al. / active learning, 2014",
+        "Karpicke & Roediger / retrieval, 2008",
+        "PhET / simulation design research",
+        "Google Cloud / service pricing",
+        "Payfast / transaction fees",
+        "Figma / pitch and device references",
+        "Economics",
+        "R20/USD budget, 15% vendor-tax reserve.\nVolumes and retention are assumptions.\nCredits excluded from unit costs.",
+        "Production and access",
+        "IAM-private cloud deployment.\nJudge access and device checks are open.\nIndependent security review is pending.",
+        "Visuals and outcomes",
+        "Device and world visuals are concepts.\nAvatar and motor use actual app models.\nLearning and hiring outcomes are untested.",
+        "Sources checked 24 Oct 2026. Detailed citations, assumptions, limitations and asset credits are in slide notes."
+      ],
+      "images": []
+    }
+  ]
+}

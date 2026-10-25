@@ -1,0 +1,42 @@
+{
+ "headCentre": [
+  0.0,
+  -0.03792379051446915,
+  1.5
+ ],
+ "crownTop": [
+  1.4180939755803479e-09,
+  -0.02304726466536522,
+  1.6238964796066284
+ ],
+ "updoLocs": 120,
+ "bunCoils": 11,
+ "backLocs": 37,
+ "frameLocs": 4,
+ "earrings": [
+  "KAIRO_Earring.L",
+  "KAIRO_Earring.R"
+ ],
+ "vertices": {
+  "KAIRO_HairScalp": 1023,
+  "KAIRO_HairUpdo": 17162,
+  "KAIRO_HairBunCore": 222,
+  "KAIRO_HairBack": 11027,
+  "KAIRO_HairFrame": 872
+ },
+ "hairBones": {
+  "back": [
+   "DEF-KAIRO-HairBack1",
+   "DEF-KAIRO-HairBack2",
+   "DEF-KAIRO-HairBack3"
+  ],
+  "side_L": [
+   "DEF-KAIRO-HairSide.L1",
+   "DEF-KAIRO-HairSide.L2"
+  ],
+  "side_R": [
+   "DEF-KAIRO-HairSide.R1",
+   "DEF-KAIRO-HairSide.R2"
+  ]
+ }
+}

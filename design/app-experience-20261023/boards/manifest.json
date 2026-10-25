@@ -1,0 +1,43 @@
+{
+  "schema": "kairo-experience-boards/1",
+  "selectedReference": "assets/brand-reference.png",
+  "authority": "Clickable screen wording and specification supersede incidental generated image text, dates, personal names and capability/privacy claims.",
+  "boards": [
+    {
+      "path": "design/app-experience-20261023/boards/01.png",
+      "bytes": 1633721,
+      "sha256": "aeb389619353392c618242fd337bab0993524f26a6f6b9127371af2e0d7eefbd",
+      "kind": "generated visual direction, not application acceptance"
+    },
+    {
+      "path": "design/app-experience-20261023/boards/02.png",
+      "bytes": 1645357,
+      "sha256": "a57b6b28c9dc293f62d4d2785ca1270af9183393ec2ba3c16947cbb92ee97b6e",
+      "kind": "generated visual direction, not application acceptance"
+    },
+    {
+      "path": "design/app-experience-20261023/boards/03.png",
+      "bytes": 1801863,
+      "sha256": "42fcababf142547993750a4463b137af00188a55fb001102295fe7093ef8551a",
+      "kind": "generated visual direction, not application acceptance"
+    },
+    {
+      "path": "design/app-experience-20261023/boards/04.png",
+      "bytes": 1792921,
+      "sha256": "de4a41017c021c7f02910fd98fab0a3f464ee4f588ae61fa236fc33043136c20",
+      "kind": "generated visual direction, not application acceptance"
+    },
+    {
+      "path": "design/app-experience-20261023/boards/05.png",
+      "bytes": 1859220,
+      "sha256": "591ca554bd45d6ecd311c85531aca52bcdd472e65fe68b31b8cb91ca952f7d1d",
+      "kind": "generated visual direction, not application acceptance"
+    },
+    {
+      "path": "design/app-experience-20261023/boards/06.png",
+      "bytes": 1743372,
+      "sha256": "e07a262da6dc3008288577676bcb2bf29575959759f0a5e80a3a7fe52fbfe38c",
+      "kind": "generated visual direction, not application acceptance"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Branded KAIRO environments and solutions artwork
+
+24 October 2026. Root codex-kairo-hero-20261024-k; actual gpt-6 / effort unknown. KAIRO-HERO-038. User requested KAIRO, her environments and highlighted solutions with strong branding/background.
+
+Generated complete hero poster plus clean matching background with built-in imagegen. Referenced actual portrait, native full-body proof and approved C branding sheet after visual inspection. Main composition uses a reviewed-page ribbon unfolding into motor, pump and API learning stages, with source/reading/exploration/practice/working/direction callouts. Selected chalk/moss/sage/ink retained; no unsupported hiring/funding/medical/SASL outcome. Derived generated artwork is not an exact native KAIRO render or actual application interface.
+
+Files/provenance/usages in docs/kairo-brand-hero-20261024/README.md and assets/kairo-brand-hero-20261024/. Included unchanged approved vector logo/symbol copies and source KAIRO credits. Manifest records real image sizes/hashes; ZIP CRC checked. Main poster inspected for label spelling/hierarchy and identity reference; clean plate inspected for removed character/text and retained environments. Equipment is illustrative, not technically validated geometry. Real native rig/vector composition is the preferred final motion path.
+
+Observed actual Claude production registration and active KAIRO-AD-PROD-037 claim; sent targeted bus130 advance notice and will deliver final paths. Claude production folders remain untouched. No browser/camera observation, paid-model API call, actual app capture, final video, model training or deployment. Creative/Presentation evidence is the delivered artwork; Product/Intelligence messaging stays within supported examples and honest limitations. Human ad comprehension/voice/animation review remains open.

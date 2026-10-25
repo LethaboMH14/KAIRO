@@ -1,0 +1,86 @@
+import {useStudentSpace} from '../student-space/StudentSpace';
+import {openAccess} from '../learning-flow/AccessDialog';
+import {relevantStudios} from '../learning-flow/model';
+import {learnerStorage} from '../account/storage.ts';
+import {Component,lazy,Suspense,useEffect,useRef,useState,type ReactNode} from 'react';
+import {BookOpen,Pause,Play,Square} from 'lucide-react';
+import {useTeacher} from '../teacher/TeacherProvider';
+import type {Lesson} from '../workspace/types';
+import type {AudioInput,CharacterCue} from '../character/types';
+import ClassroomRecovery,{type RecoveryKind} from '../classroom-recovery-ui/ClassroomRecovery';
+import LessonReading from '../source-classroom-ui/LessonReading';
+import {readResume,writeResume,type ResumeResult} from '../classroom-resume/model';
+import {chooseResumeStart} from '../classroom-resume-policy/model';
+import {emptyProgress,type Progress} from '../workspace/learning';
+import {restoreStudyProgress} from '../continuity/progress-restore';
+import SaveReading from '../continuity/SaveReading';
+import SourceReader from '../teacher/SourceReader';
+import {SourceSearch,LessonPractice,LessonEvidence} from '../kairo/JourneyPanels';
+import {readProfile,saveStudy,writeProfile} from '../profile/model';
+import {supportsStockCase} from '../practice/model';
+import {chapterIndex,loadReviewedLesson} from './session';
+import DraftReading from '../lesson-editor-host/DraftReading';
+import '../lesson-editor-host/lesson-editor.css';
+import LessonEntry from '../journey-integration/LessonEntry';
+import {prepareEntry} from '../journey-integration/model';
+import '../workspace/workspace.css';
+import '../experience/experience.css';
+const RainStage=lazy(()=>import('./RainStage'));
+class StageBoundary extends Component<{children:ReactNode;onError:()=>void},{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return {failed:true};}componentDidCatch(){this.props.onError();}render(){return this.state.failed?<p>The room could not load. Continue with the same lesson text below.</p>:this.props.children;}}
+export default function SourceClassroom(){
+ const student=useStudentSpace();const teacher=useTeacher(),stopRef=useRef(teacher.stop);stopRef.current=teacher.stop;
+ const [requestVersion,setRequestVersion]=useState(0),[failureKind,setFailureKind]=useState<RecoveryKind>('lesson-unavailable'),[storageKind,setStorageKind]=useState<RecoveryKind|null>(null);
+ const [tab,setTab]=useState(()=>{const t=new URLSearchParams(location.search).get('tab');return t==='practice'||t==='evidence'?t:'learn';});
+ const [patterns,setPatterns]=useState(false),[patternStatus,setPatternStatus]=useState('');
+ const [started,setStarted]=useState(false),[savedLocally,setSavedLocally]=useState(false);
+ const [progress,setProgress]=useState<Progress>(emptyProgress),[storage,setStorage]=useState(''),[help,setHelp]=useState(false),[cloud,setCloud]=useState(false);
+ const resumePermission=useRef<ResumeResult|null>(null),studySnapshot=useRef<string|null>(null),studyWritable=useRef(false);
+ const [lesson,setLesson]=useState<Lesson|null>(null),[error,setError]=useState(''),[step,setStep]=useState(0),[hint,setHint]=useState(false);
+ const [reading,setReading]=useState(true),[roomError,setRoomError]=useState(false),[reduced,setReduced]=useState(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);
+ const audio=useRef<AudioInput>({energy:0,playing:false,paused:false,time:0}),serial=useRef(0);
+ const [cue,setCue]=useState<CharacterCue>({id:'source-idle',type:'idle'});
+ function cancel(){stopRef.current();audio.current={energy:0,playing:false,paused:false,time:0};setCue({id:`source-${++serial.current}`,type:'idle'});}
+ useEffect(()=>{
+  const controller=new AbortController();setError('');setLesson(null);setStarted(false);setSavedLocally(false);
+  const id=new URLSearchParams(location.search).get('lesson')||'';
+  async function load(path:string,signal:AbortSignal){const response=await fetch(`/api/workspace${path}`,{signal,cache:'no-store'});const data=await response.json();if(!response.ok)throw new Error(data.error||'Your lesson could not open. Try again from My material.');return data;}
+  void loadReviewedLesson(id,load,controller.signal).then(value=>{if(controller.signal.aborted)return;prepareEntry(value,{sourceId:value.sourceId,revision:value.revision,reviewed:true},null);let permission:ResumeResult={state:{step:0,reading:true},status:'unavailable',canWrite:false,message:'Saved work could not be read. Earlier records were left unchanged.'};
+   try{permission=readResume(learnerStorage,value);resumePermission.current=permission;const raw=learnerStorage.getItem(`kairo-study-${value.id}`);studySnapshot.current=raw;const restored=restoreStudyProgress(raw,value);studyWritable.current=restored.writable;setProgress(restored.progress);if(restored.message){setStorage(restored.message);setStorageKind('storage-unavailable');}}catch{setStorageKind('storage-unavailable');setStorage('Saved work could not be read. Earlier records were left unchanged; download your work before leaving.');}
+   const start=chooseResumeStart(new URLSearchParams(location.search).get('step'),permission,value.chapters.length);if(start.message){setStorage(start.message);setStorageKind('storage-unavailable');}
+   resumePermission.current=permission;setLesson(value);setStep(start.step);setReading(start.reading);if(new URLSearchParams(location.search).get('help')==='1'){setStarted(true);setReading(true);setHelp(true);}document.title=`KAIRO · ${value.title} · Classroom`;
+   void fetch('/api/health',{signal:controller.signal}).then(r=>r.json()).then(v=>{if(!controller.signal.aborted)setCloud(v.cloudConfigured===true);}).catch(()=>{});}).catch(e=>{if(!controller.signal.aborted){setFailureKind(e instanceof Error&&'code' in e&&e.code==='source-changed'?'source-changed':'lesson-unavailable');setError(e instanceof Error?e.message:'Your lesson could not open.');}});
+  return()=>{controller.abort();stopRef.current();audio.current={energy:0,playing:false,paused:false,time:0};};
+ },[requestVersion]);
+ useEffect(()=>{let frame=0;function sync(){const s=teacher.audioSignal.current;audio.current={energy:teacher.speaking&&!teacher.paused&&teacher.settings.voiceMode==='google'?s.energy:0,playing:teacher.speaking&&!teacher.paused,paused:teacher.paused,time:s.time};frame=requestAnimationFrame(sync);}sync();return()=>cancelAnimationFrame(frame);},[teacher.audioSignal,teacher.speaking,teacher.paused,teacher.settings.voiceMode]);
+ useEffect(()=>{setCue({id:`source-${++serial.current}`,type:teacher.speaking&&!teacher.paused?'explain':'idle'});},[teacher.speaking,teacher.paused]);
+ function remember(nextStep:number,nextReading:boolean){if(!lesson||!resumePermission.current)return;try{const result=writeResume(learnerStorage,lesson,{step:nextStep,reading:nextReading},resumePermission.current);if(result.saved)resumePermission.current=readResume(learnerStorage,lesson);else{setStorage(result.message);setStorageKind('resume-conflict');}}catch{setStorage('Your place could not be saved. Download your work before leaving.');}}
+ function updateUrl(nextTab:string,nextStep:number){const url=new URL(location.href);url.searchParams.set('tab',nextTab);url.searchParams.set('step',String(nextStep));history.replaceState(null,'',url.pathname+url.search);}
+ function changeTab(value:string){cancel();setHelp(false);setTab(value);updateUrl(value,step);}
+ function saveWork(next:Progress){
+  if(patterns&&lesson&&next.attempts.length>progress.attempts.length){const a=next.attempts.at(-1)!;void fetch('/api/workspace/pattern-events',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({consent:true,lessonId:lesson.id,eventId:crypto.randomUUID(),question:a.question,choice:a.choice})}).then(async r=>{if(!r.ok)throw Error();setPatternStatus('Practice pattern saved privately. Assistance is unknown; this is not a verified skill score.');}).catch(()=>setPatternStatus('The practice pattern could not save. Your device record is separate.'));}
+  next={...next,step};setProgress(next);if(!lesson)return;if(!studyWritable.current){setStorage('Earlier saved work is protected. These changes stay in this session; download them before leaving.');return;}try{const key=`kairo-study-${lesson.id}`;if(learnerStorage.getItem(key)!==studySnapshot.current){studyWritable.current=false;setStorageKind('resume-conflict');setStorage('Saved work changed in another tab. Earlier records were kept; download this session before reopening.');return;}const raw=JSON.stringify(next);if(!restoreStudyProgress(raw,lesson).writable)throw new Error('Unsupported study state');learnerStorage.setItem(key,raw);studySnapshot.current=raw;setStorageKind(null);setSavedLocally(true);setStorage('Notes and practice saved on this device.');try{const profile=readProfile();const topic=supportsStockCase(lesson)?'Business operations':'Other';writeProfile(saveStudy(profile,{lessonId:lesson.id,title:lesson.title,topic,format:next.format,questions:lesson.quiz.length,attempts:next.attempts.map(a=>({question:a.question,correct:a.correct,at:a.at})),updatedAt:new Date().toISOString()}));}catch{setStorage('Lesson working was saved. The separate progress summary could not update; its earlier records were kept.');}}catch{setSavedLocally(false);studyWritable.current=false;setStorageKind('storage-unavailable');setStorage('This device could not save your work. Download this session before leaving.');}}
+ function jump(index:number){cancel();setHint(false);setHelp(false);if(lesson){const value=chapterIndex(index,lesson.chapters.length);setStep(value);remember(value,reading);updateUrl(tab,value);}}
+ function read(text:string){cancel();teacher.say(text,({English:'en-ZA',Afrikaans:'af-ZA',isiZulu:'zu-ZA',isiXhosa:'xh-ZA',Sesotho:'st-ZA',Setswana:'tn-ZA'} as Record<string,string>)[lesson?.curation?.language||'English']||'en-ZA');}
+ function stuck(){cancel();setHint(true);setCue({id:`source-${++serial.current}`,type:'listen'});}
+ return <div className="kx" style={{display:'block'}}><a className="kx-skip" href="#source-lesson">Skip to lesson</a><main className="kx-main"><header className="kx-top"><a href="/sources">My material</a>{lesson&&<a href={`/classroom?lesson=${lesson.id}&tab=evidence`}>My lesson working</a>}<button type="button" onClick={()=>{cancel();openAccess();}}>Voice, language and camera</button>{lesson&&<a href={`/lesson-editor?lesson=${lesson.parentLessonId||lesson.id}`} onClick={cancel}>Shape this lesson</a>}{!student.space&&<a href="/classroom">Prepared stock example</a>}</header><div className="kx-body" id="source-lesson">
+  {(!lesson||started||tab!=='learn')&&<h1>{lesson?.title||'Open your lesson'}</h1>}
+  {!lesson?<ClassroomRecovery kind={error?failureKind:'loading'} detail={error||undefined} onRetry={error?()=>{cancel();setRequestVersion(v=>v+1);}:undefined}/>:<>
+   {lesson.curation&&<aside className="kx-card"><h2>Your learning plan</h2><p>{lesson.curation.reason}</p><p>Lesson language: {lesson.curation.language}. Translation and voice availability need review; this is not a verified skill score.</p></aside>}{(started||tab!=='learn')&&<p>{lesson.objective}</p>}<nav className="ka-flow-tabs" aria-label="Lesson journey">{[['learn','1 Learn'],['practice','2 Practise'],['evidence','3 Keep my work']].map(([value,label])=><button key={value} aria-current={tab===value?'step':undefined} onClick={()=>changeTab(value)}>{label}</button>)}</nav><SaveReading lesson={lesson}/>{storageKind&&<ClassroomRecovery kind={storageKind} lessonId={lesson.id} detail={storage} onContinueReading={()=>{cancel();setTab('learn');setReading(true);setStorageKind(null);}}/>}{storage&&<p className="ka-small" role="status">{storage}</p>}<p className="kx-footnote">{lesson.coverage}</p><p className="kx-footnote">{lesson.reviewWarning}</p>{tab==='learn'&&!started&&<LessonEntry lesson={lesson} sourceContext={{sourceId:lesson.sourceId,revision:lesson.revision,reviewed:true}} resume={resumePermission.current} savedLocally={savedLocally} onStop={cancel} onEnter={index=>{setStep(index);setReading(true);setStarted(true);remember(index,true);updateUrl('learn',index);}} onReviewSource={()=>{cancel();location.assign(`/sources?source=${lesson.sourceId}`);}}/>}{tab==='learn'&&started&&<><div className="kx-controls"><button onClick={()=>{cancel();setRoomError(false);remember(step,!reading);setReading(!reading);}}><BookOpen size={17}/>{reading?'Show KAIRO in 3D':'Reading view'}</button><label><input type="checkbox" checked={reduced} onChange={e=>{cancel();setReduced(e.target.checked);}}/> Reduce motion</label></div>
+   {!reading&&!roomError&&<StageBoundary onError={()=>{cancel();setRoomError(true);setReading(true);}}><Suspense fallback={<p role="status">Loading KAIRO. Lesson text is available below.</p>}><RainStage audio={audio} cue={cue} reduced={reduced} onError={()=>{cancel();setRoomError(true);setReading(true);}}/></Suspense></StageBoundary>}
+   {roomError&&<ClassroomRecovery kind="room-unavailable" onContinueReading={()=>{cancel();setReading(true);setRoomError(false);}}/>}
+   <div className="kx-controls"><button onClick={()=>teacher.speaking?teacher.pause():read(lesson.chapters[step].explanation)}>{teacher.speaking&&!teacher.paused?<Pause size={17}/>:<Play size={17}/>} {teacher.speaking?(teacher.paused?'Resume':'Pause'):'Read chapter aloud'}</button><button onClick={cancel}><Square size={17}/>Stop</button><button onClick={stuck}>I’m stuck</button></div>
+   <div className="kx-caption"><strong>{teacher.speaking?'Narration text':'Chapter text'}</strong><p>{teacher.speaking?teacher.caption:lesson.chapters[step].explanation}</p></div>
+   {hint&&<aside className="kx-card" role="status"><h2>Take one smaller step</h2><p>Read one cited passage below. Pick a sentence and explain it in your own words. Compare your explanation with the original before continuing.</p><button onClick={()=>read(lesson.chapters[step].example)}>Read the chapter prompt</button><a href={`/learn?lesson=${lesson.id}`}>Open passage help, practice and notes</a><p>This is a reading prompt, not a new AI answer.</p></aside>}
+   {lesson.editorDocument?<DraftReading draft={lesson.editorDocument} lesson={lesson} onRead={read} onPractise={()=>changeTab('practice')}/>:<LessonReading lesson={lesson} step={step} onStep={jump} onRead={read} onStuck={stuck}/>}
+   <div className="kx-controls"><button onClick={()=>{cancel();setHelp(!help);}} aria-expanded={help}>Ask about a cited passage</button><button className="kx-primary" onClick={()=>changeTab('practice')}>Try the practice questions</button></div>
+   {help&&lesson.evidence.find(e=>lesson.chapters[step].citationIds.includes(e.id))&&(()=>{const e=lesson.evidence.find(e=>lesson.chapters[step].citationIds.includes(e.id))!;return <SourceReader key={`${step}-${e.id}`} text={e.quote} context={{kind:'lesson',id:lesson.id,revision:lesson.revision,evidenceId:e.id}} title={lesson.title} locator={e.locator} cloudAvailable={cloud}/>;})()}
+   <SourceSearch lesson={lesson}/></>}
+   <aside className="kx-card"><h2>Try the idea in a prepared activity</h2><p>These activities use their own checked examples and sources. Your uploaded material has not become a simulation.</p><div className="kx-controls">{relevantStudios(student.space,lesson.id).map(item=><a key={item.path} className="kx-primary" href={item.href} onClick={cancel}>{item.label}</a>)}</div><p>Your lesson link stays with you so you can return to its working.</p></aside>
+   {tab==='practice'&&<aside className="kx-card"><label><input type="checkbox" checked={patterns} onChange={e=>setPatterns(e.target.checked)}/> Save new practice patterns for future lesson suggestions</label><p>Optional. Keeps the question identity, source revision and result in your private workspace. No answer text is saved. Earlier patterns remain if you turn this off.</p><p role="status">{patternStatus}</p></aside>}{tab==='practice'&&<LessonPractice lesson={lesson} progress={progress} onChange={saveWork} onEvidence={()=>changeTab('evidence')}/>}
+   {tab==='evidence'&&<LessonEvidence lesson={lesson} progress={progress} onChange={saveWork} storage={storage}/>}
+
+   <p className="kx-footnote">KAIRO reads the saved lesson. Cited passage help uses the optional consented cloud service. New worlds and word-timed pointing are not enabled here. Google voice uses your saved consent; device voices depend on availability. Sound-reactive mouth movement is approximate and only available with cloud audio. No microphone is opened.</p><p className="kx-footnote">The reviewed source revision was checked when this lesson opened. Return to My material after making source corrections.</p>
+  </>}
+  <footer className="kx-footer">Rain Rig (CC) Blender Foundation | studio.blender.org · CC-BY 4.0 · adapted for KAIRO.<a href="/models/character/CREDITS.txt">Character provenance</a></footer>
+ </div></main></div>;
+}

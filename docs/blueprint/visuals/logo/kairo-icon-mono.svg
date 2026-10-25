@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title desc">
+  <title id="title">KAIRO single-color icon</title>
+  <desc id="desc">One-ink open book and passage mark with a speech cue.</desc>
+  <g fill="#252820">
+    <path d="M26 104c19-11 39-10 58 0v32c-19-10-39-11-58 0z"/>
+    <path d="M90 104c18-10 37-11 64-4v36c-27-7-46-6-64 4z"/>
+    <path d="M90 39 51 78l39 39" fill="none" stroke="#252820" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M90 40v77" fill="none" stroke="#252820" stroke-width="11" stroke-linecap="round"/>
+    <path d="M105 35c11-10 27-6 31 6 3 9-2 17-10 23l-2 9-13-6" fill="none" stroke="#252820" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="114" cy="41" r="3"/>
+  </g>
+</svg>

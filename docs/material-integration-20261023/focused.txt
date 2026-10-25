@@ -1,0 +1,73 @@
+9:07:11 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+✔ actual selected source opens in review and gates the planner on reviewed text (3637.1673ms)
+✔ editing source invalidates citations and requires fresh acknowledgement (15.3762ms)
+✔ brief reaches consented request and Stop waiting suppresses late generation (51.1339ms)
+(!) Failed to run dependency scan. Skipping dependency pre-bundling. Error:   Failed to scan for dependencies from entries:
+  C:/Users/USER/Desktop/fnb app of year hackathon/studio/index.html
+C:/Users/USER/Desktop/fnb app of year hackathon/studio/src/character/preview.html
+C:/Users/USER/Desktop/fnb app of year hackathon/studio/src/engineering/preview.html
+C:/Users/USER/Desktop/fnb app of year hackathon/studio/src/pump-lab/preview.html
+C:/Users/USER/Desktop/fnb app of year hackathon/studio/src/signing/preview.html
+
+  [31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/experience/stage/shirtBadge.ts:7:37:
+[37m      7 │ import { badgeData, pathRings } from [32m'./badgeMesh.ts'[37m;
+        ╵                                      [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/kairo/JourneyPanels.tsx:7:27:
+[37m      7 │ import {findPassages} from [32m'./retrieval'[37m;
+        ╵                            [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/kairo/JourneyPanels.tsx:8:34:
+[37m      8 │ ...ilestoneCard from [32m'../practice-milestone-ui/PracticeMilestoneCard'[37m;
+        ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mThe server is being restarted or closed. Request is outdated[0m [1m[35m[plugin vite:dep-scan][0m
+
+    src/kairo/JourneyPanels.tsx:9:29:
+[37m      9 │ import {practiceRecord} from [32m'../journey-integration/model'[37m;
+        ╵                              [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+    at failureErrorWithLog (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1752:15)
+    at C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1211:25
+    at runOnEndCallbacks (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1592:45)
+    at buildResponseToResult (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1209:7)
+    at C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1221:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:1220:54)
+    at handleRequest (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:911:17)
+    at handleIncomingPacket (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:936:7)
+    at Socket.readFromStdout (C:\Users\USER\Desktop\fnb app of year hackathon\studio\node_modules\esbuild\lib\main.js:864:7)
+✔ reviewed unchanged pages produce exact source-linked cards and readable learner steps (8.9785ms)
+✔ dirty text, missing revision and unreviewed sources remain draft with no citation (0.9261ms)
+✔ stale text and reordered pages cannot cite the current review locators (0.844ms)
+✔ empty sources and empty pages create no fabricated quote or placeholder card (0.9153ms)
+✔ cards are capped at three and invalid current text input fails closed (3.5758ms)
+✔ goal compiler gives the explicit learner goal precedence, bounds output and has deterministic safe defaults (2.5638ms)
+✔ builder preserves deeply frozen source, current texts and brief (0.625ms)
+✔ load actual MaterialPlanner through Vite SSR (956.1018ms)
+✔ controlled goal/depth/approach inputs expose current state and selection labels (25.8511ms)
+✔ actual component handlers emit bounded controlled changes (3.4987ms)
+✔ busy disables controls and direct event handlers cannot emit changes (4.878ms)
+✔ citations require reviewed source and exact passage context; drafts show review instruction (7.7248ms)
+✔ outline is not presented as a generated lesson and has empty state (8.7743ms)
+✔ learner copy and source content are escaped; no fake score or model claim (4.3786ms)
+✔ card list is bounded to three and local reading keeps exact passages (12.8518ms)
+✔ close SSR server (6.7805ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5220.5024

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\USER\\Desktop\\fnb app of year hackathon\\docs\\cloud-submission-20261023\\architecture.json",
+  "output": "C:\\Users\\USER\\Desktop\\fnb app of year hackathon\\docs\\cloud-submission-20261023\\architecture.html",
+  "specification": {
+    "sha256": "619caaaff0666cd0f07ffdbf5b3640c8f350c4d06d5cd60385205e0d5556aa7e",
+    "bytes": 2356
+  },
+  "artifact": {
+    "sha256": "99ab19caba3a70e67637627575e00aef4ed4db82d126e2a9e7998a8026660872",
+    "bytes": 711967
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  }
+}

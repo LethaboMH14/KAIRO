@@ -1,0 +1,15 @@
+{
+  "asset": "MPFB example avatar",
+  "creator": "Mika Suominen / met4citizen; created with Blender and MPFB",
+  "sourceRepository": "https://github.com/met4citizen/TalkingHead",
+  "sourceCommit": "2afe6d79779313db8909badebf46f9805a6c7b70",
+  "sourcePath": "avatars/mpfb.glb",
+  "sourceSha256": "63c645a2a863b9972e9a9c2ed576a1de4c390b8475508e1473e69c87a3ee299c",
+  "preparedSha256": "8d0f3728a91ccda99a40c39156d9d01a0aea274d4db82d618c3604c8ceefed58",
+  "license": "CC0-1.0",
+  "licenseEvidence": "https://github.com/met4citizen/TalkingHead/blob/2afe6d79779313db8909badebf46f9805a6c7b70/README.md#run-the-indexhtml-web-app",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "preparation": "Blender 4.5.14 LTS: textures resized to max 1024, selected facial morphs retained, morph normals removed; existing skeleton and skin weights preserved. See tools/avatar/prepare_teacher.py.",
+  "animations": "KAIRO-authored procedural teaching poses; no third-party animation clips downloaded",
+  "limits": "Rehearsal character, not the final soft cinematic art direction. No SASL translation. Jaw amplitude is approximate audio-driven animation, not phoneme-aligned lip sync."
+}

@@ -1,0 +1,816 @@
+{
+  "page": "http://127.0.0.1:4184/src/character/preview.html",
+  "browser": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "started": "2026-10-22T20:51:23.594Z",
+  "build": [
+    {
+      "file": "assets/preview-BJ7mJfrm.js",
+      "bytes": 1302302
+    },
+    {
+      "file": "assets/preview-pNed6yAp.css",
+      "bytes": 22188
+    },
+    {
+      "file": "src/character/preview.html",
+      "bytes": 531
+    }
+  ],
+  "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x00004628) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "checks": [
+    {
+      "name": "teacher model loads and reports ready",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: no horizontal page scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "initial rest cue: accepted, acting, completed once each",
+      "pass": true,
+      "detail": "accepted,acting,completed"
+    },
+    {
+      "name": "listen cue completes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "explain cue completes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "acknowledge completes when its clip finishes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "point at formula: completes on the real target (contact)",
+      "pass": true,
+      "detail": "mode contact, tip-target 1.3 cm, ray 0.94 deg"
+    },
+    {
+      "name": "point at answer: completes on the real target (contact)",
+      "pass": true,
+      "detail": "mode contact, tip-target 1.3 cm, ray 0.87 deg"
+    },
+    {
+      "name": "point at learner-work: completes on the real target (ray)",
+      "pass": true,
+      "detail": "mode ray, tip-target 39.2 cm, ray 0 deg"
+    },
+    {
+      "name": "point at poster: completes on the real target (ray)",
+      "pass": true,
+      "detail": "mode ray, tip-target 80.1 cm, ray 0 deg"
+    },
+    {
+      "name": "after pointing, both arms return to the idle pose",
+      "pass": true,
+      "detail": "{\"l.wrist\":2,\"l.indexTip\":3,\"r.wrist\":1,\"r.indexTip\":2}"
+    },
+    {
+      "name": "interrupted cue gets exactly one terminal event: interrupted",
+      "pass": true,
+      "detail": "accepted,acting,interrupted"
+    },
+    {
+      "name": "replacing cue completes exactly once",
+      "pass": true,
+      "detail": "accepted,acting,completed"
+    },
+    {
+      "name": "move is unsupported (no sliding walk is offered)",
+      "pass": true,
+      "detail": "[{\"id\":\"move-12\",\"state\":\"accepted\",\"reason\":null},{\"id\":\"move-12\",\"state\":\"unsupported\",\"reason\":\"locomotion-not-delivered\"}]"
+    },
+    {
+      "name": "missing target is unsupported with a reason",
+      "pass": true,
+      "detail": "[{\"id\":\"point-13\",\"state\":\"accepted\",\"reason\":null},{\"id\":\"point-13\",\"state\":\"unsupported\",\"reason\":\"target-not-found\"}]"
+    },
+    {
+      "name": "voice sample plays",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phoneme-timed mouth moves with the sample",
+      "pass": true,
+      "detail": "audio clock past 0.25 s 3992 ms after the click, max jawOpen 0.517, distinct shape labels 5"
+    },
+    {
+      "name": "pause stops playback and closes the mouth",
+      "pass": true,
+      "detail": "jawOpen 0"
+    },
+    {
+      "name": "resume continues playback",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "stop ends playback and closes the mouth",
+      "pass": true,
+      "detail": "jawOpen 0"
+    },
+    {
+      "name": "amplitude-only mode opens the jaw with loudness (labelled as such)",
+      "pass": true,
+      "detail": "max jawOpen 0.11"
+    },
+    {
+      "name": "lesson runs to the end",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "board advanced exactly twice, each after a completed point",
+      "pass": true,
+      "detail": "board 0 -> 2, actions 2"
+    },
+    {
+      "name": "no cue id ever received two terminal events or two acceptances",
+      "pass": true,
+      "detail": "{\"doubleTerminal\":[],\"doubleAccepted\":[]}"
+    },
+    {
+      "name": "key 2 issues the listen cue",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "key F points at the formula",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "key M switches to the reading view",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion follows the system setting",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: no idle sway (head still)",
+      "pass": true,
+      "detail": "head moved 0.00 mm over 2.17 s of character time, springs false"
+    },
+    {
+      "name": "reduced motion: pointing still reaches a static teaching state",
+      "pass": true,
+      "detail": "206 ms"
+    },
+    {
+      "name": "phone: teacher loads",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phone: no horizontal page scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet-portrait: teacher loads",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet-portrait: no horizontal page scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "wide-1920: teacher loads",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "wide-1920: no horizontal page scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "no WebGL: reading view with an explanation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "missing model: reading view with a recovery message",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "console": [
+    {
+      "scenario": "missing-model",
+      "type": "log-error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found) http://127.0.0.1:4184/models/character/kairo-teacher.glb"
+    },
+    {
+      "scenario": "missing-model",
+      "type": "exception",
+      "text": "Error: Could not load /models/character/kairo-teacher.glb: fetch for \"http://127.0.0.1:4184/models/character/kairo-teacher.glb\" responded with 404: Not Found\n    at http://127.0.0.1:4184/assets/preview-BJ7mJfrm.js:3840:83820\n    at Object.h [as onError] (http://127.0.0.1:4184/assets/preview-BJ7mJfrm.js:3932:16669)\n    at http://127.0.0.1:4184/assets/preview-BJ7mJfrm.js:48:134856"
+    }
+  ],
+  "frames": {
+    "desktop-idle-classroom": {
+      "framesSampled": 120,
+      "drawCallsMedian": 82,
+      "drawCallsMax": 82,
+      "trianglesMedian": 459508,
+      "trianglesMax": 459508
+    },
+    "desktop-face-speaking": {
+      "framesSampled": 120,
+      "drawCallsMedian": 67,
+      "drawCallsMax": 67,
+      "trianglesMedian": 459122,
+      "trianglesMax": 459122
+    },
+    "desktop-after-lesson-classroom": {
+      "framesSampled": 120,
+      "drawCallsMedian": 81,
+      "drawCallsMax": 81,
+      "trianglesMedian": 459498,
+      "trianglesMax": 459498
+    }
+  },
+  "perf": {
+    "desktop-idle-classroom": {
+      "windows": [
+        {
+          "fps": 26.4,
+          "medianMs": 33.6,
+          "p95Ms": 66.5
+        },
+        {
+          "fps": 17,
+          "medianMs": 33.5,
+          "p95Ms": 183
+        },
+        {
+          "fps": 25.5,
+          "medianMs": 33.6,
+          "p95Ms": 50.5
+        }
+      ],
+      "median": {
+        "fps": 25.5,
+        "medianMs": 33.6,
+        "p95Ms": 50.5
+      }
+    },
+    "desktop-face-speaking": {
+      "windows": [
+        {
+          "fps": 20.4,
+          "medianMs": 49.8,
+          "p95Ms": 66.7
+        },
+        {
+          "fps": 22.6,
+          "medianMs": 49.8,
+          "p95Ms": 50.8
+        },
+        {
+          "fps": 22.5,
+          "medianMs": 49.8,
+          "p95Ms": 50.5
+        }
+      ],
+      "median": {
+        "fps": 22.5,
+        "medianMs": 49.8,
+        "p95Ms": 50.5
+      }
+    },
+    "desktop-after-lesson-classroom": {
+      "windows": [
+        {
+          "fps": 23.9,
+          "medianMs": 33.7,
+          "p95Ms": 51
+        },
+        {
+          "fps": 24.7,
+          "medianMs": 34.9,
+          "p95Ms": 58.5
+        },
+        {
+          "fps": 22.8,
+          "medianMs": 34.1,
+          "p95Ms": 55
+        }
+      ],
+      "median": {
+        "fps": 23.9,
+        "medianMs": 33.7,
+        "p95Ms": 51
+      }
+    }
+  },
+  "measurements": {
+    "readyReport": {
+      "assetId": "kairo-teacher",
+      "rigVersion": "kairo-teacher-rig v1: 77 joints, 31 face shapes, 30 hand correctives, 5 clips",
+      "capabilities": [
+        "cue:idle",
+        "cue:listen",
+        "cue:explain",
+        "cue:acknowledge",
+        "cue:point",
+        "point:ray-ik",
+        "point:contact-ik",
+        "gaze:head-and-eyes",
+        "face:31-shapes",
+        "expression:neutral",
+        "expression:encouraging",
+        "expression:curious",
+        "expression:focused",
+        "mouth:visemes-when-supplied",
+        "mouth:amplitude-fallback",
+        "blink",
+        "hair:spring-chains",
+        "hands:finger-correctives",
+        "reduced-motion",
+        "move:unsupported"
+      ]
+    },
+    "glbLoad": {
+      "transferBytes": 3425144,
+      "decodedBytes": 3424844,
+      "ms": 1191
+    },
+    "pointing": {
+      "formula": {
+        "side": "l",
+        "weight": 1,
+        "mode": "contact",
+        "tip": [
+          0.5133985303255347,
+          1.3492412592066299,
+          -0.018582495936241464
+        ],
+        "target": [
+          0.5242738535807158,
+          1.35,
+          -0.025634019407365517
+        ],
+        "tipToTargetM": 0.013,
+        "rayAngleDeg": 0.94
+      },
+      "answer": {
+        "side": "l",
+        "weight": 1,
+        "mode": "contact",
+        "tip": [
+          0.46080543596877266,
+          1.1408524788668317,
+          -0.07823251179143222
+        ],
+        "target": [
+          0.47148579435408744,
+          1.140042130115171,
+          -0.08572439409287681
+        ],
+        "tipToTargetM": 0.0131,
+        "rayAngleDeg": 0.87
+      },
+      "learner-work": {
+        "side": "r",
+        "weight": 1,
+        "mode": "ray",
+        "tip": [
+          -0.37122738450739534,
+          1.0140689562655207,
+          0.34377981365214993
+        ],
+        "target": [
+          -0.58,
+          0.83,
+          0.62
+        ],
+        "tipToTargetM": 0.3921,
+        "rayAngleDeg": 0
+      },
+      "poster": {
+        "side": "r",
+        "weight": 1,
+        "mode": "ray",
+        "tip": [
+          -0.5845110602940029,
+          1.3391484115026968,
+          0.07091953863727121
+        ],
+        "target": [
+          -1.3605012712473208,
+          1.4890745362070612,
+          0.19888013352092682
+        ],
+        "tipToTargetM": 0.8006,
+        "rayAngleDeg": 0
+      }
+    },
+    "armReturnMm": {
+      "l.wrist": 2,
+      "l.indexTip": 3,
+      "r.wrist": 1,
+      "r.indexTip": 2
+    },
+    "audioClockStartMs": 3992
+  },
+  "events": {
+    "desktop": [
+      {
+        "id": "idle-0",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "idle-0",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "idle-0",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "listen-1",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "listen-1",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "listen-1",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "explain-2",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "explain-2",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "explain-2",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "acknowledge-3",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "acknowledge-3",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "acknowledge-3",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "idle-4",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "idle-4",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "idle-4",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "point-5",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "point-5",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "point-5",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "point-6",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "point-6",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "point-6",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "point-7",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "point-7",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "point-7",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "point-8",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "point-8",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "point-8",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "idle-9",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "idle-9",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "idle-9",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "point-10",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "point-10",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "point-10",
+        "state": "interrupted",
+        "reason": "superseded by point-11"
+      },
+      {
+        "id": "point-11",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "point-11",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "point-11",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "move-12",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "move-12",
+        "state": "unsupported",
+        "reason": "locomotion-not-delivered"
+      },
+      {
+        "id": "point-13",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "point-13",
+        "state": "unsupported",
+        "reason": "target-not-found"
+      },
+      {
+        "id": "idle-14",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "idle-14",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "idle-14",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "idle-15",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "idle-15",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "idle-15",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "idle-16",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "idle-16",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "idle-16",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "listen-17",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "listen-17",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "listen-17",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "explain-18",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "explain-18",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "explain-18",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "point-19",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "point-19",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "point-19",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "board",
+        "state": "completed",
+        "reason": "board action \"advance step\" applied after point-19 completed"
+      },
+      {
+        "id": "point-20",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "point-20",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "point-20",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "board",
+        "state": "completed",
+        "reason": "board action \"advance step\" applied after point-20 completed"
+      },
+      {
+        "id": "acknowledge-21",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "acknowledge-21",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "acknowledge-21",
+        "state": "completed",
+        "reason": null
+      },
+      {
+        "id": "idle-22",
+        "state": "accepted",
+        "reason": null
+      },
+      {
+        "id": "idle-22",
+        "state": "acting",
+        "reason": null
+      },
+      {
+        "id": "idle-22",
+        "state": "completed",
+        "reason": null
+      }
+    ]
+  },
+  "screenshots": [
+    "docs/character/screenshots/c01-desktop-classroom.png",
+    "docs/character/screenshots/c02-camera-front.png",
+    "docs/character/screenshots/c02-camera-threeQuarter.png",
+    "docs/character/screenshots/c02-camera-side.png",
+    "docs/character/screenshots/c02-camera-back.png",
+    "docs/character/screenshots/c02-camera-face.png",
+    "docs/character/screenshots/c02-camera-board.png",
+    "docs/character/screenshots/c03-face-neutral.png",
+    "docs/character/screenshots/c03-face-encouraging.png",
+    "docs/character/screenshots/c03-face-curious.png",
+    "docs/character/screenshots/c03-face-focused.png",
+    "docs/character/screenshots/c04-listen.png",
+    "docs/character/screenshots/c04-explain.png",
+    "docs/character/screenshots/c04-acknowledge.png",
+    "docs/character/screenshots/c05-point-formula.png",
+    "docs/character/screenshots/c05-point-answer.png",
+    "docs/character/screenshots/c05-point-learner-work.png",
+    "docs/character/screenshots/c05-point-poster.png",
+    "docs/character/screenshots/c06-after-interruption.png",
+    "docs/character/screenshots/c07-speaking-visemes.png",
+    "docs/character/screenshots/c08-lesson-pointing.png",
+    "docs/character/screenshots/c09-lesson-finished.png",
+    "docs/character/screenshots/c10-reading-view.png",
+    "docs/character/screenshots/c11-reduced-motion-pointing.png",
+    "docs/character/screenshots/c12-layout-phone.png",
+    "docs/character/screenshots/c12-layout-tablet-portrait.png",
+    "docs/character/screenshots/c12-layout-wide-1920.png",
+    "docs/character/screenshots/c13-no-webgl.png",
+    "docs/character/screenshots/c14-missing-model.png"
+  ],
+  "finished": "2026-10-22T20:54:30.128Z",
+  "summary": {
+    "passed": 38,
+    "failed": 0
+  }
+}

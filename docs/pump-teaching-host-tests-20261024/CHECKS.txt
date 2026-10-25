@@ -1,0 +1,10 @@
+2026-10-24 — PumpHost integration regression evidence
+
+Command (studio/): node --test tests/pump-teaching-host.test.mjs
+Result: 7 tests total; 6 passed, 1 failed; 0 skipped.
+
+Passing: real lesson ID return URL and matching exit label; host passes a teaching panel containing the pump companion into PumpLab; meaningful case/selection/task/readings/completion changes stop narration while unchanged context and display/evidence summary changes do not; valid serialized snapshots load and save; corrupt snapshots remain unchanged and are not overwritten; generated evidence retains originLessonId, keeps at most five older items plus the new item, stays below the 100 KB check bound, carries no sampled credential fields, and explicitly disclaims external verification/domain review.
+
+Known failing regression: invalid `?lesson=not-a-lesson` gets destination `/studios` but `exitLabel` is `Back to my lesson`. This is a learner-facing destination-label mismatch in `PumpHost.tsx`, reported for root repair. The test task does not modify product code.
+
+Boundary: local actual-component Vite SSR/hook harness only. PumpLab and companion display are stubbed; no browser, camera, cloud, dependency change, full build, device or human evaluation.

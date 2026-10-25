@@ -1,0 +1,12 @@
+{
+  "duration":20,"fps":24,"width":1280,"height":720,
+  "kind":"Camera animatic from generated concept stills; not live app or actual animated 3D footage",
+  "segments":[
+    {"start":0,"end":3,"crop":[8,55,543,365],"caption":"I read it. Can I explain it?","voice":"I read it. Can I explain it?","cue":"PRESSURE / Questions accumulate","zoom":"in"},
+    {"start":3,"end":5,"crop":[564,55,543,365],"caption":"Meet KAIRO.","voice":"Meet Cairo.","cue":"REVEAL / Open the studio world","zoom":"out"},
+    {"start":5,"end":10,"crop":[1122,55,543,365],"caption":"Bring your material. Learn at your pace. Explore it.","voice":"Bring your material. Learn at your pace. Explore it.","cue":"MATERIAL / Enter the motor lesson","zoom":"in"},
+    {"start":10,"end":14,"crop":[8,472,543,355],"caption":"Practise. Build evidence of your skills.","voice":"Practice. Build evidence of your skills.","cue":"PRACTICE / Working meets consequence","zoom":"out"},
+    {"start":14,"end":18,"crop":[564,472,543,355],"caption":"Next: connect that evidence to roles and proposed rewards.","voice":"Next, connect that evidence to roles and proposed rewards.","cue":"NEXT / PROPOSED","zoom":"in"},
+    {"start":18,"end":20,"crop":[1122,472,543,355],"caption":"KAIRO. Put knowledge to work.","voice":"Cairo. Put knowledge to work.","cue":"CLOSE / Return to the learner","zoom":"out"}
+  ]
+}

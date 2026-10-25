@@ -1,0 +1,9 @@
+{
+  "project": "kairo-access-20261021",
+  "activeCliLogin": true,
+  "directProjectRoles": [
+    "roles/owner"
+  ],
+  "applicationDefaultCredentialsAvailable": false,
+  "serviceAccountKeysCreated": 0
+}

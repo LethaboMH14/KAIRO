@@ -1,0 +1,65 @@
+{
+  "checkedAt": "2026-10-25T00:36:20.552Z",
+  "syntheticAccountsOnly": true,
+  "browserObserved": false,
+  "liveModelRequests": 5,
+  "checks": {
+    "engineeringLogin": true,
+    "engineeringAssignedCurriculum": true,
+    "informaticsLogin": true,
+    "informaticsAssignedCurriculum": true,
+    "TwoDistinctStudySpaces": true,
+    "GatewayMounted": true,
+    "OwnerPreferencesMounted": true,
+    "OpportunityRecordsMounted": true,
+    "OwnLessonAvailable": true,
+    "OtherAccountDenied": true,
+    "MissingSessionDenied": true,
+    "LiveGoogleStudioHelp": true,
+    "ServiceStillIamPrivate": true
+  },
+  "providers": [
+    {
+      "id": "google",
+      "name": "Google Cloud",
+      "model": "gemini-3.5-flash-lite",
+      "configured": true
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "model": "openai/gpt-oss-20b",
+      "configured": true
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter free model",
+      "model": "openrouter/free",
+      "configured": true
+    }
+  ],
+  "studioHelpStatus": 200,
+  "model": "gemini-3.5-flash-lite",
+  "provider": "google",
+  "optionalProviders": [
+    {
+      "provider": "groq",
+      "status": 200,
+      "model": "openai/gpt-oss-20b",
+      "sourceAnchorValid": true
+    },
+    {
+      "provider": "openrouter",
+      "status": 200,
+      "model": "cohere/north-mini-code:free",
+      "sourceAnchorValid": true
+    }
+  ],
+  "syntheticListening": {
+    "status": 200,
+    "model": "whisper-large-v3-turbo",
+    "motorRecognised": true,
+    "statorRecognised": true,
+    "realLanguageValidation": false
+  }
+}

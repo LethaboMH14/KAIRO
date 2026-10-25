@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-23",
+  "agent": "codex-luna-curriculum-20261023-c",
+  "client": "Codex",
+  "model": "gpt-6",
+  "effort": "unknown",
+  "task": "CURRICULUM-CATALOG-VERIFY-001",
+  "originalTaskStateAtStart": {
+    "id": "CURRICULUM-CATALOG-001",
+    "state": "complete",
+    "owner": "codex-luna-curriculum-20261023-b",
+    "note": "Existing completed task ID could not be reused; no active curriculum claim was present. This continuation claims the same four released paths under a unique follow-up task ID."
+  },
+  "claimedScopes": [
+    "studio/src/curriculum-catalog",
+    "studio/tests/curriculum-catalog.test.mjs",
+    "docs/engineering-journey-20261023/curriculum-evidence",
+    "coordination/handoffs/2026-10-23-luna-curriculum.md"
+  ],
+  "source": {
+    "title": "Wits 2026 Rules and Syllabuses for the Faculty of Engineering and the Built Environment",
+    "url": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+    "localCopy": "docs/luna-unblock-20261023/wits-ebe-original.pdf",
+    "bytes": 2054987,
+    "pages": 373,
+    "sha256": "7feff6501eddc6a5e5925233c4fce41fad39885a513875e2b459d5caa3039dc3",
+    "verificationMethod": "Local text extraction and assertions using installed PyMuPDF; see verify_source.py. One-based PDF indices and printed page labels recorded separately.",
+    "firstYearBranches": [
+      { "title": "Aeronautical Engineering", "programmeCode": "EFA06", "pdfPages": "42-43", "printedPages": "40-41" },
+      { "title": "Civil Engineering", "programmeCode": "EFA01", "pdfPages": "46-47", "printedPages": "44-45" },
+      { "title": "Electrical Engineering", "programmeCode": "EFA03", "pdfPages": "48-49", "printedPages": "46-47" },
+      { "title": "Mechanical Engineering", "programmeCode": "EFA05", "pdfPages": "52-53", "printedPages": "50-51" },
+      { "title": "Metallurgy and Materials Engineering", "programmeCode": "EFA08", "pdfPages": "54-55", "printedPages": "52-53" }
+    ],
+    "electricalSecondYearModule": { "code": "ELEN2003A", "title": "Electric and Magnetic Systems", "pdfPages": "48 and 294", "printedPages": "46 and 292" },
+    "alternateMathContext": "MATH1042A/MATH1043A do not appear in the reviewed current Year I rows. They occur in admission/articulation pathways on PDF pp.40-41 / printed pp.38-39 and as alternatives in the current prerequisite table on PDF p.82 / printed p.80. They were not promoted to Year I records."
+  },
+  "registry": {
+    "reviewedModules": 10,
+    "reviewedFirstYearSharedCourseRows": 9,
+    "reviewedElectricalSecondYearModules": 1,
+    "discoveryOnlyModuleRecords": 0,
+    "programmeRecords": 5,
+    "discoveryOnlyProgrammePageLeads": 8,
+    "unresolved": "The eight programme page targets are not full degree reviews. No other modules, elective alternatives, credits, equivalence, official registration or learner enrolment were added."
+  },
+  "checks": {
+    "sourceVerification": { "command": "python docs/engineering-journey-20261023/curriculum-evidence/verify_source.py", "exitCode": 0 },
+    "focusedTests": { "command": "node --test tests/curriculum-catalog.test.mjs", "workingDirectory": "studio", "exitCode": 0, "passed": 6, "failed": 0 },
+    "typescript": { "command": "node_modules/.bin/tsc.cmd --noEmit", "workingDirectory": "studio", "exitCode": 0, "diagnostics": 0 }
+  },
+  "limitations": [
+    "Metadata-only local extraction; no visual page-layout validation or subject-matter-expert approval.",
+    "Discovery leads are not reviewed curricula or selectable course facts.",
+    "ELEN2003A supports conceptual motor preparation via induction and energy-conversion topics; it is not asserted as a motor course or exact motor lesson coverage.",
+    "No app route integration, browser/device/learner acceptance, or official enrolment verification."
+  ],
+  "prohibitedActionsNotPerformed": ["browser or headless browser", "screenshots", "network/cloud API calls", "real audio", "dependency installation", "deployment", "PDF copied into public/app assets"]
+}

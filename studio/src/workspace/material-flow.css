@@ -1,0 +1,42 @@
+.sw-material{--sw-blue:#3e5144;--sw-ink:#252b28;--sw-muted:#626b61;--sw-line:#d7dbce;--sw-paper:#fffdf7;background:#f5f0e6;min-height:100vh;font-family:KairoManrope,Arial,sans-serif}
+.sw-material [hidden]{display:none!important}
+.sw-material .sw-main{max-width:1180px;padding:38px 4% 0}
+.sw-material .sw-heading{align-items:center;flex-wrap:wrap;margin-bottom:26px}
+.sw-material .sw-heading h1{font-size:clamp(28px,3.5vw,44px);letter-spacing:-1.6px}
+.sw-material .sw-kicker{color:#3e5144}
+.sw-material .sw-path{gap:8px;white-space:normal;padding:5px 0;flex-wrap:wrap}
+.sw-material .sw-path button{display:flex;gap:8px;align-items:center;min-height:44px;padding:8px 12px;background:transparent;color:#3e5144;border-radius:24px;border:1px solid #d7dbce}
+.sw-material .sw-path button span{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#e7e9dd;font-size:12px}
+.sw-material .sw-path button[aria-current=step]{background:#3e5144;color:#fffdf7;border-color:#3e5144}
+.sw-material .sw-path button[aria-current=step] span{background:#ffffff22}
+.sw-material .sw-desk{display:block;background:#fffdf7;border:1px solid #d7dbce;box-shadow:none;border-radius:18px}
+.sw-material .sw-library,.sw-material .sw-review,.sw-material .sw-create{border:0;background:#fffdf7;padding:28px;display:block}
+.sw-material .sw-library{max-width:780px;margin:auto}
+.sw-material .sw-create{max-width:920px;margin:auto}
+.sw-material .sw-file-list{max-height:340px}
+.sw-material .sw-file-list>button{color:#3e5144;border-color:#e4e5da}
+.sw-material .sw-file-list>button:hover{background:#edf0e5}
+.sw-material .sw-field{color:#3e5144}
+.sw-material .sw-field input,.sw-material .sw-field textarea,.sw-material .sw-editor{border-color:#c4ccbd;color:#252b28;background:#fffefa;border-radius:8px}
+.sw-material .sw-primary,.sw-material .sw-next{background:#3e5144;color:#fffdf7;border-radius:8px;min-height:46px;padding:12px 18px}
+.sw-material .sw-primary:hover:not(:disabled),.sw-material .sw-next:hover:not(:disabled){background:#304235}
+.sw-material .sw-secondary,.sw-material .sw-upload{color:#3e5144;background:#f1f2e9;border-color:#c4ccbd!important;border-radius:8px}
+.sw-material .sw-sample{color:#3e5144;min-height:44px}
+.sw-material .sw-tabs{background:#edf0e5}
+.sw-material .sw-tabs button[aria-pressed=true]{color:#3e5144;background:#fffefa}
+.sw-material .sw-page-tabs button{background:#edf0e5;color:#3e5144}
+.sw-material .sw-page-tabs button[aria-pressed=true]{background:#3e5144;color:#fffdf7}
+.sw-material .sw-reviewed{color:#3e5144;background:#e7eddb}
+.sw-material .sw-status{color:#626b61}
+.sw-material .sw-source-strip{display:flex;gap:14px;align-items:center;margin:0 0 18px;padding:18px 0;border-top:1px solid #d7dbce;border-bottom:1px solid #d7dbce}
+.sw-material .sw-source-strip>div{min-width:0;flex:1;overflow-wrap:anywhere}
+.sw-material .sw-source-strip strong,.sw-material .sw-source-strip small{display:block}
+.sw-material .sw-source-strip small{font-size:12px;color:#626b61;margin-top:4px}
+.sw-material .sw-next{display:inline-flex;gap:10px;align-items:center;margin:12px}
+.sw-material .sw-editor{min-height:320px;line-height:1.8}
+.sw-material .sw-created{background:#edf1e4;border:1px solid #c4ccbd;border-radius:12px;padding:22px;margin-top:24px}
+.sw-material .sw-recent>div>a{background:#fffdf7;border-color:#d7dbce;color:#3e5144}
+.sw-material :focus-visible{outline:3px solid #805037}
+@media(max-width:760px){.sw-material .sw-main{padding:24px 5% 0}.sw-material .sw-library,.sw-material .sw-review,.sw-material .sw-create{padding:20px}.sw-material .sw-path{font-size:11px;gap:4px}.sw-material .sw-path button{padding:6px 8px}.sw-material .sw-source-strip{flex-wrap:wrap}.sw-material .sw-source-strip>.sw-secondary{margin-left:34px}.sw-material .sw-next{margin:12px 0;width:100%;justify-content:center}}
+
+.sw-material .sw-compare{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}.sw-material .sw-compare>div{min-width:0}.sw-material .sw-no-original{grid-template-columns:1fr}.sw-material .sw-created>a{margin:6px}.sw-material .sw-compare textarea{min-height:430px}@media(max-width:800px){.sw-material .sw-compare{grid-template-columns:1fr}.sw-material .sw-compare textarea{min-height:300px}}

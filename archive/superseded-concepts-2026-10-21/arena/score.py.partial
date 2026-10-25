@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+"""
+score.py - weight-uncertainty ranking of candidate ideas for the FNB App of the
+Year 2026 hackathon ("Best Hackathon Solution" category).
+
+The published rubric (appoftheyear.co.za/faqs) lists seven criteria and NO
+weights. Instead of guessing one weight vector, this script samples weight
+vectors from a Dirichlet prior under two scenarios (agnostic, evidence-informed)
+and reports, per idea: mean weighted score, P(rank 1), P(top 3) and the
+5th-95th percentile rank. A non-compensatory round-1 gate models the verbatim
+fact that round-1 judges "play around" with the apps on devices, unassisted.
+
+Stdlib only. Deterministic: fixed seeds, sorted iteration, explicit tie-breaks,
+UTF-8 output with LF line endings. Same input + same arguments -> byte-identical
+output on any machine running the same CPython random module.
+
+Usage (from the project folder):
+  python arena/score.py                 # reads arena/idea_scores.csv
+  python arena/score.py --csv path.csv  # any CSV with the same columns
+  python arena/score.py --selftest      # synthetic checks; exit 1 on failure
+  python arena/score.py --show-prior    # probe table + evidence-alpha derivation
+  python arena/score.py --template      # print the expected CSV header
+
+CSV columns (case-insensitive; extra columns such as rater are ignored):
+  idea, product, creativity, usability, sustainability, impact, presentation,
+  intelligence      -- each score 1..5; several rows per idea = several raters.
+
+Evidence behind every constant: arena/02-scoring-model.md
+"""
+import argparse
+import csv
+import io
+import math
+import os
+import random
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+CRITERIA = ("product", "creativity", "usability", "sustainability",
+            "impact", "presentation", "intelligence")
+SHORT = ("prod", "crea", "usab", "sust", "impa", "pres", "inte")
+NC = len(CRITERIA)
+
+# Round-1 gate: non-compensatory. FAIL if the mean of either criterion < 3.
+GATE_CRITERIA = ("product", "usability")
+GATE_IDX = tuple(CRITERIA.index(c) for c in GATE_CRITERIA)
+GATE_THRESHOLD = 3.0
+GATE_EPS = 1e-9            # guards float means such as 2.9999999999 from 3.0
+SCORE_MIN, SCORE_MAX = 1.0, 5.0
+DISAGREE_RANGE = 2.0       # max-min across raters >= 2 points -> flagged
+
+DEFAULT_N = 20000
+DEFAULT_SEED = 20261005
+DEFAULT_K = 14.0           # concentration (sum of alpha) of the evidence prior
+ROBUST_P1 = 0.5            # verdict threshold on P(rank 1), both scenarios
+
+# ---------------------------------------------------------------------------
+# Probe table. One row per piece of evidence about what the judges reward.
+# Mark per criterion: 1.0 = the source shows excellence on it; 0.5 = partial or
+# inferred from the description; 0.0 = visibly weak or absent; key missing =
+# unobservable from the source (contributes nothing, NOT a zero).
+# Row weight: hackathon-category winners 1.0 (the category we enter);
+# overall winners 0.5 (same rubric, but established products, different bar);
+# organiser process statements 0.5 (read via a summariser, unverified);
+# the verbatim round-1 mechanism 1.0 (primary source, current).
+# Sources and the E(xplicit)/J(udgement) basis of each mark: 02-scoring-model.md
+# ---------------------------------------------------------------------------
+PROBES = (
+    ("2021 Sisa", "hackathon", 1.0, {}),
+    ("2022 YabiSaba", "hackathon", 1.0,
+     {"product": 0.5, "creativity": 0.5, "sustainability": 0.5,
+      "impact": 0.0, "intelligence": 0.0}),
+    ("2023 Thutofy", "hackathon", 1.0,
+     {"product": 0.5, "creativity": 0.5, "usability": 0.5,
+      "impact": 1.0, "intelligence": 1.0}),
+    ("2024 Jiinue", "hackathon", 1.0,
+     {"product": 0.5, "creativity": 0.0, "impact": 1.0, "intelligence": 1.0}),
+    ("2025 Usagey", "hackathon", 1.0,
+     {"product": 1.0, "creativity": 0.0, "sustainability": 1.0,
+      "impact": 0.0, "intelligence": 0.0}),
+    ("2019 Naked Insurance", "overall", 0.5,
+     {"product": 1.0, "creativity": 0.5, "usability": 1.0,
+      "sustainability": 1.0, "impact": 0.5, "intelligence": 1.0}),
+    ("2020 EasyEquities", "overall", 0.5,
+     {"product": 1.0, "creativity": 0.5, "sustainability": 1.0,
+      "impact": 0.5, "intelligence": 0.0}),
+    ("2021 Ambani Africa", "overall", 0.5,
+     {"product": 1.0, "creativity": 1.0, "usability": 0.5,
+      "impact": 1.0, "intelligence": 0.0}),
+    ("2022 Shoprite app", "overall", 0.5,
+     {"product": 1.0, "creativity": 1.0, "sustainability": 1.0,
+      "impact": 0.5, "intelligence": 0.0}),
+    ("2023 Kena Health", "overall", 0.5,
+     {"product": 1.0, "creativity": 0.5, "sustainability": 1.0,
+      "impact": 1.0, "intelligence": 0.0}),
+    ("2024 Matric Live", "overall", 0.5,
+     {"product": 1.0, "creativity": 0.5, "usability": 0.5,
+      "impact": 1.0, "intelligence": 0.5}),
+    ("2025 Vula Medical", "overall", 0.5,
+     {"product": 1.0, "creativity": 0.0, "impact": 1.0, "intelligence": 0.0}),
+    ("2023 AppsAfrica selection basis", "process", 0.5,
+     {"product": 1.0, "sustainability": 0.5, "impact": 1.0}),
+    ("2024 Hypertext judging summary", "process", 0.5,
+     {"product": 1.0, "creativity": 1.0, "sustainability": 0.5,
+      "impact": 1.0, "presentation": 0.5}),
+    ("FAQ round-1 hands-on mechanism", "mechanism", 1.0,
+     {"product": 1.0, "usability": 1.0}),
+)

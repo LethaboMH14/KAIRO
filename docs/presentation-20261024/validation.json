@@ -1,0 +1,24 @@
+{
+  "clean": true,
+  "issues": [],
+  "intentionalIntersections": [
+    {
+      "slide": "4:17",
+      "type": "overlap",
+      "a": "Rectangle",
+      "b": "Rectangle"
+    },
+    {
+      "slide": "4:17",
+      "type": "overlap",
+      "a": "Rectangle",
+      "b": "Rectangle"
+    },
+    {
+      "slide": "9:6",
+      "type": "overlap",
+      "a": "Core / monthly revenue / five selected months",
+      "b": "Core / operating result before tax / five selected months"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+✔ configuration reports only key presence; no credentials or verified readiness (16.4506ms)
+✔ missing consent/key/free entitlement fails before dispatch (3.3034ms)
+✔ OpenRouter paid models and automatic mixed fallbacks cannot be selected (1.3959ms)
+✔ actual request uses fixed endpoint, strict schema and no paid fallback or tools (154.0786ms)
+✔ Groq uses approved strict-output model and explicit Free-plan confirmation (3.188ms)
+✔ source grounding rejects fabricated quotes, unknown fields and executable representations (1.0231ms)
+✔ 429 errors remain sanitized and never automatically retry (1.8882ms)
+✔ network errors cannot leak provider keys or raw diagnostics (0.848ms)
+✔ aborted requests do not dispatch or accept abort-ignoring late results (4.5622ms)
+✔ oversized, malformed, truncated, refusal and tool-call responses fail without execution (9.0831ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4588.0471

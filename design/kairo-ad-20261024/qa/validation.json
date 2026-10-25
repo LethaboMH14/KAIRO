@@ -1,0 +1,298 @@
+{
+ "master": {
+  "file": "design/kairo-ad-20261024/out/kairo-when-it-clicks-master-1080p30.mp4",
+  "bytes": 67976791,
+  "ffprobe": {
+   "programs": [],
+   "stream_groups": [],
+   "streams": [
+    {
+     "index": 0,
+     "codec_name": "h264",
+     "profile": "High",
+     "codec_type": "video",
+     "width": 1920,
+     "height": 1080,
+     "pix_fmt": "yuv420p",
+     "color_space": "bt709",
+     "r_frame_rate": "30/1",
+     "avg_frame_rate": "30/1",
+     "duration": "20.000000",
+     "nb_frames": "600",
+     "nb_read_frames": "600"
+    },
+    {
+     "index": 1,
+     "codec_name": "aac",
+     "profile": "LC",
+     "codec_type": "audio",
+     "sample_rate": "48000",
+     "channels": 2,
+     "r_frame_rate": "0/0",
+     "avg_frame_rate": "0/0",
+     "duration": "19.989000",
+     "nb_frames": "938",
+     "nb_read_frames": "937"
+    }
+   ],
+   "format": {
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration": "20.000000",
+    "size": "67976791",
+    "bit_rate": "27190716"
+   }
+  },
+  "decode_errors": "none",
+  "black_segments": [],
+  "audio": {
+   "present": true,
+   "seconds": 19.9893,
+   "sample_peak_dbfs": -1.4,
+   "clipped_samples": 0,
+   "tail_250ms_rms_dbfs": -107.7,
+   "integrated_lufs": -13.6,
+   "true_peak_dbtp": -1.4
+  },
+  "final_hold": {
+   "frames": 30,
+   "max_mean_abs_diff": 0.763
+  },
+  "checks": {
+   "duration_20s": true,
+   "video_600_frames_decoded": true,
+   "size_1920x1080": true,
+   "fps_30": true,
+   "h264_yuv420p": true,
+   "aac_48k_stereo": true,
+   "no_decode_errors": true,
+   "no_black_segments": true,
+   "no_clipping": true,
+   "true_peak_below_minus1": true,
+   "clean_audio_tail": true,
+   "final_second_static": true
+  },
+  "pass": true
+ },
+ "master-web": {
+  "file": "design/kairo-ad-20261024/out/kairo-when-it-clicks-master-web-1080p30.mp4",
+  "bytes": 23803381,
+  "ffprobe": {
+   "programs": [],
+   "stream_groups": [],
+   "streams": [
+    {
+     "index": 0,
+     "codec_name": "h264",
+     "profile": "High",
+     "codec_type": "video",
+     "width": 1920,
+     "height": 1080,
+     "pix_fmt": "yuv420p",
+     "color_space": "bt709",
+     "r_frame_rate": "30/1",
+     "avg_frame_rate": "30/1",
+     "duration": "20.000000",
+     "nb_frames": "600",
+     "nb_read_frames": "600"
+    },
+    {
+     "index": 1,
+     "codec_name": "aac",
+     "profile": "LC",
+     "codec_type": "audio",
+     "sample_rate": "48000",
+     "channels": 2,
+     "r_frame_rate": "0/0",
+     "avg_frame_rate": "0/0",
+     "duration": "19.989000",
+     "nb_frames": "938",
+     "nb_read_frames": "937"
+    }
+   ],
+   "format": {
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration": "20.000000",
+    "size": "23803381",
+    "bit_rate": "9521352"
+   }
+  },
+  "decode_errors": "none",
+  "black_segments": [],
+  "audio": {
+   "present": true,
+   "seconds": 19.9893,
+   "sample_peak_dbfs": -1.4,
+   "clipped_samples": 0,
+   "tail_250ms_rms_dbfs": -107.7,
+   "integrated_lufs": -13.6,
+   "true_peak_dbtp": -1.4
+  },
+  "final_hold": {
+   "frames": 30,
+   "max_mean_abs_diff": 0.69
+  },
+  "checks": {
+   "duration_20s": true,
+   "video_600_frames_decoded": true,
+   "size_1920x1080": true,
+   "fps_30": true,
+   "h264_yuv420p": true,
+   "aac_48k_stereo": true,
+   "no_decode_errors": true,
+   "no_black_segments": true,
+   "no_clipping": true,
+   "true_peak_below_minus1": true,
+   "clean_audio_tail": true,
+   "final_second_static": true
+  },
+  "pass": true
+ },
+ "review": {
+  "file": "design/kairo-ad-20261024/out/kairo-when-it-clicks-review-1080p30.mp4",
+  "bytes": 66700325,
+  "ffprobe": {
+   "programs": [],
+   "stream_groups": [],
+   "streams": [
+    {
+     "index": 0,
+     "codec_name": "h264",
+     "profile": "High",
+     "codec_type": "video",
+     "width": 1920,
+     "height": 1080,
+     "pix_fmt": "yuv420p",
+     "color_space": "bt709",
+     "r_frame_rate": "30/1",
+     "avg_frame_rate": "30/1",
+     "duration": "20.000000",
+     "nb_frames": "600",
+     "nb_read_frames": "600"
+    },
+    {
+     "index": 1,
+     "codec_name": "aac",
+     "profile": "LC",
+     "codec_type": "audio",
+     "sample_rate": "48000",
+     "channels": 2,
+     "r_frame_rate": "0/0",
+     "avg_frame_rate": "0/0",
+     "duration": "19.989000",
+     "nb_frames": "938",
+     "nb_read_frames": "937"
+    }
+   ],
+   "format": {
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration": "20.000000",
+    "size": "66700325",
+    "bit_rate": "26680130"
+   }
+  },
+  "decode_errors": "none",
+  "black_segments": [],
+  "audio": {
+   "present": true,
+   "seconds": 19.9893,
+   "sample_peak_dbfs": -1.4,
+   "clipped_samples": 0,
+   "tail_250ms_rms_dbfs": -107.7,
+   "integrated_lufs": -13.6,
+   "true_peak_dbtp": -1.4
+  },
+  "final_hold": {
+   "frames": 30,
+   "max_mean_abs_diff": 0.753
+  },
+  "checks": {
+   "duration_20s": true,
+   "video_600_frames_decoded": true,
+   "size_1920x1080": true,
+   "fps_30": true,
+   "h264_yuv420p": true,
+   "aac_48k_stereo": true,
+   "no_decode_errors": true,
+   "no_black_segments": true,
+   "no_clipping": true,
+   "true_peak_below_minus1": true,
+   "clean_audio_tail": true,
+   "final_second_static": true
+  },
+  "pass": true
+ },
+ "silent": {
+  "file": "design/kairo-ad-20261024/out/kairo-when-it-clicks-silent-1080p30.mp4",
+  "bytes": 66983144,
+  "ffprobe": {
+   "programs": [],
+   "stream_groups": [],
+   "streams": [
+    {
+     "index": 0,
+     "codec_name": "h264",
+     "profile": "High",
+     "codec_type": "video",
+     "width": 1920,
+     "height": 1080,
+     "pix_fmt": "yuv420p",
+     "color_space": "bt709",
+     "r_frame_rate": "30/1",
+     "avg_frame_rate": "30/1",
+     "duration": "20.000000",
+     "nb_frames": "600",
+     "nb_read_frames": "600"
+    },
+    {
+     "index": 1,
+     "codec_name": "aac",
+     "profile": "LC",
+     "codec_type": "audio",
+     "sample_rate": "48000",
+     "channels": 2,
+     "r_frame_rate": "0/0",
+     "avg_frame_rate": "0/0",
+     "duration": "19.989000",
+     "nb_frames": "938",
+     "nb_read_frames": "937"
+    }
+   ],
+   "format": {
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration": "20.000000",
+    "size": "66983144",
+    "bit_rate": "26793257"
+   }
+  },
+  "decode_errors": "none",
+  "black_segments": [],
+  "audio": {
+   "present": true,
+   "seconds": 19.9893,
+   "sample_peak_dbfs": -1.4,
+   "clipped_samples": 0,
+   "tail_250ms_rms_dbfs": -107.7,
+   "integrated_lufs": -13.6,
+   "true_peak_dbtp": -1.4
+  },
+  "final_hold": {
+   "frames": 30,
+   "max_mean_abs_diff": 0.967
+  },
+  "checks": {
+   "duration_20s": true,
+   "video_600_frames_decoded": true,
+   "size_1920x1080": true,
+   "fps_30": true,
+   "h264_yuv420p": true,
+   "aac_48k_stereo": true,
+   "no_decode_errors": true,
+   "no_black_segments": true,
+   "no_clipping": true,
+   "true_peak_below_minus1": true,
+   "clean_audio_tail": true,
+   "final_second_static": true
+  },
+  "pass": true
+ }
+}

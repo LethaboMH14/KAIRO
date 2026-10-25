@@ -1,0 +1,502 @@
+{
+  "task": "C1-ASSET-AUDIT",
+  "scope": "docs/claude-workstreams/asset-audit only; read-only on runtime assets, manifests and code; no downloads",
+  "hashes_computed_by": "docs/claude-workstreams/asset-audit/audit_hashes.py and build_audit.py (hashlib SHA-256, MD5)",
+  "character_snapshot_note": "studio/public/models/character/** is being changed by CHARACTER-002; hashes are a snapshot at audit time and may already be stale.",
+  "runtime_assets": [
+    {
+      "path": "studio/public/models/RobotExpressive.glb",
+      "role": "animated temporary guide (studio/src/Scene.tsx:70)",
+      "author": "Tomas Laulhe (Quaternius); glTF modifications by Don McCurdy",
+      "source": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/models/gltf/RobotExpressive/RobotExpressive.glb",
+      "licence": "CC0-1.0",
+      "licence_evidence": "studio/public/models/RobotExpressive.README.md ('CC0 1.0'); assets/manifest.json",
+      "attribution_required": false,
+      "credit_in_app": [
+        {
+          "where": "studio/src/App.tsx:116 footer",
+          "text": "Animated guide by Quaternius / Don McCurdy (CC0)"
+        }
+      ],
+      "gaps": [],
+      "contradictions": [
+        "App footer credits 'Quaternius / Don McCurdy'; the recorded author is Tomas Laulhe. Both names are in the record; the owner may want the wording aligned."
+      ],
+      "present": true,
+      "bytes": 463988,
+      "sha256": "047f5e5fb3bb6d378bd1df16ca6137f2a596c99b3a1b5690b4020c05aaf6f319"
+    },
+    {
+      "path": "studio/public/models/classroom/classroom.glb",
+      "role": "lecture room (studio/src/lecture/LectureScene.tsx:8)",
+      "author": "Christophe Seux",
+      "source": "https://www.blender.org/download/demo-files/ (classroom/provenance.json); assets/manifest.json lists https://download.blender.org/demo/test/classroom.zip for the reference zip",
+      "licence": "CC0 (as recorded in classroom/provenance.json)",
+      "licence_evidence": "Recorded only. The local assets/reference/classroom/ReadMe.txt has no licence statement, and the CC0 claim was not checked against the live source.",
+      "attribution_required": false,
+      "credit_in_app": [
+        {
+          "where": "studio/src/lecture/LectureStudio.tsx:45 footer",
+          "text": "Classroom by Christophe Seux · CC0 · Converted from Blender for this preview (links to provenance.json)"
+        }
+      ],
+      "gaps": [
+        "No manifest records a hash of the runtime GLB; assets/manifest.json records only the reference zip.",
+        "The conversion script is not identified; provenance.json describes the steps only.",
+        "The CC0 licence is recorded but not evidenced by any local licence file."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 15346684,
+      "sha256": "99e4b7dc61aed85fa463e568857ac755ee1bcda0751338d478a78faa92af06ae"
+    },
+    {
+      "path": "studio/public/models/teacher/teacher.glb",
+      "role": "/teacher rehearsal avatar (studio/src/avatar/AvatarStage.tsx)",
+      "author": "Mika Suominen / met4citizen; created with Blender and MPFB",
+      "source": "https://github.com/met4citizen/TalkingHead commit 2afe6d79779313db8909badebf46f9805a6c7b70, path avatars/mpfb.glb (teacher/provenance.json)",
+      "licence": "CC0-1.0",
+      "licence_evidence": "assets/reference/teacher/TalkingHead-README.md line 375: 'The avatar is licensed under CC0'. TalkingHead-LICENSE.txt (MIT) covers the code, not this avatar file.",
+      "attribution_required": false,
+      "credit_in_app": [
+        {
+          "where": "studio/src/avatar/AvatarStage.tsx (fine print)",
+          "text": "CC0 MakeHuman/MPFB rehearsal character (the creator is not named in the app)"
+        }
+      ],
+      "gaps": [
+        "The original mpfb.glb is not kept in the repo, so provenance.json sourceSha256 (63c645a2...) cannot be checked locally.",
+        "The creator is not named in the app; CC0 does not require it, but the record names the creator."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 11262664,
+      "sha256": "8d0f3728a91ccda99a40c39156d9d01a0aea274d4db82d618c3604c8ceefed58"
+    },
+    {
+      "path": "studio/public/models/engineering/induction-motor.glb",
+      "role": "Engineering motor (studio/src/engineering/motorModel.ts:5)",
+      "author": "KAIRO project; original geometry authored with Blender 4.5.14 via design/engineering/blender/build_motor.py",
+      "source": "Original work (docs/engineering/asset-manifest.json)",
+      "licence": "Project-owned original work (as recorded)",
+      "licence_evidence": "docs/engineering/asset-manifest.json",
+      "attribution_required": false,
+      "credit_in_app": [],
+      "gaps": [],
+      "contradictions": [],
+      "present": true,
+      "bytes": 4213408,
+      "sha256": "3970e7add85b75feffe5fc3e79dcd41982a49033d216bef39102f8751f583ff8"
+    },
+    {
+      "path": "studio/public/models/engineering/poly_haven_studio_1k.hdr",
+      "role": "Engineering environment light (studio/src/engineering/motorModel.ts:6)",
+      "author": "Greg Zaal",
+      "source": "https://polyhaven.com/a/poly_haven_studio (official download recorded in docs/engineering/asset-manifest.json)",
+      "licence": "CC0 (https://polyhaven.com/license)",
+      "licence_evidence": "docs/engineering/asset-manifest.json; coordination/briefs/ENGINEERING-REFERENCE-PACK/asset-manifest.json (verifiedAgainstMetadata MD5)",
+      "attribution_required": false,
+      "credit_in_app": [
+        {
+          "where": "studio/src/engineering/EngineeringStudio.tsx:489",
+          "text": "Poly Haven Studio HDRI by Greg Zaal (CC0)"
+        }
+      ],
+      "gaps": [
+        "The MD5 from Poly Haven metadata was not re-fetched in this audit (downloads not permitted); only the recorded value was compared."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 1682195,
+      "sha256": "dfc8505761018d644997a803f332339328af2b53e82023fb3bec37cefdf43b83"
+    },
+    {
+      "path": "studio/src/engineering/motorGeometry.json",
+      "role": "generated data imported by Engineering Studio",
+      "author": "KAIRO project (generated by build_motor.py)",
+      "source": "Generated",
+      "licence": "Project-owned generated data (as recorded)",
+      "licence_evidence": "docs/engineering/asset-manifest.json",
+      "attribution_required": false,
+      "credit_in_app": [],
+      "gaps": [],
+      "contradictions": [],
+      "present": true,
+      "bytes": 71225,
+      "sha256": "6fbe144c740a7dff2acb16681c4a0658eec7feb8dd4cad8602a2f43903a81712"
+    },
+    {
+      "path": "studio/public/models/character/kairo-teacher.glb",
+      "role": "CHARACTER-002 teacher, /character rehearsal (studio/src/character/Rehearsal.tsx). ACTIVE: being changed by claude-character-20261021-a; the hash is a snapshot at audit time.",
+      "author": "Derived from Rain v3 (Blender Studio / Blender Foundation), KAIRO-restyled, per design/character/blender/rain_export.py and build_teacher.py docstrings",
+      "source": "https://studio.blender.org/characters/rain/v3/ (link in Rehearsal.tsx:285)",
+      "licence": "CC-BY 4.0 (as recorded in build_teacher.py, rain_export.py and the bus task CHARACTER-002)",
+      "licence_evidence": "Recorded in code comments and the bus note only. The Rain v3 licence page was not fetched.",
+      "attribution_required": true,
+      "credit_in_app": [
+        {
+          "where": "studio/src/character/Rehearsal.tsx:285",
+          "text": "Teacher based on Rain (CC-BY 4.0, Rain Rig (CC) Blender Foundation | studio.blender.org), reshaped, recoloured and restyled for KAIRO"
+        }
+      ],
+      "gaps": [
+        "No provenance file or manifest entry exists for this GLB (docs/character is empty).",
+        "The export mode that produced it (rain_export.py spike or full) is not recorded.",
+        "The Rain credit appears on the rehearsal page only, not in the main footer (App.tsx:116) or the Sources & credits modal (App.tsx:119, not fully inspected).",
+        "The Rain v3 source is present under assets/reference/claude-kit (rain-v3.zip and rain-inspection/), but neither is listed in assets/manifest.json."
+      ],
+      "contradictions": [
+        "Only code comments and the bus note state the CC-BY 4.0 licence; no manifest records it in machine-readable form."
+      ],
+      "present": true,
+      "bytes": 2935540,
+      "sha256": "0724545f108cf2949d64b72181c4bf7a5af1312932c6b5589a73a92d4de2170b"
+    },
+    {
+      "path": "studio/public/models/character/studio_small_09_1k.hdr",
+      "role": "CHARACTER-002 lighting (studio/src/character/RehearsalStage.tsx:246)",
+      "author": null,
+      "source": null,
+      "licence": null,
+      "licence_evidence": null,
+      "attribution_required": null,
+      "credit_in_app": [],
+      "gaps": [
+        "No manifest, provenance or credit records the author, source or licence. The file name follows the Poly Haven pattern, but a name is not evidence; do not treat it as CC0 until recorded.",
+        "An identical copy sits at assets/reference/claude-kit/studio_small_09_1k.hdr, also unrecorded."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 1615248,
+      "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45"
+    },
+    {
+      "path": "studio/public/models/character/audio/en-GB-Chirp3-HD-Aoede.mp3",
+      "role": "pre-generated speech sample for CHARACTER-002",
+      "author": null,
+      "source": "Google Cloud Text-to-Speech Chirp 3 HD voice (named in the file name); generation record not in repo",
+      "licence": null,
+      "licence_evidence": null,
+      "attribution_required": null,
+      "credit_in_app": [],
+      "gaps": [
+        "Generation account, date and terms of use for the output are not recorded in the repo; the Google Cloud TTS terms were not checked."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 29952,
+      "sha256": "893fe45a4a981eded3ca086fa629fb34bfc5938fe76ffff6cfee9c8a5a1e3e70"
+    },
+    {
+      "path": "studio/public/models/character/audio/en-GB-Chirp3-HD-Puck.mp3",
+      "role": "pre-generated speech sample for CHARACTER-002",
+      "author": null,
+      "source": "Google Cloud Text-to-Speech Chirp 3 HD voice (named in the file name); generation record not in repo",
+      "licence": null,
+      "licence_evidence": null,
+      "attribution_required": null,
+      "credit_in_app": [],
+      "gaps": [
+        "Generation account, date and terms of use for the output are not recorded in the repo; the Google Cloud TTS terms were not checked."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 32256,
+      "sha256": "1b51ce9b1f994113565245c84940d88a797f7295985d2b75f70d9a08788ea97c"
+    },
+    {
+      "path": "studio/public/models/character/audio/en-US-Chirp3-HD-Kore.mp3",
+      "role": "pre-generated speech sample for CHARACTER-002",
+      "author": null,
+      "source": "Google Cloud Text-to-Speech Chirp 3 HD voice (named in the file name); generation record not in repo",
+      "licence": null,
+      "licence_evidence": null,
+      "attribution_required": null,
+      "credit_in_app": [],
+      "gaps": [
+        "Generation account, date and terms of use for the output are not recorded in the repo; the Google Cloud TTS terms were not checked."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 30912,
+      "sha256": "42333619e48615c124fb79005adda10951ca393150d62da472f84aedf5c7ee4a"
+    },
+    {
+      "path": "studio/public/models/character/audio/en-GB-Chirp3-HD-Aoede.visemes.json",
+      "role": "viseme timing for the matching MP3",
+      "author": null,
+      "source": null,
+      "licence": null,
+      "licence_evidence": null,
+      "attribution_required": null,
+      "credit_in_app": [],
+      "gaps": [
+        "The generator tool and version are not recorded; treat as derived from the matching MP3."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 4239,
+      "sha256": "84d8538a7a793a49f80700ec0e43dd5e033ca3db27eb5656a8f74bf9e15c110f"
+    },
+    {
+      "path": "studio/public/models/character/audio/en-GB-Chirp3-HD-Puck.visemes.json",
+      "role": "viseme timing for the matching MP3",
+      "author": null,
+      "source": null,
+      "licence": null,
+      "licence_evidence": null,
+      "attribution_required": null,
+      "credit_in_app": [],
+      "gaps": [
+        "The generator tool and version are not recorded; treat as derived from the matching MP3."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 4086,
+      "sha256": "15a3d596d191857ef1fc165aae823a440ffe0920ee26057954f13a8bce6d794d"
+    },
+    {
+      "path": "studio/public/models/character/audio/en-US-Chirp3-HD-Kore.visemes.json",
+      "role": "viseme timing for the matching MP3",
+      "author": null,
+      "source": null,
+      "licence": null,
+      "licence_evidence": null,
+      "attribution_required": null,
+      "credit_in_app": [],
+      "gaps": [
+        "The generator tool and version are not recorded; treat as derived from the matching MP3."
+      ],
+      "contradictions": [],
+      "present": true,
+      "bytes": 4318,
+      "sha256": "84194baf15a7acef4067c16be0ca71bd442bb3ab3eb85a09ccdb8c39c4dca631"
+    }
+  ],
+  "provenance_docs": [
+    {
+      "path": "studio/public/models/RobotExpressive.README.md",
+      "bytes": 364,
+      "sha256": "14687ac4a51d5e013b0fbc5486dabc743f76c1e37b7ca872af74cfb93115b4b2"
+    },
+    {
+      "path": "studio/public/models/classroom/provenance.json",
+      "bytes": 3860,
+      "sha256": "ae3bdb33ba84511bd4be8d95d7e3145b68273d0794a1fe00c60c55e24339f2ca"
+    },
+    {
+      "path": "studio/public/models/teacher/provenance.json",
+      "bytes": 1191,
+      "sha256": "b4029b2f6dac2ab75653a0e4569cd949cb50cfc673d20de09d3655be20acbe25"
+    },
+    {
+      "path": "studio/public/models/teacher/rig-report.json",
+      "bytes": 3586,
+      "sha256": "2365493b42a75eca1c63e5a77f214a878e5326f6bd6e81cc00fc06f7534fb7c7"
+    }
+  ],
+  "record_checks": [
+    {
+      "label": "RobotExpressive.glb vs assets/manifest.json",
+      "path": "studio/public/models/RobotExpressive.glb",
+      "recorded_in": "assets/manifest.json",
+      "recorded_sha256": "047f5e5fb3bb6d378bd1df16ca6137f2a596c99b3a1b5690b4020c05aaf6f319",
+      "recorded_bytes": 463988,
+      "bytes": 463988,
+      "sha256": "047f5e5fb3bb6d378bd1df16ca6137f2a596c99b3a1b5690b4020c05aaf6f319",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "label": "induction-motor.glb vs docs/engineering manifest",
+      "path": "studio/public/models/engineering/induction-motor.glb",
+      "recorded_in": "docs/engineering/asset-manifest.json",
+      "recorded_sha256": "3970e7add85b75feffe5fc3e79dcd41982a49033d216bef39102f8751f583ff8",
+      "recorded_bytes": 4213408,
+      "bytes": 4213408,
+      "sha256": "3970e7add85b75feffe5fc3e79dcd41982a49033d216bef39102f8751f583ff8",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "label": "poly_haven_studio_1k.hdr (runtime) vs docs/engineering manifest",
+      "path": "studio/public/models/engineering/poly_haven_studio_1k.hdr",
+      "recorded_in": "docs/engineering/asset-manifest.json",
+      "recorded_sha256": "dfc8505761018d644997a803f332339328af2b53e82023fb3bec37cefdf43b83",
+      "recorded_bytes": 1682195,
+      "bytes": 1682195,
+      "sha256": "dfc8505761018d644997a803f332339328af2b53e82023fb3bec37cefdf43b83",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "label": "motorGeometry.json vs docs/engineering manifest",
+      "path": "studio/src/engineering/motorGeometry.json",
+      "recorded_in": "docs/engineering/asset-manifest.json",
+      "recorded_sha256": "6fbe144c740a7dff2acb16681c4a0658eec7feb8dd4cad8602a2f43903a81712",
+      "recorded_bytes": 71225,
+      "bytes": 71225,
+      "sha256": "6fbe144c740a7dff2acb16681c4a0658eec7feb8dd4cad8602a2f43903a81712",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "label": "teacher.glb vs teacher/provenance.json preparedSha256",
+      "path": "studio/public/models/teacher/teacher.glb",
+      "recorded_in": "studio/public/models/teacher/provenance.json",
+      "recorded_sha256": "8d0f3728a91ccda99a40c39156d9d01a0aea274d4db82d618c3604c8ceefed58",
+      "recorded_bytes": null,
+      "bytes": 11262664,
+      "sha256": "8d0f3728a91ccda99a40c39156d9d01a0aea274d4db82d618c3604c8ceefed58",
+      "sha256_matches": true,
+      "bytes_match": null
+    },
+    {
+      "label": "poly_haven_studio_1k.hdr (reference copy) vs briefs manifest",
+      "path": "assets/design-reference/engineering/poly_haven_studio_1k.hdr",
+      "recorded_in": "coordination/briefs/ENGINEERING-REFERENCE-PACK/asset-manifest.json",
+      "recorded_sha256": "dfc8505761018d644997a803f332339328af2b53e82023fb3bec37cefdf43b83",
+      "recorded_bytes": 1682195,
+      "bytes": 1682195,
+      "sha256": "dfc8505761018d644997a803f332339328af2b53e82023fb3bec37cefdf43b83",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "label": "classroom.zip (reference) vs assets/manifest.json",
+      "path": "assets/reference/classroom.zip",
+      "recorded_in": "assets/manifest.json",
+      "recorded_sha256": "0f0ecc58d45f12b2f4272a53e2d8e69135518e16e956b118f10c20d8dcfdf5e6",
+      "recorded_bytes": 70279690,
+      "bytes": 70279690,
+      "sha256": "0f0ecc58d45f12b2f4272a53e2d8e69135518e16e956b118f10c20d8dcfdf5e6",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "label": "build_motor.py vs docs/engineering authoringFiles",
+      "path": "design/engineering/blender/build_motor.py",
+      "recorded_in": "docs/engineering/asset-manifest.json",
+      "recorded_sha256": "8d58f66d24f178c7bcf36c76e9d75266c517b5c711d0b65b5366f10d51dae018",
+      "recorded_bytes": 39026,
+      "bytes": 39026,
+      "sha256": "8d58f66d24f178c7bcf36c76e9d75266c517b5c711d0b65b5366f10d51dae018",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "label": "engineering target PNG 01 vs briefs manifest",
+      "path": "assets/design-reference/engineering/01-engineering-studio-target.png",
+      "recorded_in": "coordination/briefs/ENGINEERING-REFERENCE-PACK/asset-manifest.json",
+      "recorded_sha256": "ebf8be9e6bacc728774fdc86dedee7b6425934e4999203b557967f3848431e12",
+      "recorded_bytes": 2001422,
+      "bytes": 2001422,
+      "sha256": "ebf8be9e6bacc728774fdc86dedee7b6425934e4999203b557967f3848431e12",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "label": "engineering interactions PNG 02 vs briefs manifest",
+      "path": "assets/design-reference/engineering/02-engineering-interactions.png",
+      "recorded_in": "coordination/briefs/ENGINEERING-REFERENCE-PACK/asset-manifest.json",
+      "recorded_sha256": "09a5d0a53506d70ad4c6ce62b2954781fdd7a205352c1327b01f0772fddd42c8",
+      "recorded_bytes": 2070765,
+      "bytes": 2070765,
+      "sha256": "09a5d0a53506d70ad4c6ce62b2954781fdd7a205352c1327b01f0772fddd42c8",
+      "sha256_matches": true,
+      "bytes_match": true
+    }
+  ],
+  "cited_files_present": [
+    {
+      "path": "tools/avatar/prepare_teacher.py",
+      "present": true
+    },
+    {
+      "path": "design/engineering/blender/build_motor.py",
+      "present": true
+    },
+    {
+      "path": "design/character/blender/rain_export.py",
+      "present": true
+    },
+    {
+      "path": "design/character/blender/build_teacher.py",
+      "present": true
+    },
+    {
+      "path": "assets/reference/claude-kit/rain-v3.zip",
+      "present": true
+    },
+    {
+      "path": "assets/reference/claude-kit/studio_small_09_1k.hdr",
+      "present": true
+    },
+    {
+      "path": "assets/reference/teacher/TalkingHead-README.md",
+      "present": true
+    },
+    {
+      "path": "assets/reference/classroom/ReadMe.txt",
+      "present": true
+    }
+  ],
+  "reference_files": [
+    {
+      "path": "assets/reference/claude-kit/rain-v3.zip",
+      "bytes": 67579177,
+      "sha256": "80217f163f6392dc829233d63c2cfb5e1376775bc34101ad14f39631fea70d24"
+    },
+    {
+      "path": "assets/reference/claude-kit/mpfb-v2.0.18.zip",
+      "bytes": 45956992,
+      "sha256": "c075b3e9b94b8e5556a5f03f4653602d02ea306de08126e8f55ed6dee28a2dad"
+    },
+    {
+      "path": "assets/reference/claude-kit/quaternius-base-standard.zip",
+      "bytes": 128968391,
+      "sha256": "fdbf1804c90dfc1ea03e992bff7da2dfd1a79318e13270a660180f9308455f40"
+    },
+    {
+      "path": "assets/reference/claude-kit/human-base-meshes-v1.4.1.zip",
+      "bytes": 50643039,
+      "sha256": "811f43accbb31a88266d932f8f5563b2d13586fca0ba2693aad1f5fe582b3515"
+    },
+    {
+      "path": "assets/reference/claude-kit/ellie-pose-library-v2.0.0.zip",
+      "bytes": 24807731,
+      "sha256": "547a997488b91683df68eb2925423fcfbbb1b6e3e7bedd0d4cd4f67d23090231"
+    },
+    {
+      "path": "assets/reference/claude-kit/autumn_field_puresky_1k.hdr",
+      "bytes": 1092974,
+      "sha256": "e60470d3a0f219585df1d74c393b472361c5400a7ff8d071ebe6eca29b7fe2b0"
+    },
+    {
+      "path": "assets/reference/claude-kit/studio_small_09_1k.hdr",
+      "bytes": 1615248,
+      "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45"
+    },
+    {
+      "path": "assets/reference/classroom/ReadMe.txt",
+      "bytes": 1098,
+      "sha256": "12a546e6d33ec1d3280182cf5dfbb931aceda27e0fe30d37a173bedf2ce9586f"
+    },
+    {
+      "path": "assets/generated/kairo-voice-check.mp3",
+      "bytes": 29952,
+      "sha256": "c768c3e22fbb7733624ff88eb47910b338daeed12c174b437062768fa7d663cc"
+    }
+  ],
+  "engineering_hdr_md5": {
+    "computed": "a1065f613cb6e0388d82a99dcee23d3b",
+    "recorded": "a1065f613cb6e0388d82a99dcee23d3b",
+    "matches": true
+  },
+  "not_in_any_manifest": [
+    "studio/public/models/character/** (kairo-teacher.glb, studio_small_09_1k.hdr, audio, visemes)",
+    "studio/public/models/classroom/classroom.glb (its provenance.json records no hash)",
+    "assets/reference/claude-kit/* (Rain v3, MPFB, Quaternius, Ellie, human base meshes, HDRIs)",
+    "assets/generated/kairo-voice-check.mp3"
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "snapshot": {
+    "checked_at": "2026-10-22",
+    "purpose": "Map two official RMB/FirstRand role adverts to existing authored KAIRO practice and identify separate, proposed portfolio tasks for uncovered areas.",
+    "not_a_fit_assessment": "No learner fit score, eligibility conclusion, application recommendation or employer assessment is made. Practice choices and proposed projects are not equivalent to work experience, credentials or verified skill.",
+    "status_caution": "The advert details are from official-host indexed text; direct Workday opens returned no readable lines. Both indexed closing notes state applications are not accepted on 2026-10-23 or onwards. Timezone/cutoff hour are not stated. Live status is unknown; do not present either as a confirmed open vacancy."
+  },
+  "roles": [
+    {
+      "role_id": "RMB-IT-BA-R54418",
+      "title": "IT Business Analyst",
+      "requisition_id": "R54418",
+      "employer": "RMB / FirstRand",
+      "location": "Johannesburg, South Africa",
+      "official_advert_url": "https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/IT-Business-Analyst_R54418-1",
+      "source_snapshot": "data/public/opportunities/fnb-current-review.json#FRB-IT-BA-R54418",
+      "availability": "unknown_live_status",
+      "indexed_end_date": "2026-10-23",
+      "deadline_note": "Applications are not accepted on the date indicated or onwards; submit ahead of 2026-10-23. Timezone and cutoff hour unspecified.",
+      "employer_requirements": [
+        {
+          "id": "ba-years",
+          "requirement": "Minimum eight years of Business Analysis or Business/Systems Analysis experience.",
+          "requirement_type": "mandatory",
+          "source_claim": "CLAIM-IT-BA-CRITERIA"
+        },
+        {
+          "id": "risk-domain-experience",
+          "requirement": "Demonstrable Market Risk, traded risk, financial-markets risk technology or closely related risk-domain experience.",
+          "requirement_type": "mandatory",
+          "source_claim": "CLAIM-IT-BA-CRITERIA"
+        },
+        {
+          "id": "risk-requirements-delivery",
+          "requirement": "Translate complex methodologies, policies or regulatory needs into implementable technology, data and control requirements; support complex change through testing and implementation validation; deliver across business, risk, data and technology stakeholders.",
+          "requirement_type": "mandatory",
+          "source_claim": "CLAIM-IT-BA-CRITERIA"
+        },
+        {
+          "id": "degree",
+          "requirement": "Relevant Bachelor’s degree or BTech in Computer Science, Information Systems, Mathematics, Engineering, Finance, Risk Management or a related discipline.",
+          "requirement_type": "mandatory",
+          "source_claim": "CLAIM-IT-BA-CRITERIA"
+        },
+        {
+          "id": "preferred-risk-exposure",
+          "requirement": "Agile delivery, named risk framework/regulatory exposure, relevant certification and coaching/mentoring are listed as preferred or advantageous.",
+          "requirement_type": "preferred",
+          "source_claim": "CLAIM-IT-BA-CRITERIA"
+        }
+      ],
+      "practice_mapping": [
+        {
+          "practice_source": "studio/src/practice-packs/model.ts#fictional-requirements-uat",
+          "local_context": "Northstar Study Circle is invented; its exported role context references Discovery's Business Analyst page, not RMB. The exercise does not represent or receive endorsement from either employer.",
+          "step_ids": ["scope-request", "revised-requirement", "uat-plan"],
+          "capability_overlap": [
+            {
+              "employer_requirement_id": "risk-requirements-delivery",
+              "case_activity": "Clarify a vague request with competing stakeholder needs; revise the requirement; choose synthetic UAT cases and leave an unresolved policy rule gated for owner approval.",
+              "coverage": "partial-general-practice",
+              "boundary": "This is a fictional, bounded requirements/UAT exercise; it does not evidence professional BA delivery, regulated change, stakeholder workshops at bank scale, or Market Risk knowledge."
+            },
+            {
+              "employer_requirement_id": "degree",
+              "case_activity": "No case activity can evidence a formal degree or its equivalence.",
+              "coverage": "not_assessed",
+              "boundary": "The model does not infer that any learner's qualification meets the employer wording."
+            },
+            {
+              "employer_requirement_id": "ba-years",
+              "case_activity": "No case activity measures or substitutes for years of employment experience.",
+              "coverage": "not_assessed",
+              "boundary": "The eight-year threshold remains unproven by practice or suggested project work."
+            },
+            {
+              "employer_requirement_id": "risk-domain-experience",
+              "case_activity": "The fictional reporting scenario contains no market-risk model, instrument, risk-factor, trading-book or regulatory framework content.",
+              "coverage": "not_covered",
+              "boundary": "Market Risk experience and domain knowledge remain unproven."
+            }
+          ]
+        }
+      ],
+      "proposed_missing_project_work": [
+        {
+          "id": "ba-risk-change-traceability",
+          "proposal_only": true,
+          "task": "Using only invented requirements and synthetic records, write a short change brief with three fictional stakeholder roles, 10 testable requirements, a current/future process map, a data-field lineage table, assumptions/decision owners and a trace from requirement to acceptance test.",
+          "suggested_evidence": "Versioned brief, process/data diagrams, traceability matrix and reviewed change log.",
+          "limit": "This demonstrates an authored portfolio artifact only; it is not evidence of eight years' experience or employer-accepted BA competence."
+        },
+        {
+          "id": "ba-synthetic-quality-reconciliation",
+          "proposal_only": true,
+          "task": "Create 30 synthetic position/risk-report rows, seed six labeled data defects, and write eight SQL quality/reconciliation checks with expected results and source-to-output lineage.",
+          "suggested_evidence": "Synthetic dataset, SQL scripts, test cases and a concise defect/result log.",
+          "limit": "Do not claim regulatory compliance or implement a production VaR/FRTB calculation. Synthetic checks are not bank controls."
+        },
+        {
+          "id": "ba-market-risk-source-study",
+          "proposal_only": true,
+          "task": "Read the cited BIS market-risk standard and BCBS 239 material; produce a glossary and a one-page note distinguishing source statements, assumptions and questions requiring a qualified risk owner.",
+          "suggested_evidence": "Cited study notes with sections/page references and an explicit unknowns list.",
+          "limit": "Reading and summaries do not establish professional Market Risk experience or regulatory implementation skill."
+        }
+      ],
+      "preparatory_sources": ["BIS-MARKET-RISK-STANDARD", "BIS-BCBS239", "MS-LEARN-TSQL"]
+    },
+    {
+      "role_id": "RMB-TRADE-SUPPORT-R54282",
+      "title": "Trade Support Specialist",
+      "requisition_id": "R54282",
+      "employer": "RMB / FirstRand",
+      "location": "Johannesburg, South Africa",
+      "official_advert_url": "https://firstrand.wd3.myworkdayjobs.com/FRB/job/Johannesburg/Trade-Support-Specialist_R54282-1",
+      "source_snapshot": "data/public/opportunities/fnb-current-review.json#FRB-TRADE-SUPPORT-R54282",
+      "availability": "unknown_live_status",
+      "indexed_end_date": "2026-10-23",
+      "deadline_note": "Applications are not accepted on the date indicated or onwards; submit ahead of 2026-10-23. Timezone and cutoff hour unspecified.",
+      "employer_requirements": [
+        {
+          "id": "support-years",
+          "requirement": "Three to five years of experience in a technology or production-support environment.",
+          "requirement_type": "mandatory",
+          "source_claim": "CLAIM-TRADE-SUPPORT-CRITERIA"
+        },
+        {
+          "id": "degree",
+          "requirement": "Bachelor’s degree in Computer Science, Information Technology, Engineering, Finance or a related field.",
+          "requirement_type": "mandatory",
+          "source_claim": "CLAIM-TRADE-SUPPORT-CRITERIA"
+        },
+        {
+          "id": "production-support",
+          "requirement": "Support business-critical enterprise applications and integrated environments; experience with incident, problem, change and release management; and experience with vendors/cross-functional technical teams.",
+          "requirement_type": "mandatory",
+          "source_claim": "CLAIM-TRADE-SUPPORT-CRITERIA"
+        },
+        {
+          "id": "trading-exposure",
+          "requirement": "Exposure to trading systems or financial-markets technology is described as ideal.",
+          "requirement_type": "preferred",
+          "source_claim": "CLAIM-TRADE-SUPPORT-CRITERIA"
+        },
+        {
+          "id": "technical-functional-list",
+          "requirement": "The advert lists electronic trading/order routing/FIX/market-data, Linux/Unix, SQL, networking, troubleshooting, scripting/automation, monitoring/alerting, cloud/infrastructure, access controls and resilience under Technical and Functional Skills without individually marking each mandatory or preferred.",
+          "requirement_type": "listed_qualification_status_unspecified",
+          "source_claim": "CLAIM-TRADE-SUPPORT-CRITERIA"
+        }
+      ],
+      "practice_mapping": [
+        {
+          "practice_source": "studio/src/practice-packs/model.ts#fictional-digital-support",
+          "local_context": "Northstar Study Circle is invented; the source context references Discovery Digital Support, not RMB. This is not a trading platform or employer assessment.",
+          "step_ids": ["account-access", "upload-accessibility", "close-or-escalate"],
+          "capability_overlap": [
+            {
+              "employer_requirement_id": "production-support",
+              "case_activity": "Use privacy-safe triage, reproduce an issue with synthetic inputs, record uncertainty, escalate to an owner and avoid declaring resolution without confirmation.",
+              "coverage": "partial-general-practice",
+              "boundary": "This is scripted digital-support practice; it does not demonstrate production incident ownership, service restoration, root-cause analysis, enterprise integrations, release/change operations, vendor management or trading-system support."
+            },
+            {
+              "employer_requirement_id": "support-years",
+              "case_activity": "The scenario records practice choices, not time in a technology or production-support job.",
+              "coverage": "not_assessed",
+              "boundary": "The three-to-five-year experience requirement remains unproven; practice and a portfolio project are not equivalent experience."
+            },
+            {
+              "employer_requirement_id": "degree",
+              "case_activity": "No case activity establishes a formal qualification or degree equivalence.",
+              "coverage": "not_assessed",
+              "boundary": "The model makes no degree or eligibility inference."
+            },
+            {
+              "employer_requirement_id": "trading-exposure",
+              "case_activity": "The case concerns fictional sign-in and an inaccessible upload control; it contains no trade lifecycle or financial-market systems.",
+              "coverage": "not_covered",
+              "boundary": "Trading/financial-markets technology exposure remains unproven."
+            },
+            {
+              "employer_requirement_id": "technical-functional-list",
+              "case_activity": "The case has no FIX messages, Linux/Unix host, network, database, alerting stack, or market-data feed.",
+              "coverage": "not_covered",
+              "boundary": "Technical skills from the advert are not inferred from safe support decisions."
+            }
+          ]
+        }
+      ],
+      "proposed_missing_project_work": [
+        {
+          "id": "trade-support-synthetic-event-lab",
+          "proposal_only": true,
+          "task": "Build a local-only emulator with four fictional components and 50 synthetic order/status/market-data events. Seed five fault types such as stale feed, missing field, duplicate event, delayed response and unavailable downstream service; never connect to an exchange or real account.",
+          "suggested_evidence": "Architecture sketch, event schema, synthetic logs, fault catalogue and test fixtures.",
+          "limit": "This is a toy lab, not an electronic-trading platform, certified FIX implementation or proof of market-system operation."
+        },
+        {
+          "id": "trade-support-triage-runbook",
+          "proposal_only": true,
+          "task": "Write a triage runbook that distinguishes symptoms from causes; define safe checks, severity/impact questions, escalation owner, status updates, evidence preservation, and a rollback/restore decision for each seeded fault.",
+          "suggested_evidence": "Runbook, 10 simulated incident records, root-cause hypotheses labeled as unverified, and post-incident actions.",
+          "limit": "Simulated incidents do not prove production incident-management experience or service-level performance."
+        },
+        {
+          "id": "trade-support-tests-and-monitoring",
+          "proposal_only": true,
+          "task": "Add deterministic schema and timing checks to the synthetic event lab; test the five seeded faults and two recoveries; document a simulated change, UAT checklist, alert threshold rationale and a rollback test.",
+          "suggested_evidence": "Automated local tests, sample alerts, change record, UAT results and rollback notes.",
+          "limit": "The project must remain disconnected from live networks, trading venues and real market data."
+        }
+      ],
+      "preparatory_sources": ["FIX-TRADING-COMMUNITY", "MS-LEARN-TSQL", "PYTHON-TUTORIAL"]
+    }
+  ],
+  "preparatory_sources": [
+    {
+      "source_id": "BIS-MARKET-RISK-STANDARD",
+      "title": "Minimum capital requirements for market risk",
+      "url": "https://www.bis.org/publications/201901-standards-minimum-capital-requirements-market-risk",
+      "supports": "Official Basel Committee reference material for the Market Risk/FRTB terminology present in the IT Business Analyst advert.",
+      "status_note": "BIS page labels the standard consolidated and integrated into the Basel Framework; it states an effective date of 1 January 2022.",
+      "use_limit": "A technical standard, not a beginner course or evidence of the learner's expertise. Read with the employer requirement; do not claim a toy portfolio project implements regulatory rules."
+    },
+    {
+      "source_id": "BIS-BCBS239",
+      "title": "Principles for effective risk data aggregation and risk reporting",
+      "url": "https://www.bis.org/publ/bcbs239.pdf",
+      "supports": "Official principles include governance, data architecture, accuracy/integrity and completeness themes relevant to risk-data requirements.",
+      "use_limit": "Official reference document; reading it is not a qualification or evidence of bank implementation experience."
+    },
+    {
+      "source_id": "BIS-BCBS239-2026",
+      "title": "Implementation of the Principles for effective risk data aggregation and risk reporting (BCBS 239 Principles)",
+      "url": "https://www.bis.org/publications/implementation-principles-effective-risk-data-aggregation-and-risk-reporting-bcbs-239-principles",
+      "supports": "BCBS Newsletter 36 published 6 January 2026 summarizes implementation issues, including data lineage and governance; the page describes it as informational and not new supervisory guidance.",
+      "use_limit": "Context for a study note only; it does not state RMB policy or an employer assessment."
+    },
+    {
+      "source_id": "FIX-TRADING-COMMUNITY",
+      "title": "FIX Protocol",
+      "url": "https://fixtrading.org/standards/fix-protocol/",
+      "supports": "The protocol community describes FIX as an application-layer standard for structured orders, executions and market-data messages independent of transport.",
+      "use_limit": "Official protocol reference; a local toy schema is not a production FIX system or trading-experience substitute."
+    },
+    {
+      "source_id": "MS-LEARN-TSQL",
+      "title": "Query and modify data with Transact-SQL",
+      "url": "https://learn.microsoft.com/en-us/training/paths/get-started-querying-with-transact-sql/",
+      "supports": "Microsoft Learn describes a beginner, six-module T-SQL learning path listed as 5 hr 45 min.",
+      "use_limit": "Learning content only; it does not satisfy degree, experience or role eligibility requirements."
+    },
+    {
+      "source_id": "PYTHON-TUTORIAL",
+      "title": "The Python Tutorial",
+      "url": "https://docs.python.org/3/tutorial/",
+      "supports": "Official Python language tutorial for basic scripting concepts relevant to the role's listed automation/scripting tasks.",
+      "use_limit": "Language study only; it does not establish scripting proficiency or production-support experience."
+    }
+  ],
+  "global_limits": [
+    "All practice scenarios are invented and role-context links are not employer endorsement or official assessments.",
+    "Practice-pack exports label themselves fictional, unverified and not independently assessed; a chosen option is not a verified skill or credential.",
+    "The first role's eight-year BA threshold and Market Risk domain experience are unproven; the second role's three-to-five-year technology/production-support experience is unproven.",
+    "The listed degrees and years of experience are employer criteria; this matrix does not infer whether any person meets them or whether any degree is equivalent.",
+    "Portfolio work below is proposed and uncompleted. It must not be stated as current experience or employer evidence until actually completed, reviewed and accurately described.",
+    "No learner score, eligibility ranking, ATS score, job-readiness claim, application action or live vacancy claim is produced."
+  ],
+  "claim_map": [
+    {"claim_id": "MATRIX-BA-ROLE-REQUIREMENTS", "source_ids": ["FRB-IT-BA-R54418"], "supports": "Employer-stated IT Business Analyst requirements and explicit eight-year and Market Risk experience thresholds."},
+    {"claim_id": "MATRIX-TRADE-ROLE-REQUIREMENTS", "source_ids": ["FRB-TRADE-SUPPORT-R54282"], "supports": "Employer-stated Trade Support Specialist requirements, three-to-five-year threshold, and listed technical skills."},
+    {"claim_id": "MATRIX-PRACTICE-BA", "source_ids": ["KAIRO-PRACTICE-PACKS"], "supports": "Existing fictional BA requirements/UAT scenario steps, choices and explicit provenance limits."},
+    {"claim_id": "MATRIX-PRACTICE-SUPPORT", "source_ids": ["KAIRO-PRACTICE-PACKS"], "supports": "Existing fictional digital-support case steps and explicit privacy, uncertainty and provenance boundaries."},
+    {"claim_id": "MATRIX-PREPARATION-SOURCES", "source_ids": ["BIS-MARKET-RISK-STANDARD", "BIS-BCBS239", "BIS-BCBS239-2026", "FIX-TRADING-COMMUNITY", "MS-LEARN-TSQL", "PYTHON-TUTORIAL"], "supports": "Official public references for narrowly scoped preparatory reading; no employment, qualification or competency outcome is claimed."}
+  ],
+  "local_evidence_sources": [
+    {
+      "source_id": "KAIRO-PRACTICE-PACKS",
+      "path": "docs/workstreams/practice-packs.md",
+      "supports": "Authored scenario identifiers, step labels, fictional setting, and explicit assessment/provenance limits. The imported model is studio/src/practice-packs/model.ts.",
+      "use_limit": "Local KAIRO content describes its own fictional practice only; it does not substantiate employer requirements or endorsement."
+    },
+    {
+      "source_id": "FRB-IT-BA-R54418",
+      "path": "data/public/opportunities/fnb-current-review.json#FRB-IT-BA-R54418",
+      "supports": "Previously captured official-host indexed text and advertised role criteria for requisition R54418.",
+      "use_limit": "Direct Workday page returned no readable lines; live vacancy status remains unknown."
+    },
+    {
+      "source_id": "FRB-TRADE-SUPPORT-R54282",
+      "path": "data/public/opportunities/fnb-current-review.json#FRB-TRADE-SUPPORT-R54282",
+      "supports": "Previously captured official-host indexed text and advertised role criteria for requisition R54282.",
+      "use_limit": "Direct Workday page returned no readable lines; live vacancy status remains unknown."
+    }
+  ]
+}

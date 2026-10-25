@@ -1,0 +1,15 @@
+✔ load actual AccountPanel through installed Vite SSR (4186.2643ms)
+✔ signed-out, loading, and signed-in states are clear and scoped without overstating isolation (36.918ms)
+✔ actual form handlers trim email, preserve sign-in password, and reset sends no password (14.2055ms)
+✔ sign-up rule, mode change clearing, and rejected callback handling are enforced by the component (9.3805ms)
+✔ pending/loading suppress callbacks and duplicate in-flight submit events are ignored (3.9714ms)
+✔ signed-in sign-out clears transient password and callback exceptions never disclose details (4.0746ms)
+✔ close SSR server (22.5643ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7145.789

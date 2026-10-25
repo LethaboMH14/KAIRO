@@ -1,0 +1,8 @@
+{
+  "provider": "openrouter",
+  "model": "dots-studio/dots-3-note-preview:free",
+  "maxOutputTokens": 4000,
+  "exitCode": 0,
+  "requestCountCeiling": 1,
+  "reason": "One final controlled free-only output-budget comparison after length exhaustion; no automatic retries."
+}

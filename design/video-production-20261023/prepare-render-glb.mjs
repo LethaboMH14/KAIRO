@@ -1,0 +1,17 @@
+import {createRequire} from 'node:module';
+import {fileURLToPath,pathToFileURL} from 'node:url';
+import path from 'node:path';
+import {writeFile} from 'node:fs/promises';
+const here=path.dirname(fileURLToPath(import.meta.url));
+const root=path.resolve(here,'../..');
+const require=createRequire(path.join(root,'tools/character/node/package.json'));
+const {NodeIO}=await import(pathToFileURL(require.resolve('@gltf-transform/core')).href);
+const {ALL_EXTENSIONS}=await import(pathToFileURL(require.resolve('@gltf-transform/extensions')).href);
+const {MeshoptDecoder}=await import(pathToFileURL(require.resolve('meshoptimizer')).href);
+await MeshoptDecoder.ready;
+const io=new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({'meshopt.decoder':MeshoptDecoder});
+const doc=await io.read(path.join(root,'studio/public/models/character/kairo-teacher.glb'));
+for(const extension of doc.getRoot().listExtensionsUsed())if(extension.extensionName==='EXT_meshopt_compression')extension.dispose();
+await io.write(path.join(here,'kairo-render.glb'),doc);
+await writeFile(path.join(here,'render-glb.json'),JSON.stringify({source:'studio/public/models/character/kairo-teacher.glb',output:'kairo-render.glb',change:'Decoded meshopt for offline Blender import, same geometry and animation assets',animations:doc.getRoot().listAnimations().map(a=>a.getName())},null,2));
+console.log('Render GLB prepared');

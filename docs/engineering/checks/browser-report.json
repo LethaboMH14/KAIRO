@@ -1,0 +1,496 @@
+{
+  "page": "http://127.0.0.1:4182/src/engineering/preview.html",
+  "browser": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "started": "2026-10-22T19:26:21.704Z",
+  "build": [
+    {
+      "file": "assets/preview-DHAPvUpJ.js",
+      "bytes": 728107
+    },
+    {
+      "file": "assets/MotorScene-DfBdNoD7.js",
+      "bytes": 704903
+    },
+    {
+      "file": "assets/preview-BGvPU9M3.css",
+      "bytes": 43389
+    },
+    {
+      "file": "src/engineering/preview.html",
+      "bytes": 539
+    }
+  ],
+  "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x00004628) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "checks": [
+    {
+      "name": "3D model loads into a WebGL canvas",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: no horizontal page scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "clicking the 3D model selects the part under the pointer",
+      "pass": true,
+      "detail": "selected: Housing"
+    },
+    {
+      "name": "list selection updates the shared selection",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "detail panel shows the selected part",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "hidden internal part offers Show inside",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Show inside toggles the cutaway",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "nothing is spoken until the learner asks",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Read aloud speaks the selected part and offers Stop",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Stop reading cancels speech",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Explode tab separates the motor",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "rapid reversals then Reassemble return to the exact assembled image",
+      "pass": true,
+      "detail": "320198 vs 320198 bytes"
+    },
+    {
+      "name": "Operate turns on the cutaway",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Pause freezes the current angle",
+      "pass": true,
+      "detail": "Now38°U+0,79V+0,14W-0,93"
+    },
+    {
+      "name": "exploding while operating pauses the demonstration",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "operation stays unavailable while taken apart, with the reason shown",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Reassemble re-enables Run",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "arrow keys move focus between activity tabs without activating them",
+      "pass": true,
+      "detail": "focused Explode"
+    },
+    {
+      "name": "Enter activates the focused tab",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "End and Home move focus to the last and first tabs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Enter on a focused list item selects it",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Escape clears the selection",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "drawing view replaces the canvas",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "drawing parts are keyboard-selectable and share the selection",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "returning to 3D restores the canvas",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "wrong quiz answer gives specific feedback",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Stator is accepted with an explanation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "calculator rejects frequency \"0\"",
+      "pass": true,
+      "detail": "Use a frequency from 1 to 400 Hz."
+    },
+    {
+      "name": "calculator rejects frequency \"-50\"",
+      "pass": true,
+      "detail": "Use a frequency from 1 to 400 Hz."
+    },
+    {
+      "name": "calculator rejects frequency \"abc\"",
+      "pass": true,
+      "detail": "Enter the supply frequency as a number of hertz."
+    },
+    {
+      "name": "calculator rejects frequency \"\"",
+      "pass": true,
+      "detail": "Enter the supply frequency as a number of hertz."
+    },
+    {
+      "name": "calculator rejects frequency \"401\"",
+      "pass": true,
+      "detail": "Use a frequency from 1 to 400 Hz."
+    },
+    {
+      "name": "calculator accepts frequency \"50\"",
+      "pass": true,
+      "detail": "ns = 120 × 50 ÷ 4 = 1 500 r/min25 revolutions per second"
+    },
+    {
+      "name": "calculator accepts frequency \"60\"",
+      "pass": true,
+      "detail": "ns = 120 × 60 ÷ 4 = 1 800 r/min30 revolutions per second"
+    },
+    {
+      "name": "calculator accepts frequency \"50,5\"",
+      "pass": true,
+      "detail": "ns = 120 × 50,5 ÷ 4 = 1 515 r/min25,25 revolutions per second"
+    },
+    {
+      "name": "calculator: 60 Hz, 4 poles gives 1 800 r/min",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "calculator: 50 Hz, 2 poles gives 3 000 r/min",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "field-speed question accepts 1800 r/min",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "progress saved in browser storage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Back to studios calls onExit (harness navigates to /)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "system reduced-motion preference turns on the Reduce motion control",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: explode and camera snap without travel",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: operation starts paused",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phone: no horizontal page scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phone: parts list collapses behind a toggle",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phone: parts sheet opens and selection works",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phone: no horizontal scroll with controls expanded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phone: the supply menu fits and a fault experiment adds no horizontal scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "missing GLB falls back to the drawing view with an explanation",
+      "pass": true,
+      "detail": "The 3D model could not load, so the drawing view is shown. Every part and activity still works here."
+    },
+    {
+      "name": "no WebGL starts in the drawing view with an explanation",
+      "pass": true,
+      "detail": "This browser cannot show 3D graphics, so the drawing view is shown. Every part and activity still works here."
+    },
+    {
+      "name": "no WebGL: lesson and selection remain usable",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: activity controls are visible without scrolling",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Operate offers the normal supply, three phase swaps and three open phases",
+      "pass": true,
+      "detail": "normal,swap-UV,swap-VW,swap-WU,open-U,open-V,open-W"
+    },
+    {
+      "name": "normal supply: readouts say the field turns forwards and the motor starts",
+      "pass": true,
+      "detail": "Field, seen from the drive endTurns anticlockwiseStrength now100% of normalTurning parts100% forward, 0% backwardFrom restStarts and runs"
+    },
+    {
+      "name": "normal supply: the 3D field poles turn anticlockwise, seen from the drive end",
+      "pass": true,
+      "detail": "7.0° on screen per step"
+    },
+    {
+      "name": "choosing a supply restarts the demonstration from rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "V and W swapped: readouts say the field turns backwards and the motor starts in reverse",
+      "pass": true,
+      "detail": "Field, seen from the drive endTurns clockwiseStrength now100% of normalTurning parts0% forward, 100% backwardFrom restStarts and runs in reverse"
+    },
+    {
+      "name": "V and W swapped: the 3D field poles turn clockwise, seen from the drive end",
+      "pass": true,
+      "detail": "-7.3° on screen per step"
+    },
+    {
+      "name": "phase W open: readouts say the field pulses, splits evenly both ways and cannot start",
+      "pass": true,
+      "detail": "Field, seen from the drive endPulses on a fixed axisStrength now87% of normalTurning parts50% forward, 50% backwardFrom restCannot start: no starting torqueCurrent at rest87% of a normal start in U and V; none in W"
+    },
+    {
+      "name": "phase W open: current at rest is 87% of a normal start in U and V, and none in W",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phase W open: W carries nothing; U and V carry one current in opposite directions",
+      "pass": true,
+      "detail": "{\"U\":0.75,\"V\":-0.75,\"W\":0}"
+    },
+    {
+      "name": "phase W open: the 3D poles stay in place and fade as the field weakens",
+      "pass": true,
+      "detail": "opacity 0.87 then 0.5"
+    },
+    {
+      "name": "phase W open: at 60° the field and its poles vanish",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "phase W open: the field returns on the same axis with north and south swapped",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "drawing, phase W open: the field keeps to one axis (40° or 130°) and the rotor stays at rest",
+      "pass": true,
+      "detail": "130°/0.5 130°/0.87 130°/1 130°/0.87 130°/0.5 130°/0"
+    },
+    {
+      "name": "drawing, phase W open: all 12 W slots carry no current",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "drawing, phase W open: the legend explains empty slots",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "drawing, V and W swapped: the field turns 15° clockwise per step and the rotor follows",
+      "pass": true,
+      "detail": "55.0° to 40.0°, rotor -12.0°"
+    },
+    {
+      "name": "fault question: a wrong answer explains why",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "fault question: the single-phasing answer is accepted and saved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "below a 39 px app-shell strip, the desktop controls still end on screen",
+      "pass": true,
+      "detail": "{\"above\":\"39px\",\"bottom\":899,\"height\":900,\"errors\":[]}"
+    },
+    {
+      "name": "measuring the space above the studio raises no page errors",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "console": [
+    {
+      "scenario": "missing-model",
+      "type": "log-error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found) http://127.0.0.1:4182/models/engineering/induction-motor.glb"
+    },
+    {
+      "scenario": "missing-model",
+      "type": "exception",
+      "text": "Error: Could not load /models/engineering/induction-motor.glb: fetch for \"http://127.0.0.1:4182/models/engineering/induction-motor.glb\" responded with 404: Not Found\n    at http://127.0.0.1:4182/assets/MotorScene-DfBdNoD7.js:3793:83478\n    at Object.d [as onError] (http://127.0.0.1:4182/assets/MotorScene-DfBdNoD7.js:3922:16462)\n    at http://127.0.0.1:4182/assets/preview-DHAPvUpJ.js:48:134732"
+    }
+  ],
+  "frames": {
+    "desktop-idle": {
+      "framesSampled": 6,
+      "drawCallsMedian": 43,
+      "drawCallsMax": 82,
+      "trianglesMedian": 132806,
+      "trianglesMax": 268284
+    },
+    "desktop-explode": {
+      "framesSampled": 92,
+      "drawCallsMedian": 45,
+      "drawCallsMax": 92,
+      "trianglesMedian": 127615,
+      "trianglesMax": 268284
+    },
+    "operatingFps": {
+      "devicePixelRatio": 1,
+      "viewport": "1440x900",
+      "samples": [
+        57,
+        60.3,
+        59.3
+      ],
+      "median": 59.3
+    },
+    "desktop-operating": {
+      "framesSampled": 120,
+      "drawCallsMedian": 55,
+      "drawCallsMax": 55,
+      "trianglesMedian": 115265,
+      "trianglesMax": 115265
+    },
+    "idleFps": {
+      "devicePixelRatio": 1.5,
+      "viewport": "1440x900",
+      "fps": 60.5,
+      "note": "demand rendering: frames are only drawn when something changes"
+    },
+    "operatingFpsDpr15": {
+      "devicePixelRatio": 1.5,
+      "viewport": "1440x900",
+      "samples": [
+        45,
+        44,
+        41.4
+      ],
+      "median": 44
+    },
+    "desktop-operating-dpr-1.5": {
+      "framesSampled": 120,
+      "drawCallsMedian": 55,
+      "drawCallsMax": 55,
+      "trianglesMedian": 115265,
+      "trianglesMax": 115265
+    },
+    "phoneLayoutOperatingFps": {
+      "devicePixelRatio": 1,
+      "viewport": "390x844 (emulated phone layout on this PC GPU, not a phone)",
+      "samples": [
+        60.4,
+        60.4,
+        60.5
+      ],
+      "median": 60.4
+    }
+  },
+  "screenshots": [
+    "docs/engineering/screenshots/01-desktop-assembled.png",
+    "docs/engineering/screenshots/02-desktop-picked-in-3d.png",
+    "docs/engineering/screenshots/03-selected-cage-assembled.png",
+    "docs/engineering/screenshots/04-cutaway-cage-selected.png",
+    "docs/engineering/screenshots/05-focus-cage.png",
+    "docs/engineering/screenshots/06-reference-before-explode.png",
+    "docs/engineering/screenshots/07-exploded.png",
+    "docs/engineering/screenshots/08-exploded-focus-rotor.png",
+    "docs/engineering/screenshots/09-reference-after-reassembly.png",
+    "docs/engineering/screenshots/10-operating.png",
+    "docs/engineering/screenshots/11-operate-paused-exploded.png",
+    "docs/engineering/screenshots/12-drawing-side-windings.png",
+    "docs/engineering/screenshots/13-drawing-side-exploded.png",
+    "docs/engineering/screenshots/14-drawing-end-operating.png",
+    "docs/engineering/screenshots/15-practise.png",
+    "docs/engineering/screenshots/16-reduced-explode-immediate.png",
+    "docs/engineering/screenshots/17-phone-assembled.png",
+    "docs/engineering/screenshots/18-phone-parts-open.png",
+    "docs/engineering/screenshots/19-phone-exploded.png",
+    "docs/engineering/screenshots/20-fallback-missing-model.png",
+    "docs/engineering/screenshots/21-fallback-no-webgl.png",
+    "docs/engineering/screenshots/22-operate-reversed.png",
+    "docs/engineering/screenshots/23-operate-phase-open.png",
+    "docs/engineering/screenshots/24-drawing-end-phase-open.png",
+    "docs/engineering/screenshots/25-fault-question.png"
+  ],
+  "finished": "2026-10-22T19:29:38.295Z",
+  "summary": {
+    "passed": 72,
+    "failed": 0
+  }
+}

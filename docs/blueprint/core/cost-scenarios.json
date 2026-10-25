@@ -1,0 +1,32 @@
+{
+  "schema": "kairo-cost-plan/1",
+  "date": "2026-10-22",
+  "currency": "USD",
+  "status": "illustrative workload; not quote or live account balance",
+  "rateSources": {
+    "stt": "https://cloud.google.com/speech-to-text/pricing",
+    "tts": "https://cloud.google.com/text-to-speech/pricing"
+  },
+  "parameters": {
+    "learner_hours": 100,
+    "characters_per_narrated_hour": 45000,
+    "narration_fraction": 1,
+    "reuse_fraction": 0,
+    "microphone_fraction": 0.1,
+    "channels": 1,
+    "tts_per_million": 30,
+    "tts_remaining_allowance_chars": 0,
+    "stt_v2_per_minute": 0.016,
+    "infrastructure_allowance": 50,
+    "generation_allowance": 20,
+    "other_allowance": 10
+  },
+  "excluded": ["tax", "FX", "paid content and reviewers", "SMS", "domains", "support", "GPU training", "overages above engineering allowances"],
+  "notes": [
+    "Free quota defaults to zero because actual account entitlement and remaining allowance are unknown.",
+    "Infrastructure/generation/other values are engineering allocations, not provider prices.",
+    "Reuse only applies to content legally and privately eligible for reuse; no cross-tenant private cache.",
+    "STT V2 baseline has no assumed V1 60-minute allowance.",
+    "Do not treat the calculated total as a guaranteed spend cap or as credit eligibility."
+  ]
+}

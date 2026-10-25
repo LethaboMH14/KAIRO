@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {configureLearnerStorage,learnerStorage,learningSnapshot,restoreLearningSnapshot} from '../src/account/storage.ts';
+test('account learning state stays isolated and old device work is never silently imported',()=>{
+ const values=new Map([['kairo-note','old local note']]);globalThis.localStorage={get length(){return values.size;},key:i=>[...values.keys()][i]??null,getItem:key=>values.get(key)??null,setItem:(key,value)=>values.set(key,value),removeItem:key=>values.delete(key)};
+ try{configureLearnerStorage('a'.repeat(64));assert.equal(learnerStorage.getItem('kairo-note'),null);learnerStorage.setItem('kairo-note','Account A');configureLearnerStorage('b'.repeat(64));assert.equal(learnerStorage.getItem('kairo-note'),null);learnerStorage.setItem('kairo-note','Account B');assert.deepEqual(learningSnapshot(),{'kairo-note':'Account B'});configureLearnerStorage('a'.repeat(64));assert.equal(learnerStorage.getItem('kairo-note'),'Account A');configureLearnerStorage('guest');assert.equal(learnerStorage.getItem('kairo-note'),null);configureLearnerStorage(null);assert.equal(learnerStorage.getItem('kairo-note'),'old local note');}finally{configureLearnerStorage(null);delete globalThis.localStorage;}
+});
+test('restoring a cloud snapshot changes only the selected account namespace and validates before writing',()=>{
+ const values=new Map();globalThis.localStorage={get length(){return values.size;},key:i=>[...values.keys()][i]??null,getItem:key=>values.get(key)??null,setItem:(key,value)=>values.set(key,value),removeItem:key=>values.delete(key)};
+ try{configureLearnerStorage('b'.repeat(64));learnerStorage.setItem('private','B');configureLearnerStorage('a'.repeat(64));learnerStorage.setItem('old','A');assert.throws(()=>restoreLearningSnapshot({bad:123}),/invalid|limits/);assert.equal(learnerStorage.getItem('old'),'A');restoreLearningSnapshot({current:'Saved A'});assert.equal(learnerStorage.getItem('old'),null);assert.equal(learnerStorage.getItem('current'),'Saved A');configureLearnerStorage('b'.repeat(64));assert.equal(learnerStorage.getItem('private'),'B');assert.throws(()=>configureLearnerStorage('../other'),/scope/);}finally{configureLearnerStorage(null);delete globalThis.localStorage;}
+});

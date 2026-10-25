@@ -1,0 +1,8 @@
+src/original-material-ui/OriginalMaterial.tsx(56,46): error TS7016: Could not find a declaration file for module 'pdfjs-dist/build/pdf.min.mjs'. 'C:/Users/USER/Desktop/fnb app of year hackathon/studio/node_modules/pdfjs-dist/build/pdf.min.mjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/pdfjs-dist` if it exists or add a new declaration (.d.ts) file containing `declare module 'pdfjs-dist/build/pdf.min.mjs';`
+src/original-material-ui/OriginalMaterial.tsx(60,12): error TS7016: Could not find a declaration file for module 'pdfjs-dist/build/pdf.min.mjs'. 'C:/Users/USER/Desktop/fnb app of year hackathon/studio/node_modules/pdfjs-dist/build/pdf.min.mjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/pdfjs-dist` if it exists or add a new declaration (.d.ts) file containing `declare module 'pdfjs-dist/build/pdf.min.mjs';`
+src/original-material-ui/OriginalMaterial.tsx(74,50): error TS2339: Property 'getDocument' does not exist on type 'PdfLoader'.
+src/original-material-ui/OriginalMaterial.tsx(75,71): error TS2339: Property 'getDocument' does not exist on type 'PdfLoader'.
+src/original-material-ui/OriginalMaterial.tsx(99,11): error TS18047: 'renderTask' is possibly 'null'.
+src/original-material-ui/OriginalMaterial.tsx(121,75): error TS2339: Property 'kind' does not exist on type 'Original'.

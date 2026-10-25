@@ -1,0 +1,25 @@
+✔ connected curator passes saved owner preferences and source evidence to the real gateway (184.202ms)
+✔ non-Google consent prevents semantic transfer; Google embeddings reserve before dispatch (296.7559ms)
+✔ mounted preferences are owner-specific; studio help checks consent, owner, source revision and scene (551.0925ms)
+✔ mounted practice derives correctness and revision, requires consent and never claims known assistance (144.1403ms)
+✔ generic progress endpoint cannot overwrite curator preferences or pattern events (91.6003ms)
+✔ mounted audio route requires consent and invokes only the injected transcription adapter (185.633ms)
+✔ unknown-assistance errors can suggest review but success never becomes verified independence (23.391ms)
+✔ real SQLite ledger persists request deduplication and isolates owners across gateway instances (313.0927ms)
+✔ durable allowance reserves before dispatch and rejects a second over-budget call (163.1914ms)
+✔ fallback requires separate explicit consent and happens only for transient provider failure (125.4307ms)
+✔ invalid citations never trigger fallback; failed request cannot silently replay (119.7224ms)
+✔ cancellation rejects abort-ignoring late model results and changed revisions do not persist (154.9698ms)
+✔ personal curator uses eligible independent history and does not turn assisted success into mastery (1.3205ms)
+✔ hybrid retrieval preserves exact owned revision anchors and rejects mismatched ownership (4.4771ms)
+✔ Vertex embedding adapter sends bounded retrieval task types and validates returned dimensions (6.2941ms)
+✔ unverified paid/provider configuration cannot enable a model (1.2388ms)
+✔ external adapter uses exact approved model and rejects truncated outputs (127.1257ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3892.0434

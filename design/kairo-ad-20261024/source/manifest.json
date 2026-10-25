@@ -1,0 +1,115 @@
+{
+ "inputs": [
+  {
+   "path": "assets/kairo-ad-stills-20261024/01-student-overwhelmed.png",
+   "sha256": "6c79d0aba2fe595095797f4820e81cce27a1e01b8e3fee3f5b84a53092789f31",
+   "bytes": 1932308,
+   "provenance": "Fictional adult student, generated still by Codex AD-STILLS-036 (see its handoff for generator, prompt and rights). Not a real person, not the user, not a testimonial.",
+   "pinned_copy": "design/kairo-ad-20261024/source/stills/01-student-overwhelmed.png"
+  },
+  {
+   "path": "assets/kairo-ad-stills-20261024/02-student-understanding.png",
+   "sha256": "506850103aa53ab309654a96ceb7e9d47a0a4c8160e05b14169f8f93eb070271",
+   "bytes": 1837818,
+   "provenance": "Same fictional student, closing still, AD-STILLS-036.",
+   "pinned_copy": "design/kairo-ad-20261024/source/stills/02-student-understanding.png"
+  },
+  {
+   "path": "assets/kairo-ad-stills-20261024/03-laptop-composite-plate.png",
+   "sha256": "fd97db377782a98fee9125b03c8a8ac149caaa23e247afa98363d2d444feab65",
+   "bytes": 1803591,
+   "provenance": "Over-the-shoulder plate with a blank laptop screen for compositing, AD-STILLS-036.",
+   "pinned_copy": "design/kairo-ad-20261024/source/stills/03-laptop-composite-plate.png"
+  },
+  {
+   "path": "studio/public/models/character/kairo-teacher.glb",
+   "sha256": "5c3aacb1cb7df2a729ab763306420255ea37404d3b8ccd2b2602ea27b19ee6af",
+   "bytes": 3424844,
+   "provenance": "Actual KAIRO teacher. Based on Rain Rig (CC) Blender Foundation | studio.blender.org, CC BY 4.0, with KAIRO modifications (CREDITS.txt)."
+  },
+  {
+   "path": "design/video-production-20261023/kairo-render.glb",
+   "sha256": "8cb4a7f65dda8013c42851488cc776d00cab2bfa2fba0a6ae66e639b3da84e5f",
+   "bytes": 27110976,
+   "provenance": "Meshopt-decoded copy of kairo-teacher.glb for Blender import (VIDEO-PRODUCTION-003); same geometry and clips."
+  },
+  {
+   "path": "studio/public/models/engineering/induction-motor.glb",
+   "sha256": "3970e7add85b75feffe5fc3e79dcd41982a49033d216bef39102f8751f583ff8",
+   "bytes": 4213408,
+   "provenance": "Project-owned original motor (design/engineering/blender/build_motor.py); no third-party geometry."
+  },
+  {
+   "path": "studio/src/engineering/motorGeometry.json",
+   "sha256": "6fbe144c740a7dff2acb16681c4a0658eec7feb8dd4cad8602a2f43903a81712",
+   "bytes": 71225,
+   "provenance": "Section outlines sliced from the same motor meshes; used for the paper diagram and the match line."
+  },
+  {
+   "path": "studio/public/models/engineering/poly_haven_studio_1k.hdr",
+   "sha256": "dfc8505761018d644997a803f332339328af2b53e82023fb3bec37cefdf43b83",
+   "bytes": 1682195,
+   "provenance": "Poly Haven studio HDRI, CC0."
+  },
+  {
+   "path": "studio/public/models/character/studio_small_09_1k.hdr",
+   "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45",
+   "bytes": 1615248,
+   "provenance": "Poly Haven studio_small_09, CC0."
+  },
+  {
+   "path": "studio/src/experience/fonts/Manrope-wght.ttf",
+   "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+   "bytes": 164700,
+   "provenance": "Manrope variable font, SIL OFL 1.1 (studio/src/experience/fonts/OFL.txt)."
+  },
+  {
+   "path": "design/brand-master-20261023/master/kairo-lockup-horizontal.svg",
+   "sha256": "bbbafa4cffa3f896d7848f08877787026ba4d71ae58ef45ffab01a08f8023f8d",
+   "bytes": 1936,
+   "provenance": "KAIRO C pathmark lockup master (BRAND-MASTER-001); rasterised, not redrawn. Not trademark-cleared."
+  },
+  {
+   "path": "design/brand-master-20261023/master/kairo-lockup-horizontal-chalk.svg",
+   "sha256": "ce55816b5ad62932ca89dacd4a94d00da16fd299e15c8b381e4e263786a1d97f",
+   "bytes": 1946,
+   "provenance": "Chalk lockup master."
+  },
+  {
+   "path": "design/brand-master-20261023/master/kairo-symbol-chalk.svg",
+   "sha256": "7683ff3b819155ea1814c6fd5094fb1e476fd4ed69275a01a9c7fcc1a924b2ad",
+   "bytes": 819,
+   "provenance": "Chalk pathmark master (laptop sticker cue)."
+  },
+  {
+   "path": "studio/src/engineering/motorContent.ts",
+   "sha256": "44251772cefe03e213d5f1a95fa050bc2773a00539bd041d553da7f40e59df31",
+   "bytes": 18536,
+   "provenance": "Real product copy: part names/roles, Operate caption, rotor-cage text."
+  },
+  {
+   "path": "studio/src/engineering/teaching.ts",
+   "sha256": "9b69d34c1071144f5add443352d77a375d571fb0fc6bcbb2160be5d430ec6181",
+   "bytes": 2576,
+   "provenance": "Real product copy: operate-mode practice prompt."
+  },
+  {
+   "path": "studio/src/learning-flow/model.ts",
+   "sha256": "a1a437199077e7ce7577937c07c3054a897ad1016dd43647fbe965b24e6a68eb",
+   "bytes": 3189,
+   "provenance": "Real product copy: My material / My lesson / Explore / My working."
+  },
+  {
+   "path": "studio/src/character/rig.ts",
+   "sha256": "01e4424690c6ab2c91dd8051db9694e3b3b773e461df1b1ba8cfadab00e13253",
+   "bytes": 5358,
+   "provenance": "App VISEMES table reused for KAIRO mouth shapes."
+  },
+  {
+   "path": "tools/character/rhubarb/rhubarb.exe",
+   "sha256": "9e289c6b5939ef6b306a61e8105ec721fd8d52b3ce950d08891ea3cc7df5718d",
+   "bytes": 2703360,
+   "provenance": "Rhubarb Lip Sync 1.14.0 (MIT), local."
+  }
+ ]
+}

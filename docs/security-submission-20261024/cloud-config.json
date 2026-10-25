@@ -1,0 +1,31 @@
+{
+  "bucketPublicAccessPrevention": "enforced",
+  "revision": "kairo-app-00006-885",
+  "allUsersInvoker": false,
+  "privateObjectsRead": false,
+  "browserObserved": false,
+  "resources": {
+    "cpu": "1",
+    "memory": "1Gi"
+  },
+  "allAuthenticatedUsersInvoker": false,
+  "envValuesExported": false,
+  "checkedAt": "2026-10-24T03:08:34.0307515Z",
+  "bucketUniformAccess": true,
+  "userManagedRuntimeKeyCount": 0,
+  "runtimeProjectRoles": [
+    "roles/aiplatform.user",
+    "roles/cloudtasks.enqueuer",
+    "roles/datastore.user",
+    "roles/firebaseauth.admin",
+    "roles/serviceusage.serviceUsageConsumer"
+  ],
+  "readOnly": true,
+  "bucketLocation": "AFRICA-SOUTH1",
+  "maxInstances": "1",
+  "bucketSoftDelete": {
+    "effectiveTime": "2026-10-23T23:06:07.578+02:00",
+    "retentionDurationSeconds": "604800"
+  },
+  "runtimeIsExpected": true
+}

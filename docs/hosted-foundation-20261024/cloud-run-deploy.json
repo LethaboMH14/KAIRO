@@ -1,0 +1,125 @@
+{
+  "@type": "type.googleapis.com/google.cloud.run.v1.Service",
+  "apiVersion": "serving.knative.dev/v1",
+  "kind": "Service",
+  "metadata": {
+    "annotations": {
+      "run.googleapis.com/build-enable-automatic-updates": "false",
+      "run.googleapis.com/build-id": "a6dca064-6b54-4b0a-a0d8-c0dc1c92b76a",
+      "run.googleapis.com/build-image-uri": "africa-south1-docker.pkg.dev/kairo-access-20261021/cloud-run-source-deploy/kairo-core",
+      "run.googleapis.com/build-name": "projects/747226582754/locations/africa-south1/builds/a6dca064-6b54-4b0a-a0d8-c0dc1c92b76a",
+      "run.googleapis.com/build-source-location": "gs://run-sources-kairo-access-20261021-africa-south1/services/kairo-core/1792794571.572957-5fd22a93276a44109c05773649526b80.zip#1792794574163639",
+      "run.googleapis.com/client-name": "gcloud",
+      "run.googleapis.com/client-version": "588.0.0",
+      "run.googleapis.com/ingress": "all",
+      "run.googleapis.com/ingress-status": "all",
+      "run.googleapis.com/maxScale": "20",
+      "run.googleapis.com/operation-id": "9f71031e-bb4a-4fa8-b0f7-330dda601400",
+      "run.googleapis.com/urls": "[\"https://kairo-core-747226582754.africa-south1.run.app\",\"https://kairo-core-rnfwukdvra-bq.a.run.app\"]",
+      "serving.knative.dev/creator": "lethabomphukuile14@gmail.com",
+      "serving.knative.dev/lastModifier": "lethabomphukuile14@gmail.com"
+    },
+    "creationTimestamp": "2026-10-23T22:21:07.320713Z",
+    "generation": 3,
+    "labels": {
+      "cloud.googleapis.com/location": "africa-south1",
+      "run.googleapis.com/satisfiesPzs": "true"
+    },
+    "name": "kairo-core",
+    "namespace": "747226582754",
+    "resourceVersion": "AAZeiYZpHbk",
+    "selfLink": "/apis/serving.knative.dev/v1/namespaces/747226582754/services/kairo-core",
+    "uid": "44239dde-c88c-4f9e-ae41-cb8201ebf5db"
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "annotations": {
+          "autoscaling.knative.dev/maxScale": "1",
+          "run.googleapis.com/client-name": "gcloud",
+          "run.googleapis.com/client-version": "588.0.0",
+          "run.googleapis.com/startup-cpu-boost": "true"
+        },
+        "labels": {
+          "client.knative.dev/nonce": "xgidrpyhoe",
+          "run.googleapis.com/startupProbeType": "Default"
+        }
+      },
+      "spec": {
+        "containerConcurrency": 8,
+        "containers": [
+          {
+            "env": [
+              {
+                "name": "KAIRO_GOOGLE_PROJECT",
+                "value": "kairo-access-20261021"
+              }
+            ],
+            "image": "africa-south1-docker.pkg.dev/kairo-access-20261021/cloud-run-source-deploy/kairo-core@sha256:8baf68850656c41896045602be122184fb886471388fb920dbbd2c489a417ae0",
+            "ports": [
+              {
+                "containerPort": 8080,
+                "name": "http1"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "512Mi"
+              }
+            },
+            "startupProbe": {
+              "failureThreshold": 1,
+              "periodSeconds": 240,
+              "tcpSocket": {
+                "port": 8080
+              },
+              "timeoutSeconds": 240
+            }
+          }
+        ],
+        "serviceAccountName": "kairo-web-runtime@kairo-access-20261021.iam.gserviceaccount.com",
+        "timeoutSeconds": 60
+      }
+    },
+    "traffic": [
+      {
+        "latestRevision": true,
+        "percent": 100
+      }
+    ]
+  },
+  "status": {
+    "address": {
+      "url": "https://kairo-core-rnfwukdvra-bq.a.run.app"
+    },
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-10-23T22:30:18.830265Z",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-10-23T22:30:11.775321Z",
+        "status": "True",
+        "type": "ConfigurationsReady"
+      },
+      {
+        "lastTransitionTime": "2026-10-23T22:30:18.796498Z",
+        "status": "True",
+        "type": "RoutesReady"
+      }
+    ],
+    "latestCreatedRevisionName": "kairo-core-00003-qkw",
+    "latestReadyRevisionName": "kairo-core-00003-qkw",
+    "observedGeneration": 3,
+    "traffic": [
+      {
+        "latestRevision": true,
+        "percent": 100,
+        "revisionName": "kairo-core-00003-qkw"
+      }
+    ],
+    "url": "https://kairo-core-rnfwukdvra-bq.a.run.app"
+  }
+}

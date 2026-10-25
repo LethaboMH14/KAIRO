@@ -1,0 +1,22 @@
+{
+  "repo": "wshobson/agents",
+  "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+  "stars": 41625,
+  "license": "MIT",
+  "skills": [
+    "startup-financial-modeling",
+    "market-sizing-analysis",
+    "startup-metrics-framework"
+  ],
+  "files": [
+    "plugins/startup-business-analyst/skills/market-sizing-analysis/SKILL.md",
+    "plugins/startup-business-analyst/skills/market-sizing-analysis/examples/saas-market-sizing.md",
+    "plugins/startup-business-analyst/skills/market-sizing-analysis/references/data-sources.md",
+    "plugins/startup-business-analyst/skills/market-sizing-analysis/references/details.md",
+    "plugins/startup-business-analyst/skills/startup-financial-modeling/SKILL.md",
+    "plugins/startup-business-analyst/skills/startup-financial-modeling/references/details.md",
+    "plugins/startup-business-analyst/skills/startup-metrics-framework/SKILL.md",
+    "plugins/startup-business-analyst/skills/startup-metrics-framework/references/universal-and-saas-metrics.md"
+  ],
+  "executed_remote_code": false
+}

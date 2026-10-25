@@ -1,0 +1,99 @@
+{
+  "checked": "2026-10-21",
+  "items": [
+    {
+      "id": "rain-v3",
+      "file": "rain-v3.zip",
+      "license": "CC-BY-4.0; retain bundled attribution",
+      "page": "https://studio.blender.org/characters/rain/v3/",
+      "sourceUrl": "https://studio.blender.org/download-source/files/ee/a7/eea73e55dba1cea31c09848df6a794b2-4.zip",
+      "path": "assets/reference/claude-kit/rain-v3.zip",
+      "bytes": 67579177,
+      "sha256": "80217f163f6392dc829233d63c2cfb5e1376775bc34101ad14f39631fea70d24",
+      "status": "downloaded",
+      "archiveFiles": 25,
+      "blendFiles": [
+        "Rain v3.3/rain_v3.2.blend"
+      ]
+    },
+    {
+      "id": "mpfb-extension",
+      "file": "mpfb-v2.0.18.zip",
+      "license": "GPL code / CC0 bundled graphical assets; third-party assets vary",
+      "page": "https://extensions.blender.org/add-ons/mpfb/",
+      "expectedSha256": "c075b3e9b94b8e5556a5f03f4653602d02ea306de08126e8f55ed6dee28a2dad",
+      "sourceUrl": "https://extensions.blender.org/download/sha256:c075b3e9b94b8e5556a5f03f4653602d02ea306de08126e8f55ed6dee28a2dad/add-on-mpfb-v2.0.18.zip",
+      "path": "assets/reference/claude-kit/mpfb-v2.0.18.zip",
+      "bytes": 45956992,
+      "sha256": "c075b3e9b94b8e5556a5f03f4653602d02ea306de08126e8f55ed6dee28a2dad",
+      "status": "downloaded",
+      "archiveFiles": 2422,
+      "blendFiles": []
+    },
+    {
+      "id": "studio_small_09",
+      "file": "studio_small_09_1k.hdr",
+      "license": "CC0",
+      "page": "https://polyhaven.com/a/studio_small_09",
+      "expectedMd5": "d5d7eb9d26d341d6aa4d11c1a54fd97c",
+      "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_09_1k.hdr",
+      "path": "assets/reference/claude-kit/studio_small_09_1k.hdr",
+      "bytes": 1615248,
+      "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45",
+      "status": "downloaded"
+    },
+    {
+      "id": "autumn_field_puresky",
+      "file": "autumn_field_puresky_1k.hdr",
+      "license": "CC0",
+      "page": "https://polyhaven.com/a/autumn_field_puresky",
+      "expectedMd5": "f9a6bd6d95a55e2d677b8a84b7f53673",
+      "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/autumn_field_puresky_1k.hdr",
+      "path": "assets/reference/claude-kit/autumn_field_puresky_1k.hdr",
+      "bytes": 1092974,
+      "sha256": "e60470d3a0f219585df1d74c393b472361c5400a7ff8d071ebe6eca29b7fe2b0",
+      "status": "downloaded"
+    },
+    {
+      "id": "human-base-meshes",
+      "status": "downloaded",
+      "file": "human-base-meshes-v1.4.1.zip",
+      "path": "assets/reference/claude-kit/human-base-meshes-v1.4.1.zip",
+      "sourceUrl": "https://mirror.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip",
+      "bytes": 50643039,
+      "sha256": "811f43accbb31a88266d932f8f5563b2d13586fca0ba2693aad1f5fe582b3515",
+      "blendFiles": [
+        "human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend"
+      ],
+      "page": "https://www.blender.org/download/demo-files/",
+      "license": "CC0"
+    },
+    {
+      "id": "ellie-pose-library",
+      "status": "downloaded",
+      "file": "ellie-pose-library-v2.0.0.zip",
+      "path": "assets/reference/claude-kit/ellie-pose-library-v2.0.0.zip",
+      "sourceUrl": "https://mirror.blender.org/demo/asset-bundles/ellie-pose-library/ellie-pose-library-v2.0.0.zip",
+      "bytes": 24807731,
+      "sha256": "547a997488b91683df68eb2925423fcfbbb1b6e3e7bedd0d4cd4f67d23090231",
+      "blendFiles": [
+        "asset-demo-bundle-4.0-ellie-animation/ellie_animation/ellie_animation.blend"
+      ],
+      "page": "https://www.blender.org/download/demo-files/",
+      "license": "CC-BY; preserve bundled terms"
+    },
+    {
+      "id": "quaternius-base-standard",
+      "file": "quaternius-base-standard.zip",
+      "path": "assets/reference/claude-kit/quaternius-base-standard.zip",
+      "page": "https://quaternius.itch.io/universal-base-characters",
+      "license": "CC0 per official Quaternius pack page",
+      "status": "downloaded",
+      "bytes": 128968391,
+      "sha256": "fdbf1804c90dfc1ea03e992bff7da2dfd1a79318e13270a660180f9308455f40",
+      "archiveFiles": 128,
+      "limit": "Standard tier only; facial controls not yet inspected"
+    }
+  ],
+  "note": "Downloaded is not converted, installed or browser-accepted. Rain blend scripts were not executed."
+}

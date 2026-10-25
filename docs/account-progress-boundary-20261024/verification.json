@@ -1,0 +1,40 @@
+{
+  "task": "ACCOUNT-PROGRESS-BOUNDARY-20261024-001",
+  "status": "tests rerun after root provider fix; all focused tests pass",
+  "registeredSettings": { "client": "Codex", "model": "gpt-6-luna", "effort": "light" },
+  "command": "node --test tests/account-progress-boundary.test.mjs (cwd studio)",
+  "initialResultBeforeRootFix": {
+    "tests": 10,
+    "passed": 8,
+    "failed": 2,
+    "exitCode": 1,
+    "failures": [
+      {
+        "test": "cleanup aborts a late remote hydration without restoring into storage",
+        "observed": "late successful progress response restored {note:'late cloud data'} into account storage after unmount"
+      },
+      {
+        "test": "cleanup aborts a pending save and a late save response cannot set the account sync marker",
+        "observed": "late successful save response wrote sync marker v-late-save after unmount"
+      }
+    ]
+  },
+  "rerunAfterRootFix": {
+    "command": "node --test tests/account-progress-boundary.test.mjs (cwd studio)",
+    "tests": 10,
+    "passed": 10,
+    "failed": 0,
+    "exitCode": 0,
+    "observedFix": "Actual AccountBoundary source now checks alive and abort.signal.aborted after save fetch/JSON, progress fetch, and progress JSON before applying results. No source edit was made in this lane."
+  },
+  "rootReport": {
+    "recipientAgent": "codex-account-wave-20261024-c",
+    "busMessageId": 120,
+    "status": "exact deferred-fetch reproductions sent; root fixed provider and rerun passed"
+  },
+  "testHarnessNote": "An initial empty SSR markup assertion was due to the manual hook harness returning no tree getter. The tree getter was added; SSR assertions now render the actual returned React tree.",
+  "limits": [
+    "Actual AccountBoundary and storage modules via Vite SSR and synthetic deterministic doubles only.",
+    "No browser, real network/cloud, account or learner data, runtime source edit, or screen-reader/device acceptance."
+  ]
+}

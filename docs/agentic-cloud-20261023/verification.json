@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-10-23T23:11:39.9038393+02:00",
+  "task": "AI-CLOUD-LAB-008",
+  "providerTests": {
+    "failed": 0,
+    "passed": 10,
+    "log": "provider-tests.txt"
+  },
+  "liveInferenceCalls": 0,
+  "keysPresentAtCheck": {
+    "openrouter": false,
+    "groq": false
+  },
+  "catalog": {
+    "freeVariants": 17,
+    "inferenceCalls": 0,
+    "evidence": "openrouter-free-catalog.json"
+  },
+  "cloud": {
+    "databaseCreated": false,
+    "userManagedKeys": 0,
+    "project": "kairo-access-20261021",
+    "runtimeIdentity": "kairo-web-runtime",
+    "publicAccessPrevention": "enforced",
+    "bucket": "gs://kairo-access-20261021-materials",
+    "softDeleteDays": 7,
+    "appDeployed": false,
+    "uniformAccess": true,
+    "location": "africa-south1",
+    "publicBindings": 0,
+    "privateDocumentsUploaded": 0
+  },
+  "progressSubmitted": false,
+  "manualSubmissionSelected": true,
+  "browserObserved": false,
+  "scheduleChanged": false,
+  "hashes": [
+    {
+      "path": "tools/provider-lab/lab.mjs",
+      "sha256": "9f9e5362aa40ffbd645182b2bc9b12c76f1cb09282ec9f3078f90a916ed04c3e"
+    },
+    {
+      "path": "tools/provider-lab/lab.test.mjs",
+      "sha256": "037cbdbc24b44f044b38cce55d2c13743cece83ffc5e1a8220f00bdcdab8f9c0"
+    },
+    {
+      "path": "tools/provider-lab/.env.example",
+      "sha256": "c78f44d67649a4442440e6a54d028843c73ba273d8b3328f58a2408734941391"
+    },
+    {
+      "path": "docs/agentic-cloud-20261023/INTELLIGENCE-ARCHITECTURE.md",
+      "sha256": "8124a80ff51b24ad9daf0a2118c8583058d910ad527a91c3a9ecebe761b9ea3f"
+    },
+    {
+      "path": "docs/agentic-cloud-20261023/NEXT-WORK.md",
+      "sha256": "89a1b9475999f975507b47842cfe9cb87029d4dcdaf8341c6a6357dbdc4891eb"
+    },
+    {
+      "path": "docs/agentic-cloud-20261023/CLOUD-FOUNDATION.md",
+      "sha256": "680c7d9390cbeae4a26aa05bf9b5c8274d7cc163dd24cfd963b51f0ccb884d6a"
+    },
+    {
+      "path": "docs/agentic-cloud-20261023/PROGRESS-UPDATE.md",
+      "sha256": "84574699c2ab08be8a9ef07d61c7a7105d72800d66f21833899c1fb24a0b4a04"
+    }
+  ]
+}

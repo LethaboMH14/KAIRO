@@ -1,0 +1,26 @@
+{
+  "package": "EVIDENCE-CURATION-20261024-001",
+  "status": "isolated component; awaiting root integration",
+  "registeredSettings": { "client": "Codex", "model": "gpt-6-luna", "effort": "light" },
+  "scope": [
+    "studio/src/evidence-curation-ui/",
+    "studio/tests/evidence-curation-ui.test.mjs",
+    "docs/evidence-curation-20261024/",
+    "coordination/handoffs/2026-10-24-evidence-curation.md"
+  ],
+  "checks": [
+    {
+      "command": "node --test tests/evidence-curation-ui.test.mjs (cwd studio)",
+      "result": "passed: 8 tests, 0 failures; actual component loaded through Vite SSR and element callbacks exercised"
+    },
+    {
+      "command": "node_modules/.bin/tsc --noEmit -p tsconfig.json (cwd studio)",
+      "result": "blocked by existing type environment: TS2688 cannot find type definition files for jsonwebtoken, ms and node; no package installation or config bypass attempted"
+    }
+  ],
+  "limits": [
+    "Static Node SSR and synthetic element callback simulation only.",
+    "No browser observation, device or screen-reader acceptance, learner validation, real learner records or employer integration.",
+    "The parent supplies the truthful current storage audience label and owns actual download/export behavior."
+  ]
+}

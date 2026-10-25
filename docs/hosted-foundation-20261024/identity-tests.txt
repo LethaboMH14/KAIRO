@@ -1,0 +1,19 @@
+✔ valid verified claims attach only frozen token UID; body and query identity are ignored (90.7018ms)
+✔ cross-project, expired, missing and conflicting identity claims all fail closed (11.6603ms)
+✔ malformed authorization, verifier failure and invalid configuration never expose details (9.2603ms)
+✔ claim shape checks reject bad issuer, unsafe timestamps and control characters (11.2661ms)
+✔ Firestore records derive paths from owner, isolate matching record IDs and preserve conditional writes (132.8597ms)
+✔ Firestore blocks invalid addresses, missing versions, oversized records and tampered owner (10.7226ms)
+✔ Firestore cancellation during credential refresh prevents dispatch and upstream secrets are hidden (6.797ms)
+✔ Firestore maps actual REST failed-precondition status to a revision conflict (5.3257ms)
+✔ Firebase verifier rejects malformed tokens before network and sanitizes certificate failure (6.7324ms)
+✔ actual hosted HTTP routes reject unauthenticated access and keep identical record IDs separate by verified identity (383.6613ms)
+✔ Firebase verifier validates real RSA signatures, expiry, audience and auth time with cached public certs (583.8179ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2629.407

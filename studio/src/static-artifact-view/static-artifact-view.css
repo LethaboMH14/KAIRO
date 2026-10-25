@@ -1,0 +1,157 @@
+.sav-panel {
+  --sav-cream: #f5f0df;
+  --sav-olive: #59613c;
+  --sav-ink: #25271f;
+  --sav-line: #c9c3a8;
+  box-sizing: border-box;
+  display: grid;
+  gap: 0.8rem;
+  max-width: 100%;
+  padding: clamp(1rem, 3vw, 1.4rem);
+  overflow: hidden;
+  color: var(--sav-ink);
+  background: var(--sav-cream);
+  border: 1px solid var(--sav-line);
+  border-radius: 1rem;
+}
+
+.sav-panel *,
+.sav-panel *::before,
+.sav-panel *::after {
+  box-sizing: border-box;
+}
+
+.sav-kicker {
+  margin: 0;
+  color: var(--sav-olive);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sav-panel h2 {
+  margin: 0;
+  color: var(--sav-ink);
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.sav-text {
+  max-width: 72ch;
+  color: var(--sav-ink);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  user-select: text;
+}
+
+.sav-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  border: 1px solid var(--sav-line);
+  border-radius: 0.65rem;
+  background: #fffdf6;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sav-table-scroll:focus-visible {
+  outline: 3px solid var(--sav-olive);
+  outline-offset: 3px;
+}
+
+.sav-table {
+  width: 100%;
+  min-width: 30rem;
+  border-collapse: collapse;
+  color: var(--sav-ink);
+  text-align: left;
+}
+
+.sav-table caption {
+  padding: 0.7rem 0.85rem;
+  color: var(--sav-olive);
+  font-weight: 700;
+  text-align: left;
+}
+
+.sav-table th,
+.sav-table td {
+  min-width: 7rem;
+  padding: 0.65rem 0.85rem;
+  border-top: 1px solid var(--sav-line);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.sav-table th {
+  color: var(--sav-olive);
+  background: #eeead8;
+  font-weight: 750;
+}
+
+.sav-provenance {
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--sav-line);
+}
+
+.sav-provenance h3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.7rem;
+  margin: 0 0 0.55rem;
+  color: var(--sav-olive);
+  font-size: 0.9rem;
+}
+
+.sav-provenance h3 span {
+  color: #665d3c;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.sav-provenance dl {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.sav-provenance-row {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.35fr) minmax(0, 1fr);
+  gap: 0.3rem 0.8rem;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.sav-provenance-row dt {
+  color: var(--sav-olive);
+  font-weight: 700;
+}
+
+.sav-provenance-row dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  user-select: text;
+}
+
+.sav-unavailable {
+  margin: 0;
+  color: #603a2b;
+  line-height: 1.5;
+}
+
+@media (max-width: 30rem) {
+  .sav-panel {
+    border-radius: 0.75rem;
+  }
+
+  .sav-provenance-row {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}

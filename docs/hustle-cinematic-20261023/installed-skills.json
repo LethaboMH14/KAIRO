@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/remotion-dev/skills",
+  "commit": "6c67adcd9cdbe6eb84d76342da89b225f9161cb2",
+  "skills": [
+    {
+      "name": "remotion-markup",
+      "path": "C:\\Users\\USER\\.codex\\skills\\remotion-markup\\SKILL.md",
+      "sha256": "4b93ba32451e84fb0b071f7ca31ae6abc792fe07bf83a7575ae5663afa88a4b5"
+    },
+    {
+      "name": "remotion-captions",
+      "path": "C:\\Users\\USER\\.codex\\skills\\remotion-captions\\SKILL.md",
+      "sha256": "8d08dc238f3df6c6a4ed1aaa9c30bf5e4a5fde3fa4d248db29992b94f10d45ab"
+    },
+    {
+      "name": "remotion-multimedia",
+      "path": "C:\\Users\\USER\\.codex\\skills\\remotion-multimedia\\SKILL.md",
+      "sha256": "259db7738731b3cce6183994688f2472088ae3ac46b5870d1e039a8900bff28c"
+    }
+  ],
+  "app_runtime_dependencies_added": false
+}

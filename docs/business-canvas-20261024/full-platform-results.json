@@ -1,0 +1,172 @@
+{
+  "basis": "Illustrative full-vision service envelope; not shipped entitlements, quote, demand forecast or all-in final budget.",
+  "rates": {
+    "usd_zar_budget": 20,
+    "vendor_tax_reserve": 0.15,
+    "llm_bundle_usd": 0.00932,
+    "layout_usd_page": 0.01,
+    "stt_usd_minute": 0.016,
+    "translation_usd_million_chars": 20,
+    "tts_usd_million_chars": 30,
+    "card_percent": 0.032,
+    "card_fixed_zar": 2,
+    "vat": 0.15
+  },
+  "student_active_parts": {
+    "lesson_and_help": 0.9431839999999999,
+    "complex_pdf_layout": 4.6,
+    "listening": 3.6799999999999997,
+    "text_translation": 2.3,
+    "premium_narration": 1.8975,
+    "embedding_budget": 0.22999999999999998,
+    "retrieval_query_budget": 0.69,
+    "vision_reasoning_budget": 1.15,
+    "infrastructure_budget": 2.3,
+    "support": 4.0
+  },
+  "institution_active_parts": {
+    "lesson_and_help": 0.9431839999999999,
+    "complex_pdf_layout": 4.6,
+    "listening": 3.6799999999999997,
+    "text_translation": 2.3,
+    "premium_narration": 1.8975,
+    "embedding_budget": 0.22999999999999998,
+    "retrieval_query_budget": 0.69,
+    "vision_reasoning_budget": 1.15,
+    "infrastructure_budget": 2.3,
+    "support": 2.0
+  },
+  "employee_active_parts": {
+    "lesson_and_help": 1.8863679999999998,
+    "complex_pdf_layout": 4.6,
+    "listening": 11.04,
+    "text_translation": 9.2,
+    "premium_narration": 6.072,
+    "embedding_budget": 0.22999999999999998,
+    "retrieval_query_budget": 0.69,
+    "vision_reasoning_budget": 1.15,
+    "infrastructure_budget": 2.3,
+    "support": 10.0
+  },
+  "consumer_full_usage": {
+    "gross_price": 49,
+    "net_revenue": 41.3304347826087,
+    "service_cost": 21.790684000000002,
+    "fees": 4.1722,
+    "contribution": 15.367550782608696
+  },
+  "institution_seat_contribution": 47.1255896,
+  "employee_seat_contribution": 111.2653056,
+  "institution_core_annual_250_seats_ex_vat": 105000,
+  "institution_core_setup": 6000,
+  "institution_connected_annual_250_seats_ex_vat": 177000,
+  "institution_connected_setup": 15000,
+  "company_annual_50_seats_ex_vat": 89400,
+  "company_setup": 15000,
+  "monthly_team_allocations": {
+    "engineering_product": 35000,
+    "ai_backend": 35000,
+    "frontend_3d": 30000,
+    "educational_review": 15000,
+    "language_sasl_review": 15000,
+    "qa_security_operations": 10000
+  },
+  "employment_load_reserve": 0.2,
+  "monthly_overhead": {
+    "baseline_cloud_staging_monitoring": 6000,
+    "development_tools": 3000,
+    "legal_privacy_insurance_reserve": 6000,
+    "sales_marketing": 10000,
+    "devices_connectivity": 2000,
+    "data_rights_source_curation": 3000
+  },
+  "fixed_monthly": 198000.0,
+  "development_hours": {
+    "profile_evidence_adaptation": 160,
+    "role_skill_alignment": 80,
+    "opportunity_freshness": 100,
+    "multimodal_review_pipeline": 120,
+    "listening_language_flow": 80,
+    "bounded_signed_learning": 100,
+    "tenant_payment_security": 120,
+    "acceptance_release": 80
+  },
+  "development_loaded_hour": 300,
+  "development_risk": 0.25,
+  "development_cost_envelope": 315000.0,
+  "custom_training_project_costs": {
+    "engineering_60h_at350": 21000,
+    "instructional_design_24h_at250": 6000,
+    "domain_review_20h_at450": 9000,
+    "qa_accessibility_16h_at250": 4000
+  },
+  "custom_training_direct": 40000,
+  "custom_training_contingency": 0.25,
+  "custom_training_target_margin": 0.3,
+  "custom_training_quote_ex_vat": 71428.57142857143,
+  "break_even_lower_bounds": {
+    "consumer_full_usage": 12885,
+    "institution_licensed": 4202,
+    "employee_licensed": 1780
+  },
+  "mixed_run_rates": [
+    {
+      "name": "Small paid footprint",
+      "consumer_payers": 200,
+      "institution_licensed": 1000,
+      "employee_licensed": 100,
+      "free_active": 1000,
+      "recurring_revenue_ex_vat": 82166.08695652174,
+      "expense_incl_fixed": 220090.45664,
+      "operating_before_tax": -137924.36968347826
+    },
+    {
+      "name": "Illustrative larger footprint",
+      "consumer_payers": 500,
+      "institution_licensed": 5000,
+      "employee_licensed": 500,
+      "free_active": 2000,
+      "recurring_revenue_ex_vat": 390165.2173913043,
+      "expense_incl_fixed": 291720.8412,
+      "operating_before_tax": 98444.3761913043
+    }
+  ],
+  "stress": {
+    "Heavy 200-page month": {
+      "gross_price": 49,
+      "net_revenue": 41.3304347826087,
+      "service_cost": 63.19068399999999,
+      "fees": 4.1722,
+      "contribution": -26.032449217391292
+    },
+    "Sixty minutes listening": {
+      "gross_price": 49,
+      "net_revenue": 41.3304347826087,
+      "service_cost": 40.19068399999999,
+      "fees": 4.1722,
+      "contribution": -3.0324492173912923
+    },
+    "Ten language fanout": {
+      "gross_price": 49,
+      "net_revenue": 41.3304347826087,
+      "service_cost": 42.490683999999995,
+      "fees": 4.1722,
+      "contribution": -5.3324492173912965
+    },
+    "Premium voice 80000 characters": {
+      "gross_price": 49,
+      "net_revenue": 41.3304347826087,
+      "service_cost": 80.613184,
+      "fees": 4.1722,
+      "contribution": -43.4549492173913
+    },
+    "FX26 and duplicate calls": {
+      "gross_price": 49,
+      "net_revenue": 41.3304347826087,
+      "service_cost": 30.149344,
+      "fees": 4.1722,
+      "contribution": 7.008890782608699
+    }
+  },
+  "checks": "PASS: service sum, annual fees, team budget, hours, negative heavy-use margin, custom quote margin."
+}

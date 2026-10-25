@@ -1,0 +1,49 @@
+✔ account learning state stays isolated and old device work is never silently imported (11.4256ms)
+✔ restoring a cloud snapshot changes only the selected account namespace and validates before writing (6.2747ms)
+✔ malformed negative XLSX string index cannot borrow unrelated source text (1868.1784ms)
+✔ whole text coverage and truncation are explicit (1811.6505ms)
+✔ native office extraction retains document locators and order (8762.7831ms)
+✔ PDF pages are covered beyond page four and blank scans are skipped (3580.5497ms)
+✔ PPTX speaker notes retain order and expanded package limit rejects safely (3048.1177ms)
+✔ per-block truncation and malformed packages remain explicit (2139.4563ms)
+✔ sparse XLSX coordinates do not expand row gaps (4741.9855ms)
+✔ run enforces max units and output cap while summarizing unknown tail (4556.086ms)
+✔ XLSX worksheet names follow workbook relationships after tab reorder (7996.7268ms)
+✖ private workspace HTTP routes isolate learners, preserve review and lesson data across router recreation, and reject stale revisions and drafts (425.2357ms)
+✖ private upload moves queued to ready, and both pre-extraction and in-flight cancellation prevent source publication (41.2773ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 11
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 40071.1198
+
+✖ failing tests:
+
+test at tests\private-learner-integration.test.mjs:87:1
+✖ private workspace HTTP routes isolate learners, preserve review and lesson data across router recreation, and reject stale revisions and drafts (425.2357ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50662
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1706:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50662
+    }
+  }
+
+test at tests\private-learner-integration.test.mjs:142:1
+✖ private upload moves queued to ready, and both pre-extraction and in-flight cancellation prevent source publication (41.2773ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:50666
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1706:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 50666
+    }
+  }

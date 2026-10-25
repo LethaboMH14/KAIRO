@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-23",
+  "owner": "codex-engineering-pathway-20261023-g",
+  "model": "gpt-6",
+  "effort": "unknown",
+  "resumeIndependentChecks": {"passed":19,"failed":0},
+  "focusedIntegrationBeforeFinalRefinement": {"passed":27,"failed":0},
+  "finalEngineeringAndResumeChecks": {"passed":10,"failed":0,"log":"focused-tests.txt"},
+  "fullSuite": {"passed":353,"failed":1,"total":354,"exitCode":1,"log":"tests.txt","failure":"Active Claude pump-lab UI wording assertion; bus message 60; not edited by root"},
+  "productionBuild": {"command":"npm run build","exitCode":0,"typescriptPassed":true,"viteModules":2254,"engineeringChunk":"EngineeringStudio-BjctvxKy.js","warning":"react-three-fiber chunk exceeds 500 kB"},
+  "finalTypeScript": {"command":"node_modules/.bin/tsc.cmd --noEmit","exitCode":0,"log":"final-typescript.txt","diagnostics":0},
+  "builtArtifactChecks": {"engineeringTeacher":true,"engineeringReturnLink":true,"sourceToEngineeringLink":true},
+  "cloudRunInventory": "cloud-inventory.json",
+  "newChatsDispatched": false,
+  "browserAcceptance": false,
+  "realAudioAcceptance": false,
+  "newCloudDeployment": false,
+  "curriculumFullyIngested": false,
+  "publicPrivateUploadReady": false,
+  "scheduleRecreated": false
+}

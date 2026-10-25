@@ -1,0 +1,1 @@
+{"error":"Provider did not complete a usable structured response.","diagnostics":{"provider":"openrouter","requestedModel":"dots-studio/dots-3-note-preview:free","returnedModel":"dots-studio/dots-3-note-preview:free","elapsedMs":15539,"finishReason":"length","contentType":"object","usage":{"promptTokens":193,"completionTokens":1200,"reasoningTokens":1379}}}

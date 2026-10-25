@@ -1,0 +1,9 @@
+{
+  "publicBindings": 0,
+  "roles": [
+    "roles/storage.legacyBucketOwner",
+    "roles/storage.legacyBucketReader",
+    "roles/storage.legacyObjectOwner",
+    "roles/storage.legacyObjectReader"
+  ]
+}

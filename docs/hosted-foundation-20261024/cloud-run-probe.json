@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-23T22:34:20.577Z",
+  "url": "https://kairo-core-rnfwukdvra-bq.a.run.app",
+  "anonymousStatus": 403,
+  "operatorHealthStatus": 200,
+  "operatorHealth": {
+    "ok": true,
+    "scope": "authenticated-progress-foundation",
+    "persistenceVerified": true
+  },
+  "invalidFirebaseTokenStatus": 401,
+  "privateLearnerDocuments": 0,
+  "scope": "Private foundation API, not hosted learner UI"
+}

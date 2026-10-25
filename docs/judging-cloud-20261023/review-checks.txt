@@ -1,0 +1,62 @@
+✔ key is namespaced and accepts only 24 lowercase hexadecimal lesson IDs (4.9184ms)
+✔ missing record yields a fresh readable default without writing (4.5007ms)
+✔ decode restores exact cursor and reading preference as a fresh state (0.9005ms)
+✔ changed source or revision is stale and leaves saved data intact (1.9068ms)
+✔ malformed, unsupported, wrong-lesson, oversized and non-envelope records are protected (2.1688ms)
+✔ invalid cursor and reading values are rejected without repairing the record (0.9174ms)
+✔ caller lesson context is validated before storage access (0.8959ms)
+✔ Unicode revisions round trip at the limit and over-limit input is invalid (3.2797ms)
+✔ storage access failures are plain and never mutate prior saved data (1.6728ms)
+✔ refuses denied permission and corrupt existing record without overwriting (1.437ms)
+✔ semantic re-read detects another tab cursor change before saving (0.9902ms)
+✔ round trip saves only the exact envelope with no source or learner content (0.9367ms)
+✔ invalid new cursor and read failures return false without attempting a write (0.8463ms)
+✔ board working lines are the authored formulas and introduce numbers only when written (5.4807ms)
+✔ board anchors land on the board face, inside its outline, facing the class (1.507ms)
+✔ writing waits for the fingertip, falls back after a timeout, then presents and returns control (1.22ms)
+✔ lesson events direct Rain without sign-language claims or lost context (1.2836ms)
+✔ quality tiers start from device hints and only step down on sustained slow frames (5.0427ms)
+✔ app mark data is the exported master and switches to micro art below 32 px (81.512ms)
+✔ Rain shirt badge patch is pinned to the shipped teacher GLB and is well formed (21.5172ms)
+✔ record on the board matches the lesson source values (0.4155ms)
+✔ Rain badge mesh is the master outline laid opaquely on the chest patch in true proportion (115.081ms)
+✔ browser replacement ignores late A start/end/error and stop prevents restart (2292.2369ms)
+✔ browser pause/resume dispatches synthesis controls; stop clears paused state; unavailable voice does not speak (1.5507ms)
+✔ cloud consent and language mismatch make no fetch or audio construction (2.5372ms)
+✔ stop during delayed AudioContext resume prevents request and playback (1.3475ms)
+✔ abort during pending fetch blocks even an abort-ignoring late response from constructing audio (5.0138ms)
+✔ stop during response.blob aborts the request and ignores an abort-ignoring late blob (2.2418ms)
+✔ out-of-order cloud replacement permits only B to reach audio playback (3.519ms)
+✔ active cloud stop resets signal and disposes audio, animation, URL and graph (3.562ms)
+✔ cloud pause/resume uses the active audio element and does not fetch again (1.8517ms)
+✖ failed cloud resume reports retry guidance rather than starting another request (4.563ms)
+✔ changing teacher settings cancels active cloud audio and disposes its resources (2.1694ms)
+✔ pagehide and provider cleanup cancel pending work and cleanup closes AudioContext (1.5555ms)
+✔ actual speechChunks boundaries are used and stop between chunks cannot request the next chunk (8.7588ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 34
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3863.0542
+
+✖ failing tests:
+
+test at tests\narration-cancellation.test.mjs:130:1
+✖ failed cloud resume reports retry guidance rather than starting another request (4.563ms)
+  AssertionError [ERR_ASSERTION]: a rejected resume must not leave provider state claiming narration is active
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/USER/Desktop/fnb%20app%20of%20year%20hackathon/studio/tests/narration-cancellation.test.mjs:139:12)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

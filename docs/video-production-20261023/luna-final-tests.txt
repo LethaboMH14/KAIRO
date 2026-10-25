@@ -1,0 +1,27 @@
+✔ builds source-linked sequence and labels quiz/example limits without inventing content (18.3568ms)
+✔ changed or unavailable source context blocks all start steps (1.9506ms)
+✔ citation IDs must resolve and supportQuote must exactly anchor cited evidence (7.1214ms)
+✔ vague objective and missing/long content yield actionable warnings (1.3318ms)
+✔ invalid choices are warned and omitted; bad source anchors fail closed (2.13ms)
+✔ adapter maps the actual workspace Lesson id, accepts lessonId-only input and preserves the original (1.0486ms)
+✔ adapter rejects conflicting, missing, empty, null and non-text identities (1.1591ms)
+✔ unsupported quiz rows do not inflate the runnable check count (1.0386ms)
+✔ missing anchors stay visible, estimates exclude practice, and frozen input is not mutated (1.7126ms)
+✔ load actual card through installed Vite SSR (1546.6531ms)
+✔ assisted and unassisted correct attempts are distinct and truthful (103.129ms)
+✔ needs-review, unscored reflection and unknown assistance remain explicit (15.0722ms)
+✔ invalid timestamps and untrusted long text are safely presented as text (13.6648ms)
+✔ progress appears only for finite valid activity counts, never clamped (33.6613ms)
+✔ missing callbacks render no dead controls; provided controls invoke callbacks once (12.5271ms)
+✔ busy disables actions and guards callbacks when handlers are directly invoked (4.5145ms)
+✔ no scores, levels, certifications, or repeated fixed IDs across instances (36.0101ms)
+✔ native article semantics and callbacks provide labelled controls (16.5195ms)
+✔ close SSR server (16.7206ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3994.3923

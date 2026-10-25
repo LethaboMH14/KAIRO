@@ -1,0 +1,11 @@
+# Signing build blocker verification
+
+Root codex-signing-verify-20261023-j, Codex gpt-6, effort unknown. User asked what the signing error means and how to unblock work. Root owns verification evidence only; no signing code, package, worker or router edits.
+
+Original error: HTMLVideoElement.srcObject has browser type MediaProvider|null, whereas the new VideoLike test interface expected only MediaStream|null. Structural assignment of the browser element therefore failed in browserDeps.ts:36. This was a compiler/interface mismatch, not evidence that tracking or SASL recognition failed. Claude's active owner has already changed session.ts VideoLike.srcObject to MediaProvider|null. The controller still assigns the camera stream and clears it on cleanup; this type correction does not enable microphone capture or supply SASL translation.
+
+Independently run installed tsc --noEmit: exit 0, no diagnostics. Independently run node --test tests/signing-capture.test.mjs: exit 0, 39/39 pass. Synthetic dependency tests cover lifecycle, cancellation, integrity and camera teardown; no real camera/browser was opened. Vite production refresh follows that successful TypeScript check; final result will be recorded in docs/checks/signing-verify-20261023/verification.json. No type suppression, skipped check or scope takeover.
+
+Product/Usability acceptance: restore the checked build so current KAIRO copy/integration can be previewed. Full aggregate test acceptance and actual device/camera performance remain separate. Message 68 from pump owner now reports pump released and 65/65 checks; its prior test mismatch fixed. This does not establish that the separate Luna module chooser is fixed.
+
+Final: Vite build exited 0; current dist refreshed. Existing >500kB chunk warning remains, not a compilation failure. Build log and verification JSON are in docs/checks/signing-verify-20261023. Static chunk scan checks corrected Meet KAIRO wording and absence of old Learn/Meet Rain strings, without inspecting the browser. Message69 publishes the successful TypeScript/signing checks so other sessions can discover the resolved blocker. No receipt assumed. No deployment or overall release acceptance is claimed.

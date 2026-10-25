@@ -1,0 +1,32 @@
+flowchart TD
+  Welcome[Welcome / sample lesson] --> Account[Account or continue sample]
+  Account --> Setup[Goal / topic / language / comfort / teacher]
+  Setup --> Home[Home]
+  Home --> Material[Choose material]
+  Material --> Review[Review text against original page]
+  Review --> Revision[Save reviewed revision]
+  Revision --> Plan[Choose lesson goal and form]
+  Plan --> Teach[Learn with Rain or reading view]
+  Teach --> Ask[Tap anchor / type / optional push-to-talk]
+  Ask --> Cite[Source-backed answer or smaller hint]
+  Cite --> Teach
+  Teach --> Stop[I'm stuck: cancel audio / mouth / queued gestures]
+  Stop --> Cite
+  Teach --> Practise[Try a task and explain]
+  Practise --> Feedback[Rubric feedback and assistance labels]
+  Feedback --> Evidence[Keep work with source and revision]
+  Evidence --> Direction[Role requirements and explained evidence gaps]
+  Direction --> Project[Specific project / learning path]
+  Project --> Practise
+  Direction --> CV[Truthful CV and portfolio]
+  CV --> Opportunity[Review original opportunity and freshness]
+  Opportunity --> Draft[Prepare draft / review recipient and contents]
+  Draft --> Consent{Exact external action approved?}
+  Consent -->|No| Draft
+  Consent -->|Yes, future live feature| Submit[Bounded submission and verified result]
+  Home --> Settings[Teacher / access / data / memory / privacy]
+  Settings --> Offline[Choose and verify reading downloads]
+  Teach -->|Connection unavailable| Offline
+  Offline --> Reading[Saved reading and notes]
+  Reading -->|Reconnect| Reconcile[Reconcile versions / ask before replacement]
+  Reconcile --> Home

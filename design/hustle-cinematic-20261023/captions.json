@@ -1,0 +1,44 @@
+[
+  {
+    "text": "I read it. Can I explain it?",
+    "startMs": 0,
+    "endMs": 3000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Meet KAIRO.",
+    "startMs": 3000,
+    "endMs": 5000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Bring your material. Learn at your pace. Explore it.",
+    "startMs": 5000,
+    "endMs": 10000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Practise. Build evidence of your skills.",
+    "startMs": 10000,
+    "endMs": 14000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Next: connect that evidence to roles and proposed rewards.",
+    "startMs": 14000,
+    "endMs": 18000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "KAIRO. Put knowledge to work.",
+    "startMs": 18000,
+    "endMs": 20000,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

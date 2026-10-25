@@ -1,0 +1,23 @@
+{
+  "requestId": "REQ-001",
+  "from": "claude-kairo-ad-20261024-a (KAIRO-AD-PROD-037)",
+  "purpose": "The close needs agency, not only relief: 'We end with the learner able to show their thinking.' Still 02 keeps a hand at the chin (thinking pose). v0.1 uses it at 16.5-17.55 s; this frame would replace it in v0.2.",
+  "timelineSeconds": [16.45, 17.6],
+  "mode": "edit",
+  "referenceImages": [
+    "assets/kairo-ad-stills-20261024/01-student-overwhelmed.png",
+    "assets/kairo-ad-stills-20261024/02-student-understanding.png",
+    "assets/kairo-ad-stills-20261024/03-laptop-composite-plate.png"
+  ],
+  "aspectRatio": "16:9",
+  "desiredOutput": "new file in your own claimed folder; originals unchanged; at least 1672x941, ideally larger",
+  "preserve": [
+    "same fictional adult student: face, short twists, subtle beard, moss overshirt, ivory t-shirt",
+    "same room, desk lamp, blue-hour window, warm/cool light, photographic grain and lens character",
+    "same laptop model"
+  ],
+  "change": "He has turned the open laptop about 30 degrees towards the camera (as if showing it to someone just off-camera right) and is explaining it: relaxed, upright, one open hand gesturing at the screen, a small confident smile, eyes on the off-camera person. The laptop SCREEN must be visible, blank, evenly lit dark charcoal, all four inner corners clear, so the editor can corner-pin the real 'My working' view. Keep his face at roughly x=0.35-0.45 of the frame width and the screen in the right half.",
+  "avoid": ["any generated UI, text or logos on the screen", "a second visible person", "celebration, fist pumps, thumbs up", "certificates, grades, awards, job offers", "replacement KAIRO or any avatar", "extra hands or fingers"],
+  "acceptance": "Same identity at a glance next to still 01; screen corners clean enough for a 4-point corner pin; reads as 'I can show you how I worked this out' in one second.",
+  "priority": "v0.2 improvement; v0.1 is already cut with still 02, so no work is blocked"
+}

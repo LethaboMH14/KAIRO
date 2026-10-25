@@ -1,0 +1,30 @@
+✔ connected curator passes saved owner preferences and source evidence to the real gateway (186.397ms)
+✔ non-Google consent prevents semantic transfer; Google embeddings reserve before dispatch (292.6335ms)
+✔ mounted preferences are owner-specific; studio help checks consent, owner, source revision and scene (456.7775ms)
+✔ mounted practice derives correctness and revision, requires consent and never claims known assistance (132.8663ms)
+✔ generic progress endpoint cannot overwrite curator preferences or pattern events (76.1041ms)
+✔ mounted audio route requires consent and invokes only the injected transcription adapter (139.7866ms)
+✔ actual selected source opens in review and gates the planner on reviewed text (3325.3672ms)
+✔ editing source invalidates citations and requires fresh acknowledgement (152.2435ms)
+✔ brief reaches consented request and Stop waiting suppresses late generation (617.6968ms)
+✔ rotating email and spoofing forwarded headers cannot bypass the client-wide recovery allowance (1065.8317ms)
+✔ signin and reset share a per-account budget, normalized across case and whitespace (177.2796ms)
+✔ an expired abuse window permits recovery without a watcher or background task (155.3951ms)
+✔ actual account middleware bounds aggregate abuse across synthetic socket clients (12.0169ms)
+✔ cross-origin or originless form mutations never reach the identity provider (17.865ms)
+✔ oversized and revoked session cookies fail closed without revealing provider errors (20.1646ms)
+✔ identity failure bodies remain generic and never reflect injected identity fields (9.5845ms)
+✔ cross-owner reads, revision reads and all lesson draft variants fail before exposing another record (79.4896ms)
+✔ cross-owner source review, original deletion, lesson publication and job cancellation cannot write (24.4897ms)
+✔ client progress cannot overwrite enrolment, quota or arbitrary server control records (21.3493ms)
+✔ SQL attack strings remain bound values and do not change subsequent query results (2.8492ms)
+✔ model tool directives and forged ownership fields cannot become executable lesson fields (0.7237ms)
+✔ fabricated citations and unsupported model support quotes are rejected (0.4459ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8232.3903

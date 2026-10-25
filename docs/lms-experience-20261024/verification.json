@@ -1,0 +1,21 @@
+{
+  "focusedTests": {
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0
+  },
+  "diagram": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "diagramHashesVerified": true,
+  "syntheticShareExampleParsed": true,
+  "browserObservation": false,
+  "perceptualReview": false,
+  "runtimeChanges": false,
+  "cloudDeployment": false
+}

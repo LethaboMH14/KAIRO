@@ -1,0 +1,27 @@
+✔ source review uses expected revision and old lesson loads exact historical source after correction (1562.1399ms)
+✔ concurrent draft writes have one winner; historical restore saves a new version (406.5528ms)
+✔ edited copy keeps original lesson and scored question semantics while preserving reflection/layout (308.7484ms)
+✔ draft endpoint rejects changed source identity, forged citations, question wording and raw HTML fields (253.178ms)
+✔ retaining an original is opt-in, serves fixed safe bytes and can remove bytes without deleting text (411.3555ms)
+✔ native lesson maps to stable blocks with citation and question mappings intact (15.6733ms)
+✔ validation clones accepted data and rejects extra keys, duplicate IDs, wrong identity or citation (9.3754ms)
+✔ source provenance requires the exact text to occur in its cited evidence (3.6865ms)
+✔ editing and splitting are immutable, retain source anchors and mark changed prose authored (1.9819ms)
+✔ native projection follows teaching block order and keeps a surviving example readable (2.277ms)
+✔ block ordering and deletion preserve each question association by fixed native ID (3.029ms)
+✔ reflection add, edit, layout and title are retained without inventing a scored answer (5.8922ms)
+✔ question wording and split are rejected by edit operations; resource bounds are enforced (6.9614ms)
+✔ source seed is idempotent, snapshots are immutable, and revisions survive reopen (122.6286ms)
+✔ separate connections allow only one review of the same expected revision (109.7267ms)
+✔ draft saves use integer CAS, preserve history, and survive reopen (109.482ms)
+✔ concurrent draft connections reject stale writes (84.0362ms)
+✔ invalid IDs, revisions, mismatched identities, and oversized JSON are rejected without partial writes (97.3846ms)
+✔ a failed compare-and-swap transaction leaves both source head and draft history unchanged (82.3621ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4429.2005

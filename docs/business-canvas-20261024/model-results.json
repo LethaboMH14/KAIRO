@@ -1,0 +1,734 @@
+{
+  "basis": "Hypotheses; no actual demand/revenue. Operating before income tax, debt interest and distributions.",
+  "drivers": [
+    {
+      "key": "reach_start",
+      "base": 250,
+      "downside": 120,
+      "upside": 400,
+      "note": "Qualified people reached in month 1; unvalidated"
+    },
+    {
+      "key": "reach_growth",
+      "base": 0.12,
+      "downside": 0.04,
+      "upside": 0.16,
+      "note": "Monthly reach growth; not observed"
+    },
+    {
+      "key": "activation",
+      "base": 0.25,
+      "downside": 0.15,
+      "upside": 0.35,
+      "note": "Reach to activated user; not observed"
+    },
+    {
+      "key": "conversion",
+      "base": 0.08,
+      "downside": 0.04,
+      "upside": 0.12,
+      "note": "Activated to paid; not observed"
+    },
+    {
+      "key": "churn",
+      "base": 0.07,
+      "downside": 0.12,
+      "upside": 0.045,
+      "note": "Monthly paid account churn; not observed"
+    },
+    {
+      "key": "free_retention",
+      "base": 0.35,
+      "downside": 0.25,
+      "upside": 0.4,
+      "note": "Monthly free account retention; not observed"
+    },
+    {
+      "key": "first_contract",
+      "base": 6,
+      "downside": 9,
+      "upside": 4,
+      "note": "First hypothetical cohort starts; month index"
+    },
+    {
+      "key": "contract_interval",
+      "base": 3,
+      "downside": 6,
+      "upside": 2,
+      "note": "Months between hypothetical new contracts"
+    },
+    {
+      "key": "renewal",
+      "base": 1,
+      "downside": 0.5,
+      "upside": 1,
+      "note": "Expected annual seat renewal fraction"
+    },
+    {
+      "key": "payment_lag",
+      "base": 1,
+      "downside": 3,
+      "upside": 1,
+      "note": "Whole months after institution invoice"
+    },
+    {
+      "key": "seats",
+      "base": 250,
+      "downside": 250,
+      "upside": 250,
+      "note": "Seats per contract; proposed minimum"
+    },
+    {
+      "key": "seat_price",
+      "base": 35,
+      "downside": 35,
+      "upside": 35,
+      "note": "R per licensed seat/month excluding VAT; hypothesis"
+    },
+    {
+      "key": "onboarding_price",
+      "base": 6000,
+      "downside": 6000,
+      "upside": 6000,
+      "note": "R once per new cohort excluding VAT; hypothesis"
+    },
+    {
+      "key": "fx",
+      "base": 20,
+      "downside": 24,
+      "upside": 18,
+      "note": "R/USD budgeting rate; not a spot quote"
+    },
+    {
+      "key": "lessons",
+      "base": 4,
+      "downside": 6,
+      "upside": 4,
+      "note": "Paid completed lesson/help bundles per month; hypothesis"
+    },
+    {
+      "key": "voice_chars",
+      "base": 2500,
+      "downside": 8000,
+      "upside": 2500,
+      "note": "Premium characters per paid active month; cap hypothesis 8000"
+    },
+    {
+      "key": "inst_active",
+      "base": 0.6,
+      "downside": 0.8,
+      "upside": 0.65,
+      "note": "Monthly active fraction of licensed seats; assumption"
+    },
+    {
+      "key": "free_lessons",
+      "base": 0.25,
+      "downside": 0.5,
+      "upside": 0.25,
+      "note": "Cloud lesson bundles per free active month; quota hypothesis"
+    },
+    {
+      "key": "support_minutes",
+      "base": 2,
+      "downside": 5,
+      "upside": 2,
+      "note": "Support minutes per consumer paid month; assumption"
+    },
+    {
+      "key": "support_hour",
+      "base": 120,
+      "downside": 120,
+      "upside": 120,
+      "note": "R/hour fully loaded contractor support budget, not wage data"
+    },
+    {
+      "key": "retry_multiplier",
+      "base": 1.1,
+      "downside": 1.5,
+      "upside": 1.1,
+      "note": "Billable duplicate successful requests; not failed HTTP calls"
+    },
+    {
+      "key": "marketing",
+      "base": 2500,
+      "downside": 2500,
+      "upside": 4000,
+      "note": "R/month separate acquisition budget; assumption"
+    },
+    {
+      "key": "sales_cost",
+      "base": 8000,
+      "downside": 10000,
+      "upside": 8000,
+      "note": "R/new institution cohort; sales/procurement cash budget"
+    },
+    {
+      "key": "onboarding_cost",
+      "base": 4000,
+      "downside": 5000,
+      "upside": 4000,
+      "note": "R/new cohort domain setup/review labour budget"
+    },
+    {
+      "key": "fixed_cash",
+      "base": 15000,
+      "downside": 15000,
+      "upside": 22000,
+      "note": "R/month: QA 8000/12000, ops 4000/6000, security reserve 3000/4000"
+    },
+    {
+      "key": "founder_replacement",
+      "base": 30000,
+      "downside": 30000,
+      "upside": 35000,
+      "note": "R/month economic replacement labour, not observed salary"
+    },
+    {
+      "key": "refund_rate",
+      "base": 0.03,
+      "downside": 0.06,
+      "upside": 0.03,
+      "note": "Consumer receipts refunded; no original fee rebate assumed"
+    },
+    {
+      "key": "initial_setup",
+      "base": 25000,
+      "downside": 25000,
+      "upside": 35000,
+      "note": "R initial device/legal/setup budget; no credit assumed"
+    },
+    {
+      "key": "vat",
+      "base": 0.15,
+      "downside": 0.15,
+      "upside": 0.15,
+      "note": "SARS standard rate; conservative registered-vendor planning, not actual registration"
+    },
+    {
+      "key": "llm_bundle_usd",
+      "base": 0.00932,
+      "downside": 0.00932,
+      "upside": 0.00932,
+      "note": "Standard Global token budget, dated 2026-10-24; see rates register"
+    },
+    {
+      "key": "tts_usd_million",
+      "base": 30,
+      "downside": 30,
+      "upside": 30,
+      "note": "Google Chirp 3 HD after allowance; no free credits assumed"
+    },
+    {
+      "key": "infra_paid_usd",
+      "base": 0.1,
+      "downside": 0.15,
+      "upside": 0.1,
+      "note": "PROVISIONAL all-in variable OCR/auth/storage/egress/DB/log reserve per active month"
+    },
+    {
+      "key": "infra_free_usd",
+      "base": 0.03,
+      "downside": 0.05,
+      "upside": 0.03,
+      "note": "PROVISIONAL free active user infrastructure reserve"
+    },
+    {
+      "key": "pay_pct",
+      "base": 0.032,
+      "downside": 0.032,
+      "upside": 0.032,
+      "note": "Payfast domestic card rate, excluding VAT"
+    },
+    {
+      "key": "pay_fixed",
+      "base": 2,
+      "downside": 2,
+      "upside": 2,
+      "note": "R per successful consumer card charge, excluding VAT"
+    },
+    {
+      "key": "refund_fee",
+      "base": 2,
+      "downside": 2,
+      "upside": 2,
+      "note": "R per refund, excluding VAT"
+    },
+    {
+      "key": "payout_fee",
+      "base": 8.7,
+      "downside": 8.7,
+      "upside": 8.7,
+      "note": "R once/month settlement budget excluding VAT"
+    },
+    {
+      "key": "price",
+      "base": 49,
+      "downside": 49,
+      "upside": 49,
+      "note": "R/month consumer VAT inclusive if registered; hypothesis"
+    },
+    {
+      "key": "cloud_tax_reserve",
+      "base": 0.15,
+      "downside": 0.15,
+      "upside": 0.15,
+      "note": "Provisional vendor/import tax reserve on USD services; no input credit reclaimed"
+    },
+    {
+      "key": "vat_registered",
+      "base": 1,
+      "downside": 1,
+      "upside": 1,
+      "note": "Planning vendor registration flag 1/0; NOT a statement of actual registration"
+    }
+  ],
+  "cases": {
+    "Base": {
+      "inputs": {
+        "reach_start": 250,
+        "reach_growth": 0.12,
+        "activation": 0.25,
+        "conversion": 0.08,
+        "churn": 0.07,
+        "free_retention": 0.35,
+        "first_contract": 6,
+        "contract_interval": 3,
+        "renewal": 1,
+        "payment_lag": 1,
+        "seats": 250,
+        "seat_price": 35,
+        "onboarding_price": 6000,
+        "fx": 20,
+        "lessons": 4,
+        "voice_chars": 2500,
+        "inst_active": 0.6,
+        "free_lessons": 0.25,
+        "support_minutes": 2,
+        "support_hour": 120,
+        "retry_multiplier": 1.1,
+        "marketing": 2500,
+        "sales_cost": 8000,
+        "onboarding_cost": 4000,
+        "fixed_cash": 15000,
+        "founder_replacement": 30000,
+        "refund_rate": 0.03,
+        "initial_setup": 25000,
+        "vat": 0.15,
+        "llm_bundle_usd": 0.00932,
+        "tts_usd_million": 30,
+        "infra_paid_usd": 0.1,
+        "infra_free_usd": 0.03,
+        "pay_pct": 0.032,
+        "pay_fixed": 2,
+        "refund_fee": 2,
+        "payout_fee": 8.7,
+        "price": 49,
+        "cloud_tax_reserve": 0.15,
+        "vat_registered": 1
+      },
+      "units": {
+        "net_consumer": 41.3304347826087,
+        "consumer_cost": 13.312884,
+        "consumer_contribution": 28.017550782608698,
+        "fee": 4.1722,
+        "llm": 0.943184,
+        "voice": 1.8975000000000002,
+        "infra": 2.3000000000000003,
+        "support": 4.0,
+        "free_cost": 1.248949,
+        "inst_active_cost": 6.669092000000001,
+        "inst_contribution": 30.998544799999998
+      },
+      "summary": {
+        "month24_paid": 228.93038287093748,
+        "month24_seats": 1750.0,
+        "month24_revenue": 76711.79225900493,
+        "month24_operating": 5904.844231408778,
+        "year1_revenue": 128981.19999895267,
+        "year2_revenue": 580628.1045807127,
+        "funding_need": 391812.0128118082,
+        "funding_with_20pct_buffer": 470174.4153741698,
+        "cash24": -283159.3397798062,
+        "receivables24": 216000.0,
+        "deferred24": 437500.0,
+        "first_operating_positive": 22
+      }
+    },
+    "Downside": {
+      "inputs": {
+        "reach_start": 120,
+        "reach_growth": 0.04,
+        "activation": 0.15,
+        "conversion": 0.04,
+        "churn": 0.12,
+        "free_retention": 0.25,
+        "first_contract": 9,
+        "contract_interval": 6,
+        "renewal": 0.5,
+        "payment_lag": 3,
+        "seats": 250,
+        "seat_price": 35,
+        "onboarding_price": 6000,
+        "fx": 24,
+        "lessons": 6,
+        "voice_chars": 8000,
+        "inst_active": 0.8,
+        "free_lessons": 0.5,
+        "support_minutes": 5,
+        "support_hour": 120,
+        "retry_multiplier": 1.5,
+        "marketing": 2500,
+        "sales_cost": 10000,
+        "onboarding_cost": 5000,
+        "fixed_cash": 15000,
+        "founder_replacement": 30000,
+        "refund_rate": 0.06,
+        "initial_setup": 25000,
+        "vat": 0.15,
+        "llm_bundle_usd": 0.00932,
+        "tts_usd_million": 30,
+        "infra_paid_usd": 0.15,
+        "infra_free_usd": 0.05,
+        "pay_pct": 0.032,
+        "pay_fixed": 2,
+        "refund_fee": 2,
+        "payout_fee": 8.7,
+        "price": 49,
+        "cloud_tax_reserve": 0.15,
+        "vat_registered": 1
+      },
+      "units": {
+        "net_consumer": 40.052173913043475,
+        "consumer_cost": 30.632287999999996,
+        "consumer_contribution": 9.41988591304348,
+        "fee": 4.2412,
+        "llm": 2.315088,
+        "voice": 9.935999999999998,
+        "infra": 4.14,
+        "support": 10.0,
+        "free_cost": 2.072924,
+        "inst_active_cost": 16.847696,
+        "inst_contribution": 21.5218432
+      },
+      "summary": {
+        "month24_paid": 4.546743891935893,
+        "month24_seats": 625.0,
+        "month24_revenue": 22057.106977097883,
+        "month24_operating": -34130.633922265784,
+        "year1_revenue": 42008.22005766288,
+        "year2_revenue": 223375.32712726135,
+        "funding_need": 886937.0019635082,
+        "funding_with_20pct_buffer": 1064324.4023562097,
+        "cash24": -754917.6358857739,
+        "receivables24": 0.0,
+        "deferred24": 122500.0,
+        "first_operating_positive": null
+      }
+    },
+    "Upside": {
+      "inputs": {
+        "reach_start": 400,
+        "reach_growth": 0.16,
+        "activation": 0.35,
+        "conversion": 0.12,
+        "churn": 0.045,
+        "free_retention": 0.4,
+        "first_contract": 4,
+        "contract_interval": 2,
+        "renewal": 1,
+        "payment_lag": 1,
+        "seats": 250,
+        "seat_price": 35,
+        "onboarding_price": 6000,
+        "fx": 18,
+        "lessons": 4,
+        "voice_chars": 2500,
+        "inst_active": 0.65,
+        "free_lessons": 0.25,
+        "support_minutes": 2,
+        "support_hour": 120,
+        "retry_multiplier": 1.1,
+        "marketing": 4000,
+        "sales_cost": 8000,
+        "onboarding_cost": 4000,
+        "fixed_cash": 22000,
+        "founder_replacement": 35000,
+        "refund_rate": 0.03,
+        "initial_setup": 35000,
+        "vat": 0.15,
+        "llm_bundle_usd": 0.00932,
+        "tts_usd_million": 30,
+        "infra_paid_usd": 0.1,
+        "infra_free_usd": 0.03,
+        "pay_pct": 0.032,
+        "pay_fixed": 2,
+        "refund_fee": 2,
+        "payout_fee": 8.7,
+        "price": 49,
+        "cloud_tax_reserve": 0.15,
+        "vat_registered": 1
+      },
+      "units": {
+        "net_consumer": 41.3304347826087,
+        "consumer_cost": 12.798815600000001,
+        "consumer_contribution": 28.531619182608697,
+        "fee": 4.1722,
+        "llm": 0.8488656,
+        "voice": 1.70775,
+        "infra": 2.07,
+        "support": 4.0,
+        "free_cost": 1.1740541,
+        "inst_active_cost": 6.2021828,
+        "inst_contribution": 30.96858118
+      },
+      "summary": {
+        "month24_paid": 2441.562930092845,
+        "month24_seats": 2750.0,
+        "month24_revenue": 203160.85744983732,
+        "month24_operating": 81320.32384790003,
+        "year1_revenue": 297403.53667680494,
+        "year2_revenue": 1416756.6606806454,
+        "funding_need": 214171.3989132901,
+        "funding_with_20pct_buffer": 257005.6786959481,
+        "cash24": 334730.6361117292,
+        "receivables24": 216000.0,
+        "deferred24": 621250.0,
+        "first_operating_positive": 16
+      }
+    }
+  },
+  "stress": {
+    "No demand": {
+      "month24_paid": 0.0,
+      "month24_seats": 0.0,
+      "month24_revenue": 0.0,
+      "month24_operating": -47500.0,
+      "year1_revenue": 0.0,
+      "year2_revenue": 0.0,
+      "funding_need": 1000000.0,
+      "funding_with_20pct_buffer": 1200000.0,
+      "cash24": -1000000.0,
+      "receivables24": 0.0,
+      "deferred24": 0.0,
+      "first_operating_positive": null,
+      "consumer_contribution": 28.017550782608698
+    },
+    "No institution contract": {
+      "month24_paid": 374.0088413714158,
+      "month24_seats": 0.0,
+      "month24_revenue": 15457.948026420343,
+      "month24_operating": -38440.97814437741,
+      "year1_revenue": 19117.334877145167,
+      "year2_revenue": 102154.98727851399,
+      "funding_need": 929495.9839192261,
+      "funding_with_20pct_buffer": 1115395.1807030712,
+      "cash24": -929495.9839192261,
+      "receivables24": 0.0,
+      "deferred24": 0.0,
+      "first_operating_positive": null,
+      "consumer_contribution": 28.017550782608698
+    },
+    "Six month collection delay": {
+      "month24_paid": 228.93038287093748,
+      "month24_seats": 1750.0,
+      "month24_revenue": 76711.79225900493,
+      "month24_operating": 5904.844231408778,
+      "year1_revenue": 128981.19999895267,
+      "year2_revenue": 580628.1045807127,
+      "funding_need": 686214.184011215,
+      "funding_with_20pct_buffer": 823457.020813458,
+      "cash24": -531559.3397798062,
+      "receivables24": 432000.0,
+      "deferred24": 437500.0,
+      "first_operating_positive": 22,
+      "consumer_contribution": 28.017550782608698
+    },
+    "Free heavy / slow paid conversion": {
+      "month24_paid": 5.187354973945922,
+      "month24_seats": 1750.0,
+      "month24_revenue": 67464.39563644491,
+      "month24_operating": -2748.5814463633533,
+      "year1_revenue": 124429.92431131481,
+      "year2_revenue": 535959.2430234961,
+      "funding_need": 408028.14820939896,
+      "funding_with_20pct_buffer": 489633.7778512787,
+      "cash24": -334162.9970053353,
+      "receivables24": 216000.0,
+      "deferred24": 437500.0,
+      "first_operating_positive": null,
+      "consumer_contribution": 28.017550782608698
+    },
+    "Voice cap used every month": {
+      "month24_paid": 228.93038287093748,
+      "month24_seats": 1750.0,
+      "month24_revenue": 76711.79225900493,
+      "month24_operating": 565.9493481140499,
+      "year1_revenue": 128981.19999895267,
+      "year2_revenue": 580628.1045807127,
+      "funding_need": 415351.8202642485,
+      "funding_with_20pct_buffer": 498422.18431709823,
+      "cash24": -332557.7976645733,
+      "receivables24": 216000.0,
+      "deferred24": 437500.0,
+      "first_operating_positive": 24,
+      "consumer_contribution": 23.8430507826087
+    },
+    "Uncapped voice 80000 chars": {
+      "month24_paid": 228.93038287093748,
+      "month24_seats": 1750.0,
+      "month24_revenue": 76711.79225900493,
+      "month24_operating": -69325.03821501695,
+      "year1_revenue": 128981.19999895267,
+      "year2_revenue": 580628.1045807127,
+      "funding_need": 979228.5190651623,
+      "funding_with_20pct_buffer": 1175074.2228781946,
+      "cash24": -979228.5190651623,
+      "receivables24": 216000.0,
+      "deferred24": 437500.0,
+      "first_operating_positive": null,
+      "consumer_contribution": -30.804949217391318
+    },
+    "FX and duplicate billing shock": {
+      "month24_paid": 228.93038287093748,
+      "month24_seats": 1750.0,
+      "month24_revenue": 76711.79225900493,
+      "month24_operating": 456.6135581180762,
+      "year1_revenue": 128981.19999895267,
+      "year2_revenue": 580628.1045807127,
+      "funding_need": 415121.9652953435,
+      "funding_with_20pct_buffer": 498146.35835441214,
+      "cash24": -332682.07421932544,
+      "receivables24": 216000.0,
+      "deferred24": 437500.0,
+      "first_operating_positive": 24,
+      "consumer_contribution": 23.4538907826087
+    },
+    "No institutional renewals": {
+      "month24_paid": 228.93038287093748,
+      "month24_seats": 1000.0,
+      "month24_revenue": 50461.79225900492,
+      "month24_operating": -17344.064368591233,
+      "year1_revenue": 128981.19999895267,
+      "year2_revenue": 475628.10458071274,
+      "funding_need": 465404.97417980625,
+      "funding_with_20pct_buffer": 558485.9690157674,
+      "cash24": -465404.97417980625,
+      "receivables24": 111000.0,
+      "deferred24": 227500.0,
+      "first_operating_positive": null,
+      "consumer_contribution": 28.017550782608698
+    },
+    "Double support / fixed labour": {
+      "month24_paid": 228.93038287093748,
+      "month24_seats": 1750.0,
+      "month24_revenue": 76711.79225900493,
+      "month24_operating": -40010.87730007497,
+      "year1_revenue": 128981.19999895267,
+      "year2_revenue": 580628.1045807127,
+      "funding_need": 1008492.8723080296,
+      "funding_with_20pct_buffer": 1210191.4467696354,
+      "cash24": -1008492.8723080296,
+      "receivables24": 216000.0,
+      "deferred24": 437500.0,
+      "first_operating_positive": null,
+      "consumer_contribution": 24.017550782608698
+    },
+    "High churn": {
+      "month24_paid": 161.90133091861202,
+      "month24_seats": 1750.0,
+      "month24_revenue": 73941.45239874924,
+      "month24_operating": 4026.854364424381,
+      "year1_revenue": 128349.95534101731,
+      "year2_revenue": 568024.0378019614,
+      "funding_need": 393868.42836185993,
+      "funding_with_20pct_buffer": 472642.11403423187,
+      "cash24": -292131.445015366,
+      "receivables24": 216000.0,
+      "deferred24": 437500.0,
+      "first_operating_positive": 22,
+      "consumer_contribution": 28.017550782608698
+    },
+    "Unregistered vendor (eligibility unverified)": {
+      "month24_paid": 228.93038287093748,
+      "month24_seats": 1750.0,
+      "month24_revenue": 78131.06109785565,
+      "month24_operating": 7324.113070259501,
+      "year1_revenue": 129878.37999879557,
+      "year2_revenue": 587997.3202678197,
+      "funding_need": 357000.67606339796,
+      "funding_with_20pct_buffer": 428400.8112760775,
+      "cash24": -242492.9440928564,
+      "receivables24": 216000.0,
+      "deferred24": 437500.0,
+      "first_operating_positive": 22,
+      "consumer_contribution": 34.217116000000004
+    },
+    "Single 20-seat price-test pilot": {
+      "month24_paid": 373.1963582855241,
+      "month24_seats": 20.0,
+      "month24_revenue": 16124.367747226925,
+      "month24_operating": -37843.77103441881,
+      "year1_revenue": 29311.82589751701,
+      "year2_revenue": 109935.32990531439,
+      "funding_need": 921095.6413132276,
+      "funding_with_20pct_buffer": 1105314.7695758732,
+      "cash24": -921095.6413132276,
+      "receivables24": 0.0,
+      "deferred24": 3500.0,
+      "first_operating_positive": null,
+      "consumer_contribution": 28.017550782608698
+    },
+    "Single 40-seat price-test pilot": {
+      "month24_paid": 372.38387519963237,
+      "month24_seats": 40.0,
+      "month24_revenue": 16790.7874680335,
+      "month24_operating": -37246.56392446021,
+      "year1_revenue": 33506.31691788885,
+      "year2_revenue": 117715.67253211475,
+      "funding_need": 906695.298707229,
+      "funding_with_20pct_buffer": 1088034.3584486747,
+      "cash24": -906695.298707229,
+      "receivables24": 0.0,
+      "deferred24": 7000.0,
+      "first_operating_positive": null,
+      "consumer_contribution": 28.017550782608698
+    },
+    "Single 60-seat price-test pilot": {
+      "month24_paid": 371.57139211374067,
+      "month24_seats": 60.0,
+      "month24_revenue": 17457.207188840082,
+      "month24_operating": -36649.35681450161,
+      "year1_revenue": 37700.807938260696,
+      "year2_revenue": 125496.01515891518,
+      "funding_need": 892294.9561012305,
+      "funding_with_20pct_buffer": 1070753.9473214764,
+      "cash24": -892294.9561012305,
+      "receivables24": 0.0,
+      "deferred24": 10500.0,
+      "first_operating_positive": null,
+      "consumer_contribution": 28.017550782608698
+    }
+  },
+  "monte_carlo": {
+    "seed": 20261024,
+    "runs": 5000,
+    "interpretation": "Conditional on arbitrary planning priors; not probability of commercial success.",
+    "funding_need": {
+      "p10": 448136.77905519964,
+      "p50": 645250.0881519845,
+      "p90": 890758.9262782909
+    },
+    "month24_operating": {
+      "p10": -38825.712188913894,
+      "p50": -16743.767146829614,
+      "p90": -3792.774542767652
+    },
+    "negative_month24_fraction": 0.9638
+  },
+  "checks": {
+    "case_and_stress_reconciliations": "PASS",
+    "monte_carlo_runs": 5000,
+    "zero_demand_revenue": 0.0,
+    "rate_arithmetic": "PASS: 0.00932 USD/bundle; premium speech separate"
+  }
+}

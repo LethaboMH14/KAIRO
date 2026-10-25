@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KAIRO Pathmark Master</title>
+<style>
+@font-face{font-family:KairoManrope;src:url('../../studio/src/experience/fonts/Manrope-wght.ttf') format('truetype');font-weight:200 800}
+:root{--chalk:#F5F0E6;--moss:#3E5144;--sage:#A7AF91;--copper:#AE7555;--graphite:#252B28;--line:#D9DDCF}
+*{box-sizing:border-box}body{margin:0;background:var(--chalk);color:var(--graphite);font-family:KairoManrope,Manrope,Arial,sans-serif;line-height:1.6}
+header{background:var(--moss);color:var(--chalk);padding:28px 16px}header img{height:44px;display:block}
+main{max-width:1180px;margin:auto;padding:28px 16px 64px}
+h1{font-size:clamp(24px,4vw,36px);letter-spacing:-.03em;margin:22px 0 6px}h2{font-size:19px;margin:44px 0 12px}
+p{max-width:70ch}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+figure{margin:0;background:#FFFDF8;border:1px solid var(--line);border-radius:12px;padding:16px}
+figure img{width:100%;height:auto;display:block}figcaption{font-size:13px;color:#596259;margin-top:10px}
+.dark{background:var(--moss)}.dark figcaption{color:var(--chalk)}
+.wide{grid-column:1/-1}a{color:var(--moss)}
+</style>
+</head>
+<body>
+<header><img src="master/kairo-lockup-horizontal-chalk.svg" alt="KAIRO"></header>
+<main>
+<h1>Pathmark master, fitted to the selected reference</h1>
+<p>Outlined, font-free masters built by fitting two constant-width strokes and a constructed wordmark to the user-selected reference. Symbol mean edge error 0.72 px, wordmark 0.14 px, at the reference's own size. Measurements, adjustments and limits are in the <a href="README.md">README</a>.</p>
+<h2>Masters</h2>
+<div class="grid">
+<figure><img src="master/kairo-symbol.svg" alt="KAIRO symbol in moss"><figcaption>Symbol · moss</figcaption></figure>
+<figure class="dark"><img src="master/kairo-symbol-chalk.svg" alt="KAIRO symbol in chalk"><figcaption>Symbol · reversed</figcaption></figure>
+<figure><img src="master/kairo-symbol-graphite.svg" alt="KAIRO symbol in graphite"><figcaption>Symbol · one colour</figcaption></figure>
+<figure><img src="master/kairo-symbol-micro.svg" alt="KAIRO micro symbol"><figcaption>Micro mark · below 32 px</figcaption></figure>
+<figure><img src="master/kairo-lockup-stacked.svg" alt="KAIRO stacked lockup"><figcaption>Stacked lockup · reference spacing</figcaption></figure>
+<figure class="dark"><img src="master/kairo-lockup-stacked-chalk.svg" alt="KAIRO stacked lockup reversed"><figcaption>Stacked lockup · reversed</figcaption></figure>
+<figure class="wide"><img src="master/kairo-lockup-horizontal.svg" alt="KAIRO horizontal lockup" style="max-width:520px"><figcaption>Horizontal lockup · constructed proportions</figcaption></figure>
+</div>
+<h2>Measurement proofs</h2>
+<div class="grid">
+<figure class="wide"><img src="proofs/symbol-master-overlay-x6.png" alt="Symbol master overlaid on the reference"><figcaption>Grey: both agree. Red: reference only. Blue: master only. Enlarged ×6.</figcaption></figure>
+<figure class="wide"><img src="proofs/wordmark-master-overlay-x5.png" alt="Wordmark master overlaid on the reference"><figcaption>Wordmark master on the reference, enlarged ×5.</figcaption></figure>
+<figure class="wide"><img src="proofs/size-ladder-x6.png" alt="Size ladder from 12 to 48 pixels"><figcaption>12, 16, 20, 24, 32, 48 px rendered at 1:1, shown ×6. Rows: master, micro, master reversed, micro reversed.</figcaption></figure>
+</div>
+<h2>Applied</h2>
+<div class="grid">
+<figure class="wide"><img src="proofs/lockups-on-grounds.png" alt="Lockups on palette grounds and Rain's shirt colour"><figcaption>Palette grounds and the chalk badge on Rain's shirt colour.</figcaption></figure>
+<figure class="wide"><img src="proofs/header-and-icons.png" alt="Header lockups and app icons"><figcaption>Header lockups at 24/32/48 px and app icons at 180/64/48/32/16 px (micro mark at 32 px and below).</figcaption></figure>
+<figure><img src="proofs/applied-phone-home.png" alt="Phone home sample"><figcaption>Phone · sample content</figcaption></figure>
+<figure><img src="proofs/applied-document-summary.png" alt="Document sample"><figcaption>Document · sample, not a certificate</figcaption></figure>
+<figure class="wide"><img src="proofs/applied-presentation-title.png" alt="Presentation title slide"><figcaption>Presentation title slide</figcaption></figure>
+<figure class="wide"><img src="proofs/applied-pattern-card.png" alt="Pattern card"><figcaption>Broad path pattern cropped at the edges</figcaption></figure>
+</div>
+</main>
+</body>
+</html>

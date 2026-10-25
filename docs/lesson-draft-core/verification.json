@@ -1,0 +1,28 @@
+{
+  "task": "LESSON-DRAFT-CORE-001",
+  "date": "2026-10-23",
+  "scope": "studio/src/lesson-draft-core and studio/tests/lesson-draft-core.test.mjs",
+  "checks": [
+    {
+      "command": "node --test tests/lesson-draft-core.test.mjs",
+      "workingDirectory": "studio",
+      "result": "pass",
+      "passed": 8,
+      "failed": 0,
+      "evidence": "Actual exports exercised: draftFromLesson, validateDraft, editDraft, draftToLesson; includes exact-source provenance and readable reordered/deleted chapter projections."
+    },
+    {
+      "command": "npx tsc --noEmit --target ES2022 --lib ES2022,DOM --module ESNext --moduleResolution Bundler --allowImportingTsExtensions --strict --skipLibCheck src/lesson-draft-core/types.ts src/lesson-draft-core/model.ts",
+      "workingDirectory": "studio",
+      "result": "pass",
+      "diagnostics": 0
+    }
+  ],
+  "notEstablished": [
+    "root route or UI integration",
+    "durable storage or version conflict behavior",
+    "browser/device/keyboard acceptance",
+    "learner usability or learning outcomes",
+    "deployment or release acceptance"
+  ]
+}

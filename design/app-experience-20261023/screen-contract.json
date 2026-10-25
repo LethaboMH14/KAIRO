@@ -1,0 +1,1925 @@
+{
+  "schema": "kairo-experience/1",
+  "screens": [
+    {
+      "id": "welcome",
+      "group": "Start",
+      "title": "Make room for what you could become.",
+      "subtitle": "Bring what you are learning. Understand it, try it and build work you can show.",
+      "type": "welcome",
+      "primary": {
+        "label": "Explore KAIRO Access",
+        "to": "access"
+      },
+      "secondary": {
+        "label": "Try a short lesson",
+        "to": "tour"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "access",
+      "group": "Start",
+      "title": "A clearer way through your learning.",
+      "subtitle": "Your material, an interactive teacher and a place to put the idea to work.",
+      "type": "access",
+      "primary": {
+        "label": "Get started",
+        "to": "signup"
+      },
+      "secondary": {
+        "label": "Try a short lesson",
+        "to": "tour"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "tour",
+      "group": "Start",
+      "title": "Start with one small idea.",
+      "subtitle": "Take a short lesson with Rain. No microphone or account needed.",
+      "type": "tour",
+      "primary": {
+        "label": "Try the lesson",
+        "to": "lesson"
+      },
+      "secondary": {
+        "label": "Create an account",
+        "to": "signup"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "signin",
+      "group": "Start",
+      "title": "Welcome back.",
+      "subtitle": "Continue where you left off.",
+      "type": "auth",
+      "primary": {
+        "label": "Sign in",
+        "to": "home"
+      },
+      "secondary": {
+        "label": "Create an account",
+        "to": "signup"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "signup",
+      "group": "Start",
+      "title": "Your next step starts here.",
+      "subtitle": "Create your learning space. You can explore a sample first.",
+      "type": "auth",
+      "primary": {
+        "label": "Create account",
+        "to": "verify"
+      },
+      "secondary": {
+        "label": "Try a sample instead",
+        "to": "tour"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "verify",
+      "group": "Start",
+      "title": "Check your email.",
+      "subtitle": "Enter the six-digit code sent to your email address.",
+      "type": "verify",
+      "primary": {
+        "label": "Verify email",
+        "to": "setup-goal"
+      },
+      "secondary": {
+        "label": "Use a different email",
+        "to": "signup"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "forgot",
+      "group": "Start",
+      "title": "Let’s get you back in.",
+      "subtitle": "Enter your email address. If an account exists, we will send a recovery link.",
+      "type": "auth",
+      "primary": {
+        "label": "Send recovery link",
+        "to": "reset"
+      },
+      "secondary": {
+        "label": "Back to sign in",
+        "to": "signin"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "reset",
+      "group": "Start",
+      "title": "Choose a new password.",
+      "subtitle": "Use a password you do not use on another service.",
+      "type": "auth",
+      "primary": {
+        "label": "Save password",
+        "to": "signin"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "setup-goal",
+      "group": "Set up",
+      "title": "What brings you here?",
+      "subtitle": "Choose a starting point. You can change direction later.",
+      "type": "choices",
+      "primary": {
+        "label": "Continue",
+        "to": "setup-study"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "setup-study",
+      "group": "Set up",
+      "title": "What are you learning?",
+      "subtitle": "Add your institution and programme, or start with a topic.",
+      "type": "study",
+      "primary": {
+        "label": "Find my modules",
+        "to": "setup-modules"
+      },
+      "secondary": {
+        "label": "Start with a topic",
+        "to": "setup-language"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "setup-modules",
+      "group": "Set up",
+      "title": "Choose the subjects that fit.",
+      "subtitle": "Check the course year and source before adding a suggested module.",
+      "type": "modules",
+      "primary": {
+        "label": "Use selected subjects",
+        "to": "setup-language"
+      },
+      "secondary": {
+        "label": "Add a subject myself",
+        "to": "setup-study"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "setup-language",
+      "group": "Set up",
+      "title": "Choose your language.",
+      "subtitle": "Interface, teaching text and voice can be chosen separately.",
+      "type": "languages",
+      "primary": {
+        "label": "Continue",
+        "to": "setup-access"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "setup-access",
+      "group": "Set up",
+      "title": "Make learning comfortable.",
+      "subtitle": "Captions, readable text and keyboard controls stay available.",
+      "type": "accessibility",
+      "primary": {
+        "label": "Continue",
+        "to": "setup-profile"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "setup-profile",
+      "group": "Set up",
+      "title": "A little about you.",
+      "subtitle": "Your name helps us welcome you. A photo, CV and bio are optional.",
+      "type": "profile",
+      "primary": {
+        "label": "Continue",
+        "to": "setup-teacher"
+      },
+      "secondary": {
+        "label": "Skip for now",
+        "to": "setup-teacher"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "setup-teacher",
+      "group": "Set up",
+      "title": "Meet Rain.",
+      "subtitle": "Choose how you would like to learn together. You can start with text only.",
+      "type": "teacher-settings",
+      "primary": {
+        "label": "Finish setup",
+        "to": "setup-ready"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "setup-ready",
+      "group": "Set up",
+      "title": "Your space is ready.",
+      "subtitle": "Start with a sample or bring something you want to understand.",
+      "type": "ready",
+      "primary": {
+        "label": "Go to my learning",
+        "to": "home"
+      },
+      "secondary": {
+        "label": "Add my material",
+        "to": "upload"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "home",
+      "group": "Home & material",
+      "title": "What would you like to understand today?",
+      "subtitle": "Continue a lesson, bring your material or try a practical challenge.",
+      "type": "home",
+      "primary": {
+        "label": "Continue lesson",
+        "to": "lesson"
+      },
+      "secondary": {
+        "label": "Add material",
+        "to": "upload"
+      },
+      "existing": "/home",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "home-empty",
+      "group": "Home & material",
+      "title": "Start with something real.",
+      "subtitle": "A difficult passage, a question you missed or a skill you want to use.",
+      "type": "empty",
+      "primary": {
+        "label": "Add my first material",
+        "to": "upload"
+      },
+      "secondary": {
+        "label": "Explore a sample",
+        "to": "catalogue"
+      },
+      "existing": "/home",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "search",
+      "group": "Home & material",
+      "title": "Find your next step.",
+      "subtitle": "Search your material, lessons, saved work and reviewed resources.",
+      "type": "search",
+      "primary": {
+        "label": "Open selected result",
+        "to": "lesson"
+      },
+      "secondary": null,
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "library",
+      "group": "Home & material",
+      "title": "My material",
+      "subtitle": "Your sources and lessons, kept together.",
+      "type": "library",
+      "primary": {
+        "label": "Add material",
+        "to": "upload"
+      },
+      "secondary": {
+        "label": "Browse reviewed resources",
+        "to": "catalogue"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "catalogue",
+      "group": "Home & material",
+      "title": "Find a useful starting point.",
+      "subtitle": "Browse reviewed resources. Check the source and coverage before using them.",
+      "type": "catalogue",
+      "primary": {
+        "label": "Use this resource",
+        "to": "source-review"
+      },
+      "secondary": {
+        "label": "Use my own material",
+        "to": "upload"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "upload",
+      "group": "Home & material",
+      "title": "Bring your material.",
+      "subtitle": "Add a document, scan a page, paste text or use a supported reference.",
+      "type": "upload",
+      "primary": {
+        "label": "Check extracted text",
+        "to": "extracting"
+      },
+      "secondary": {
+        "label": "Choose a sample",
+        "to": "catalogue"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "extracting",
+      "group": "Home & material",
+      "title": "Opening your material.",
+      "subtitle": "We will keep the source beside the extracted text so you can check it.",
+      "type": "loading",
+      "primary": {
+        "label": "Review text",
+        "to": "source-review"
+      },
+      "secondary": {
+        "label": "Cancel and keep my draft",
+        "to": "library"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "source-review",
+      "group": "Home & material",
+      "title": "Check the text before we teach it.",
+      "subtitle": "Correct anything the scan missed. Your original file stays unchanged.",
+      "type": "source",
+      "primary": {
+        "label": "Save reviewed text",
+        "to": "source-ready"
+      },
+      "secondary": {
+        "label": "Choose another file",
+        "to": "upload"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "source-ready",
+      "group": "Home & material",
+      "title": "Your source is ready.",
+      "subtitle": "Select a passage to read, explain or translate, or build a lesson around it.",
+      "type": "source-ready",
+      "primary": {
+        "label": "Plan my lesson",
+        "to": "lesson-plan"
+      },
+      "secondary": {
+        "label": "Ask about a passage",
+        "to": "source-action"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "source-action",
+      "group": "Home & material",
+      "title": "What would you like to do with this passage?",
+      "subtitle": "Your selection stays linked to its page and saved source revision.",
+      "type": "passage",
+      "primary": {
+        "label": "Explain this passage",
+        "to": "lesson-answer"
+      },
+      "secondary": {
+        "label": "Translate selected text",
+        "to": "translation"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "translation",
+      "group": "Home & material",
+      "title": "Read it in another language.",
+      "subtitle": "Keep the original beside the translation and check technical terms.",
+      "type": "translation",
+      "primary": {
+        "label": "Use this translation",
+        "to": "source-ready"
+      },
+      "secondary": {
+        "label": "Return to original",
+        "to": "source-ready"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "lesson-plan",
+      "group": "Home & material",
+      "title": "A plan for this idea.",
+      "subtitle": "Check the goal, source coverage and activities before starting.",
+      "type": "plan",
+      "primary": {
+        "label": "Prepare my lesson",
+        "to": "lesson-building"
+      },
+      "secondary": {
+        "label": "Edit the goal",
+        "to": "source-ready"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "lesson-building",
+      "group": "Home & material",
+      "title": "Preparing your lesson.",
+      "subtitle": "You can keep reading the reviewed source while the lesson is prepared.",
+      "type": "loading",
+      "primary": {
+        "label": "Open lesson",
+        "to": "lesson-ready"
+      },
+      "secondary": {
+        "label": "Read my source",
+        "to": "source-ready"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "lesson-ready",
+      "group": "Home & material",
+      "title": "Your lesson is ready.",
+      "subtitle": "Read the goal, choose a view and start when you are ready.",
+      "type": "lesson-ready",
+      "primary": {
+        "label": "Start lesson",
+        "to": "lesson"
+      },
+      "secondary": {
+        "label": "Start in reading view",
+        "to": "lesson-reading"
+      },
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "studios",
+      "group": "Studios & practice",
+      "title": "Choose a place to explore.",
+      "subtitle": "Start with an available studio or use reading view for any supported lesson.",
+      "type": "studios",
+      "primary": {
+        "label": "Open the classroom",
+        "to": "lesson"
+      },
+      "secondary": {
+        "label": "Explore a motor",
+        "to": "engineering"
+      },
+      "existing": "/lecture",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "lesson",
+      "group": "Learn",
+      "title": "Follow the stock, not the guess.",
+      "subtitle": "Stock control · Opening stock and a delivery",
+      "type": "lesson",
+      "primary": {
+        "label": "Next step",
+        "to": "lesson-check"
+      },
+      "secondary": {
+        "label": "I’m stuck",
+        "to": "lesson-hint"
+      },
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "lesson-reading",
+      "group": "Learn",
+      "title": "The same lesson, a quieter view.",
+      "subtitle": "Read the explanation, check the source and try a step at your own pace.",
+      "type": "reading",
+      "primary": {
+        "label": "Try a question",
+        "to": "lesson-check"
+      },
+      "secondary": {
+        "label": "Return to the classroom",
+        "to": "lesson"
+      },
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "lesson-source",
+      "group": "Learn",
+      "title": "Check where the idea comes from.",
+      "subtitle": "The highlighted passage supports this step. A citation is not an official marking memo.",
+      "type": "source-panel",
+      "primary": {
+        "label": "Return to lesson",
+        "to": "lesson"
+      },
+      "secondary": {
+        "label": "Review source text",
+        "to": "source-review"
+      },
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "lesson-hint",
+      "group": "Learn",
+      "title": "Let’s take a smaller step.",
+      "subtitle": "Your lesson is paused. Your place and notes are kept.",
+      "type": "hint",
+      "primary": {
+        "label": "Try this step",
+        "to": "lesson-check"
+      },
+      "secondary": {
+        "label": "Explain another way",
+        "to": "lesson-diagram"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "lesson-question",
+      "group": "Learn",
+      "title": "What would you like to ask?",
+      "subtitle": "Choose a number, line or object, or type your question below.",
+      "type": "question",
+      "primary": {
+        "label": "Ask Rain",
+        "to": "lesson-answer"
+      },
+      "secondary": {
+        "label": "Use the microphone",
+        "to": "mic-consent"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "lesson-answer",
+      "group": "Learn",
+      "title": "Let’s connect it to your source.",
+      "subtitle": "A short explanation, with the relevant passage close by.",
+      "type": "answer",
+      "primary": {
+        "label": "Return to this step",
+        "to": "lesson"
+      },
+      "secondary": {
+        "label": "Show me an example",
+        "to": "lesson-diagram"
+      },
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "mic-consent",
+      "group": "Learn",
+      "title": "Choose whether to use your microphone.",
+      "subtitle": "Voice questions are optional. You can always type instead.",
+      "type": "mic",
+      "primary": {
+        "label": "Try a voice question",
+        "to": "lesson-listening"
+      },
+      "secondary": {
+        "label": "Type instead",
+        "to": "lesson-question"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "lesson-listening",
+      "group": "Learn",
+      "title": "I’m listening.",
+      "subtitle": "Finish your thought, then choose Send. Stop listening whenever you need.",
+      "type": "listening",
+      "primary": {
+        "label": "Review my words",
+        "to": "lesson-transcript"
+      },
+      "secondary": {
+        "label": "Stop listening",
+        "to": "lesson-question"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "lesson-transcript",
+      "group": "Learn",
+      "title": "Did we get that right?",
+      "subtitle": "Check names, numbers and technical terms before sending.",
+      "type": "transcript",
+      "primary": {
+        "label": "Send question",
+        "to": "lesson-answer"
+      },
+      "secondary": {
+        "label": "Try again",
+        "to": "lesson-listening"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "lesson-video",
+      "group": "Learn",
+      "title": "Another way to see the idea.",
+      "subtitle": "Check the source and choose whether to open this video.",
+      "type": "video",
+      "primary": {
+        "label": "Return to lesson",
+        "to": "lesson"
+      },
+      "secondary": {
+        "label": "Use a diagram instead",
+        "to": "lesson-diagram"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "lesson-diagram",
+      "group": "Learn",
+      "title": "Watch what changes.",
+      "subtitle": "Change one value, then explain why the result changes.",
+      "type": "diagram",
+      "primary": {
+        "label": "Try it yourself",
+        "to": "lesson-check"
+      },
+      "secondary": {
+        "label": "Back to explanation",
+        "to": "lesson"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "lesson-check",
+      "group": "Learn",
+      "title": "Your turn.",
+      "subtitle": "Use the stock record to work out the expected closing quantity.",
+      "type": "quiz",
+      "primary": {
+        "label": "Check my answer",
+        "to": "lesson-feedback"
+      },
+      "secondary": {
+        "label": "Give me a hint",
+        "to": "lesson-hint"
+      },
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "lesson-feedback",
+      "group": "Learn",
+      "title": "Check the working.",
+      "subtitle": "Compare your answer with the record, then try a changed example.",
+      "type": "feedback",
+      "primary": {
+        "label": "See my lesson summary",
+        "to": "lesson-summary"
+      },
+      "secondary": {
+        "label": "Try another question",
+        "to": "lesson-check"
+      },
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "lesson-summary",
+      "group": "Learn",
+      "title": "Keep what clicked.",
+      "subtitle": "Review the idea, the help you used and what to try next.",
+      "type": "summary",
+      "primary": {
+        "label": "Try a workplace case",
+        "to": "case"
+      },
+      "secondary": {
+        "label": "Save my notes",
+        "to": "notes"
+      },
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "notes",
+      "group": "Learn",
+      "title": "My lesson notes",
+      "subtitle": "Add your explanation or a question for next time.",
+      "type": "notes",
+      "primary": {
+        "label": "Save notes",
+        "to": "lesson-summary"
+      },
+      "secondary": {
+        "label": "Download notes",
+        "to": "download-notes"
+      },
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "download-notes",
+      "group": "Learn",
+      "title": "Take a copy with you.",
+      "subtitle": "Your notes include source references and your practice record.",
+      "type": "export-notes",
+      "primary": {
+        "label": "Download notes",
+        "to": "notes"
+      },
+      "secondary": null,
+      "existing": "/learn",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "save-offline",
+      "group": "Learn",
+      "title": "Choose what to save.",
+      "subtitle": "Saved reading can work without a connection. New answers and media may still need data.",
+      "type": "offline-save",
+      "primary": {
+        "label": "Save reading copy",
+        "to": "offline-library"
+      },
+      "secondary": {
+        "label": "Not now",
+        "to": "lesson-summary"
+      },
+      "existing": "/home",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "offline-library",
+      "group": "Home & material",
+      "title": "Saved for later",
+      "subtitle": "Reading copies and notes on this device. Check the saved date before relying on them.",
+      "type": "offline-library",
+      "primary": {
+        "label": "Open saved reading",
+        "to": "offline-reading"
+      },
+      "secondary": {
+        "label": "Manage downloads",
+        "to": "settings-downloads"
+      },
+      "existing": "/home",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "offline-reading",
+      "group": "Learn",
+      "title": "Keep learning with what is saved.",
+      "subtitle": "This copy is available on this device. New questions will wait for a connection.",
+      "type": "offline-reader",
+      "primary": {
+        "label": "Save my reading notes",
+        "to": "offline-library"
+      },
+      "secondary": {
+        "label": "Write a question for later",
+        "to": "lesson-question"
+      },
+      "existing": "/home",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "engineering",
+      "group": "Studios & practice",
+      "title": "Inside an electric motor.",
+      "subtitle": "Select a part, look inside and see how its job connects to the whole.",
+      "type": "engineering",
+      "primary": {
+        "label": "Show the parts apart",
+        "to": "engineering-exploded"
+      },
+      "secondary": {
+        "label": "Try a calculation",
+        "to": "engineering-check"
+      },
+      "existing": "/engineering",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "engineering-exploded",
+      "group": "Studios & practice",
+      "title": "See how the parts fit.",
+      "subtitle": "The stator stays still. The rotor turns inside it.",
+      "type": "engineering-exploded",
+      "primary": {
+        "label": "See it operating",
+        "to": "engineering-operating"
+      },
+      "secondary": {
+        "label": "Reassemble",
+        "to": "engineering"
+      },
+      "existing": "/engineering",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "engineering-operating",
+      "group": "Studios & practice",
+      "title": "Change one condition.",
+      "subtitle": "Observe the illustrative operating field, then predict what happens next.",
+      "type": "engineering-operating",
+      "primary": {
+        "label": "Try a calculation",
+        "to": "engineering-check"
+      },
+      "secondary": {
+        "label": "Pause and inspect",
+        "to": "engineering"
+      },
+      "existing": "/engineering",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "engineering-check",
+      "group": "Studios & practice",
+      "title": "Connect the model to the maths.",
+      "subtitle": "Calculate synchronous speed from frequency and the number of poles.",
+      "type": "engineering-quiz",
+      "primary": {
+        "label": "Check calculation",
+        "to": "practice-feedback"
+      },
+      "secondary": {
+        "label": "Back to motor",
+        "to": "engineering"
+      },
+      "existing": "/engineering",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "computer-science",
+      "group": "Studios & practice",
+      "title": "What happens after a click?",
+      "subtitle": "Follow a request from the browser to a query, then back to your screen.",
+      "type": "computer-science",
+      "primary": {
+        "label": "Send a request",
+        "to": "request-trace"
+      },
+      "secondary": {
+        "label": "Open a guided lesson",
+        "to": "lesson"
+      },
+      "existing": "/",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "request-trace",
+      "group": "Studios & practice",
+      "title": "Follow the request.",
+      "subtitle": "Inspect the route, the parameter and the rows returned.",
+      "type": "trace",
+      "primary": {
+        "label": "Try a changed request",
+        "to": "computer-science"
+      },
+      "secondary": {
+        "label": "Save this explanation",
+        "to": "notes"
+      },
+      "existing": "/",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "studio-unavailable",
+      "group": "Studios & practice",
+      "title": "This studio is still being prepared.",
+      "subtitle": "You can learn from reviewed reading and diagrams while a specialist environment is developed.",
+      "type": "unavailable",
+      "primary": {
+        "label": "Use reading view",
+        "to": "lesson-reading"
+      },
+      "secondary": {
+        "label": "See available studios",
+        "to": "studios"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "practice",
+      "group": "Studios & practice",
+      "title": "Practise something useful.",
+      "subtitle": "Choose a case, make a decision and keep the work that shows your reasoning.",
+      "type": "practice",
+      "primary": {
+        "label": "Open the stock case",
+        "to": "case"
+      },
+      "secondary": {
+        "label": "Try a service-data task",
+        "to": "project"
+      },
+      "existing": "/cases",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "case",
+      "group": "Studios & practice",
+      "title": "The shelf count is short.",
+      "subtitle": "Reconcile the records before deciding what to tell the next shift.",
+      "type": "case",
+      "primary": {
+        "label": "Review my decision",
+        "to": "practice-feedback"
+      },
+      "secondary": {
+        "label": "Ask for a hint",
+        "to": "lesson-hint"
+      },
+      "existing": "/practice",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "practice-feedback",
+      "group": "Studios & practice",
+      "title": "Make the evidence clear.",
+      "subtitle": "Review your working and which claims the records actually support.",
+      "type": "practice-feedback",
+      "primary": {
+        "label": "Save this work",
+        "to": "evidence-detail"
+      },
+      "secondary": {
+        "label": "Try the case again",
+        "to": "case"
+      },
+      "existing": "/evidence",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "evidence",
+      "group": "Evidence & direction",
+      "title": "Work you can explain.",
+      "subtitle": "Keep projects, practice and feedback with the conditions under which you completed them.",
+      "type": "evidence",
+      "primary": {
+        "label": "Review stock reconciliation",
+        "to": "evidence-detail"
+      },
+      "secondary": {
+        "label": "Start a project",
+        "to": "projects"
+      },
+      "existing": "/evidence",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "evidence-detail",
+      "group": "Evidence & direction",
+      "title": "Stock reconciliation",
+      "subtitle": "A practice record with your reasoning, feedback and source.",
+      "type": "evidence-detail",
+      "primary": {
+        "label": "Add to my portfolio",
+        "to": "portfolio"
+      },
+      "secondary": {
+        "label": "Review sharing",
+        "to": "share-evidence"
+      },
+      "existing": "/evidence",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "portfolio",
+      "group": "Evidence & direction",
+      "title": "Your work, in one place.",
+      "subtitle": "Choose the work you want to show. Practice is not employment or an accredited credential.",
+      "type": "portfolio",
+      "primary": {
+        "label": "Review sharing",
+        "to": "share-evidence"
+      },
+      "secondary": {
+        "label": "Build my CV",
+        "to": "cv-edit"
+      },
+      "existing": "/evidence",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "share-evidence",
+      "group": "Evidence & direction",
+      "title": "Choose what someone can see.",
+      "subtitle": "Review each item before creating a share or export. Private notes are excluded unless you add them.",
+      "type": "share",
+      "primary": {
+        "label": "Prepare selected export",
+        "to": "share-ready"
+      },
+      "secondary": {
+        "label": "Keep it private",
+        "to": "portfolio"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "share-ready",
+      "group": "Evidence & direction",
+      "title": "Review your sharing choices.",
+      "subtitle": "No public link is created until a supported sharing service is enabled and you confirm.",
+      "type": "share-ready",
+      "primary": {
+        "label": "Return to my portfolio",
+        "to": "portfolio"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "progress",
+      "group": "Evidence & direction",
+      "title": "See what is becoming clearer.",
+      "subtitle": "Look at your attempts and independent practice, then choose a useful next step.",
+      "type": "progress",
+      "primary": {
+        "label": "Try a changed example",
+        "to": "practice"
+      },
+      "secondary": {
+        "label": "View my evidence",
+        "to": "evidence"
+      },
+      "existing": "/progress",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "direction",
+      "group": "Evidence & direction",
+      "title": "Find a direction that fits.",
+      "subtitle": "Start with your interests and work you can show. You do not need a job title yet.",
+      "type": "direction",
+      "primary": {
+        "label": "Explore business analyst",
+        "to": "role"
+      },
+      "secondary": {
+        "label": "I’m not sure yet",
+        "to": "direction-discover"
+      },
+      "existing": "/pathways",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "direction-discover",
+      "group": "Evidence & direction",
+      "title": "Start with what you enjoy doing.",
+      "subtitle": "Choose tasks you are curious about. These are suggestions, not a test of your potential.",
+      "type": "interests",
+      "primary": {
+        "label": "See possible directions",
+        "to": "direction"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "role",
+      "group": "Evidence & direction",
+      "title": "What does this role ask for?",
+      "subtitle": "Compare a dated role brief with your confirmed skills and work.",
+      "type": "role",
+      "primary": {
+        "label": "Build my preparation plan",
+        "to": "role-plan"
+      },
+      "secondary": {
+        "label": "See the requirement evidence",
+        "to": "role-sources"
+      },
+      "existing": "/pathways",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "role-sources",
+      "group": "Evidence & direction",
+      "title": "Check the role evidence.",
+      "subtitle": "Requirements can change. Verify the current posting before applying.",
+      "type": "role-sources",
+      "primary": {
+        "label": "Return to role",
+        "to": "role"
+      },
+      "secondary": null,
+      "existing": "/pathways",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "role-plan",
+      "group": "Evidence & direction",
+      "title": "Build towards the role.",
+      "subtitle": "Turn each gap into a lesson, a practical task and work you can review.",
+      "type": "role-plan",
+      "primary": {
+        "label": "Start the first project",
+        "to": "project"
+      },
+      "secondary": {
+        "label": "Open related lessons",
+        "to": "library"
+      },
+      "existing": "/pathways",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "projects",
+      "group": "Evidence & direction",
+      "title": "Build work worth discussing.",
+      "subtitle": "Practise with public or synthetic data and explain your decisions.",
+      "type": "projects",
+      "primary": {
+        "label": "Open service-data project",
+        "to": "project"
+      },
+      "secondary": null,
+      "existing": "/cases",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "project",
+      "group": "Evidence & direction",
+      "title": "Make a service queue easier to understand.",
+      "subtitle": "Inspect a synthetic dataset, find quality issues and explain the effect on a report.",
+      "type": "project",
+      "primary": {
+        "label": "Review my project",
+        "to": "practice-feedback"
+      },
+      "secondary": {
+        "label": "Open task tools",
+        "to": "tools"
+      },
+      "existing": "/evidence",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "cv-import",
+      "group": "Evidence & direction",
+      "title": "Bring your experience into view.",
+      "subtitle": "A CV can help fill your profile. Check every extracted detail before using it.",
+      "type": "cv-import",
+      "primary": {
+        "label": "Review extracted details",
+        "to": "cv-edit"
+      },
+      "secondary": {
+        "label": "Start without a CV",
+        "to": "cv-edit"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "cv-edit",
+      "group": "Evidence & direction",
+      "title": "Put your experience into your own words.",
+      "subtitle": "Only include details you can confirm. Projects and practice stay distinct from employment.",
+      "type": "cv-edit",
+      "primary": {
+        "label": "Review my CV",
+        "to": "cv-review"
+      },
+      "secondary": {
+        "label": "Import a CV",
+        "to": "cv-import"
+      },
+      "existing": "/cv",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "cv-review",
+      "group": "Evidence & direction",
+      "title": "Check before you share.",
+      "subtitle": "Use clear headings and truthful evidence. Follow the employer’s requested file format.",
+      "type": "cv-review",
+      "primary": {
+        "label": "Save my CV draft",
+        "to": "opportunities"
+      },
+      "secondary": {
+        "label": "Edit details",
+        "to": "cv-edit"
+      },
+      "existing": "/cv",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "opportunities",
+      "group": "Evidence & direction",
+      "title": "Find somewhere to use your skills.",
+      "subtitle": "Explore jobs, WIL, volunteering, hackathons and bursaries. Check dates and eligibility.",
+      "type": "opportunities",
+      "primary": {
+        "label": "Review an opportunity",
+        "to": "opportunity"
+      },
+      "secondary": {
+        "label": "Prepare my CV",
+        "to": "cv-edit"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "opportunity",
+      "group": "Evidence & direction",
+      "title": "Check the opportunity before you act.",
+      "subtitle": "Read the original source, deadline, eligibility and information requested.",
+      "type": "opportunity",
+      "primary": {
+        "label": "Prepare my application",
+        "to": "application-review"
+      },
+      "secondary": {
+        "label": "Back to opportunities",
+        "to": "opportunities"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "application-review",
+      "group": "Evidence & direction",
+      "title": "Review what would be shared.",
+      "subtitle": "Confirm the destination, document and personal details before any external action.",
+      "type": "approval",
+      "primary": {
+        "label": "Keep as a draft",
+        "to": "application-status"
+      },
+      "secondary": {
+        "label": "Edit my CV",
+        "to": "cv-edit"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "application-status",
+      "group": "Evidence & direction",
+      "title": "Your application draft",
+      "subtitle": "Prepared does not mean submitted. A confirmed submission needs a receipt from the destination.",
+      "type": "application-status",
+      "primary": {
+        "label": "Return to opportunities",
+        "to": "opportunities"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "tools",
+      "group": "Evidence & direction",
+      "title": "Tools for this task.",
+      "subtitle": "Read data, create a document or inspect a result in a controlled workspace.",
+      "type": "tools",
+      "primary": {
+        "label": "Review a tool request",
+        "to": "tool-permission"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "tool-permission",
+      "group": "Evidence & direction",
+      "title": "Allow only what this task needs.",
+      "subtitle": "Check the action, destination, files and expiry. You can decline.",
+      "type": "tool-permission",
+      "primary": {
+        "label": "Allow this preview action",
+        "to": "tool-result"
+      },
+      "secondary": {
+        "label": "Decline",
+        "to": "tools"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "tool-result",
+      "group": "Evidence & direction",
+      "title": "Review the result.",
+      "subtitle": "Check what changed and the receipt before keeping the output.",
+      "type": "tool-result",
+      "primary": {
+        "label": "Save to my evidence",
+        "to": "evidence"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "notifications",
+      "group": "Home & material",
+      "title": "Your updates",
+      "subtitle": "Keep useful reminders. Choose which ones you want to receive.",
+      "type": "notifications",
+      "primary": {
+        "label": "Continue my lesson",
+        "to": "lesson"
+      },
+      "secondary": {
+        "label": "Change reminders",
+        "to": "settings-notifications"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "profile",
+      "group": "Settings",
+      "title": "Your profile",
+      "subtitle": "Review your goals, course details and the work you choose to show.",
+      "type": "profile",
+      "primary": {
+        "label": "Save profile",
+        "to": "home"
+      },
+      "secondary": {
+        "label": "Manage privacy",
+        "to": "settings-privacy"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "settings",
+      "group": "Settings",
+      "title": "Make KAIRO work for you.",
+      "subtitle": "Choose your teacher, language, access preferences and what is remembered.",
+      "type": "settings",
+      "primary": {
+        "label": "Open teacher settings",
+        "to": "settings-teacher"
+      },
+      "secondary": null,
+      "existing": "/teacher",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "settings-teacher",
+      "group": "Settings",
+      "title": "Your teacher",
+      "subtitle": "Voice, appearance and language are separate choices.",
+      "type": "teacher-settings",
+      "primary": {
+        "label": "Save teacher preferences",
+        "to": "settings"
+      },
+      "secondary": null,
+      "existing": "/teacher",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "settings-language",
+      "group": "Settings",
+      "title": "Language",
+      "subtitle": "Choose the interface, lesson text and voice separately. Availability may differ.",
+      "type": "languages",
+      "primary": {
+        "label": "Save language choices",
+        "to": "settings"
+      },
+      "secondary": null,
+      "existing": "/teacher",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "settings-access",
+      "group": "Settings",
+      "title": "Accessibility",
+      "subtitle": "Adjust the experience without changing the learning goal.",
+      "type": "accessibility",
+      "primary": {
+        "label": "Save access preferences",
+        "to": "settings"
+      },
+      "secondary": null,
+      "existing": "/teacher",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "settings-appearance",
+      "group": "Settings",
+      "title": "Appearance",
+      "subtitle": "Keep the tone you like, with readable contrast and a comfortable text size.",
+      "type": "appearance",
+      "primary": {
+        "label": "Save appearance",
+        "to": "settings"
+      },
+      "secondary": null,
+      "existing": "/home",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "settings-downloads",
+      "group": "Settings",
+      "title": "Downloads and data",
+      "subtitle": "Choose what to keep on this device and when larger files may download.",
+      "type": "downloads",
+      "primary": {
+        "label": "Save data preferences",
+        "to": "settings"
+      },
+      "secondary": null,
+      "existing": "/home",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "settings-memory",
+      "group": "Settings",
+      "title": "What KAIRO remembers",
+      "subtitle": "Review goals, preferences and saved summaries. You can correct or remove them.",
+      "type": "memory",
+      "primary": {
+        "label": "Save memory choices",
+        "to": "settings"
+      },
+      "secondary": null,
+      "existing": "/home",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "settings-privacy",
+      "group": "Settings",
+      "title": "Privacy and permissions",
+      "subtitle": "Choose what may leave your device and review the services involved.",
+      "type": "privacy",
+      "primary": {
+        "label": "Save privacy choices",
+        "to": "settings"
+      },
+      "secondary": null,
+      "existing": "/teacher",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "settings-connections",
+      "group": "Settings",
+      "title": "Connected services",
+      "subtitle": "Review each service before connecting it. A connection does not allow every action.",
+      "type": "connections",
+      "primary": {
+        "label": "Review a connection",
+        "to": "connection-review"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "connection-review",
+      "group": "Settings",
+      "title": "Review the connection.",
+      "subtitle": "Check the service, data scope and how to disconnect before you continue.",
+      "type": "connection",
+      "primary": {
+        "label": "Keep disconnected",
+        "to": "settings-connections"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "settings-notifications",
+      "group": "Settings",
+      "title": "Notifications",
+      "subtitle": "Choose reminders that help. Quiet hours and turning them off are always available.",
+      "type": "notification-settings",
+      "primary": {
+        "label": "Save reminders",
+        "to": "settings"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "settings-security",
+      "group": "Settings",
+      "title": "Account and security",
+      "subtitle": "Review sign-in methods, recovery and devices with access to your account.",
+      "type": "security",
+      "primary": {
+        "label": "Save security choices",
+        "to": "settings"
+      },
+      "secondary": {
+        "label": "Sign out",
+        "to": "signout"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "settings-export",
+      "group": "Settings",
+      "title": "Take a copy of your data.",
+      "subtitle": "Choose the records to include. Exports may contain personal information.",
+      "type": "export",
+      "primary": {
+        "label": "Prepare export",
+        "to": "export-ready"
+      },
+      "secondary": null,
+      "existing": "/progress",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "export-ready",
+      "group": "Settings",
+      "title": "Your export choices",
+      "subtitle": "Review the scope and file type before downloading to this device.",
+      "type": "export-ready",
+      "primary": {
+        "label": "Return to settings",
+        "to": "settings"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "settings-delete",
+      "group": "Settings",
+      "title": "Delete only what you choose.",
+      "subtitle": "Removing a download, clearing this device and deleting an account are different actions.",
+      "type": "delete",
+      "primary": {
+        "label": "Review deletion",
+        "to": "delete-confirm"
+      },
+      "secondary": null,
+      "existing": "/home",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "delete-confirm",
+      "group": "Settings",
+      "title": "Check what would be removed.",
+      "subtitle": "This action should never silently remove other learning records.",
+      "type": "delete-confirm",
+      "primary": {
+        "label": "Keep my data",
+        "to": "settings-delete"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "help",
+      "group": "Settings",
+      "title": "Find your way through.",
+      "subtitle": "Get help with material, lessons, access, voice or saved work.",
+      "type": "help",
+      "primary": {
+        "label": "Send feedback",
+        "to": "feedback"
+      },
+      "secondary": {
+        "label": "Return to my learning",
+        "to": "home"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "feedback",
+      "group": "Settings",
+      "title": "Tell us what got in the way.",
+      "subtitle": "Share only what you choose. Do not include passwords or private source text.",
+      "type": "feedback-form",
+      "primary": {
+        "label": "Save feedback draft",
+        "to": "help"
+      },
+      "secondary": null,
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "signout",
+      "group": "Settings",
+      "title": "Ready to leave this device?",
+      "subtitle": "Choose whether saved downloads should remain here. Keep a copy of unsaved work first.",
+      "type": "signout",
+      "primary": {
+        "label": "Sign out of this preview",
+        "to": "welcome"
+      },
+      "secondary": {
+        "label": "Stay here",
+        "to": "settings-security"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "signed-language",
+      "group": "Settings",
+      "title": "Signed-language support",
+      "subtitle": "Choose reviewed SASL material when it is available for this lesson. Captions and readable text remain separate options.",
+      "type": "signing",
+      "primary": {
+        "label": "Use captions and text",
+        "to": "lesson-reading"
+      },
+      "secondary": {
+        "label": "Back to accessibility",
+        "to": "settings-access"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "extraction-error",
+      "group": "Recovery",
+      "title": "This file could not be read.",
+      "subtitle": "Try a clearer image, an unencrypted document or pasted text. Your earlier material is still here.",
+      "type": "error",
+      "primary": {
+        "label": "Choose another file",
+        "to": "upload"
+      },
+      "secondary": {
+        "label": "Paste text instead",
+        "to": "upload"
+      },
+      "existing": "/sources",
+      "status": "Existing foundation; redesigned integration"
+    },
+    {
+      "id": "service-error",
+      "group": "Recovery",
+      "title": "The teacher cannot answer right now.",
+      "subtitle": "Keep reading your saved source or try again. Your place and notes are kept.",
+      "type": "error",
+      "primary": {
+        "label": "Use reading view",
+        "to": "lesson-reading"
+      },
+      "secondary": {
+        "label": "Try again",
+        "to": "lesson-question"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "session-expired",
+      "group": "Recovery",
+      "title": "Sign in to continue.",
+      "subtitle": "Keep your local draft, then sign in before sending or syncing changes.",
+      "type": "error",
+      "primary": {
+        "label": "Sign in again",
+        "to": "signin"
+      },
+      "secondary": {
+        "label": "Open saved reading",
+        "to": "offline-library"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "save-conflict",
+      "group": "Recovery",
+      "title": "Two versions need a choice.",
+      "subtitle": "Review this device’s draft and the saved version before replacing anything.",
+      "type": "conflict",
+      "primary": {
+        "label": "Keep both drafts",
+        "to": "notes"
+      },
+      "secondary": {
+        "label": "Return without changes",
+        "to": "home"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "storage-error",
+      "group": "Recovery",
+      "title": "This device could not save your changes.",
+      "subtitle": "Download a copy before leaving. Earlier saved work has not been replaced.",
+      "type": "error",
+      "primary": {
+        "label": "Download my notes",
+        "to": "download-notes"
+      },
+      "secondary": {
+        "label": "Manage downloads",
+        "to": "settings-downloads"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "permission-denied",
+      "group": "Recovery",
+      "title": "Microphone access is off.",
+      "subtitle": "You can type your question or change this site’s permission in your browser.",
+      "type": "error",
+      "primary": {
+        "label": "Type my question",
+        "to": "lesson-question"
+      },
+      "secondary": {
+        "label": "Review voice choices",
+        "to": "settings-teacher"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    },
+    {
+      "id": "unsaved",
+      "group": "Recovery",
+      "title": "Keep your changes before you leave.",
+      "subtitle": "Save, download a copy or leave this draft unchanged.",
+      "type": "unsaved",
+      "primary": {
+        "label": "Save and continue",
+        "to": "home"
+      },
+      "secondary": {
+        "label": "Stay on this page",
+        "to": "notes"
+      },
+      "existing": null,
+      "status": "Proposed capability; design only"
+    }
+  ],
+  "journeys": {
+    "First visit": [
+      "welcome",
+      "access",
+      "signup",
+      "verify",
+      "setup-goal",
+      "setup-study",
+      "setup-modules",
+      "setup-language",
+      "setup-access",
+      "setup-profile",
+      "setup-teacher",
+      "setup-ready",
+      "home"
+    ],
+    "Material to lesson": [
+      "home",
+      "upload",
+      "extracting",
+      "source-review",
+      "source-ready",
+      "lesson-plan",
+      "lesson-building",
+      "lesson-ready",
+      "lesson",
+      "lesson-check",
+      "lesson-feedback",
+      "lesson-summary",
+      "notes",
+      "save-offline"
+    ],
+    "Ask the teacher": [
+      "lesson",
+      "lesson-question",
+      "lesson-answer",
+      "lesson-source",
+      "lesson-hint",
+      "lesson-diagram",
+      "mic-consent",
+      "lesson-listening",
+      "lesson-transcript",
+      "lesson-answer",
+      "lesson"
+    ],
+    "Engineering and CS": [
+      "studios",
+      "engineering",
+      "engineering-exploded",
+      "engineering-operating",
+      "engineering-check",
+      "computer-science",
+      "request-trace",
+      "practice",
+      "case",
+      "practice-feedback",
+      "evidence-detail"
+    ],
+    "Evidence to direction": [
+      "progress",
+      "evidence",
+      "evidence-detail",
+      "portfolio",
+      "share-evidence",
+      "direction",
+      "role",
+      "role-plan",
+      "project",
+      "cv-import",
+      "cv-edit",
+      "cv-review",
+      "opportunities",
+      "opportunity",
+      "application-review",
+      "application-status"
+    ],
+    "Settings and access": [
+      "settings",
+      "settings-teacher",
+      "settings-language",
+      "settings-access",
+      "signed-language",
+      "settings-appearance",
+      "settings-downloads",
+      "settings-memory",
+      "settings-privacy",
+      "settings-connections",
+      "connection-review",
+      "settings-notifications",
+      "settings-security",
+      "settings-export",
+      "settings-delete",
+      "signout"
+    ],
+    "Recovery": [
+      "extraction-error",
+      "service-error",
+      "permission-denied",
+      "session-expired",
+      "save-conflict",
+      "storage-error",
+      "unsaved",
+      "offline-library",
+      "offline-reading"
+    ]
+  }
+}

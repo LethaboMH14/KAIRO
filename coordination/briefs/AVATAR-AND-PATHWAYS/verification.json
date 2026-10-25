@@ -1,0 +1,61 @@
+{
+  "checked": "2026-10-21",
+  "assetChecks": [
+    {
+      "id": "rain-v3",
+      "sha256": "passed",
+      "crc": "passed"
+    },
+    {
+      "id": "mpfb-extension",
+      "sha256": "passed",
+      "crc": "passed"
+    },
+    {
+      "id": "studio_small_09",
+      "sha256": "passed",
+      "crc": "not_applicable"
+    },
+    {
+      "id": "autumn_field_puresky",
+      "sha256": "passed",
+      "crc": "not_applicable"
+    },
+    {
+      "id": "human-base-meshes",
+      "sha256": "passed",
+      "crc": "passed"
+    },
+    {
+      "id": "ellie-pose-library",
+      "sha256": "passed",
+      "crc": "passed"
+    },
+    {
+      "id": "quaternius-base-standard",
+      "sha256": "passed",
+      "crc": "passed"
+    }
+  ],
+  "sourceCount": 35,
+  "skillCount": 14,
+  "skillHashes": "passed",
+  "mpfbMeshCreation": "passed",
+  "rainSafeStructuralInspection": "passed",
+  "browser": {
+    "url": "http://127.0.0.1:4191/",
+    "verified": [
+      "FNB historical closure visible",
+      "sample coverage 54% to 71% when testing changed to reported review",
+      "independent calculation 18 feedback",
+      "teacher reference image and seven downloaded assets visible"
+    ],
+    "limits": "Standalone review prototype; no real applications or live feed"
+  },
+  "notPerformed": [
+    "Final character deformation/export acceptance",
+    "SASL validation",
+    "Current-vacancy application",
+    "Paid tool provisioning"
+  ]
+}

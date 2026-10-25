@@ -1,0 +1,50 @@
+KAIRO TeacherProvider deterministic cancellation checks
+Date: 2026-10-23 (Africa/Johannesburg)
+Runner: Node v24.18.0, built-in node:test; installed Vite SSR loader.
+Requested model/effort: gpt-6-luna / low. This client exposed gpt-6 and no effort value; registered honestly as gpt-6 / unknown.
+
+Command (run from studio):
+  node --test tests/narration-cancellation.test.mjs
+
+Provider under test:
+  studio/src/teacher/TeacherProvider.tsx
+  SHA-256 D341A0BA217AFF3BFE1D2B8D9231B8FDE29485DB9E93FB5F8815FDE27B98D44E
+
+Harness:
+  tests/narration-fixtures/provider-harness.mjs
+  Vite configFile:false + middlewareMode:true + ws:false + appType:custom; no listener opened.
+  The SSR loader transforms and invokes the actual TSX TeacherProvider. A test-local hook adapter supplies deterministic useState/useRef/useEffect storage and captured context, with explicitly driven rerenders/effect cleanup. SpeechSynthesis, utterances, Audio, AudioContext, fetch, AbortSignals, animation frames, URL methods, storage and pagehide are synthetic and restored after each test. Unexpected fetch rejects.
+
+Final command result: exit code 1; 13 tests, 12 pass, 1 fail, 0 skipped/cancelled.
+Passing cases: stale browser callbacks after replace/stop; browser pause/resume/stop and missing voice; cloud consent/language gates; delayed AudioContext resume cancellation; abort-ignoring pending fetch and blob cancellation; cloud A/B out-of-order fetch completion; active cloud stop disposes audio/graph/URL/frame and resets signal; cloud pause/resume without refetch; settings-change cancellation; pagehide and provider effect cleanup; actual imported speechChunks transition cancellation.
+
+Expected/actual defect captured by the failing case:
+  A rejected Audio.play() during cloud resume must leave speaking false while showing the existing “Press Read to restart narration.” guidance. Actual provider keeps speaking=true, paused=false, even though resume rejected. Reproduce with the failed-cloud-resume test. This is a production defect report only; shared runtime was not edited.
+
+Limits:
+  This is deterministic provider event/ref logic simulation, not a React renderer, React scheduling/concurrent-render verification, actual browser speech/audio, device, microphone, visual, SourceClassroom route, gesture, or end-to-end acceptance. No browser/headless browser, HTTP listener, real audio, cloud call, dependency installation, deployment, or automation was used. Provider exception paths and active-audio React unmount behavior beyond tested effect cleanup remain untested.
+
+Captured Node test output:
+  ✔ browser replacement ignores late A start/end/error and stop prevents restart
+  ✔ browser pause/resume dispatches synthesis controls; stop clears paused state; unavailable voice does not speak
+  ✔ cloud consent and language mismatch make no fetch or audio construction
+  ✔ stop during delayed AudioContext resume prevents request and playback
+  ✔ abort during pending fetch blocks even an abort-ignoring late response from constructing audio
+  ✔ stop during response.blob aborts the request and ignores an abort-ignoring late blob
+  ✔ out-of-order cloud replacement permits only B to reach audio playback
+  ✔ active cloud stop resets signal and disposes audio, animation, URL and graph
+  ✔ cloud pause/resume uses the active audio element and does not fetch again
+  ✖ failed cloud resume reports retry guidance rather than starting another request
+  ✔ changing teacher settings cancels active cloud audio and disposes its resources
+  ✔ pagehide and provider cleanup cancel pending work and cleanup closes AudioContext
+  ✔ actual speechChunks boundaries are used and stop between chunks cannot request the next chunk
+  ℹ tests 13
+  ℹ pass 12
+  ℹ fail 1
+  ℹ cancelled 0
+  ℹ skipped 0
+
+Failure detail:
+  AssertionError: a rejected resume must not leave provider state claiming narration is active
+  true !== false
+  at tests/narration-cancellation.test.mjs:139:12

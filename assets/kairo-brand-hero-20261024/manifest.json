@@ -1,0 +1,47 @@
+{
+  "generated": "2026-10-24",
+  "actualApplicationScreenshot": false,
+  "exactNativeCharacterRender": false,
+  "files": [
+    {
+      "file": "01-kairo-branded-worlds.png",
+      "bytes": 2257209,
+      "sha256": "d61d8ef8f56992d538485816b274ee71db49730c50ea2454c7e647d0c50b1a93",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated-brand-illustration"
+    },
+    {
+      "file": "02-worlds-clean-background.png",
+      "bytes": 2088790,
+      "sha256": "288abfe56d195f9e2d4f6c0c09fa996d1e3746866585d21ab8fc8cd5da011215",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated-brand-illustration"
+    },
+    {
+      "file": "KAIRO-CREDITS.txt",
+      "bytes": 875,
+      "sha256": "23ebb09840c4199010f00eb5d4c3eb69a8ef1664527d475ee91e71f05d4a6ba5",
+      "kind": "source-vector-copy-or-provenance"
+    },
+    {
+      "file": "kairo-lockup-approved-chalk.svg",
+      "bytes": 1946,
+      "sha256": "ce55816b5ad62932ca89dacd4a94d00da16fd299e15c8b381e4e263786a1d97f",
+      "kind": "source-vector-copy-or-provenance"
+    },
+    {
+      "file": "kairo-symbol-approved-chalk.svg",
+      "bytes": 819,
+      "sha256": "7683ff3b819155ea1814c6fd5094fb1e476fd4ed69275a01a9c7fcc1a924b2ad",
+      "kind": "source-vector-copy-or-provenance"
+    },
+    {
+      "file": "prompts.json",
+      "bytes": 5905,
+      "sha256": "77478187118f28e1e70585fe8fe9ba41b3a09c4670d5b88f62c6f27686df94ea",
+      "kind": "source-vector-copy-or-provenance"
+    }
+  ]
+}

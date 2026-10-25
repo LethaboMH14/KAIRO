@@ -1,0 +1,117 @@
+{
+  "reference": {
+    "file": "design/app-experience-20261023/assets/brand-reference.png",
+    "sha256": "2bfd5fbeac8e43f5701a58b958eed20a04545a4e79f54597fac5c545d1d6390b",
+    "crop": [
+      170,
+      40,
+      395,
+      220
+    ],
+    "levels": {
+      "ink": 65.5154,
+      "paper": 238.20059999999998
+    }
+  },
+  "cut_angle_test": {
+    "lower_leg_deg": 25.89,
+    "foot_cut_deg": 26.43,
+    "arm_cut_deg": 27.03,
+    "note": "free fit chooses each cut angle independently of the leg"
+  },
+  "free": {
+    "params": [
+      82.614,
+      129.532,
+      28.725,
+      156.679,
+      28.309,
+      57.054,
+      85.835,
+      23.0,
+      87.381,
+      99.813,
+      210.219,
+      159.438,
+      13.204,
+      18.545,
+      3.412,
+      8.828,
+      29.897,
+      6.596,
+      13.451,
+      123.846,
+      92.835,
+      207.104,
+      43.846,
+      8.427,
+      15.49,
+      31.119,
+      26.43,
+      27.031
+    ],
+    "loss": 0.008545248870201683,
+    "evaluations": 7667,
+    "seconds": 63.9,
+    "iou": 0.9559724349157733,
+    "mae": 0.025369366802091807,
+    "pixels_differ": 690,
+    "boundary_mean_px": 0.5874183177947998,
+    "boundary_p95_px": 2.0,
+    "boundary_max_px": 2.799999952316284
+  },
+  "regularised": {
+    "params": {
+      "xL": 28.4909,
+      "yA1": 158.0538,
+      "yA2": 55.0877,
+      "xI": 86.7798,
+      "yA4": 98.9879,
+      "theta_deg": 28.6718,
+      "phi_deg": 26.3129,
+      "L5": 138.2634,
+      "L0": 61.1092,
+      "bx": 122.3472,
+      "by": 91.8663,
+      "LB": 97.4499,
+      "width": 30.206,
+      "fillet_bottom_left": 13.8593,
+      "fillet_top_left": 25.9766,
+      "fillet_top": 4.3906,
+      "fillet_inner_joint": 10.3719,
+      "cut_corner": 8.6313
+    },
+    "loss": 0.011122151778260059,
+    "evaluations": 2499,
+    "seconds": 14.4,
+    "iou": 0.9477957500792895,
+    "mae": 0.028926582131410236,
+    "pixels_differ": 823,
+    "boundary_mean_px": 0.7194365859031677,
+    "boundary_p95_px": 2.0,
+    "boundary_max_px": 3.0
+  },
+  "regularised_vs_free": {
+    "iou": 0.9714119019836639,
+    "mae": 0.010683256172839507,
+    "pixels_differ": 441,
+    "boundary_mean_px": 0.40355658531188965,
+    "boundary_p95_px": 1.0,
+    "boundary_max_px": 2.799999952316284
+  },
+  "reversed_panel_check": {
+    "crop": [
+      700,
+      70,
+      885,
+      220
+    ],
+    "scale": 0.7927,
+    "iou": 0.8693881508775332,
+    "mae": 0.06396250475570033,
+    "pixels_differ": 1347,
+    "boundary_mean_px": 1.463131308555603,
+    "boundary_p95_px": 3.196899890899658,
+    "boundary_max_px": 4.196899890899658
+  }
+}

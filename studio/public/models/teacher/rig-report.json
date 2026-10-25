@@ -1,0 +1,174 @@
+{
+  "meshes": [
+    {
+      "name": "Human",
+      "vertices": 11779,
+      "morphs": [
+        "Basis",
+        "browDownRight",
+        "browDownLeft",
+        "mouthFunnel",
+        "eyeLookOutLeft",
+        "eyeLookOutRight",
+        "browInnerUp",
+        "mouthClose",
+        "eyeBlinkLeft",
+        "mouthPucker",
+        "mouthSmileRight",
+        "eyeBlinkRight",
+        "eyeLookInRight",
+        "jawOpen",
+        "mouthSmileLeft",
+        "eyeLookInLeft"
+      ]
+    },
+    {
+      "name": "Human.female_casualsuit01",
+      "vertices": 2377,
+      "morphs": []
+    },
+    {
+      "name": "Human.high-poly",
+      "vertices": 1076,
+      "morphs": [
+        "Basis",
+        "eyeLookOutLeft",
+        "eyeLookOutRight",
+        "eyeLookInRight",
+        "eyeLookInLeft"
+      ]
+    },
+    {
+      "name": "Human.mindfront_eyebrows_02",
+      "vertices": 12243,
+      "morphs": [
+        "Basis",
+        "browDownRight",
+        "browDownLeft",
+        "eyeLookOutLeft",
+        "eyeLookOutRight",
+        "browInnerUp",
+        "eyeBlinkLeft",
+        "mouthSmileRight",
+        "eyeBlinkRight",
+        "eyeLookInRight",
+        "mouthSmileLeft",
+        "eyeLookInLeft"
+      ]
+    },
+    {
+      "name": "Human.mindfront_eyelashes_02",
+      "vertices": 16992,
+      "morphs": [
+        "Basis",
+        "browDownRight",
+        "browDownLeft",
+        "eyeLookOutLeft",
+        "eyeLookOutRight",
+        "mouthPucker",
+        "mouthSmileRight",
+        "eyeLookInRight",
+        "jawOpen",
+        "mouthSmileLeft",
+        "eyeLookInLeft",
+        "eyeBlinkLeft",
+        "eyeBlinkRight"
+      ]
+    },
+    {
+      "name": "Human.ponytail01",
+      "vertices": 3902,
+      "morphs": []
+    },
+    {
+      "name": "Human.teeth_base",
+      "vertices": 4494,
+      "morphs": [
+        "Basis",
+        "jawOpen"
+      ]
+    },
+    {
+      "name": "Human.tongue01",
+      "vertices": 253,
+      "morphs": [
+        "Basis",
+        "jawOpen"
+      ]
+    },
+    {
+      "name": "Icosphere",
+      "vertices": 42,
+      "morphs": []
+    }
+  ],
+  "bones": [
+    "Hips",
+    "LeftUpLeg",
+    "LeftButtock",
+    "LeftLeg",
+    "LeftFoot",
+    "LeftToeBase",
+    "RightUpLeg",
+    "RightButtock",
+    "RightLeg",
+    "RightFoot",
+    "RightToeBase",
+    "Spine",
+    "Spine1",
+    "LeftBreast",
+    "RightBreast",
+    "Spine2",
+    "LeftShoulder",
+    "LeftArm",
+    "LeftForeArm",
+    "LeftHand",
+    "LeftHandIndex1",
+    "LeftHandIndex2",
+    "LeftHandIndex3",
+    "LeftHandMiddle1",
+    "LeftHandMiddle2",
+    "LeftHandMiddle3",
+    "LeftHandPinky1",
+    "LeftHandPinky2",
+    "LeftHandPinky3",
+    "LeftHandRing1",
+    "LeftHandRing2",
+    "LeftHandRing3",
+    "LeftHandThumb1",
+    "LeftHandThumb2",
+    "LeftHandThumb3",
+    "Neck",
+    "Head",
+    "Jaw",
+    "LeftEye",
+    "LeftOrbicularisBottom",
+    "LeftOrbicularisTop",
+    "RightEye",
+    "RightOrbicularisBottom",
+    "RightOrbicularisTop",
+    "PonytailRoot",
+    "Ponytail1",
+    "Ponytail2",
+    "Ponytail3",
+    "RightShoulder",
+    "RightArm",
+    "RightForeArm",
+    "RightHand",
+    "RightHandIndex1",
+    "RightHandIndex2",
+    "RightHandIndex3",
+    "RightHandMiddle1",
+    "RightHandMiddle2",
+    "RightHandMiddle3",
+    "RightHandPinky1",
+    "RightHandPinky2",
+    "RightHandPinky3",
+    "RightHandRing1",
+    "RightHandRing2",
+    "RightHandRing3",
+    "RightHandThumb1",
+    "RightHandThumb2",
+    "RightHandThumb3"
+  ]
+}

@@ -1,0 +1,17 @@
+✔ load actual panel through installed Vite SSR (325.0444ms)
+✔ unknown time estimate, capability, session-only notice and clear first action render (9.9079ms)
+✔ save wording describes capability only and gives a conditional next step when unavailable (1.8004ms)
+✔ invalid saved step does not offer resume; valid saved step offers resume and fresh start (1.1957ms)
+✔ changed source blocks begin/resume and offers review; unavailable source gates retry callback (2.3822ms)
+✔ busy state disables controls and guards callbacks even if called directly (0.9936ms)
+✔ malicious learner-facing text is escaped and repeated panels have no fixed IDs (2.4302ms)
+✔ semantic labels and status are native; visible percentage guard excludes styles (2.6987ms)
+✔ close SSR server (4.0172ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1073.429

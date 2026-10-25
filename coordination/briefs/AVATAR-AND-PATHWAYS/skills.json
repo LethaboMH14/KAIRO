@@ -1,0 +1,132 @@
+{
+  "checked": "2026-10-21",
+  "scope": "Project-local Claude Code guidance; not browser Design runtime tools",
+  "items": [
+    {
+      "name": "docx",
+      "path": ".claude/skills/docx",
+      "origin": "https://github.com/anthropics/skills",
+      "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Anthropic source-available service terms",
+      "entrySha256": "8017469ea95fb7d28225c62daf8e2f3492a7b516fc64c18c28977cbf8980b7fe",
+      "fileCount": 61
+    },
+    {
+      "name": "frontend-design",
+      "path": ".claude/skills/frontend-design",
+      "origin": "existing project skill",
+      "revision": null,
+      "license": "See bundled source/licence",
+      "entrySha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "fileCount": 2
+    },
+    {
+      "name": "kairo-avatar-production",
+      "path": ".claude/skills/kairo-avatar-production",
+      "origin": "KAIRO project-authored",
+      "revision": null,
+      "license": "Project guidance",
+      "entrySha256": "8ce151d0fb0ab8cb20eb9a3056b08b4c666724d91271f468e395116aa9a4bbcb",
+      "fileCount": 1
+    },
+    {
+      "name": "pdf",
+      "path": ".claude/skills/pdf",
+      "origin": "https://github.com/anthropics/skills",
+      "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Anthropic source-available service terms",
+      "entrySha256": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+      "fileCount": 12
+    },
+    {
+      "name": "remotion-best-practices",
+      "path": ".claude/skills/remotion-best-practices",
+      "origin": "https://github.com/remotion-dev/skills",
+      "revision": "039e8a2fc78b67efc228d5645367838b85818a1c",
+      "license": "See bundled source/licence",
+      "entrySha256": "db0a72a3eb8830b89a684d8c57849f65564e6aa70763c97288b86c2e964faf88",
+      "fileCount": 144
+    },
+    {
+      "name": "threejs-animation",
+      "path": ".claude/skills/threejs-animation",
+      "origin": "existing project skill",
+      "revision": null,
+      "license": "See bundled source/licence",
+      "entrySha256": "0ab1b79cb977a1b5b03b247f9ef677acc76c3ee80d42904afb1b66838a19c481",
+      "fileCount": 1
+    },
+    {
+      "name": "threejs-fundamentals",
+      "path": ".claude/skills/threejs-fundamentals",
+      "origin": "existing project skill",
+      "revision": null,
+      "license": "See bundled source/licence",
+      "entrySha256": "cb6a0db8f05bb7d8196cad0ca6ae245e2baec53da4675e1b94be4fa735ed8a09",
+      "fileCount": 1
+    },
+    {
+      "name": "threejs-interaction",
+      "path": ".claude/skills/threejs-interaction",
+      "origin": "existing project skill",
+      "revision": null,
+      "license": "See bundled source/licence",
+      "entrySha256": "46f60f3235aa11f2b89320cc2fb5b0adc167f3e8f0c717ba60ad1b006b41621f",
+      "fileCount": 1
+    },
+    {
+      "name": "threejs-lighting",
+      "path": ".claude/skills/threejs-lighting",
+      "origin": "existing project skill",
+      "revision": null,
+      "license": "See bundled source/licence",
+      "entrySha256": "f12faf79625a7f42952124a5456d338e8399a65e16326c1a6a3239aa8e5ce489",
+      "fileCount": 1
+    },
+    {
+      "name": "threejs-loaders",
+      "path": ".claude/skills/threejs-loaders",
+      "origin": "existing project skill",
+      "revision": null,
+      "license": "See bundled source/licence",
+      "entrySha256": "ddf6ed2d7dfc809ce722482541fe88af7d349cd8066a4617fabaea865a2a831d",
+      "fileCount": 1
+    },
+    {
+      "name": "threejs-materials",
+      "path": ".claude/skills/threejs-materials",
+      "origin": "existing project skill",
+      "revision": null,
+      "license": "See bundled source/licence",
+      "entrySha256": "7d17cefac80196f3dd5068e2042e66244073925d24a55b7ca77534d594c5bc81",
+      "fileCount": 1
+    },
+    {
+      "name": "threejs-postprocessing",
+      "path": ".claude/skills/threejs-postprocessing",
+      "origin": "https://github.com/CloudAI-X/threejs-skills",
+      "revision": "0e181866f095b5f06d005133876e926515390d95",
+      "license": "See bundled source/licence",
+      "entrySha256": "0063f5f544215748ed666d878f1d69112094e662792228445a3ab9a56d209fb1",
+      "fileCount": 1
+    },
+    {
+      "name": "threejs-shaders",
+      "path": ".claude/skills/threejs-shaders",
+      "origin": "https://github.com/CloudAI-X/threejs-skills",
+      "revision": "0e181866f095b5f06d005133876e926515390d95",
+      "license": "See bundled source/licence",
+      "entrySha256": "8dc55ed6cc348abaad60851ae9f3f5ebcc6e3027dd7f7a55acc1832c73f11bca",
+      "fileCount": 1
+    },
+    {
+      "name": "webapp-testing",
+      "path": ".claude/skills/webapp-testing",
+      "origin": "https://github.com/anthropics/skills",
+      "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Apache-2.0",
+      "entrySha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+      "fileCount": 6
+    }
+  ]
+}
