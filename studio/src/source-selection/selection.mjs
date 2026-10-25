@@ -13,8 +13,14 @@ function shape(value){
 
 export function reviewedChoice(source){
   if(!shape(source)||!ID.test(source.id||'')||source.reviewed!==true||
-     !REV.test(source.revision||'')||!Array.isArray(source.reviewedPages)||
-     source.reviewedPages.length<1||source.reviewedPages.length>100)return null;
+     source.deleted===true||source.revoked===true||
+     !REV.test(source.revision||''))return null;
+  // Authenticated /catalog v1 contains only reviewedSectionCount, not private
+  // page text. Older caller snapshots retain reviewedPages. Neither browser
+  // representation is trusted by the server during actual lesson generation.
+  const count=Array.isArray(source.reviewedPages)
+    ?source.reviewedPages.length:source.reviewedSectionCount;
+  if(!Number.isInteger(count)||count<1||count>120)return null;
   return {sourceId:source.id,revision:source.revision,
     title:typeof source.title==='string'&&source.title.trim()
       ?source.title.trim().slice(0,120):'Untitled reviewed source'};
