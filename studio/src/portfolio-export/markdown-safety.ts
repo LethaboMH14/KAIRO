@@ -12,5 +12,6 @@ export function escapePortfolioMarkdown(value: string): string {
     .replace(/([\\`*_{}\[\]()#!|~])/g, '\\$1')
     // Escape a list/rule marker only at the start of a physical line.
     .replace(/(^|\n)([ \t]{0,3})([-+])(?=\s|[-+]{2,}(?:\s|$))/g, '$1$2\\$3')
+    .replace(/(^|\n)([ \t]{0,3})(={2,})(?=\s*(?:\n|$))/g, '$1$2\\$3')
     .replace(/(^|\n)([ \t]{0,3})(\d{1,9})\.(?=\s)/g, '$1$2$3\\.');
 }
