@@ -105,8 +105,9 @@ export function replaySession(value) {
     const key = scenarioKey(action);
     if (seen.has(key)) throw new RangeError('Two attempts must use different ranking scenarios');
     seen.add(key);
-    const result = evaluateScenario(action);
-    if (result.observed !== independentOracle(action)) throw new Error('Ranking model/oracle disagreement');
+    const scenario = { boardId: action.boardId, functionId: action.functionId, targetId: action.targetId };
+    const result = evaluateScenario(scenario);
+    if (result.observed !== independentOracle(scenario)) throw new Error('Ranking model/oracle disagreement');
     attempts.push(Object.freeze({ ...action, id: 'local-' + (attempts.length + 1), key,
       observed: result.observed, correct: action.prediction === result.observed,
       verification: 'local-unverified' }));
