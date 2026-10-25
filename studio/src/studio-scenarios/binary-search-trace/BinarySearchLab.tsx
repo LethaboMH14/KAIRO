@@ -1,6 +1,6 @@
 import { useId, useState } from 'react';
 import {
-  ARRAYS, commitAttempt, lowerBound, MODEL_VERSION, newSession,
+  ARRAYS, commitAttempt, MODEL_VERSION, newSession,
   PREPARED_SOURCE, traceScenario,
 } from './model';
 import type { ArrayId, Attempt, Prediction, Scenario, SearchTrace, Session } from './model';
@@ -76,7 +76,7 @@ export default function BinarySearchLab({ onLocalAttempt }: BinarySearchLabProps
       <p>Binary search can find the <strong>first insertion position</strong> in an already sorted list.
         Predict the index before seeing the answer. Duplicates, missing values and an empty list behave differently.</p>
       <p><strong>Prepared educational model:</strong> {MODEL_VERSION}. Indexes start at 0; the upper search bound is exclusive.
-        This trace illustrates lower-bound binary search, not a live program debugger or an authenticated learner lesson.</p>
+        This trace illustrates lower-bound binary search, not a live program debugger or an authenticated learner lesson. Local, unverified attempts are not saved to your KAIRO account.</p>
       <details>
         <summary>Concept source and limitations</summary>
         <p><a href={PREPARED_SOURCE.url} target="_blank" rel="noreferrer">{PREPARED_SOURCE.title}</a> — revision {PREPARED_SOURCE.revision}.</p>
