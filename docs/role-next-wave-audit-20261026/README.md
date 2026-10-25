@@ -1,0 +1,44 @@
+# Role evidence journey audit
+
+**Date:** 26 October 2026
+
+**Task:** `ROLE-NEXT-WAVE-AUDIT-20261026-A`
+
+**Judging criteria:** Product, Usability, Intelligence, Presentation
+
+**Learner need:** A learner comparing a dated role requirement with actual practice needs to see the source wording, understand exactly what a practice link does and does not show, carry the chosen requirement into a useful next lesson, and keep any later CV claims under applicant control.
+
+This is a read-only audit on current `origin/main` (`1310eba`) plus a synthetic local preview. It did not edit application/runtime source or use real personal data. Stored opportunity facts below are transcribed from the repository records; provider pages were not reopened, so current availability remains whatever the record states (`unknown` for BMW and Siemens).
+
+## Prioritized findings
+
+| Priority | Learner-visible issue | Source-grounded evidence | Proposed interface / acceptance |
+| --- | --- | --- | --- |
+| **P1 — source inspectability** | The source record stores a short exact excerpt, but the requirement adapter drops it and the panel shows only a paraphrased label, source locator/title, checked date and external link. A learner must leave KAIRO to inspect the supporting words. | BMW record has `sourceExcerpt` at `studio/data/role-opportunities/engineering.json:14-19, 21-26`; `roleGapRows` returns only label/title/URL/date at `studio/src/role-gap-host/model.ts:34-43`; the actual panel renders those fields but has no excerpt field at `studio/src/evidence-gap-ui/EvidenceGapPanel.tsx:164-172`. The read-only browser screenshot `direction-role-bridge.png` shows the same. | Add a bounded `sourceExcerpt` field to the evidence-row contract and render it as a short attributed quotation, with source locator, checked date and original-page link together. Acceptance: the exact stored snippet is visible in actual SSR and remains separately attributed to its provider; unreviewed records stay non-actionable. |
+| **P1 — source-review revocation** | If a skill link exists and the role record later becomes `requirementsReviewed: false`, the evidence adapter still reports `linked`. The host disables actions and warns that indexed details need review, but the existing row can still look current. | `requirementsReviewed` is optional on `RoleProgramme` (`studio/src/role-gap-host/model.ts:2`); current-link logic at `:38-41` checks requirement text, URL, date and artifact, but not that review flag. The host's fail-closed notice/action gate is at `studio/src/role-gap-host/EngineeringRoleBridge.tsx:15,28-29`. Synthetic test `role-next-wave-audit.test.mjs` reproduces a linked status after review is revoked. | Include review state in link-currentness. When a requirement is unreviewed, show the saved item as needs-review while preserving it for inspection; never silently delete the learner's link. Acceptance: `requirementsReviewed:false` cannot yield “Evidence linked” or enable a link/goal action. |
+| **P1 — next-lesson context** | “Use this as my learning goal” stores only a free-text `goal` and role title, then offers a generic `/sources` link. The selected requirement ID, source URL, source locator and source check date do not travel into My material, so the learner must reconstruct which source to choose. | `useGoal` posts only `goal`/`roleGoal` (`studio/src/role-gap-host/EngineeringRoleBridge.tsx:19-22`); the next links are generic `/sources`, `/engineering`, `/pump-lab` at `:33`. Read-only browser selection confirmed `/sources` has no requirement context in its href; `browser-result.json` records the available next steps. | Propose a separately typed, optional role-context handoff (stable role/requirement IDs, provider URL, locator and checked date) into My material. Keep source selection and review explicit; do not auto-select or claim a prepared lesson exists. Acceptance: after choosing a requirement, My material explains which requirement prompted the visit and lets the learner inspect/select sources before creating a lesson. |
+| **P2 — two role models on one route** | `/pathways` renders the newer BMW/Siemens requirements bridge and, below it, a different pathway rubric that defaults to a historical FNB graduate advert. The route is reachable from `/direction` as “Review role requirements and evidence.” This does not lose the BMW bridge, but it introduces a second role identity and a separate KAIRO coverage rubric in the same page. | `/direction` links to `/pathways` at `studio/src/learning-flow/RoleDirection.tsx:14`; `/pathways` mounts `EngineeringRoleBridge` and then its own role selector at `studio/src/pathways/RolePathways.tsx:21`; its default is `initialPathway()` at `studio/src/pathways/model.ts:28`. That model defaults to FNB R46834, closed with deadline 2026-08-31 (`:6-8`), while the new engineering record is BMW/Siemens (`engineering.json:4-91`). `pathways-fnb-role.png` shows both systems and the distinct 0% rubric. | Keep one selected role identity across the route, or separate and label the historical KAIRO preparation rubric as a different activity. Do not merge its self-reported coverage into employer requirement evidence. Acceptance: a learner following the `/direction` link sees the same selected role and one clearly named evidence model; historical closed adverts stay labeled and cannot be mistaken for a current opening. |
+| **P2 — CV handoff is manual** | “Shape my CV draft” opens a blank CV workspace; role notes must be pasted manually. This is privacy-safe and avoids promoting a practice link into a CV claim, but it breaks the role → evidence → next task → CV journey unless the learner copies the context themselves. | `/direction` exposes `/cv` at `studio/src/learning-flow/RoleDirection.tsx:14`; `CvWorkspace` initializes `facts`, `target`, and `requirements` empty at `studio/src/cv-workspace/CvWorkspace.tsx:8`, and says notes stay in this tab at `:30,36`. `CvDraft` keeps role requirements applicant-supplied/unverified and excluded from the plain-text CV (`studio/src/cv-draft/model.ts:6-8,113`). The blank route capture is `cv.png`. | Offer an explicit learner-triggered “copy selected role to role notes” handoff carrying provider/date/source reference, while keeping it in `targetRoleRequirements`, never in applicant-confirmed facts. Acceptance: the learner reviews/edits before adding; the plain-text CV still excludes requirements and all unconfirmed facts; no application or employer submission occurs. |
+
+## Confirmed boundaries that should remain
+
+- The stored BMW and Siemens availability values are both `unknown`; the UI says they are not confirmed open. Siemens has `requirementsReviewed: false`, and its actions are gated pending direct review. Do not infer a vacancy or eligibility.
+- A practice link is learner-selected reference, not verified competence. Formal qualification/experience conditions cannot be satisfied by a practice artifact.
+- The historical FNB role is explicitly shown as closed with a past deadline and the pathway coverage is labelled KAIRO's rubric, not an FNB/ATS/hiring score.
+- CV facts are applicant-entered and must be confirmed. Target-role requirements stay outside the text CV.
+
+## Synthetic local browser evidence
+
+Read-only Playwright Chromium, fresh isolated context, 1440×1000. Checked at `2026-10-25T23:16:21Z` (26 October SAST). All three local routes returned 200 with route-specific titles; no page errors; no blocked requests were attempted; no contact-like text or prefilled inputs were detected. The script allowed only local GETs, blocked off-origin/non-GET/model-like requests, and clicked one local requirement chooser to reveal its next-step panel. No save, form submit, role link or provider page was clicked. This is a synthetic local rendering/interaction observation, not remote production, actual-person usability, device acceptance or source-page freshness evidence.
+
+- `/direction`: `direction.png`, `direction-role-bridge.png`, `direction-next-step.png`
+- `/pathways`: `pathways.png`, `pathways-fnb-role.png`
+- `/cv`: `cv.png`
+- Structured route/heading/action record: `browser-result.json`
+- Reproduction script: `capture.mjs`
+
+## Tests
+
+`studio/tests/role-next-wave-audit.test.mjs` uses the real role-gap model, `EvidenceGapPanel`, `RolePathways`, CV draft model and `CvWorkspace` via Vite SSR. The four tests record the current source-excerpt gap, stale-link review-state behavior, mixed role models on `/pathways`, and the safe applicant-only CV boundary. The extra `audit baseline` tests intentionally characterize findings; root should update them with any repair rather than treating current behavior as the target contract.
+
+Verification details are in [`verification.txt`](verification.txt). No production build was run because this package changes tests and documentation only. No app source, host, router, provider, schema, service or deployment was changed.
