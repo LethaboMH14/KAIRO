@@ -9,6 +9,7 @@ import {resolvePassage,validatePassageHelp} from '../workspace/passages.mjs';
 import {generateSourceLesson,generatePassageHelp,cloudConfigured,googleConfiguration} from '../google.mjs';
 import {admit,extractUpload} from './extraction.mjs';
 import {summarizeReviewedSources} from '../source-catalog/reviewed-summary.mjs';
+import {prepareOwnedLessonBundle} from '../owner-retrieval/lesson-contract.mjs';
 const id=()=>randomBytes(12).toString('hex'),idPattern=/^[a-f0-9]{24}$/;
 const fail=(status,message)=>{const e=new Error(message);e.status=status;throw e;};
 export function createLearnerWorkspace({repository:repo,enqueue,extract=extractUpload,clock=()=>Date.now(),generate=generateSourceLesson,generateHelp=generatePassageHelp,reserveGlobal=async()=>{}}={}){
@@ -42,6 +43,19 @@ export function createLearnerWorkspace({repository:repo,enqueue,extract=extractU
  r.delete('/jobs/:id',route(async(req,res)=>{const uid=current(req),saved=await get(uid,'jobs',req.params.id);if(saved.value.status==='ready')fail(409,'This file has already finished. Open the extracted source.');await repo.put(uid,'jobs',req.params.id,{...saved.value,status:'cancelled',cancelledAt:new Date(clock()).toISOString()},{version:saved.version});await repo.removeBlob(uid,req.params.id).catch(()=>{});const orphan=await repo.get(uid,'sources',saved.value.sourceId);if(orphan?.value.importJobId===req.params.id){await repo.remove(uid,'sources',saved.value.sourceId,{version:orphan.version});await repo.removeBlob(uid,saved.value.sourceId).catch(()=>{});}res.json({cancelled:true});}));
  const ai=createAiService({repository:repo,getSource:async(uid,key)=>(await get(uid,'sources',key)).value,getLesson:async(uid,key)=>(await get(uid,'lessons',key)).value,generate,generateHelp});
  r.use(ai.router);
+ // Private, read-only v2 evidence preview. It does not create a lesson or call a provider.
+ r.post('/bundle-preview',route(async(req,res)=>{
+  const uid=current(req),body=req.body;
+  if(!body||typeof body!=='object'||Array.isArray(body)||
+     Object.keys(body).some(key=>!['schemaVersion','sourceRefs','mode','goal'].includes(key))||
+     (body.schemaVersion!==undefined&&body.schemaVersion!==2)||body.mode!=='local')
+   throw new TypeError('Choose local reviewed sources for a private preview.');
+  const bundle=await prepareOwnedLessonBundle({repository:repo,ownerId:uid,request:body,
+    signal:requestSignal(req,res)});
+  res.json({schemaVersion:2,kind:'reviewed-evidence-preview',sourceRefs:bundle.sourceRefs,
+    bundleRevision:bundle.bundleRevision,selection:bundle.selection,evidence:bundle.evidence,
+    notice:'This is a private excerpt preview, not a generated or saved lesson.'});
+ }));
  r.post('/generate',route(async(req,res)=>{const uid=current(req),source=(await get(uid,'sources',req.body?.sourceId)).value;if(!source.reviewed||req.body.revision!==source.revision||hash(source.reviewedPages)!==source.revision)throw new TypeError('Save the current reviewed source first.');const goal=typeof req.body.goal==='string'?req.body.goal.slice(0,1000):'',selected=selectEvidence(source,goal),evidence=selected.evidence,cloud=req.body.mode==='cloud';if(!['local','cloud'].includes(req.body.mode))throw new TypeError('Choose a lesson type.');let raw,aiResult;if(cloud){if(req.body.consent!==true)throw new TypeError('Choose cloud processing consent.');if(!ai.status().providers.some(p=>p.configured))fail(503,'Cloud lesson generation is unavailable.');await quota(uid,'generations',12);await reserveGlobal('generations',60);aiResult=await ai.lesson({uid,source,goal,preferences:req.body.preferences,requestId:req.body.requestId,provider:req.body.provider||'google',providerConsent:req.body.providerConsent||['google'],fallback:req.body.fallback,signal:requestSignal(req,res)});raw=aiResult.value;}else raw=localLesson(source,evidence);const lesson={...raw,id:id(),sourceId:source.id,sourceTitle:source.title,revision:source.revision,createdAt:new Date(clock()).toISOString(),mode:cloud?(aiResult.provider==='google'?'vertex':aiResult.provider):'local-extractive',model:cloud?aiResult.model:null,evidence:aiResult?.selected.evidence||evidence,evidenceSelection:aiResult?.selected.selection||selected.selection,...(aiResult?{curation:aiResult.curation,retrieval:aiResult.selected.retrieval,provider:aiResult.provider}:{}),coverage:`${(aiResult?.selected||selected).selection.selectedCharacters} reviewed characters selected using ${(aiResult?.selected||selected).selection.method}. Limited to 12,000 characters; not full-document semantic analysis.`,reviewWarning:'Source-linked practice, not an official assessment or independently verified explanation.'};await quota(uid,'lessons',40);await repo.put(uid,'lessons',lesson.id,lesson,{create:true});res.json(lesson);}));
  r.get('/lesson/:id',route(async(req,res)=>res.json((await get(current(req),'lessons',req.params.id)).value)));
  r.get('/lesson/:id/draft',route(async(req,res)=>{const uid=current(req),lesson=(await get(uid,'lessons',req.params.id)).value;await at(uid,lesson.sourceId,lesson.revision);const saved=await repo.get(uid,'drafts',req.params.id);res.json(saved?saved.value:{version:0,document:draftFromLesson(lesson),updatedAt:null});}));
