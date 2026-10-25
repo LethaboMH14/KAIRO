@@ -45,3 +45,8 @@ The live `coordination/bus.sqlite3` lives on the owner's local machine. A remote
 
 ## Success condition, not a stopping condition
 Every issue moves: `queued → claimed → in progress → draft PR → CI/review → verified/accepted → integrated`, or `blocked` with accountable owner and prerequisite. Release proof includes a complete learner flow with device, accessibility, privacy and cost evidence. Replan after each accepted wave against all 15 backlog areas, not just the first ten issues. Never mark a broad area complete because a foundation module exists.
+
+## Follow-on engineering infrastructure work
+- [#13 autonomous runner](https://github.com/LethaboMH14/KAIRO/issues/13) — verified event-driven dispatch and durable task state; start offline, no production cloud mutations.
+- [#14 skills manager](https://github.com/LethaboMH14/KAIRO/issues/14) — audited pinned skill/tool registry and isolated sandbox verification; no unreviewed executable downloads.
+Their independent, full copy-paste chat prompts are also included in WORKER-PROMPTS.md. These roles can be spun up after the initial product workers; they are not evidence of any real running service.
