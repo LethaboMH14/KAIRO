@@ -94,10 +94,13 @@ export async function prepareOwnedLessonBundle({repository,ownerId,request,signa
  const ids=new Set();let chars=0;
  for(const e of selected.evidence){
   const src=docs.get(e.sourceId),ref=parsed.sourceRefs.find(x=>x.sourceId===e.sourceId);
-  if(!src||!ref||e.sourceRevision!==ref.revision||typeof e.id!=='string'||!e.id.startsWith(e.sourceId+'-'+ref.revision.slice(0,12)+'-')||
-     ids.has(e.id)||typeof e.quote!=='string'||!e.quote.length||!Number.isSafeInteger(e.start)||!Number.isSafeInteger(e.end)||
-     e.start<0||e.end<=e.start||e.end-e.start!==e.quote.length||typeof e.locator!=='string'||
-     !src.reviewedPages.some(p=>p.locator===e.locator&&p.text.slice(e.start,e.end)===e.quote))
+  const prefix=ref?e.sourceId+'-'+ref.revision.slice(0,12)+'-':'';
+  const anchor=typeof e.id==='string'&&e.id.startsWith(prefix)?/^S([1-9][0-9]*)-(0|[1-9][0-9]*)$/.exec(e.id.slice(prefix.length)):null;
+  const page=anchor&&src?.reviewedPages?.[Number(anchor[1])-1];
+  if(!src||!ref||!page||e.sourceRevision!==ref.revision||ids.has(e.id)||e.title!==src.title||
+     typeof e.quote!=='string'||!e.quote.length||!Number.isSafeInteger(e.start)||!Number.isSafeInteger(e.end)||
+     e.start!==Number(anchor[2])||e.start<0||e.end<=e.start||e.end-e.start!==e.quote.length||
+     e.locator!==page.locator||e.edited!==(page.edited===true)||page.text.slice(e.start,e.end)!==e.quote)
     throw new TypeError('Selected citation has invalid source provenance.');
   ids.add(e.id);chars+=e.quote.length;
  }
