@@ -50,7 +50,7 @@ export function createFencedLocalLessonWriter({firestore}={}){
     const head=root.collection('sources').doc(value.sourceId);
     const archived=root.collection('revisions').doc(value.sourceId+'_'+value.revision);
     const target=root.collection('lessons').doc(value.id);
-    return firestore.runTransaction(async tx=>{
+    try{return await firestore.runTransaction(async tx=>{
       signal?.throwIfAborted();
       // All transactional reads occur before first write.
       const headSnapshot=await tx.get(head);
@@ -59,13 +59,18 @@ export function createFencedLocalLessonWriter({firestore}={}){
       const revision=owned(archiveSnapshot,owner,'revisions',value.sourceId+'_'+value.revision);
       if(!sourceValid(current,value.sourceId,value.revision)||
          !sourceValid(revision,value.sourceId,value.revision)||
-         current.title!==value.sourceTitle||
+         current.title!==value.sourceTitle||revision.title!==current.title||
          hash(current.reviewedPages)!==hash(revision.reviewedPages))throw conflict();
       signal?.throwIfAborted();
       const version=randomUUID();
       tx.create(target,{ownerKey:owner,kind:'lessons',id:value.id,value,version});
       return {id:value.id,value,version};
-    });
+    });}catch(error){
+      // Admin Firestore create() uses gRPC ALREADY_EXISTS (code 6), not HTTP 409.
+      // Normalize only a concrete collision; preserve availability/permission errors.
+      if(error?.code===6||error?.code==='6'||error?.code==='already-exists')throw conflict();
+      throw error;
+    }
   }
   return Object.freeze({save});
 }
