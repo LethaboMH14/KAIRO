@@ -31,6 +31,7 @@ test('two model jobs in 24 hours stops inference; excludes current run from coun
  const runs=[{id:10,event:'schedule',created_at:'2026-10-25T05:00:00Z',status:'completed'},{id:11,event:'workflow_dispatch',created_at:'2026-10-25T04:00:00Z',status:'completed'}];
  assert.equal((await choose({get:api({runs}),now,runId:99})).reason,'daily_job_cap');
  assert.equal((await choose({get:api({runs}),now,runId:11})).issue,49);
+ assert.equal((await choose({get:api({runs}),now,runId:99,manual:49})).issue,49);
 });
 test('prompt generator keeps scope and disclaims Kaggle hosted training',async()=>{
  const dir=await mkdtemp(join(tmpdir(),'kairo-agent-test-'));
