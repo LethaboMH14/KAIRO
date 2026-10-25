@@ -16,7 +16,8 @@ function fixture() {
     locator: 'Page 1', method: 'pasted-text', edited: false }];
   const source = { id: SOURCE_ID, title: 'Synthetic motor reading', reviewed: true,
     reviewedPages: pages, revision: hash(pages) };
-  const lesson = { ...localLesson(source, evidenceFor(source)), id: LESSON_ID,
+  const evidence = evidenceFor(source);
+  const lesson = { ...localLesson(source, evidence), evidence, id: LESSON_ID,
     sourceId: SOURCE_ID, sourceTitle: source.title, revision: source.revision,
     mode: 'local-extractive', createdAt: '2026-10-25T00:00:00Z' };
   const rows = new Map();
