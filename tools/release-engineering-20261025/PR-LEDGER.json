@@ -204,6 +204,278 @@
           "detail": "Not independently accepted for PR #17; proof must be anchored to this exact head."
         }
       }
+    },
+    {
+      "number": 19,
+      "title": "test(security): adversarial owner, revision and consent lifecycle checks",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/19",
+      "state": "open",
+      "draft": true,
+      "headSha": "d9ba1d9b89770b33f977433a933c82ddadcb3fd2",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "Synthetic isolation/security scenarios; new test file not yet run in actual Node 24 checkout.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #19; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #19; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #19; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #19; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #19; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #19; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #19; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #19; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        }
+      }
+    },
+    {
+      "number": 20,
+      "title": "Issue #5: synthetic learner journey and device acceptance harness",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/20",
+      "state": "open",
+      "draft": true,
+      "headSha": "90036269becbf6f4b08c63531defce76c3073bb8",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "Preflight-only; browser execution denied. Source markers are not real-device acceptance.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #20; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #20; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #20; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #20; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #20; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #20; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #20; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #20; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        }
+      }
+    },
+    {
+      "number": 21,
+      "title": "Issue #8: read-only GCP preflight and Azure/HF cost/privacy audit",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/21",
+      "state": "open",
+      "draft": true,
+      "headSha": "20304641ea708adc5631faf48f091c38681477a9",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "Read-only CLI design; no live IAM verification or billing confirmation.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #21; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #21; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #21; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #21; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #21; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #21; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #21; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #21; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        }
+      }
+    },
+    {
+      "number": 22,
+      "title": "feat(rag): versioned, consented owner-scoped lesson bundle contract",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/22",
+      "state": "open",
+      "draft": true,
+      "headSha": "3cd02066799ec0ce1bef337065527e6b2c5ccc8a",
+      "base": "feature/ci-owner-scoped-retrieval-20261025",
+      "dependsOn": [
+        1
+      ],
+      "notes": "Standalone contract only, uses PR #1 retrieval; not wired to live generation or persistence. Shared interface approval pending.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #22; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #22; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #22; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #22; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #22; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #22; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #22; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #22; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        }
+      }
+    },
+    {
+      "number": 23,
+      "title": "test(listening): consented upload cancellation and language-eval fixtures",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/23",
+      "state": "open",
+      "draft": true,
+      "headSha": "da17f3984c96aa03362a7a619da9f61607f4b365",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "Synthetic controller/tests only; not mounted to UI and no microphone/language accuracy acceptance.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #23; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #23; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #23; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #23; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #23; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #23; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #23; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #23; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        }
+      }
+    },
+    {
+      "number": 24,
+      "title": "feat(index): versioned owner-scoped lexical index and measured fixture baseline",
+      "url": "https://github.com/LethaboMH14/KAIRO/pull/24",
+      "state": "open",
+      "draft": true,
+      "headSha": "00da10ea4d8f149bf5acacc9e9c86db01629c4fb",
+      "base": "main",
+      "dependsOn": [],
+      "notes": "Isolated Node sqlite prototype, no persistent managed index or route integration; Node24 tests pending.",
+      "gates": {
+        "ci": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #24; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "tenantIsolation": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #24; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "integration": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #24; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "sourceTruth": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #24; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "humanDevice": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #24; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "performance": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #24; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "independentReview": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #24; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        },
+        "scopeReconciled": {
+          "status": "pending",
+          "detail": "No accepted exact-head evidence for PR #24; focused Node22 tests or static scans are not the required Node24 full branch run and do not replace independent review."
+        }
+      }
     }
   ],
   "releaseCandidate": {
@@ -246,6 +518,7 @@
   "evidenceCautions": [
     "Pass gate records are manually entered from GitHub and must be refreshed from the actual head/run before acceptance. Checker does not query GitHub.",
     "Current green stacked CI is engineering validation only; source/tenant integration, authorization, browser/device and performance acceptance are separate.",
-    "Never infer public access or authorize a deployment from this file."
+    "Never infer public access or authorize a deployment from this file.",
+    "Self-referential Issue #11 PR #25 is intentionally excluded from its own static head-SHA ledger; review PR #25 separately, including its changing head."
   ]
 }
