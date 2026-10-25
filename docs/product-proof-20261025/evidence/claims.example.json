@@ -1,0 +1,20 @@
+{
+  "claims": [
+    {
+      "claimId": "LEARNER-CITATION-001",
+      "statement": "Proposed: KAIRO should show exact source revisions in a saved lesson.",
+      "userJob": "Verify that a lesson explanation matches my reviewed material",
+      "status": "proposed",
+      "publication": "draft",
+      "claimClass": "technical",
+      "authorSession": "example-only",
+      "judgingCriteria": [
+        "Product",
+        "Intelligence",
+        "Usability"
+      ],
+      "sources": [],
+      "evidence": []
+    }
+  ]
+}
