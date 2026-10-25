@@ -34,7 +34,7 @@ node --test tests/opportunity-freshness-wave.test.mjs
 
 Results: `node --check server/opportunity-freshness/index.mjs` exited 0; focused Node suite **12/12 passed, 0 failed**. The first test invocation used paths prefixed with `studio/` while already in `studio/` and could not locate the files; the corrected command above passed. No other suite or build was run.
 
-Inspect only the four claimed files in the worktree diff, commit those paths only, push the dedicated branch, open a draft PR and attach it. If network/repository permissions block publication, retain the local evidence and report the blocker; never stage unowned files.
+`git diff --cached --check` passed before the first commit. Only the four claimed paths were staged and committed as `f362449793cc0c2322774d0574fbc5970d96816a`; the isolated branch was pushed. Draft PR [#74](https://github.com/LethaboMH14/KAIRO/pull/74) targets `main@a2dfc4f10499bcd32ac45548fc6767094b26c8d2` and is attached to this task. Its initial published head was `f362449793cc0c2322774d0574fbc5970d96816a`; this handoff-only accuracy update is part of the same PR branch.
 
 ## Limits / next steps
 
