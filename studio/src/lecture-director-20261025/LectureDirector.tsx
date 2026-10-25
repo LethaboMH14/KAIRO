@@ -35,6 +35,8 @@ export default function LectureDirector(){
  const second=state.cue==='SECOND_ATTEMPT'||state.cue==='COMPLETE';
  const checkedValue=second?correctFor(state,'second',lesson):correctFor(state,'first',lesson);
  const model=fieldSpeed(state.frequencyHz,state.poles);
+ // Deliberately slowed instructional animation; its period varies consistently with validated field speed, not physical rpm.
+ const visualCycleSeconds=model.ok?Math.max(4,Math.min(28,18000/model.rpm)):12;
  const evidence=lesson.sourceRefs.filter(ref=>cue.sourceRefIds.includes(ref.id));
  const canNext=!state.stopped&&!state.paused&&(state.cue==='PAUSE_FOR_PREDICTION'?state.first!==null:state.cue==='SECOND_ATTEMPT'?state.second!==null:state.cue!=='COMPLETE');
  function act(a:Action){
@@ -87,7 +89,7 @@ export default function LectureDirector(){
         <circle cx="205" cy="153" r="138" fill="url(#kld-glow)"/>
         <circle cx="205" cy="153" r="104" fill="none" stroke="#8ca7a4" strokeWidth="19" strokeDasharray="8 4"/>
         <circle cx="205" cy="153" r="91" fill="none" stroke="#c1d4cd" strokeWidth="1.5" strokeDasharray="3 7"/>
-        <g key={state.epoch} className="kld-field-rotation"><ellipse cx="205" cy="153" rx="63" ry="20" fill="#69c9a6" opacity=".15"/><path d="M205 80L224 142L205 132L186 142Z" fill="#e6b37a"/><path d="M205 226L186 163L205 173L224 163Z" fill="#76c6b0"/><text x="205" y="71" textAnchor="middle" fill="#e6b37a" fontSize="13">N</text><text x="205" y="242" textAnchor="middle" fill="#a5e0ce" fontSize="13">S</text></g>
+        <g key={state.epoch} className="kld-field-rotation" style={{animationDuration:visualCycleSeconds+'s'}}><ellipse cx="205" cy="153" rx="63" ry="20" fill="#69c9a6" opacity=".15"/><path d="M205 80L224 142L205 132L186 142Z" fill="#e6b37a"/><path d="M205 226L186 163L205 173L224 163Z" fill="#76c6b0"/><text x="205" y="71" textAnchor="middle" fill="#e6b37a" fontSize="13">N</text><text x="205" y="242" textAnchor="middle" fill="#a5e0ce" fontSize="13">S</text></g>
         <circle cx="205" cy="153" r="29" fill="#123b40" stroke="#8cc8b6" strokeWidth="3"/>
         <circle cx="205" cy="153" r="8" fill="#d7e8d9"/>
         <path d="M100 79H35V50M305 224H376V255" stroke="#c3d6c8" fill="none" strokeWidth="1.5"/>
