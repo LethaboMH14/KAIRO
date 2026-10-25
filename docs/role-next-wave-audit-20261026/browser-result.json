@@ -1,0 +1,199 @@
+{
+  "checkedAt": "2026-10-25T23:16:21.484Z",
+  "target": "local synthetic preview only",
+  "browser": "isolated Playwright Chromium, 1440×1000",
+  "sideEffects": "GET-only local navigation; all non-GET and off-origin requests blocked; no form actions taken",
+  "blocked": [],
+  "errors": [],
+  "pages": [
+    {
+      "path": "/direction",
+      "responseStatus": 200,
+      "title": "KAIRO · My direction",
+      "h1": [
+        "Turn learning into work you can explain."
+      ],
+      "contactLikeTextDetected": false,
+      "prepopulatedInputsDetected": false,
+      "headings": [
+        "Turn learning into work you can explain.",
+        "Try one piece of the work",
+        "Why this connects to your studies",
+        "What can you show?",
+        "Still to investigate",
+        "From engineering study to a direction",
+        "Graduate Development Programme (engineering pathway)",
+        "A degree in Engineering is listed as eligible for the graduate development programme.",
+        "The programme description emphasizes team spirit, initiative and continuous learning.",
+        "Shortlisting considers academic performance and potential fit with company culture."
+      ],
+      "links": [
+        {
+          "text": "Check the module reference",
+          "href": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf"
+        },
+        {
+          "text": "Check the module reference",
+          "href": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf"
+        },
+        {
+          "text": "Try the related activity",
+          "href": "/engineering"
+        },
+        {
+          "text": "",
+          "href": "https://www.onetonline.org/link/summary/17-2141.00"
+        },
+        {
+          "text": "Choose and download my working",
+          "href": "/evidence"
+        },
+        {
+          "text": "Review role requirements and evidence",
+          "href": "/pathways"
+        },
+        {
+          "text": "Shape my CV draft",
+          "href": "/cv"
+        },
+        {
+          "text": "View original requirement",
+          "href": "https://www.bmwgroup.jobs/za/en/opportunities/graduate.html?country=ZA&jobType=GRADUATE_JOB"
+        },
+        {
+          "text": "View original requirement",
+          "href": "https://www.bmwgroup.jobs/za/en/opportunities/graduate.html?country=ZA&jobType=GRADUATE_JOB"
+        },
+        {
+          "text": "View original requirement",
+          "href": "https://www.bmwgroup.jobs/za/en/opportunities/graduate.html?country=ZA&jobType=GRADUATE_JOB"
+        }
+      ],
+      "selectedRequirementStep": {
+        "heading": "The programme description emphasizes team spirit, initiative and continuous learning.",
+        "actions": [
+          {
+            "label": "Link this practice record",
+            "href": null,
+            "disabled": true
+          },
+          {
+            "label": "Use this as my learning goal",
+            "href": null,
+            "disabled": false
+          },
+          {
+            "label": "Open My material",
+            "href": "/sources",
+            "disabled": false
+          },
+          {
+            "label": "Explore the motor",
+            "href": "/engineering",
+            "disabled": false
+          },
+          {
+            "label": "Explore the pump",
+            "href": "/pump-lab",
+            "disabled": false
+          }
+        ],
+        "formControlsAvailable": 2
+      }
+    },
+    {
+      "path": "/pathways",
+      "responseStatus": 200,
+      "title": "KAIRO · From skills to a direction",
+      "h1": [
+        "Find a direction.\nBuild the proof."
+      ],
+      "contactLikeTextDetected": false,
+      "prepopulatedInputsDetected": false,
+      "headings": [
+        "Find a direction.\nBuild the proof.",
+        "From engineering study to a direction",
+        "Graduate Development Programme (engineering pathway)",
+        "A degree in Engineering is listed as eligible for the graduate development programme.",
+        "The programme description emphasizes team spirit, initiative and continuous learning.",
+        "Shortlisting considers academic performance and potential fit with company culture.",
+        "Explore banking graduate work",
+        "Connect the evidence",
+        "Analytical problem solving",
+        "Understand a customer need",
+        "Planning, records and team delivery",
+        "Your evidence coverage",
+        "Your next work",
+        "Analytical problem solving",
+        "Understand a customer need",
+        "Planning, records and team delivery",
+        "Start with work already here",
+        "Keep the evidence useful."
+      ],
+      "links": [
+        {
+          "text": "View original requirement",
+          "href": "https://www.bmwgroup.jobs/za/en/opportunities/graduate.html?country=ZA&jobType=GRADUATE_JOB"
+        },
+        {
+          "text": "View original requirement",
+          "href": "https://www.bmwgroup.jobs/za/en/opportunities/graduate.html?country=ZA&jobType=GRADUATE_JOB"
+        },
+        {
+          "text": "View original requirement",
+          "href": "https://www.bmwgroup.jobs/za/en/opportunities/graduate.html?country=ZA&jobType=GRADUATE_JOB"
+        },
+        {
+          "text": "Inspect FNB R46834",
+          "href": "https://firstrand.wd3.myworkdayjobs.com/en-GB/FRB/job/Johannesburg/FNB-Graduate-Programme_R46834?q=graduate"
+        },
+        {
+          "text": "",
+          "href": "/practice"
+        },
+        {
+          "text": "",
+          "href": "/sources"
+        },
+        {
+          "text": "",
+          "href": "https://learn.github.com/"
+        },
+        {
+          "text": "Open the working shop case",
+          "href": "/practice"
+        },
+        {
+          "text": "Choose your course material",
+          "href": "/sources"
+        },
+        {
+          "text": "Explore GitHub learning",
+          "href": "https://learn.github.com/"
+        },
+        {
+          "text": "Inspect your practice portfolio",
+          "href": "/progress"
+        }
+      ]
+    },
+    {
+      "path": "/cv",
+      "responseStatus": 200,
+      "title": "KAIRO · My CV draft",
+      "h1": [
+        "Put your experience\ninto words."
+      ],
+      "contactLikeTextDetected": false,
+      "prepopulatedInputsDetected": false,
+      "headings": [
+        "Put your experience\ninto words.",
+        "Keep your editable work",
+        "Your details",
+        "Your CV draft",
+        "Your words, ready to review."
+      ],
+      "links": []
+    }
+  ]
+}
