@@ -20,7 +20,9 @@ export async function collectRecentAttempts(request,now=Date.now(),maxPages=MAX_
    const rows=payload.workflow_runs;demand(rows.length<=100,'oversized page');
    demand(payload.total_count>=(page-1)*100+rows.length,'inconsistent history total');
    if(rows.length===0){
-    demand(payload.total_count<=(page-1)*100,'missing history page');
+    // A full previous page with no older page can conceal a provider result cap.
+    // Never infer the 24-hour ledger is complete unless page one is genuinely empty.
+    demand(page===1&&payload.total_count===0,'missing history page before cutoff');
     complete=true;break;
    }
    for(const row of rows){
