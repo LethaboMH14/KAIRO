@@ -9,7 +9,7 @@ Owned new `tools/agent-skills/harness.py`, `registry.v1.json`, `README.md`, `tes
 - 11 pinned candidate upstream commits/licences: React/Three.js, frontend design, Python/OCR, GCP, Azure, Hugging Face, Playwright, RAG, security, accessibility. Each is deliberately `proposed` and **not installable**.
 - Python 3.11+ stdlib-only CLI: `inventory`, `plan`, `init`, `stage`, `verify`, `rollback`. Network and script execution intentionally absent. No ZIP download and no global installation.
 - Promotion requires a reviewed entry with ticket/reviewer, full SHA-256 ZIP and file manifest, a pinned GitHub commit/licence, allowlisted inert extensions, no network/cost and low-risk permissions. Stage rejects traversal, symlinks, special files, scripts, duplicates, bombs, tampering and overwrite; stage manifests are checked back against reviewed registry.
-- New unittest file defines 16 generated adversarial/end-to-end cases. Paths are isolated under an explicitly initialized workspace marker.
+- New unittest file defines 17 generated adversarial/end-to-end cases, including forged upstream licence provenance. Paths are isolated under an explicitly initialized workspace marker.
 - Existing `tools/install_engineering_skills.ps1` has pinned refs but invokes a bundled installer and copies to `.claude/skills`. It was inspected **but neither executed nor modified**. New task-runner/install integration requires coordinator approval and shared ownership.
 
 ## Evidence ledger — distinguish local prototype from pushed branch
@@ -21,7 +21,7 @@ Owned new `tools/agent-skills/harness.py`, `registry.v1.json`, `README.md`, `tes
 
 ## Risks, blockers, explicit review gates
 
-Exact committed Python test suite needs direct execution in a real clone (Python 3.11+); static GitHub reads do not replace execution. No separate full ZIP digest has been approved for upstream tools: proposals must remain disabled. A digest protects consistency, not malicious `SKILL.md` instructions. Shared PowerShell installer, PR #12 swarm coordination text, root CI and task runner cannot be edited without coordinator scope approval. Existing browser/microphone policy denials remain.
+Exact committed Python test suite (17 cases) needs direct execution in a real clone (Python 3.11+); static GitHub reads do not replace execution. No separate full ZIP digest has been approved for upstream tools: proposals must remain disabled. A digest protects consistency, not malicious `SKILL.md` instructions. Shared PowerShell installer, PR #12 swarm coordination text, root CI and task runner cannot be edited without coordinator scope approval. Existing browser/microphone policy denials remain.
 
 ## NEXT
 
