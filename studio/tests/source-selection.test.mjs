@@ -79,11 +79,15 @@ test('local v2 request is source-ref only and remains bounded',()=>{
 });
 
 test('cloud requests require explicit provider consent and do not add it silently',()=>{
-  const base={selected:[reviewedChoice(source(0))],currentSources:[source(0)],multiSourceApi:true,mode:'cloud'};
+  const base={selected:[reviewedChoice(source(0))],currentSources:[source(0)],multiSourceApi:true,mode:'cloud',requestId:'study_12345678'};
   assert.throws(()=>prepareSelectionRequest(base),/consent first/);
   assert.throws(()=>prepareSelectionRequest({...base,consent:true}),/Explicit consent/);
   assert.throws(()=>prepareSelectionRequest({...base,consent:true,provider:'groq',providerConsent:['google']}),/Explicit consent/);
-  const r=prepareSelectionRequest({...base,consent:true,provider:'groq',providerConsent:['groq','groq']});
+  const r=prepareSelectionRequest({...base,consent:true,provider:'groq',providerConsent:['groq']});
   assert.deepEqual(r.providerConsent,['groq']);
+  assert.equal(r.requestId,'study_12345678');
+  assert.throws(()=>prepareSelectionRequest({...base,consent:true,provider:'groq',providerConsent:['groq'],requestId:'bad'}),/request ID/);
+  assert.throws(()=>prepareSelectionRequest({...base,consent:true,provider:'groq',providerConsent:['groq','groq']}),/Explicit consent/);
+  assert.throws(()=>prepareSelectionRequest({...base,consent:true,provider:'groq',providerConsent:['groq'],fallback:'google'}),/Explicit consent/);
   assert.equal(r.consent,true);
 });
