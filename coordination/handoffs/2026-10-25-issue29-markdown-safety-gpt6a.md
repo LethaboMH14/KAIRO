@@ -27,3 +27,7 @@ No changes to HTML/JSON portfolio logic, storage, auth, APIs, model gateways, cr
 This guards Markdown *presentation integrity*, not factual truth or local-device tampering. A locally generated text file remains self-reported and unverified, and can be manually edited after export. Avoid claiming signed, accredited, verified or employer-endorsed skill evidence. Client-provided lesson citation fields require server-side revision/owner validation in the actual learner flow; this task does not change that.
 
 Integration dependency: the GitHub CI workflow is in draft PR #1 and its repair stack #15/#17, not the current main baseline. This issue should not block their review or merge. Do not deploy or merge without owner-side bus scope reconciliation and independent review.
+
+## Exact-branch CI revalidation checkpoint
+
+The repaired Node24 app and Python OCR GitHub workflow was merged onto main through #17 → #15 → #1. This handoff-only update triggers actual pull-request CI for the seven committed Markdown regression tests plus full production build and Python bus isolation checks. Previous isolated five-test helper run does not establish this PR is green. No main-branch edit, production rollout or local SQLite bus claim is made by this update.
