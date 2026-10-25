@@ -1,0 +1,16 @@
+# KAIRO CI action supply-chain pinning — 25 October 2026
+
+- Session: `gpt6-kairo-ci-pin-20261025-1208-g` (GPT-6, effort unknown). Issue #11, remote GitHub connector only.
+- Base: `main@0fabfdf9b8515cab8ff4100228a6a1df672491c6`; branch `fix/issue11-pin-main-ci-actions-20261025-g`.
+- Scope: `.github/workflows/ci.yml`, `studio/tests/ci-action-pins.test.mjs`, this unique handoff. No overlap with the separate new workflow in #54, watcher #53, release ledger #25 or Vite diagnostics #59. Original canonical SQLite bus inaccessible; no local claim was made, so coordinator must reconcile before merge.
+- Need: the existing CI's first-party `uses:` references used mutable major tags. Immutable commit pins reduce unexpected workflow-code drift during critical source/revision and security acceptance. This is a **supply-chain hardening prerequisite**, not an autonomous worker implementation or a learner feature.
+- Upstream provenance checked using the official GitHub REST `git/ref/tags` endpoints and commit pages on 2026-10-25:
+  - [actions/checkout v4](https://github.com/actions/checkout/commit/11d5960a326750d5838078e36cf38b85af677262) → `11d5960a326750d5838078e36cf38b85af677262`
+  - [actions/setup-node v4](https://github.com/actions/setup-node/commit/49933ea5288caeca8642d1e84afbd3f7d6820020) → `49933ea5288caeca8642d1e84afbd3f7d6820020`
+  - [actions/setup-python v5](https://github.com/actions/setup-python/commit/a26af69be951a213d495a4c3e4e4022e16d87065) → `a26af69be951a213d495a4c3e4e4022e16d87065`
+- Behaviour: all five existing first-party invocations are pinned; triggers, Node 24/Python 3.11 versions, locked dependency install, OCR, serial regression, Vite build, coordination tests, concurrency and read-only token are unchanged. No new dependencies, secrets, jobs or costs.
+- Regression: three focused Node tests assert full-length pins, reject mutable/unknown action refs and detect privilege/trigger drift. **Executed locally on Node 22.16.0 against a functionally equivalent copy: 3/3 passed**; PyYAML parsed the modified workflow and found the expected two jobs/five action invocations. Local environment did not have Node 24 or a complete KAIRO checkout. Require exact-PR-head GitHub Actions Node24 serial full application tests, Vite production build and Python coordination checks before acceptance. A syntactically valid SHA does not itself establish publisher provenance; upstream commit verification remains a reviewer duty.
+- Judging impact: **Sustainability** (reproducible safe CI) and **Intelligence** (more trustworthy evaluation evidence). Product, Creativity, Usability, Impact and Presentation learner outcomes are **unchanged/unknown**, not improved by a CI-only patch.
+- Security: no production deployment, public IAM, provider credentials, learner data, Kaggle upload or model inference. The separate #54 workflow still needs its own pinning, safety repairs and independent review.
+- Release: DRAFT until independent diff review and policy #34 gates. Rollback by reverting this PR's scoped commits on a reviewed branch if exact-head or post-merge CI fails.
+- Next existing priorities: #46/PR #48 durable owner/revision-safe saved lesson correction; #47/PR #52 accessible source picker independent review and authorised device QA. No new issue or worker claim created.
