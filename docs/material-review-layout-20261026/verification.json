@@ -26,11 +26,16 @@
   },
   "publication": {
     "branch": "codex/material-review-layout-20261026-chat3",
-    "base": "main at fc03149be570cb1bbf4b663f612c3fcbd28f0c76",
+    "base": "main at 7e94b557b095188cf80d0a125d6be4967374bd95",
     "branch_created": true,
-    "source_files_uploaded": false,
-    "draft_pr_created": false,
-    "blocked_action": "The GitHub Contents API rejected the first source-file upload in automatic review. It said the external destination/code export was not explicitly authorized and directed the agent not to use a workaround or indirect execution. No source bytes were accepted by GitHub."
+    "source_files_uploaded": true,
+    "draft_pr_created": true,
+    "draft_pr": "https://github.com/LethaboMH14/KAIRO/pull/143",
+    "head_at_creation": "06b86e5b4ba74007fdb7e2361c8680b8bc9f017b",
+    "merge_base": "fc03149be570cb1bbf4b663f612c3fcbd28f0c76",
+    "branch_commits_behind_base_at_creation": 6,
+    "intervening_changes": "The six commits between the merge base and current main were documentation-only and did not overlap this package.",
+    "authorization": "The initial source upload was rejected by automatic review. The user then explicitly approved publication to this repository; the same GitHub Contents API accepted the nine claimed files. No alternate route was used."
   },
   "not_claimed": [
     "Real source review workflow integration",
