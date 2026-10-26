@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.000
+At 50 hertz and 4 poles: 120 times 50 divided by 4 equals 1,500 revolutions per minute.
+
+00:00:02.000 --> 00:00:04.000
+The stator stays still while its magnetic field rotates.
+
+00:00:04.000 --> 00:00:06.000
+The graph shows field speed increasing with frequency for four poles.
+
+00:00:06.000 --> 00:00:08.267
+That value is field speed, not measured shaft speed. In motoring operation the rotor runs below field speed.

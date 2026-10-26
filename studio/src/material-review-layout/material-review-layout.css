@@ -40,13 +40,17 @@
 .mrl-button--primary { color: white; background: var(--mrl-moss); }
 .mrl-button--primary:hover:not(:disabled) { background: #2f4135; }
 @media (max-width: 48rem) {
+  /* Keep the end of the active review/editor reachable above KAIRO's fixed
+     70px mobile dock (76px shell allowance), including device safe area. */
+  .mrl-workbench { --mrl-mobile-nav-clearance: calc(76px + env(safe-area-inset-bottom, 0px)); padding-block-end: var(--mrl-mobile-nav-clearance); scroll-margin-block-end: var(--mrl-mobile-nav-clearance); }
   .mrl-header { flex-direction: column; } .mrl-revision { max-width: 100%; }
   .mrl-mobile-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: .35rem; padding: .3rem; background: var(--mrl-chalk); border: 1px solid var(--mrl-sage); border-radius: .8rem; }
   .mrl-mobile-tabs button { min-height: 2.7rem; padding: .5rem .7rem; color: var(--mrl-moss); background: transparent; border: 0; border-radius: .55rem; font: inherit; font-weight: 700; cursor: pointer; }
   .mrl-mobile-tabs button[aria-selected="true"] { color: white; background: var(--mrl-moss); }
-  .mrl-panes { grid-template-columns: minmax(0, 1fr); } .mrl-pane:not([data-active="true"]) { display: none; } .mrl-pane { min-height: 16rem; }
+  .mrl-panes { grid-template-columns: minmax(0, 1fr); } .mrl-pane:not([data-active="true"]) { display: none; } .mrl-pane { min-height: 16rem; scroll-margin-block-end: var(--mrl-mobile-nav-clearance); }
+  .mrl-slot--reviewed { scroll-padding-block-end: var(--mrl-mobile-nav-clearance); }
+  .mrl-slot--reviewed :is(textarea, input, select, [contenteditable="true"]) { scroll-margin-block-end: var(--mrl-mobile-nav-clearance); }
   .mrl-footer { align-items: stretch; flex-direction: column-reverse; } .mrl-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } .mrl-button--quiet { grid-column: 1 / -1; }
 }
 @media (max-width: 22rem) { .mrl-actions { grid-template-columns: minmax(0, 1fr); } .mrl-button--quiet { grid-column: auto; } }
 @media (prefers-reduced-motion: reduce) { .mrl-button { transition: none; } .mrl-button:hover:not(:disabled) { transform: none; } }
-

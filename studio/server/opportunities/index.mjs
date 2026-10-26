@@ -1,4 +1,5 @@
 import {inspectOpportunity} from '../opportunity-freshness/index.mjs';
+import {readFileSync} from 'node:fs';
 const TYPES = new Set(['job', 'bursary', 'internship', 'learnership', 'funding', 'hackathon']);
 const MAX_RECORDS = 200;
 const FRESHNESS_TTL_MS = 7 * 24 * 60 * 60 * 1000;
@@ -84,7 +85,7 @@ function relevantTo(record, programme) {
   });
 }
 
-const seed = [
+const existingSeed = [
   {
     id: 'nc-premier-bursary-2027', title: "Northern Cape Premier's Bursary Programme (2027)", type: 'bursary',
     provider: 'Northern Cape Provincial Government',
@@ -120,6 +121,10 @@ const seed = [
     disciplines: [],
   },
 ];
+
+const sourcedBatchUrl = new URL('../../data/submission-opportunities-20261026/records.json', import.meta.url);
+const sourcedBatch = JSON.parse(readFileSync(sourcedBatchUrl, 'utf8'));
+const seed = [...existingSeed, ...(Array.isArray(sourcedBatch.records) ? sourcedBatch.records : [])];
 
 export function listOpportunities({ now = new Date(), programme, records = seed } = {}) {
   const timestamp = Date.parse(now);
