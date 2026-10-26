@@ -20,13 +20,15 @@ The standalone `KairoActionMenu`, `TeachingCard`, material-review layout and pur
 
 ## Verification
 
-- `node --test tests/kairo-presentation-state.test.mjs tests/studio-action-ui.test.mjs tests/material-review-layout.test.mjs`: 14 passed, 0 failed after mounting the arc.
+- `node --test tests/kairo-presentation-state.test.mjs tests/studio-action-ui.test.mjs tests/material-review-layout.test.mjs`: 14 passed, 0 failed after mounting.
 - `node node_modules/typescript/bin/tsc -b --pretty false`: passed with no diagnostics after mounting.
 - `node node_modules/vite/bin/vite.js build`: passed after mounting, 2,356 modules transformed; existing advisory reports chunks over 500 kB.
-- Focused extraction/upload/security checks with the documented OCR Python environment: 29 passed, 1 failed. Only the Tesseract executable availability check failed because `tesseract` is not installed; DOCX/XLSX/PPTX/PDF extraction and upload checks passed. The candidate links to the existing OCR venv through a candidate-only junction; no packages were installed for that venv.
-- A full `node --test tests/*.test.mjs` run before connecting the OCR environment exited 1. It logged Vite dependency-scan restarts and port 24678 collisions while test files ran concurrently. The complete suite has not been rerun after the environment link; no full-suite pass is claimed.
-- No end-to-end browser, keyboard, device, screen-reader or human acceptance is claimed for this candidate. Prior synthetic browser evidence does not cover this candidate's full journey.
+- Synthetic HTTP/SSR integration suites for owner-safe lesson create/edit/practice/resume, reviewed-source lesson evidence and source review: **11 passed, 0 failed**. This is application-level synthetic evidence, not browser acceptance.
+- Focused extraction/upload/security suite with process-local `KAIRO_PYTHON` and Tesseract `PATH`: **28 passed, 2 failed**. The Python dependency probe exceeded its 20-second limit under host load; the reordered-XLSX worksheet-name assertion returned `null` rather than its expected record. The executable-availability check passed.
+- A separate smoke of the real learner OCR worker timed out after 35 seconds against the same synthetic marker. A previous environment owner recorded a successful canonical-worktree smoke, but this candidate rerun did not complete; this candidate evidence does not claim OCR smoke success.
+- Full `node --test tests/*.test.mjs` has not been rerun after the process environment repair. An earlier parallel run exited 1 and reported Vite dependency-scan restarts and port 24678 collisions.
+- Browser, keyboard, device, screen-reader or human acceptance was not performed for this candidate. The existing denied-browser boundary remains in force.
 
 ## Remaining gates
 
-Resolve the Tesseract prerequisite and run the complete suite in the intended CI environment, review the mounted studio in browser and keyboard flows, get independent source review, and evaluate private release gates. No deployment or promotion is included.
+Resolve the environment-sensitive Python/import and OCR timeouts and the XLSX regression, run the complete suite in the intended CI environment, review this mounted flow in browser/keyboard use when the denied-browser boundary is lifted, get independent source review, then evaluate private release gates. No deployment or promotion is included.
