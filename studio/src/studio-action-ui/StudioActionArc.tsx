@@ -45,8 +45,8 @@ export function StudioActionArc({ actions, open, label, onOpenChange, onChoose }
 
   const choose = (choice: ActionChoice<StudioAction>) => {
     if (!open || !choice.available) return;
-    onChoose(choice.id);
     changeOpen(false);
+    onChoose(choice.id);
   };
 
   return <div className="saui-studio-arc">

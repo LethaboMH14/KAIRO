@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-26",
+  "candidate": {
+    "branch": "codex/full-integration-candidate-20261026",
+    "base": "7e94b557b095188cf80d0a125d6be4967374bd95"
+  },
+  "integrated": [
+    {"pull_request": 127, "head": "cb27910d1571e2ad01d7575d52b5f9c4ea4084f3", "state": "integrated"},
+    {"pull_request": 129, "head": "b210a5f6e8101a8563aadcd5556392be8aa732ba", "state": "integrated"},
+    {"pull_request": 143, "head": "d8dd16d2f7bcced7b92efbadcf178c76421f3e8f", "state": "integrated"}
+  ],
+  "root_fix": "StudioActionArc closes before onChoose; source-order regression assertion added.",
+  "checks": {
+    "targeted_node_tests": {"passed": 13, "failed": 0},
+    "typescript_build": "passed",
+    "production_vite_build": {"passed": true, "modules_transformed": 2354, "advisory": "chunks above 500 kB"},
+    "full_studio_test_suite": {"passed": false, "limitations": ["ignored tools/course_sources/.venv-ocr is absent in the candidate worktree", "parallel Vite SSR tests collide on port 24678 and report dependency-scan restart errors", "office extraction tests fail in this Windows environment"]},
+    "browser_keyboard_device_human_acceptance": "not performed for the integrated candidate",
+    "deployment": "not performed"
+  },
+  "integration_gaps": [
+    "material-review-layout remains unmounted from the real source review workflow",
+    "studio action UI and presentation state remain unmounted from the real lesson flow",
+    "complete source-to-review-to-lesson-to-practice-to-evidence-to-resume candidate journey is not verified"
+  ]
+}

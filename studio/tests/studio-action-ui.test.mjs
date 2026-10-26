@@ -5,6 +5,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { createServer } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'node:url';
+import { readFile } from 'node:fs/promises';
 
 const studioRoot = fileURLToPath(new URL('..', import.meta.url));
 const context = {
@@ -78,6 +79,9 @@ test('actual studio action components render safe, labelled states and unique ID
     assert.doesNotMatch(arc, /Hidden overflow/);
     assert.match(arc, /Showing the first five actions/);
     assert.equal((arc.match(/class="saui-arc-item"/g) || []).length, 5);
+
+    const arcSource = await readFile(new URL('../src/studio-action-ui/StudioActionArc.tsx', import.meta.url), 'utf8');
+    assert.match(arcSource, /changeOpen\(false\);\s*onChoose\(choice\.id\);/, 'close the arc before the parent switches to its selected panel');
 
     const unsafe = '<script>window.injected = true</script>';
     const card = renderToStaticMarkup(React.createElement(TeachingCard, {
