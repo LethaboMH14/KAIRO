@@ -3,7 +3,7 @@
 **Date:** 26 October 2026  
 **Worker:** `codex-luna-studio-action-ui-20261026-a` (Codex, `gpt-6-luna`, low)  
 **Task:** `STUDIO-ACTION-UI-20261026-A`  
-**Branch:** `codex/studio-action-ui-20261026-a`, based on root-owned interaction contract v1 branch `codex/studio-interaction-contract-20261026` (PR #126; rebase onto main before publishing).  
+**Branch:** `codex/studio-action-ui-20261026-a`, based on `main` at `fc03149` after root-owned contract PR #126 merged.  
 **Contract:** `studio/src/kairo-interaction-contract/types.ts`; read-only dependency, not modified.
 
 ## Judging and learner need
@@ -30,6 +30,7 @@ Temporary local harness and optimizer cache are not deliverables and should be r
 - `npx tsc --noEmit -p tsconfig.json`: **passed**.
 - Synthetic local browser interaction check: **passed** at 1440×1000 and 390×844 using Chromium 1217 and local Vite only. It exercised action/scope gates, unavailable/busy states, single callback and payload, context reset, Escape/focus restoration, arc close-on-choice, read/pause/resume/stop/source callbacks, reduced motion, five action limit, mobile list and no horizontal overflow. No page/console errors. Metrics/screenshots are in `docs/studio-action-ui-20261026/evidence/validation.json`.
 - `npm run build`: **passed** after using the authorized isolated worktree write access for `tsconfig.tsbuildinfo` and `studio/dist`; Vite transformed 2,354 modules and completed. The normal large-chunk advisory remains; the UI package is unmounted.
+- Draft PR #129 is open against `main`; its Actions check was still running at initial handoff. Review the exact current head/check before merging.
 
 Screenshots show a synthetic fixture with fictional rotor/source labels, not the app route, model, teacher asset, lesson data or service. They establish viewport presentation only, not human or device acceptance.
 
