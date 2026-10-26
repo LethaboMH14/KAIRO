@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KAIRO — Fictional Pump Tank Balance Lab</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, Segoe UI, sans-serif; background:#f4f7fa; color:#192d40; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:clamp(12px,3vw,36px); }
+    main { max-width:980px; margin:auto; background:white; border:1px solid #d5e2ea; border-radius:24px; padding:clamp(18px,4vw,44px); box-shadow:0 18px 60px #233c5514; }
+    h1 { font-size:clamp(2rem,4vw,3.1rem); margin:.2em 0; letter-spacing:-.04em; }
+    h2,h3 { margin-top:1.5em; }
+    p { line-height:1.65; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-weight:800; color:#386a75; font-size:.78rem; }
+    .assumption { color:#485e6e; background:#edf4f7; padding:12px 16px; border-left:4px solid #178d9b; border-radius:8px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+    button,.import-label { border:1px solid #23445e; border-radius:12px; background:#173c56; color:white; padding:12px 17px; font:inherit; font-weight:650; cursor:pointer; }
+    button:hover,.import-label:hover { background:#285e76; }
+    button:disabled { opacity:.45; cursor:not-allowed; }
+    #tank-import { max-width:230px; }
+    button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline:3px solid #b047ef; outline-offset:3px; }
+    fieldset { border:1px solid #c6dbe5; border-radius:18px; padding:clamp(16px,3vw,28px); }
+    legend { font-weight:800; font-size:1.3rem; padding:0 8px; }
+    label:not(.import-label) { display:block; font-weight:700; margin:18px 0 6px; }
+    select,input[type=number],textarea { width:min(100%,520px); padding:11px 13px; border:1px solid #758b9b; border-radius:9px; font:inherit; color:inherit; background:white; }
+    textarea { min-height:95px; resize:vertical; }
+    .tank-visual { max-width:560px; margin:18px 0; background:#f1f8fc; border-radius:18px; padding:16px; }
+    .tank-visual svg { width:100%; max-height:280px; }
+    .result { border:2px solid #baaaf2; border-radius:18px; padding:20px; margin:20px 0; }
+    .progress { font-weight:750; }
+    table { border-collapse:collapse; width:100%; max-width:650px; }
+    caption { font-weight:750; text-align:left; margin:12px 0; }
+    th,td { padding:9px 12px; border-bottom:1px solid #dae5eb; text-align:left; }
+    th { width:65%; }
+    details { margin:12px 0; border:1px solid #cbdde7; border-radius:12px; padding:12px; }
+    summary { cursor:pointer; font-weight:750; }
+    [hidden] { display:none !important; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation:none !important; transition:none !important; } }
+    @media (max-width:500px) { main { border-radius:12px; } .actions { align-items:stretch; flex-direction:column; } button,.import-label { width:100%; } }
+  </style>
+</head>
+<body>
+<main id="app"></main>
+<script type="module">
+  import { mountTankBalance } from './app.mjs';
+  mountTankBalance(document.getElementById('app'));
+</script>
+</body>
+</html>
