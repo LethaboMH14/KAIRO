@@ -177,6 +177,6 @@ test('standalone preview uses accessible reading alternative, focus and no netwo
   assert.match(app,/aria-live/);
   assert.match(app,/\.focus\(\)/);
   assert.match(app,/textContent/);
-  assert.match(review,/independent subject review pending/);
+  assert.match(review,/independent subject review pending/i);
   assert.doesNotMatch(html+app,/fetch\(|XMLHttpRequest|WebSocket|localStorage|sessionStorage|navigator\.mediaDevices|innerHTML/);
 });
