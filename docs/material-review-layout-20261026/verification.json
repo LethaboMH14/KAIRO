@@ -1,0 +1,47 @@
+{
+  "scope": "controlled MaterialReviewLayout component only",
+  "runtime": "Node.js v24.18.0",
+  "command": "node --test tests/material-review-layout.test.mjs (from studio/)",
+  "result": {
+    "passed": 5,
+    "failed": 0,
+    "status": "passed"
+  },
+  "checks": [
+    "Actual React module loaded through Vite SSR",
+    "Original and reviewed caller slots render together",
+    "Missing original fallback, supplied revision, coverage and visible warnings",
+    "Long heading, coverage and warning strings remain present and escaped",
+    "Save/build gates reflect dirty, capability and busy props",
+    "Mobile CSS keeps both React slots mounted and source contains arrow/Home/End keyboard handlers"
+  ],
+  "browser": {
+    "attempted": true,
+    "loaded": false,
+    "desktop": "not verified",
+    "mobile": "not verified",
+    "keyboardCallbacks": "not verified",
+    "screenshots": [],
+    "reason": "The local loopback Vite fixture could not be loaded in the browser. Windows Computer Use stopped the session because it could not verify the current browser URL."
+  },
+  "publication": {
+    "branch": "codex/material-review-layout-20261026-chat3",
+    "base": "main at 7e94b557b095188cf80d0a125d6be4967374bd95",
+    "branch_created": true,
+    "source_files_uploaded": true,
+    "draft_pr_created": true,
+    "draft_pr": "https://github.com/LethaboMH14/KAIRO/pull/143",
+    "head_at_creation": "06b86e5b4ba74007fdb7e2361c8680b8bc9f017b",
+    "merge_base": "fc03149be570cb1bbf4b663f612c3fcbd28f0c76",
+    "branch_commits_behind_base_at_creation": 6,
+    "intervening_changes": "The six commits between the merge base and current main were documentation-only and did not overlap this package.",
+    "authorization": "The initial source upload was rejected by automatic review. The user then explicitly approved publication to this repository; the same GitHub Contents API accepted the nine claimed files. No alternate route was used."
+  },
+  "not_claimed": [
+    "Real source review workflow integration",
+    "Private learner material acceptance",
+    "Human or device validation",
+    "Learning outcomes, traction, deployment, or release approval"
+  ]
+}
+
