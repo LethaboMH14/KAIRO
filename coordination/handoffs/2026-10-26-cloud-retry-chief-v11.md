@@ -24,3 +24,10 @@ Remote GitHub Actions Node24 serial tests, Vite build and Python temporary bus a
 
 1. #46 backend owner: transactional owner-scoped create/idempotency/allowance receipt, then make this HTTP contract green; add concurrent and changed-payload/revoked-source tests.
 2. #47 frontend owner: after backend interface and exclusive file clearance, reconcile aborted/unknown create by reading saved lessons, preserving the same request ID and providing an accessible resume link, with permitted keyboard/zoom/device QA.
+
+
+## Executed CI and observed result — 26 October 2026 ~09:24 SAST
+
+Draft PR #139 initial head `74d479f1a1553af5216f4876e5f013663233bcf7`, based on `main@7e94b557b095188cf80d0a125d6be4967374bd95`. [Actions #40285385583](https://github.com/LethaboMH14/KAIRO/actions/runs/40285385583) completed FAILURE. GitHub's PR workflow checked out synthetic merge ref `e725ef994f20579501a32ae30bd0fa2a9302959e` of that exact head+base. Node24 **936/937 passed**, one intended P0 assertion failed, zero skipped. Positive source-linked creation/read control passed. Actual duplicate HTTP POST resulted in **two saved IDs, two lesson records, two daily allowance reservations, one model invocation** using the real gateway ledger and fake model. The expected contract was one saved ID, one record, one allowance and one model invocation. The same per-row CAS version on distinct records is not shared record identity. Python temporary bus **6/6 passed**; Vite production build **not run** because red Node suite blocked it. This is a deterministic synthetic reproduction only; no Firestore emulator, real provider or browser/device evidence.
+
+**Gate:** keep PR #139 draft/red/unmerged; #46 owner must repair atomic save idempotency and make this contract green. Independent PR #34 review and current-main verification are still required after a backend fix. The test-only branch does not fix the backend. See [#46 work order](https://github.com/LethaboMH14/KAIRO/issues/46#issuecomment-6410549925) and [#11 coordinator decision](https://github.com/LethaboMH14/KAIRO/issues/11#issuecomment-6410551310).
