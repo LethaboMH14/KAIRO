@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>KAIRO · Head and Gauge Pressure Reasoning</title>
+  <style>
+    :root {font: 16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:#eaf3ff;background:#081522}
+    * {box-sizing:border-box}
+    body {margin:0;min-width:0}
+    main {max-width:950px;margin:0 auto;padding:clamp(16px,4vw,44px)}
+    .hero {padding:clamp(22px,4vw,42px);background:linear-gradient(135deg,#142e46,#0c2235);
+      border:1px solid #3b5c76;border-radius:22px}
+    .eyebrow {color:#9eead1;font-size:.85rem;font-weight:700;letter-spacing:.12em}
+    h1 {font-size:clamp(1.8rem,5vw,3rem);line-height:1.13;margin:.4em 0}
+    h2 {font-size:1.4rem;line-height:1.25;margin:0 0 .75rem}
+    .card {padding:clamp(18px,3vw,30px);border:1px solid #42617c;border-radius:18px;
+      background:#12283b;margin:20px 0}
+    .notice,.model-note,.limit,.complete {padding:14px 18px;border-left:4px solid #78dabc;
+      background:#193348;border-radius:7px}
+    .model-note {border-color:#a4b5f9}
+    .limit {border-color:#ffc978}
+    .complete {border-color:#78dabc}
+    label.field {display:grid;gap:8px;margin:18px 0;font-weight:650}
+    select,input[type=number],textarea {width:100%;padding:12px;border:2px solid #9aafc4;
+      border-radius:9px;background:#07192b;color:#fff;font:inherit}
+    fieldset {border:1px solid #607c95;border-radius:10px;margin:18px 0;padding:12px}
+    legend {font-weight:700;padding:0 8px}
+    .radio-row {display:flex;align-items:flex-start;gap:12px;padding:8px 0;cursor:pointer}
+    .radio-row input {margin-top:7px;accent-color:#79ddbd;flex:none}
+    button {padding:11px 17px;border:2px solid #a6e5d2;border-radius:9px;background:#163b4d;
+      color:#fff;font:inherit;font-weight:650;cursor:pointer;margin:5px 9px 5px 0}
+    button:hover {background:#245469}
+    a {color:#a9e8ff}
+    a:hover {text-decoration-thickness:3px}
+    :focus-visible {outline:3px solid #ffe08a;outline-offset:4px}
+    .feedback {font-weight:650}
+    .chart {display:block;width:100%;height:auto;margin:15px 0}
+    table {border-collapse:collapse;width:100%;margin:20px 0}
+    caption {text-align:left;font-weight:700;margin-bottom:8px}
+    th,td {padding:9px;border:1px solid #6d8295;text-align:left}
+    th {background:#204158}
+    details {margin:15px 0}
+    summary {cursor:pointer;font-weight:700}
+    .status {min-height:2rem;font-weight:700}
+    @media(max-width:560px) {
+      .card {padding:15px}
+      table {display:block;overflow-x:auto}
+      button {display:block;width:100%;margin:9px 0}
+    }
+    @media(prefers-reduced-motion:reduce) {
+      *,*::before,*::after {animation-duration:.01ms!important;transition-duration:.01ms!important;
+        scroll-behavior:auto!important}
+    }
+  </style>
+</head>
+<body>
+  <main id="pump-head-pressure-app" aria-label="KAIRO head and gauge pressure learning challenge">
+    <h1>KAIRO · Head and gauge pressure</h1>
+    <p>Loading the fictional static-fluid learning activity.</p>
+  </main>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
