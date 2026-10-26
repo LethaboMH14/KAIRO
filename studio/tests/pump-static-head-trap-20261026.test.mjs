@@ -130,7 +130,7 @@ test('invalid, oversized, injected or stale imports fail closed', () => {
 test('preview has explicit accessible labels, native controls, reading fallback and limitations', () => {
   const here = dirname(fileURLToPath(import.meta.url));
   const html = readFileSync(resolve(here, '../src/studio-scenarios/pump-static-head-trap-20261026/preview.html'), 'utf8');
-  for (const id of ['speedRatio', 'outcome', 'flowGuess', 'explanation', 'importFile']) assert.match(html, new RegExp(`for="${idy"`));
+  for (const id of ['speedRatio', 'outcome', 'flowGuess', 'explanation', 'importFile']) assert.match(html, new RegExp(`for="${id}"`));
   assert.match(html, /aria-live="polite"/);
   assert.match(html, /prefers-reduced-motion/);
   assert.match(html, /not a real pump operating or safety guide/i);
