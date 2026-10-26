@@ -1,0 +1,17 @@
+Date: 2026-10-26
+Worktree: codex/teacher-access-ui-20261026-a (base a2dfc4f10499bcd32ac45548fc6767094b26c8d2)
+Command: node --test studio/tests/teacher-access-ui.test.mjs
+
+TAP version 13
+ok renders controlled native language choices and truthful language, voice, caption and sign labels
+ok language selection exposes unsupported and unknown selections as an error and keeps choice callbacks uninvoked during render
+ok malformed duplicate choices fail closed and escape supplied labels and reasons as text
+ok busy gates language, captions, motion and typed callbacks while leaving close available
+ok listening and signer-reviewed content labels only reflect the supplied capability flags
+ok reduced-motion styling is explicit and the panel does not own network, voice, microphone or storage APIs
+
+tests 6
+pass 6
+fail 0
+
+Limit: module-level React SSR and source-boundary tests only. Browser callbacks, keyboard interaction, responsive rendering, screen readers, learner outcomes, and the integrated app are not validated here.
