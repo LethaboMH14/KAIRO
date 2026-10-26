@@ -173,7 +173,7 @@ test('standalone preview uses accessible reading alternative, focus and no netwo
   assert.match(html,/<html lang="en">/);
   assert.match(html,/prefers-reduced-motion/);
   assert.match(app,/fieldset/);
-  assert.match(app,/createElement\('table'\)/);
+  assert.match(app,/const table=el\('table'\)/);
   assert.match(app,/aria-live/);
   assert.match(app,/\.focus\(\)/);
   assert.match(app,/textContent/);
