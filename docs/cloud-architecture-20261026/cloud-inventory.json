@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-26T12:48:03.0195491+02:00",
+  "project": "kairo-access-20261021",
+  "region": "africa-south1",
+  "resources": {
+    "cloudRun": [],
+    "storageBuckets": [],
+    "firestore": [],
+    "taskQueues": []
+  },
+  "queryStatus": [
+    {
+      "resource": "cloudRun",
+      "ok": false
+    },
+    {
+      "resource": "storage",
+      "ok": false
+    },
+    {
+      "resource": "firestore",
+      "ok": false
+    },
+    {
+      "resource": "tasks",
+      "ok": false
+    }
+  ],
+  "limitations": [
+    "Names and selected metadata only; no learner records, object names, secret payloads, or application contents.",
+    "A missing query result is unknown, not proof the resource does not exist.",
+    "Billing exports, credit balance/expiry and retention policies require separate authorized checks."
+  ]
+}

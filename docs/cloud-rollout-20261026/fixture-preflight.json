@@ -1,0 +1,11 @@
+{
+  "activeProject": "kairo-access-20261021",
+  "activeAccount": "synthetic-operator@example.invalid",
+  "service": {
+    "metadata": { "annotations": { "run.googleapis.com/ingress": "internal-and-cloud-load-balancing" } },
+    "spec": { "template": { "spec": { "serviceAccountName": "kairo-app-runtime@kairo-access-20261021.iam.gserviceaccount.com", "containers": [{ "image": "africa-south1-docker.pkg.dev/kairo-access-20261021/apps/kairo@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" }] } } },
+    "status": { "traffic": [{ "revisionName": "kairo-app-00026-abc", "percent": 100 }] }
+  },
+  "iam": { "bindings": [{ "role": "roles/run.invoker", "members": ["user:synthetic-judge@example.invalid"] }] },
+  "requiredSecrets": [{ "name": "GROQ_API_KEY", "enabledVersionPresent": true, "serviceBindingPresent": true }]
+}

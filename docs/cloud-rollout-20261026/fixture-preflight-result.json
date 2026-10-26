@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-26T12:36:38.3383181+02:00",
+  "project": "kairo-access-20261021",
+  "region": "africa-south1",
+  "service": "kairo-app",
+  "activeProjectMatches": true,
+  "activeAccountPresent": true,
+  "ingress": "internal-and-cloud-load-balancing",
+  "publicInvokerBindingPresent": false,
+  "runtimeServiceAccount": "kairo-app-runtime@kairo-access-20261021.iam.gserviceaccount.com",
+  "imageDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "imageIsDigestPinned": true,
+  "activeTraffic": [
+    {
+      "revision": "kairo-app-00026-abc",
+      "percent": 100
+    }
+  ],
+  "requiredSecrets": [
+    {
+      "name": "GROQ_API_KEY",
+      "enabledVersionPresent": true,
+      "serviceBindingPresent": true
+    }
+  ],
+  "checks": [
+    {
+      "id": "project",
+      "pass": true
+    },
+    {
+      "id": "no-public-invoker-binding",
+      "pass": true
+    },
+    {
+      "id": "digest-pinned-image",
+      "pass": true
+    },
+    {
+      "id": "runtime-service-account",
+      "pass": true
+    },
+    {
+      "id": "required-secret-bindings",
+      "pass": true
+    }
+  ],
+  "checksPassed": true
+}
