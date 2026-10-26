@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KAIRO | Pump shaft energy practice (fictional)</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; background: #f3f7f5; color: #152a27; }
+    body { margin: 0; padding: 1rem; }
+    main { max-width: 48rem; margin: auto; }
+    h1, h2, h3, h4 { line-height: 1.3; }
+    p, label { line-height: 1.55; }
+    .card { background: white; border: 1px solid #a7b9b4; border-radius: 1rem; padding: 1.1rem; margin-block: 1rem; }
+    label { display: block; font-weight: 600; margin-top: .9rem; }
+    select, input, textarea, button { font: inherit; padding: .6rem; max-width: 100%; }
+    select, input[type=number], textarea { display: block; width: min(100%, 35rem); box-sizing: border-box; }
+    textarea { min-height: 6rem; }
+    button { background: #125a4c; color: white; border: 2px solid #125a4c; border-radius: .4rem; margin: .4rem .4rem .4rem 0; cursor: pointer; }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, h2:focus-visible, h3:focus-visible { outline: 3px solid #9c5716; outline-offset: 3px; }
+    .table-scroll { overflow-x: auto; }
+    table { border-collapse: collapse; margin-block: 1rem; width: 100%; }
+    th, td { text-align: left; padding: .6rem; border: 1px solid #9eb0ab; }
+    caption { text-align: left; font-weight: 700; padding: .5rem 0; }
+    meter { display: block; width: 100%; height: 1.6rem; }
+    .bars { display: grid; gap: .5rem; margin-block: 1rem; }
+    .note { border-left: 4px solid #b37a25; padding-left: 1rem; }
+    [hidden] { display: none !important; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>KAIRO | Power is not energy</h1>
+    <p class="note">Two fictional shaft-power comparisons. This is an educational maths activity, not electrical energy or billing, pump efficiency, or real equipment operating advice. All attempts are local, unverified practice. No network, account or teacher evaluation is connected.</p>
+    <p id="sourceRevision"></p>
+  </header>
+  <section class="card" aria-labelledby="roundTitle">
+    <h2 id="roundTitle" tabindex="-1">Round</h2>
+    <p>For this exercise, assume constant fictional mechanical shaft power. Energy in kWh = power in kW × time in hours. Choose values for schedule B and predict before revealing the result.</p>
+    <p id="scheduleA"></p>
+    <form id="predictionForm">
+      <label for="bPowerKw">Schedule B shaft power</label>
+      <select id="bPowerKw" required></select>
+      <label for="bHours">Schedule B elapsed time</label>
+      <select id="bHours" required></select>
+      <label for="lowerEnergy">Which schedule uses less shaft energy?</label>
+      <select id="lowerEnergy" required>
+        <option value="A">A</option><option value="B">B</option><option value="equal">Equal</option>
+      </select>
+      <label for="differenceKwh">Predict the absolute energy difference (kWh, 0–10)</label>
+      <input id="differenceKwh" type="number" min="0" max="10" step="0.01" required />
+      <label for="explanation">Explain why you expect this outcome (20–800 characters)</label>
+      <textarea id="explanation" minlength="20" maxlength="800" required></textarea>
+      <p id="error" role="alert" hidden></p>
+      <button type="submit">Commit prediction and reveal trace</button>
+    </form>
+    <section id="result" aria-labelledby="resultTitle" hidden>
+      <h3 id="resultTitle" tabindex="-1">Your predictions and the recomputed model</h3>
+      <div id="resultBody" class="table-scroll"><table><caption>Accessible reading fallback</caption></table></div>
+      <button id="nextRound" type="button">Try independent round 2</button>
+    </section>
+  </section>
+  <section class="card" aria-labelledby="recordTitle">
+    <h2 id="recordTitle">Local practice record</h2>
+    <p id="recordStatus" aria-live="polite">No attempts recorded.</p>
+    <button id="exportRecord" type="button">Export local actions (JSON)</button>
+    <button id="resetRecord" type="button">Start over</button>
+    <label for="importFile">Import a previously exported local action record (12 KB maximum)</label>
+    <input id="importFile" type="file" accept=".json,application/json" />
+  </section>
+</main>
+<script type="module" src="./app.mjs"></script>
+</body>
+</html>
