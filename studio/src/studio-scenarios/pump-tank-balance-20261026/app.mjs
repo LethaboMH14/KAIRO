@@ -24,16 +24,19 @@ function tankDiagram(initialL, finalL, capacityL, reveal) {
 
 function renderResult(host, attempt, moveFocus = true) {
   const { result } = attempt;
-  host.innerHTML = `<section class="result" aria-labelledby="tank-result-title">
-    <h3 id="tank-result-title" tabindex="-1">Revealed calculation — ${result.caseId === 'inflow-change' ? 'round 1' : 'round 2'}</h3>
+  const titleId = `tank-result-${result.caseId}`;
+  const traceId = `tank-trace-${result.caseId}`;
+  const readoutId = `tank-readout-${result.caseId}`;
+  host.innerHTML = `<section class="result" aria-labelledby="${titleId}">
+    <h3 id="${titleId}" tabindex="-1">Revealed calculation — ${result.caseId === 'inflow-change' ? 'round 1' : 'round 2'}</h3>
     <div class="tank-visual">${tankDiagram(result.initialL, result.finalL, result.capacityL, true)}</div>
     <p><strong>Actual final storage:</strong> ${format(result.finalL)} L; <strong>outcome:</strong> ${outcomeLabels[result.outcome]}.</p>
     <p>Your prediction: ${format(attempt.prediction)} L (${format(attempt.differenceL)} L difference). Outcome ${attempt.outcomeMatches ? 'matched' : 'did not match'} the model. This is local practice, not a grade.</p>
-    <details open><summary>Read the complete conservation trace</summary><ol id="tank-trace"></ol></details>
-    <table><caption>Numeric reading alternative</caption><tbody id="tank-readout"></tbody></table>
+    <details open><summary>Read the complete conservation trace</summary><ol id="${traceId}"></ol></details>
+    <table><caption>Numeric reading alternative</caption><tbody id="${readoutId}"></tbody></table>
     <p class="assumption">Fictional, constant-rate, one-step balance. No real equipment, telemetry or verified learner record.</p>
   </section>`;
-  const list = host.querySelector('#tank-trace');
+  const list = host.querySelector(`#${traceId}`);
   for (const line of trace(result)) {
     const item = document.createElement('li'); item.textContent = line; list.append(item);
   }
@@ -48,9 +51,9 @@ function renderResult(host, attempt, moveFocus = true) {
     const row = document.createElement('tr');
     const heading = document.createElement('th'); heading.scope = 'row'; heading.textContent = label;
     const cell = document.createElement('td'); cell.textContent = format(value);
-    row.append(heading, cell); host.querySelector('#tank-readout').append(row);
+    row.append(heading, cell); host.querySelector(`#${readoutId}`).append(row);
   }
-  if (moveFocus) host.querySelector('#tank-result-title').focus();
+  if (moveFocus) host.querySelector(`#${titleId}`).focus();
 }
 
 /** Isolated Vite preview only; intentionally does not mount in StudioRouter. */
