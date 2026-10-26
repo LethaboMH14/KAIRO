@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>KAIRO | Pump telemetry sampling challenge</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #f3f7ff; background: #061624; }
+    body { margin: 0; }
+    main { max-width: 940px; margin: auto; padding: clamp(1rem, 4vw, 3rem); }
+    h1 { font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.12; }
+    h2 { font-size: clamp(1.35rem, 3vw, 1.65rem); }
+    .hero { padding: clamp(1.5rem, 4vw, 3rem); border-radius: 1.3rem;
+      border: 1px solid #507c96;
+      background: radial-gradient(circle at 90% 5%, #29547d, transparent 55%), linear-gradient(135deg,#14374b,#0b1e32); }
+    .eyebrow { font-weight: 800; color: #8df4d5; font-size: .8rem; letter-spacing: .1em; }
+    .card,.notice { border: 1px solid #50758b; border-radius: 1.1rem;
+      background: #112b40; padding: clamp(1rem, 3vw, 1.6rem); margin: 1.25rem 0; }
+    .notice { background: #303041; border-color: #b8a371; }
+    .field { display: grid; gap: .5rem; font-weight: 650; margin: 1.2rem 0; }
+    select,textarea,button { font: inherit; }
+    select,textarea { width: 100%; box-sizing: border-box; padding: .75rem;
+      background: #071d2f; border: 1px solid #a5c3d5; border-radius: .55rem; color: #fff; }
+    fieldset { border: 1px solid #7293a9; border-radius: .75rem; margin: 1.1rem 0; padding: 1rem; }
+    legend { font-weight: 750; padding: .25rem; }
+    .choice { display: flex; align-items: baseline; gap: .6rem; padding: .45rem 0; }
+    .choice input { width: 1.1rem; height: 1.1rem; }
+    button { border: 2px solid transparent; border-radius: .65rem;
+      background: #92f1d5; color: #062d32; font-weight: 750;
+      padding: .8rem 1.1rem; margin: .35rem .4rem .35rem 0; cursor: pointer; }
+    button:hover { background: #c0ffeb; }
+    :focus-visible { outline: 3px solid #ffd28c; outline-offset: 4px; }
+    .trace-plot { display: block; width: 100%; max-height: 260px; border-radius: .6rem; }
+    table { border-collapse: collapse; width: 100%; text-align: left; }
+    caption { text-align: left; font-weight: 750; padding: .8rem 0; }
+    th,td { padding: .6rem; border-bottom: 1px solid #47657b; }
+    .feedback,.complete { font-weight: 750; }
+    .limit { border-left: 3px solid #ffd28c; padding-left: 1rem; }
+    .status { min-height: 1.5rem; }
+    a { color: #a8e9ff; }
+    @media (max-width: 640px) { table { display: block; overflow-x: auto; } }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main id="pump-telemetry-alias-app"></main>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
