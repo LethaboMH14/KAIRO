@@ -1,35 +1,41 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-26T12:48:03.0195491+02:00",
+  "checkedAt": "2026-10-26",
   "project": "kairo-access-20261021",
   "region": "africa-south1",
   "resources": {
-    "cloudRun": [],
-    "storageBuckets": [],
-    "firestore": [],
-    "taskQueues": []
+    "cloudRun": [
+      { "name": "kairo-app", "latestReadyRevision": "kairo-app-full26b", "traffic": [{ "revision": "kairo-app-full26b", "percent": 100 }], "imageDigest": "sha256:2e74388c7fcd295501649d999b77fdaf83899bfea33e6f5a33f25ea505e41ffc", "cpu": "1", "memory": "1Gi", "maxInstances": 20, "serviceAccount": "kairo-app-runtime@kairo-access-20261021.iam.gserviceaccount.com", "ingress": "all", "publicInvokerBinding": false, "boundSecretNames": ["kairo-groq-key", "kairo-openrouter-key"] },
+      { "name": "kairo-core", "latestReadyRevision": "kairo-core-00003-qkw" }
+    ],
+    "storageBuckets": [
+      { "name": "kairo-access-20261021-materials", "location": "AFRICA-SOUTH1" },
+      { "name": "kairo-access-20261021_cloudbuild", "location": "US" },
+      { "name": "run-sources-kairo-access-20261021-africa-south1", "location": "AFRICA-SOUTH1" }
+    ],
+    "firestore": [{ "name": "(default)", "location": "africa-south1", "type": "FIRESTORE_NATIVE" }],
+    "taskQueues": [{ "name": "kairo-imports", "location": "europe-west1", "state": "RUNNING" }],
+    "secrets": [
+      { "name": "kairo-groq-key", "serviceBindingPresent": true, "enabledVersion": "1" },
+      { "name": "kairo-openrouter-key", "serviceBindingPresent": true, "enabledVersion": "1" }
+    ],
+    "monitoringAlertPolicies": [],
+    "firestoreBackupSchedules": [],
+    "materialsBucketPolicyProjection": { "versioning": null, "retentionPolicy": null, "lifecycle": null, "softDeletePolicy": null, "note": "Selected CLI projection returned null; recovery guarantees not verified." },
+    "billingEnabled": true,
+    "billingBudgetQuery": "blocked: Billing Budget API unavailable to current CLI context; no budget state asserted",
+    "billingCreditsAndSpendCap": "Balance, expiry and Cloud Run spend-cap eligibility not inspected"
   },
-  "queryStatus": [
-    {
-      "resource": "cloudRun",
-      "ok": false
-    },
-    {
-      "resource": "storage",
-      "ok": false
-    },
-    {
-      "resource": "firestore",
-      "ok": false
-    },
-    {
-      "resource": "tasks",
-      "ok": false
-    }
-  ],
+  "evidence": {
+    "source": "Individually successful read-only gcloud metadata queries; inventory.ps1 did not complete successfully.",
+    "secretPayloadsRead": false,
+    "learnerDataRead": false,
+    "cloudMutations": 0
+  },
   "limitations": [
-    "Names and selected metadata only; no learner records, object names, secret payloads, or application contents.",
-    "A missing query result is unknown, not proof the resource does not exist.",
-    "Billing exports, credit balance/expiry and retention policies require separate authorized checks."
+    "Current source commit behind full26b was not verified.",
+    "Bucket lifecycle, object versioning, Firestore PITR/backup restore and deletion retention are not accepted from null projections or an empty schedule list.",
+    "Billing Budget API was unavailable in the current CLI context; costs, credits, alerts-as-cap and spend-cap eligibility remain unknown.",
+    "The inventory.ps1 output has not been reconciled against this individually observed snapshot."
   ]
 }

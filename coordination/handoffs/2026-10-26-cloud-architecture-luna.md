@@ -10,12 +10,14 @@ The user-initiated small model work is owned by chat `01a177b1-11a1-7171-88fe-78
 
 ## Implemented evidence
 
-- `tools/cloud-architecture-20261026/inventory.ps1` is a read-only, explicit-project metadata inventory helper; parser passed. Its multi-resource run timed out without producing the target JSON file.
+- `tools/cloud-architecture-20261026/inventory.ps1` is a read-only, explicit-project metadata inventory helper; parser passed. Its multi-resource run did not complete successfully.
 - `docs/cloud-architecture-20261026/ARCHITECTURE.md` states observed resources, target architecture, resource caps, no-traffic deployment gates, retention/security recovery questions, cost controls and concrete unknowns.
-- `docs/cloud-architecture-20261026/cloud-inventory.json` records individually observed sanitized metadata, not learner data or secret values. Automated inventory output has not yet been reconciled.
+- `docs/cloud-architecture-20261026/cloud-inventory.json` records sanitized metadata from individually successful queries, not learner data or secret values. It is not automated inventory output.
 - Existing `infra/ai-wave-20261025/main.tf` is a read-only Cloud Run discovery data source. Existing Dockerfile builds current Node 24 service; this package made no Docker or Terraform resource change and performed no `terraform apply`.
 - After publishing the interface to root, added a distinct Terraform proposal under `infra/cloud-model-service-20261026/`: one digest-pinned IAM-authenticated Cloud Run service `kairo-model-*`, no public invoker, one caller grant to `kairo-app-runtime`; scale 0..1, concurrency 1, request CPU, 2 CPU/2 GiB starting cap, 30 second request timeout, deletion protection. It creates no service account, registry, VPC, storage, database, secret, GPU or GKE. Ingress is `all` with mandatory IAM because internal-only ingress from Cloud Run needs VPC routing and no VPC was verified. Model owner must supply exact interface/image/license/RSS/startup before use. Terraform CLI is unavailable, so fmt/validate/plan were not run; no apply.
 - Further operational proof and gaps are listed in `coordination/handoffs/2026-10-26-cloud-rollout-luna.md`.
+
+Additional read-only checks: Cloud Monitoring returned an empty alert-policy list; Firestore backup schedule list also returned empty. These do not prove PITR, backup or restore coverage. Project billing is enabled, but Billing Budget API lookup failed due the current CLI API/quota context; no budget, credit balance or spend-cap state is asserted. Materials bucket metadata selected fields for versioning, retention, lifecycle and soft-delete were null; direct confirmation remains open.
 
 ## Coordinator review and next action
 

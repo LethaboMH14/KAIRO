@@ -6,7 +6,7 @@ The supported task is: a learner brings a passage or document, reviews its extra
 
 ## Observed deployment (26 October 2026)
 
-Read-only CLI evidence in `cloud-inventory.json` and `live-preflight.json` is limited to metadata:
+Read-only CLI evidence in `live-preflight.json` and the individually assembled `cloud-inventory.json` is limited to metadata. The inventory helper did not complete, so the inventory JSON is not automated output:
 
 - Project `kairo-access-20261021`, region `africa-south1`.
 - Cloud Run `kairo-app` latest ready `kairo-app-full26b`, 100% traffic; image digest `sha256:2e74388c7fcd295501649d999b77fdaf83899bfea33e6f5a33f25ea505e41ffc`; 1 CPU, 1 GiB memory, max scale 20; runtime account `kairo-app-runtime@kairo-access-20261021.iam.gserviceaccount.com`.
@@ -14,11 +14,11 @@ Read-only CLI evidence in `cloud-inventory.json` and `live-preflight.json` is li
 - Invoker IAM contains the runtime service account only; no `allUsers` or `allAuthenticatedUsers` binding. Service ingress is `all`, so identity authorization is the decisive request gate; verify direct URL and intended reviewer access independently before widening access.
 - Cloud Run secrets are bound by name to `kairo-groq-key` and `kairo-openrouter-key`; enabled version `1` exists for each. Payloads were not read.
 - Firestore Native default database is in `africa-south1`.
-- Storage includes `kairo-access-20261021-materials` and the regional Cloud Run source bucket in `africa-south1`, plus a Cloud Build bucket in US. Bucket lifecycle/versioning/backups were not inspected.
+- Storage includes `kairo-access-20261021-materials` and the regional Cloud Run source bucket in `africa-south1`, plus a Cloud Build bucket in US. Selected materials-bucket metadata returned null for versioning, retention, lifecycle and soft-delete fields; confirm through a direct Storage API check before relying on recovery semantics.
 - Cloud Tasks queue `kairo-imports` is RUNNING in `europe-west1`; service metadata confirms that task location. An initial query against `africa-south1` was rejected as invalid and is not counted as a successful check.
-- Monitoring alert listing did not return usable output. Billing export, remaining credit balance/expiry, spend cap eligibility, retention/deletion policy, backup restoration and Cloud Run cost were not verified.
+- Cloud Monitoring returned an empty alert-policy list. Firestore backup-schedule query returned an empty list; PITR/backup coverage and restoration are still unverified. Project billing is enabled. Billing Budget API query failed because the current CLI context lacks an available billing-budget API/quota context; no budget was asserted. Billing export, credit balance/expiry, spend-cap eligibility and actual Cloud Run cost remain unverified.
 
-The previous automated live preflight exposed a helper defect: gcloud has no configured default project, even though every resource query used the explicit project. The project check source is corrected; `live-preflight.json` must be regenerated and independently reviewed before the helper is considered accepted. Fixture preflight passes 5/5 checks and five scripts parse; receipt overwrite protection was executed. The shell bridge timed out on one subsequent multi-call preflight. No deploy, IAM, traffic, billing or retention mutation occurred.
+The live preflight now passes all 5 metadata checks; it accepts gcloud's `(unset)` default project because every resource query specifies the target explicitly. Fixture preflight also passes 5/5. Six PowerShell scripts parse; receipt overwrite, malformed commit/image, rollback target mismatch and smoke-host mismatch checks passed. The Terraform module was not validated because the CLI is unavailable. No deploy, IAM, traffic, billing or retention mutation occurred.
 
 ## Architecture choice
 
