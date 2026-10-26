@@ -1,0 +1,42 @@
+{
+  "scope": "controlled MaterialReviewLayout component only",
+  "runtime": "Node.js v24.18.0",
+  "command": "node --test tests/material-review-layout.test.mjs (from studio/)",
+  "result": {
+    "passed": 5,
+    "failed": 0,
+    "status": "passed"
+  },
+  "checks": [
+    "Actual React module loaded through Vite SSR",
+    "Original and reviewed caller slots render together",
+    "Missing original fallback, supplied revision, coverage and visible warnings",
+    "Long heading, coverage and warning strings remain present and escaped",
+    "Save/build gates reflect dirty, capability and busy props",
+    "Mobile CSS keeps both React slots mounted and source contains arrow/Home/End keyboard handlers"
+  ],
+  "browser": {
+    "attempted": true,
+    "loaded": false,
+    "desktop": "not verified",
+    "mobile": "not verified",
+    "keyboardCallbacks": "not verified",
+    "screenshots": [],
+    "reason": "The local loopback Vite fixture could not be loaded in the browser. Windows Computer Use stopped the session because it could not verify the current browser URL."
+  },
+  "publication": {
+    "branch": "codex/material-review-layout-20261026-chat3",
+    "base": "main at fc03149be570cb1bbf4b663f612c3fcbd28f0c76",
+    "branch_created": true,
+    "source_files_uploaded": false,
+    "draft_pr_created": false,
+    "blocked_action": "The GitHub Contents API rejected the first source-file upload in automatic review. It said the external destination/code export was not explicitly authorized and directed the agent not to use a workaround or indirect execution. No source bytes were accepted by GitHub."
+  },
+  "not_claimed": [
+    "Real source review workflow integration",
+    "Private learner material acceptance",
+    "Human or device validation",
+    "Learning outcomes, traction, deployment, or release approval"
+  ]
+}
+
