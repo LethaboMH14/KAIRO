@@ -24,6 +24,15 @@ const actions = [
   { id: 'plan', label: 'Plan next step', available: true },
 ];
 
+test('the real studio companion mounts bounded actions against selected and reviewed context', async () => {
+  const source = await readFile(new URL('../src/learning-flow/StudioCompanion.tsx', import.meta.url), 'utf8');
+  assert.match(source, /import \{StudioActionArc\} from '\.\.\/studio-action-ui\/StudioActionArc'/);
+  assert.match(source, /<StudioActionArc actions=\{actions\} open=\{studioActionsOpen\}/);
+  assert.match(source, /id:'inside',[\s\S]*?available:!!input\.selectedLabel/);
+  assert.match(source, /id:'source',[\s\S]*?available:!!lessonContext&&contextState==='current'/);
+  assert.match(source, /else questionField\.current\?\.focus\(\)/);
+});
+
 test('actual studio action components render safe, labelled states and unique IDs through Vite SSR', async () => {
   const server = await createServer({
     root: studioRoot, configFile: false, plugins: [react()],

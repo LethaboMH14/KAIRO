@@ -4,28 +4,29 @@ Date: 26 October 2026. Candidate branch: `codex/full-integration-candidate-20261
 
 ## Judging need and scope
 
-- **Product:** keep source context and selected actions coherent for the learner moving from reviewed material into a lesson.
-- **Usability:** close the studio action arc before its parent changes the selected panel; keep original and reviewed material visible through the controlled review layout.
-- **Presentation / Creativity:** integrate the selected KAIRO studio packages while retaining the C identity and one teacher.
+- **Product:** preserve reviewed source context while a learner moves into contextual teaching.
+- **Usability:** offer bounded studio actions, disable actions without their required context, and close the action arc before changing the guide response.
+- **Presentation / Creativity:** keep the selected KAIRO identity and existing shared teacher in the studio.
 
-The learner need is to navigate source review and contextual teaching without a selection action being undone by stale panel state.
+The real `SourceWorkspace` already supports source review and saving. The imported `MaterialReviewLayout` remains a standalone controlled alternative; it was not substituted for the existing workflow.
 
 ## Candidate contents
 
-- Integrated exact reviewed PR #127 presentation-state adapter and PR #129 action UI commits.
-- Integrated the exact reviewed PR #143 controlled material-review layout package and evidence.
-- Corrected `StudioActionArc` so it closes before invoking the parent selection callback. Added a bounded regression assertion to the actual-module SSR test.
+- Integrated exact reviewed PR #127 presentation-state adapter, PR #129 action UI, and PR #143 material-review layout package.
+- Mounted `StudioActionArc` in the actual `StudioCompanion`. Explain, predict and reflection actions use prepared KAIRO guidance; “look inside” requires a selected part; “ask from the cited lesson” requires a current reviewed lesson and focuses the existing question field. Selecting an action never dispatches a model request. Existing explicit provider consent remains required.
+- Corrected the arc to close before the parent selection callback. Added a regression assertion plus a host-mount guard to the actual-module SSR test.
 
-These UI packages remain unmounted in the app. The reviewed layout is still not connected to the actual source editor/save/build workflow; action state and KAIRO guide are not wired into a complete new route here.
+The standalone `KairoActionMenu`, `TeachingCard`, material-review layout and pure presentation-state adapter remain unmounted. The source and lesson record flow remains owned by the existing source workflow and backend.
 
 ## Verification
 
-- `node --test tests/kairo-presentation-state.test.mjs tests/studio-action-ui.test.mjs tests/material-review-layout.test.mjs`: 13 passed, 0 failed.
-- `node node_modules/typescript/bin/tsc -b --pretty false`: passed with no diagnostics.
-- `node node_modules/vite/bin/vite.js build`: passed, 2,354 modules transformed; existing advisory reports chunks over 500 kB.
-- Full `node --test tests/*.test.mjs`: failed in this Windows worktree. The ignored OCR virtual environment is absent (`tools/course_sources/.venv-ocr`), so Python and office extraction tests fail; parallel Vite SSR tests also report dependency-scan server restarts and port 24678 collisions. This is not treated as a full-suite pass.
-- No end-to-end browser, keyboard, device, screen-reader or human acceptance is claimed for this candidate. Prior synthetic browser evidence does not cover this candidate's complete journey.
+- `node --test tests/kairo-presentation-state.test.mjs tests/studio-action-ui.test.mjs tests/material-review-layout.test.mjs`: 14 passed, 0 failed after mounting the arc.
+- `node node_modules/typescript/bin/tsc -b --pretty false`: passed with no diagnostics after mounting.
+- `node node_modules/vite/bin/vite.js build`: passed after mounting, 2,356 modules transformed; existing advisory reports chunks over 500 kB.
+- Focused extraction/upload/security checks with the documented OCR Python environment: 29 passed, 1 failed. Only the Tesseract executable availability check failed because `tesseract` is not installed; DOCX/XLSX/PPTX/PDF extraction and upload checks passed. The candidate links to the existing OCR venv through a candidate-only junction; no packages were installed for that venv.
+- A full `node --test tests/*.test.mjs` run before connecting the OCR environment exited 1. It logged Vite dependency-scan restarts and port 24678 collisions while test files ran concurrently. The complete suite has not been rerun after the environment link; no full-suite pass is claimed.
+- No end-to-end browser, keyboard, device, screen-reader or human acceptance is claimed for this candidate. Prior synthetic browser evidence does not cover this candidate's full journey.
 
 ## Remaining gates
 
-Mount and test these components in the real source/review/lesson flow, resolve the full-suite environment and parallel-server failures, get independent source review, perform browser and keyboard acceptance, then evaluate private release gates. No deployment or promotion is included.
+Resolve the Tesseract prerequisite and run the complete suite in the intended CI environment, review the mounted studio in browser and keyboard flows, get independent source review, and evaluate private release gates. No deployment or promotion is included.

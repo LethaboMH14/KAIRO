@@ -9,18 +9,25 @@
     {"pull_request": 129, "head": "b210a5f6e8101a8563aadcd5556392be8aa732ba", "state": "integrated"},
     {"pull_request": 143, "head": "d8dd16d2f7bcced7b92efbadcf178c76421f3e8f", "state": "integrated"}
   ],
-  "root_fix": "StudioActionArc closes before onChoose; source-order regression assertion added.",
+  "host_integration": {
+    "mounted": "StudioActionArc in StudioCompanion",
+    "selection_gates": ["selected part for look-inside action", "current reviewed lesson for source action"],
+    "dispatch": "actions update prepared guide intent or focus the existing question field; no request is sent by the action menu",
+    "provider_consent": "existing explicit consent and Ask button remain required"
+  },
+  "root_fix": "StudioActionArc closes before onChoose; source-order regression assertion and host-mount guard added.",
   "checks": {
-    "targeted_node_tests": {"passed": 13, "failed": 0},
-    "typescript_build": "passed",
-    "production_vite_build": {"passed": true, "modules_transformed": 2354, "advisory": "chunks above 500 kB"},
-    "full_studio_test_suite": {"passed": false, "limitations": ["ignored tools/course_sources/.venv-ocr is absent in the candidate worktree", "parallel Vite SSR tests collide on port 24678 and report dependency-scan restart errors", "office extraction tests fail in this Windows environment"]},
+    "targeted_node_tests": {"passed": 14, "failed": 0},
+    "typescript_build": "passed after host mount",
+    "production_vite_build": {"passed": true, "modules_transformed": 2356, "advisory": "chunks above 500 kB"},
+    "focused_extraction_upload_security": {"passed": 29, "failed": 1, "failure": "Tesseract executable is not installed; DOCX/XLSX/PPTX/PDF extraction checks passed"},
+    "full_studio_test_suite": {"passed": false, "rerun_after_ocr_link": false, "prior_run_limitations": ["OCR virtual environment was initially unavailable in candidate", "parallel Vite SSR tests reported dependency-scan restart and port 24678 collision errors"]},
     "browser_keyboard_device_human_acceptance": "not performed for the integrated candidate",
     "deployment": "not performed"
   },
   "integration_gaps": [
-    "material-review-layout remains unmounted from the real source review workflow",
-    "studio action UI and presentation state remain unmounted from the real lesson flow",
-    "complete source-to-review-to-lesson-to-practice-to-evidence-to-resume candidate journey is not verified"
+    "KairoActionMenu, TeachingCard and presentation-state adapter remain standalone",
+    "MaterialReviewLayout remains standalone; existing SourceWorkspace owns source review and saving",
+    "complete source-to-review-to-lesson-to-practice-to-evidence-to-resume journey is not verified in browser on this candidate"
   ]
 }
