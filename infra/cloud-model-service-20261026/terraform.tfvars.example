@@ -1,0 +1,6 @@
+project_id                  = "kairo-access-20261021"
+region                      = "africa-south1"
+service_name                = "kairo-model-host"
+image                       = "africa-south1-docker.pkg.dev/kairo-access-20261021/models/REPLACE@sha256:REPLACE_WITH_64_HEX_DIGEST"
+runtime_service_account     = "kairo-model-runtime@kairo-access-20261021.iam.gserviceaccount.com"
+app_invoker_service_account = "kairo-app-runtime@kairo-access-20261021.iam.gserviceaccount.com"

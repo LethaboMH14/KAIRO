@@ -1,0 +1,11 @@
+{
+  "parserScripts": 6,
+  "fixturePreflightChecks": 5,
+  "projectUnsetSentinel": "pass",
+  "receiptValidDigest": "pass",
+  "receiptOverwriteRejected": "pass",
+  "invalidCommitAndImageRejected": "pass",
+  "rollbackReceiptTargetMismatchRejected": "pass",
+  "smokeHostMismatchRejected": "pass",
+  "cloudMutations": 0
+}
