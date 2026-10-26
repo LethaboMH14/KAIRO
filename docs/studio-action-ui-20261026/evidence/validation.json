@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-26",
+  "task": "STUDIO-ACTION-UI-20261026-A",
+  "agent": "codex-luna-studio-action-ui-20261026-a",
+  "settings": { "client": "Codex", "model": "gpt-6-luna", "effort": "low" },
+  "contract": "studio/src/kairo-interaction-contract/types.ts v1 (root-owned; unchanged)",
+  "ssr": {
+    "command": "node --test tests/studio-action-ui.test.mjs",
+    "result": "passed",
+    "tests": 1,
+    "coverage": ["actual component imports through Vite SSR", "action/scope and busy disabled states", "visible unavailable reasons", "unique instance IDs", "arc max-five behavior", "plain-text escaping", "capability and narration states"]
+  },
+  "typescript": { "command": "npx tsc --noEmit -p tsconfig.json", "result": "passed" },
+  "productionBuild": { "command": "npm run build", "result": "passed", "modulesTransformed": 2354, "note": "Vite reported the repository's existing large-chunk warning; this UI package was not mounted into the app." },
+  "browser": {
+    "environment": "synthetic fixture served from local Vite at 127.0.0.1:4179; Chromium 1217 headless; fixture requests restricted to localhost",
+    "result": "passed",
+    "viewports": [{ "width": 1440, "height": 1000 }, { "width": 390, "height": 844 }],
+    "checks": ["action and scope gate", "unavailable action remains disabled with reason", "single confirmed callback and payload", "contextKey clears the selected draft", "Escape closes and restores trigger focus", "choosing a studio arc action closes the arc", "narration and source callbacks invoke the supplied handlers", "reduced-motion removes transitions", "mobile menu and list have no horizontal overflow", "five-action maximum", "no page or console errors"],
+    "mobileGeometry": { "viewportWidth": 390, "documentWidth": 390, "panelWidth": 358, "panelClientWidth": 356, "teachingCardHiddenWhileActionSurfaceOpen": true, "arcItemCount": 5, "arcGridColumns": 1 },
+    "screenshots": ["desktop-action-menu.png", "desktop-studio-action-arc.png", "desktop-teaching-card.png", "mobile-action-menu.png", "mobile-studio-action-list.png"],
+    "consoleErrors": []
+  },
+  "limitations": ["This is an isolated component fixture, not the KAIRO application host or production service.", "No physical-device, human usability, language, learning-outcome, provider, source-owner or production validation is claimed.", "Host integration must enforce one active interaction surface, current owner-bound context, stale-request cancellation, source/revision checks and shared narrator state."]
+}
