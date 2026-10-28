@@ -1,0 +1,62 @@
+name: Independent pump challenge acceptance
+
+on:
+  pull_request:
+    paths:
+      - 'tools/studio-pump-independent-qa/**'
+      - '.github/workflows/studio-pump-independent-qa.yml'
+      - 'coordination/handoffs/2026-10-25-pump-independent-qa-gpt6-q.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pump-independent-qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  independent-pump-acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # official v4 pin
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # official v4 pin
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: studio/package-lock.json
+      - name: Verify exact PR 55 head and exclusive scope
+        shell: bash
+        env:
+          EXPECTED_SHA: a46838a82e3a564223196e1f270c369207771e90
+        run: |
+          set -euo pipefail
+          git fetch --no-tags https://github.com/LethaboMH14/KAIRO.git refs/pull/55/head
+          actual="$(git rev-parse FETCH_HEAD)"
+          test "$actual" = "$EXPECTED_SHA" || { echo "BLOCKED: PR #55 head changed; re-review and repin before testing"; exit 1; }
+          git diff --name-only "$(git merge-base HEAD FETCH_HEAD)" FETCH_HEAD | LC_ALL=C sort > /tmp/pump-pr-files
+          cat > /tmp/pump-expected-files <<'EOF'
+          coordination/handoffs/2026-10-25-issue49-pump-what-if-gpt6.md
+          studio/src/studio-scenarios/pump-what-if/PumpWhatIf.tsx
+          studio/src/studio-scenarios/pump-what-if/challenge.ts
+          studio/src/studio-scenarios/pump-what-if/preview.html
+          studio/src/studio-scenarios/pump-what-if/preview.tsx
+          studio/src/studio-scenarios/pump-what-if/pump-what-if.css
+          studio/tests/pump-what-if.test.mjs
+          EOF
+          diff -u /tmp/pump-expected-files /tmp/pump-pr-files
+          git restore --source=FETCH_HEAD -- studio/src/studio-scenarios/pump-what-if studio/tests/pump-what-if.test.mjs
+          echo "Ephemeral PR #55 source pinned; no repository PR or main branch modified."
+      - name: Install locked app dependencies
+        working-directory: studio
+        run: npm ci --no-audit --no-fund
+      - name: Execute original and independent acceptance tests
+        working-directory: studio
+        run: node --test --test-concurrency=1 tests/pump-what-if.test.mjs ../tools/studio-pump-independent-qa/pump-challenge-contract.test.mjs
+      - name: Compile app with ephemeral candidate
+        working-directory: studio
+        run: npm run build
