@@ -1,0 +1,7 @@
+.kh-hold{margin:14px 0;padding:12px 14px;border:1px solid #dbe6ed;border-radius:6px;background:#fff}
+.kh-hold .sw-check{margin:0 0 10px}
+.kh-hold-button{min-height:44px;font-size:11px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.kh-hold-button.is-holding{background:#e4f1e8;border-color:#a6cbb3!important;color:#2f6a4b}
+.kh-hold .sw-fine{margin-top:10px}
+.kh-hold-status{font-size:10px;color:#5e8d78;min-height:1em;margin-top:6px}
+.kh-hold-note{margin:10px 0}
