@@ -1,0 +1,63 @@
+name: KAIRO pump challenge deterministic replay fuzz (read-only)
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/studio-pump-replay-fuzz-20261025.yml'
+      - 'tools/studio-pump-replay-fuzz-20261025/**'
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: kairo-pump-replay-fuzz-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  pinned-replay-fuzz:
+    if: github.event.pull_request.head.repo.full_name == 'LethaboMH14/KAIRO'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: studio/package-lock.json
+      - name: Validate fail-closed candidate pin policy
+        run: node --test tools/studio-pump-replay-fuzz-20261025/pin.test.mjs
+      - name: Verify exact live #55 head and file allowlist
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/studio-pump-replay-fuzz-20261025/pin.mjs verify
+      - name: Compose candidate only in temporary CI checkout
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/studio-pump-replay-fuzz-20261025/pin.mjs compose
+      - name: Install locked dependencies
+        working-directory: studio
+        run: npm ci --no-audit --no-fund
+      - name: Exercise original and independent deterministic fuzz controls
+        run: |
+          node --test --test-concurrency=1 \
+            studio/tests/pump-what-if.test.mjs \
+            tools/studio-pump-replay-fuzz-20261025/fuzz.test.mjs
+      - name: Verify composed application production build
+        working-directory: studio
+        run: npm run build
+      - name: Declare evidence boundary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "### Pump replay fuzz evidence boundary"
+            echo "Seeded synthetic deterministic replay/negative tests and ephemeral pinned composition only."
+            echo "No real learner, device, keyboard/screen-reader acceptance, expert pump review, authenticated storage or Kaggle training."
+            echo "No remote merge/deployment; independent review and PR #34 policy remain required."
+          } >> "$GITHUB_STEP_SUMMARY"
