@@ -3,6 +3,7 @@ import {createContext,useContext,useEffect,useRef,useState,type ReactNode,type M
 import {Pause,Play,Square,Volume2} from 'lucide-react';
 import {defaultSettings,parseSettings,SETTINGS_KEY,type TeacherSettings} from './model';
 import {CLOUD_VOICES,mouthEnergy,speechChunks,type AudioSignal} from '../avatar/motion';
+import {pickVoice} from './naturalVoice';
 import './teacher.css';
 
 type TeacherAPI={settings:TeacherSettings;update:(value:TeacherSettings)=>void;voices:SpeechSynthesisVoice[];say:(text:string,language?:string)=>void;stop:()=>void;pause:()=>void;status:string;speaking:boolean;paused:boolean;caption:string;audioSignal:MutableRefObject<AudioSignal>;};
@@ -16,6 +17,9 @@ export default function TeacherProvider({children}:{children:ReactNode}){
  function clearStatusTimer(){if(statusTimer.current){clearTimeout(statusTimer.current);statusTimer.current=null;}}
  function setStatus(message:string){statusToken.current++;clearStatusTimer();setStatusText(message);}
  function stop(){const wasActive=speaking||paused||!!abort.current||status.startsWith('Preparing');cancel();setSpeaking(false);setPaused(false);if(!wasActive)return;setStatus('Narration stopped.');const token=statusToken.current;statusTimer.current=setTimeout(()=>{statusTimer.current=null;if(statusToken.current===token)setStatusText('');},4000);}
+ const [needsConsent,setNeedsConsent]=useState(false),pending=useRef<{text:string;language:string}|null>(null);
+ useEffect(()=>{if(settings.cloudConsent&&pending.current){const next=pending.current;pending.current=null;say(next.text,next.language);}},[settings.cloudConsent]);
+ function allowNaturalVoice(){setNeedsConsent(false);update({...settings,voiceMode:'google',cloudConsent:true});}
  useEffect(()=>{
   const refresh=()=>setVoices(window.speechSynthesis?.getVoices()||[]);refresh();window.speechSynthesis?.addEventListener('voiceschanged',refresh);const leave=()=>cancel();window.addEventListener('pagehide',leave);
   return()=>{cancel();clearStatusTimer();void audioContext.current?.close();audioContext.current=null;window.speechSynthesis?.removeEventListener('voiceschanged',refresh);window.removeEventListener('pagehide',leave);};
@@ -23,15 +27,15 @@ export default function TeacherProvider({children}:{children:ReactNode}){
  function update(value:TeacherSettings){cancel();setSpeaking(false);setPaused(false);setSettings(value);try{learnerStorage.setItem(SETTINGS_KEY,JSON.stringify(value));setStatus('Teacher preferences saved on this device.');}catch{setStatus('Preferences could not be saved in this browser.');}}
  async function cloudSay(text:string,language:string,id:number){
   const voice=CLOUD_VOICES.find(v=>v.id===settings.cloudVoice)||CLOUD_VOICES[0];
-  if(!settings.cloudConsent){setStatus('Enable Google voice consent in Teacher settings first.');return;}
+  if(!settings.cloudConsent){pending.current={text,language};setNeedsConsent(true);setStatus('Enable Google voice consent in Teacher settings first, or allow it here.');return;}
   if(language.split('-')[0]!==voice.language.split('-')[0]){setStatus(`The selected cloud voice speaks ${voice.language}. Choose an available voice for this passage language.`);return;}
   const controller=new AbortController();abort.current=controller;
   try{
    audioContext.current??=new AudioContext();await audioContext.current.resume();
-   for(const chunk of speechChunks(text)){
+   let first=true;for(const chunk of speechChunks(text)){
     if(active.current!==id)return;setCaption(chunk);setStatus(`Preparing ${voice.label}…`);
     const response=await fetch('/api/avatar/speech',{method:'POST',headers:{'Content-Type':'application/json'},signal:controller.signal,body:JSON.stringify({text:chunk,voice:voice.id,consent:true})});
-    if(!response.ok){const error=await response.json();throw new Error(error.error||'Cloud speech is unavailable.');}
+    if(!response.ok){if(response.status===503&&first){abort.current=null;deviceSay(text,language,id);return;}const error=await response.json();throw new Error(error.error||'Cloud speech is unavailable.');}first=false;
     const blob=await response.blob();if(active.current!==id)return;
     const url=URL.createObjectURL(blob),element=new Audio(url);audio.current=element;element.playbackRate=settings.rate;element.preservesPitch=true;
     const ctx=audioContext.current,source=ctx.createMediaElementSource(element),analyser=ctx.createAnalyser();analyser.fftSize=256;source.connect(analyser);analyser.connect(ctx.destination);const samples=new Uint8Array(analyser.fftSize);let raf=0;
@@ -45,15 +49,20 @@ export default function TeacherProvider({children}:{children:ReactNode}){
  }
  function say(text:string,language=settings.language){
   statusToken.current++;clearStatusTimer();setStatusText(current=>current==='Narration stopped.'?'':current);cancel();setSpeaking(false);setPaused(false);const value=text.slice(0,5000);if(!value.trim())return;const id=active.current;setCaption(value);
+  setNeedsConsent(false);pending.current=null;
   if(settings.voiceMode==='google'){void cloudSay(value,language,id);return;}
+  deviceSay(value,language,id);
+ }
+ function deviceSay(value:string,language:string,id:number){
   if(!('speechSynthesis'in window)){setStatus('Browser narration is unavailable.');return;}
-  const candidates=speechSynthesis.getVoices().filter(v=>v.lang.split('-')[0]===language.split('-')[0]);const chosen=candidates.find(v=>v.voiceURI===settings.voiceURI)||candidates.find(v=>v.lang.toLowerCase()===language.toLowerCase())||candidates[0];
-  if(!chosen){setStatus(`No ${language} voice is available in this browser. Choose a supported voice in Teacher settings.`);return;}
+  // Natural voices only: a robotic device voice is used only when the learner allowed basic voices.
+  const chosen=pickVoice(speechSynthesis.getVoices(),language,settings.voiceURI,settings.allowBasicVoices===true);
+  if(!chosen){setStatus(`No ${language} voice that sounds natural is available here. Captions are showing. Microsoft Edge and Chrome include natural voices; basic voices can be allowed in Voice settings.`);return;}
   const utterance=new SpeechSynthesisUtterance(value);utterance.voice=chosen;utterance.lang=chosen.lang;utterance.rate=settings.rate;
   utterance.onstart=()=>{if(id!==active.current)return;setSpeaking(true);setStatus(`Reading with ${chosen.name} (${chosen.lang}).`);};
   utterance.onend=()=>{if(id!==active.current)return;setSpeaking(false);setPaused(false);setStatus('Reading finished.');};
   utterance.onerror=()=>{if(id!==active.current)return;setSpeaking(false);setPaused(false);setStatus('Narration could not play. The passage is still available as text.');};speechSynthesis.speak(utterance);
  }
  function pause(){if(!speaking)return;if(audio.current){if(paused){const element=audio.current,id=active.current;void element.play().catch(()=>{if(active.current!==id||audio.current!==element)return;cancel();setSpeaking(false);setPaused(false);setStatus('Press Read to restart narration.');});}else audio.current.pause();}else if(paused)speechSynthesis.resume();else speechSynthesis.pause();setPaused(!paused);}
- return <Teacher.Provider value={{settings,update,voices,say,stop,pause,status,speaking,paused,caption,audioSignal}}>{children}{(speaking||status)&&<aside className="kt-dock" aria-label="Narration controls"><Volume2 size={17}/><div><strong>{speaking?(paused?'Narration paused':'Reading your passage'):'Teacher controls'}</strong><span role="status">{status}</span></div>{speaking?<><button onClick={pause} aria-label={paused?'Resume narration':'Pause narration'}>{paused?<Play size={16}/>:<Pause size={16}/>}</button><button onClick={stop} aria-label="Stop narration"><Square size={15}/></button></>:<button onClick={()=>{cancel();setStatus('');}} aria-label="Dismiss teacher status">×</button>}<a href="/teacher">Settings</a></aside>}</Teacher.Provider>;
+ return <Teacher.Provider value={{settings,update,voices,say,stop,pause,status,speaking,paused,caption,audioSignal}}>{children}{(speaking||status)&&<aside className="kt-dock" aria-label="Narration controls"><Volume2 size={17}/><div><strong>{speaking?(paused?'Narration paused':'Reading your passage'):'Teacher controls'}</strong><span role="status">{status}</span>{needsConsent&&<button type="button" className="kt-consent" onClick={allowNaturalVoice}>Use KAIRO’s natural voice (sends this text to Google)</button>}</div>{speaking?<><button onClick={pause} aria-label={paused?'Resume narration':'Pause narration'}>{paused?<Play size={16}/>:<Pause size={16}/>}</button><button onClick={stop} aria-label="Stop narration"><Square size={15}/></button></>:<button onClick={()=>{cancel();setStatus('');}} aria-label="Dismiss teacher status">×</button>}<a href="/teacher">Settings</a></aside>}</Teacher.Provider>;
 }

@@ -9,6 +9,8 @@ after(async () => { await loaded?.close(); });
 async function setup() {
   const mocks = installMediaMocks();
   const harness = createProviderHarness(loaded.Provider);
+  // New learners default to the cloud natural voice; these cases exercise device narration explicitly.
+  harness.render(); harness.value.update(settings()); harness.render();
   return { mocks, harness, get api() { return harness.value; }, async close() { harness.cleanup(); mocks.restore(); } };
 }
 async function settle() { await Promise.resolve(); await Promise.resolve(); }
