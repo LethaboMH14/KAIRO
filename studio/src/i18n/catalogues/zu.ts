@@ -1,0 +1,20 @@
+export const catalogue = {
+  meta: { code: 'zu', name: 'isiZulu', reviewed: false },
+  strings: {
+    home: 'Ikhaya',
+    sources: 'Izinto zami zokufunda',
+    studios: 'Izindawo zokufundela',
+    evidence: 'Umsebenzi wami',
+    direction: 'Indlela yami',
+    voiceAccess: 'Izwi, ulimi nekhamera',
+    settings: 'Izilungiselelo nokufinyelela',
+    educators: 'Othisha',
+    account: 'I-akhawunti nezinto zami eziyimfihlo',
+    skip: 'Yeqela kokuqukethwe',
+    railMaterial: 'Izinto zami zokufunda',
+    railLesson: 'Isifundo sami',
+    railExplore: 'Hlola',
+    railWorking: 'Umsebenzi wami',
+    railDirection: 'Indlela yami',
+  },
+} as const;

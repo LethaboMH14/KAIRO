@@ -1,0 +1,20 @@
+export const catalogue = {
+  meta: { code: 'af', name: 'Afrikaans', reviewed: false },
+  strings: {
+    home: 'Tuis',
+    sources: 'My materiaal',
+    studios: 'Ateljees',
+    evidence: 'My werk',
+    direction: 'My rigting',
+    voiceAccess: 'Stem, taal en kamera',
+    settings: 'Instellings en toegang',
+    educators: 'Vir opvoeders',
+    account: 'Rekening en private materiaal',
+    skip: 'Slaan oor na inhoud',
+    railMaterial: 'My materiaal',
+    railLesson: 'My les',
+    railExplore: 'Verken',
+    railWorking: 'My werk',
+    railDirection: 'My rigting',
+  },
+} as const;

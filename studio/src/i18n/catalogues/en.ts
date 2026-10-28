@@ -1,0 +1,20 @@
+export const catalogue = {
+  meta: { code: 'en', name: 'English', reviewed: true },
+  strings: {
+    home: 'Home',
+    sources: 'My material',
+    studios: 'Studios',
+    evidence: 'My work',
+    direction: 'My direction',
+    voiceAccess: 'Voice, language & camera',
+    settings: 'Settings & access',
+    educators: 'For educators',
+    account: 'Account & private material',
+    skip: 'Skip to content',
+    railMaterial: 'My material',
+    railLesson: 'My lesson',
+    railExplore: 'Explore',
+    railWorking: 'My working',
+    railDirection: 'My direction',
+  },
+} as const;

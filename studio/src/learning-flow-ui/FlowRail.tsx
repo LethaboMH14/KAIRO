@@ -1,10 +1,12 @@
 import './flow-rail.css';
+import {catalogues,useLanguage,type MessageKey} from '../i18n/language';
 
 export type FlowStage = 'material' | 'lesson' | 'studio' | 'evidence' | 'direction';
 
 export type FlowRailItem = {
   stage: FlowStage;
   label: string;
+  translationKey?: MessageKey;
   href?: string;
   note?: string;
 };
@@ -25,6 +27,12 @@ function isAppPath(href: string | undefined): href is string {
 
 export default function FlowRail({ current, moduleLabel, lessonTitle, items }: FlowRailProps) {
   const context = [moduleLabel, lessonTitle].filter(Boolean);
+  const language = useLanguage();
+  const translated = (key: MessageKey | undefined, english: string) => {
+    if (!key) return english;
+    const value = catalogues[language].strings[key];
+    return typeof value !== 'string' || value === english ? english : <span lang={language}>{value}</span>;
+  };
 
   return (
     <nav className="flow-rail" aria-label="Learning journey">
@@ -39,12 +47,12 @@ export default function FlowRail({ current, moduleLabel, lessonTitle, items }: F
             <li className={className} key={`${item.stage}-${index}`}>
               {isAppPath(item.href) ? (
                 <a href={item.href} aria-current={isCurrent ? 'step' : undefined}>
-                  <span className="flow-rail__label">{item.label}</span>
+                  <span className="flow-rail__label">{translated(item.translationKey,item.label)}</span>
                   {item.note && <span className="flow-rail__note">{item.note}</span>}
                 </a>
               ) : (
                 <span aria-current={isCurrent ? 'step' : undefined}>
-                  <span className="flow-rail__label">{item.label}</span>
+                  <span className="flow-rail__label">{translated(item.translationKey,item.label)}</span>
                   {item.note && <span className="flow-rail__note">{item.note}</span>}
                 </span>
               )}
