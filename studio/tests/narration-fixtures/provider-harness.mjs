@@ -117,7 +117,7 @@ export function installMediaMocks() {
   };
   const trace = { fetches: [], audios: [], urls: [], revoked: [], frames: new Set(), cancelledFrames: [], graphs: [], sources: [], analysers: [], playCalls: 0, nextPlayError: null, synthesis: null, events: new Map(), stored: new Map() };
   const speech = {
-    voices: [{ name: 'Synthetic English', lang: 'en-ZA', voiceURI: 'en-ZA-test' }],
+    voices: [{ name: 'Synthetic English Online (Natural)', lang: 'en-ZA', voiceURI: 'en-ZA-test' }],
     utterances: [], cancelCount: 0, pauseCount: 0, resumeCount: 0, listeners: new Map(),
     getVoices() { return this.voices; },
     speak(utterance) { this.utterances.push(utterance); },

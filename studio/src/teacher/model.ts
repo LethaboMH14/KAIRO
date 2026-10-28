@@ -1,9 +1,9 @@
 export type Look='soft3d'|'graphic3d'|'realistic';
-export type TeacherSettings={version:1;look:Look;voiceURI:string;language:string;rate:number;voiceMode?:'browser'|'google';cloudVoice?:string;cloudConsent?:boolean;};
+export type TeacherSettings={version:1;look:Look;voiceURI:string;language:string;rate:number;voiceMode?:'browser'|'google';cloudVoice?:string;cloudConsent?:boolean;allowBasicVoices?:boolean;};
 export const SETTINGS_KEY='kairo-teacher-settings-v1';
-export const defaultSettings=():TeacherSettings=>({version:1,look:'soft3d',voiceURI:'',language:'en-ZA',rate:.94});
+export const defaultSettings=():TeacherSettings=>({version:1,look:'soft3d',voiceURI:'',language:'en-ZA',rate:.94,voiceMode:'google',cloudVoice:'en-GB-Chirp3-HD-Aoede',cloudConsent:false,allowBasicVoices:false});
 export function parseSettings(raw:string|null):TeacherSettings{
- if(!raw)return defaultSettings();const value=JSON.parse(raw);return {version:1,look:['soft3d','graphic3d','realistic'].includes(value?.look)?value.look:'soft3d',voiceURI:typeof value?.voiceURI==='string'?value.voiceURI.slice(0,500):'',language:['en-ZA','af-ZA','zu-ZA','xh-ZA','st-ZA','tn-ZA'].includes(value?.language)?value.language:'en-ZA',rate:typeof value?.rate==='number'&&Number.isFinite(value.rate)?Math.min(1.2,Math.max(.75,value.rate)):.94,voiceMode:value?.voiceMode==='google'?'google':'browser',cloudVoice:['en-GB-Chirp3-HD-Aoede','en-US-Chirp3-HD-Kore','en-GB-Chirp3-HD-Puck'].includes(value?.cloudVoice)?value.cloudVoice:'en-GB-Chirp3-HD-Aoede',cloudConsent:value?.cloudConsent===true};
+ if(!raw)return defaultSettings();const value=JSON.parse(raw);return {version:1,look:['soft3d','graphic3d','realistic'].includes(value?.look)?value.look:'soft3d',voiceURI:typeof value?.voiceURI==='string'?value.voiceURI.slice(0,500):'',language:['en-ZA','af-ZA','zu-ZA','xh-ZA','st-ZA','tn-ZA'].includes(value?.language)?value.language:'en-ZA',rate:typeof value?.rate==='number'&&Number.isFinite(value.rate)?Math.min(1.2,Math.max(.75,value.rate)):.94,voiceMode:value?.voiceMode==='browser'?'browser':'google',cloudVoice:['en-GB-Chirp3-HD-Aoede','en-US-Chirp3-HD-Kore','en-GB-Chirp3-HD-Puck'].includes(value?.cloudVoice)?value.cloudVoice:'en-GB-Chirp3-HD-Aoede',cloudConsent:value?.cloudConsent===true,allowBasicVoices:value?.allowBasicVoices===true};
 }
 export type PassageContext={kind:'source'|'lesson';id:string;revision:string;section?:number;evidenceId?:string};
 export type Span={start:number;end:number;text:string};

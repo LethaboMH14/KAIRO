@@ -9,6 +9,8 @@ after(async () => { await loaded?.close(); });
 async function setup() {
   const mocks = installMediaMocks();
   const harness = createProviderHarness(loaded.Provider);
+  // New learners default to the cloud natural voice; these cases exercise device narration explicitly.
+  harness.render(); harness.value.update(settings()); harness.render();
   return { mocks, harness, get api() { return harness.value; }, async close() { harness.cleanup(); mocks.restore(); } };
 }
 async function settle() { await Promise.resolve(); await Promise.resolve(); }
@@ -188,5 +190,20 @@ test('actual speechChunks boundaries are used and stop between chunks cannot req
     x.api.say(text); await settle(); assert.equal(x.mocks.trace.fetches.length, 1);
     x.api.stop(); first.resolve({ ok:true, blob:async()=>new Blob(['late']) }); await settle(); x.harness.render();
     assert.equal(signal.aborted, true); assert.equal(x.mocks.trace.fetches.length, 1); assert.equal(x.mocks.trace.audios.length, 0);
+  } finally { await x.close(); }
+});
+
+test('a passage waiting for voice consent is never sent later because consent was given in Settings or after Stop', async () => {
+  const x = await setup();
+  try {
+    globalThis.fetch = async (...args) => { x.mocks.trace.fetches.push(args); return { ok:true, blob:async()=>new Blob(['audio']) }; };
+    x.api.update(settings({ voiceMode: 'google', cloudConsent: false })); x.harness.render();
+    x.api.say('waiting passage'); x.harness.render();
+    x.api.update(settings({ voiceMode: 'google', cloudConsent: true })); x.harness.render(); await settle();
+    assert.equal(x.mocks.trace.fetches.length, 0, 'consent from Settings does not replay the old passage');
+    x.api.update(settings({ voiceMode: 'google', cloudConsent: false })); x.harness.render();
+    x.api.say('stopped passage'); x.harness.render(); x.api.stop(); x.harness.render();
+    x.api.update(settings({ voiceMode: 'google', cloudConsent: true })); x.harness.render(); await settle();
+    assert.equal(x.mocks.trace.fetches.length, 0, 'Stop clears the waiting passage');
   } finally { await x.close(); }
 });
