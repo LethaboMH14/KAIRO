@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "jobId": "motor-field-speed-demo-50hz-4poles",
+  "status": "succeeded",
+  "cacheKey": "b84477959e869ac7ddad35ec98d257fc239b1762140db1715cce240b14f4c368",
+  "sourceRevisions": [
+    {
+      "id": "kairo-engineering-motor-field-speed-20261024",
+      "sha256": "d096a6c07a1bd7ac0cd475239c04ad5882e0d4e182bd62c925b5a89827f7e8b7"
+    },
+    {
+      "id": "kairo-concept-clip-source-citations-20261026",
+      "sha256": "2ed5d9887afdc07df5c708d6b23f96f71ff33d86e6a9d91bd1d08983303abe88"
+    }
+  ],
+  "sourcePackPath": "docs/engineering-pilot-packs-20261024/motor-field-speed.json",
+  "sourcePackSha256": "d096a6c07a1bd7ac0cd475239c04ad5882e0d4e182bd62c925b5a89827f7e8b7",
+  "sourceCitationRecordPath": "docs/concept-clip-20261026/sources.json",
+  "sourceCitationRecordSha256": "2ed5d9887afdc07df5c708d6b23f96f71ff33d86e6a9d91bd1d08983303abe88",
+  "sourceReferences": [
+    {
+      "id": "nptel-rotating-field",
+      "title": "Electrical Machines II, The Rotating Magnetic Field",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108106072/pdf/1_2.pdf",
+      "locator": "IIT Madras, lesson 2, PDF navigation page 2; three-phase induction machine and travelling magnetic field.",
+      "supports": [
+        "The stator's balanced three-phase winding produces a rotating magnetic field."
+      ],
+      "licenseStatus": "No item-specific reuse licence confirmed. Factual paraphrase and citation only; no source text or figures redistributed."
+    },
+    {
+      "id": "nptel-field-speed",
+      "title": "Electrical Machines II, Speed Control of Induction Machines",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108106072/pdf/1_8.pdf",
+      "locator": "IIT Madras, §8.4–8.5, PDF navigation page 6 onward; synchronous speed uses supply frequency and pole pairs, and varying stator frequency changes field speed.",
+      "supports": [
+        "Synchronous field speed is 120 times supply frequency divided by total pole count.",
+        "In motoring operation rotor speed is below synchronous field speed."
+      ],
+      "licenseStatus": "No item-specific reuse licence confirmed. Factual paraphrase and citation only; no source text or figures redistributed."
+    }
+  ],
+  "excludedInheritedReference": {
+    "id": "nptel-induction-slip",
+    "url": "https://archive.nptel.ac.in/content/storage2/courses/108106026/chapter4.pdf",
+    "reason": "The linked PDF is titled Modelling of Exciter, Turbine and Load and is not the cited induction-machine slip section. Excluded from this clip; the originating motor lesson pack remains untouched for its owner to correct."
+  },
+  "template": "motor-field-speed-v1",
+  "templateVersion": "1.0.0",
+  "templatePath": "tools/concept-clip-20261026/scene_motor_field_speed.py",
+  "templateSha256": "ee9545d326f3551439fa88f1a9dd346f12cb93b0f8619786594a20ffad277269",
+  "workerSha256": "55f6ca6b152550f52280690f86bd7c0f4b1b7611bd7eb8441ec82bedd846f93b",
+  "dependencyLockSha256": "22db19b38b0914477f1149522dbc7e866ec72336c1f2fb484b1d9587c053b798",
+  "parameters": {
+    "frequencyHz": 50,
+    "poleCount": 4
+  },
+  "parametersSha256": "c0782c85c47695bb576dcd0567775800c747da06037e54107feb1a97cbb6c1f0",
+  "calculation": {
+    "formula": "n_s = 120 f / P",
+    "frequencyHz": 50,
+    "totalPoles": 4,
+    "synchronousFieldSpeedRpm": 1500
+  },
+  "boundary": "Calculated synchronous rotating-field speed only; not measured or predicted shaft speed. In motoring operation the induction rotor runs below synchronous speed.",
+  "renderer": {
+    "name": "Manim Community",
+    "version": "0.19.0",
+    "python": "3.11.9",
+    "resolution": "720x404",
+    "fps": 15,
+    "audioTracks": 0,
+    "durationSeconds": 8.266667,
+    "frameCount": 124,
+    "targetDurationSeconds": 8,
+    "targetToleranceSeconds": [
+      7.8,
+      8.5
+    ],
+    "renderElapsedSeconds": 27.672,
+    "timeoutSeconds": 180,
+    "renderedMp4Count": 1
+  },
+  "artifacts": {
+    "video": "motor-field-speed-v1-b84477959e869ac7ddad.mp4",
+    "poster": "motor-field-speed-v1-b84477959e869ac7ddad.png",
+    "captions": "motor-field-speed-v1-b84477959e869ac7ddad.vtt",
+    "renderLog": "motor-field-speed-v1-b84477959e869ac7ddad.render.log"
+  },
+  "artifactSha256": "a21f19529b18b03c8109f6789215a053d0fd8e5ac526b5de4620a85abdc2e5d4",
+  "posterSha256": "ae787ba34a576eddc2ef536614318826705116e4ad8766fbbdd428de2d7e6fc7",
+  "posterFrameSeconds": 4.5,
+  "captionsSha256": "9651fbab8a68affea1c10394bbdb747d0f76acc428257b17ab8865b94906b49d",
+  "renderLogSha256": "0a2f96451fe3b0e0f16f9aca9067bf9b0dba3c945a99f0b2920067e15dfe0e87",
+  "renderLogBytes": 13133,
+  "elapsedSeconds": 29.453,
+  "review": {
+    "type": "deterministic schema/formula/artifact checks",
+    "humanEducationalReview": "pending",
+    "browserDeviceReview": "not performed"
+  }
+}

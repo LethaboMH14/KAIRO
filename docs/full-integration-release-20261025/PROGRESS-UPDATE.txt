@@ -1,0 +1,7 @@
+Suggested progress: 8/10 for the engineering demonstration, not the full platform vision.
+
+Accomplished: Connected account-specific reviewed material to multi-source cited lessons, wording edits, practice, saved notes and resume, then motor/pump context and career/CV preparation. Integrated independently reviewed packages and deployed the private application. Clean Linux925 automated tests/build passed; final hosted lesson, motor, direction and CV pages passed browser checks with no JavaScript errors. Synthetic two-account tests checked ownership, stale-source rejection and saved work. One consented free Groq generation was verified.
+
+Challenges: Judge entry remains restricted by Cloud Run IAM. Automated desktop tests are not learner or physical-device validation. Full multimodal understanding, reliable multilingual/listening coverage, SASL translation, live funding/job connectors, evaluated adaptation, employer matching, institutional payments and recovery drills remain open.
+
+Next: Resolve judge entry while preserving private accounts; run a human/mobile engineering walkthrough; refine lesson pedagogy and source correction; connect dated opportunities and role gaps to explicit evidence; evaluate language/listening and accessibility; complete the evidence-backed demo and pilot presentation. Deleted schedules remain off.

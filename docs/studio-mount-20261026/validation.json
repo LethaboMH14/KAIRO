@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-26",
+  "candidate": {
+    "branch": "codex/full-integration-candidate-20261026",
+    "head": "a114a2a",
+    "base": "7e94b557b095188cf80d0a125d6be4967374bd95"
+  },
+  "integrated": [
+    {"pull_request": 127, "head": "cb27910d1571e2ad01d7575d52b5f9c4ea4084f3", "state": "integrated"},
+    {"pull_request": 129, "head": "b210a5f6e8101a8563aadcd5556392be8aa732ba", "state": "integrated"},
+    {"pull_request": 143, "head": "d8dd16d2f7bcced7b92efbadcf178c76421f3e8f", "state": "integrated"}
+  ],
+  "host_integration": {
+    "mounted": "StudioActionArc in StudioCompanion",
+    "selection_gates": ["selected part for look-inside action", "current reviewed lesson for source action"],
+    "dispatch": "actions update prepared guide intent or focus the existing question field; no request is sent by the action menu",
+    "provider_consent": "existing explicit consent and Ask button remain required"
+  },
+  "checks": {
+    "targeted_state_ui_review_tests": {"passed": 14, "failed": 0},
+    "typescript_build": "passed after host mount",
+    "production_vite_build": {"passed": true, "modules_transformed": 2356, "advisory": "chunks above 500 kB"},
+    "synthetic_source_lesson_practice_resume_integration": {"passed": 11, "failed": 0, "type": ["HTTP", "SSR"]},
+    "focused_extraction_upload_security": {"passed": 28, "failed": 2, "failures": ["Python extraction-library import probe exceeded 20-second timeout under host load", "reordered-XLSX worksheet-name assertion returned null"]},
+    "candidate_ocr_worker_smoke": {"passed": false, "failure": "worker subprocess exceeded 35-second smoke timeout"},
+    "full_studio_test_suite": {"passed": false, "rerun_after_environment_repair": false, "prior_run_limitations": ["parallel Vite SSR jobs reported dependency-scan restarts and port 24678 collisions"]},
+    "browser_keyboard_device_human_acceptance": "not performed; existing denied-browser boundary preserved",
+    "deployment": "not performed"
+  },
+  "integration_gaps": [
+    "KairoActionMenu, TeachingCard and presentation-state adapter remain standalone",
+    "MaterialReviewLayout remains standalone; existing SourceWorkspace owns source review and saving",
+    "complete candidate journey lacks browser/keyboard/device/human acceptance"
+  ]
+}

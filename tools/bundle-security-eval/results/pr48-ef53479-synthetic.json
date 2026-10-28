@@ -1,0 +1,183 @@
+{
+  "resultSchemaVersion": 1,
+  "evaluationId": "bundle-security-eval-synthetic-pr48-v1",
+  "createdAt": "2026-10-25T20:19:23.120Z",
+  "synthetic": true,
+  "implementation": {
+    "suppliedBy": "--record-module",
+    "sha256": "1168b0499e6161af2d058beece98c3b6babdba18ac893b320d9016e9472449b7",
+    "moduleFile": "lesson-v2/record.mjs"
+  },
+  "environment": {
+    "providerCalls": 0,
+    "productionAccounts": 0,
+    "liveData": 0,
+    "fixtureSourceTextEvaluated": false
+  },
+  "summary": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0
+  },
+  "cases": [
+    {
+      "id": "owner-rights-owner-reads-current-record",
+      "category": "ownership",
+      "expected": "accepted",
+      "actual": "accepted",
+      "outcome": "pass",
+      "detail": true
+    },
+    {
+      "id": "owner-other-cannot-read-record-sources",
+      "category": "ownership",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "Error",
+        "status": 409
+      }
+    },
+    {
+      "id": "current-source-revision-change-rejects",
+      "category": "revision",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "Error",
+        "status": 409
+      }
+    },
+    {
+      "id": "archived-source-revision-missing-rejects",
+      "category": "archive",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "Error",
+        "status": 409
+      }
+    },
+    {
+      "id": "archived-source-content-tamper-rejects",
+      "category": "archive",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "Error",
+        "status": 409
+      }
+    },
+    {
+      "id": "deleted-selected-source-rejects",
+      "category": "revision",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "Error",
+        "status": 409
+      }
+    },
+    {
+      "id": "unsupported-provider-rejects",
+      "category": "provider",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "TypeError",
+        "status": null
+      }
+    },
+    {
+      "id": "cloud-consent-missing-rejects",
+      "category": "consent",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "TypeError",
+        "status": null
+      }
+    },
+    {
+      "id": "selected-provider-absent-from-consent-rejects",
+      "category": "consent",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "TypeError",
+        "status": null
+      }
+    },
+    {
+      "id": "unsupported-persisted-provider-rejects",
+      "category": "provider",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "TypeError",
+        "status": null
+      }
+    },
+    {
+      "id": "overlong-persisted-model-rejects",
+      "category": "provider",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "TypeError",
+        "status": null
+      }
+    },
+    {
+      "id": "overlong-model-constructor-rejects",
+      "category": "provider",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "TypeError",
+        "status": null
+      }
+    },
+    {
+      "id": "markup-shaped-source-remains-plain-fixture-text",
+      "category": "inert-input",
+      "expected": "accepted",
+      "actual": "accepted",
+      "outcome": "pass",
+      "detail": {
+        "preservedAsString": true,
+        "executed": false
+      }
+    },
+    {
+      "id": "aborted-read-stays-cancelled-before-storage",
+      "category": "cancellation",
+      "expected": "rejected",
+      "actual": "rejected",
+      "outcome": "pass",
+      "detail": {
+        "name": "AbortError",
+        "status": null
+      }
+    },
+    {
+      "id": "aborted-read-performs-no-repository-read",
+      "category": "cancellation",
+      "expected": "zero reads",
+      "actual": "zero reads",
+      "outcome": "pass",
+      "detail": null
+    }
+  ]
+}

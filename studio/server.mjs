@@ -1,4 +1,6 @@
 import express from 'express';
+import {createBundleLessons} from './server/bundle-lessons/service.mjs';
+import {createLocalBundleRepository} from './server/bundle-lessons/local-repository.mjs';
 import {loadCurricula,studentSpace} from './server/student-space/model.mjs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -22,7 +24,10 @@ app.use('/api', (req, res, next) => {
 app.use('/api/account',createAccountRouter({secure:false,hostedUrl:process.env.KAIRO_LEARNER_APP_URL}));
 const localCohort=['engineering','informatics'].includes(process.env.KAIRO_LOCAL_CURRICULUM)?process.env.KAIRO_LOCAL_CURRICULUM:null,localCurricula=localCohort?await loadCurricula():null;
 app.get('/api/account/learning-space',(_req,res)=>{res.set('Cache-Control','no-store');res.json({space:localCohort?studentSpace({schemaVersion:1,synthetic:true,cohort:localCohort,studentId:localCohort==='engineering'?'KAIRO-ENG-0001':'KAIRO-INF-0001',displayName:'Local curriculum preview',materialLinks:{}},localCurricula):null});});
-app.use('/api/workspace', await workspaceRoutes(root));
+const localHome=process.env.KAIRO_LOCAL_WORKSPACE_DIR||join(root,'../data/private/app-workspace');
+const bundleRepository=await createLocalBundleRepository(localHome);
+app.use('/api/workspace',(req,_res,next)=>{req.kairoIdentity={uid:'local'};next();},createBundleLessons({repository:bundleRepository}).router);
+app.use('/api/workspace', await workspaceRoutes(root,{home:localHome}));
 app.use('/api/avatar', speechRouter());
 app.use(express.json({ limit: '4kb' }));
 app.get('/api/health', (_req, res) => res.json({ ok: true, runtime: 'local-node-sqlite', cloudConfigured: cloudConfigured() }));
@@ -68,6 +73,6 @@ app.use((error, _req, res, _next) => {
 });
 const port = Number(process.env.PORT || 4173);
 const server = app.listen(port, '127.0.0.1', () => console.log(`KAIRO Studio: http://127.0.0.1:${port}`));
-function shutdown() { server.close(() => { engine.close(); process.exit(0); }); server.closeAllConnections(); }
+function shutdown() { server.close(() => { bundleRepository.close();engine.close(); process.exit(0); }); server.closeAllConnections(); }
 process.on('SIGINT', shutdown);
 process.on('SIGTERM', shutdown);

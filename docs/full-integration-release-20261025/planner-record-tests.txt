@@ -1,0 +1,30 @@
+✔ plans 1 source(s) through actual bundle preparation, validation, and v2 record creation (12.7987ms)
+✔ plans 2 source(s) through actual bundle preparation, validation, and v2 record creation (2.4727ms)
+✔ plans 8 source(s) through actual bundle preparation, validation, and v2 record creation (4.2908ms)
+✔ fails with actionable error instead of omitting a selected source without retrieved evidence (2.3886ms)
+✔ rejects malformed bundle shapes, non-local selection, and duplicate citation IDs (3.1345ms)
+✔ preserves exact retrieved support quotes and never interprets source text as instructions (11.8952ms)
+✔ rejects evidence beyond the character limit (1.6399ms)
+✔ validates eight sources at maximum accepted source-title and locator lengths without dropping citation metadata (3.7155ms)
+✔ keeps deterministic quiz choices distinct when source text equals a stock distractor (1.5645ms)
+✔ creates a v2-only record with ordered revisions and exact cross-document anchors (12.2691ms)
+✔ foreign owner cannot verify or save the same v2 source bundle (7.7338ms)
+✔ tampered revision, mismatched source title, quote or edited flag fails closed (5.9501ms)
+✔ a verified local record persists once and remains checked on subsequent reads (6.424ms)
+✔ a review race during persistence rejects and best-effort removes the new record (4.0789ms)
+✔ failed rollback never converts changed revisions into a successful save (3.4534ms)
+✔ stale or deleted reviewed source fails on read even if lesson document still exists (2.3725ms)
+✔ aborted verification never writes a new record (3.0754ms)
+✔ cloud metadata accepts only supported providers and bounded nonblank model names (9.7457ms)
+✔ persisted cloud metadata cannot omit or forge provider and model fields (5.2167ms)
+✔ local records reject provider metadata rather than implying a cloud call (3.862ms)
+✔ invalid constructor provider or missing consent fails before storage (4.2491ms)
+✔ constructor revalidates every cloud provider consent and selected revision (0.8904ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 358.6261

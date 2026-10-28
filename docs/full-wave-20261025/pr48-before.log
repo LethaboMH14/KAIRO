@@ -1,0 +1,93 @@
+✔ creates a v2-only record with ordered revisions and exact cross-document anchors (7.1989ms)
+✔ foreign owner cannot verify or save the same v2 source bundle (3.366ms)
+✔ tampered revision, mismatched source title, quote or edited flag fails closed (2.6842ms)
+✔ a verified local record persists once and remains checked on subsequent reads (2.4458ms)
+✔ a review race during persistence rejects and best-effort removes the new record (1.5775ms)
+✔ failed rollback never converts changed revisions into a successful save (2.1901ms)
+✔ stale or deleted reviewed source fails on read even if lesson document still exists (0.741ms)
+✔ aborted verification never writes a new record (0.8463ms)
+✖ cloud metadata accepts only supported providers and bounded nonblank model names (1.8329ms)
+✖ persisted cloud metadata cannot omit or forge provider and model fields (1.4086ms)
+✖ local records reject provider metadata rather than implying a cloud call (1.0436ms)
+✖ invalid constructor provider or missing consent fails before storage (2.0233ms)
+✖ constructor revalidates every cloud provider consent and selected revision (1.1274ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 8
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 190.7304
+
+✖ failing tests:
+
+test at .worktrees\pr48-provider-repair\studio\tests\lesson-v2-record.test.mjs:140:1
+✖ cloud metadata accepts only supported providers and bounded nonblank model names (1.8329ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/USER/Desktop/fnb%20app%20of%20year%20hackathon/.worktrees/pr48-provider-repair/studio/tests/lesson-v2-record.test.mjs:149:67)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid/i,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .worktrees\pr48-provider-repair\studio\tests\lesson-v2-record.test.mjs:154:1
+✖ persisted cloud metadata cannot omit or forge provider and model fields (1.4086ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/USER/Desktop/fnb%20app%20of%20year%20hackathon/.worktrees/pr48-provider-repair/studio/tests/lesson-v2-record.test.mjs:161:31)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .worktrees\pr48-provider-repair\studio\tests\lesson-v2-record.test.mjs:165:1
+✖ local records reject provider metadata rather than implying a cloud call (1.0436ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/USER/Desktop/fnb%20app%20of%20year%20hackathon/.worktrees/pr48-provider-repair/studio/tests/lesson-v2-record.test.mjs:169:4)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .worktrees\pr48-provider-repair\studio\tests\lesson-v2-record.test.mjs:173:1
+✖ invalid constructor provider or missing consent fails before storage (2.0233ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/USER/Desktop/fnb%20app%20of%20year%20hackathon/.worktrees/pr48-provider-repair/studio/tests/lesson-v2-record.test.mjs:177:4)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .worktrees\pr48-provider-repair\studio\tests\lesson-v2-record.test.mjs:182:1
+✖ constructor revalidates every cloud provider consent and selected revision (1.1274ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/USER/Desktop/fnb%20app%20of%20year%20hackathon/.worktrees/pr48-provider-repair/studio/tests/lesson-v2-record.test.mjs:188:11)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid/i,
+    operator: 'throws',
+    diff: 'simple'
+  }
