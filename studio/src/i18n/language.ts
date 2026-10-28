@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from 'react';
+import { useEffect, useState } from 'react';
 import { catalogue as en } from './catalogues/en';
 import { catalogue as af } from './catalogues/af';
 import { catalogue as zu } from './catalogues/zu';
@@ -60,11 +60,11 @@ export function getLanguagePreferenceSnapshot(): LanguageCode {
 }
 
 export function useLanguage(): LanguageCode {
-  return useSyncExternalStore(subscribeLanguage, getLanguageSnapshot, getLanguageServerSnapshot);
+  return useStoreValue(getLanguageSnapshot);
 }
 
 export function useLanguagePreference(): LanguageCode {
-  return useSyncExternalStore(subscribeLanguage, getLanguagePreferenceSnapshot, getLanguageServerSnapshot);
+  return useStoreValue(getLanguagePreferenceSnapshot);
 }
 
 export function setLanguagePreference(value: string) {
@@ -81,4 +81,11 @@ export function setLanguagePreference(value: string) {
 
 export function hasLanguagePreview(): boolean {
   return previewLanguage !== null;
+}
+
+// State plus subscription (not the external-store hook): the studio test renderer lacks that hook.
+function useStoreValue(read: () => LanguageCode): LanguageCode {
+  const [value, setValue] = useState<LanguageCode>(read);
+  useEffect(() => { setValue(read()); const unsubscribe = subscribeLanguage(() => setValue(read())); return () => { unsubscribe(); }; }, [read]);
+  return value;
 }
