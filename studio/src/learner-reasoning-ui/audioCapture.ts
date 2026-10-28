@@ -157,7 +157,7 @@ export function createAudioCapture(
 
 export function createBrowserAudioCapture(events: AudioCaptureEvents): AudioCaptureSession {
   const browserNavigator = typeof navigator === 'undefined' ? undefined : navigator;
-  if (!browserNavigator?.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') {
+  if (!browserNavigator?.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined' || !microphoneAllowedByPolicy()) {
     events.onError('This browser cannot record audio here. You can type your explanation instead.');
     return { start: async () => {}, stop() {}, cancel() {}, dispose() {} };
   }
@@ -170,6 +170,13 @@ export function createBrowserAudioCapture(events: AudioCaptureEvents): AudioCapt
   }, events);
 }
 
+type PolicyDocument = { permissionsPolicy?: { allowsFeature(feature: string): boolean }; featurePolicy?: { allowsFeature(feature: string): boolean } };
+/** False when the page's Permissions-Policy (e.g. `microphone=()` on the hosted app) forbids the microphone; true when the browser cannot tell. */
+export function microphoneAllowedByPolicy(doc: PolicyDocument | undefined = typeof document === 'undefined' ? undefined : document as unknown as PolicyDocument) {
+  const policy = doc?.permissionsPolicy ?? doc?.featurePolicy;
+  try { return policy ? policy.allowsFeature('microphone') : true; } catch { return true; }
+}
+
 export function browserAudioCaptureAvailable() {
-  return typeof navigator !== 'undefined' && !!navigator.mediaDevices?.getUserMedia && typeof MediaRecorder !== 'undefined';
+  return typeof navigator !== 'undefined' && !!navigator.mediaDevices?.getUserMedia && typeof MediaRecorder !== 'undefined' && microphoneAllowedByPolicy();
 }
