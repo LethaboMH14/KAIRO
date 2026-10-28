@@ -1,5 +1,6 @@
 import express from 'express';
 import {createIdentityGuard} from '../hosted-auth/guard.mjs';
+import {finalErrorHandler} from '../error-handler.mjs';
 
 // This service never mounts the global, loopback-only legacy workspace routes.
 // Progress is learner-authored, not independently verified skill evidence.
@@ -27,6 +28,6 @@ export function createHostedApi({projectId,verifyToken,repository,allowedOrigin}
     res.json(await repository.remove(req.kairoIdentity.uid,'progress',req.params.id,{version:req.body?.version}));
   }));
   app.use((_req,res)=>res.status(404).json({error:'Route not found.'}));
-  app.use((error,_req,res,_next)=>res.status(error.status===413?413:400).json({error:error.status===413?'Record exceeds the size limit.':'Request could not be read.'}));
+  app.use(finalErrorHandler);
   return app;
 }
