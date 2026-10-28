@@ -1,0 +1,7 @@
+# Execution-wave root handoff
+
+Owner codex-execution-wave-20261025-c; actual exposed model/effort unknown. Task EXEC-WAVE-058. Exact root scope: coordination/briefs/execution-wave-20261025/, docs/execution-wave-20261025/, this handoff. Separate root LANG-ROOT-059 delivered the language metadata kit.
+
+Contracts and criterion/learner need/acceptance: coordination/briefs/execution-wave-20261025/README.md. Actual dispatch, independent tests, branches, PRs and limitations: docs/execution-wave-20261025/README.md. Two requested Luna low-effort children implemented extraction tests and readiness UI. Existing opportunity chat implemented C (reported exposed gpt-6/unknown effort). Another chat declined; fallback has no confirmed execution, so root covered language metadata in a nonoverlapping scope with independent Luna review. Chat delivery is not execution proof.
+
+Draft PRs: #73 extraction, #74 freshness, #75 language evaluation, #76 readiness. Root independent extraction+parser14/14, readinessSSR10/10, language metadata6/6; freshness initial12/12 returned for input bounds then final14/14 passed. PR73/75/76 exact-head app/build and bus CI success observed; PR74 final head CI pending at checkpoint. Real language evaluations all not-run. New UI/utility remain unmounted. No browser/device/learner efficacy validation, model inference, training, merge, deployment, IAM or schedule activation. Existing v2 provider record repair remains owned by its PR48 implementer; no takeover.
