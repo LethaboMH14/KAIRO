@@ -17,8 +17,8 @@ test('projects motor sources and manual/implemented capability labels without mu
   assert.equal(JSON.stringify(motor), before); assert.equal(result.steps.length, motor.steps.length);
   assert.equal(result.steps[1].capabilityStatus, 'manual'); assert.equal(result.steps[1].prompt, motor.steps[1].learnerAction);
   assert.equal(result.steps[1].readingFallback, motor.steps[1].learnerAction);
-  assert.deepEqual(result.steps[0].sourceRefs, motor.sourceRefs); assert.match(result.steps[0].sourceRefs[0].licenseStatus, /no reuse licence confirmed/);
-  assert.equal(result.steps[0].sourceRefs[0].checkedAt, '2026-10-24');
+  assert.deepEqual(result.steps[0].sourceRefs, motor.sourceRefs); assert.match(result.steps[0].sourceRefs[0].licenseStatus, /No item-specific reuse licence confirmed/);
+  assert.equal(result.steps[0].sourceRefs[0].checkedAt, motor.sourceRefs[0].checkedAt); assert.equal(result.steps[0].sourceRefs[0].title, motor.sourceRefs[0].title);
 });
 test('projects pump provenance and carries explicit non-mounted and illustrative limitations', () => {
   const result = buildStudioSequence(pump); assert.deepEqual(result.steps[1].sourceRefs.map(x => x.id), pump.steps[1].sourceRefIds);

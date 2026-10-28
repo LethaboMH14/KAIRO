@@ -1,22 +1,27 @@
 import test,{before,after} from 'node:test';
 import assert from 'node:assert/strict';
 import React from 'react';
-import {renderToStaticMarkup} from 'react-dom/server';
+import {renderToStaticMarkup as renderMarkup} from 'react-dom/server';
 import {createServer} from 'vite';
 import reactPlugin from '@vitejs/plugin-react';
 import {fileURLToPath} from 'node:url';
 let server,Workspace,sourceWorkflow;
 
+let TeacherProvider;
+// SourceReader reads the narration context, so render the workspace inside the real provider.
+const renderToStaticMarkup=tree=>renderMarkup(React.createElement(TeacherProvider,null,tree));
 before(async()=>{
  server=await createServer({root:fileURLToPath(new URL('..',import.meta.url)),configFile:false,plugins:[{name:'source-workspace-hook-test',enforce:'pre',resolveId(id){if(id==='source-workspace-hooks')return '\0source-workspace-hooks';},load(id){if(id==='\0source-workspace-hooks')return `export const useState=v=>globalThis.__sourceHooks.state(v);export const useRef=v=>globalThis.__sourceHooks.ref(v);export const useEffect=(f,d)=>globalThis.__sourceHooks.effect(f,d);`;},transform(code,id){if(id.replaceAll('\\','/').endsWith('/src/workspace/SourceWorkspace.tsx'))return code.replace("from 'react'","from 'source-workspace-hooks'");}},reactPlugin()],server:{middlewareMode:true,ws:false},appType:'custom'});
- try{({default:Workspace}=await server.ssrLoadModule('/src/workspace/SourceWorkspace.tsx'));sourceWorkflow=await server.ssrLoadModule('/src/source-workflow-ui/source-workflow.ts');}catch(error){await server.close();throw error;}
+ try{({default:Workspace}=await server.ssrLoadModule('/src/workspace/SourceWorkspace.tsx'));({default:TeacherProvider}=await server.ssrLoadModule('/src/teacher/TeacherProvider.tsx'));sourceWorkflow=await server.ssrLoadModule('/src/source-workflow-ui/source-workflow.ts');}catch(error){await server.close();throw error;}
 });
 after(async()=>{await server?.close();});
 
 const page={text:'Synthetic test material explains that a rotating field creates a changing magnetic effect.',locator:'Synthetic page 1',method:'synthetic fixture'};
 const source={id:'a'.repeat(24),title:'Synthetic test material',pages:[page],reviewedPages:[page],reviewed:true,revision:'synthetic-revision-1',limitNote:'Synthetic test fixture only.'};
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
-function walk(node,predicate){if(!node||typeof node!=='object')return[];if(Array.isArray(node))return node.flatMap(item=>walk(item,predicate));return[...(predicate(node)?[node]:[]),...walk(node.props?.children,predicate)];}
+// Layout components receive panels as element props (not only children), so search every element-valued prop.
+const isElement=value=>!!value&&typeof value==='object'&&'$$typeof' in value;
+function walk(node,predicate){if(!node||typeof node!=='object')return[];if(Array.isArray(node))return node.flatMap(item=>walk(item,predicate));if(!isElement(node))return[];return[...(predicate(node)?[node]:[]),...Object.values(node.props||{}).flatMap(value=>Array.isArray(value)||isElement(value)?walk(value,predicate):[])];}
 function text(node){if(node==null||typeof node==='boolean')return'';if(typeof node!=='object')return String(node);if(Array.isArray(node))return node.map(text).join('');return text(node.props?.children);}
 function find(tree,predicate,label){const result=walk(tree,predicate)[0];assert.ok(result,label);return result;}
 function state(tree,prop){return find(tree,node=>typeof node.type==='function'&&Object.hasOwn(node.props||{},prop),`component with ${prop}`);}
@@ -77,7 +82,7 @@ test('actual source workspace keeps account storage labels and hides the local c
 test('actual source workspace previews current goal passages and invalidates after goal or source edits',async()=>{
  const h=await setup({scope:'account'});
  try{
-  find(h.tree,node=>node.type==='button'&&text(node).trim()==='Shape my lesson','review-to-plan action').props.onClick();
+  find(h.tree,node=>typeof node.props?.onBuild==='function','review-to-plan action (MaterialReviewLayout Build lesson)').props.onBuild();
   h.render();
   let planner=state(h.tree,'brief');
   planner.props.onChange({goal:'Explain the synthetic rotating field',depth:'deep',approach:'practice'});
@@ -112,7 +117,7 @@ test('actual source workspace previews current goal passages and invalidates aft
 test('a missing passage-preview endpoint leaves local reading available',async()=>{
  const h=await setup({selectionUnavailable:true});
  try{
-  find(h.tree,node=>node.type==='button'&&text(node).trim()==='Shape my lesson','review-to-plan action').props.onClick();
+  find(h.tree,node=>typeof node.props?.onBuild==='function','review-to-plan action (MaterialReviewLayout Build lesson)').props.onBuild();
   h.render();
   await state(h.tree,'onPreview').props.onPreview();await flush();await flush();h.render();
   assert.equal(state(h.tree,'onPreview').props.status,'unavailable');
