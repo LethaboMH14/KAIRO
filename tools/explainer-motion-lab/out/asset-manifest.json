@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "sourceStoryboard": "tools/explainer-motion-lab/storyboard.json",
+  "sourcePack": "studio/src/studio-teaching-host/packs/motor.json",
+  "sourcePackId": "kairo-engineering-motor-field-speed-20261024",
+  "borrowedVisualAssets": [],
+  "renderedAssets": [
+    {
+      "file": "motor-field-speed-silent.mp4",
+      "bytes": 64057,
+      "sha256": "a86cb82a317987a7322037667ea3e1590b2613923968760ab8f586086f905f30",
+      "label": "Silent version without burned-in sentence captions",
+      "width": 720,
+      "height": 404,
+      "fps": 12.0,
+      "decodedFrameCount": 96,
+      "expectedFrameCount": 96,
+      "durationSeconds": 8.0,
+      "audioStreams": 0,
+      "renderWallSeconds": 22.346,
+      "encoder": "ffmpeg-win-x86_64-v7.1.exe",
+      "inspection": "PyAV decode/stream metadata; ffprobe executable was not installed"
+    },
+    {
+      "file": "motor-field-speed-captioned.mp4",
+      "bytes": 79179,
+      "sha256": "f657f0e72df61aaec332fc1227653fac5d309e9204c828ab2f2a2c2b4518cf47",
+      "label": "Burned-in text captions; no audio track",
+      "width": 720,
+      "height": 404,
+      "fps": 12.0,
+      "decodedFrameCount": 96,
+      "expectedFrameCount": 96,
+      "durationSeconds": 8.0,
+      "audioStreams": 0,
+      "renderWallSeconds": 14.178,
+      "encoder": "ffmpeg-win-x86_64-v7.1.exe",
+      "inspection": "PyAV decode/stream metadata; ffprobe executable was not installed"
+    },
+    {
+      "file": "motor-field-speed.vtt",
+      "bytes": 522,
+      "sha256": "d8838f144b8311f8ebcc88778c5dffc51f68c1954692929160ced9819136d626",
+      "label": "WebVTT text caption track for the captioned MP4"
+    },
+    {
+      "file": "preview.png",
+      "bytes": 89815,
+      "sha256": "8bfc7c352e8fb082de612c07f43621862ec7b8bfdaa3b5ea41fb50a488fc6795",
+      "label": "Locally decoded final captioned closing scene for visual QA; not a source image"
+    }
+  ],
+  "font": "Arial from local Windows font installation; no font file is redistributed",
+  "licenseNote": "The FFmpeg binary was supplied by the local imageio-ffmpeg installation. Its exact configure flags and H.264 distribution rights were not audited; this is a local prototype only."
+}

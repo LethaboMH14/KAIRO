@@ -1,0 +1,40 @@
+{
+  "storyboard": "storyboard.json",
+  "generatedAtUtc": "2026-10-25T19:19:20Z",
+  "sourceTopicId": "kairo-engineering-motor-field-speed-20261024",
+  "claims": "1500 r/min is the calculated synchronous stator-field speed for 50 Hz and four total poles. It is not a measured or predicted rotor shaft speed.",
+  "records": [
+    {
+      "file": "motor-field-speed-silent.mp4",
+      "bytes": 64057,
+      "sha256": "a86cb82a317987a7322037667ea3e1590b2613923968760ab8f586086f905f30",
+      "label": "Silent version without burned-in sentence captions",
+      "width": 720,
+      "height": 404,
+      "fps": 12.0,
+      "decodedFrameCount": 96,
+      "expectedFrameCount": 96,
+      "durationSeconds": 8.0,
+      "audioStreams": 0,
+      "renderWallSeconds": 22.346,
+      "encoder": "ffmpeg-win-x86_64-v7.1.exe",
+      "inspection": "PyAV decode/stream metadata; ffprobe executable was not installed"
+    },
+    {
+      "file": "motor-field-speed-captioned.mp4",
+      "bytes": 79179,
+      "sha256": "f657f0e72df61aaec332fc1227653fac5d309e9204c828ab2f2a2c2b4518cf47",
+      "label": "Burned-in text captions; no audio track",
+      "width": 720,
+      "height": 404,
+      "fps": 12.0,
+      "decodedFrameCount": 96,
+      "expectedFrameCount": 96,
+      "durationSeconds": 8.0,
+      "audioStreams": 0,
+      "renderWallSeconds": 14.178,
+      "encoder": "ffmpeg-win-x86_64-v7.1.exe",
+      "inspection": "PyAV decode/stream metadata; ffprobe executable was not installed"
+    }
+  ]
+}

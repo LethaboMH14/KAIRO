@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "title": "Field speed is not shaft speed",
+  "topicId": "kairo-engineering-motor-field-speed-20261024",
+  "durationSeconds": 8,
+  "fps": 12,
+  "width": 720,
+  "height": 404,
+  "outputLabel": "Deterministic instructional prototype; silent; not KAIRO product playback",
+  "sources": [
+    {"id":"nptel-three-phase-field","shortCitation":"NPTEL Module 8.1","title":"NPTEL, Module 8.1: Concept of rotating magnetic field; Module 8.2: Three-phase induction motor","url":"https://archive.nptel.ac.in/content/storage2/courses/108105053/pdf/L-01%28TB%29%28ET%29%20%28%28EE%29NPTEL%29.pdf","locator":"Pack locator: syllabus PDF navigation p. 9; printed page not visible. Reuse licence unconfirmed; factual paraphrase only."},
+    {"id":"nptel-induction-slip","shortCitation":"NPTEL Chapter 4 §4.3.4","title":"NPTEL, Chapter 4 §4.3.4, equation (4.76): slip","url":"https://archive.nptel.ac.in/content/storage2/courses/108106026/chapter4.pdf","locator":"Pack locator: PDF navigation p. 24 (printed p. 4.25). Reuse licence unconfirmed; factual paraphrase only."},
+    {"id":"nptel-speed-pole-pairs","shortCitation":"NPTEL Electrical Machines II §8.4","title":"NPTEL Electrical Machines II §8.4: pole-changing schemes and synchronous speed","url":"https://archive.nptel.ac.in/content/storage2/courses/108106072/pdf/1_8.pdf","locator":"Pack locator: §8.4. Reuse licence unconfirmed; factual paraphrase only."}
+  ],
+  "scenes": [
+    {"id":"field","start":0,"end":2,"headline":"The stator stays still.","detail":"Its three-phase winding creates a rotating magnetic field.","caption":"The stator stays still. Its three-phase winding creates a rotating magnetic field.","sourceRefIds":["nptel-three-phase-field"]},
+    {"id":"equation","start":2,"end":4,"headline":"Calculate field speed","detail":"nₛ = 120 f ÷ p     f = 50 Hz     p = 4 poles","caption":"Use one hundred and twenty times frequency divided by total pole count.","sourceRefIds":["nptel-three-phase-field","nptel-speed-pole-pairs"]},
+    {"id":"result","start":4,"end":6,"headline":"50 Hz, 4 poles → 1,500 r/min","detail":"That is synchronous field speed, not a shaft reading.","caption":"Fifty hertz with four poles gives one thousand five hundred revolutions per minute for the rotating field.","sourceRefIds":["nptel-speed-pole-pairs"]},
+    {"id":"slip","start":6,"end":8,"headline":"The rotor runs below field speed","detail":"Slip enables induction and torque. Exact shaft speed is not provided here.","caption":"In motoring operation the rotor runs below synchronous speed. No motor-specific shaft speed is measured or claimed.","sourceRefIds":["nptel-induction-slip"]}
+  ],
+  "closingSourceIds":["nptel-three-phase-field","nptel-induction-slip","nptel-speed-pole-pairs"],
+  "claimBoundary":"1500 r/min is the calculated synchronous stator-field speed for 50 Hz and four total poles. It is not a measured or predicted rotor shaft speed.",
+  "audio":"none"
+}
