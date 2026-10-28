@@ -1,0 +1,15 @@
+export type Bit = 0 | 1;
+export type Inputs = Readonly<{ a: Bit; b: Bit; sel: Bit }>;
+export type Gate = Readonly<{ id: string; a: string; b: string }>;
+export type Circuit = Readonly<{ id: string; name: string; description: string; nodes: readonly Gate[]; output: string }>;
+export type TraceStep = Readonly<{ gate: string; leftSignal: string; left: Bit; rightSignal: string; right: Bit; output: Bit }>;
+export type Result = Readonly<{ output: Bit; trace: readonly TraceStep[]; circuitId: string; sourceRevision: string; modelRevision: string }>;
+export type Attempt = Readonly<{ id: string; key: string; circuitId: string; inputs: Inputs; prediction: Bit; observed: Bit; correct: boolean; sourceRevision: string; modelRevision: string; verification: 'local-unverified' }>;
+export type Session = Readonly<{ attempts: readonly Attempt[] }>;
+export const SOURCE: Readonly<{ title: string; url: string; conceptRevision: string; modelRevision: string }>;
+export const CIRCUITS: readonly Circuit[];
+export function validateCircuit(circuit: Circuit): true;
+export function evaluateCircuit(circuitId: string, input: Inputs): Result;
+export function truthOracle(circuitId: string, input: Inputs): Bit;
+export function newSession(): Session;
+export function submitPrediction(session: Session, value: { circuitId: string; inputs: Inputs; prediction: Bit }): Readonly<{ session: Session; attempt: Attempt; trace: readonly TraceStep[] }>;
