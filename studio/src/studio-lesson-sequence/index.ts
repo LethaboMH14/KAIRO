@@ -1,5 +1,5 @@
 export type CapabilityStatus = 'implemented' | 'manual';
-export type StudioSourceRef = { id: string; url: string; locator: string; licenseStatus: string; checkedAt: string };
+export type StudioSourceRef = { id: string; title?: string; url: string; locator: string; licenseStatus: string; checkedAt: string };
 export type StudioLessonStep = { id: string; title: string; explanation: string; sourceRefIds: string[]; learnerAction: string; studioCapability: string | null; capabilityStatus: CapabilityStatus };
 export type StudioLessonPack = { schemaVersion: number; id: string; title: string; objective: string; prerequisites: string[]; sourceRefs: StudioSourceRef[]; steps: StudioLessonStep[]; limitations?: string[] };
 export type StudioSequenceStep = { id: string; title: string; explanation: string; prompt: string; sourceRefs: StudioSourceRef[]; capabilityStatus: CapabilityStatus; readingFallback: string };
@@ -26,7 +26,7 @@ export function buildStudioSequence(pack: StudioLessonPack): StudioSequence {
   for (const [i, ref] of pack.sourceRefs.entries()) {
     if (!ref || typeof ref !== 'object') throw new Error(`sourceRefs[${i}] is invalid`);
     const id = unique(ref.id, `sourceRefs[${i}].id`); if (refs.has(id)) throw new Error(`Duplicate source reference id: ${id}`);
-    refs.set(id, { id, url: safeUrl(ref.url), locator: text(ref.locator, `source ${id} locator`), licenseStatus: text(ref.licenseStatus, `source ${id} licence caveat`), checkedAt: text(ref.checkedAt, `source ${id} checkedAt`, 80) });
+    refs.set(id, { id, ...(ref.title === undefined ? {} : { title: text(ref.title, `source ${id} title`) }), url: safeUrl(ref.url), locator: text(ref.locator, `source ${id} locator`), licenseStatus: text(ref.licenseStatus, `source ${id} licence caveat`), checkedAt: text(ref.checkedAt, `source ${id} checkedAt`, 80) });
   }
   if (!Array.isArray(pack.steps) || pack.steps.length < 1 || pack.steps.length > MAX_STEPS) throw new Error(`steps must contain 1 to ${MAX_STEPS} entries`);
   const seen = new Set<string>();

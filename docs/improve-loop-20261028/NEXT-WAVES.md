@@ -11,6 +11,7 @@ These can start only after those owners release the claims, or after the user co
 ## Wave 1c: pre-existing test failures (claimable now)
 On the untouched submission commit 49af96c, 31 test cases fail in 7 files: ci-python-toolchain 2, ingestion-edgecases 4, material-ingestion 9, native-extraction 2, security-upload-abuse 4, source-workflow-ui 9, studio-lesson-sequence 1. The same 31 fail after wave 1a.
 - Example: source-workflow-ui renders `SourceReader` without `TeacherProvider` and fails with "TeacherProvider is required".
+- **Update (28 Oct, 19:30):** the natural-voice session is fixing source-workflow-ui (it adds the TeacherProvider wrapper) and studio-lesson-sequence (it adds the motor source `title`) on `fix/145-ci-20261028` for PR #145. Those 10 cases are no longer in this lane. The rest pass on GitHub CI and look environmental to this Windows machine, so they need only a local-environment note.
 - Lane T1 (Haiku, medium): fix the test harnesses only (wrap renders in their providers, and skip with a reason when a Python toolchain is absent). Change no product code unless a failure is a real product bug; report any such bug instead of fixing it.
 - Acceptance: the full suite reaches 0 failures, or each remaining failure is documented with its cause.
 

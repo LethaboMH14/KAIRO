@@ -14,6 +14,7 @@ export default function PumpHost(){
  const bundleId=checkedId(new URLSearchParams(location.search).get('bundle'));
  const lessonId=checkedId(new URLSearchParams(location.search).get('lesson')),back=bundleId?`/classroom?bundle=${bundleId}`:lessonId?`/classroom?lesson=${lessonId}&tab=evidence`:'/studios';
  useEffect(()=>()=>stop.current(),[]);
+ useEffect(()=>{if(location.hash)return;const frame=requestAnimationFrame(()=>window.scrollTo(0,0));return ()=>cancelAnimationFrame(frame);},[]);
  const contextKey=useRef('');
  const onContext=useCallback((value:TeacherContext)=>{const key=JSON.stringify([value.caseId,value.selectedTarget,value.nextStep,value.readings,value.finished,value.speedRpm,value.valvePct]);if(key!==contextKey.current){contextKey.current=key;stop.current();setContext(value);}},[]);
  const onSnapshot=useCallback((value:string)=>{if(!stored.writable){setNotice('Earlier pump work could not be read and was kept unchanged. Download this run before leaving.');return;}try{learnerStorage.setItem(KEY,value);}catch{setNotice('This pump session could not save on this device. Export the report before leaving.');}},[stored.writable]);
