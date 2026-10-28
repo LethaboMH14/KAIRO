@@ -1,0 +1,11 @@
+# Read-only pump studio → owned lesson reference gate
+
+This small **unmounted server-side contract** checks a real, authenticated owner's saved **v1** lesson against the current, reviewed source and immutable revision before associating a locally generated pump draft with the lesson. It does not modify the learner repository, call a model, create a route, read private material into logs or export raw answers.
+
+Call `linkPumpDraftToOwnedLesson({repository, ownerId, lessonId, draft})` only from a server handler that has already authenticated `ownerId` (for example `req.kairoIdentity.uid`). Never accept `ownerId` from request JSON. The function fetches `lessons`, `sources`, `revisions` and rechecks `sources` in the same owner-scoped repository. It verifies the current source revision equals the saved lesson revision and SHA-256 of the reviewed page set. A changed/revoked source, cross-owner lookup, forged draft claim or v2 preview contract fails closed.
+
+The output is a **privacy-minimal reference**, never an authenticated practice result: `attemptStatus:'local-unverified'`, `replayVerified:false`, `identityOfAttemptVerified:false`, `canSaveVerifiedEvidence:false`. A malicious client can construct a plausible draft and claim an owned lesson; the gate only confirms that the lesson/source reference exists and is current. It does not prove the user completed the studio, that the source taught the simulation, or that the model is domain-certified.
+
+**Integration requires independent work:** review and merge the replay verifier in PR #68; pass the full bounded action log to a trusted server replay; authenticate owner and consent, enforce replay/session uniqueness and revision fencing in an atomic evidence write, and coordinate any new route with #46/#47 owners. Do not expose this contract as a standalone "verified evidence" endpoint or turn on saved competency without those gates. The draft has a weak 8-hex local FNV hash, **not** an authentication token or a collision-resistant integrity proof.
+
+**Focused check:** `node --test studio/tests/studio-lesson-link.test.mjs` (Node 24 on GitHub CI); full regression/build/bus and independent privacy review before merge. Tests use synthetic in-memory owner records; no actual learner accounts, Kaggle execution, real device or production service is touched.
