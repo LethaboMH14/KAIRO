@@ -16,8 +16,8 @@ test('audio-driven mouth closes in silence and remains bounded; blend has stable
  assert.equal(mouthEnergy(new Uint8Array(256).fill(128)),0);assert.ok(mouthEnergy(new Uint8Array(256).fill(255))<=.8);assert.equal(mouthEnergy(new Uint8Array()),0);assert.equal(blendAmount(-1),0);assert.ok(Math.abs((1-blendAmount(.02))**2-(1-blendAmount(.04)))<1e-10);
 });
 test('old settings migrate safely and cloud consent cannot be enabled with truthy strings',()=>{
- const old=parseSettings(JSON.stringify({look:'soft3d',language:'en-ZA',rate:.94}));assert.equal(old.voiceMode,'browser');assert.equal(old.cloudConsent,false);
- const bad=parseSettings(JSON.stringify({voiceMode:'unknown',cloudVoice:'unknown',cloudConsent:'yes'}));assert.equal(bad.voiceMode,'browser');assert.equal(bad.cloudConsent,false);
+ const old=parseSettings(JSON.stringify({look:'soft3d',language:'en-ZA',rate:.94}));assert.equal(old.voiceMode,'google');assert.equal(old.cloudConsent,false);
+ const bad=parseSettings(JSON.stringify({voiceMode:'unknown',cloudVoice:'unknown',cloudConsent:'yes'}));assert.equal(bad.voiceMode,'google');assert.equal(bad.cloudConsent,false);
 });
 test('prepared model retains articulated fingers, teaching bones, face controls and textures',async()=>{
  const data=await readFile(new URL('../public/models/teacher/teacher.glb',import.meta.url));assert.equal(data.toString('ascii',0,4),'glTF');const json=JSON.parse(data.toString('utf8',20,20+data.readUInt32LE(12)));const names=new Set(json.nodes.map(n=>n.name));for(const name of ['Head','LeftArm','LeftForeArm','RightArm','LeftHandIndex1','LeftHandIndex3','RightHandThumb3'])assert.ok(names.has(name),name);
