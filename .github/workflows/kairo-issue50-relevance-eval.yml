@@ -1,0 +1,40 @@
+name: KAIRO issue 50 public retrieval evaluation
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/kairo-issue50-relevance-eval.yml'
+      - 'tools/kairo-kaggle-lab/real_eval/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cpu-experiment:
+    name: Pinned public-data CPU relevance experiment (not Kaggle)
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: tools/kairo-kaggle-lab/real_eval/requirements.txt
+      - name: Install pinned, minimal CPU dependency
+        run: python -m pip install -r tools/kairo-kaggle-lab/real_eval/requirements.txt
+      - name: Test split leakage, licence and metric contracts
+        working-directory: tools/kairo-kaggle-lab/real_eval
+        run: python -m unittest -v test_run.py
+      - name: Prove the synthetic smoke path (non-efficacy)
+        working-directory: tools/kairo-kaggle-lab/real_eval
+        run: python run.py --smoke --output outputs/smoke.json
+      - name: Fit and evaluate on crowdsourced public SQuAD title holdout
+        working-directory: tools/kairo-kaggle-lab/real_eval
+        run: python run.py --fetch-public --acknowledge-license --output outputs/real-public-squad-proxy.json
+      - name: Upload metrics ONLY; never raw dataset
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kairo-issue50-metrics-no-passage-data
+          path: tools/kairo-kaggle-lab/real_eval/outputs/*.json
+          if-no-files-found: warn
+          retention-days: 7
