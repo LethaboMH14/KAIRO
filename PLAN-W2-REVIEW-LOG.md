@@ -41,3 +41,8 @@ Accepted all 6: the mobile tab bar is the same .ka-sidebar restyled by CSS (clar
 
 ## Round 3 — Codex
 VERDICT: APPROVED
+
+## Implementation review — Sonnet 5.5 (medium), wave 2
+Verdict SHIP with 4 findings. Fixed: pending voice prompt cleared on passage change; visible limit now "48,000 characters (64 KiB)"; draft note built from unreviewed catalogues. Not fixed (low): preview banner overlaps skip link, reviewer-preview only.
+Also fixed after the full suite: learning-access tests failed (6) because the test renderer has no external-store hook and pins AccessDialog hook slots. The language hook now uses state plus subscription, and the picker reads the snapshot with an uncontrolled select (no extra hook).
+Implementers: W1 GPT-6 Luna (medium); W2/W3/W4 Haiku 5.5; W4 memo keyed per document by Claude; integration fixes by Claude.
