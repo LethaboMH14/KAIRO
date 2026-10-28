@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KAIRO | Pump static-head reasoning preview</title>
+  <style>
+    :root { font: 1rem/1.55 system-ui, sans-serif; color: #183337; background: #f2f7f5; }
+    body { margin: 0; }
+    main { max-width: 54rem; margin: 1.5rem auto; padding: 1.25rem; }
+    .card { background: white; border: 1px solid #b9d1c8; border-radius: 1rem; padding: 1.3rem; margin: 1rem 0; }
+    label { display: block; font-weight: 650; margin-top: 1rem; }
+    input, select, textarea, button { font: inherit; max-width: 100%; }
+    input, select, textarea { display: block; padding: .55rem; width: min(100%, 28rem); box-sizing: border-box; }
+    textarea { width: 100%; min-height: 6rem; }
+    button { border: 2px solid #175b51; background: #175b51; color: white; border-radius: .6rem; padding: .6rem 1rem; cursor: pointer; margin: .7rem .6rem .4rem 0; }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, a:focus-visible { outline: 3px solid #b5680a; outline-offset: 3px; }
+    button:disabled { opacity: .6; }
+    .note { background: #fff7df; padding: .8rem; border-left: .35rem solid #9c6900; }
+    .table-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { border: 1px solid #c0d0ca; text-align: left; padding: .55rem; }
+    svg { display: block; max-width: 100%; height: auto; }
+    [hidden] { display: none !important; }
+    @media (max-width: 35rem) { main { margin: 0; padding: .7rem; } .card { padding: .8rem; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>KAIRO Engineering Studio — the static-head trap</h1>
+  <p>Predict what happens when a fictional pump changes speed. The pump curve and the system's fixed lift must intersect; simply scaling the old flow may be misleading.</p>
+  <p class="note"><strong>Educational illustration only.</strong> Coefficients are invented, not equipment data. This is not a real pump operating or safety guide. A missing positive-flow intersection does <em>not</em> establish zero electrical power.</p>
+  <p>Concept source: <a href="https://datatool.pumps.org/pump-fundamentals/pump-curves" rel="noopener noreferrer" target="_blank">Hydraulic Institute — Pump Curves / Affinity Rules</a> (checked 26 October 2026). Source supports affinity relationships, not the fictional coefficients. <strong>Evidence:</strong> local, unverified practice; not a grade or authenticated learner record.</p>
+  <section class="card" aria-labelledby="challengeTitle">
+    <h2 id="challengeTitle" tabindex="-1">Round 1</h2>
+    <p id="roundText"></p>
+    <p id="roundData"></p>
+    <form id="predictionForm">
+      <label for="speedRatio">Hypothetical speed compared with the baseline</label>
+      <select id="speedRatio" required><option value="0.8">80% of baseline</option><option value="0.9">90% of baseline</option></select>
+      <label for="outcome">Your prediction</label>
+      <select id="outcome" required><option value="flow">A positive-flow intersection remains</option><option value="no-intersection">No positive-flow intersection</option></select>
+      <div id="flowWrap"><label for="flowGuess">If positive flow remains, estimate it (L/s)</label><input id="flowGuess" type="number" min="0" max="60" step="any" value="25" required /></div>
+      <label for="explanation">Explain why (20–800 characters; commit before reveal)</label>
+      <textarea id="explanation" minlength="20" maxlength="800" required></textarea>
+      <button type="submit">Commit prediction and reveal the trace</button>
+    </form>
+    <p id="error" role="alert" hidden></p>
+    <section id="result" hidden aria-labelledby="resultTitle">
+      <h3 id="resultTitle" tabindex="-1">Checked result</h3>
+      <div id="resultBody" aria-live="polite"></div>
+      <button type="button" id="nextRound" hidden>Continue to the next independent round</button>
+    </section>
+  </section>
+  <section class="card" aria-labelledby="recordsTitle">
+    <h2 id="recordsTitle">Keep local working</h2>
+    <p>Only the chosen speed, prediction and your explanation are saved to an optional JSON file. Re-import checks the source revision and recomputes outcomes; the file cannot assert a verified score. No account or server storage is used here.</p>
+    <button type="button" id="exportRecord">Export local practice JSON</button>
+    <label for="importFile">Resume from a local JSON file (max 12 KB)</label>
+    <input id="importFile" type="file" accept="application/json,.json" />
+    <button type="button" id="resetRecord">Start over locally</button>
+    <p id="recordStatus" role="status" aria-live="polite"></p>
+  </section>
+</main>
+<script type="module" src="./app.mjs"></script>
+</body>
+</html>
