@@ -1,0 +1,79 @@
+name: KAIRO draft studio composition (read-only)
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/studio-composition-20261025.yml'
+      - 'tools/studio-composition-20261025/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: kairo-studio-composition-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  policy:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == 'LethaboMH14/KAIRO'
+    name: Pinned candidate and scope policy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - run: node --test tools/studio-composition-20261025/manifest.test.mjs
+
+  rehearsal:
+    name: Exact-head composite + synthetic integration + build
+    needs: policy
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: studio/package-lock.json
+      - name: Validate live PR heads, same-repo ownership and exact changed files
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/studio-composition-20261025/compose.mjs verify
+      - name: Locally compose pinned draft heads without GitHub writes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/studio-composition-20261025/compose.mjs compose
+      - name: Install locked app dependencies
+        working-directory: studio
+        run: npm ci --no-audit --no-fund
+      - name: Run all four candidate PR suites and actual cross-contract tests
+        run: |
+          node --test --test-concurrency=1 \
+            studio/tests/pump-what-if.test.mjs \
+            studio/tests/studio-attempt-contract.test.mjs \
+            studio/tests/studio-evidence-replay.test.mjs \
+            studio/tests/studio-lesson-link.test.mjs \
+            tools/studio-composition-20261025/review.test.mjs
+      - name: Verify composed app production build
+        working-directory: studio
+        run: npm run build
+      - name: State evidence boundary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "### Evidence boundary"
+            echo "This job only composes reviewed-scope DRAFT heads in an ephemeral runner."
+            echo "It does not merge GitHub PRs, authenticate real learner actions, verify subject mastery, test a real device, or deploy."
+            echo "A successful run requires independent security/UX/subject review and canonical local bus reconciliation before any main integration."
+          } >> "$GITHUB_STEP_SUMMARY"
