@@ -1,0 +1,17 @@
+{
+  "id": "b439eab4-3798-4e81-b9a6-19e4462fd29e",
+  "results": {
+    "images": [
+      {
+        "artifactRegistryPackage": "projects/kairo-access-20261021/locations/africa-south1/repositories/cloud-run-source-deploy/packages/kairo-app/versions/sha256:2e74388c7fcd295501649d999b77fdaf83899bfea33e6f5a33f25ea505e41ffc",
+        "digest": "sha256:2e74388c7fcd295501649d999b77fdaf83899bfea33e6f5a33f25ea505e41ffc",
+        "name": "africa-south1-docker.pkg.dev/kairo-access-20261021/cloud-run-source-deploy/kairo-app:full26b",
+        "pushTiming": {
+          "endTime": "2026-10-25T22:30:41.060428137Z",
+          "startTime": "2026-10-25T22:30:16.155935840Z"
+        }
+      }
+    ]
+  },
+  "status": "SUCCESS"
+}

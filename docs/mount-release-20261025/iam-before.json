@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "members": [
+        "serviceAccount:kairo-app-runtime@kairo-access-20261021.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.invoker"
+    }
+  ],
+  "etag": "BwZen2FjUPM=",
+  "version": 1
+}

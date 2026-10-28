@@ -1,0 +1,35 @@
+✔ plans 1 source(s) through actual bundle preparation, validation, and v2 record creation (9.2293ms)
+✔ plans 2 source(s) through actual bundle preparation, validation, and v2 record creation (1.76ms)
+✔ plans 8 source(s) through actual bundle preparation, validation, and v2 record creation (3.1492ms)
+✔ fails with actionable error instead of omitting a selected source without retrieved evidence (1.5358ms)
+✔ rejects malformed bundle shapes, non-local selection, and duplicate citation IDs (1.654ms)
+✔ preserves exact retrieved support quotes and never interprets source text as instructions (1.1498ms)
+✔ rejects evidence beyond the character limit (1.0806ms)
+✔ validates eight sources at maximum accepted source-title and locator lengths without dropping citation metadata (3.0157ms)
+✔ keeps deterministic quiz choices distinct when source text equals a stock distractor (1.0729ms)
+✔ creates a v2-only record with ordered revisions and exact cross-document anchors (7.404ms)
+✔ foreign owner cannot verify or save the same v2 source bundle (6.8136ms)
+✔ tampered revision, mismatched source title, quote or edited flag fails closed (2.4166ms)
+✔ a verified local record persists once and remains checked on subsequent reads (2.0806ms)
+✔ a review race during persistence rejects and best-effort removes the new record (1.747ms)
+✔ failed rollback never converts changed revisions into a successful save (3.5071ms)
+✔ stale or deleted reviewed source fails on read even if lesson document still exists (1.6775ms)
+✔ aborted verification never writes a new record (2.0793ms)
+✔ cloud metadata accepts only supported providers and bounded nonblank model names (7.0221ms)
+✔ persisted cloud metadata cannot omit or forge provider and model fields (2.3311ms)
+✔ local records reject provider metadata rather than implying a cloud call (1.2721ms)
+✔ invalid constructor provider or missing consent fails before storage (2.812ms)
+✔ constructor revalidates every cloud provider consent and selected revision (1.9024ms)
+✔ multi-source citations have correct owner, exact offsets, and distinct IDs (5.1153ms)
+✔ does not read another owner or a missing revision (0.9686ms)
+✔ rejects edited snapshots, unreviewed text, and mid-read revision changes (0.9084ms)
+✔ requires valid bounded explicit selection and does not query unselected sources (1.1496ms)
+✔ bounds results, returns truthful limitation, and supports abort (2.7527ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 284.6256

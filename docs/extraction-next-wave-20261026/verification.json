@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-26",
+  "branch": "codex/extraction-next-wave-20261026",
+  "baseCommit": "1310eba7ef18be3ff4cf2591613474a61deb5389",
+  "scope": [
+    "studio/server/learner-workspace/extraction.mjs",
+    "studio/tests/extraction-next-wave.test.mjs",
+    "docs/extraction-next-wave-20261026/",
+    "coordination/handoffs/2026-10-26-extraction-next-wave.md"
+  ],
+  "regressionBeforeFix": {
+    "command": "node --test tests/extraction-next-wave.test.mjs",
+    "result": "2 passed, 3 failed",
+    "observedDefects": [
+      "The PDF wrapper merged OCR response pages beyond page four.",
+      "A thrown native PDF runner error prevented an available OCR fallback and exposed its raw error to the caller.",
+      "Duplicate OCR page rows consumed the unique-page coverage allowance."
+    ]
+  },
+  "afterFix": {
+    "workingDirectory": "studio",
+    "environment": "KAIRO_PYTHON=C:\\Python311\\python.exe",
+    "command": "node --test tests/extraction-next-wave.test.mjs tests/extraction-coverage.test.mjs tests/extraction-edge-wave.test.mjs tests/material-ingestion.test.mjs",
+    "result": "26 passed, 0 failed",
+    "coverage": [
+      "5 new actual-wrapper regression tests",
+      "existing coverage and extraction-edge tests",
+      "9 existing native Python ingestion tests on synthetic generated files"
+    ]
+  },
+  "build": {
+    "command": "npm run build",
+    "result": "not completed",
+    "reason": "tsc is not installed in the isolated worktree; no dependencies were installed"
+  },
+  "environmentLimits": [
+    "tests/native-extraction.test.mjs could not load because google-auth-library is absent from the isolated dependency tree",
+    "No live OCR, real learner document, human/device/browser evaluation or cloud/provider call was made"
+  ],
+  "sourceBoundaries": {
+    "visualUnderstanding": false,
+    "reviewSectionsMax": 100,
+    "reviewCharactersMax": 48000,
+    "reviewBytesMax": 65536,
+    "ocrPagesMax": 4,
+    "nativeBlockCharactersMax": 12000,
+    "pythonRunnerTimeoutMs": 120000,
+    "pythonRunnerMaxBufferBytes": 1100000
+  }
+}

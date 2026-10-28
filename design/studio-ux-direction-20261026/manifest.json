@@ -1,0 +1,31 @@
+{
+  "kind": "generated-design-concepts",
+  "date": "2026-10-26",
+  "selectedDirection": "02-whole-app-concept.png",
+  "userConfirmed": "Visible KAIRO beside model, compact mode, press-KAIRO action/scope menu, tablet-driven board/diagram/test transitions",
+  "status": "Proposed UI, not deployed screenshots",
+  "references": [
+    "studio/public/models/character/teacher-portrait.png",
+    "assets/kairo-brand-hero-20261024/01-kairo-branded-worlds.png",
+    "docs/full-integration-release-20261025/screenshots/cloud-motor.png"
+  ],
+  "files": [
+    {
+      "path": "01-motor-context-concept.png",
+      "sha256": "c64ed990e6991a3670cd7cd5a630c590c954ed042500488ccd7956f9f02940b3"
+    },
+    {
+      "path": "02-whole-app-concept.png",
+      "sha256": "688ff9ae0188b8d45d072c727fd5a261116ee4ee6d426cbdc8a81112824ba401"
+    },
+    {
+      "path": "03-tablet-classroom-concept.png",
+      "sha256": "421be8b9b392f98dc632847f42e4bdbf84f6d451a1992ef575b0485dcc2f1b3f"
+    }
+  ],
+  "limits": [
+    "Sample file names, source locators, dates and companies are illustrative, not verified material/opportunities.",
+    "Tablet/hand animation, pointing targets and classroom handoff require separate implementation and acceptance.",
+    "Generated logo rendering is a visual concept; use the actual approved SVG in code."
+  ]
+}
