@@ -304,3 +304,8 @@
 @media (prefers-reduced-motion: reduce) {
   .engineering-studio *, .engineering-studio *::before, .engineering-studio *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+@media (max-width: 760px) {
+  .engineering-studio .eng-brand {
+    display: none;
+  }
+}

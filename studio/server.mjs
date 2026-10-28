@@ -9,6 +9,7 @@ import { askGuide, cloudConfigured, validateQuestion, googleConfiguration } from
 import { workspaceRoutes } from './server/workspace/routes.mjs';
 import { speechRouter } from './server/avatar/speech.mjs';
 import {createAccountRouter} from './server/account/routes.mjs';
+import {finalErrorHandler} from './server/error-handler.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -68,9 +69,7 @@ if (process.argv.includes('--production')) {
   const vite = await createServer({ root, server: { middlewareMode: true, hmr: false }, appType: 'spa' });
   app.use(vite.middlewares);
 }
-app.use((error, _req, res, _next) => {
-  res.status(error.status === 413 ? 413 : 400).json({ error: 'Request could not be read.' });
-});
+app.use(finalErrorHandler);
 const port = Number(process.env.PORT || 4173);
 const server = app.listen(port, '127.0.0.1', () => console.log(`KAIRO Studio: http://127.0.0.1:${port}`));
 function shutdown() { server.close(() => { bundleRepository.close();engine.close(); process.exit(0); }); server.closeAllConnections(); }

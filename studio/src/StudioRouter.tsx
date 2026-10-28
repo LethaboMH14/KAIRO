@@ -2,6 +2,7 @@ const BundleClassroom = lazy(() => import('./bundle-classroom/BundleClassroom'))
 import { lazy, Suspense, useEffect } from 'react';
 import App from './App';
 import {StudentSpaceProvider,useStudentSpace} from './student-space/StudentSpace';
+import {ClassroomDefault} from './kairo/ClassroomStart';
 import TeacherProvider from './teacher/TeacherProvider';
 import LearningHome from './continuity/LearningHome';
 import AppShell from './kairo/AppShell';
@@ -43,7 +44,7 @@ function Routes() {
   if (window.location.pathname === '/settings') return <Services/>;
   if (window.location.pathname === '/for-institutions') return <Institutions/>;
   if (window.location.pathname === '/computer-science') return <App/>;
-  if (window.location.pathname === '/classroom') return <Suspense fallback={<div className="scene-loading">Opening your classroom…</div>}>{new URLSearchParams(window.location.search).has('bundle')?<BundleClassroom/>:new URLSearchParams(window.location.search).has('lesson')?<SourceClassroom/>:<Classroom />}</Suspense>;
+  if (window.location.pathname === '/classroom') return <Suspense fallback={<div className="scene-loading">Opening your classroom…</div>}>{new URLSearchParams(window.location.search).has('bundle')?<BundleClassroom/>:new URLSearchParams(window.location.search).has('lesson')?<SourceClassroom/>:<ClassroomDefault><Classroom /></ClassroomDefault>}</Suspense>;
   if (window.location.pathname === '/cv') return <Suspense fallback={<div className="scene-loading">Opening your CV draft…</div>}><CvWorkspace /></Suspense>;
   if (window.location.pathname === '/saved') return <LearningHome />;
   if (window.location.pathname === '/cases') return <Suspense fallback={<div className="scene-loading">Opening workplace practice…</div>}><WorkplaceCases onExit={() => {window.location.href='/home';}} /></Suspense>;
