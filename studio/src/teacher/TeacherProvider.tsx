@@ -15,7 +15,7 @@ export default function TeacherProvider({children}:{children:ReactNode}){
  function cancel(){active.current++;abort.current?.abort();abort.current=null;window.speechSynthesis?.cancel();if(audio.current){audio.current.onended=null;audio.current.pause();audio.current.src='';audio.current=null;}disposeAudio.current();disposeAudio.current=()=>{};audioSignal.current={energy:0,time:0,duration:0};}
  function clearStatusTimer(){if(statusTimer.current){clearTimeout(statusTimer.current);statusTimer.current=null;}}
  function setStatus(message:string){statusToken.current++;clearStatusTimer();setStatusText(message);}
- function stop(){const wasActive=speaking||paused;cancel();setSpeaking(false);setPaused(false);if(!wasActive)return;setStatus('Narration stopped.');const token=statusToken.current;statusTimer.current=setTimeout(()=>{statusTimer.current=null;if(statusToken.current===token)setStatusText('');},4000);}
+ function stop(){const wasActive=speaking||paused||!!abort.current||status.startsWith('Preparing');cancel();setSpeaking(false);setPaused(false);if(!wasActive)return;setStatus('Narration stopped.');const token=statusToken.current;statusTimer.current=setTimeout(()=>{statusTimer.current=null;if(statusToken.current===token)setStatusText('');},4000);}
  useEffect(()=>{
   const refresh=()=>setVoices(window.speechSynthesis?.getVoices()||[]);refresh();window.speechSynthesis?.addEventListener('voiceschanged',refresh);const leave=()=>cancel();window.addEventListener('pagehide',leave);
   return()=>{cancel();clearStatusTimer();void audioContext.current?.close();audioContext.current=null;window.speechSynthesis?.removeEventListener('voiceschanged',refresh);window.removeEventListener('pagehide',leave);};
