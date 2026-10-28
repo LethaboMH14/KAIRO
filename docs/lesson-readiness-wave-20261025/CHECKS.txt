@@ -1,0 +1,11 @@
+Focused SSR test command (run from studio/):
+  node --test --test-concurrency=1 tests/lesson-readiness-wave.test.mjs
+Result: exit 0; 10 tests passed, 0 failed.
+Coverage: actual panel via Vite SSR; reviewed source mapping; changed/unavailable source; busy; empty steps; absent and unmatched citations; direct start-gate handler; blank/duplicate IDs; prepared activity wording; coverage/error semantics; HTML escaping; unique named regions.
+
+Production build command (run from studio/):
+  npm run build
+Result: exit 0; TypeScript build and Vite production build completed in 36.17s.
+Vite reported its existing large chunk warning for bundles above 500 kB. No package or lockfile was changed.
+
+Not run: full suite, browser/headless observation, device or human accessibility acceptance, route integration, live providers, cloud, camera or microphone.
