@@ -26,7 +26,13 @@ Every task brief and handoff must identify the criterion/subquestion it improves
 
 Prioritise a complete source → review → KAIRO/reading → practice → evidence → resume journey. Fix broken or misleading states before adding presentation features. Maintain the selected C identity, plain learner wording, source/revision integrity, one shared narrator, reading/keyboard/caption alternatives and honest language/SASL labels. Follow `docs/judging-cloud-20261023/SSDLC-AND-SCREENSHOTS.md` for the security evidence plan.
 
-Cloud choices must justify time saved, cost after credits, privacy/region, failure fallback and measured acceptance. Credits are temporary; historical balances are not current. No deployment, billing upgrade, paid resource or tool installation is authorized merely by a research recommendation. Verify current hackathon-specific rules against original organizer evidence; the general awards FAQ and pasted AI answers do not settle every rule. Preserve the existing denied-browser boundary and keep the deleted schedule off.
+Cloud choices must justify time saved, cost after credits, privacy/region, failure fallback and measured acceptance. Credits are temporary; historical balances are not current. No deployment, billing upgrade, paid resource or tool installation is authorized merely by a research recommendation. Verify current hackathon-specific rules against original organizer evidence; the general awards FAQ and pasted AI answers do not settle every rule. Follow the browser permission update below and keep the deleted schedule off.
+
+## KAIRO browser permission — direct user update, 26 October 2026
+
+The user explicitly revoked the earlier browser-observation restriction and authorized Codex, Luna chats and delegated agents to inspect KAIRO app tabs and take evidence screenshots during implementation and testing. This permission persists across KAIRO tasks; do not ask again merely because an older handoff says browser access was denied. The scoped confirmation in this request is KAIRO app tabs. Other account tabs, Google Cloud/Firebase consoles, email and unrelated sites are not covered by this update; use their separately established permissions where applicable.
+
+This replaces only the earlier project browser-observation denial. It does not override tool/platform controls, grant credentials, remove file claims, authorize arbitrary external submissions, or permit exposing secrets/private learner data. Use synthetic test accounts/data for evidence. A technical browser connection failure remains a technical failure: record it accurately, do not claim the current tab was inspected, and use an authorized isolated KAIRO test browser when appropriate.
 
 ## Teacher identity — user correction, 23 October 2026
 
