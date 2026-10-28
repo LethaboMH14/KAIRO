@@ -178,7 +178,7 @@ test('actual workspace restores catalog jobs after reload and opens the exact re
   panel.props.onOpenJob(panel.props.jobs[0]);await flush();await flush();h.render();
   assert.ok(h.calls.some(call=>call.url==='/api/workspace/jobs/ready-job'));
   assert.match(text(h.tree),/Synthetic ready file/);
-  assert.match(text(h.tree),/Revision synthetic-ready-revision/);
+  assert.match(text(h.tree),/Version synthet/);
   assert.equal(find(h.tree,node=>node.type==='input'&&node.props.placeholder==='e.g. Stock control basics','retained paste title').props.value,'My saved passage');
   assert.equal(find(h.tree,node=>node.type==='textarea'&&node.props.placeholder==='Paste 80–16,000 characters…','retained paste body').props.value,'A learner passage that must remain available after opening a completed file.');
  }finally{h.close();}
