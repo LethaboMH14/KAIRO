@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-26T21:20:16+02:00",
+  "profileContext": {
+    "id": "KAIRO-ENG-PILOT-001",
+    "synthetic": true,
+    "programme": "BSc (Eng) Mechanical Engineering, year 3, Wits",
+    "eligibility": "unknown",
+    "match": "discipline discovery only; no eligibility or match score"
+  },
+  "curriculumAnchor": {
+    "institution": "University of the Witwatersrand, Johannesburg",
+    "qualification": "BSc (Eng) Electrical Engineering",
+    "academicYear": 2026,
+    "yearOfStudy": 3,
+    "moduleCode": "ELEN3003A",
+    "moduleTitle": "Power Engineering",
+    "sourceUrl": "https://www.wits.ac.za/media/wits-university/students/academic-matters/documents/EBE_eBook.pdf",
+    "sourceLocator": "2026 EBE Syllabuses, printed p. 294, ELEN3003A; 2026 EBE Senate Rules Electrical Engineering Year of Study III",
+    "mappingStatus": "verified public course metadata; not an enrolment or achievement record"
+  },
+  "records": [
+    {
+      "id": "umngeni-uthukela-graduate-engineers-2026-rechecked",
+      "title": "Graduate Development Programme: Mechanical and Electrical Engineers",
+      "type": "job",
+      "provider": "uMngeni-uThukela Water",
+      "officialUrl": "https://umngeni-uthukela.azurewebsites.net/call-for-applicants-graduate-engineers-closing-date-6-november-2026/",
+      "checkedAt": "2026-10-26T21:20:16+02:00",
+      "closesAt": null,
+      "status": "unknown",
+      "verification": "official",
+      "requirements": ["Advanced Diploma, BSc or BEng in Mechanical or Electrical Engineering", "Valid, unendorsed driver's licence", "Application email must include CV, certified qualification copies and proof of residence", "Shortlisted applicants may undergo competency assessment or security clearance"],
+      "disciplines": ["Mechanical Engineering", "Electrical Engineering"],
+      "evidence": [
+        {"locator":"Graduate Engineers advert, qualification table", "excerpt":"Advance Diploma, Bsc or B.Eng. in Electrical Engineering"},
+        {"locator":"Graduate Engineers advert, qualification table", "excerpt":"Advance Diploma, Bsc or B.Eng. in Mechanical Engineering"},
+        {"locator":"Graduate Engineers advert, application instructions", "excerpt":"by 06 November 2026"}
+      ],
+      "eligibility": "unknown",
+      "availabilityNote": "Official advert dated 15 October 2026, rechecked 26 October 2026 21:20 SAST. It states 6 November 2026 as the closing date but no closing time. Current status remains unknown until provider confirmation; no individual eligibility is inferred."
+    },
+    {
+      "id": "nsfas-2027-engineering-funding-20261026",
+      "title": "NSFAS funding applications for 2027",
+      "type": "funding",
+      "provider": "National Student Financial Aid Scheme (NSFAS)",
+      "officialUrl": "https://www.nsfas.org.za/content/how-to-apply.html",
+      "checkedAt": "2026-10-26T21:20:16+02:00",
+      "closesAt": "2026-10-31T23:59:59+02:00",
+      "status": "open",
+      "verification": "official",
+      "requirements": [
+        "South African citizens studying or planning to study at a public university or TVET college",
+        "Household income and other eligibility criteria apply; review the full official criteria",
+        "Apply through myNSFAS or the official NSFAS app; application is free"
+      ],
+      "disciplines": ["Public university study", "TVET study", "Engineering study"],
+      "evidence": [
+        {"locator":"How to Apply / NSFAS 2027 application campaign", "excerpt":"Applications open on 18 September and close on 31 October 2026."},
+        {"locator":"NSFAS 2027 eligibility summary", "excerpt":"South African citizens studying or planning to study at a public university or TVET college."}
+      ],
+      "eligibility": "unknown",
+      "availabilityNote": "Official page checked 26 October 2026 21:20 SAST. Closing time is 23:59 SAST on 31 October 2026. Synthetic profile lacks citizenship, household finances and current registration/admission evidence; no individual funding eligibility is inferred."
+    },
+    {
+      "id": "transnet-technical-bursaries-provider-info-20261026",
+      "title": "Transnet full-time technical bursary information",
+      "type": "bursary",
+      "provider": "Transnet",
+      "officialUrl": "https://www.transnet.net/YouthDevelopmentProgrammes",
+      "checkedAt": "2026-10-26T21:20:16+02:00",
+      "closesAt": null,
+      "status": "unknown",
+      "verification": "official",
+      "requirements": [
+        "Technical fields listed include electrical, electronic, mechanical, civil, industrial, metallurgy, mechatronics and chemical engineering",
+        "The page describes full-time bursaries and a comprehensive award that may cover tuition, accommodation, meals and books",
+        "Selection considers academic performance, interview and medical fitness; current application window and detailed criteria are not stated on the page"
+      ],
+      "disciplines": ["Mechanical Engineering", "Electrical Engineering", "Electronic Engineering", "Civil Engineering", "Industrial Engineering", "Mechatronics"],
+      "evidence": [
+        {"locator":"Youth Development Programmes / Full-time Bursaries (Technical)", "excerpt":"We offer bursaries for full-time study towards Technical Degrees"},
+        {"locator":"Youth Development Programmes / Bursary Value and Selection", "excerpt":"The comprehensive bursary covers tuition fees, accommodation and meals, book allowance, and experiential training."}
+      ],
+      "eligibility": "unknown",
+      "availabilityNote": "This is provider programme information, not an open 2027 call. The linked page exposes a 2025 application form; no current deadline or active application window was confirmed. Do not present as currently open."
+    }
+  ],
+  "learnerEvidenceBoundary": "KAIRO practice artifacts may show a learner's working, sources used, attempts, and requested assistance. They are not employer-verified competence, a qualification, eligibility, hiring recommendation, or job guarantee."
+}

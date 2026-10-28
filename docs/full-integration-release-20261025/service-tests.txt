@@ -1,0 +1,20 @@
+✔ private local v2 create -> read -> edit -> practice -> resume uses separate namespace (50.0834ms)
+✔ source deletion, current review changes and archived quote tamper fail every read (15.6412ms)
+✔ cloud output uses actual consented served provider and retains preference context (4.5012ms)
+✔ invalid practice, unconsented cloud and pre-aborted creation never produce accepted work (4.457ms)
+✔ router requires an authenticated identity and does not intercept legacy workspace routes (146.7381ms)
+✔ wording edits cannot rewrite the quiz or detach a chapter citation from prior practice (7.8125ms)
+✔ cancellation after reading existing work prevents a new saved-work write (10.7714ms)
+✔ local creation has a durable bounded daily allowance without any model calls (63.8053ms)
+✔ studio coaching keeps bundle and selected excerpt provenance with explicit consent (4.217ms)
+✔ eight long sources all contribute exact evidence even when only the first source matches the goal (9.024ms)
+✔ bundle help rejects unknown scene variables and unconsented served providers (5.2063ms)
+✔ saved lesson catalogue excludes foreign records and marks changed-source lessons unavailable (1.9416ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1291.2653

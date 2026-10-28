@@ -1,0 +1,23 @@
+{
+  "status": {
+    "latestReadyRevisionName": "kairo-app-full26b",
+    "traffic": [
+      {
+        "revisionName": "kairo-app-full25g",
+        "tag": "full25g",
+        "url": "https://full25g---kairo-app-rnfwukdvra-bq.a.run.app"
+      },
+      {
+        "revisionName": "kairo-app-full26a",
+        "tag": "full26a",
+        "url": "https://full26a---kairo-app-rnfwukdvra-bq.a.run.app"
+      },
+      {
+        "percent": 100,
+        "revisionName": "kairo-app-full26b",
+        "tag": "full26b",
+        "url": "https://full26b---kairo-app-rnfwukdvra-bq.a.run.app"
+      }
+    ]
+  }
+}

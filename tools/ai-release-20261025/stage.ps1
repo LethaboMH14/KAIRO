@@ -69,7 +69,7 @@ Copy-AllowedFile 'studio/package.json' 'studio/package.json'
 Copy-AllowedFile 'studio/package-lock.json' 'studio/package-lock.json'
 
 # Complete static import closure reachable from studio/server/learner-entry.mjs.
-foreach ($folder in @('account','learner-repository','learner-workspace','avatar','student-space','ai-runtime','opportunities','extraction-coverage','listening-core')) {
+foreach ($folder in @('account','learner-repository','learner-workspace','avatar','student-space','ai-runtime','opportunities','opportunity-freshness','owner-retrieval','source-catalog','extraction-coverage','listening-core','bundle-lessons','bundle-lesson-local','lesson-v2','lesson-versions')) {
   Copy-AllowedTree "studio/server/$folder" "studio/server/$folder"
 }
 foreach ($file in @('learner-entry.mjs','google.mjs','trace.mjs')) {

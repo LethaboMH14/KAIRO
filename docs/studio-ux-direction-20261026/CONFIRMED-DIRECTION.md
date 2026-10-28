@@ -1,0 +1,5 @@
+# User-confirmed direction - 26 October 2026
+
+The second generated whole-journey board is selected. Keep current C identity, consistent calm layout/navigation and actual KAIRO identity. KAIRO stays visible beside the model; learner can compact her. The tablet is a functional teaching device: retrieve/hold/tap/present/stow, board/diagram/question cues and honest task/loading states. Press KAIRO for Teach me/Explain this/Test me/Plan next step, then select the actual part/passage/section/lesson/topic scope and source. Model tools remain separate. Same KAIRO teaches in motor/pump and a modern whiteboard classroom, with continuity of sources, lesson, language, narration and work. Reading/material/career pages use a smaller unobtrusive contextual form.
+
+Generated images show proposed future UI and sample content; dates, source labels, companies and diagrams are not verified evidence. Build plan, tools, worker prompts, gates and continuous active-work loop are in coordination/briefs/studio-interaction-build-20261026/README.md. No deleted schedule or autonomous invocation loop has been enabled.

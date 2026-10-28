@@ -1,0 +1,90 @@
+
+> kairo-studio@0.1.0 build
+> tsc -b && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 2354 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                     0.54 kB │ gzip:   0.36 kB
+dist/assets/Manrope-wght-DIRNzeTG.ttf             164.70 kB
+dist/assets/pdf.worker.min-CjEcRF4W.mjs         1,264.34 kB
+dist/assets/BundleLessonView-BIW1F-O2.css           0.80 kB │ gzip:   0.42 kB
+dist/assets/OpportunitiesPage-D145H6pk.css          1.47 kB │ gzip:   0.65 kB
+dist/assets/TrackingPanel-BwVWzxqm.css              1.90 kB │ gzip:   0.87 kB
+dist/assets/TeacherSettings-BZz0EtTf.css            2.67 kB │ gzip:   1.02 kB
+dist/assets/EngineeringRoleBridge-Dny2sR3d.css      3.21 kB │ gzip:   1.15 kB
+dist/assets/CvWorkspace-DJrIvsU0.css                3.53 kB │ gzip:   1.30 kB
+dist/assets/profile-DDO7JEgs.css                    4.28 kB │ gzip:   1.32 kB
+dist/assets/lesson-editor-BowkBA5X.css              4.45 kB │ gzip:   1.47 kB
+dist/assets/PracticePackWorkspace-BRmADuRO.css      5.68 kB │ gzip:   1.76 kB
+dist/assets/RolePathways-BVB8mPd_.css               6.21 kB │ gzip:   1.95 kB
+dist/assets/SourceClassroom-D53AL6Go.css            6.43 kB │ gzip:   1.93 kB
+dist/assets/PracticeStudio-BXIn23yg.css             6.59 kB │ gzip:   2.00 kB
+dist/assets/experience-DDrS_7xg.css                 6.84 kB │ gzip:   2.14 kB
+dist/assets/LectureStudio-B3K20Qz5.css              7.39 kB │ gzip:   2.02 kB
+dist/assets/LessonEditorHost-CIzaGxqn.css           7.75 kB │ gzip:   2.28 kB
+dist/assets/StudioLessonPlan-zajTd_nQ.css           7.77 kB │ gzip:   2.18 kB
+dist/assets/EvidenceWorkspace-D20tUfAh.css          8.98 kB │ gzip:   2.37 kB
+dist/assets/PumpHost-8ZoRKaIy.css                  11.14 kB │ gzip:   3.04 kB
+dist/assets/SourceWorkspace-7EinQNgM.css           12.16 kB │ gzip:   3.06 kB
+dist/assets/workspace-DjT5rnb8.css                 16.66 kB │ gzip:   4.26 kB
+dist/assets/EngineeringStudio-BQ8d4W3S.css         27.81 kB │ gzip:   5.34 kB
+dist/assets/index-i3L7fLjU.css                     48.98 kB │ gzip:  11.19 kB
+dist/assets/pdf.worker.min-CdXBBzB4.js              0.07 kB │ gzip:   0.09 kB
+dist/assets/message-circle-CmPsDOnf.js              0.14 kB │ gzip:   0.15 kB
+dist/assets/circle-help-W6MVZIac.js                 0.23 kB │ gzip:   0.20 kB
+dist/assets/extends-CF3RwP-h.js                     0.23 kB │ gzip:   0.19 kB
+dist/assets/package-D1iiYLqD.js                     0.38 kB │ gzip:   0.25 kB
+dist/assets/SkeletonUtils-BCVmgslc.js               0.45 kB │ gzip:   0.27 kB
+dist/assets/RainStage-OWG1fZwe.js                   1.01 kB │ gzip:   0.64 kB
+dist/assets/lesson-editor-Frl3gMhW.js               1.90 kB │ gzip:   0.87 kB
+dist/assets/session-DrnmlKnt.js                     2.06 kB │ gzip:   0.88 kB
+dist/assets/SaveReading-BXQ_SngM.js                 3.19 kB │ gzip:   1.57 kB
+dist/assets/model-BwWXSq02.js                       4.12 kB │ gzip:   1.74 kB
+dist/assets/ShopScene-DLYt0VBC.js                   4.20 kB │ gzip:   1.74 kB
+dist/assets/model-Cgogn5xT.js                       4.65 kB │ gzip:   1.99 kB
+dist/assets/LectureScene-BDpOuqk8.js                4.73 kB │ gzip:   2.33 kB
+dist/assets/OpportunitiesPage-Bpo0p0yj.js           4.88 kB │ gzip:   1.97 kB
+dist/assets/RoleDirection-B0JKvEJ_.js               5.78 kB │ gzip:   2.54 kB
+dist/assets/TeacherSettings-Eo1GX4W9.js             5.98 kB │ gzip:   2.32 kB
+dist/assets/LectureStudio-CjD99j5F.js               8.47 kB │ gzip:   3.30 kB
+dist/assets/BundleLessonView-CQBw5ILT.js            9.38 kB │ gzip:   3.33 kB
+dist/assets/BundleClassroom-aXsb80dt.js            10.21 kB │ gzip:   3.71 kB
+dist/assets/SourceReader-BkcccPad.js               10.68 kB │ gzip:   4.42 kB
+dist/assets/ProgressPage-BsMrVZUP.js               12.48 kB │ gzip:   4.01 kB
+dist/assets/Scene-BrzraPhu.js                      13.08 kB │ gzip:   4.40 kB
+dist/assets/PumpScene-8QCRHOpa.js                  13.22 kB │ gzip:   4.01 kB
+dist/assets/LessonWorkspace-CeNkLGSL.js            14.04 kB │ gzip:   4.99 kB
+dist/assets/PracticeStudio-BIKx_JKC.js             15.15 kB │ gzip:   5.56 kB
+dist/assets/OrbitControls-CQdf2-su.js              15.63 kB │ gzip:   4.81 kB
+dist/assets/EngineeringRoleBridge-BPshdwoT.js      16.56 kB │ gzip:   6.06 kB
+dist/assets/MotorScene-c594kkJn.js                 17.36 kB │ gzip:   6.74 kB
+dist/assets/ExperienceClassroom-CHCpD3Qh.js        18.61 kB │ gzip:   7.10 kB
+dist/assets/CvWorkspace-CdDAPAY0.js                19.58 kB │ gzip:   6.58 kB
+dist/assets/RolePathways-D47TtGUy.js               21.16 kB │ gzip:   7.72 kB
+dist/assets/TeacherCharacter-Syauft2x.js           21.47 kB │ gzip:   8.28 kB
+dist/assets/ClassroomStage-oRId5mSz.js             23.61 kB │ gzip:   9.93 kB
+dist/assets/TrackingPanel-ld8VSiRA.js              25.24 kB │ gzip:   9.48 kB
+dist/assets/LessonEditorHost-BleCBVzc.js           25.62 kB │ gzip:   8.12 kB
+dist/assets/PracticePackWorkspace-mzyczSHG.js      26.67 kB │ gzip:   9.04 kB
+dist/assets/RoundedBox-5Pi_TAka.js                 28.67 kB │ gzip:   9.28 kB
+dist/assets/EvidenceWorkspace-Cu99NCwx.js          45.75 kB │ gzip:  13.54 kB
+dist/assets/SourceWorkspace-BjM4bHS_.js            53.67 kB │ gzip:  17.31 kB
+dist/assets/Environment-DYG_7j3f.js                53.89 kB │ gzip:  19.35 kB
+dist/assets/SourceClassroom-C9H0Nk-N.js            56.22 kB │ gzip:  18.13 kB
+dist/assets/StudioLessonPlan-CJZ9Aal7.js           60.25 kB │ gzip:  20.43 kB
+dist/assets/Gltf-ClDcOLjX.js                       73.16 kB │ gzip:  21.76 kB
+dist/assets/PumpHost-BaTM4CE2.js                   92.96 kB │ gzip:  29.41 kB
+dist/assets/EngineeringStudio-Bbs2F_ti.js         115.07 kB │ gzip:  36.11 kB
+dist/assets/index-B9oujm_6.js                     346.78 kB │ gzip: 108.54 kB
+dist/assets/three.core-kKRyKlYM.js                375.75 kB │ gzip: 102.35 kB
+dist/assets/pdf-CfhDiWmk.js                       437.62 kB │ gzip: 131.39 kB
+dist/assets/react-three-fiber.esm-C2BW26fM.js     516.23 kB │ gzip: 140.15 kB
+✓ built in 16.45s
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

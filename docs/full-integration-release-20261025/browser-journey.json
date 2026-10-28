@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-25T21:21:20.997Z",
+  "base": "http://127.0.0.1:4199",
+  "syntheticOnly": true,
+  "modelCalls": 0,
+  "checks": [
+    "two synthetic sources created/reviewed through existing API",
+    "UI selection -> persisted multi-source lesson with distinct citations",
+    "practice and notes survive full page reload",
+    "wording edit preserves source citations and saved practice",
+    "motor gets reviewed bundle context and returns to same bundle",
+    "pump gets reviewed multi-source lesson context"
+  ],
+  "errors": []
+}

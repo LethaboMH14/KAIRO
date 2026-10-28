@@ -309,7 +309,7 @@ export default function EngineeringStudio({ onExit }: EngineeringStudioProps) {
     <header className="eng-header">
       <div className="eng-brand" aria-label="KAIRO Access"><span className="brand-symbol" aria-hidden="true">k</span><span className="eng-brand-name">KAIRO</span><span className="eng-brand-access">Access</span></div>
       <p className="eng-studio-name">Engineering Studio</p>
-      <button type="button" className="eng-exit" onClick={onExit}><ArrowLeft size={16} aria-hidden="true" />Back to studios</button>
+      <button type="button" className="eng-exit" onClick={onExit}><ArrowLeft size={16} aria-hidden="true" />{new URLSearchParams(location.search).has('bundle')?'Back to my lesson':'Back to studios'}</button>
     </header>
 
     <main className="eng-main">
@@ -557,7 +557,7 @@ export default function EngineeringStudio({ onExit }: EngineeringStudioProps) {
           <div><h3>Calculated</h3><p>The field-speed calculator, checked against a published table. The field poles in the operating view come from idealised three-phase currents in this model’s 36-slot, four-pole winding, for the normal supply and for each experiment: two phases swapped or one phase open.</p></div>
           <div><h3>Illustrative</h3><p>Playback speed, the size of the slip between field and rotor, and the disassembly order are presentation choices. The rotor shows only whether the field can start it. Nothing here simulates torque, heating, efficiency or real shaft speed.</p></div>
           <div><h3>The 3D model</h3><p>Modelled in Blender for KAIRO as an educational motor, sized loosely like an IEC 132 frame. It is not a specific manufacturer’s design. Lighting uses the Poly Haven Studio HDRI by Greg Zaal (CC0).</p></div>
-          <div><h3>Not connected yet</h3><p>Live questions to a guide and an on-screen instructor are not part of this studio yet. Progress is stored only in this browser.</p></div>
+          <div><h3>Scope and limits</h3><p>KAIRO offers prepared guidance and source-linked typed questions when you open a reviewed lesson. Live microphone input and automatic scene control are not connected. Progress is stored only in this browser.</p></div>
         </div>
         <details className="eng-sources">
           <summary>Sources checked for this lesson</summary>

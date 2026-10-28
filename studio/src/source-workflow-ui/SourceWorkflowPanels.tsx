@@ -2,10 +2,11 @@ import type { PreviewEvidence, StorageScope } from './source-workflow';
 import { storageScopeText } from './source-workflow';
 
 export function StorageScopeNote({ scope, label }: { scope: StorageScope; label: string | null }) {
+  const unavailable = scope !== 'local' && scope !== 'account';
   return <div className="sw-storage">
     <span>Storage</span>
-    <strong>{label?.trim() || 'Storage label unavailable.'}</strong>
-    <span>{storageScopeText(scope)}</span>
+    <strong>{unavailable ? 'Storage location unknown' : label?.trim() || 'Storage label unavailable.'}</strong>
+    <span role={unavailable ? 'status' : undefined}>{unavailable ? 'We could not confirm where this source is stored. Check its storage settings before adding private material.' : storageScopeText(scope)}</span>
   </div>;
 }
 

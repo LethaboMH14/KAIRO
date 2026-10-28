@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readdir,readFile} from 'node:fs/promises';import {join} from 'node:path';import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('..',import.meta.url));
+async function files(dir){const result=[];for(const item of await readdir(dir,{withFileTypes:true})){const path=join(dir,item.name);if(item.isDirectory())result.push(...await files(path));else if(/\.(?:tsx?|mjs|css|json)$/.test(path))result.push(path);}return result;}
+test('application source and public data decode as strict UTF-8',async()=>{for(const folder of ['src','server','data'])for(const file of await files(join(root,folder))){const bytes=await readFile(file);assert.doesNotThrow(()=>new TextDecoder('utf-8',{fatal:true}).decode(bytes),file);}});
+test('production styles do not import off-origin stylesheets forbidden by strict CSP',async()=>{for(const file of await files(join(root,'src'))){if(!file.endsWith('.css'))continue;const text=await readFile(file,'utf8');assert.doesNotMatch(text,/@import\s+(?:url\(\s*)?['"]?https?:\/\//i,file);}});

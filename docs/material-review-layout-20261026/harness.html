@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material review layout synthetic harness</title>
+    <style>
+      :root { color-scheme: light; --chalk: #f5f0e6; --paper: #fffdf8; --moss: #3e5144; --sage: #a7af91; --ink: #252b28; font-family: Manrope, system-ui, sans-serif; }
+      body { margin: 0; padding: clamp(.75rem, 3vw, 2rem); background: #eeeae0; }
+      #root { max-width: 76rem; margin: 0 auto; }
+      .fixture-controls { display: flex; gap: .5rem; align-items: center; margin: 0 0 1rem; flex-wrap: wrap; }
+      .fixture-controls button { min-height: 2.5rem; padding: .5rem .8rem; font: inherit; }
+      .fixture-counts { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <main id="root"></main>
+    <script type="module" src="./harness.tsx"></script>
+  </body>
+</html>
+
