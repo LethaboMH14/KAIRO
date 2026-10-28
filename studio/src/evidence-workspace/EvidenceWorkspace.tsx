@@ -122,7 +122,7 @@ export default function EvidenceWorkspace() {
       setExportError(failure instanceof Error ? failure.message : 'Portfolio could not be prepared. Your records were not changed.');
     }
   }
-  useEffect(() => { document.title = 'KAIRO · Evidence workspace'; refreshSavedPractice(); }, []);
+  useEffect(() => { if (window.location.pathname !== '/evidence') document.title = 'KAIRO · Evidence workspace'; refreshSavedPractice(); }, []);
   return <div className="ew-shell"><header className="ew-header"><a className="brand" href="/" aria-label="KAIRO home"><span className="brand-symbol">k</span>KAIRO<span className="brand-access">Access</span></a><nav aria-label="Workspace navigation"><a href="/"><ArrowLeft size={15} /> Learning studio</a><a href="/progress">My progress</a></nav><span className="ew-local">Read-only profile view</span></header>
     <main className="ew-main"><div className="ew-heading"><div><p className="ew-kicker">Your decisions, with their working</p><h1>Your practice evidence.</h1><p>Review saved shop practice or try a separate fictional service-data case. Your practice stays in this browser.</p></div><div className="ew-heading-actions"><span className="ew-scope">Self-reported · unverified</span><button className="ew-portfolio-download" onClick={() => exportPortfolio('html')}>Download portfolio · HTML</button><button className="ew-portfolio-download" onClick={() => exportPortfolio('json')}>Download portfolio · JSON</button></div></div>
       {exportError && <p className="ew-error" role="alert">{exportError}</p>}
