@@ -52,3 +52,10 @@ Blocking issue: **L2’s acceptance check conflicts with its required UI.** The 
 VERDICT: REVISE
 ### Claude's response (round 3, final — MAX_ROUNDS reached)
 Accepted. Check now exempts the single link marked data-prepared-example; link opens /classroom?example=shop so the chooser does not loop back to itself. Fixed after the final round; not re-reviewed by Codex. Outcome: converged except this one Claude-applied fix.
+
+## Claims (canonical bus, agent claude-improve-loop-20261028-a)
+IMPROVE-L1/L2/L3/L5/DOCS-20261028 all claimed ok=True at 28 Oct 2026. Implementation pre-authorised by the user at kickoff ("start implementing").
+
+## Implementation review — Sonnet 5.5 (medium), diff b5c8d27..40c31c3
+Verdict FIX. (1) Stop during "Preparing <voice>…" left a stuck dock — FIXED (stop treats in-flight fetch / Preparing status as active). (2) Non-engineering /classroom now waits for learning-space — REJECTED: Home and Studios already block on the same fetch; consistent pattern, logged as known. (3) Error-handler contract change (non-status errors 400→500, generic 4xx text, hosted 413 text) — INTENDED per L5 spec; no client matches old strings.
+Implementers: L1/L3/L5 Haiku 5.5; L2 attempted twice on GPT-6 Luna (1st refused for bus access, 2nd Codex CLI crashed: Windows OS error 1450), then Haiku (interrupted by session restart), finished by Claude Opus.
