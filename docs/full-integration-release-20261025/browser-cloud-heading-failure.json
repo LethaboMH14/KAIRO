@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-25T22:19:47.394Z",
+  "syntheticOnly": true,
+  "modelCalls": 0,
+  "checks": [],
+  "errors": [],
+  "resources": [
+    {
+      "path": "/api/workspace/progress/learner_browser",
+      "status": 404
+    }
+  ],
+  "failure": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { level: 1 }).first() to be visible\u001b[22m\n",
+  "pageTitle": "KAIRO · My lesson",
+  "headings": [
+    "Study the selected source passages",
+    "Selected sources",
+    "Read the cited passages 1",
+    "Read the cited passages 2",
+    "Exact source excerpts",
+    "Synthetic release check: engineering 1",
+    "Synthetic release check: engineering 1",
+    "Practice prompts",
+    "Which option is copied from the cited source passage?",
+    "Practise and keep your working",
+    "Explore a prepared engineering activity"
+  ]
+}

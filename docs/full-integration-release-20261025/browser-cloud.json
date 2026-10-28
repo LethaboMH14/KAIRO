@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-25T22:37:44.128Z",
+  "syntheticOnly": true,
+  "modelCalls": 0,
+  "checks": [
+    {
+      "name": "cloud-bundle",
+      "title": "KAIRO · My lesson",
+      "url": "https://kairo-app-747226582754.africa-south1.run.app/classroom?bundle=9bf52f8abc7d9f8f98be5912"
+    },
+    {
+      "name": "cloud-motor",
+      "title": "KAIRO · Engineering Studio",
+      "url": "https://kairo-app-747226582754.africa-south1.run.app/engineering?bundle=9bf52f8abc7d9f8f98be5912"
+    },
+    {
+      "name": "cloud-direction",
+      "title": "KAIRO · My direction",
+      "url": "https://kairo-app-747226582754.africa-south1.run.app/direction"
+    },
+    {
+      "name": "cloud-cv",
+      "title": "KAIRO · My CV draft",
+      "url": "https://kairo-app-747226582754.africa-south1.run.app/cv"
+    }
+  ],
+  "errors": [],
+  "resources": [
+    {
+      "path": "/api/workspace/progress/learner_browser",
+      "status": 404
+    },
+    {
+      "path": "/api/workspace/progress/learner_browser",
+      "status": 404
+    },
+    {
+      "path": "/api/workspace/progress/learner_browser",
+      "status": 404
+    },
+    {
+      "path": "/api/workspace/progress/learner_browser",
+      "status": 404
+    }
+  ]
+}

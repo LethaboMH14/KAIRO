@@ -1,0 +1,11 @@
+{
+  "status": {
+    "latestReadyRevisionName": "kairo-app-mount25d",
+    "traffic": [
+      {
+        "percent": 100,
+        "revisionName": "kairo-app-mount25d"
+      }
+    ]
+  }
+}

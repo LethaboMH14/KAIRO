@@ -1,0 +1,100 @@
+.pcu-figure {
+  box-sizing: border-box;
+  width: min(100%, 48rem);
+  margin: 0;
+  padding: clamp(0.9rem, 2.5vw, 1.35rem);
+  color: #252b28;
+  background: #fffdf8;
+  border: 1px solid #a7af91;
+  border-radius: 0.9rem;
+}
+
+.pcu-figure figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.pcu-figure figcaption strong {
+  color: #3e5144;
+  font-size: 1.05rem;
+}
+
+.pcu-figure figcaption span,
+.pcu-boundary {
+  color: #3e5144;
+  font-size: 0.92rem;
+}
+
+.pcu-video {
+  display: block;
+  width: 100%;
+  max-height: min(65vh, 28rem);
+  aspect-ratio: 720 / 404;
+  background: #252b28;
+  border-radius: 0.55rem;
+}
+
+.pcu-boundary {
+  margin: 0.8rem 0;
+}
+
+.pcu-transcript summary {
+  width: fit-content;
+  color: #3e5144;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.pcu-transcript summary:focus-visible,
+.pcu-transcript a:focus-visible {
+  outline: 3px solid #b77951;
+  outline-offset: 3px;
+}
+
+.pcu-transcript ol {
+  padding-left: 1.5rem;
+  line-height: 1.55;
+}
+
+.pcu-transcript li + li {
+  margin-top: 0.35rem;
+}
+
+.pcu-transcript a {
+  color: #3e5144;
+  overflow-wrap: anywhere;
+}
+
+.pcu-status,
+.pcu-unavailable {
+  padding: 0.8rem;
+  color: #252b28;
+  background: #f5f0e6;
+  border-left: 0.25rem solid #b77951;
+}
+
+@media (max-width: 32rem) {
+  .pcu-figure {
+    padding: 0.75rem;
+    border-radius: 0.65rem;
+  }
+
+  .pcu-video {
+    max-height: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pcu-figure *,
+  .pcu-figure *::before,
+  .pcu-figure *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

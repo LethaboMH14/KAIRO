@@ -4,6 +4,7 @@ type Opportunity = {
   id: string; title: string; type: string; provider: string; discoveryUrl?: string; officialUrl: string;
   checkedAt: string; closesAt: string | null; requirements: string[]; disciplines: string[];
   status: 'open' | 'closed' | 'unknown'; verification: 'official' | 'discovery-only'; stale?: boolean;
+  freshness?: {status:string;reasons:string[]};
 };
 
 export type OpportunitiesProps = { records: unknown; limitations?: unknown };
@@ -58,6 +59,7 @@ export default function Opportunities({ records, limitations }: OpportunitiesPro
               </div>
               <h3>{item.title}</h3>
               <p className="op-provider">{item.provider}</p>
+              {item.freshness&&item.freshness.status!=='current'&&<p className="op-note">{item.freshness.status==='expired'?'The recorded closing time has passed.':'Check the provider’s page: some details are missing or need a fresh check.'}</p>}
               <dl className="op-dates">
                 <div><dt>Closing date</dt><dd>{dateLabel(item.closesAt)}</dd></div>
                 <div><dt>Checked</dt><dd>{dateLabel(item.checkedAt)}{item.stale ? ' · stale' : ''}</dd></div>

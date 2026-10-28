@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "roles": [
+    {
+      "id": "bmw-sa-engineering-graduate-development",
+      "title": "Graduate Development Programme (engineering pathway)",
+      "provider": "BMW Group South Africa",
+      "url": "https://www.bmwgroup.jobs/za/en/opportunities/graduate.html?country=ZA&jobType=GRADUATE_JOB",
+      "checkedAt": "2026-10-25",
+      "availability": "unknown",
+      "availabilityNote": "The official South Africa graduate page is published. Its filtered job panel showed no matching results on the check date; this does not prove the programme is closed or confirm an open vacancy.",
+      "requirements": [
+        {
+          "id": "bmw-eng-degree",
+          "label": "A degree in Engineering is listed as eligible for the graduate development programme.",
+          "kind": "qualification",
+          "sourceLocator": "Our Graduate Development Programme / Who can apply?",
+          "sourceExcerpt": "a degree in Engineering"
+        },
+        {
+          "id": "bmw-team-learning",
+          "label": "The programme description emphasizes team spirit, initiative and continuous learning.",
+          "kind": "skill",
+          "sourceLocator": "Our Graduate Development Programme",
+          "sourceExcerpt": "team spirit and initiative"
+        },
+        {
+          "id": "bmw-academic-performance",
+          "label": "Shortlisting considers academic performance and potential fit with company culture.",
+          "kind": "other",
+          "sourceLocator": "How to apply?",
+          "sourceExcerpt": "academic performance"
+        }
+      ],
+      "suggestedProjects": [
+        {
+          "id": "bmw-process-improvement-case",
+          "title": "Document a small manufacturing-process improvement case",
+          "requirementIds": [
+            "bmw-eng-degree",
+            "bmw-team-learning"
+          ],
+          "boundary": "KAIRO-authored practice suggestion, not a BMW requirement or endorsement. A project cannot prove a formal degree, academic standing, work authorization, selection or employment."
+        }
+      ],
+      "requirementsReviewed": true
+    },
+    {
+      "id": "siemens-global-graduate-program-engineering",
+      "title": "Siemens Graduate Program (global; country position required)",
+      "provider": "Siemens",
+      "url": "https://www.siemens.com/en-gb/company/jobs/growth-careers/siemens-graduate-program/",
+      "checkedAt": "2026-10-25",
+      "availability": "unknown",
+      "availabilityNote": "The official global page says positions depend on country and asks applicants to check vacancies quarterly; no South Africa-specific engineering vacancy was confirmed from this page. Program availability in South Africa is therefore unknown.",
+      "requirements": [
+        {
+          "id": "siemens-master-engineering",
+          "label": "The programme page describes a master’s degree (or equivalent) in engineering or related disciplines, with above-average grades.",
+          "kind": "qualification",
+          "sourceLocator": "Educational background (official Siemens Graduate Programme page; English-language indexed page text)",
+          "sourceExcerpt": "master’s studies (or equivalent)"
+        },
+        {
+          "id": "siemens-study-work-experience",
+          "label": "The page says applicants have gained work experience during their studies or between bachelor’s and master’s degrees.",
+          "kind": "experience",
+          "sourceLocator": "Work experience & ambition (official Siemens Graduate Programme page; English-language indexed page text)",
+          "sourceExcerpt": "work experience during your studies"
+        },
+        {
+          "id": "siemens-international-experience",
+          "label": "The page specifies at least four months of intercultural experience abroad.",
+          "kind": "other",
+          "sourceLocator": "International mindset (official Siemens Graduate Programme page; English-language indexed page text)",
+          "sourceExcerpt": "at least four months abroad"
+        }
+      ],
+      "suggestedProjects": [
+        {
+          "id": "siemens-cross-cultural-engineering-case",
+          "title": "Write an engineering case study with a cross-context collaboration reflection",
+          "requirementIds": [
+            "siemens-master-engineering",
+            "siemens-study-work-experience",
+            "siemens-international-experience"
+          ],
+          "boundary": "KAIRO-authored practice suggestion, not a Siemens requirement or endorsement. It cannot establish a master’s degree, academic grades, qualifying work experience, four months abroad, work authorization or eligibility."
+        }
+      ],
+      "requirementsReviewed": false
+    }
+  ]
+}

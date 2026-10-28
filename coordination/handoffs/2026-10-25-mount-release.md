@@ -1,0 +1,11 @@
+# Mounted private release handoff
+
+Owner codex-mount-release-20261025-d; exposed model/effort unknown. User authorized mount and deploy. Tasks MOUNT-RELEASE-061 and MOUNT-ENTRY-062. Exact claims checked locally; no existing owner displaced, no Claude receipt assumed. Proposed interface changes published on bus message142 before implementation; readiness props remain compatible.
+
+Changed runtime: studio/src/journey-integration/LessonEntry.tsx mounts readiness with existing validated resume and stop-before-entry; studio/src/lesson-readiness-ui/ reviewed component; studio/server/opportunity-freshness/ reviewed bounded helper; opportunities server/UI now attach and explain freshness while preserving closed/discovery-only meaning. Tests include readiness, extraction edge and mounted curator regressions. tools/ai-release-20261025/stage.ps1 now includes owner-retrieval, source-catalog and freshness closure. No manifests, provider/router contracts or v2 draft records were changed. No parallel child workers were started for this integration.
+
+Need/criteria/acceptance/evidence/limits: docs/mount-release-20261025/README.md. Clean exact-runtime-commit CI842/842 + production build + bus6/6 passed. Local Windows836/837 (missing Tesseract) is not a clean full-suite result. Final live synthetic18/18, zero model calls. Build closure146 credential-free files validated; Cloud Build succeeded; digest sha256:9128193fc207f27602c83491d9a4851bc2230d720a9bbfc17b3cf3dad4d2c7c4. Review/source PR79 runtime630e85f3b71620691e527866a951a0262dcf793c.
+
+Deployed kairo-app-mount25d at100% traffic, IAM unchanged/private, runtime identity preserved. Previous kairo-app-00007-snn retained for rollback via explicit Cloud Run traffic update. Verify service-after.json, iam-before/after.json and live.json. No credential values committed or logged; sessions used existing synthetic accounts only.
+
+Remaining: authorized browser/device/human validation, local Windows Tesseract setup, owned v2 record validation repair/lifecycle integration, real language and SASL evaluations, role-evidence matching and evaluated ML promotion. No Kaggle training, public access, schedule activation or implied educational/employment gains. No main merge performed; deployment is linked to the reviewed source branch/artifact.

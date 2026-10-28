@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap');
-
 /* Engineering Studio (ENG-001). Every selector is scoped to .engineering-studio. */
 .engineering-studio {
   --eng-graphite: #263b43;
@@ -17,7 +15,7 @@
   --eng-muted: #55666a;
   --eng-line: #cfd5ce;
   --eng-scene: #dfe2dc;
-  --eng-display: 'Archivo', 'DM Sans', Arial, sans-serif;
+  --eng-display: 'KairoManrope', 'DM Sans', Arial, sans-serif;
   font-family: 'DM Sans', Arial, sans-serif;
   font-size: 15px;
   color: var(--eng-ink);

@@ -1,0 +1,15 @@
+import test,{before,after} from 'node:test';
+import assert from 'node:assert/strict';
+import React from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {createServer} from 'vite';
+import react from '@vitejs/plugin-react';
+let server,project,View;
+before(async()=>{server=await createServer({configFile:false,optimizeDeps:{noDiscovery:true,include:[]},plugins:[react()],server:{middlewareMode:true,ws:false},appType:'custom'});({projectLessonBoard:project}=await server.ssrLoadModule('/src/classroom-board-host/model.ts'));({default:View}=await server.ssrLoadModule('/src/classroom-board-host/ClassroomBoard.tsx'));});
+after(async()=>server?.close());
+const lesson={id:'lesson1',revision:'revision1',title:'Motor lesson',chapters:[{title:'Rotor',explanation:'<script>unsafe()</script>'+'a'.repeat(2600),example:'Explain your prediction.',citationIds:['e1']}],evidence:[{id:'e1',title:'Motor notes',locator:'p.4',quote:'Actual reviewed quote'}]};
+test('projection preserves complete chapter text and current source revision',()=>{const result=project(lesson);assert.ok(result);assert.equal(result.board.slides[0].elements.filter(e=>e.id.includes('-explanation-')).map(e=>e.text).join(''),lesson.chapters[0].explanation);assert.equal(result.anchors['chapter-0-citation-0'].sourceRevision,'revision1');assert.equal(result.anchors['chapter-0-citation-0'].excerpt,'Actual reviewed quote');});
+test('missing citations are not fabricated',()=>{const result=project({...lesson,evidence:[]});assert.deepEqual(Object.keys(result.anchors),[]);assert.equal(result.board.slides[0].elements.some(e=>e.id.includes('-citation-')),false);});
+test('edited lessons retain their canonical draft reading rather than old chapter wording',()=>{assert.equal(project({...lesson,editorDocument:{version:1}}),null);});
+test('oversized lessons use full reading fallback instead of truncating',()=>{assert.equal(project({...lesson,chapters:Array.from({length:13},()=>lesson.chapters[0])}),null);const markup=renderToStaticMarkup(React.createElement(View,{lesson:{...lesson,title:'x'.repeat(201)}}));assert.match(markup,/full reading view/);});
+test('actual board escapes source content and exposes no unsupported save',()=>{const markup=renderToStaticMarkup(React.createElement(View,{lesson}));assert.match(markup,/KAIRO lesson board/);assert.match(markup,/Motor notes · p.4/);assert.doesNotMatch(markup,/<script>|Save changes/);assert.match(markup,/&lt;script&gt;/);});
