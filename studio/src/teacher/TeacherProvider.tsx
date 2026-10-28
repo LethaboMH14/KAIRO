@@ -10,13 +10,15 @@ const Teacher=createContext<TeacherAPI|null>(null);
 export function useTeacher(){const value=useContext(Teacher);if(!value)throw new Error('TeacherProvider is required.');return value;}
 export default function TeacherProvider({children}:{children:ReactNode}){
  const [settings,setSettings]=useState<TeacherSettings>(()=>{try{return parseSettings(learnerStorage.getItem(SETTINGS_KEY));}catch{return defaultSettings();}});
- const [voices,setVoices]=useState<SpeechSynthesisVoice[]>([]),[status,setStatus]=useState(''),[speaking,setSpeaking]=useState(false),[paused,setPaused]=useState(false),[caption,setCaption]=useState('');
- const active=useRef(0),audio=useRef<HTMLAudioElement|null>(null),audioContext=useRef<AudioContext|null>(null),abort=useRef<AbortController|null>(null),disposeAudio=useRef<()=>void>(()=>{}),audioSignal=useRef<AudioSignal>({energy:0,time:0,duration:0});
+ const [voices,setVoices]=useState<SpeechSynthesisVoice[]>([]),[status,setStatusText]=useState(''),[speaking,setSpeaking]=useState(false),[paused,setPaused]=useState(false),[caption,setCaption]=useState('');
+ const active=useRef(0),audio=useRef<HTMLAudioElement|null>(null),audioContext=useRef<AudioContext|null>(null),abort=useRef<AbortController|null>(null),disposeAudio=useRef<()=>void>(()=>{}),audioSignal=useRef<AudioSignal>({energy:0,time:0,duration:0}),statusToken=useRef(0),statusTimer=useRef<ReturnType<typeof setTimeout>|null>(null);
  function cancel(){active.current++;abort.current?.abort();abort.current=null;window.speechSynthesis?.cancel();if(audio.current){audio.current.onended=null;audio.current.pause();audio.current.src='';audio.current=null;}disposeAudio.current();disposeAudio.current=()=>{};audioSignal.current={energy:0,time:0,duration:0};}
- function stop(){cancel();setSpeaking(false);setPaused(false);setStatus('Narration stopped.');}
+ function clearStatusTimer(){if(statusTimer.current){clearTimeout(statusTimer.current);statusTimer.current=null;}}
+ function setStatus(message:string){statusToken.current++;clearStatusTimer();setStatusText(message);}
+ function stop(){const wasActive=speaking||paused;cancel();setSpeaking(false);setPaused(false);if(!wasActive)return;setStatus('Narration stopped.');const token=statusToken.current;statusTimer.current=setTimeout(()=>{statusTimer.current=null;if(statusToken.current===token)setStatusText('');},4000);}
  useEffect(()=>{
   const refresh=()=>setVoices(window.speechSynthesis?.getVoices()||[]);refresh();window.speechSynthesis?.addEventListener('voiceschanged',refresh);const leave=()=>cancel();window.addEventListener('pagehide',leave);
-  return()=>{cancel();void audioContext.current?.close();audioContext.current=null;window.speechSynthesis?.removeEventListener('voiceschanged',refresh);window.removeEventListener('pagehide',leave);};
+  return()=>{cancel();clearStatusTimer();void audioContext.current?.close();audioContext.current=null;window.speechSynthesis?.removeEventListener('voiceschanged',refresh);window.removeEventListener('pagehide',leave);};
  },[]);
  function update(value:TeacherSettings){cancel();setSpeaking(false);setPaused(false);setSettings(value);try{learnerStorage.setItem(SETTINGS_KEY,JSON.stringify(value));setStatus('Teacher preferences saved on this device.');}catch{setStatus('Preferences could not be saved in this browser.');}}
  async function cloudSay(text:string,language:string,id:number){
@@ -42,7 +44,7 @@ export default function TeacherProvider({children}:{children:ReactNode}){
   }catch(error){if(active.current!==id)return;disposeAudio.current();disposeAudio.current=()=>{};setSpeaking(false);setPaused(false);setStatus((error as Error).message);}
  }
  function say(text:string,language=settings.language){
-  cancel();setSpeaking(false);setPaused(false);const value=text.slice(0,5000);if(!value.trim())return;const id=active.current;setCaption(value);
+  statusToken.current++;clearStatusTimer();setStatusText(current=>current==='Narration stopped.'?'':current);cancel();setSpeaking(false);setPaused(false);const value=text.slice(0,5000);if(!value.trim())return;const id=active.current;setCaption(value);
   if(settings.voiceMode==='google'){void cloudSay(value,language,id);return;}
   if(!('speechSynthesis'in window)){setStatus('Browser narration is unavailable.');return;}
   const candidates=speechSynthesis.getVoices().filter(v=>v.lang.split('-')[0]===language.split('-')[0]);const chosen=candidates.find(v=>v.voiceURI===settings.voiceURI)||candidates.find(v=>v.lang.toLowerCase()===language.toLowerCase())||candidates[0];
