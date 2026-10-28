@@ -1,0 +1,5 @@
+The integration adds an account-scoped multi-source lesson path while keeping legacy single-source lessons intact. Learners can choose reviewed sources, create a local or consented AI lesson, inspect citations, edit wording, save practice/notes, resume and carry the same lesson into motor/pump coaching.
+
+The server verifies all owners/revisions/archives, balances evidence across selected sources, isolates v2 storage, enforces versioned saves and bounded creation, and preserves practice/citations during edits. UI fixes include source-first labels, honest language states, career-tool access and route titles. Unreviewed indexed career requirements remain non-actionable.
+
+Validation: recorded local full checkpoint915/915 after installing OCR; focused new service12/12; actual synthetic Chromium create/edit/practice/reload/motor/pump journey with screenshots and zero model calls. Exact Linux CI is required before promotion. This does not establish human/device learning gains, SASL translation, employer matching or institutional payments. Cloud candidate build retains existing private IAM and does not activate the deleted schedule.

@@ -1,0 +1,29 @@
+✔ actual parser keeps selected source refs distinct and reports both coverage gaps (1393.2099ms)
+✔ actual SSR presents distinct sources, exact citation locators and quotes, and the coverage warning (15.5914ms)
+✔ actual repeated SSR instances receive unique linked heading IDs and escape source text (3.7031ms)
+✔ malformed, v1, duplicated, misanchored and unsupported-provider records fail closed (1.0282ms)
+✔ read handler invokes only explicit chapters from the parsed record (0.4117ms)
+✔ repeated component instances have unique IDs for every labelled section and anchor (5.6496ms)
+✔ private local v2 create -> read -> edit -> practice -> resume uses separate namespace (31.1884ms)
+✔ source deletion, current review changes and archived quote tamper fail every read (17.4232ms)
+✔ cloud output uses actual consented served provider and retains preference context (9.0467ms)
+✔ invalid practice, unconsented cloud and pre-aborted creation never produce accepted work (4.0235ms)
+✔ router requires an authenticated identity and does not intercept legacy workspace routes (129.6132ms)
+✔ wording edits cannot rewrite the quiz or detach a chapter citation from prior practice (3.6787ms)
+✔ cancellation after reading existing work prevents a new saved-work write (2.2332ms)
+✔ local creation has a durable bounded daily allowance without any model calls (32.0878ms)
+✔ studio coaching keeps bundle and selected excerpt provenance with explicit consent (3.7265ms)
+✔ engineering source records conform to schema and use safe dated HTTPS primary sources (2.5127ms)
+✔ synthetic bad records demonstrate duplicate IDs and broken mappings are rejected (0.3472ms)
+✔ current explicit practice links are distinct from formal requirement evidence (4.717ms)
+✔ removed, ambiguous, changed scenario and source revisions never retain linked status (0.6847ms)
+✔ malformed saved records are rejected instead of overwritten as empty history (3.3769ms)
+✔ guarded persistence serializes writers, rejects stale snapshots and never writes without lock support (0.9744ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1910.1884

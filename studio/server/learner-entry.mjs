@@ -1,4 +1,5 @@
 import express from 'express';
+import {createBundleLessons} from './bundle-lessons/service.mjs';
 import {loadCurricula,resolveStudentSpace} from './student-space/model.mjs';
 import {fileURLToPath} from 'node:url';
 import {join,dirname} from 'node:path';
@@ -30,6 +31,7 @@ app.get('/api/services',(_req,res)=>res.json({runtime:'private-learner-cloud',go
 const trace=createTraceEngine();
 app.post('/api/trace',sameOrigin(origin),express.json({limit:'4kb'}),(req,res)=>{try{res.json(trace.run(req.body?.topic));}catch{res.status(400).json({error:'Choose a valid lesson topic.'});}});
 app.post('/api/ask',sameOrigin(origin),guard,express.json({limit:'4kb'}),async(req,res)=>{try{const question=validateQuestion(req.body?.question),topic=typeof req.body?.topic==='string'?req.body.topic:'database',result=trace.run(topic);await reserveGlobal('passages',100);res.json(await askGuide({question,topic,stage:['interface','api','database','response'].includes(req.body?.stage)?req.body.stage:'interface',rows:result.rows}));}catch(error){res.status(error instanceof TypeError?400:error.status===429?429:503).json({error:error instanceof TypeError?'Check the question and lesson topic.':'Cloud questions could not finish. The prepared lesson remains available.'});}});
+app.use('/api/workspace',sameOrigin(origin),guard,createBundleLessons({repository,reserveGlobal}).router);
 app.use('/api/workspace',sameOrigin(origin),guard,workspace.router);
 app.use('/api/avatar',sameOrigin(origin),guard,express.json({limit:'8kb'}),async(req,res,next)=>{if(req.method==='POST'&&req.path==='/speech'){try{if(req.body?.consent!==true)return res.status(400).json({error:'Choose voice processing consent first.'});await reserveGlobal('speech',60);}catch{return res.status(429).json({error:'The app voice allowance is used. Device narration and reading remain available.'});}}next();},speechRouter());
 app.use('/api',(_req,res)=>res.status(404).json({error:'Route not found.'}));

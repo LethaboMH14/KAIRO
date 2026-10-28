@@ -1,0 +1,22 @@
+{
+  "spec": {
+    "template": {
+      "spec": {
+        "containers": [
+          {
+            "image": "africa-south1-docker.pkg.dev/kairo-access-20261021/cloud-run-source-deploy/kairo-app@sha256:9128193fc207f27602c83491d9a4851bc2230d720a9bbfc17b3cf3dad4d2c7c4"
+          }
+        ]
+      }
+    }
+  },
+  "status": {
+    "latestReadyRevisionName": "kairo-app-mount25d",
+    "traffic": [
+      {
+        "percent": 100,
+        "revisionName": "kairo-app-mount25d"
+      }
+    ]
+  }
+}

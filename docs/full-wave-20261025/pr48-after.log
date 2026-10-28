@@ -1,0 +1,21 @@
+✔ creates a v2-only record with ordered revisions and exact cross-document anchors (8.6041ms)
+✔ foreign owner cannot verify or save the same v2 source bundle (4.132ms)
+✔ tampered revision, mismatched source title, quote or edited flag fails closed (2.337ms)
+✔ a verified local record persists once and remains checked on subsequent reads (2.4139ms)
+✔ a review race during persistence rejects and best-effort removes the new record (1.6325ms)
+✔ failed rollback never converts changed revisions into a successful save (3.6579ms)
+✔ stale or deleted reviewed source fails on read even if lesson document still exists (1.7617ms)
+✔ aborted verification never writes a new record (1.3758ms)
+✔ cloud metadata accepts only supported providers and bounded nonblank model names (6.3916ms)
+✔ persisted cloud metadata cannot omit or forge provider and model fields (1.6567ms)
+✔ local records reject provider metadata rather than implying a cloud call (1.0548ms)
+✔ invalid constructor provider or missing consent fails before storage (2.7374ms)
+✔ constructor revalidates every cloud provider consent and selected revision (1.4476ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 233.5359

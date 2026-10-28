@@ -1,0 +1,21 @@
+✔ private local v2 create -> read -> edit -> practice -> resume uses separate namespace (97.3961ms)
+✔ source deletion, current review changes and archived quote tamper fail every read (36.0241ms)
+✔ cloud output uses actual consented served provider and retains preference context (14.6812ms)
+✔ invalid practice, unconsented cloud and pre-aborted creation never produce accepted work (11.5699ms)
+✔ router requires an authenticated identity and does not intercept legacy workspace routes (1204.4453ms)
+✔ wording edits cannot rewrite the quiz or detach a chapter citation from prior practice (42.5696ms)
+✔ cancellation after reading existing work prevents a new saved-work write (123.0084ms)
+✔ local creation has a durable bounded daily allowance without any model calls (274.2294ms)
+✔ studio coaching keeps bundle and selected excerpt provenance with explicit consent (10.4738ms)
+✔ CI Python resolver honours an explicit KAIRO_PYTHON override (229.8556ms)
+✔ CI Python resolver uses the documented portable fallback (210.8086ms)
+✔ selected CI Python has the supported extraction and fixture libraries (7783.183ms)
+✔ OCR executable is available to the selected CI Python (1356.6191ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14140.2109
