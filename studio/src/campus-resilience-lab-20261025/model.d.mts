@@ -1,0 +1,26 @@
+/** Type declarations for the standalone JavaScript educational model. */
+export type LoadId = 'study' | 'connect' | 'teach' | 'leisure';
+export type ScenarioId = 'baseline' | 'cloud';
+export type PredictionId = LoadId | 'none';
+export type Action = { version: number; scenarioId: ScenarioId; priority: string[]; prediction: string };
+export type Service = { id: LoadId; demandKwh: number; servedKwh: number; coveragePct: number; continuouslySupplied: boolean };
+export type LoadReading = { id: LoadId; demandKwh: number; servedKwh: number; unmetKwh: number; solarKwh: number; gridKwh: number; batteryKwh: number; status: 'supplied' | 'partial' | 'unmet' };
+export type Step = { hour: number; gridOnline: boolean; beginningKwh: number; endingKwh: number; demandKwh: number; servedKwh: number; unmetKwh: number; solarKwh: number; solarToLoadKwh: number; solarToBatteryKwh: number; curtailedKwh: number; gridToLoadKwh: number; batteryToLoadKwh: number; batteryWithdrawnKwh: number; batteryStoredKwh: number; batteryLossKwh: number; loads: LoadReading[] };
+export type Attempt = { status:'local-unverified'; verified:false; scenarioId:ScenarioId; action:Action; steps:Step[]; totals:Record<string,number>; services:Service[]; sustained:LoadId[]; endingKwh:number; predictionCorrect:boolean };
+export type Scenario = { version:string; id:ScenarioId; name:string; teachingNote:string; hours:6; stepHours:number; gridMaxKw:number; battery:{capacityKwh:number;initialKwh:number;chargeLimitKw:number;dischargeLimitKw:number;chargeEfficiency:number;dischargeEfficiency:number}; grid:boolean[]; solarKw:number[]; demandFactor:number[] };
+export const MODEL_VERSION:string;
+export const SCENARIO_VERSION:string;
+export const ACTION_VERSION:number;
+export const LOADS:ReadonlyArray<{id:LoadId;label:string;kw:number;description:string}>;
+export const LOAD_IDS:ReadonlyArray<LoadId>;
+export const DEFAULT_ORDER:ReadonlyArray<LoadId>;
+export const REFERENCES:ReadonlyArray<{title:string;url:string}>;
+export const SCENARIOS:Record<ScenarioId,Scenario>;
+export function validateScenario(value:Scenario):Scenario;
+export function validateAction(action:Action,expectedId:string):Action;
+export function newAction(scenarioId:ScenarioId,priority?:readonly string[],prediction?:string):Action;
+export function simulateScenario(scenario:Scenario,action:Action):Attempt;
+export function runAttempt(action:Action):Attempt;
+export function replayAttempt(attempt:Attempt):Attempt;
+export function compareAttempts(first:Attempt,second:Attempt):{round1:Attempt;round2:Attempt;servedDeltaKwh:number;unmetDeltaKwh:number;services:{id:LoadId;round1Pct:number;round2Pct:number}[]};
+export function validateOptionalLessonAssociation(value:unknown):null | {contractVersion:1;lessonId:string;sourceId:string;revision:string;reviewed:true;associationStatus:'unverified-local-reference';evidenceStatus:'local-unverified'};
